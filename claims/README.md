@@ -4,8 +4,11 @@ Every file here is a claim a **person approved for publication**. Committing a
 file to this directory is the approval — there is no other gate, and there is
 deliberately no way for an automated process to add one.
 
-`scripts/claim.mjs publish-set` republishes all of them on a schedule and
-confirms each reads back. That is what makes Starcom's identity autonomous
+`scripts/claim.mjs publish-set` republishes all of them, when the operator
+runs it, and confirms each reads back. There is no schedule: publishing is
+operator-initiated. It signs with Starcom's node key
+(`STARCOM_NOSTR_SECRET_HEX`), so only Starcom's operator can run it; another
+instance publishes its own claims under its own key. That is what makes Starcom's identity autonomous
 without a machine ever deciding what is true: it keeps approved statements
 reachable, which is a different act from making new ones.
 

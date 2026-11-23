@@ -78,9 +78,16 @@ A change to what a person sees or does should keep the walk working, or add a st
 
 ## Where to start
 
-- [`docs/missions/04-plan/intern-tasks.md`](docs/missions/04-plan/intern-tasks.md): six tasks, each with what to
-  read, what to do and how to tell it is done.
-- [`docs/missions/README.md`](docs/missions/README.md): how the audit, the decisions and the plan fit together.
+- **Issues labelled [`good first issue`](https://github.com/Starcom-Platform/starcom/labels/good%20first%20issue):**
+  each says what to read, what to do, and how to tell it is done, from this repository alone.
+- **[`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md):** how the code is organised, and how notes are read and
+  published.
+- **[`docs/GLOSSARY.md`](docs/GLOSSARY.md):** the project's own terms (NavCom, Zone, RLSH, The Record and the rest).
+- **[`docs/TESTING.md`](docs/TESTING.md):** which check to run when, including the browser walk.
+- **The decision records,** indexed by ID in
+  [`docs/missions/01-architecture-decisions/README.md`](docs/missions/01-architecture-decisions/README.md). Code
+  and commit messages cite them (for example "D-RP, RP8"); a change that departs from one changes the record too.
+- **Questions:** [GitHub Discussions](https://github.com/Starcom-Platform/starcom/discussions), or Discord.
 
 ## Conduct and security
 

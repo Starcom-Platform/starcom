@@ -7,12 +7,36 @@ Starcom puts public data on a live 3D globe and lets people publish what they fi
 It runs at **https://starcom.app**. There is no server behind it, no account to create, and no tracking. Your identity is a
 Nostr key that you hold. What you publish goes to public Nostr relays, where any other client can read and check it.
 
+## Part of the Earth Intelligence Network
+
+Starcom is the reference frontend of the Earth Intelligence Network (EIN): a decentralized, public, free-to-use network
+for open-source intelligence. The network is made of frontends like this one and of nodes: Nostr relays, archives,
+mirrors and AI agents that publish signed notes. It is designed so that no part has to see or vouch for everything,
+and so that a claim is weighed by the method and sources it discloses rather than by who said it. Starcom's
+attested-claims format (below) carries what that weighing needs.
+
+Anyone may run their own Starcom: public, for a region or a language, or private, for a team that keeps its work on
+its own relays. Anyone may build another app that reads and writes the same notes. The wire formats are open
+(Apache-2.0) so that can happen without asking this project.
+
+## Start here
+
+| You want to | Start with |
+|---|---|
+| Run Starcom and change it | [Run it yourself](#run-it-yourself), then [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) and [`CONTRIBUTING.md`](CONTRIBUTING.md) |
+| Build an app that works with Starcom and the EIN | [`docs/spec/README.md`](docs/spec/README.md): the event kinds, the specs and their test vectors |
+| Run your own public Starcom | A self-hosting guide is coming in December. Until then: [`.env.example`](.env.example). A copy built today still describes itself as starcom.app's node; that is being fixed first |
+| Run a private or internal Starcom | [`.env.example`](.env.example) shows how to use only your own relays (`VITE_NOSTR_*_RELAYS_EXCLUSIVE`) and your team's internal relays. A full guide is coming in December |
+| Run a node: a relay, an archive, a mirror or an AI agent | Not public yet. The node profile will be specified in [`ein-standards`](https://github.com/Earth-Intelligence-Network/ein-standards) |
+| Look up a term | [`docs/GLOSSARY.md`](docs/GLOSSARY.md) |
+
 ## What it does
 
 **The globe.** Each mode draws public sources directly from the visitor's browser:
 
-- **Eco Natural:** space weather (NOAA SWPC, NASA DONKI), earthquakes (USGS, EMSC, and a historical atlas), volcanoes,
-  wildfires and other hazards (NASA EONET, GDACS), and Earth weather (NOAA GFS temperature, wind and rain; EUMETSAT
+- **Eco Natural:** space weather (NOAA SWPC, NASA DONKI), earthquakes (USGS, EMSC, and a historical atlas), volcanoes
+  (the Smithsonian's catalogue, left out of the public repository until its terms are confirmed;
+  `npm run eco:bake:volcanoes` rebuilds it), wildfires and other hazards (NASA EONET, GDACS), and Earth weather (NOAA GFS temperature, wind and rain; EUMETSAT
   clouds; radar; water gauges; NWS alerts).
 - **Geo Political:** diplomatic events (GDELT), conflict zones (UCDP, UNHCR), resource zones (EIA, World Bank), war and
   conflict, and civil unrest.
@@ -44,7 +68,7 @@ Every publish goes through one review step that shows exactly what will be sent,
 
 - NetRunner's lookups work in the browser. Page scans need the Uplink extension or the desktop app.
 - Starcom Uplink, the browser extension in [`extension/`](extension/), keeps your key encrypted. It is not in any store yet.
-- Starcom Desktop, in [`desktop/`](desktop/), is an early macOS build.
+- Starcom Desktop is an early macOS build. Its code will be published at [`Starcom-Platform/starcom-desktop`](https://github.com/Starcom-Platform/starcom-desktop) with its next release.
 - The interface ships in English. German, Portuguese, Kiswahili, Hindi and Ukrainian are machine-drafted, and the app
   labels them so.
 
@@ -101,6 +125,19 @@ The checks run locally (`npm run verify`) and in every deployment build. There i
 how work is checked: [`CONTRIBUTING.md`](CONTRIBUTING.md).
 What changed, release by release: [`CHANGELOG.md`](CHANGELOG.md).
 
+## Documentation
+
+| | |
+|---|---|
+| [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) | How the code is organised, and how notes are read and published |
+| [`docs/GLOSSARY.md`](docs/GLOSSARY.md) | The project's own terms |
+| [`docs/TESTING.md`](docs/TESTING.md) | Which check to run when |
+| [`docs/LANGUAGES.md`](docs/LANGUAGES.md) | The interface's languages, and adding one |
+| [`extension/README.md`](extension/README.md) | Building and loading Starcom Uplink |
+| [`docs/spec/README.md`](docs/spec/README.md) | The wire formats and their test vectors |
+| [`docs/missions/01-architecture-decisions/README.md`](docs/missions/01-architecture-decisions/README.md) | Every decision record, by ID |
+| [`docs/README.md`](docs/README.md) | A map of everything under `docs/` |
+
 ## Data and privacy
 
 Starcom keeps your keys, drafts, cases and settings in your browser. It sends what you choose to publish to relays.
@@ -120,7 +157,7 @@ Starcom has no privacy policy or terms of service yet; both are in preparation.
 
 - Security reports: [`SECURITY.md`](SECURITY.md), by way of [`/.well-known/security.txt`](https://starcom.app/.well-known/security.txt).
 - Conduct: [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md).
-- Discord: https://discord.gg/Mea5v8pQmt
+- Questions and ideas: [GitHub Discussions](https://github.com/Starcom-Platform/starcom/discussions), or Discord: https://discord.gg/Mea5v8pQmt
 - Bluesky: [@starcom.app](https://bsky.app/profile/starcom.app)
 
 Starcom is built by Arch Angel Agency LLC.

@@ -60,12 +60,14 @@ export function keptInboxOf(records: readonly WaitingEvent[], pubkey: string | n
 
 /**
  * Let a kept note go unsent. A withdrawal's notice takes its request to delete with it: the notice's slot is the
- * report's address, which the request names.
+ * report's address, which the request names. The request goes first: until the notice is gone the screen still shows
+ * the withdrawal waiting, so a drain or a closed tab in between can never send the request without its notice.
  */
 export async function cancelKept(record: WaitingEvent, outbox: EventOutbox = eventOutbox): Promise<void> {
-  await outbox.cancel(record.id);
-  if (!record.after || !('withdrawn' in record.after)) return;
-  for (const other of await outbox.waiting()) {
-    if (other.event.kind === 5 && other.event.tags.some((t) => t[0] === 'a' && t[1] === record.slot)) await outbox.cancel(other.id);
+  if (record.after && 'withdrawn' in record.after) {
+    for (const other of await outbox.waiting()) {
+      if (other.event.kind === 5 && other.event.tags.some((t) => t[0] === 'a' && t[1] === record.slot)) await outbox.cancel(other.id);
+    }
   }
+  await outbox.cancel(record.id);
 }

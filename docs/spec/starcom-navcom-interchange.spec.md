@@ -242,7 +242,7 @@ mirror nothing.
 | `30079` | parameterized-replaceable | **Mission Package** | Full `PackageManifest` JSON, plaintext |
 | `30081` | parameterized-replaceable | **Dispatch Capability** | Empty; the grant is carried entirely in tags |
 | `30082` | parameterized-replaceable | **Finding** | `{ content: FindingContent, signature }` JSON, plaintext |
-| `30083` | regular | **Refutation** | `{ content: FindingRefutation, signature }` JSON, plaintext |
+| `30083` | parameterized-replaceable, at its own `d` | **Refutation** | `{ content: FindingRefutation, signature }` JSON, plaintext |
 | `30084` | parameterized-replaceable | **Roster Item** | Text for people; the item is carried in tags — rev 14 |
 | `1912` | regular | **Report** (NavCom's) | `{ callsign, date, counts: [{ line, n }], salt }` JSON; sent only sealed, never published — rev 15 |
 | `1`, `30023` | regular, parameterized-replaceable | **Globe intel** | A GeoJSON payload, or prose carrying a geo tag — see below |
@@ -1885,7 +1885,9 @@ truth.
 
 #### Its own kind, not a replacement
 
-`30083` is a regular event, not a replacement of the finding's `30082` slot.
+`30083` is addressable at its own kind and `d` (the NIP draft's "Addressing"), not a replacement of the finding's
+`30082` slot. (Corrected 23 Nov 2026: this section and the kinds table called it "regular"; every kind from
+`30000` to `39999` is addressable, and Starcom has always published refutations with their own `d` tag.)
 Publishing a refutation into the finding's own slot would let anyone overwrite
 anyone's claim, which is the opposite of what checkability means. A refutation
 is a claim by a *different author* about a *different subject* — the finding

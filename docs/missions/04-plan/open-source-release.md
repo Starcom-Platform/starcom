@@ -7,6 +7,8 @@ the packages, each ending in a check.
 
 ## Where it stands
 
+As of 22 Nov. What has happened since is under "Progress, 23 Nov" in step 1.
+
 - **Licence.**
   - The repository is private, and licensed AGPL-3.0-only (`LICENSE`, `package.json`).
   - The specs in `docs/spec/` are Apache-2.0.
@@ -59,8 +61,8 @@ receive the public works (decision 2).
 - **The organizations' policy** that only owners create public repositories. It needs the `admin:org` scope.
 - **Two-factor authentication for members.** It is set only on each organization's settings page; there is no API
   for it.
-- **Protect `main`** in the app repository against force-pushes and deletion, after the first push. There is no CI,
-  so no check is required.
+- ~~Protect `main`~~: done on 23 Nov, in all three repositories with content, against force-pushes and deletion. There
+  is no CI, so no check is required.
 
 **The release script** builds on the public repository's history, and refuses to commit when the public repository
 holds commits it did not make, such as a contributor's merged pull request. Those are brought into the private
@@ -100,6 +102,25 @@ the owner's go.
   (Natural Earth, USGS minerals, UN Comtrade trade routes, the ZSP Zones) has no register entry. So the commercial
   build cannot yet tell whether it may carry it: UN Comtrade's terms speak of a free application. Register those
   sources, and widen the test to `public/geopolitical`.
+
+**Progress, 23 Nov.**
+- **Released.** 0.2.0 is on `Starcom-Platform/starcom`, tagged `v0.2.0` with a release page, from one root commit
+  whose author is the public identity. Discussions are on. `--verify` passed first, as a fresh clone.
+- **O1, held back instead:** the volcano data stays out of the public tree until its terms are verified; its bake
+  script is published.
+- **O5, done:** sign-off is required by GitHub for web edits, and checked by the maintainer before a merge.
+- **Documentation for outside developers** (the review "Starcom's public switch-over", Phase A):
+  - new: `docs/ARCHITECTURE.md`, `docs/GLOSSARY.md`, `docs/TESTING.md`, `docs/LANGUAGES.md`, `extension/README.md`,
+    `data/README.md`, `CITATION.cff`, an index of the decision records, and `docs/spec/kinds.md`, generated from the
+    kind registry and held to it by `npm run guards`;
+  - the README's "Start here" says which of six journeys works today; the spec index says where to start;
+  - the mirror checks that every entry document's links resolve in the public tree, and drops empty folders.
+- **Found on the way:**
+  - The 30083 row in the interchange spec said "regular"; it is addressable. Corrected, with a note.
+  - `npm test` skipped five folders (39 test files), among them the language test; the shards now name them.
+  - `npm run test:live` collects no files and passes (`docs/TESTING.md`).
+  - No check catches a translation that drops a `{placeholder}`.
+  - The walk exits 0 with BROKEN stories.
 
 ## Step 2: instances (December to February)
 

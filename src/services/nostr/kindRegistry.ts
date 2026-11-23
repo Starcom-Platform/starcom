@@ -259,19 +259,24 @@ export interface KindUse {
   publishes?: string;
   reads?: string;
   signs?: string;
+  /**
+   * In the code, but reached by no screen: kept until it is removed, and named so the scan of kind numbers still
+   * accounts for it. The node descriptor lists a dormant kind neither as published nor as read.
+   */
+  dormant?: string;
 }
 
 export const KIND_USE: Readonly<Record<number, KindUse>> = {
   0: { name: 'Profile metadata (NIP-01)', reads: 'The profile of a key that signed a mission or a note, for its name.' },
   1: { name: 'Text note (NIP-01)', reads: 'Globe intel notes tagged starcom_intel; replies to Mission Packages; the notes a NavCom operator cites.', signs: 'Invite codes, in the link that carries them.' },
-  4: { name: 'Encrypted direct message (NIP-04)', publishes: 'Direct messages through the older chat adapter.', reads: 'Direct messages addressed to this key, in that adapter.' },
+  4: { name: 'Encrypted direct message (NIP-04)', dormant: 'Only the older chat adapter handles it, and chat no longer chooses that adapter (22 Nov 2026, audit finding 13). Direct messages are sealed (NIP-59) instead.' },
   5: { name: 'Deletion request (NIP-09)', publishes: 'The deletion of a report its author withdrew (D-RP, RP7), and of a withdrawn RLSH card.', reads: 'Deletions of RLSH cards.' },
   13: { name: 'Seal (NIP-59)', publishes: 'Inside a gift wrap only.', reads: 'Opened inside gift wraps addressed to this key.' },
-  40: { name: 'Public channel creation (NIP-28)', publishes: 'A team channel in the older chat adapter. Plain text.' },
-  41: { name: 'Public channel metadata (NIP-28)', publishes: 'A channel\'s name and description in the older chat adapter.' },
-  42: { name: 'Public channel message (NIP-28)', publishes: 'Messages through the older chat adapter. Plain text; direct and team messages are sealed instead (plan item 2.7).', reads: 'Messages in such a channel.' },
-  43: { name: 'Hidden channel message (NIP-28)', publishes: 'A moderator hiding a message in the older chat adapter.' },
-  44: { name: 'Muted channel user (NIP-28)', publishes: 'A moderator muting a key in the older chat adapter.' },
+  40: { name: 'Public channel creation (NIP-28)', dormant: 'Only the older chat adapter, which chat no longer chooses, and service methods nothing calls (audit finding 13).' },
+  41: { name: 'Public channel metadata (NIP-28)', dormant: 'Only the older chat adapter, which chat no longer chooses (audit finding 13).' },
+  42: { name: 'Public channel message (NIP-28)', reads: 'Messages others published in a public channel the person opens, shown as not encrypted. Starcom sends none: a channel message cannot be sealed, so the chat window refuses it (audit finding 13, 22 Nov 2026).' },
+  43: { name: 'Hidden channel message (NIP-28)', dormant: 'A service method nothing calls (audit finding 13).' },
+  44: { name: 'Muted channel user (NIP-28)', dormant: 'A service method nothing calls (audit finding 13).' },
   1059: { name: 'Gift wrap (NIP-59)', publishes: 'Sealed mission reports, bundle parts, direct and team chat, and sealed roster items, each to its recipients only.', reads: 'Gift wraps addressed to this key.' },
   1111: { name: 'Comment (NIP-22)', publishes: 'Comments on Mission Packages, claims and reports (plan item 5.1).', reads: 'Comments on what is shown here, and replies to this key\'s Mission Packages.' },
   1911: { name: 'Field observation (NavCom)', reads: 'NavCom\'s observations, which reports cite (D-MX).' },

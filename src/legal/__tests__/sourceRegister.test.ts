@@ -3,7 +3,7 @@
  * or a data file baked into the build, that no entry names fails here, so the register cannot fall behind the app.
  */
 import { describe, it, expect } from 'vitest';
-import { readdirSync, statSync } from 'node:fs';
+import { existsSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import { SOURCE_REGISTER } from '../sourceRegister';
 
@@ -16,7 +16,9 @@ const CENSUS_2026_11_11 = [
   'www.gdacs.org', 'www.seismicportal.eu',
 ];
 
-const bakedFiles = (dir: string): string[] => readdirSync(dir).flatMap((name) => {
+// A folder a clone lacks holds nothing to register: the public repository holds back the volcano catalogue, and git
+// keeps no empty folder.
+const bakedFiles = (dir: string): string[] => (existsSync(dir) ? readdirSync(dir) : []).flatMap((name) => {
   const path = join(dir, name);
   if (statSync(path).isDirectory()) return [path];
   return name.endsWith('.json') ? [path] : [];

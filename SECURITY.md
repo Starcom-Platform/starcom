@@ -2,9 +2,12 @@
 
 Report a vulnerability privately, never in a public issue.
 
-**Where:** the Nostr key in [`/.well-known/security.txt`](https://starcom.app/.well-known/security.txt). Starcom runs
-no server, so a Nostr key is the channel that provably exists. Anyone can send to it over the relays listed in
-[`/.well-known/starcom-node.json`](https://starcom.app/.well-known/starcom-node.json).
+**Where, either of:**
+- GitHub's private reporting: [Report a vulnerability](https://github.com/Starcom-Platform/starcom/security/advisories/new),
+  from the repository's Security tab. Only the maintainers see it.
+- The Nostr key in [`/.well-known/security.txt`](https://starcom.app/.well-known/security.txt). Starcom runs no server,
+  so a Nostr key is the channel that provably exists. Anyone can send to it over the relays listed in
+  [`/.well-known/starcom-node.json`](https://starcom.app/.well-known/starcom-node.json).
 
 **What to include:**
 - what you found and where;

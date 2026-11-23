@@ -1,13 +1,30 @@
 # Starcom documentation
 
-Rewritten on 2026-11-20. What the app does, and how to run it, is in the
-[README at the top of the repository](../README.md). This page says where the rest is.
+What the app does, and how to run it, is in the [README at the top of the repository](../README.md). This page
+says where the rest is.
 
-## Current records
+## Guides
+
+| | |
+|---|---|
+| [`ARCHITECTURE.md`](ARCHITECTURE.md) | How the code is organised, and how notes are read and published |
+| [`GLOSSARY.md`](GLOSSARY.md) | The project's own terms |
+| [`TESTING.md`](TESTING.md) | Which check to run when |
+| [`LANGUAGES.md`](LANGUAGES.md) | The interface's languages, and adding one |
+| [`../extension/README.md`](../extension/README.md) | Building and loading Starcom Uplink, the browser extension |
+| [`spec/README.md`](spec/README.md) | The wire formats, the event kinds, and their test vectors |
+| [`../CONTRIBUTING.md`](../CONTRIBUTING.md) | How work is checked, and what is refused |
+
+## Records
+
+The records below are how decisions were made and checked, kept as written. They are long, and many describe the app
+as it was on their date: read the decision records for what holds now. Commit hashes cited in them refer to the
+private repository's history, which is not published.
 
 - **[`missions/`](missions/README.md): decisions and plans.**
-  - `00-current-state/`: audits of each part of the app. Each is dated.
-  - `01-architecture-decisions/`: what was decided, by whom, and why.
+  - `00-current-state/`: audits of each part of the app, each as of its date; later decisions supersede them.
+  - [`01-architecture-decisions/`](missions/01-architecture-decisions/README.md): what was decided, by whom, and why,
+    indexed by ID.
   - `03-pipeline/`: the people and the stories the app is measured against.
   - `04-plan/`: plans, handoffs and readiness work.
 - **[`spec/`](spec/): the protocols Starcom publishes, under Apache-2.0.** This includes
@@ -30,6 +47,6 @@ Rewritten on 2026-11-20. What the app does, and how to run it, is in the
 ## Older documents
 
 The private repository also holds design notes, phase reports and plans from 2025 to
-early 2026. Many describe features since removed, such as crypto wallets, an earlier chat
+early 2026, and two planning records not yet published (the data-licensing and commercial-split decisions). Many describe features since removed, such as crypto wallets, an earlier chat
 system and an analytics dashboard. They are kept as history and are not part of the public
 release. Where an older document and the code disagree, the code is right.

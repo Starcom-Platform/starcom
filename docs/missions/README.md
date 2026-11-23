@@ -1,5 +1,12 @@
 # Starcom Mission Pipeline — Current State, Decisions, and Plan
 
+> **A working record, kept as written.** This folder is how the project planned, decided and checked its work from
+> August 2026 on. The sprint this page describes ended long ago. What holds now is in the decision records, indexed
+> in [`01-architecture-decisions/README.md`](01-architecture-decisions/README.md); the current plans are
+> [`04-plan/open-source-release.md`](04-plan/open-source-release.md) and
+> [`04-plan/relay-capability-work.md`](04-plan/relay-capability-work.md). Commit hashes cited here refer to the private
+> repository's history, which is not published. For a guide to the code, start at [`../ARCHITECTURE.md`](../ARCHITECTURE.md).
+
 This directory is the working reference for the end-to-end overhaul of Starcom's
 core pipeline: **raw intel → Intel Reports → analysis → Mission Objectives →
 Mission Packages → team operationalization**, across the 3D Globe, NetRunner,

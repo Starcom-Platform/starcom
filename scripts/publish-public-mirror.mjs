@@ -65,6 +65,8 @@ const WORKFLOWS_PUBLISHED = new Set();
  */
 const DOCS_PUBLISHED = [
   'docs/README.md',
+  // The guides for developers (23 Nov 2026).
+  'docs/ARCHITECTURE.md', 'docs/GLOSSARY.md', 'docs/TESTING.md', 'docs/LANGUAGES.md',
   'docs/missions/',
   'docs/spec/',
   'docs/interchange/',
@@ -135,6 +137,14 @@ const docsLeftOut = new Map();
     }
   }
 })(path.join(tree, 'docs'));
+
+// Empty folders go, as git drops them: a clone has none, so the checks below must not see any either.
+(function dropEmpty(dir) {
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    if (entry.isDirectory() && entry.name !== '.git') dropEmpty(path.join(dir, entry.name));
+  }
+  if (dir !== tree && fs.readdirSync(dir).length === 0) fs.rmdirSync(dir);
+})(tree);
 
 const files = [];
 (function walk(dir) {
@@ -211,6 +221,29 @@ try {
   for (const line of String(e.stderr ?? '').split('\n').filter((l) => /^\s{2}\S/.test(l))) problems.push(`retired claim: ${line.trim()}`);
   if (!problems.some((p) => p.startsWith('retired claim'))) problems.push('guard-public-claims failed on the tree');
 }
+// 5a. Links. A newcomer's first documents must not point at anything the public tree lacks: one that does refuses the
+// release. Links elsewhere (the working records under docs/missions/) are counted, so the number can only be watched.
+const ENTRY_DOCS = new Set([
+  'README.md', 'CONTRIBUTING.md', 'SECURITY.md', 'CODE_OF_CONDUCT.md', 'CHANGELOG.md', 'docs/README.md',
+  'docs/ARCHITECTURE.md', 'docs/GLOSSARY.md', 'docs/TESTING.md', 'docs/LANGUAGES.md', 'docs/spec/README.md',
+  'docs/spec/kinds.md', 'extension/README.md', 'data/README.md', 'claims/README.md',
+  'docs/missions/README.md', 'docs/missions/01-architecture-decisions/README.md',
+]);
+let otherBroken = 0;
+for (const rel of files.filter((f) => f.endsWith('.md'))) {
+  const text = fs.readFileSync(path.join(tree, rel), 'utf8').replace(/```[\s\S]*?```/g, '');
+  for (const match of text.matchAll(/\]\(([^)\s]+)(?:\s+"[^"]*")?\)/g)) {
+    const target = match[1];
+    if (/^(https?:|mailto:|#|\/)/.test(target)) continue;
+    const bare = decodeURIComponent(target.split('#')[0]);
+    if (!bare) continue;
+    if (fs.existsSync(path.join(tree, path.dirname(rel), bare))) continue;
+    if (ENTRY_DOCS.has(rel)) problems.push(`entry document links something not in the public tree: ${rel} → ${target}`);
+    else otherBroken += 1;
+  }
+}
+if (otherBroken) say(`Links elsewhere that point outside the public tree: ${otherBroken} (the working records; counted, not refused).`);
+
 // 5b. A fresh clone's first hour, on request: install, then the local gate (guards, the real typecheck, conformance,
 // the tests). It needs nothing the tree does not hold; a step that reaches for a private file fails here, not for a
 // contributor. Run before the verdict, so one run names every problem.

@@ -75,7 +75,8 @@ run_shard "3d-effects"     src/solar-system src/globe-engine
 # broken — it was unobserved.
 run_shard "misc"           src/utils src/pages src/lib \
                             src/types src/testing src/communication src/security \
-                            src/features src/data src/models test/
+                            src/features src/data src/models test/ \
+                            src/config src/extension src/i18n src/legal src/symbols
 run_shard "guards+edges"   scripts src/api src/interfaces src/layouts \
                             src/routes src/shared src/styles
 

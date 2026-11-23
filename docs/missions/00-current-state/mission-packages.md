@@ -1,5 +1,9 @@
 # Mission Packages
 
+> **Superseded.** This audit (August 2026) found Mission Packages had no user interface. They have been built since:
+> composing, reviewing, publishing, taking and reporting back on missions all work, and are walked in the browser by
+> `scripts/audit-intern.mjs` (stories S20, S22, S26, S31 and S36, among others). It is kept as the record of the gap.
+
 **This is the sprint's headline gap.** The backend is complete, tested, and
 genuinely well-designed. There is no UI anywhere that calls it — not a stub,
 not a placeholder, greenfield.

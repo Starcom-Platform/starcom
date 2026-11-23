@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use Starcom in research or reporting, please cite it as below."
+title: "Starcom"
+abstract: "The reference frontend of the Earth Intelligence Network: public data on a live 3D globe, and signed, open records published over Nostr."
+type: software
+authors:
+  - name: "Jono Tho'ra"
+license: AGPL-3.0-only
+repository-code: "https://github.com/Starcom-Platform/starcom"
+url: "https://starcom.app"
+version: "0.2.0"
+date-released: "2026-11-23"
+keywords:
+  - open-source intelligence
+  - nostr
+  - geospatial
+  - earth-intelligence-network

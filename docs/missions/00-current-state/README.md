@@ -1,5 +1,9 @@
 # Current State — Index
 
+> **Each audit describes the app on its own date.** Much of what they found has since been built or fixed; later
+> decision records and plans supersede them. Read them as the record of what was wrong and why, not as a description
+> of the app today.
+
 Eleven areas, each audited independently by reading the actual code. Read the
 one relevant to what you're touching before changing it — several things
 here look wired but aren't (see each file's "wiring status" callouts).

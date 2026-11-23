@@ -1,44 +1,54 @@
 # Specs
 
-**Normative for what Starcom actually emits.** Where a spec here disagrees with
-`docs/ecosystem.md` or any other narrative doc, the spec wins and the narrative is a bug —
-same rule Navcom's own [`docs/spec/README.md`](../../../navcom-app/docs/spec/README.md)
-states for itself.
+What Starcom puts on the wire, and what it reads, written so another app can implement it without asking. Everything
+in this directory is licensed Apache-2.0 ([`README-LICENSE.md`](README-LICENSE.md)), unlike the app's AGPL-3.0: a
+wire format nobody can freely adopt is not a standard.
 
-This directory exists because `docs/ecosystem.md` said plainly that most of `docs/` predates
-what's actually built and shouldn't be trusted. A spec is where "what predates the code"
-stops being possible: it either matches the code or it's wrong, and there's no third state.
+**The spec wins.** Where a spec here disagrees with any other document, the spec is right and the other document is
+a bug. Where a spec disagrees with the code, one of them is a bug: please open an issue.
 
-## Scope
+**These are moving.** They will become the Earth Intelligence Network's shared standards in
+[`Earth-Intelligence-Network/ein-standards`](https://github.com/Earth-Intelligence-Network/ein-standards), owned by
+the network rather than by one app. Until then this directory is where they live.
 
-One document so far, because there is only one real cross-repo surface today: what Starcom
-puts on the wire that Navcom (or anyone else on the same relays) can read.
+## Where to start
 
-| | |
+| You are building | Read first | Then |
+|---|---|---|
+| Anything that reads or writes Starcom's notes | [`kinds.md`](kinds.md): every event kind Starcom uses, and what it does with each | The interchange spec's sections for those kinds |
+| A tool that publishes or weighs claims | [`nip-draft-attested-claims.md`](nip-draft-attested-claims.md) | Its vectors, in [`vectors/`](vectors/) |
+| Something that exchanges Mission Packages or reports with Starcom or NavCom | [`starcom-navcom-interchange.spec.md`](starcom-navcom-interchange.spec.md) | Its vectors, in [`mission-vectors/`](mission-vectors/) |
+| A capture or sharing tool for Starcom's globe cards | [`starcom-share-handle.spec.md`](starcom-share-handle.spec.md) | |
+| An analysis that draws on a globe | [`globe-intel-layer.md`](globe-intel-layer.md) | |
+
+## The documents
+
+| Document | What it specifies |
 |---|---|
-| [`starcom-navcom-interchange.spec.md`](./starcom-navcom-interchange.spec.md) | Mission Package and Finding: the two Nostr event kinds Starcom emits, plus a **draft, non-normative** proposal for a third kind Starcom would ingest |
+| [`kinds.md`](kinds.md) | Every Nostr event kind Starcom publishes, reads, only signs, or holds in dormant code. Generated from the code; `npm run guards` fails when they differ |
+| [`starcom-navcom-interchange.spec.md`](starcom-navcom-interchange.spec.md) | The wire between Starcom, NavCom and anyone on the same relays: Mission Package (`30079`), Dispatch Capability (`30081`), Finding (`30082`), Refutation (`30083`), Roster Item (`30084`), NavCom's sealed report (`1912`), and globe intel notes (`1`, `30023`), with their withdrawal. Versioned by revision; rev 20 is current |
+| [`nip-draft-attested-claims.md`](nip-draft-attested-claims.md) | A draft NIP: verifiable analytical claims, how to weigh them by method and independent origin rather than by who said them, and refutation |
+| [`starcom-share-handle.spec.md`](starcom-share-handle.spec.md) | `window.__starcomShareCard`: how a page or tool asks Starcom for a share card of what the globe shows |
+| [`globe-intel-layer.md`](globe-intel-layer.md) | The contract between an analysis and a globe layer, written for another instance to implement |
+| [`harm-accounting.md`](harm-accounting.md) | How harm is described: how many, how badly, for how long, to whom, with the uncertainty kept |
+| [`../interchange/`](../interchange/) | Dated notes of changes agreed with NavCom. Where one is marked superseded, the spec holds the current form |
+
+## Test vectors
+
+Each set is signed example data with the verdict a correct implementation must reach. Every set is checked by code
+that imports nothing from the app, so the vectors, not Starcom, are the reference.
+
+| Vectors | For | Run |
+|---|---|---|
+| [`vectors/`](vectors/) | Attested claims | `npm run conformance` |
+| [`mission-vectors/`](mission-vectors/) | Dispatch capabilities and Mission Package manifests | `npm run conformance:mission` |
+| [`observation-vectors/`](observation-vectors/) | NavCom observations, as Starcom reads them | `npm run gate:observations` |
+| [`publication-vectors/`](publication-vectors/) | What may be published, and what stays contained | `npm run publication-conformance` |
+
+`npm run verify` runs the first three; run the publication vectors on their own.
 
 ## Conventions
 
-Matched to Navcom's own spec conventions deliberately — these two directories describe
-opposite ends of the same wire, and reading them side by side should not require learning
-two different notations.
-
-- **MUST / MUST NOT / SHOULD / MAY** carry RFC 2119 meaning
-- All times UTC, ISO 8601 strings (`publishedAt`, `createdAt`, ...) — Starcom's existing
-  event/manifest timestamps are already ISO 8601, not Navcom's UTC-epoch-seconds convention,
-  and this spec does not change that; it's noted because it's a real, harmless difference a
-  reader crossing between the two spec sets should expect, not a bug in either
-- A section marked **draft** is a proposal for joint discussion, not something either repo
-  has committed to or implemented. Nothing in a draft section may be treated as normative
-  until both projects have actually agreed to it — see that section's own note for what's
-  unresolved
-
-## Why this wasn't written sooner
-
-Starcom didn't have anything worth specifying until the code in `src/services/intel/`
-actually did the things described here — Mission Package and Finding broadcast, real
-ML-DSA-65 payload signing, a real corroboration gate. Writing the spec first and the code
-to match it later was tried nowhere in this repo's history and isn't being tried here
-either; this documents what the already-tested code in this repo does, not what it's
-planned to do.
+- **MUST / MUST NOT / SHOULD / MAY** carry their RFC 2119 meaning.
+- Times are UTC. Starcom's manifests use ISO 8601 strings; Nostr's `created_at` is in seconds.
+- A section marked **draft** is a proposal, not something any implementation has committed to.

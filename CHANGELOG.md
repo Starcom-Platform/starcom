@@ -19,6 +19,26 @@ Proposed, and not yet decided (the EIN plan's "Many Starcoms" tab, decision 5): 
 it speaks and the two before it, and changes within a major spec version only add, so unknown tags are ignored and
 kept.
 
+## Unreleased
+
+- **Cancelling a withdrawal that waits to send** now lets its request to delete go first. Before, there was a moment
+  when the request could have been sent without the withdrawal it belonged to.
+
+The rest is for people building on Starcom or with it:
+
+- **Documentation for contributors:** [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md),
+  [`docs/GLOSSARY.md`](docs/GLOSSARY.md), [`docs/TESTING.md`](docs/TESTING.md),
+  [`docs/LANGUAGES.md`](docs/LANGUAGES.md), the extension's own [README](extension/README.md), and an index of the
+  decision records. The README's "Start here" says which journeys work today and which do not yet.
+- **Every Nostr kind Starcom uses, in one table:** [`docs/spec/kinds.md`](docs/spec/kinds.md), generated from the
+  kind registry. `npm run guards` fails when the two differ.
+- **Spec correction:** a Refutation (`30083`) is addressable, replaced at its own `d` tag. Rev 20's table called it
+  regular; the wire was always addressable.
+- **The registry says what is dormant:** kinds 4, 40, 41, 43 and 44 are in code no screen reaches, and kind 42 is
+  read, never sent.
+- **Removed:** scripts and tests that ran against code no longer in the repository, and a local relay database's
+  working files, committed by mistake.
+
 ## 0.2.0 (23 Nov 2026): the first public release
 
 Speaks interchange rev 20. Which older revisions it reads is not yet tested; the compatibility suite (open-source

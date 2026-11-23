@@ -94,8 +94,8 @@ describe('every kind in use', () => {
     expect([...UNUSED_KINDS].filter((k) => k in KIND_USE)).toEqual([]);
   });
 
-  it('says whether Starcom publishes it, reads it, or only signs it', () => {
-    const silent = Object.entries(KIND_USE).filter(([, u]) => !u.publishes && !u.reads && !u.signs).map(([k]) => k);
+  it('says whether Starcom publishes it, reads it, only signs it, or holds it only in code no screen reaches', () => {
+    const silent = Object.entries(KIND_USE).filter(([, u]) => !u.publishes && !u.reads && !u.signs && !u.dormant).map(([k]) => k);
     expect(silent).toEqual([]);
   });
 
