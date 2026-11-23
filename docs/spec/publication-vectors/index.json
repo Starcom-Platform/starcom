@@ -1,0 +1,108 @@
+{
+  "format": "Starcom publication policy vectors",
+  "version": 1,
+  "generatedBy": "scripts/make-publication-vectors.mjs",
+  "note": "The shared artifact. scripts/peer/publication.mjs is a worked example and Starcom's TypeScript is another; neither is authoritative. Port the policy or write your own, then check it here. Agreeing on outcomes while disagreeing about implementation is what lets nodes cooperate without one being in charge.",
+  "vectors": [
+    {
+      "name": "contained-by-default",
+      "description": "Material held in a workspace is not a publication candidate, whatever else is true.",
+      "file": "contained-by-default.json"
+    },
+    {
+      "name": "contained-outranks-consent",
+      "description": "Containment is checked ABOVE consent — a released decision is separate from a publish decision.",
+      "file": "contained-outranks-consent.json"
+    },
+    {
+      "name": "released-then-judged",
+      "description": "Released material still faces every check below it. Release is not permission.",
+      "file": "released-then-judged.json"
+    },
+    {
+      "name": "absent-containment-passes",
+      "description": "Absent containment means NOT containment-managed, and does not block. Opt-in, not universal.",
+      "file": "absent-containment-passes.json"
+    },
+    {
+      "name": "fabricated-refused",
+      "description": "Mock evidence never reaches the wire, signed and indistinguishable from real intelligence.",
+      "file": "fabricated-refused.json"
+    },
+    {
+      "name": "unmeasured-provenance-refused",
+      "description": "Undefined is refused alongside true: \"nobody said\" is not permission.",
+      "file": "unmeasured-provenance-refused.json"
+    },
+    {
+      "name": "organization-publishes",
+      "description": "Institutions are accountable. This is the ordinary case and must not prompt.",
+      "file": "organization-publishes.json"
+    },
+    {
+      "name": "object-publishes",
+      "description": "Threat infrastructure, vessels, hashes. Nothing here touches a person.",
+      "file": "object-publishes.json"
+    },
+    {
+      "name": "place-publishes",
+      "description": "A location where something regulated happened.",
+      "file": "place-publishes.json"
+    },
+    {
+      "name": "unknown-subject-publishes",
+      "description": "Deliberately allowed. Blocking it would make the person prompt routine, and a prompt that appears constantly stops being deliberation.",
+      "file": "unknown-subject-publishes.json"
+    },
+    {
+      "name": "public-office-with-consent",
+      "description": "A legislator taking money from the regulator they chair. The least controversial publication in journalism.",
+      "file": "public-office-with-consent.json"
+    },
+    {
+      "name": "public-office-without-consent",
+      "description": "Publishable, but still deliberate. Consent keeps it an act rather than a side effect.",
+      "file": "public-office-without-consent.json"
+    },
+    {
+      "name": "corporate-officer",
+      "description": "A named officer acting in a role they hold publicly and are accountable for.",
+      "file": "corporate-officer.json"
+    },
+    {
+      "name": "criminal-persona",
+      "description": "A threat actor handle attributed by its own conduct. Core cyber investigation work.",
+      "file": "criminal-persona.json"
+    },
+    {
+      "name": "private-consent-alone-refused",
+      "description": "THE LOAD-BEARING CASE. Consent alone published a whistleblower identity, a child's home address, a private donor and a recruitment candidate.",
+      "file": "private-consent-alone-refused.json"
+    },
+    {
+      "name": "private-absent-role-is-private",
+      "description": "No subjectRole means private. Defaulting the other way would publish anyone nobody classified.",
+      "file": "private-absent-role-is-private.json"
+    },
+    {
+      "name": "private-with-justification",
+      "description": "No absolute bar, deliberately: absolute bars get routed around. A landlord with 214 unremedied violations publishes because someone wrote down why.",
+      "file": "private-with-justification.json"
+    },
+    {
+      "name": "private-justification-without-consent",
+      "description": "Both are required. A stated reason does not replace the decision to publish.",
+      "file": "private-justification-without-consent.json"
+    },
+    {
+      "name": "private-blank-justification",
+      "description": "Whitespace is not a justification. An empty field would let the check be satisfied by pressing a key.",
+      "file": "private-blank-justification.json"
+    },
+    {
+      "name": "unrecognised-role-refused",
+      "description": "An unknown role is refused rather than coerced to private — a typo must not silently change the decision.",
+      "file": "unrecognised-role-refused.json"
+    }
+  ]
+}

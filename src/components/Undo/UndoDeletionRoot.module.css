@@ -1,0 +1,132 @@
+/*
+ * UndoDeletionRoot — a bar at the foot of the work area, not a modal: it offers
+ * a way back without blocking anything.
+ *
+ * Colours are the interface spec's palette (docs/missions/04-plan/interface-upgrade.md):
+ * a gunmetal 800 panel, body text 200, and cyan for the one interactive thing,
+ * because cyan means "interactive" and nothing here is a warning. A failed Undo
+ * is the only red, because red means failed.
+ */
+.stack {
+  position: fixed;
+  /* Centred on the work area, which useWorkArea publishes on the root; the
+     fallbacks centre it on the screen when no HUD is mounted. */
+  left: calc(var(--work-left, 0px) + var(--work-width, 100vw) / 2);
+  bottom: calc(var(--work-bottom, 0px) + 20px);
+  transform: translateX(-50%);
+  /* Above modals: a deletion made from inside a dialog is undone from here. */
+  z-index: var(--z-notification);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  /* An explicit width, not just a max, for the reason IdentityNoticeRoot gives. */
+  width: min(480px, calc(100vw - 32px));
+}
+
+/* Over a dialog, at the very top of the screen: the dialog's buttons are at
+   its foot, and the app header under the dialog's backdrop cannot be used
+   while it is open. Lower down, the bar covered the dialog's own controls. */
+.stack[data-placement='top'] {
+  top: 8px;
+  bottom: auto;
+}
+
+.bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px 12px 14px;
+  overflow: hidden;
+  border: 1px solid #3A474D;
+  border-radius: 6px;
+  background: #1C262A;
+  color: #C7CFD3;
+  font-size: 13px;
+  line-height: 1.4;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.5);
+}
+
+.what {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  color: #E9EEF0;
+}
+
+/* For screen readers only: said once, when the bar appears. */
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* The real time left; tabular so the count does not jitter as it falls. */
+.left {
+  flex: 0 0 auto;
+  color: #A1ADB2;
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+
+.undo,
+.dismiss {
+  flex: 0 0 auto;
+  padding: 5px 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Cyan 500 fill with a gunmetal 950 label: 6.42:1, per the spec. */
+.undo {
+  border: 1px solid #00A5B9;
+  background: #00A5B9;
+  color: #0A1113;
+}
+.undo:hover { background: #00C3DB; border-color: #00C3DB; }
+.undo:focus-visible { outline: 2px solid #00C3DB; outline-offset: 2px; }
+
+.dismiss {
+  border: 1px solid #3A474D;
+  background: transparent;
+  color: #C7CFD3;
+  font-weight: 400;
+}
+.dismiss:hover { background: #283439; }
+
+/* The time left, drawn: a line along the foot of the bar that empties as the
+   deletion approaches final. Its duration is set from the real time left. */
+.drain {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: #00C3DB;
+  transform-origin: left center;
+  animation-name: drain;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes drain {
+  from { transform: scaleX(1); }
+  to { transform: scaleX(0); }
+}
+
+/* The count in seconds says the same thing without motion. */
+@media (prefers-reduced-motion: reduce) {
+  .drain { display: none; }
+}
+
+.failed { border-color: #FF7266; }
+.failed .what { color: #FF7266; }
+
+@media (max-width: 520px) {
+  .stack { bottom: 8px; }
+}

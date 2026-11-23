@@ -1,0 +1,33 @@
+{
+  "name": "refinement-event-refused",
+  "description": "Carries a refines tag: the exact half of a pair, published 48 hours later. Until a pair is read as one observation, ingesting both would double-count one sighting.",
+  "expect": {
+    "observations": 0
+  },
+  "diagnostic": {
+    "note": "NOT normative — our drop wording, for humans and our own gate.",
+    "reasonContains": "refinement event"
+  },
+  "event": {
+    "kind": 1911,
+    "created_at": 1756000000,
+    "tags": [
+      [
+        "g",
+        "st-louis"
+      ],
+      [
+        "d",
+        "st-louis/st-patrick-center"
+      ],
+      [
+        "refines",
+        "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+      ]
+    ],
+    "content": "{\"anchor\":\"st-louis/st-patrick-center\",\"observed_at\":1755996400,\"tags\":[\"locked\"],\"method\":\"saw\",\"callsign\":\"Raven\",\"precision\":\"area\",\"area\":\"dp3w\"}",
+    "pubkey": "96bafb179762225794c13c78e823b349e8f21d96f8113020032e5cabdbe59889",
+    "id": "482b463badf0ee539d424121a95818a68c19d42e09a866511ac6a4262e7fd3d1",
+    "sig": "26a503639d7a0da7dc8d7171421feb70e2482d7fb2305a7c258f80a1a5d074c82d835d44f80d0bc1ca1c2816425fab281c7670bf24dd61eb1f0ba2b76ccaa979"
+  }
+}

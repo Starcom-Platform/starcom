@@ -1,0 +1,127 @@
+/*
+ * The globe's loading status (decision D-LS): EVA's behaviour, restrained chrome. The phase is its colour:
+ * cyan while acquiring, danger when a feed did not load, caution when a layer drew nothing.
+ */
+.status {
+  --phase: var(--sc-accent);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 260px;
+  max-width: 100%;
+  padding: 6px 10px 7px;
+  border: 1px solid var(--sc-divider);
+  border-top: 2px solid var(--phase);
+  border-radius: 3px;
+  background: var(--sc-surface-panel);
+  color: var(--sc-text-body);
+  font-family: var(--sc-font-text);
+  font-size: 12px;
+}
+
+.status[data-phase='failed'] { --phase: var(--sc-danger); }
+.status[data-phase='empty'] { --phase: var(--sc-caution); }
+
+.head {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* A square that sweeps while acquiring, and stands still for an outcome. */
+.mark {
+  width: 8px;
+  height: 8px;
+  background: var(--phase);
+}
+
+.status[data-phase='loading'] .mark {
+  animation: acquire 1.2s ease-in-out infinite;
+}
+
+@keyframes acquire {
+  0%, 100% { opacity: 0.35; }
+  50% { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .status[data-phase='loading'] .mark { animation: none; }
+}
+
+.word {
+  flex: 1 1 auto;
+  font-family: var(--sc-font-data);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--phase);
+}
+
+.dismiss {
+  display: inline-flex;
+  padding: 2px;
+  border: none;
+  background: none;
+  color: var(--sc-text-secondary);
+  cursor: pointer;
+}
+
+.lines {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.line {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  min-width: 0;
+}
+
+.layer {
+  flex: 0 0 auto;
+  color: var(--sc-text-secondary);
+}
+
+.feed {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.count {
+  flex: 0 0 auto;
+  font-family: var(--sc-font-data);
+  font-variant-numeric: tabular-nums;
+  color: var(--phase);
+}
+
+.failed .feed { color: var(--sc-text-body); }
+.empty .feed { color: var(--sc-text-body); }
+
+/*
+ * The sweep over the globe's disc while a layer loads (LS3): a faint trailing wedge in the layer's colour,
+ * turning once every few seconds, over the canvas and never in it. Still, and fainter, for reduced motion.
+ */
+.sweep {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, transparent 0deg 290deg, color-mix(in srgb, var(--sweep) 40%, transparent) 355deg, transparent 360deg);
+  opacity: 0.5;
+  mix-blend-mode: screen;
+  animation: sweep 4.5s linear infinite;
+}
+
+@keyframes sweep {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sweep { animation: none; opacity: 0.25; }
+}

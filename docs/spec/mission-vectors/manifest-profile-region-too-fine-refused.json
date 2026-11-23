@@ -1,0 +1,66 @@
+{
+  "name": "manifest-profile-region-too-fine-refused",
+  "description": "A region is a country or a state, never finer (rev 11; D-MX, MX11): a signed profile naming a city is refused.",
+  "mission": {
+    "id": "mission-vector-1",
+    "missionNumber": "MSN-2026-0001",
+    "title": "Cooling centres",
+    "briefing": "Check which cooling centres are open.",
+    "status": "READY_FOR_PACKAGE",
+    "visibility": "public",
+    "objectives": [],
+    "assignedTo": [],
+    "startDate": "2026-01-15T00:00:00.000Z",
+    "relatedReports": [],
+    "relatedCases": [],
+    "collaborators": [],
+    "activityLog": [],
+    "createdBy": "creator-pubkey",
+    "createdAt": "2026-01-15T00:00:00.000Z",
+    "updatedAt": "2026-01-15T00:00:00.000Z",
+    "fieldWork": {
+      "jurisdiction": "us-ca",
+      "until": "2027-01-31T23:59:59.000Z"
+    }
+  },
+  "author": "Kestrel",
+  "expect": {
+    "manifest": {
+      "id": "pkg-vector",
+      "name": "Cooling centres",
+      "version": "0.1.0",
+      "description": "Check which cooling centres are open.",
+      "visibility": "public",
+      "createdAt": "2026-01-15T00:00:00.000Z",
+      "author": "Kestrel",
+      "license": "PROPRIETARY",
+      "reports": [
+        {
+          "id": "mission-vector-1",
+          "title": "Cooling centres",
+          "checksum": "44aab7b0"
+        }
+      ],
+      "intel": [],
+      "assets": [],
+      "profile": {
+        "missionState": "open",
+        "claims": "many",
+        "fieldWork": {
+          "jurisdiction": "us-tx-leander",
+          "validUntil": 1801439999
+        }
+      },
+      "metadata": {
+        "missionNumber": "MSN-2026-0001",
+        "status": "READY_FOR_PACKAGE",
+        "relatedReportCount": 0,
+        "relatedCaseCount": 0,
+        "objectiveCount": 0
+      }
+    },
+    "canonical": "{\"assets\":[],\"author\":\"Kestrel\",\"createdAt\":\"2026-01-15T00:00:00.000Z\",\"description\":\"Check which cooling centres are open.\",\"id\":\"pkg-vector\",\"intel\":[],\"license\":\"PROPRIETARY\",\"metadata\":{\"missionNumber\":\"MSN-2026-0001\",\"objectiveCount\":0,\"relatedCaseCount\":0,\"relatedReportCount\":0,\"status\":\"READY_FOR_PACKAGE\"},\"name\":\"Cooling centres\",\"profile\":{\"claims\":\"many\",\"fieldWork\":{\"jurisdiction\":\"us-tx-leander\",\"validUntil\":1801439999},\"missionState\":\"open\"},\"reports\":[{\"checksum\":\"44aab7b0\",\"id\":\"mission-vector-1\",\"title\":\"Cooling centres\"}],\"version\":\"0.1.0\",\"visibility\":\"public\"}",
+    "digest": "449503a93f6c8e1d0acf80bf2296737797abdc881f100664bd6b2dce9d3d81bb",
+    "refused": "profile-region-not-a-country-or-state"
+  }
+}

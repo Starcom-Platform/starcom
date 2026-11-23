@@ -1,0 +1,40 @@
+{
+  "name": "capability-self-issued-refused",
+  "description": "A stranger signs a syntactically perfect root grant naming themselves, over a mission they did not create. Self-report grants nothing.",
+  "expect": {
+    "valid": false,
+    "reason": "root-issuer-mismatch",
+    "holder": "531fe6068134503d2723133227c867ac8fa6c83c537e9a44c3c5bdbdcb1fe337"
+  },
+  "rootIssuer": "1b84c5567b126440995d3ed5aaba0565d71e1834604819ff9c17f5e9d5dd078f",
+  "resource": "mission:mission-vector-1",
+  "action": "dispatch",
+  "chain": [
+    {
+      "kind": 30081,
+      "created_at": 1768435200,
+      "tags": [
+        [
+          "d",
+          "cap:mission:mission-vector-1:531fe6068134503d2723133227c867ac8fa6c83c537e9a44c3c5bdbdcb1fe337"
+        ],
+        [
+          "resource",
+          "mission:mission-vector-1"
+        ],
+        [
+          "action",
+          "dispatch"
+        ],
+        [
+          "holder",
+          "531fe6068134503d2723133227c867ac8fa6c83c537e9a44c3c5bdbdcb1fe337"
+        ]
+      ],
+      "content": "",
+      "pubkey": "531fe6068134503d2723133227c867ac8fa6c83c537e9a44c3c5bdbdcb1fe337",
+      "id": "1e3892c7ea57d3e99ad4f30d72b178c6c2df5e58eb7ad9b2817c6397dead2fae",
+      "sig": "634159b65fc634de83561458f56c9d4516eb2743634a47441b4f543883148097c574e3983e1bae42b215276187876da47eeeeaefb8262d88d997b34c933d6837"
+    }
+  ]
+}

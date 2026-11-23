@@ -1,0 +1,157 @@
+{
+ "_about": "Expected values for the GRIB2 fixtures, computed by ECMWF ecCodes 2.49.0 (the reference decoder), not by Starcom. The fixtures are real messages from NOAA GFS on AWS, 18Z run of 2026-10-05, 3-hour step, fetched by byte range from noaa-gfs-bdp-pds.",
+ "tmp2m": {
+  "bytes": 47841,
+  "shortName": "2t",
+  "units": "K",
+  "stepRange": "3",
+  "stepType": "instant",
+  "referenceTime": "20261005T1800Z",
+  "validityTime": "20261005T2100Z",
+  "Ni": 360,
+  "Nj": 181,
+  "latitudeOfFirstGridPointInDegrees": 90.0,
+  "longitudeOfFirstGridPointInDegrees": 0.0,
+  "latitudeOfLastGridPointInDegrees": -90.0,
+  "longitudeOfLastGridPointInDegrees": 359.0,
+  "iDirectionIncrementInDegrees": 1.0,
+  "jDirectionIncrementInDegrees": 1.0,
+  "count": 65160,
+  "min": 209.6021240234375,
+  "max": 311.9021240234375,
+  "sum": 18253799.101367187,
+  "samples": [
+   {
+    "index": 0,
+    "lat": 90.0,
+    "lon": 0.0,
+    "value": 253.90212402343752
+   },
+   {
+    "index": 359,
+    "lat": 90.0,
+    "lon": 359.0,
+    "value": 253.90212402343752
+   },
+   {
+    "index": 360,
+    "lat": 89.0,
+    "lon": 0.0,
+    "value": 256.70212402343753
+   },
+   {
+    "index": 16200,
+    "lat": 45.0,
+    "lon": 0.0,
+    "value": 293.1021240234375
+   },
+   {
+    "index": 32431,
+    "lat": 0.0,
+    "lon": 31.0,
+    "value": 290.9021240234375
+   },
+   {
+    "index": 21611,
+    "lat": 30.0,
+    "lon": 11.0,
+    "value": 294.70212402343753
+   },
+   {
+    "index": 60647,
+    "lat": -78.0,
+    "lon": 167.0,
+    "value": 261.6021240234375
+   },
+   {
+    "index": 33780,
+    "lat": -3.0,
+    "lon": 300.0,
+    "value": 308.70212402343753
+   },
+   {
+    "index": 65159,
+    "lat": -90.0,
+    "lon": 359.0,
+    "value": 243.40212402343752
+   }
+  ]
+ },
+ "prate-avg": {
+  "bytes": 64696,
+  "shortName": "prate",
+  "units": "kg m**-2 s**-1",
+  "stepRange": "0-3",
+  "stepType": "avg",
+  "referenceTime": "20261005T1800Z",
+  "validityTime": "20261005T2100Z",
+  "Ni": 360,
+  "Nj": 181,
+  "latitudeOfFirstGridPointInDegrees": 90.0,
+  "longitudeOfFirstGridPointInDegrees": 0.0,
+  "latitudeOfLastGridPointInDegrees": -90.0,
+  "longitudeOfLastGridPointInDegrees": 359.0,
+  "iDirectionIncrementInDegrees": 1.0,
+  "jDirectionIncrementInDegrees": 1.0,
+  "count": 65160,
+  "min": 0.0,
+  "max": 0.004485800000000001,
+  "sum": 1.9683230000000003,
+  "samples": [
+   {
+    "index": 0,
+    "lat": 90.0,
+    "lon": 0.0,
+    "value": 2.0000000000000003e-06
+   },
+   {
+    "index": 359,
+    "lat": 90.0,
+    "lon": 359.0,
+    "value": 2.0000000000000003e-06
+   },
+   {
+    "index": 360,
+    "lat": 89.0,
+    "lon": 0.0,
+    "value": 4.000000000000001e-06
+   },
+   {
+    "index": 16200,
+    "lat": 45.0,
+    "lon": 0.0,
+    "value": 1.0000000000000002e-06
+   },
+   {
+    "index": 32431,
+    "lat": 0.0,
+    "lon": 31.0,
+    "value": 8.000000000000002e-07
+   },
+   {
+    "index": 21611,
+    "lat": 30.0,
+    "lon": 11.0,
+    "value": 0.0
+   },
+   {
+    "index": 60647,
+    "lat": -78.0,
+    "lon": 167.0,
+    "value": 1.2800000000000003e-05
+   },
+   {
+    "index": 33780,
+    "lat": -3.0,
+    "lon": 300.0,
+    "value": 4.000000000000001e-07
+   },
+   {
+    "index": 65159,
+    "lat": -90.0,
+    "lon": 359.0,
+    "value": 2.2000000000000006e-05
+   }
+  ]
+ }
+}

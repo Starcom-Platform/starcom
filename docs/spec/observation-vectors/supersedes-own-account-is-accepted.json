@@ -1,0 +1,25 @@
+{
+  "name": "supersedes-own-account-is-accepted",
+  "description": "An author's later account names the event it replaces. Accepted; the earlier event, read in the same batch from the same author, is dropped.",
+  "expect": {
+    "observations": 1
+  },
+  "event": {
+    "kind": 1911,
+    "created_at": 1756000000,
+    "tags": [
+      [
+        "g",
+        "st-louis"
+      ],
+      [
+        "d",
+        "st-louis/st-patrick-center"
+      ]
+    ],
+    "content": "{\"anchor\":\"st-louis/st-patrick-center\",\"observed_at\":1755996400,\"tags\":[\"locked\"],\"method\":\"saw\",\"callsign\":\"Raven\",\"precision\":\"area\",\"area\":\"dp3w\",\"supersedes\":\"eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee\"}",
+    "pubkey": "96bafb179762225794c13c78e823b349e8f21d96f8113020032e5cabdbe59889",
+    "id": "89be08158141b658d2c5ada045d588d326c7995f2208932743b55f68e00b3df0",
+    "sig": "50433142ded2146ee65022a5877598163742c6a16ff16989011c7342de7dccf70a69ceefba186f325d4824e05338c44e8e4faa92083b9917271cafafaa78e425"
+  }
+}

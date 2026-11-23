@@ -1,0 +1,264 @@
+{
+  "zsp": "2.0",
+  "terra": "terra:europaea",
+  "grid": {
+    "width": 3600,
+    "height": 1800,
+    "cell": 0.1,
+    "origin": {
+      "lat": 90,
+      "lon": -180
+    },
+    "rows": "row 0 the northernmost",
+    "values": "at cell centres"
+  },
+  "files": {
+    "zones": "europaea-zones-0.1.u32.bin.gz",
+    "sectors": "europaea-sectors-0.1.u32.bin.gz"
+  },
+  "dtype": "uint32",
+  "endianness": "little",
+  "compression": "gzip",
+  "areaKm2": 16001745,
+  "zones": [
+    {
+      "id": "zone:fennoscandian-shield",
+      "name": "Fennoscandian Shield and the Caledonides Zone",
+      "system": "shield",
+      "provinces": [
+        "Baltic Shield-Norwegian Caledonides",
+        "Vestford-Helgeland",
+        "Kola Monocline-Finnmark Platform"
+      ],
+      "km2": 2620019
+    },
+    {
+      "id": "zone:barents-shelf",
+      "name": "Barents Shelf Zone",
+      "system": "basin",
+      "provinces": [
+        "Svalbard High",
+        "Central Barents Platform",
+        "Barents Continental Slope",
+        "Troms-Bjornoya Basin",
+        "Hammerfest-Varanger Basin",
+        "South Barents Basin",
+        "Ludlov Saddle",
+        "North Barents Basin",
+        "Grumant Uplift"
+      ],
+      "km2": 1197787
+    },
+    {
+      "id": "zone:urals-novaya-zemlya",
+      "name": "Urals and Novaya Zemlya Zone",
+      "system": "orogen",
+      "provinces": [
+        "Ural-Novaya Zemlya Foldbelt",
+        "Admiralty Arch",
+        "Novaya Zemlya Monocline",
+        "North Novaya Zemlya Basin"
+      ],
+      "km2": 952916
+    },
+    {
+      "id": "zone:timan-pechora",
+      "name": "Timan–Pechora Zone",
+      "system": "basin",
+      "provinces": [
+        "Mezen Basin",
+        "Timan High",
+        "Timan-Pechora Basin"
+      ],
+      "km2": 776622
+    },
+    {
+      "id": "zone:volga-ural",
+      "name": "Volga–Ural Zone",
+      "system": "basin",
+      "provinces": [
+        "Volga-Ural Region",
+        "Kotelnich Arch"
+      ],
+      "km2": 809507
+    },
+    {
+      "id": "zone:moscow-voronezh",
+      "name": "Moscow Basin and the Voronezh High Zone",
+      "system": "basin",
+      "provinces": [
+        "Moscow Basin",
+        "Belorussian-Voronezh High"
+      ],
+      "km2": 1242137
+    },
+    {
+      "id": "zone:ukrainian-shield",
+      "name": "Ukrainian Shield and the Dnieper–Donets Zone",
+      "system": "shield",
+      "provinces": [
+        "Ukrainian Shield",
+        "Dnieper-Donets Basin",
+        "Donbass Foldbelt",
+        "Pripyat Basin",
+        "Poles Saddle",
+        "Russian Craton Margin"
+      ],
+      "km2": 679181
+    },
+    {
+      "id": "zone:pontic-caspian-steppe",
+      "name": "Pontic–Caspian Steppe Zone",
+      "system": "basin",
+      "provinces": [
+        "North Caspian Basin",
+        "Azov-Kuban Basin",
+        "Middle Caspian Basin",
+        "North Crimea Basin",
+        "Crimea High",
+        "Northeast Black Sea Shelf",
+        "Dobrogea Foreland"
+      ],
+      "km2": 702690
+    },
+    {
+      "id": "zone:black-sea-north",
+      "name": "Black Sea, European Margin Zone",
+      "system": "basin",
+      "provinces": [
+        "Black Sea Deep-Water Basin",
+        "Black Sea Continental Slope",
+        "West Black Sea Basin"
+      ],
+      "km2": 144255
+    },
+    {
+      "id": "zone:north-european-plain",
+      "name": "North European Plain and the Baltic Zone",
+      "system": "basin",
+      "provinces": [
+        "Baltic Depression",
+        "Fennoscandian Border-Danish-Polish Margin",
+        "German-Polish Basin",
+        "Northwest German Basin",
+        "Munsterland Basin",
+        "Horda-Norwegian-Danish Basin"
+      ],
+      "km2": 836160
+    },
+    {
+      "id": "zone:north-sea-british-isles",
+      "name": "North Sea and the British Isles Zone",
+      "system": "basin",
+      "provinces": [
+        "Faeroes-Shetland-Orkney Basin",
+        "North Sea Graben",
+        "Ireland-Scotland Platform",
+        "Midland Valley-Forth Approaches Basin",
+        "Mid-North Sea High",
+        "Irish Sea",
+        "Anglo-Dutch Basin",
+        "London-Brabant Platform"
+      ],
+      "km2": 1528173
+    },
+    {
+      "id": "zone:paris-basin-massifs",
+      "name": "Paris Basin and the Hercynian Massifs Zone",
+      "system": "basin",
+      "provinces": [
+        "Anglo-Paris Basin",
+        "Armoricia",
+        "Massif Central",
+        "Aquitaine Basin",
+        "Southwest German Basin",
+        "Trans-graben",
+        "Rhine Graben",
+        "Bresse Depression",
+        "Bohemia"
+      ],
+      "km2": 1010117
+    },
+    {
+      "id": "zone:alps",
+      "name": "Alps Zone",
+      "system": "orogen",
+      "provinces": [
+        "Alps",
+        "Molasse Basin",
+        "Jura",
+        "Po Basin"
+      ],
+      "km2": 630073
+    },
+    {
+      "id": "zone:carpathians-pannonian",
+      "name": "Carpathians and the Pannonian Basin Zone",
+      "system": "orogen",
+      "provinces": [
+        "North Carpathian Basin",
+        "Pannonian Basin",
+        "Transylvania",
+        "Carpathian-Balkanian Basin",
+        "Dobrogean Orogen"
+      ],
+      "km2": 611250
+    },
+    {
+      "id": "zone:apennines-tyrrhenian",
+      "name": "Apennines and the Tyrrhenian Sea Zone",
+      "system": "orogen",
+      "provinces": [
+        "Tuscany-Latium-Paola",
+        "Tyrrhenian Basin",
+        "Sicily",
+        "Adriatic Basin",
+        "Apulia Platform",
+        "Corsican-Sardinian Basins"
+      ],
+      "km2": 620577
+    },
+    {
+      "id": "zone:balkans",
+      "name": "Balkans Zone",
+      "system": "orogen",
+      "provinces": [
+        "Dinaric Alps",
+        "Aegean",
+        "Crete"
+      ],
+      "km2": 459039
+    },
+    {
+      "id": "zone:iberia",
+      "name": "Iberian Massif and the Betics Zone",
+      "system": "shield",
+      "provinces": [
+        "Iberian Massif",
+        "Tajo-Duero Basin",
+        "Iberic Cordillera",
+        "Spanish Trough-Cantabrian Zone",
+        "Galician Basin",
+        "Lusitanian Basin",
+        "Alentejo-Guadalquivir Basin",
+        "Betic Zone",
+        "Andalucia",
+        "Pyrenean Foothills-Ebro Basin"
+      ],
+      "km2": 863543
+    },
+    {
+      "id": "zone:western-mediterranean",
+      "name": "Western Mediterranean Basin Zone",
+      "system": "basin",
+      "provinces": [
+        "Provence Basin",
+        "Lion-Camargue"
+      ],
+      "km2": 317700
+    }
+  ],
+  "sectors": 113,
+  "bytes": 307169,
+  "points": 12908
+}

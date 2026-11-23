@@ -1,0 +1,58 @@
+/*
+ * What the globe is waiting for while a report's place is picked (plan item 3.5).
+ * Gunmetal and cyan, the globe HUD's colours; it stays until the pick ends,
+ * since a toast that faded left a person not knowing what their next click did.
+ */
+.hint {
+  position: fixed;
+  /* Under the ticker: at 88px it lay over the ticker's text (K16). */
+  top: calc(var(--work-top) + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: var(--z-panel);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: calc(100vw - 32px);
+  padding: 10px 14px;
+  background: rgba(16, 22, 28, 0.94);
+  border: 1px solid rgba(0, 229, 255, 0.6);
+  border-radius: 4px;
+  box-shadow: 0 0 18px rgba(0, 229, 255, 0.18);
+  color: #d8f6ff;
+  font-size: 0.85rem;
+  line-height: 1.35;
+}
+
+.label {
+  color: #00e5ff;
+  font-family: var(--sc-font-display);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.back {
+  flex: none;
+  padding: 4px 10px;
+  background: transparent;
+  border: 1px solid rgba(0, 229, 255, 0.5);
+  border-radius: 3px;
+  color: #00e5ff;
+  font: inherit;
+  cursor: pointer;
+}
+
+.back:hover,
+.back:focus-visible {
+  background: rgba(0, 229, 255, 0.12);
+  outline: none;
+}
+
+@media (max-width: 600px) {
+  .hint {
+    flex-wrap: wrap;
+    top: 72px;
+  }
+}

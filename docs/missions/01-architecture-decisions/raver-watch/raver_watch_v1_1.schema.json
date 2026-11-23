@@ -1,0 +1,208 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Raver Watch note, v1.1",
+  "type": "object",
+  "required": [
+    "kind",
+    "pubkey",
+    "tags",
+    "content"
+  ],
+  "properties": {
+    "kind": {
+      "enum": [
+        30023,
+        31923
+      ]
+    },
+    "content": {
+      "type": "string",
+      "not": {
+        "pattern": "^\\s*[\\[{]"
+      }
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "minItems": 2,
+        "items": {
+          "type": "string"
+        }
+      },
+      "allOf": [
+        {
+          "contains": {
+            "const": [
+              "t",
+              "raver_watch"
+            ]
+          }
+        },
+        {
+          "contains": {
+            "prefixItems": [
+              {
+                "const": "d"
+              },
+              {
+                "pattern": "^raver-"
+              }
+            ]
+          }
+        },
+        {
+          "contains": {
+            "prefixItems": [
+              {
+                "const": "t"
+              },
+              {
+                "enum": [
+                  "drug_check_alert",
+                  "scene_incident",
+                  "scene_event",
+                  "heat_risk",
+                  "raver_mission",
+                  "harm_reduction_site"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "contains": {
+            "prefixItems": [
+              {
+                "const": "title"
+              }
+            ]
+          }
+        },
+        {
+          "contains": {
+            "prefixItems": [
+              {
+                "const": "source"
+              }
+            ]
+          }
+        },
+        {
+          "contains": {
+            "prefixItems": [
+              {
+                "const": "valid_from"
+              },
+              {
+                "pattern": "^[0-9]+$"
+              }
+            ]
+          }
+        },
+        {
+          "contains": {
+            "prefixItems": [
+              {
+                "const": "valid_until"
+              },
+              {
+                "pattern": "^[0-9]+$"
+              }
+            ]
+          }
+        }
+      ],
+      "not": {
+        "contains": {
+          "const": [
+            "t",
+            "starcom_intel"
+          ]
+        }
+      }
+    }
+  },
+  "$id": "raver_watch_v1_1.schema.json",
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "const": 31923
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "tags": {
+            "allOf": [
+              {
+                "contains": {
+                  "const": [
+                    "t",
+                    "scene_event"
+                  ]
+                }
+              },
+              {
+                "contains": {
+                  "prefixItems": [
+                    {
+                      "const": "start"
+                    },
+                    {
+                      "pattern": "^[0-9]+$"
+                    }
+                  ]
+                }
+              },
+              {
+                "contains": {
+                  "prefixItems": [
+                    {
+                      "const": "end"
+                    },
+                    {
+                      "pattern": "^[0-9]+$"
+                    }
+                  ]
+                }
+              },
+              {
+                "contains": {
+                  "prefixItems": [
+                    {
+                      "const": "start_tzid"
+                    }
+                  ]
+                }
+              },
+              {
+                "contains": {
+                  "prefixItems": [
+                    {
+                      "const": "location"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "x-v1.1": {
+    "added": [
+      "kind 31923 (NIP-52 time-based calendar event) for scene_event",
+      "t=role:critical|context, with t=critical beside role:critical",
+      "g (geohash): 5 characters for a town, 4 for a state",
+      "region (europe) for a warning wider than a country, with no jurisdiction",
+      "category values: policy (scene_incident), event (scene_event)",
+      "status=cancelled with t=cancelled, on a scene event at its own d",
+      "t=genre:<genre> on a scene event"
+    ],
+    "unchanged": "every v1 note passes v1.1; unknown tags are ignored, never an error"
+  }
+}

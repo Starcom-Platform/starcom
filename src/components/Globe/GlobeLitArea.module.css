@@ -1,0 +1,48 @@
+/* The area outlined on the globe (BA24): named, with the way to clear it. */
+.chip {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  max-width: 320px;
+  padding: var(--space-1) var(--space-2);
+  border: 1px solid var(--sc-cyan-700);
+  border-radius: var(--radius-sm);
+  background: var(--sc-surface-panel);
+  color: var(--sc-text-body);
+  font-family: var(--sc-font-data);
+  font-size: var(--text-xs);
+  pointer-events: auto;
+}
+
+.eyebrow {
+  color: var(--sc-text-secondary);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.name {
+  overflow: hidden;
+  color: var(--sc-text-heading);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.clear {
+  display: grid;
+  place-items: center;
+  margin-left: auto;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: none;
+  color: var(--sc-text-secondary);
+  cursor: pointer;
+}
+
+.clear:hover,
+.clear:focus-visible {
+  color: var(--sc-text-heading);
+  outline: 1px solid var(--sc-focus);
+}

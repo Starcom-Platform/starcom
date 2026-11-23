@@ -1,0 +1,29 @@
+# Starcom — security and abuse contact
+#
+# Starcom runs no server. There is no host to take something down from, no
+# account to suspend, and no database to delete a record out of. That is a
+# design property, not an evasion, and it shapes what a report to us can
+# achieve — see the policy link below, which says so plainly rather than
+# implying more.
+#
+# The contact below is a Nostr key, because for an application with no server
+# that is the channel that provably exists. Anyone can send to it over the
+# relays listed in /.well-known/starcom-node.json.
+
+Contact: https://starcom.app/.well-known/starcom-node.json
+Contact: nostr:b778a0d16f78f237bedca54cfe778c3c7c215a6a0d64345e27f75e16d6c0b7a3
+
+# What we publish, what we refuse, and how to tell our claims from someone
+# else's using our format.
+Policy: https://starcom.app/.well-known/security-policy.md
+Policy: https://starcom.app/.well-known/ein-refusals.json
+
+# Machine-readable description of this node: identity, kinds published and
+# consumed, relay set, and the specification a third party can verify against.
+Canonical: https://starcom.app/.well-known/security.txt
+
+Preferred-Languages: en
+
+# RFC 9116 requires this. If it has passed, the file is stale and so is
+# everything it points at — treat that as information.
+Expires: 2027-09-06T00:00:00.000Z

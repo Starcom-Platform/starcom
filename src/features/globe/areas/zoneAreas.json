@@ -1,0 +1,4040 @@
+{
+  "zones": [
+    {
+      "code": "terra:africana",
+      "kind": "terra",
+      "name": "Terra Africana",
+      "from": "zsp",
+      "file": "terra-africana.zsp.geojson",
+      "sha256": "fae2564402f19323046c017159cf979198355fe47fa9cee5a67a3e7616e6949a",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Terra Africana",
+        "url": "https://github.com/fraxen/tectonicplates",
+        "read": "2026-10-27"
+      },
+      "note": "Africa to its continental margin, with Madagascar and the Seychelles: the African and Somali plates' land and seas, ending at the Gulf of Suez and the isthmus, the Sicily Channel and the Strait of Gibraltar (ZR19)."
+    },
+    {
+      "code": "zone:atlas",
+      "kind": "zone",
+      "name": "Atlas Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-africana.zsp.geojson",
+      "sha256": "fae2564402f19323046c017159cf979198355fe47fa9cee5a67a3e7616e6949a",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Atlas Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One orogen: the USGS provinces Atlas Uplift, Atlas Basin, Rif Basin, Tellian Uplift, Tellian Foredeep, Hauts Basin, Guercif Basin, Rabat Basin, Essaouni Basin, within Terra Africana."
+    },
+    {
+      "code": "zone:reguibat-taoudeni",
+      "kind": "zone",
+      "name": "Reguibat and Taoudeni Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-africana.zsp.geojson",
+      "sha256": "fae2564402f19323046c017159cf979198355fe47fa9cee5a67a3e7616e6949a",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Reguibat and Taoudeni Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Taoudeni Basin, Reguibate Uplift, Tindouf Basin, Ougarta Uplift, Aaiun-Tarfaya Basin, Reggane Basin, within Terra Africana."
+    },
+    {
+      "code": "zone:senegal-basin",
+      "kind": "zone",
+      "name": "Senegal Basin Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-africana.zsp.geojson",
+      "sha256": "fae2564402f19323046c017159cf979198355fe47fa9cee5a67a3e7616e6949a",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Senegal Basin Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Senegal, Baffa, within Terra Africana."
+    },
+    {
+      "code": "zone:leo-man",
+      "kind": "zone",
+      "name": "Leo–Man Shield and the Guinea Coast Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-africana.zsp.geojson",
+      "sha256": "fae2564402f19323046c017159cf979198355fe47fa9cee5a67a3e7616e6949a",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Leo–Man Shield and the Guinea Coast Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One shield: the USGS provinces West African Shield, Volta, Gulf of Guinea, West African Coastal, within Terra Africana."
+    },
+    {
+      "code": "zone:saharan-basins",
+      "kind": "zone",
+      "name": "Ghadames, Illizi and Murzuq Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-africana.zsp.geojson",
+      "sha256": "fae2564402f19323046c017159cf979198355fe47fa9cee5a67a3e7616e6949a",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Ghadames, Illizi and Murzuq Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Grand Erg/Ahnet Basin, Trias/Ghadames Basin, Illizi Basin, Hamra Basin, Nefusn Uplift, Murzuk Basin, Fezzan Uplift, within Terra Africana."
+    },
+    {
+      "code": "zone:tuareg-shield",
+      "kind": "zone",
+      "name": "Tuareg Shield and Iullemmeden Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-africana.zsp.geojson",
+      "sha256": "fae2564402f19323046c017159cf979198355fe47fa9cee5a67a3e7616e6949a",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Tuareg Shield and Iullemmeden Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One shield: the USGS provinces Hoggar, Thiemboka Uplift, Iullemmeden, within Terra Africana."
+    },
+    {
+      "code": "zone:sirte-ionian",
+      "kind": "zone",
+      "name": "Sirte and the Ionian–Levantine Sea Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-africana.zsp.geojson",
+      "sha256": "fae2564402f19323046c017159cf979198355fe47fa9cee5a67a3e7616e6949a",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Sirte and the Ionian–Levantine Sea Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Sirte Basin, Cyrenacia Basin, Cyrenacia Uplift, Pelagian Basin, Mediterranean Basin, within Terra Africana."
+    },
+    {
+      "code": "zone:libyan-desert-nile",
+      "kind": "zone",
+      "name": "Libyan Desert and the Nile Delta Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-africana.zsp.geojson",
+      "sha256": "fae2564402f19323046c017159cf979198355fe47fa9cee5a67a3e7616e6949a",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Libyan Desert and the Nile Delta Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Erdis Kufra, Nubian Uplift, Upper Egypt Basin, North Egypt Basin, Abu Gharadiq Basin, Nile Delta Basin, Syrian Arch, within Terra Africana."
+    },
+    {
+      "code": "zone:nubian-shield",
+      "kind": "zone",
+      "name": "Nubian Shield Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-africana.zsp.geojson",
+      "sha256": "fae2564402f19323046c017159cf979198355fe47fa9cee5a67a3e7616e6949a",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Nubian Shield Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One shield: the USGS provinces North Red Sea Shield, South Red Sea Shield, within Terra Africana."
+    },
+    {
+      "code": "zone:red-sea-aden-africa",
+      "kind": "zone",
+      "name": "Red Sea and Gulf of Aden, African Margin Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-africana.zsp.geojson",
+      "sha256": "fae2564402f19323046c017159cf979198355fe47fa9cee5a67a3e7616e6949a",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Red Sea and Gulf of Aden, African Margin Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One rift: the USGS provinces Red Sea Basin, within Terra Africana."
+    },
+    {
+      "code": "zone:central-african-rifts",
+      "kind": "zone",
+      "name": "Chad, Darfur and the Sudanese Rifts Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-africana.zsp.geojson",
+      "sha256": "fae2564402f19323046c017159cf979198355fe47fa9cee5a67a3e7616e6949a",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Chad, Darfur and the Sudanese Rifts Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One rift: the USGS provinces Chad, Sud, Khartoum, Western Nubian Shield, within Terra Africana."
+    },
+    {
+      "code": "zone:niger-benue",
+      "kind": "zone",
+      "name": "Niger Delta and the Benue Trough Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-africana.zsp.geojson",
+      "sha256": "fae2564402f19323046c017159cf979198355fe47fa9cee5a67a3e7616e6949a",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Niger Delta and the Benue Trough Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One delta: the USGS provinces Niger Delta, Benue, Nigerian Massive, within Terra Africana."
+    },
+    {
+      "code": "zone:congo-basin",
+      "kind": "zone",
+      "name": "Congo Basin Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-africana.zsp.geojson",
+      "sha256": "fae2564402f19323046c017159cf979198355fe47fa9cee5a67a3e7616e6949a",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Congo Basin Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Zaire, East Zaire Precambrian Belt, within Terra Africana."
+    },
+    {
+      "code": "zone:west-congo-angola",
+      "kind": "zone",
+      "name": "West Congo Belt and the Angolan Margin Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-africana.zsp.geojson",
+      "sha256": "fae2564402f19323046c017159cf979198355fe47fa9cee5a67a3e7616e6949a",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: West Congo Belt and the Angolan Margin Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One orogen: the USGS provinces West Zaire Precambrian Belt, West-central Coastal, within Terra Africana."
+    },
+    {
+      "code": "zone:horn-of-africa",
+      "kind": "zone",
+      "name": "Horn of Africa Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-africana.zsp.geojson",
+      "sha256": "fae2564402f19323046c017159cf979198355fe47fa9cee5a67a3e7616e6949a",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Horn of Africa Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Somali, Somali Deep Sea, within Terra Africana."
+    },
+    {
+      "code": "zone:east-african-rift",
+      "kind": "zone",
+      "name": "East African Rift Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-africana.zsp.geojson",
+      "sha256": "fae2564402f19323046c017159cf979198355fe47fa9cee5a67a3e7616e6949a",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: East African Rift Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One rift: the USGS provinces East African Rift, Amhara Plateau, within Terra Africana."
+    },
+    {
+      "code": "zone:swahili-coast",
+      "kind": "zone",
+      "name": "Tanzania and Mozambique Coastal Basins Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-africana.zsp.geojson",
+      "sha256": "fae2564402f19323046c017159cf979198355fe47fa9cee5a67a3e7616e6949a",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Tanzania and Mozambique Coastal Basins Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Tanzania Coastal, Mozambique Coastal, within Terra Africana."
+    },
+    {
+      "code": "zone:kalahari-damara",
+      "kind": "zone",
+      "name": "Kalahari and the Damara Belt Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-africana.zsp.geojson",
+      "sha256": "fae2564402f19323046c017159cf979198355fe47fa9cee5a67a3e7616e6949a",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Kalahari and the Damara Belt Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Kalahari, Etosha, Luffillian Arch, Damer Belt, Orange River Coastal, within Terra Africana."
+    },
+    {
+      "code": "zone:kaapvaal-karoo-cape",
+      "kind": "zone",
+      "name": "Kaapvaal, Karoo and the Cape Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-africana.zsp.geojson",
+      "sha256": "fae2564402f19323046c017159cf979198355fe47fa9cee5a67a3e7616e6949a",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Kaapvaal, Karoo and the Cape Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One shield: the USGS provinces E. Kalahari Precambrian Belt, Karoo, South African Coastal, within Terra Africana."
+    },
+    {
+      "code": "zone:madagascar-seychelles",
+      "kind": "zone",
+      "name": "Madagascar and the Seychelles Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-africana.zsp.geojson",
+      "sha256": "fae2564402f19323046c017159cf979198355fe47fa9cee5a67a3e7616e6949a",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Madagascar and the Seychelles Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One plateau: the USGS provinces Madagascar, Morondava, Tamatave, Madagascar Offshore, Seychelles, within Terra Africana."
+    },
+    {
+      "code": "terra:arabica",
+      "kind": "terra",
+      "name": "Terra Arabica",
+      "from": "zsp",
+      "file": "terra-arabica.zsp.geojson",
+      "sha256": "8b3363e9055f8af224a3336fbc78515ac34cba61985279d055403394b8679b37",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Terra Arabica",
+        "url": "https://github.com/fraxen/tectonicplates",
+        "read": "2026-10-27"
+      },
+      "note": "The Arabian plate's land and seas to the continental margin: the peninsula, the Levant east of Suez with Sinai, Mesopotamia and the Persian Gulf, ending at the Zagros and Bitlis mountain front (ZR20) and the Red Sea's and the Gulf of Aden's axes (ZR19)."
+    },
+    {
+      "code": "zone:levant",
+      "kind": "zone",
+      "name": "Levant Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-arabica.zsp.geojson",
+      "sha256": "8b3363e9055f8af224a3336fbc78515ac34cba61985279d055403394b8679b37",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Levant Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One rift: the USGS provinces Levantine Basin, Sinai Basin, Beirut, Palmyra Zone, Haleb, Jafr-Tabuk Basin, Wadi-Surhan Basin, North Harrah Volcanics, within Terra Arabica."
+    },
+    {
+      "code": "zone:arabian-shield",
+      "kind": "zone",
+      "name": "Arabian Shield Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-arabica.zsp.geojson",
+      "sha256": "8b3363e9055f8af224a3336fbc78515ac34cba61985279d055403394b8679b37",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Arabian Shield Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One shield: the USGS provinces Arabian Shield, South Harrah Volcanics, within Terra Arabica."
+    },
+    {
+      "code": "zone:red-sea-aden-arabia",
+      "kind": "zone",
+      "name": "Red Sea, Arabian Margin Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-arabica.zsp.geojson",
+      "sha256": "8b3363e9055f8af224a3336fbc78515ac34cba61985279d055403394b8679b37",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Red Sea, Arabian Margin Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One rift: its Terra's half of the Red Sea, within Terra Arabica."
+    },
+    {
+      "code": "zone:yemen-aden",
+      "kind": "zone",
+      "name": "Yemen Highlands and the Gulf of Aden Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-arabica.zsp.geojson",
+      "sha256": "8b3363e9055f8af224a3336fbc78515ac34cba61985279d055403394b8679b37",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Yemen Highlands and the Gulf of Aden Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One rift: the USGS provinces Yemen Volcanic Basin (North), Yemen Volcanic Basin (South), Hays Structural Belt, Ma'Rib-Al Jawf Basin, Mukalla Rift Basin, Shabwah Basin, Sharmah Rift Basin, Masila-Jeza Basin, within Terra Arabica."
+    },
+    {
+      "code": "zone:rub-al-khali",
+      "kind": "zone",
+      "name": "Rub' al Khali Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-arabica.zsp.geojson",
+      "sha256": "8b3363e9055f8af224a3336fbc78515ac34cba61985279d055403394b8679b37",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Rub' al Khali Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Rub Al Khali Basin, Ghudun-Khasfeh Flank Province, Mirbat Precambrian Basement, within Terra Arabica."
+    },
+    {
+      "code": "zone:oman",
+      "kind": "zone",
+      "name": "Oman Mountains and Salt Basins Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-arabica.zsp.geojson",
+      "sha256": "8b3363e9055f8af224a3336fbc78515ac34cba61985279d055403394b8679b37",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Oman Mountains and Salt Basins Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One orogen: the USGS provinces South Oman Salt Basin, East Flank Oman Sub-basin, Huqf-Haushi Uplift, Ghaba Salt Basin, Central Oman Platform, Fahud Salt Basin, Oman Mountains, Masirah Trough, Gulf of Oman Basin, within Terra Arabica."
+    },
+    {
+      "code": "zone:central-arabian-arch",
+      "kind": "zone",
+      "name": "Central Arabian Arch Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-arabica.zsp.geojson",
+      "sha256": "8b3363e9055f8af224a3336fbc78515ac34cba61985279d055403394b8679b37",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Central Arabian Arch Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Interior Homocline-Central Arch, Greater Ghawar Uplift, Qatar Arch, within Terra Arabica."
+    },
+    {
+      "code": "zone:mesopotamia-gulf",
+      "kind": "zone",
+      "name": "Mesopotamia and the Persian Gulf Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-arabica.zsp.geojson",
+      "sha256": "8b3363e9055f8af224a3336fbc78515ac34cba61985279d055403394b8679b37",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Mesopotamia and the Persian Gulf Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Mesopotamian Foredeep Basin, Euphrates/Mardin, Anah Graben, Khleisha Uplift, within Terra Arabica."
+    },
+    {
+      "code": "zone:widyan-arches",
+      "kind": "zone",
+      "name": "Widyan and the Northern Arches Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-arabica.zsp.geojson",
+      "sha256": "8b3363e9055f8af224a3336fbc78515ac34cba61985279d055403394b8679b37",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Widyan and the Northern Arches Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Widyan Basin-Int. Platform, Hail-Ga'Ara Arch, Rutbah Uplift, within Terra Arabica."
+    },
+    {
+      "code": "terra:europaea",
+      "kind": "terra",
+      "name": "Terra Europaea",
+      "from": "zsp",
+      "file": "terra-europaea.zsp.geojson",
+      "sha256": "22ee3871c48dd1bb96ac583e1146b016b3d9d12dd9f5799beeb77d51a2328d6c",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Terra Europaea",
+        "url": "https://github.com/fraxen/tectonicplates",
+        "read": "2026-10-27"
+      },
+      "note": "Europe west of the Urals to its continental margin, with the Ural belt and Novaya Zemlya, the Mediterranean's northern half, the Black Sea's north to its median line and the steppe to the Greater Caucasus's northern foot (ZR20)."
+    },
+    {
+      "code": "zone:fennoscandian-shield",
+      "kind": "zone",
+      "name": "Fennoscandian Shield and the Caledonides Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-europaea.zsp.geojson",
+      "sha256": "22ee3871c48dd1bb96ac583e1146b016b3d9d12dd9f5799beeb77d51a2328d6c",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Fennoscandian Shield and the Caledonides Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One shield: the USGS provinces Baltic Shield-Norwegian Caledonides, Vestford-Helgeland, Kola Monocline-Finnmark Platform, within Terra Europaea."
+    },
+    {
+      "code": "zone:barents-shelf",
+      "kind": "zone",
+      "name": "Barents Shelf Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-europaea.zsp.geojson",
+      "sha256": "22ee3871c48dd1bb96ac583e1146b016b3d9d12dd9f5799beeb77d51a2328d6c",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Barents Shelf Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Svalbard High, Central Barents Platform, Barents Continental Slope, Troms-Bjornoya Basin, Hammerfest-Varanger Basin, South Barents Basin, Ludlov Saddle, North Barents Basin, Grumant Uplift, within Terra Europaea."
+    },
+    {
+      "code": "zone:urals-novaya-zemlya",
+      "kind": "zone",
+      "name": "Urals and Novaya Zemlya Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-europaea.zsp.geojson",
+      "sha256": "22ee3871c48dd1bb96ac583e1146b016b3d9d12dd9f5799beeb77d51a2328d6c",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Urals and Novaya Zemlya Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One orogen: the USGS provinces Ural-Novaya Zemlya Foldbelt, Admiralty Arch, Novaya Zemlya Monocline, North Novaya Zemlya Basin, within Terra Europaea."
+    },
+    {
+      "code": "zone:timan-pechora",
+      "kind": "zone",
+      "name": "Timan–Pechora Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-europaea.zsp.geojson",
+      "sha256": "22ee3871c48dd1bb96ac583e1146b016b3d9d12dd9f5799beeb77d51a2328d6c",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Timan–Pechora Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Mezen Basin, Timan High, Timan-Pechora Basin, within Terra Europaea."
+    },
+    {
+      "code": "zone:volga-ural",
+      "kind": "zone",
+      "name": "Volga–Ural Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-europaea.zsp.geojson",
+      "sha256": "22ee3871c48dd1bb96ac583e1146b016b3d9d12dd9f5799beeb77d51a2328d6c",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Volga–Ural Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Volga-Ural Region, Kotelnich Arch, within Terra Europaea."
+    },
+    {
+      "code": "zone:moscow-voronezh",
+      "kind": "zone",
+      "name": "Moscow Basin and the Voronezh High Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-europaea.zsp.geojson",
+      "sha256": "22ee3871c48dd1bb96ac583e1146b016b3d9d12dd9f5799beeb77d51a2328d6c",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Moscow Basin and the Voronezh High Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Moscow Basin, Belorussian-Voronezh High, within Terra Europaea."
+    },
+    {
+      "code": "zone:ukrainian-shield",
+      "kind": "zone",
+      "name": "Ukrainian Shield and the Dnieper–Donets Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-europaea.zsp.geojson",
+      "sha256": "22ee3871c48dd1bb96ac583e1146b016b3d9d12dd9f5799beeb77d51a2328d6c",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Ukrainian Shield and the Dnieper–Donets Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One shield: the USGS provinces Ukrainian Shield, Dnieper-Donets Basin, Donbass Foldbelt, Pripyat Basin, Poles Saddle, Russian Craton Margin, within Terra Europaea."
+    },
+    {
+      "code": "zone:pontic-caspian-steppe",
+      "kind": "zone",
+      "name": "Pontic–Caspian Steppe Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-europaea.zsp.geojson",
+      "sha256": "22ee3871c48dd1bb96ac583e1146b016b3d9d12dd9f5799beeb77d51a2328d6c",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Pontic–Caspian Steppe Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces North Caspian Basin, Azov-Kuban Basin, Middle Caspian Basin, North Crimea Basin, Crimea High, Northeast Black Sea Shelf, Dobrogea Foreland, within Terra Europaea."
+    },
+    {
+      "code": "zone:black-sea-north",
+      "kind": "zone",
+      "name": "Black Sea, European Margin Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-europaea.zsp.geojson",
+      "sha256": "22ee3871c48dd1bb96ac583e1146b016b3d9d12dd9f5799beeb77d51a2328d6c",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Black Sea, European Margin Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Black Sea Deep-Water Basin, Black Sea Continental Slope, West Black Sea Basin, within Terra Europaea."
+    },
+    {
+      "code": "zone:north-european-plain",
+      "kind": "zone",
+      "name": "North European Plain and the Baltic Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-europaea.zsp.geojson",
+      "sha256": "22ee3871c48dd1bb96ac583e1146b016b3d9d12dd9f5799beeb77d51a2328d6c",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: North European Plain and the Baltic Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Baltic Depression, Fennoscandian Border-Danish-Polish Margin, German-Polish Basin, Northwest German Basin, Munsterland Basin, Horda-Norwegian-Danish Basin, within Terra Europaea."
+    },
+    {
+      "code": "zone:north-sea-british-isles",
+      "kind": "zone",
+      "name": "North Sea and the British Isles Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-europaea.zsp.geojson",
+      "sha256": "22ee3871c48dd1bb96ac583e1146b016b3d9d12dd9f5799beeb77d51a2328d6c",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: North Sea and the British Isles Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Faeroes-Shetland-Orkney Basin, North Sea Graben, Ireland-Scotland Platform, Midland Valley-Forth Approaches Basin, Mid-North Sea High, Irish Sea, Anglo-Dutch Basin, London-Brabant Platform, within Terra Europaea."
+    },
+    {
+      "code": "zone:paris-basin-massifs",
+      "kind": "zone",
+      "name": "Paris Basin and the Hercynian Massifs Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-europaea.zsp.geojson",
+      "sha256": "22ee3871c48dd1bb96ac583e1146b016b3d9d12dd9f5799beeb77d51a2328d6c",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Paris Basin and the Hercynian Massifs Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Anglo-Paris Basin, Armoricia, Massif Central, Aquitaine Basin, Southwest German Basin, Trans-graben, Rhine Graben, Bresse Depression, Bohemia, within Terra Europaea."
+    },
+    {
+      "code": "zone:alps",
+      "kind": "zone",
+      "name": "Alps Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-europaea.zsp.geojson",
+      "sha256": "22ee3871c48dd1bb96ac583e1146b016b3d9d12dd9f5799beeb77d51a2328d6c",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Alps Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One orogen: the USGS provinces Alps, Molasse Basin, Jura, Po Basin, within Terra Europaea."
+    },
+    {
+      "code": "zone:carpathians-pannonian",
+      "kind": "zone",
+      "name": "Carpathians and the Pannonian Basin Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-europaea.zsp.geojson",
+      "sha256": "22ee3871c48dd1bb96ac583e1146b016b3d9d12dd9f5799beeb77d51a2328d6c",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Carpathians and the Pannonian Basin Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One orogen: the USGS provinces North Carpathian Basin, Pannonian Basin, Transylvania, Carpathian-Balkanian Basin, Dobrogean Orogen, within Terra Europaea."
+    },
+    {
+      "code": "zone:apennines-tyrrhenian",
+      "kind": "zone",
+      "name": "Apennines and the Tyrrhenian Sea Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-europaea.zsp.geojson",
+      "sha256": "22ee3871c48dd1bb96ac583e1146b016b3d9d12dd9f5799beeb77d51a2328d6c",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Apennines and the Tyrrhenian Sea Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One orogen: the USGS provinces Tuscany-Latium-Paola, Tyrrhenian Basin, Sicily, Adriatic Basin, Apulia Platform, Corsican-Sardinian Basins, within Terra Europaea."
+    },
+    {
+      "code": "zone:balkans",
+      "kind": "zone",
+      "name": "Balkans Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-europaea.zsp.geojson",
+      "sha256": "22ee3871c48dd1bb96ac583e1146b016b3d9d12dd9f5799beeb77d51a2328d6c",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Balkans Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One orogen: the USGS provinces Dinaric Alps, Aegean, Crete, within Terra Europaea."
+    },
+    {
+      "code": "zone:iberia",
+      "kind": "zone",
+      "name": "Iberian Massif and the Betics Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-europaea.zsp.geojson",
+      "sha256": "22ee3871c48dd1bb96ac583e1146b016b3d9d12dd9f5799beeb77d51a2328d6c",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Iberian Massif and the Betics Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One shield: the USGS provinces Iberian Massif, Tajo-Duero Basin, Iberic Cordillera, Spanish Trough-Cantabrian Zone, Galician Basin, Lusitanian Basin, Alentejo-Guadalquivir Basin, Betic Zone, Andalucia, Pyrenean Foothills-Ebro Basin, within Terra Europaea."
+    },
+    {
+      "code": "zone:western-mediterranean",
+      "kind": "zone",
+      "name": "Western Mediterranean Basin Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-europaea.zsp.geojson",
+      "sha256": "22ee3871c48dd1bb96ac583e1146b016b3d9d12dd9f5799beeb77d51a2328d6c",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Western Mediterranean Basin Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Provence Basin, Lion-Camargue, within Terra Europaea."
+    },
+    {
+      "code": "terra:tethyana",
+      "kind": "terra",
+      "name": "Terra Tethyana",
+      "from": "zsp",
+      "file": "terra-tethyana.zsp.geojson",
+      "sha256": "f8b3036e68642594c307f07e668241ce0ed6b1e0a28cc309e7c9dcbe8391d8f8",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Terra Tethyana",
+        "url": "https://github.com/fraxen/tectonicplates",
+        "read": "2026-10-27"
+      },
+      "note": "Where the Tethys Ocean closed: Anatolia, the Caucasus, the Caspian, the Zagros and the Iranian Plateau, the Hindu Kush, the Pamirs, the Tian Shan and the Turan lowland, from the Bosporus and the Black Sea's median to the Tarim, the Kazakh steppe and the Chaman fault (ZR20, ZR21)."
+    },
+    {
+      "code": "zone:anatolian-plateau",
+      "kind": "zone",
+      "name": "Anatolian Plateau and the Taurus Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-tethyana.zsp.geojson",
+      "sha256": "f8b3036e68642594c307f07e668241ce0ed6b1e0a28cc309e7c9dcbe8391d8f8",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Anatolian Plateau and the Taurus Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One plateau: the USGS provinces Tuz/Corum, Adana/Sivas, within Terra Tethyana."
+    },
+    {
+      "code": "zone:pontides",
+      "kind": "zone",
+      "name": "Pontic Mountains Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-tethyana.zsp.geojson",
+      "sha256": "f8b3036e68642594c307f07e668241ce0ed6b1e0a28cc309e7c9dcbe8391d8f8",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Pontic Mountains Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One orogen: the USGS provinces Thrace/Samsun, within Terra Tethyana."
+    },
+    {
+      "code": "zone:western-anatolia",
+      "kind": "zone",
+      "name": "Western Anatolia and the Menderes Massif Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-tethyana.zsp.geojson",
+      "sha256": "f8b3036e68642594c307f07e668241ce0ed6b1e0a28cc309e7c9dcbe8391d8f8",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Western Anatolia and the Menderes Massif Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One rift: the USGS provinces Kardiff/Menders Massif, within Terra Tethyana."
+    },
+    {
+      "code": "zone:lesser-caucasus",
+      "kind": "zone",
+      "name": "Lesser Caucasus and the Armenian Highlands Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-tethyana.zsp.geojson",
+      "sha256": "f8b3036e68642594c307f07e668241ce0ed6b1e0a28cc309e7c9dcbe8391d8f8",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Lesser Caucasus and the Armenian Highlands Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One orogen: the USGS provinces Lesser Caucasus, Araks, within Terra Tethyana."
+    },
+    {
+      "code": "zone:caucasus",
+      "kind": "zone",
+      "name": "Caucasus Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-tethyana.zsp.geojson",
+      "sha256": "f8b3036e68642594c307f07e668241ce0ed6b1e0a28cc309e7c9dcbe8391d8f8",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Caucasus Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One orogen: the USGS provinces Great Caucasus Foldbelt, Rioni Basin, Kura Basin, within Terra Tethyana."
+    },
+    {
+      "code": "zone:caspian-sea",
+      "kind": "zone",
+      "name": "Caspian Sea Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-tethyana.zsp.geojson",
+      "sha256": "f8b3036e68642594c307f07e668241ce0ed6b1e0a28cc309e7c9dcbe8391d8f8",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Caspian Sea Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces South Caspian Basin, within Terra Tethyana."
+    },
+    {
+      "code": "zone:black-sea-south",
+      "kind": "zone",
+      "name": "Black Sea, Anatolian Margin Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-tethyana.zsp.geojson",
+      "sha256": "f8b3036e68642594c307f07e668241ce0ed6b1e0a28cc309e7c9dcbe8391d8f8",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Black Sea, Anatolian Margin Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: its Terra's half of the Red Sea, within Terra Tethyana."
+    },
+    {
+      "code": "zone:zagros",
+      "kind": "zone",
+      "name": "Zagros Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-tethyana.zsp.geojson",
+      "sha256": "f8b3036e68642594c307f07e668241ce0ed6b1e0a28cc309e7c9dcbe8391d8f8",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Zagros Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One orogen: the USGS provinces Zagros Fold Belt, Zagros Thrust Zone, within Terra Tethyana."
+    },
+    {
+      "code": "zone:iranian-plateau",
+      "kind": "zone",
+      "name": "Iranian Plateau Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-tethyana.zsp.geojson",
+      "sha256": "f8b3036e68642594c307f07e668241ce0ed6b1e0a28cc309e7c9dcbe8391d8f8",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Iranian Plateau Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One plateau: the USGS provinces Central Iranian Basins, Cen. Iranian Microcontinents, Lut Block and Depression, within Terra Tethyana."
+    },
+    {
+      "code": "zone:alborz-kopet-dag",
+      "kind": "zone",
+      "name": "Alborz and Kopet Dag Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-tethyana.zsp.geojson",
+      "sha256": "f8b3036e68642594c307f07e668241ce0ed6b1e0a28cc309e7c9dcbe8391d8f8",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Alborz and Kopet Dag Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One orogen: the USGS provinces Alborz Fold Belt, Kopet-Dag Foldbelt, within Terra Tethyana."
+    },
+    {
+      "code": "zone:makran-baluchistan",
+      "kind": "zone",
+      "name": "Makran and Baluchistan Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-tethyana.zsp.geojson",
+      "sha256": "f8b3036e68642594c307f07e668241ce0ed6b1e0a28cc309e7c9dcbe8391d8f8",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Makran and Baluchistan Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One arc: the USGS provinces Makran, Baluchistan, within Terra Tethyana."
+    },
+    {
+      "code": "zone:hindu-kush",
+      "kind": "zone",
+      "name": "Hindu Kush and the Afghan Blocks Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-tethyana.zsp.geojson",
+      "sha256": "f8b3036e68642594c307f07e668241ce0ed6b1e0a28cc309e7c9dcbe8391d8f8",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Hindu Kush and the Afghan Blocks Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One orogen: the USGS provinces Central Afghanistan, Southeast Afghanistan, Afghan-Tajik Basin, within Terra Tethyana."
+    },
+    {
+      "code": "zone:pamirs",
+      "kind": "zone",
+      "name": "Pamirs Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-tethyana.zsp.geojson",
+      "sha256": "f8b3036e68642594c307f07e668241ce0ed6b1e0a28cc309e7c9dcbe8391d8f8",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Pamirs Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One orogen: the USGS provinces Pamir High, Alay Basin, within Terra Tethyana."
+    },
+    {
+      "code": "zone:tian-shan",
+      "kind": "zone",
+      "name": "Tian Shan Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-tethyana.zsp.geojson",
+      "sha256": "f8b3036e68642594c307f07e668241ce0ed6b1e0a28cc309e7c9dcbe8391d8f8",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Tian Shan Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One orogen: the USGS provinces Tian Shan Foldbelt, Fergana Basin, Naryn Basin, Issyk-Kul Basin, West Ili Basin, East Ili Basin, Bogdashan Fold Belt, Turpan Basin, within Terra Tethyana."
+    },
+    {
+      "code": "zone:karakum-amu-darya",
+      "kind": "zone",
+      "name": "Karakum and the Amu Darya Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-tethyana.zsp.geojson",
+      "sha256": "f8b3036e68642594c307f07e668241ce0ed6b1e0a28cc309e7c9dcbe8391d8f8",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Karakum and the Amu Darya Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Amu-Darya Basin, Karabogaz-Karakum High, within Terra Tethyana."
+    },
+    {
+      "code": "zone:aral-syr-darya",
+      "kind": "zone",
+      "name": "Aral Sea, the Syr Darya and the Ustyurt Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-tethyana.zsp.geojson",
+      "sha256": "f8b3036e68642594c307f07e668241ce0ed6b1e0a28cc309e7c9dcbe8391d8f8",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Aral Sea, the Syr Darya and the Ustyurt Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Syr-Darya Basin, East Aral Slope, East Aral Basin, North Ustyurt Basin, Mangyshlak-Ustyurt Foldbelt, Mugodzhary-South Emba, Chu-Sarysu Basin, within Terra Tethyana."
+    },
+    {
+      "code": "terra:borealis",
+      "kind": "terra",
+      "name": "Terra Borealis",
+      "from": "zsp",
+      "file": "terra-borealis.zsp.geojson",
+      "sha256": "9a55f3238dfa3ef55ea9347f994985a73aefe4c280e9a64494206271e669ffe6",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Terra Borealis",
+        "url": "https://github.com/fraxen/tectonicplates",
+        "read": "2026-10-27"
+      },
+      "note": "Northern Eurasia east of the Urals to its continental margin: the West Siberian Basin, the Siberian craton, the Kazakh steppe, Verkhoyansk and Chukotka, Kamchatka and the Arctic shelf seas, ending at the craton's southern rim (ZR22), the Kazakh steppe's edge (ZR21) and the Sea of Okhotsk's median (ZR22)."
+    },
+    {
+      "code": "zone:west-siberian-basin",
+      "kind": "zone",
+      "name": "West Siberian Basin Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-borealis.zsp.geojson",
+      "sha256": "9a55f3238dfa3ef55ea9347f994985a73aefe4c280e9a64494206271e669ffe6",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: West Siberian Basin Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces West Siberian Basin, within Terra Borealis."
+    },
+    {
+      "code": "zone:taimyr-kara",
+      "kind": "zone",
+      "name": "Taimyr and the Kara Sea Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-borealis.zsp.geojson",
+      "sha256": "9a55f3238dfa3ef55ea9347f994985a73aefe4c280e9a64494206271e669ffe6",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Taimyr and the Kara Sea Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One orogen: the USGS provinces Yenisey-Khatanga Basin, Taimyr-Kara High, Severnaya Zemlya High, St. Anna Basin, Vize High, Ushakov High, Uedineniya Basin, Central Kara High, Schmidt Basin, within Terra Borealis."
+    },
+    {
+      "code": "zone:tunguska",
+      "kind": "zone",
+      "name": "Tunguska Basin and the Yenisey Ridge Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-borealis.zsp.geojson",
+      "sha256": "9a55f3238dfa3ef55ea9347f994985a73aefe4c280e9a64494206271e669ffe6",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Tunguska Basin and the Yenisey Ridge Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Tunguska Basin, Turukhan-Norilsk Folded Zone, Turukhan-Igarka Uplift, Yenisey Ridge, Baykit Arch, within Terra Borealis."
+    },
+    {
+      "code": "zone:angara-lena",
+      "kind": "zone",
+      "name": "Angara–Lena Platform Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-borealis.zsp.geojson",
+      "sha256": "9a55f3238dfa3ef55ea9347f994985a73aefe4c280e9a64494206271e669ffe6",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Angara–Lena Platform Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Cis-Sayan Basin, Angara-Lena Terrace, Nepa-Botuoba Arch, Cis-Patom Foredeep, Kempendiay Region, within Terra Borealis."
+    },
+    {
+      "code": "zone:anabar",
+      "kind": "zone",
+      "name": "Anabar Shield Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-borealis.zsp.geojson",
+      "sha256": "9a55f3238dfa3ef55ea9347f994985a73aefe4c280e9a64494206271e669ffe6",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Anabar Shield Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One shield: the USGS provinces Anabar-Olenek High, Anabar Basin, Khatanga Saddle, within Terra Borealis."
+    },
+    {
+      "code": "zone:lena-vilyuy",
+      "kind": "zone",
+      "name": "Lena–Vilyuy Basin Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-borealis.zsp.geojson",
+      "sha256": "9a55f3238dfa3ef55ea9347f994985a73aefe4c280e9a64494206271e669ffe6",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Lena–Vilyuy Basin Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Lena-Vilyuy Basin, within Terra Borealis."
+    },
+    {
+      "code": "zone:aldan-stanovoy",
+      "kind": "zone",
+      "name": "Aldan Shield and the Stanovoy Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-borealis.zsp.geojson",
+      "sha256": "9a55f3238dfa3ef55ea9347f994985a73aefe4c280e9a64494206271e669ffe6",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Aldan Shield and the Stanovoy Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One shield: the USGS provinces Aldan Uplift, Aldan Shield, within Terra Borealis."
+    },
+    {
+      "code": "zone:baikal-patom",
+      "kind": "zone",
+      "name": "Baikal–Patom Highlands Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-borealis.zsp.geojson",
+      "sha256": "9a55f3238dfa3ef55ea9347f994985a73aefe4c280e9a64494206271e669ffe6",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Baikal–Patom Highlands Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One orogen: the USGS provinces Baikal-Patom Folded Region, within Terra Borealis."
+    },
+    {
+      "code": "zone:altai-sayan",
+      "kind": "zone",
+      "name": "Altai, Sayan and Kuznetsk Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-borealis.zsp.geojson",
+      "sha256": "9a55f3238dfa3ef55ea9347f994985a73aefe4c280e9a64494206271e669ffe6",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Altai, Sayan and Kuznetsk Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One orogen: the USGS provinces Altay-Sayan Folded Region, Kuznetsk Basin, North Minusa Basin, South Minusa Basin, within Terra Borealis."
+    },
+    {
+      "code": "zone:kazakh-uplands",
+      "kind": "zone",
+      "name": "Kazakh Uplands and the Turgay Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-borealis.zsp.geojson",
+      "sha256": "9a55f3238dfa3ef55ea9347f994985a73aefe4c280e9a64494206271e669ffe6",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Kazakh Uplands and the Turgay Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One shield: the USGS provinces Central Kazakhstan Folded Region, Turgay Depression, South Turgay Basin, Alakol Basin, Zaysan Basin, within Terra Borealis."
+    },
+    {
+      "code": "zone:verkhoyansk-chukotka",
+      "kind": "zone",
+      "name": "Verkhoyansk and Chukotka Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-borealis.zsp.geojson",
+      "sha256": "9a55f3238dfa3ef55ea9347f994985a73aefe4c280e9a64494206271e669ffe6",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Verkhoyansk and Chukotka Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One orogen: the USGS provinces Verkhoyan-Chukotka Folded Region, Zyryanka Basin, Moma Basin, Ayon Basin, Anadyr Basin, Gangut High, Khatyrka Basin, Penzhina Basin, within Terra Borealis."
+    },
+    {
+      "code": "zone:laptev-east-siberian",
+      "kind": "zone",
+      "name": "Laptev and East Siberian Shelves Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-borealis.zsp.geojson",
+      "sha256": "9a55f3238dfa3ef55ea9347f994985a73aefe4c280e9a64494206271e669ffe6",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Laptev and East Siberian Shelves Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Laptev Shelf, Novosibirsk Basin, De Long High, Anzhu Uplift, Blagoveshchensk Basin, North Chukchi Basin, Wrangel Basin, Wrangel-Herald Uplift, South Chukchi-Hope Basin, within Terra Borealis."
+    },
+    {
+      "code": "zone:kamchatka-koryak",
+      "kind": "zone",
+      "name": "Kamchatka and the Koryak Highlands Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-borealis.zsp.geojson",
+      "sha256": "9a55f3238dfa3ef55ea9347f994985a73aefe4c280e9a64494206271e669ffe6",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Kamchatka and the Koryak Highlands Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One arc: the USGS provinces Koryak-Kamchatka Foldbelt, Kinkil Basin, Talov Uplift, West Kamchatka Basin, Central Kamchatka Group of Basins, East Kamchatka Uplift, Olyutor Basin, East Kamchatka Basin, within Terra Borealis."
+    },
+    {
+      "code": "zone:okhotsk-north",
+      "kind": "zone",
+      "name": "Sea of Okhotsk, Northern Margin Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-borealis.zsp.geojson",
+      "sha256": "9a55f3238dfa3ef55ea9347f994985a73aefe4c280e9a64494206271e669ffe6",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Sea of Okhotsk, Northern Margin Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces North Okhotsk Group of Basins, Tinro Basin, Gizhigin Basin, Koni-Tayganos Uplift, within Terra Borealis."
+    },
+    {
+      "code": "terra:sinica",
+      "kind": "terra",
+      "name": "Terra Sinica",
+      "from": "zsp",
+      "file": "terra-sinica.zsp.geojson",
+      "sha256": "8f3d59086a8a93b3777b5a6918048b6b4d88ee75fcad243ba860ae005d87177b",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Terra Sinica",
+        "url": "https://github.com/fraxen/tectonicplates",
+        "read": "2026-10-27"
+      },
+      "note": "East Asia to its continental margin: China east of the Indus–Yarlung suture with Tibet (ZR21), Mongolia and Transbaikalia, the Amur and Manchuria, Korea, Japan, Sakhalin and the Kurils, and the Yellow, East China and Japan seas, ending at the Siberian craton's rim, the Sea of Okhotsk's median and the Red River fault (ZR22)."
+    },
+    {
+      "code": "zone:tarim",
+      "kind": "zone",
+      "name": "Tarim Basin Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-sinica.zsp.geojson",
+      "sha256": "8f3d59086a8a93b3777b5a6918048b6b4d88ee75fcad243ba860ae005d87177b",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Tarim Basin Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Tarim Basin, within Terra Sinica."
+    },
+    {
+      "code": "zone:dzungaria",
+      "kind": "zone",
+      "name": "Dzungaria Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-sinica.zsp.geojson",
+      "sha256": "8f3d59086a8a93b3777b5a6918048b6b4d88ee75fcad243ba860ae005d87177b",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Dzungaria Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Junggar Basin, Karamay Thrust Belt, within Terra Sinica."
+    },
+    {
+      "code": "zone:qiangtang",
+      "kind": "zone",
+      "name": "Qiangtang and the Changtang Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-sinica.zsp.geojson",
+      "sha256": "8f3d59086a8a93b3777b5a6918048b6b4d88ee75fcad243ba860ae005d87177b",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Qiangtang and the Changtang Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One plateau: the USGS provinces Qiangtang Terrane, Qiangtang Tanggula Basin, within Terra Sinica."
+    },
+    {
+      "code": "zone:lhasa-block",
+      "kind": "zone",
+      "name": "Lhasa Block and the Tsangpo Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-sinica.zsp.geojson",
+      "sha256": "8f3d59086a8a93b3777b5a6918048b6b4d88ee75fcad243ba860ae005d87177b",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Lhasa Block and the Tsangpo Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One plateau: the USGS provinces Lhasa Terrane, Lhasa Basin, Cuoqing Lunpola Basin, Qabdu Basin, within Terra Sinica."
+    },
+    {
+      "code": "zone:kunlun-qaidam",
+      "kind": "zone",
+      "name": "Kunlun and the Qaidam Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-sinica.zsp.geojson",
+      "sha256": "8f3d59086a8a93b3777b5a6918048b6b4d88ee75fcad243ba860ae005d87177b",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Kunlun and the Qaidam Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One orogen: the USGS provinces Kunlunshan Fold Belt, Altunshan Fold Belt, Qaidam Basin, Kumukulig Basin, within Terra Sinica."
+    },
+    {
+      "code": "zone:qilian-alxa",
+      "kind": "zone",
+      "name": "Qilian Shan and the Alxa Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-sinica.zsp.geojson",
+      "sha256": "8f3d59086a8a93b3777b5a6918048b6b4d88ee75fcad243ba860ae005d87177b",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Qilian Shan and the Alxa Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One orogen: the USGS provinces Qilianshan Fold Belt, Jiuquan Minle Wuwei Basin, Alashan Yinshan Fold Belt, within Terra Sinica."
+    },
+    {
+      "code": "zone:songpan-ganzi",
+      "kind": "zone",
+      "name": "Songpan–Ganzi and the Longmen Shan Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-sinica.zsp.geojson",
+      "sha256": "8f3d59086a8a93b3777b5a6918048b6b4d88ee75fcad243ba860ae005d87177b",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Songpan–Ganzi and the Longmen Shan Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One orogen: the USGS provinces Songpan Ganzi Fold Belt, Longmenshan Dabashan Fold Belt, Sulongshan Fold Belt, within Terra Sinica."
+    },
+    {
+      "code": "zone:sichuan",
+      "kind": "zone",
+      "name": "Sichuan Basin Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-sinica.zsp.geojson",
+      "sha256": "8f3d59086a8a93b3777b5a6918048b6b4d88ee75fcad243ba860ae005d87177b",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Sichuan Basin Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Sichuan Basin, within Terra Sinica."
+    },
+    {
+      "code": "zone:ordos-loess",
+      "kind": "zone",
+      "name": "Ordos and the Loess Plateau Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-sinica.zsp.geojson",
+      "sha256": "8f3d59086a8a93b3777b5a6918048b6b4d88ee75fcad243ba860ae005d87177b",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Ordos and the Loess Plateau Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Ordos Basin, Shanxi Plateau, within Terra Sinica."
+    },
+    {
+      "code": "zone:north-china-plain",
+      "kind": "zone",
+      "name": "North China Plain and the Yellow Sea Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-sinica.zsp.geojson",
+      "sha256": "8f3d59086a8a93b3777b5a6918048b6b4d88ee75fcad243ba860ae005d87177b",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: North China Plain and the Yellow Sea Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Bohaiwan Basin, Taihangshan Yanshan Fold Belt, Taikang Hefei Basin, Nanyang Basin, Subei Yellow Sea Basin, Korea Bay Basin, Luxi Jiaoliao Uplift, within Terra Sinica."
+    },
+    {
+      "code": "zone:qinling-dabie",
+      "kind": "zone",
+      "name": "Qinling–Dabie Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-sinica.zsp.geojson",
+      "sha256": "8f3d59086a8a93b3777b5a6918048b6b4d88ee75fcad243ba860ae005d87177b",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Qinling–Dabie Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One orogen: the USGS provinces Qinling Dabieshan Fold Belt, within Terra Sinica."
+    },
+    {
+      "code": "zone:yangtze",
+      "kind": "zone",
+      "name": "Yangtze Platform Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-sinica.zsp.geojson",
+      "sha256": "8f3d59086a8a93b3777b5a6918048b6b4d88ee75fcad243ba860ae005d87177b",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Yangtze Platform Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Jianghan Basin, Jiangnan South Jiangsu Fold Belt, Yunnan Guizhou Hubei Fold Belt, Xichang Yunnan Fold Belt, Chuxiong Basin, Nanpanjiang Depression, Bose Basin, within Terra Sinica."
+    },
+    {
+      "code": "zone:south-china",
+      "kind": "zone",
+      "name": "South China and the Pearl River Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-sinica.zsp.geojson",
+      "sha256": "8f3d59086a8a93b3777b5a6918048b6b4d88ee75fcad243ba860ae005d87177b",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: South China and the Pearl River Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One orogen: the USGS provinces South China Fold Belt, Pearl River Mouth Basin, Sanshui Basin, Shiwan Dashan Basin, Beibuwan Basin, Leidong Basin, Qiongdongnan Basin, Taixinan Basin, Bijianan Basin, within Terra Sinica."
+    },
+    {
+      "code": "zone:east-china-sea-taiwan",
+      "kind": "zone",
+      "name": "East China Sea, Taiwan and the Ryukyus Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-sinica.zsp.geojson",
+      "sha256": "8f3d59086a8a93b3777b5a6918048b6b4d88ee75fcad243ba860ae005d87177b",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: East China Sea, Taiwan and the Ryukyus Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One arc: the USGS provinces East China Sea Basin, Taiwan Thrust and Fold Belt, Taiwan Melange Belt, Okinawa Trough, Ryukyu Volcanic Arc, Sinzi Uplift, within Terra Sinica."
+    },
+    {
+      "code": "zone:korean-peninsula",
+      "kind": "zone",
+      "name": "Korean Peninsula Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-sinica.zsp.geojson",
+      "sha256": "8f3d59086a8a93b3777b5a6918048b6b4d88ee75fcad243ba860ae005d87177b",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Korean Peninsula Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One shield: the USGS provinces Korean Craton, Gyeongsang Basin, Gensan Basin, Korean Continental Shelf, Huksan Platform, within Terra Sinica."
+    },
+    {
+      "code": "zone:japan",
+      "kind": "zone",
+      "name": "Japan Arc and the Sea of Japan Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-sinica.zsp.geojson",
+      "sha256": "8f3d59086a8a93b3777b5a6918048b6b4d88ee75fcad243ba860ae005d87177b",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Japan Arc and the Sea of Japan Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One arc: the USGS provinces Japan Volcanic Arc/Accreted Terrane, Akita Basin, Honshu Ridge, Ishikari Hidaka Basin, Joban Basin, Kanto Basin, Miyazaki Basin, Niigata Basin, Sagara Basin, Tokachi Basin, Tottori Basin, Tsushima Basin, Sea of Japan Backarc Basin, within Terra Sinica."
+    },
+    {
+      "code": "zone:manchuria",
+      "kind": "zone",
+      "name": "Manchuria and the Greater Khingan Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-sinica.zsp.geojson",
+      "sha256": "8f3d59086a8a93b3777b5a6918048b6b4d88ee75fcad243ba860ae005d87177b",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Manchuria and the Greater Khingan Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Songliao Basin, Yinshan Da&Xiao Hingganling Uplift, Zhangguangcailing Uplift, Yitong Graben, Erlian Basin, Temtsag Hailar Basin, Mohe Basin, Heilongjiang Basin, Ushumun Basin, within Terra Sinica."
+    },
+    {
+      "code": "zone:mongolian-plateau",
+      "kind": "zone",
+      "name": "Mongolian Plateau Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-sinica.zsp.geojson",
+      "sha256": "8f3d59086a8a93b3777b5a6918048b6b4d88ee75fcad243ba860ae005d87177b",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Mongolian Plateau Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One plateau: the USGS provinces Mongol-Okhotsk Folded Region, Gobi Basin, Great Lake Basin, Great Lake Uplift, Ulan Bator Basin, Nyalga Basin, Choybalsan Basin, Erlian Uplift, within Terra Sinica."
+    },
+    {
+      "code": "zone:amur-sikhote-alin",
+      "kind": "zone",
+      "name": "Amur and the Sikhote-Alin Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-sinica.zsp.geojson",
+      "sha256": "8f3d59086a8a93b3777b5a6918048b6b4d88ee75fcad243ba860ae005d87177b",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Amur and the Sikhote-Alin Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One orogen: the USGS provinces Sikhote-Alin Folded Region, Khanka Basin, Suifun Basin, Middle Amur Basin, Bureya-Dunbey Region, Zeya-Bureya Basin, Upper Bureya Basin, Upper Zeya Basin, within Terra Sinica."
+    },
+    {
+      "code": "zone:sakhalin-okhotsk",
+      "kind": "zone",
+      "name": "Sakhalin, the Kurils and the Sea of Okhotsk Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-sinica.zsp.geojson",
+      "sha256": "8f3d59086a8a93b3777b5a6918048b6b4d88ee75fcad243ba860ae005d87177b",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Sakhalin, the Kurils and the Sea of Okhotsk Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One arc: the USGS provinces North Sakhalin Basin, East Sakhalin Uplift, Terpeniya Bay Basin, West Sakhalin Uplift, Susunay Uplift, Aniva Basin, Tatar Strait Basin, Onekotan Basin, South Kuril Basin, within Terra Sinica."
+    },
+    {
+      "code": "terra:indica",
+      "kind": "terra",
+      "name": "Terra Indica",
+      "from": "zsp",
+      "file": "terra-indica.zsp.geojson",
+      "sha256": "725c678e657458193f21392b886630e4198f0c0d25adccabeaa8ada82d2ee6cc",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Terra Indica",
+        "url": "https://github.com/fraxen/tectonicplates",
+        "read": "2026-10-27"
+      },
+      "note": "The Indian subcontinent to its continental margin, with Sri Lanka and the Himalaya: the Indian plate's land and seas, ending at the Chaman fault (ZR22), the Indus–Yarlung suture (ZR21) and the Indo-Burman ranges' western foot (ZR22)."
+    },
+    {
+      "code": "zone:himalaya",
+      "kind": "zone",
+      "name": "Himalaya Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-indica.zsp.geojson",
+      "sha256": "725c678e657458193f21392b886630e4198f0c0d25adccabeaa8ada82d2ee6cc",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Himalaya Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One orogen: the USGS provinces Himalayan, within Terra Indica."
+    },
+    {
+      "code": "zone:ganges-plain",
+      "kind": "zone",
+      "name": "Ganges Plain Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-indica.zsp.geojson",
+      "sha256": "725c678e657458193f21392b886630e4198f0c0d25adccabeaa8ada82d2ee6cc",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Ganges Plain Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Himalayan Foreland, within Terra Indica."
+    },
+    {
+      "code": "zone:indus",
+      "kind": "zone",
+      "name": "Indus Basin Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-indica.zsp.geojson",
+      "sha256": "725c678e657458193f21392b886630e4198f0c0d25adccabeaa8ada82d2ee6cc",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Indus Basin Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Indus, Kohat-Potwar, within Terra Indica."
+    },
+    {
+      "code": "zone:sulaiman-kirthar",
+      "kind": "zone",
+      "name": "Sulaiman and Kirthar Ranges Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-indica.zsp.geojson",
+      "sha256": "725c678e657458193f21392b886630e4198f0c0d25adccabeaa8ada82d2ee6cc",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Sulaiman and Kirthar Ranges Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One orogen: the USGS provinces Sulaiman-Kirthar, within Terra Indica."
+    },
+    {
+      "code": "zone:cambay-bombay",
+      "kind": "zone",
+      "name": "Cambay Rift and Bombay High Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-indica.zsp.geojson",
+      "sha256": "725c678e657458193f21392b886630e4198f0c0d25adccabeaa8ada82d2ee6cc",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Cambay Rift and Bombay High Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One rift: the USGS provinces Bombay, within Terra Indica."
+    },
+    {
+      "code": "zone:konkan",
+      "kind": "zone",
+      "name": "Konkan and the Western Margin Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-indica.zsp.geojson",
+      "sha256": "725c678e657458193f21392b886630e4198f0c0d25adccabeaa8ada82d2ee6cc",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Konkan and the Western Margin Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Konkan, within Terra Indica."
+    },
+    {
+      "code": "zone:indian-shield",
+      "kind": "zone",
+      "name": "Deccan, the Indian Shield and the Gondwana Rifts Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-indica.zsp.geojson",
+      "sha256": "725c678e657458193f21392b886630e4198f0c0d25adccabeaa8ada82d2ee6cc",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Deccan, the Indian Shield and the Gondwana Rifts Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One shield: the USGS provinces Indian Shield, Chindwara, Satpura_Brahmani, Damodar, Pranhita-Godavari, within Terra Indica."
+    },
+    {
+      "code": "zone:east-coast-basins",
+      "kind": "zone",
+      "name": "East Coast Basins Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-indica.zsp.geojson",
+      "sha256": "725c678e657458193f21392b886630e4198f0c0d25adccabeaa8ada82d2ee6cc",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: East Coast Basins Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Cauvery, Krishna-Godavari, Mahanadi, within Terra Indica."
+    },
+    {
+      "code": "zone:bengal-assam",
+      "kind": "zone",
+      "name": "Bengal Basin and Assam Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-indica.zsp.geojson",
+      "sha256": "725c678e657458193f21392b886630e4198f0c0d25adccabeaa8ada82d2ee6cc",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Bengal Basin and Assam Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One delta: the USGS provinces Ganges-Brahmaputra Delta, Assam, within Terra Indica."
+    },
+    {
+      "code": "zone:sri-lanka",
+      "kind": "zone",
+      "name": "Sri Lanka Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-indica.zsp.geojson",
+      "sha256": "725c678e657458193f21392b886630e4198f0c0d25adccabeaa8ada82d2ee6cc",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Sri Lanka Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One shield: the USGS provinces Sri Lanka, within Terra Indica."
+    },
+    {
+      "code": "terra:sundaica",
+      "kind": "terra",
+      "name": "Terra Sundaica",
+      "from": "zsp",
+      "file": "terra-sundaica.zsp.geojson",
+      "sha256": "9c3fdb6d9aba29b58624822bb6b56b777c149af840874257c431b866a28c9da2",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Terra Sundaica",
+        "url": "https://github.com/fraxen/tectonicplates",
+        "read": "2026-10-27"
+      },
+      "note": "Southeast Asia to its continental margin: Myanmar with the Indo-Burman ranges, Indochina, the Malay Peninsula, Sumatra, Java, Borneo, the Philippines, the South China Sea and all of Wallacea, from the Red River fault (ZR22) to Lydekker's Line at the Sahul shelf's edge (ZR23)."
+    },
+    {
+      "code": "zone:indo-burman-irrawaddy",
+      "kind": "zone",
+      "name": "Indo-Burman Ranges and the Irrawaddy Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-sundaica.zsp.geojson",
+      "sha256": "9c3fdb6d9aba29b58624822bb6b56b777c149af840874257c431b866a28c9da2",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Indo-Burman Ranges and the Irrawaddy Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One arc: the USGS provinces Indo-Burman, Irrawaddy, North Burma, within Terra Sundaica."
+    },
+    {
+      "code": "zone:shan-tenasserim",
+      "kind": "zone",
+      "name": "Shan Plateau and the Tenasserim Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-sundaica.zsp.geojson",
+      "sha256": "9c3fdb6d9aba29b58624822bb6b56b777c149af840874257c431b866a28c9da2",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Shan Plateau and the Tenasserim Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One plateau: the USGS provinces Tenasserim-Shan, Lanping Simao Basin, within Terra Sundaica."
+    },
+    {
+      "code": "zone:annamite-khorat",
+      "kind": "zone",
+      "name": "Annamite Range and the Khorat Plateau Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-sundaica.zsp.geojson",
+      "sha256": "9c3fdb6d9aba29b58624822bb6b56b777c149af840874257c431b866a28c9da2",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Annamite Range and the Khorat Plateau Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One orogen: the USGS provinces Truong Son Fold Belt, Khorat Platform, Tonle Sap-Phnom Penh Basin, within Terra Sundaica."
+    },
+    {
+      "code": "zone:mekong-gulf-thailand",
+      "kind": "zone",
+      "name": "Mekong Delta and the Gulf of Thailand Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-sundaica.zsp.geojson",
+      "sha256": "9c3fdb6d9aba29b58624822bb6b56b777c149af840874257c431b866a28c9da2",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Mekong Delta and the Gulf of Thailand Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One delta: the USGS provinces Mekong/Cuulong/Vung Tau Basin, Saigon Basin, Panjang/Cardomomes Basin, Thai Basin, Central Vietnam Basin, within Terra Sundaica."
+    },
+    {
+      "code": "zone:malay-peninsula",
+      "kind": "zone",
+      "name": "Malay Peninsula and the Thai Basins Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-sundaica.zsp.geojson",
+      "sha256": "9c3fdb6d9aba29b58624822bb6b56b777c149af840874257c431b866a28c9da2",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Malay Peninsula and the Thai Basins Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One orogen: the USGS provinces Thailand Mesozoic Basin Belt, Malay Peninsula, Malay Basin, within Terra Sundaica."
+    },
+    {
+      "code": "zone:sunda-arc",
+      "kind": "zone",
+      "name": "Sunda Arc: Sumatra, Java and the Lesser Sundas Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-sundaica.zsp.geojson",
+      "sha256": "9c3fdb6d9aba29b58624822bb6b56b777c149af840874257c431b866a28c9da2",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Sunda Arc: Sumatra, Java and the Lesser Sundas Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One arc: the USGS provinces North Sumatra Basin, Central Sumatra Basin, South Sumatra Basin, Sumatra/Java Magmatic Arc, Sumatra/Java Accretionary Prism, Sumatra/Java Fore-Arc Basins, Northwest Java Basin, East Java Basin, within Terra Sundaica."
+    },
+    {
+      "code": "zone:sunda-shelf",
+      "kind": "zone",
+      "name": "Sunda Shelf and the Java Sea Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-sundaica.zsp.geojson",
+      "sha256": "9c3fdb6d9aba29b58624822bb6b56b777c149af840874257c431b866a28c9da2",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Sunda Shelf and the Java Sea Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Sunda Platform, Penyu/West Natuna Basin, East Natuna Basin, within Terra Sundaica."
+    },
+    {
+      "code": "zone:borneo",
+      "kind": "zone",
+      "name": "Borneo Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-sundaica.zsp.geojson",
+      "sha256": "9c3fdb6d9aba29b58624822bb6b56b777c149af840874257c431b866a28c9da2",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Borneo Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One shield: the USGS provinces Greater Sarawak Basin, Rajang-Crocker Accretionary Prism, Baram Delta/Brunei-Sabah Basin, Ketuneau/Sintang Terrane, Kutei Basin, Barito Basin, Melawi Basin, Meratus High, Pamusian Tarakan Basin, within Terra Sundaica."
+    },
+    {
+      "code": "zone:south-china-sea",
+      "kind": "zone",
+      "name": "South China Sea Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-sundaica.zsp.geojson",
+      "sha256": "9c3fdb6d9aba29b58624822bb6b56b777c149af840874257c431b866a28c9da2",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: South China Sea Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces South China Ocean Basin, South China Sea Platform, Reed Bank Basin, Xisha Trough, within Terra Sundaica."
+    },
+    {
+      "code": "zone:philippines",
+      "kind": "zone",
+      "name": "Philippine Mobile Belt and the Sulu Sea Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-sundaica.zsp.geojson",
+      "sha256": "9c3fdb6d9aba29b58624822bb6b56b777c149af840874257c431b866a28c9da2",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Philippine Mobile Belt and the Sulu Sea Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One arc: the USGS provinces Philippine Accretionary Prism, Philippine Magmatic Arc, Visayan, Cagayan Basin, Bicol Shelf Basin, Cotabato Basin, Zambalez/Central Luzon Basin, Palawan Shelf, Sulu Arch, Sulu Sea Basin, within Terra Sundaica."
+    },
+    {
+      "code": "zone:wallacea",
+      "kind": "zone",
+      "name": "Wallacea Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-sundaica.zsp.geojson",
+      "sha256": "9c3fdb6d9aba29b58624822bb6b56b777c149af840874257c431b866a28c9da2",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Wallacea Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One arc: the USGS provinces Sulawesi Accretionary Prism, Sulawesi Magmatic Arc, Banda Arc, North Banda Basin, South Banda Basin, Weber Basin, Halmahera Basin, Halmahera Platform, Bone Basin, Gorontalo Basin, Flores Basin, Sumba Province, Celebes Sea, South Makassar Basin, Bali Basin, Java/Banda Sea, within Terra Sundaica."
+    },
+    {
+      "code": "terra:sahulica",
+      "kind": "terra",
+      "name": "Terra Sahulica",
+      "from": "zsp",
+      "file": "terra-sahulica.zsp.geojson",
+      "sha256": "d0ebf29ecb86571b18c2f674c0196545e080d23085046b2952b4e38d73efd81c",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Terra Sahulica",
+        "url": "https://github.com/fraxen/tectonicplates",
+        "read": "2026-10-27"
+      },
+      "note": "The Sahul shelf to its continental margin, from Lydekker's Line (ZR23): Australia, Tasmania, New Guinea with the Bird's Head and Aru, and Zealandia's land and shelf, New Zealand and New Caledonia (ZR18)."
+    },
+    {
+      "code": "zone:yilgarn-pilbara",
+      "kind": "zone",
+      "name": "Yilgarn and Pilbara Cratons Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-sahulica.zsp.geojson",
+      "sha256": "d0ebf29ecb86571b18c2f674c0196545e080d23085046b2952b4e38d73efd81c",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Yilgarn and Pilbara Cratons Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One shield: the USGS provinces Yilgarn Block, Pilbara Block, Gascoyne Block, Bangemall and Nabberu Basins, Albany-Fraser Province, Paterson Province, within Terra Sahulica."
+    },
+    {
+      "code": "zone:western-margin",
+      "kind": "zone",
+      "name": "Western Margin and the North West Shelf Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-sahulica.zsp.geojson",
+      "sha256": "d0ebf29ecb86571b18c2f674c0196545e080d23085046b2952b4e38d73efd81c",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Western Margin and the North West Shelf Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Perth Basin, Carnarvon Basin, Northwest Shelf, within Terra Sahulica."
+    },
+    {
+      "code": "zone:kimberley-canning",
+      "kind": "zone",
+      "name": "Kimberley and the Canning Basin Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-sahulica.zsp.geojson",
+      "sha256": "d0ebf29ecb86571b18c2f674c0196545e080d23085046b2952b4e38d73efd81c",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Kimberley and the Canning Basin Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Canning Basin, Kimberley Basin, Halls Creek Province, Browse Basin, within Terra Sahulica."
+    },
+    {
+      "code": "zone:north-australian-craton",
+      "kind": "zone",
+      "name": "North Australian Craton Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-sahulica.zsp.geojson",
+      "sha256": "d0ebf29ecb86571b18c2f674c0196545e080d23085046b2952b4e38d73efd81c",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: North Australian Craton Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One shield: the USGS provinces Bonaparte Gulf Basin, Pine Creek Geosyncline, Daly River Basin, Money Shoal Basin, Victoria River Basin, Birrindudu Basin and Tanami Block, McArthur Basin, Wiso Basin, Tennant Creek Block, Australian Arafura Basin, within Terra Sahulica."
+    },
+    {
+      "code": "zone:central-australia",
+      "kind": "zone",
+      "name": "Central Australian Basins and Ranges Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-sahulica.zsp.geojson",
+      "sha256": "d0ebf29ecb86571b18c2f674c0196545e080d23085046b2952b4e38d73efd81c",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Central Australian Basins and Ranges Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Amadeus Basin, Arunta Block, Ngalia Basin, Musgrave Block, Officer Basin, Georgina Basin, Mt.Isa Block, within Terra Sahulica."
+    },
+    {
+      "code": "zone:gawler-eucla",
+      "kind": "zone",
+      "name": "Gawler Craton and the Eucla Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-sahulica.zsp.geojson",
+      "sha256": "d0ebf29ecb86571b18c2f674c0196545e080d23085046b2952b4e38d73efd81c",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Gawler Craton and the Eucla Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One shield: the USGS provinces Eucla Basin, Gawler Block, Great Australian Bight Basin, Bremer Basin, Stuart Shelf, within Terra Sahulica."
+    },
+    {
+      "code": "zone:great-artesian",
+      "kind": "zone",
+      "name": "Great Artesian Basin Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-sahulica.zsp.geojson",
+      "sha256": "d0ebf29ecb86571b18c2f674c0196545e080d23085046b2952b4e38d73efd81c",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Great Artesian Basin Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Eromanga Basin, Carpentaria Basin, Surat Basin, Galilee Basin, Laura Basin, Coen-Yambo Block, within Terra Sahulica."
+    },
+    {
+      "code": "zone:murray-darling",
+      "kind": "zone",
+      "name": "Murray–Darling and the Flinders Ranges Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-sahulica.zsp.geojson",
+      "sha256": "d0ebf29ecb86571b18c2f674c0196545e080d23085046b2952b4e38d73efd81c",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Murray–Darling and the Flinders Ranges Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Murray Basin, Darling Basin, Adelaide & Kanmantoo Fold Belts, within Terra Sahulica."
+    },
+    {
+      "code": "zone:tasmanides",
+      "kind": "zone",
+      "name": "Great Dividing Range and the Tasmanides Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-sahulica.zsp.geojson",
+      "sha256": "d0ebf29ecb86571b18c2f674c0196545e080d23085046b2952b4e38d73efd81c",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Great Dividing Range and the Tasmanides Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One orogen: the USGS provinces Lacklan Fold Belt, New England Fold Belt, Hodgkinson/Lachlan Fold Belt, Drummond Fold Belt and Anakie High, Bowen Basin, Sydney Basin, Clarence-Moreton Basin, Maryborough Basin, within Terra Sahulica."
+    },
+    {
+      "code": "zone:tasmania-bass",
+      "kind": "zone",
+      "name": "Tasmania and Bass Strait Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-sahulica.zsp.geojson",
+      "sha256": "d0ebf29ecb86571b18c2f674c0196545e080d23085046b2952b4e38d73efd81c",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Tasmania and Bass Strait Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Bass Basin, Bassian Rise, Gippsland Basin, Otway Basin, Tasmania Basin, Rocky Cape Block/Dundas Trough, within Terra Sahulica."
+    },
+    {
+      "code": "zone:coral-sea",
+      "kind": "zone",
+      "name": "Coral Sea Plateaus and the Great Barrier Reef Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-sahulica.zsp.geojson",
+      "sha256": "d0ebf29ecb86571b18c2f674c0196545e080d23085046b2952b4e38d73efd81c",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Coral Sea Plateaus and the Great Barrier Reef Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One plateau: the USGS provinces Queensland Plateau, Marion Terrain, Halifax Basin, Capricorn Basin, within Terra Sahulica."
+    },
+    {
+      "code": "zone:new-guinea-highlands",
+      "kind": "zone",
+      "name": "New Guinea Highlands and the Mobile Belt Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-sahulica.zsp.geojson",
+      "sha256": "d0ebf29ecb86571b18c2f674c0196545e080d23085046b2952b4e38d73efd81c",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: New Guinea Highlands and the Mobile Belt Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One orogen: the USGS provinces New Guinea Mobile Belt, New Guinea Foreland Basin-Fold Belt, Sepik-Ramu Basin, Cape Vogel Basin, Northern Irian Jaya Waropen Basin, New Ireland Basin, South Bismarck Volcanic Arc, within Terra Sahulica."
+    },
+    {
+      "code": "zone:arafura-papua",
+      "kind": "zone",
+      "name": "Arafura Shelf, Papua and the Bird's Head Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-sahulica.zsp.geojson",
+      "sha256": "d0ebf29ecb86571b18c2f674c0196545e080d23085046b2952b4e38d73efd81c",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Arafura Shelf, Papua and the Bird's Head Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Arafura Basin-Irian Jaya, Merauke Platform, Papuan Basin-Shelf Platform, Bintuni/Sulawati Province, within Terra Sahulica."
+    },
+    {
+      "code": "zone:new-zealand",
+      "kind": "zone",
+      "name": "New Zealand Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-sahulica.zsp.geojson",
+      "sha256": "d0ebf29ecb86571b18c2f674c0196545e080d23085046b2952b4e38d73efd81c",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: New Zealand Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One orogen: the USGS provinces New Zealand Orogenic Belt, New Zealand East Coast Basin, Northland Basin, Solander-Waiau Basin, Taranaki Basin, Wanganui Basin, Waikato Basin, Hikurani Trough, Great South Basin, Challenger Plateau, Chatham Rise, Three Kings Rise, within Terra Sahulica."
+    },
+    {
+      "code": "zone:new-caledonia",
+      "kind": "zone",
+      "name": "New Caledonia and the Norfolk Ridge Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-sahulica.zsp.geojson",
+      "sha256": "d0ebf29ecb86571b18c2f674c0196545e080d23085046b2952b4e38d73efd81c",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: New Caledonia and the Norfolk Ridge Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One ridge: the USGS provinces New Caledonia, Loyalty Island Ridge, Norfolk Island Ridge, Lord Howe Rise, within Terra Sahulica."
+    },
+    {
+      "code": "terra:laurentia",
+      "kind": "terra",
+      "name": "Terra Laurentia",
+      "from": "zsp",
+      "file": "terra-laurentia.zsp.geojson",
+      "sha256": "c61636cc30a9d0d8f957e6fa119d9bbb991f406d67e48a0a278b9e259d09f587",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Terra Laurentia",
+        "url": "https://github.com/fraxen/tectonicplates",
+        "read": "2026-10-27"
+      },
+      "note": "North and Central America to their continental margin, with Greenland, the Canadian Arctic islands, the Caribbean and its volcanic arc (ZR23), the Gulf of Mexico and Hudson Bay, Baja California by the margin rule, ending at the Darién (ZR23) and the Bering and Chukchi seas' median (ZR23)."
+    },
+    {
+      "code": "zone:canadian-shield",
+      "kind": "zone",
+      "name": "Canadian Shield Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-laurentia.zsp.geojson",
+      "sha256": "c61636cc30a9d0d8f957e6fa119d9bbb991f406d67e48a0a278b9e259d09f587",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Canadian Shield Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One shield: the USGS provinces Canadian Shield, within Terra Laurentia."
+    },
+    {
+      "code": "zone:hudson-bay",
+      "kind": "zone",
+      "name": "Hudson Bay Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-laurentia.zsp.geojson",
+      "sha256": "c61636cc30a9d0d8f957e6fa119d9bbb991f406d67e48a0a278b9e259d09f587",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Hudson Bay Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Hudson Bay Basin, Hudson Strait Basin, Foxe Basin, within Terra Laurentia."
+    },
+    {
+      "code": "zone:arctic-archipelago",
+      "kind": "zone",
+      "name": "Arctic Archipelago and Baffin Bay Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-laurentia.zsp.geojson",
+      "sha256": "c61636cc30a9d0d8f957e6fa119d9bbb991f406d67e48a0a278b9e259d09f587",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Arctic Archipelago and Baffin Bay Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Sverdrup Basin, Parry Island Foldbelt, Cornwallis Foldbelt, Ellesmere Foldbelt, Boothia Basin, South Arctic Basin, Wollaston Basin, Banks Basin, Minto Arch, Arctic Coastal Shelf, Baffin Basin, West Greenland Basin, Kane Basin, within Terra Laurentia."
+    },
+    {
+      "code": "zone:greenland-shield",
+      "kind": "zone",
+      "name": "Greenland Shield Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-laurentia.zsp.geojson",
+      "sha256": "c61636cc30a9d0d8f957e6fa119d9bbb991f406d67e48a0a278b9e259d09f587",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Greenland Shield Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One shield: the USGS provinces Greenland Shield, North Greenland Platform, Southeast Greenland Basin, within Terra Laurentia."
+    },
+    {
+      "code": "zone:east-greenland",
+      "kind": "zone",
+      "name": "East Greenland Caledonides Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-laurentia.zsp.geojson",
+      "sha256": "c61636cc30a9d0d8f957e6fa119d9bbb991f406d67e48a0a278b9e259d09f587",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: East Greenland Caledonides Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One orogen: the USGS provinces East Greenland Rift Basins, East Greenland Foldbelt, North Greenland Foldbelt, Wandel Sea Basin, within Terra Laurentia."
+    },
+    {
+      "code": "zone:mackenzie",
+      "kind": "zone",
+      "name": "Mackenzie Basin and Mountains Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-laurentia.zsp.geojson",
+      "sha256": "c61636cc30a9d0d8f957e6fa119d9bbb991f406d67e48a0a278b9e259d09f587",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Mackenzie Basin and Mountains Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Mackenzie Delta, Mackenzie Delta Slope, Northern Interior Basins, Mackenzie Foldbelt, Yukon Basin, Canada Basin-Beaufort Slope OCS, Beaufort Shelf OCS, within Terra Laurentia."
+    },
+    {
+      "code": "zone:interior-plains",
+      "kind": "zone",
+      "name": "Interior Plains: Alberta and Williston Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-laurentia.zsp.geojson",
+      "sha256": "c61636cc30a9d0d8f957e6fa119d9bbb991f406d67e48a0a278b9e259d09f587",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Interior Plains: Alberta and Williston Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Alberta Basin, Williston Basin, Sioux Arch, North-Central Montana, Powder River Basin, within Terra Laurentia."
+    },
+    {
+      "code": "zone:cordillera",
+      "kind": "zone",
+      "name": "Canadian Cordillera Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-laurentia.zsp.geojson",
+      "sha256": "c61636cc30a9d0d8f957e6fa119d9bbb991f406d67e48a0a278b9e259d09f587",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Canadian Cordillera Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One orogen: the USGS provinces Canadian Cordillera, Rocky Mountain Deformed Belt, Whitehorse Basin, Bowser Basin, Quesnel Basin, Georgia Basin, Queen Charlotte Basin, Tofino Basin, within Terra Laurentia."
+    },
+    {
+      "code": "zone:alaska-bering",
+      "kind": "zone",
+      "name": "Alaska and the Bering Shelf Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-laurentia.zsp.geojson",
+      "sha256": "c61636cc30a9d0d8f957e6fa119d9bbb991f406d67e48a0a278b9e259d09f587",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Alaska and the Bering Shelf Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One orogen: the USGS provinces Northern Alaska, Central Alaska, Southern Alaska, Cook Inlet OCS, Gulf of Alaska Shelf OCS, Shumagin-Kodiak Shelf OCS, Chukchi Shelf OCS, Chukchi Borderland OCS, Hope Basin OCS, Bering Shelf-Margin Basins OCS, Navarin Basin OCS, North Aleutian Basin OCS, St. George Basin OCS, Norton Basin OCS, St. Matthew-Hall Basin OCS, Aleutian Arc OCS, within Terra Laurentia."
+    },
+    {
+      "code": "zone:pacific-coast",
+      "kind": "zone",
+      "name": "Pacific Coast Ranges and the Central Valley Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-laurentia.zsp.geojson",
+      "sha256": "c61636cc30a9d0d8f957e6fa119d9bbb991f406d67e48a0a278b9e259d09f587",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Pacific Coast Ranges and the Central Valley Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One orogen: the USGS provinces Western Oregon-Washington, Eastern Oregon-Washington, Klamath-Sierra Nevada, Northern Coastal, Sonoma-Livermore Basin, Sacramento Basin, San Joaquin Basin, Central Coastal, Santa Maria Basin, Ventura Basin, Los Angeles Basin, San Diego-Oceanside, Pacific Northwest OCS, Central California OCS, Santa Barbara-Ventura Basin OCS, Los Angeles Basin OCS, Inner Borderland OCS, Outer Borderland OCS, within Terra Laurentia."
+    },
+    {
+      "code": "zone:basin-and-range",
+      "kind": "zone",
+      "name": "Basin and Range and the Gulf of California Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-laurentia.zsp.geojson",
+      "sha256": "c61636cc30a9d0d8f957e6fa119d9bbb991f406d67e48a0a278b9e259d09f587",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Basin and Range and the Gulf of California Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One rift: the USGS provinces Western Great Basin, Eastern Great Basin, Idaho-Snake River Downwarp, Southern Arizona-Southwestern New Mexico, South-Central New Mexico, Sonoran Basin and Range, Chihuahuan Basin and Range, Salton Trough, Baja California Backbone, Vizcaino Basin, Purisima-Iray Basin, Guaymas-Topolobambo Basin, within Terra Laurentia."
+    },
+    {
+      "code": "zone:rockies-colorado-plateau",
+      "kind": "zone",
+      "name": "Rocky Mountains and the Colorado Plateau Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-laurentia.zsp.geojson",
+      "sha256": "c61636cc30a9d0d8f957e6fa119d9bbb991f406d67e48a0a278b9e259d09f587",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Rocky Mountains and the Colorado Plateau Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One orogen: the USGS provinces Uinta-Piceance Basins, Paradox Basin, San Juan Basin, Northern Arizona, Albuquerque-Santa Fe Rift, Montana Thrust Belt, Southwest Montana, Big Horn Basin, Wind River Basin, Wyoming Thrust Belt, Southwestern Wyoming, Park Basins, Raton Basin-Rio Grande Uplift, Pedernal Uplift, within Terra Laurentia."
+    },
+    {
+      "code": "zone:great-plains",
+      "kind": "zone",
+      "name": "Great Plains and the Midcontinent Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-laurentia.zsp.geojson",
+      "sha256": "c61636cc30a9d0d8f957e6fa119d9bbb991f406d67e48a0a278b9e259d09f587",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Great Plains and the Midcontinent Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Denver Basin, Las Animas Arch, Palo Duro Basin, Andarko Basin, Cambridge Arch-Central Kansas Uplift, Salina Basin, Nemaha Uplift, Forest City Basin, Sedgwick Basin, Cherokee Platform, Southern Oklahoma, Arkoma Basin, Ozark Uplift, Iowa Shelf, Bend Arch-Fort Worth Basin, Permian Basin, Marathon Thrust Belt, within Terra Laurentia."
+    },
+    {
+      "code": "zone:gulf-of-mexico",
+      "kind": "zone",
+      "name": "Gulf of Mexico Basin and Yucatán Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-laurentia.zsp.geojson",
+      "sha256": "c61636cc30a9d0d8f957e6fa119d9bbb991f406d67e48a0a278b9e259d09f587",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Gulf of Mexico Basin and Yucatán Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Western Gulf, East Texas Basin, Louisiana-Mississippi Salt Basins, Gulf Cenozoic OCS, Gulf Mesozoic OCS, Florida Peninsula, Burgos Basin, Campeche-Sigsbee Salt Basin, Tampico-Misantla Basin, Veracruz Basin, Yucatan Platform, Saline-Comalcalco Basin, Villahermosa Uplift, Macuspana Basin, Tuxla Uplift, within Terra Laurentia."
+    },
+    {
+      "code": "zone:great-lakes",
+      "kind": "zone",
+      "name": "Great Lakes and the Interior Lowlands Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-laurentia.zsp.geojson",
+      "sha256": "c61636cc30a9d0d8f957e6fa119d9bbb991f406d67e48a0a278b9e259d09f587",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Great Lakes and the Interior Lowlands Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Superior, Michigan Basin, Illinois Basin, Cincinnati Arch, Algonquin Arch-Michigan Basin, St. Lawrence Lowlands, within Terra Laurentia."
+    },
+    {
+      "code": "zone:appalachians",
+      "kind": "zone",
+      "name": "Appalachians Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-laurentia.zsp.geojson",
+      "sha256": "c61636cc30a9d0d8f957e6fa119d9bbb991f406d67e48a0a278b9e259d09f587",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Appalachians Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One orogen: the USGS provinces Appalachian Basin, Blue Ridge Thrust Belt, Piedmont, Adirondack Uplift, New England, Appalachian Foldbelt, Magdalen Basin, Sidney Basin, Fundy Basin, Anticosti Basin, Black Warrior Basin, within Terra Laurentia."
+    },
+    {
+      "code": "zone:atlantic-margin",
+      "kind": "zone",
+      "name": "Atlantic Margin and the Grand Banks Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-laurentia.zsp.geojson",
+      "sha256": "c61636cc30a9d0d8f957e6fa119d9bbb991f406d67e48a0a278b9e259d09f587",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Atlantic Margin and the Grand Banks Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Atlantic Coastal Plain, Atlantic Mesozoic OCS, Georges Bank, Scotian Shelf, Southern Newfoundland Shelf, Labrador-Newfoundland Shelf, within Terra Laurentia."
+    },
+    {
+      "code": "zone:sierras-madres",
+      "kind": "zone",
+      "name": "Sierras Madres and the Mexican Plateau Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-laurentia.zsp.geojson",
+      "sha256": "c61636cc30a9d0d8f957e6fa119d9bbb991f406d67e48a0a278b9e259d09f587",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Sierras Madres and the Mexican Plateau Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One orogen: the USGS provinces Sierra Madre Occidental Volcanic Plateau, Mazatlan Basin, Sinaloa, Central Mesa, Torrecon-Sierra Madre Oriental Foldbelt, Parras Basin, Coahuila Platform, Burros Uplift, Sabinas Basin, Tamaulipas Arch, Magiscatzin Basin, Chicontepec Basin, Sierra Madre Oriental Foldbelt, Trans-mexican Neovolcanic Axis, Jalisco-Oaxaca Platform, Guerrero Basin, within Terra Laurentia."
+    },
+    {
+      "code": "zone:central-america",
+      "kind": "zone",
+      "name": "Central American Isthmus Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-laurentia.zsp.geojson",
+      "sha256": "c61636cc30a9d0d8f957e6fa119d9bbb991f406d67e48a0a278b9e259d09f587",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Central American Isthmus Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One arc: the USGS provinces Sierra Madre de Chiapas-Peten Foldbelt, Chiapas Massif, Chiapas Massif-Nuclear Central America, Maya Mountains, Middle America Province, within Terra Laurentia."
+    },
+    {
+      "code": "zone:caribbean",
+      "kind": "zone",
+      "name": "Caribbean Sea and the Antilles Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-laurentia.zsp.geojson",
+      "sha256": "c61636cc30a9d0d8f957e6fa119d9bbb991f406d67e48a0a278b9e259d09f587",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Caribbean Sea and the Antilles Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One arc: the USGS provinces Greater Antilles Deformed Belt, North Carribean Deformed Belt, Puerto Rico Trench, Bahama Platform, Cayman Trough, Cayman Ridge, Yucatan Basin, North Nicaraguan Rise, South Nicaraguan Rise, Columbian Basin, Venezuelan Basin, Beata Ridge, Aves Ridge, Neogene Volcanic Belt, Lesser Antilles Deformed Belt, within Terra Laurentia."
+    },
+    {
+      "code": "terra:amazonia",
+      "kind": "terra",
+      "name": "Terra Amazonia",
+      "from": "zsp",
+      "file": "terra-amazonia.zsp.geojson",
+      "sha256": "6972204a9d75c77822d2c9030f88e0477a394ad3294a9292d6d1aaf852c3ec46",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Terra Amazonia",
+        "url": "https://github.com/fraxen/tectonicplates",
+        "read": "2026-10-27"
+      },
+      "note": "South America to its continental margin: the Andes, the Amazon, the Brazilian and Guiana shields, Patagonia, the Falklands and South Georgia, Trinidad and Tobago and the ABC islands (ZR23), from the Darién (ZR23)."
+    },
+    {
+      "code": "zone:guiana-shield",
+      "kind": "zone",
+      "name": "Guiana Shield Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-amazonia.zsp.geojson",
+      "sha256": "6972204a9d75c77822d2c9030f88e0477a394ad3294a9292d6d1aaf852c3ec46",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Guiana Shield Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One shield: the USGS provinces Guyana Shield, Tacutu Basin, within Terra Amazonia."
+    },
+    {
+      "code": "zone:brazilian-shield",
+      "kind": "zone",
+      "name": "Brazilian Shield Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-amazonia.zsp.geojson",
+      "sha256": "6972204a9d75c77822d2c9030f88e0477a394ad3294a9292d6d1aaf852c3ec46",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Brazilian Shield Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One shield: the USGS provinces Brazilian Shield, Sucunduri Province, Xingu Province, Diamantina Province, Araripe Province, Parecis Province, within Terra Amazonia."
+    },
+    {
+      "code": "zone:amazon-basin",
+      "kind": "zone",
+      "name": "Amazon Basin Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-amazonia.zsp.geojson",
+      "sha256": "6972204a9d75c77822d2c9030f88e0477a394ad3294a9292d6d1aaf852c3ec46",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Amazon Basin Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Solimoes Basin, Amazonas Basin, within Terra Amazonia."
+    },
+    {
+      "code": "zone:equatorial-margin",
+      "kind": "zone",
+      "name": "Amazon Fan and the Equatorial Margin Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-amazonia.zsp.geojson",
+      "sha256": "6972204a9d75c77822d2c9030f88e0477a394ad3294a9292d6d1aaf852c3ec46",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Amazon Fan and the Equatorial Margin Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Foz de Amazonas Basin, Santana Platform, Guyana-Suriname Basin, San Luis Basin, Barreieinas Basin, Caera Basin, Potigar Basin, within Terra Amazonia."
+    },
+    {
+      "code": "zone:parnaiba-sao-francisco",
+      "kind": "zone",
+      "name": "Parnaíba and São Francisco Basins Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-amazonia.zsp.geojson",
+      "sha256": "6972204a9d75c77822d2c9030f88e0477a394ad3294a9292d6d1aaf852c3ec46",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Parnaíba and São Francisco Basins Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Parnaiba Basin, Sao Francisco Basin, within Terra Amazonia."
+    },
+    {
+      "code": "zone:east-brazilian-margin",
+      "kind": "zone",
+      "name": "East Brazilian Margin Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-amazonia.zsp.geojson",
+      "sha256": "6972204a9d75c77822d2c9030f88e0477a394ad3294a9292d6d1aaf852c3ec46",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: East Brazilian Margin Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Pernambuco Basin, Sergipe-Alagoas Basin, Jatoba Basin, Tucano Basin, Reconcavo Basin, Bahia Sul Basin, Espirito Santo Basin, Campos Basin, Santos Basin, within Terra Amazonia."
+    },
+    {
+      "code": "zone:parana",
+      "kind": "zone",
+      "name": "Paraná Basin and the Pelotas Margin Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-amazonia.zsp.geojson",
+      "sha256": "6972204a9d75c77822d2c9030f88e0477a394ad3294a9292d6d1aaf852c3ec46",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Paraná Basin and the Pelotas Margin Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Parana Basin, Pelotas Basin, within Terra Amazonia."
+    },
+    {
+      "code": "zone:chaco-pampas",
+      "kind": "zone",
+      "name": "Chaco and the Pampas Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-amazonia.zsp.geojson",
+      "sha256": "6972204a9d75c77822d2c9030f88e0477a394ad3294a9292d6d1aaf852c3ec46",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Chaco and the Pampas Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Chaco Basin, Oran-Olmedo Basin, Santa Cruz-Tarija Basin, Laboulaye-Macachin Basin, Salado Basin, Mercedes Basin, within Terra Amazonia."
+    },
+    {
+      "code": "zone:sub-andean-foreland",
+      "kind": "zone",
+      "name": "Sub-Andean Foreland Basins Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-amazonia.zsp.geojson",
+      "sha256": "6972204a9d75c77822d2c9030f88e0477a394ad3294a9292d6d1aaf852c3ec46",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Sub-Andean Foreland Basins Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Putumayo-Oriente-Maranon Basin, Ucayali Basin, Huallaga Basin, Acre Basin, Madre dos Dios Basin, Beni Basin, Santiago Basin, within Terra Amazonia."
+    },
+    {
+      "code": "zone:northern-andes",
+      "kind": "zone",
+      "name": "Northern Andes and the Caribbean Coast Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-amazonia.zsp.geojson",
+      "sha256": "6972204a9d75c77822d2c9030f88e0477a394ad3294a9292d6d1aaf852c3ec46",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Northern Andes and the Caribbean Coast Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One orogen: the USGS provinces West-Central Cordillera, Eastern Cordillera Basin, Upper Magdelena, Middle Magdelena, Lower Magdelena, Cauca Basin, Cesar Basin, Sierra Nevada de Santa Marta, Perija-Venezuela-Coastal Ranges, Maracaibo Basin, Falcon Basin, Guajira Basin, Bonaire Basin, Cariaco Basin, Tobago Trough, within Terra Amazonia."
+    },
+    {
+      "code": "zone:llanos-orinoco",
+      "kind": "zone",
+      "name": "Llanos and the Orinoco Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-amazonia.zsp.geojson",
+      "sha256": "6972204a9d75c77822d2c9030f88e0477a394ad3294a9292d6d1aaf852c3ec46",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Llanos and the Orinoco Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Llanos Basin, Barinas-Apure Basin, East Venezuela Basin, within Terra Amazonia."
+    },
+    {
+      "code": "zone:andes",
+      "kind": "zone",
+      "name": "Central and Southern Andes Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-amazonia.zsp.geojson",
+      "sha256": "6972204a9d75c77822d2c9030f88e0477a394ad3294a9292d6d1aaf852c3ec46",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Central and Southern Andes Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One orogen: the USGS provinces Andean Province, Altiplano Basin, Familina Province, Salar de Atacama Basin, Cuyo Basin, Bermejo Basin, Bolsones Basin, Mascasin Basin, Neuquen Basin, within Terra Amazonia."
+    },
+    {
+      "code": "zone:pacific-forearc",
+      "kind": "zone",
+      "name": "Pacific Forearc Basins Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-amazonia.zsp.geojson",
+      "sha256": "6972204a9d75c77822d2c9030f88e0477a394ad3294a9292d6d1aaf852c3ec46",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Pacific Forearc Basins Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Central Chile Forearc Basin, Temuco Basin, Curico Basin, Osorno-Llanquihue Basin, Mollendo-Tarapaca Basin, Moquegua-Tamaruga Basin, Pisco Basin, Lima Basin, Salaverry Basin, Trujillo Basin, Sechura Basin, Talara Basin, Lancones Basin, Progreso Basin, Manabi Basin, Borbon Basin, Penas Basin, Madre de Dios Basin, Diego Ramirez Basin, within Terra Amazonia."
+    },
+    {
+      "code": "zone:patagonia",
+      "kind": "zone",
+      "name": "Patagonia Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-amazonia.zsp.geojson",
+      "sha256": "6972204a9d75c77822d2c9030f88e0477a394ad3294a9292d6d1aaf852c3ec46",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Patagonia Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One plateau: the USGS provinces Canadon Asfalto, Deseado-Falklands Province, San Jorge Basin, Colorado Basin, Nirihuau Basin, East Patagonia Basin, Magallanes Basin, Malvinas Basin, within Terra Amazonia."
+    },
+    {
+      "code": "zone:falkland-plateau",
+      "kind": "zone",
+      "name": "Falkland Plateau and the North Scotia Ridge Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-amazonia.zsp.geojson",
+      "sha256": "6972204a9d75c77822d2c9030f88e0477a394ad3294a9292d6d1aaf852c3ec46",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Falkland Plateau and the North Scotia Ridge Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One plateau: the USGS provinces Falklands Plateau, Malvinas Plateau, Burdwood Bank - North Scotia Ridge, within Terra Amazonia."
+    },
+    {
+      "code": "terra:antarctica",
+      "kind": "terra",
+      "name": "Terra Antarctica",
+      "from": "zsp",
+      "file": "terra-antarctica.zsp.geojson",
+      "sha256": "13e3f6982dd072744a5d778e1c778f2c504bc1cd56f75ae7684e55fd78f178d9",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Terra Antarctica",
+        "url": "https://github.com/fraxen/tectonicplates",
+        "read": "2026-10-27"
+      },
+      "note": "Antarctica with its ice shelves to its continental margin, and the South Shetlands and South Orkneys (ZR23): the Antarctic plate's land and shelf, the Southern Ocean beyond it Mare Australe's."
+    },
+    {
+      "code": "zone:antarctic-peninsula",
+      "kind": "zone",
+      "name": "Antarctic Peninsula and the South Shetlands Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-antarctica.zsp.geojson",
+      "sha256": "13e3f6982dd072744a5d778e1c778f2c504bc1cd56f75ae7684e55fd78f178d9",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Antarctic Peninsula and the South Shetlands Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One arc: the USGS provinces Antarctica Peninsula, Bransfield Offshore, Scotia Ridge Offshore, within Terra Antarctica."
+    },
+    {
+      "code": "zone:weddell",
+      "kind": "zone",
+      "name": "Weddell Sea and the Filchner–Ronne Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-antarctica.zsp.geojson",
+      "sha256": "13e3f6982dd072744a5d778e1c778f2c504bc1cd56f75ae7684e55fd78f178d9",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Weddell Sea and the Filchner–Ronne Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Weddell Offshore, within Terra Antarctica."
+    },
+    {
+      "code": "zone:queen-maud-land",
+      "kind": "zone",
+      "name": "Queen Maud Land Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-antarctica.zsp.geojson",
+      "sha256": "13e3f6982dd072744a5d778e1c778f2c504bc1cd56f75ae7684e55fd78f178d9",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Queen Maud Land Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One shield: the USGS provinces Queen Maud Onshore, Queen Maud/Enderby Offshore, within Terra Antarctica."
+    },
+    {
+      "code": "zone:amundsen-bellingshausen-shelf",
+      "kind": "zone",
+      "name": "Amundsen and Bellingshausen Shelf Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-antarctica.zsp.geojson",
+      "sha256": "13e3f6982dd072744a5d778e1c778f2c504bc1cd56f75ae7684e55fd78f178d9",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Amundsen and Bellingshausen Shelf Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Amundsen/Bellingshausen Offshore, within Terra Antarctica."
+    },
+    {
+      "code": "zone:polar-plateau",
+      "kind": "zone",
+      "name": "Polar Plateau Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-antarctica.zsp.geojson",
+      "sha256": "13e3f6982dd072744a5d778e1c778f2c504bc1cd56f75ae7684e55fd78f178d9",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Polar Plateau Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One plateau: the USGS provinces Polar Province, within Terra Antarctica."
+    },
+    {
+      "code": "zone:marie-byrd-land",
+      "kind": "zone",
+      "name": "Marie Byrd Land Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-antarctica.zsp.geojson",
+      "sha256": "13e3f6982dd072744a5d778e1c778f2c504bc1cd56f75ae7684e55fd78f178d9",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Marie Byrd Land Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One rift: the USGS provinces Marie Byrd Onshore, within Terra Antarctica."
+    },
+    {
+      "code": "zone:transantarctic-mountains",
+      "kind": "zone",
+      "name": "Transantarctic Mountains Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-antarctica.zsp.geojson",
+      "sha256": "13e3f6982dd072744a5d778e1c778f2c504bc1cd56f75ae7684e55fd78f178d9",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Transantarctic Mountains Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One orogen: the USGS provinces Transantarctica Mountains, within Terra Antarctica."
+    },
+    {
+      "code": "zone:wilkes-land",
+      "kind": "zone",
+      "name": "Wilkes Land and the East Antarctic Shield Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-antarctica.zsp.geojson",
+      "sha256": "13e3f6982dd072744a5d778e1c778f2c504bc1cd56f75ae7684e55fd78f178d9",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Wilkes Land and the East Antarctic Shield Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One shield: the USGS provinces Wilkes Onshore, Scott Offshore, within Terra Antarctica."
+    },
+    {
+      "code": "zone:ross",
+      "kind": "zone",
+      "name": "Ross Sea and the Ross Ice Shelf Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "terra-antarctica.zsp.geojson",
+      "sha256": "13e3f6982dd072744a5d778e1c778f2c504bc1cd56f75ae7684e55fd78f178d9",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Ross Sea and the Ross Ice Shelf Zone",
+        "url": "https://doi.org/10.5066/P9RMSU2R",
+        "read": "2026-10-27"
+      },
+      "note": "One basin: the USGS provinces Ross Offshore, within Terra Antarctica."
+    },
+    {
+      "code": "mare:pacificum",
+      "kind": "mare",
+      "name": "Mare Pacificum",
+      "from": "zsp",
+      "file": "mare-pacificum.zsp.geojson",
+      "sha256": "783f700a8bc567da94671812534a5320e4a044b55f0c3d2f6421b032167238f9",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Mare Pacificum",
+        "url": "https://starcom.app/geopolitical/zones/manifest.json",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:northwest-pacific-basin",
+      "kind": "zone",
+      "name": "Northwest Pacific Basin Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-pacificum.zsp.geojson",
+      "sha256": "783f700a8bc567da94671812534a5320e4a044b55f0c3d2f6421b032167238f9",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Northwest Pacific Basin Zone",
+        "url": "https://doi.org/10.5281/zenodo.14194897",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:hawaiian-emperor",
+      "kind": "zone",
+      "name": "Hawaiian–Emperor Chain Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-pacificum.zsp.geojson",
+      "sha256": "783f700a8bc567da94671812534a5320e4a044b55f0c3d2f6421b032167238f9",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Hawaiian–Emperor Chain Zone",
+        "url": "https://doi.org/10.25921/fd45-gt74",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:northeast-pacific-basin",
+      "kind": "zone",
+      "name": "Northeast Pacific Basin Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-pacificum.zsp.geojson",
+      "sha256": "783f700a8bc567da94671812534a5320e4a044b55f0c3d2f6421b032167238f9",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Northeast Pacific Basin Zone",
+        "url": "https://doi.org/10.25921/fd45-gt74",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:juan-de-fuca",
+      "kind": "zone",
+      "name": "Juan de Fuca Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-pacificum.zsp.geojson",
+      "sha256": "783f700a8bc567da94671812534a5320e4a044b55f0c3d2f6421b032167238f9",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Juan de Fuca Zone",
+        "url": "https://doi.org/10.5281/zenodo.14194897",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:clarion-clipperton",
+      "kind": "zone",
+      "name": "Clarion–Clipperton Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-pacificum.zsp.geojson",
+      "sha256": "783f700a8bc567da94671812534a5320e4a044b55f0c3d2f6421b032167238f9",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Clarion–Clipperton Zone",
+        "url": "https://doi.org/10.25921/fd45-gt74",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:east-pacific-rise",
+      "kind": "zone",
+      "name": "East Pacific Rise Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-pacificum.zsp.geojson",
+      "sha256": "783f700a8bc567da94671812534a5320e4a044b55f0c3d2f6421b032167238f9",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: East Pacific Rise Zone",
+        "url": "https://doi.org/10.5281/zenodo.14194897",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:galapagos",
+      "kind": "zone",
+      "name": "Galápagos Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-pacificum.zsp.geojson",
+      "sha256": "783f700a8bc567da94671812534a5320e4a044b55f0c3d2f6421b032167238f9",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Galápagos Zone",
+        "url": "https://doi.org/10.25921/fd45-gt74",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:peru-basin",
+      "kind": "zone",
+      "name": "Peru Basin Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-pacificum.zsp.geojson",
+      "sha256": "783f700a8bc567da94671812534a5320e4a044b55f0c3d2f6421b032167238f9",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Peru Basin Zone",
+        "url": "https://doi.org/10.25921/fd45-gt74",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:rapa-nui-nazca",
+      "kind": "zone",
+      "name": "Rapa Nui–Nazca Ridge Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-pacificum.zsp.geojson",
+      "sha256": "783f700a8bc567da94671812534a5320e4a044b55f0c3d2f6421b032167238f9",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Rapa Nui–Nazca Ridge Zone",
+        "url": "https://doi.org/10.25921/fd45-gt74",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:chile-rise",
+      "kind": "zone",
+      "name": "Chile Rise Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-pacificum.zsp.geojson",
+      "sha256": "783f700a8bc567da94671812534a5320e4a044b55f0c3d2f6421b032167238f9",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Chile Rise Zone",
+        "url": "https://doi.org/10.5281/zenodo.14194897",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:polynesian-superswell",
+      "kind": "zone",
+      "name": "Polynesian Superswell Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-pacificum.zsp.geojson",
+      "sha256": "783f700a8bc567da94671812534a5320e4a044b55f0c3d2f6421b032167238f9",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Polynesian Superswell Zone",
+        "url": "https://doi.org/10.5281/zenodo.14194897",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:mid-pacific-seamounts",
+      "kind": "zone",
+      "name": "Mid-Pacific Seamount Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-pacificum.zsp.geojson",
+      "sha256": "783f700a8bc567da94671812534a5320e4a044b55f0c3d2f6421b032167238f9",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Mid-Pacific Seamount Zone",
+        "url": "https://doi.org/10.5281/zenodo.14194897",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:ontong-java",
+      "kind": "zone",
+      "name": "Ontong Java Plateau Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-pacificum.zsp.geojson",
+      "sha256": "783f700a8bc567da94671812534a5320e4a044b55f0c3d2f6421b032167238f9",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Ontong Java Plateau Zone",
+        "url": "https://doi.org/10.25921/fd45-gt74",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:caroline",
+      "kind": "zone",
+      "name": "Caroline Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-pacificum.zsp.geojson",
+      "sha256": "783f700a8bc567da94671812534a5320e4a044b55f0c3d2f6421b032167238f9",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Caroline Zone",
+        "url": "https://doi.org/10.25921/fd45-gt74",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:philippine-sea",
+      "kind": "zone",
+      "name": "Philippine Sea Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-pacificum.zsp.geojson",
+      "sha256": "783f700a8bc567da94671812534a5320e4a044b55f0c3d2f6421b032167238f9",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Philippine Sea Zone",
+        "url": "https://www.naturalearthdata.com/",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:izu-bonin-mariana",
+      "kind": "zone",
+      "name": "Izu–Bonin–Mariana Arc Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-pacificum.zsp.geojson",
+      "sha256": "783f700a8bc567da94671812534a5320e4a044b55f0c3d2f6421b032167238f9",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Izu–Bonin–Mariana Arc Zone",
+        "url": "https://doi.org/10.25921/fd45-gt74",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:melanesian-arcs",
+      "kind": "zone",
+      "name": "Melanesian Arcs Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-pacificum.zsp.geojson",
+      "sha256": "783f700a8bc567da94671812534a5320e4a044b55f0c3d2f6421b032167238f9",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Melanesian Arcs Zone",
+        "url": "https://doi.org/10.25921/fd45-gt74",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:tonga-kermadec",
+      "kind": "zone",
+      "name": "Tonga–Kermadec Arc Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-pacificum.zsp.geojson",
+      "sha256": "783f700a8bc567da94671812534a5320e4a044b55f0c3d2f6421b032167238f9",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Tonga–Kermadec Arc Zone",
+        "url": "https://doi.org/10.25921/fd45-gt74",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:southwest-pacific-basin",
+      "kind": "zone",
+      "name": "Southwest Pacific Basin Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-pacificum.zsp.geojson",
+      "sha256": "783f700a8bc567da94671812534a5320e4a044b55f0c3d2f6421b032167238f9",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Southwest Pacific Basin Zone",
+        "url": "https://doi.org/10.5281/zenodo.14194897",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:macquarie-ridge",
+      "kind": "zone",
+      "name": "Macquarie Ridge Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-pacificum.zsp.geojson",
+      "sha256": "783f700a8bc567da94671812534a5320e4a044b55f0c3d2f6421b032167238f9",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Macquarie Ridge Zone",
+        "url": "https://doi.org/10.25921/fd45-gt74",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:zealandia-north",
+      "kind": "zone",
+      "name": "North Zealandia Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-pacificum.zsp.geojson",
+      "sha256": "783f700a8bc567da94671812534a5320e4a044b55f0c3d2f6421b032167238f9",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: North Zealandia Zone",
+        "url": "https://doi.org/10.25921/fd45-gt74",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:zealandia-south",
+      "kind": "zone",
+      "name": "South Zealandia Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-pacificum.zsp.geojson",
+      "sha256": "783f700a8bc567da94671812534a5320e4a044b55f0c3d2f6421b032167238f9",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: South Zealandia Zone",
+        "url": "https://doi.org/10.25921/fd45-gt74",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:tasman-basin",
+      "kind": "zone",
+      "name": "Tasman Basin Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-pacificum.zsp.geojson",
+      "sha256": "783f700a8bc567da94671812534a5320e4a044b55f0c3d2f6421b032167238f9",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Tasman Basin Zone",
+        "url": "https://www.naturalearthdata.com/",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "mare:atlanticum",
+      "kind": "mare",
+      "name": "Mare Atlanticum",
+      "from": "zsp",
+      "file": "mare-atlanticum.zsp.geojson",
+      "sha256": "e0588c63f583e0ecd09ed1d2f82361bf0c540ae64dbd7ec6e549090880171962",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Mare Atlanticum",
+        "url": "https://starcom.app/geopolitical/zones/manifest.json",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:nordic-seas",
+      "kind": "zone",
+      "name": "Nordic Seas Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-atlanticum.zsp.geojson",
+      "sha256": "e0588c63f583e0ecd09ed1d2f82361bf0c540ae64dbd7ec6e549090880171962",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Nordic Seas Zone",
+        "url": "https://doi.org/10.25921/fd45-gt74",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:iceland-plume",
+      "kind": "zone",
+      "name": "Iceland Plume Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-atlanticum.zsp.geojson",
+      "sha256": "e0588c63f583e0ecd09ed1d2f82361bf0c540ae64dbd7ec6e549090880171962",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Iceland Plume Zone",
+        "url": "https://doi.org/10.25921/fd45-gt74",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:labrador-sea",
+      "kind": "zone",
+      "name": "Labrador Sea Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-atlanticum.zsp.geojson",
+      "sha256": "e0588c63f583e0ecd09ed1d2f82361bf0c540ae64dbd7ec6e549090880171962",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Labrador Sea Zone",
+        "url": "https://doi.org/10.25921/fd45-gt74",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:north-american-basin",
+      "kind": "zone",
+      "name": "North American Basin Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-atlanticum.zsp.geojson",
+      "sha256": "e0588c63f583e0ecd09ed1d2f82361bf0c540ae64dbd7ec6e549090880171962",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: North American Basin Zone",
+        "url": "https://doi.org/10.25921/fd45-gt74",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:north-mid-atlantic-ridge",
+      "kind": "zone",
+      "name": "North Mid-Atlantic Ridge Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-atlanticum.zsp.geojson",
+      "sha256": "e0588c63f583e0ecd09ed1d2f82361bf0c540ae64dbd7ec6e549090880171962",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: North Mid-Atlantic Ridge Zone",
+        "url": "https://doi.org/10.25921/fd45-gt74",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:azores-gibraltar",
+      "kind": "zone",
+      "name": "Azores–Gibraltar Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-atlanticum.zsp.geojson",
+      "sha256": "e0588c63f583e0ecd09ed1d2f82361bf0c540ae64dbd7ec6e549090880171962",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Azores–Gibraltar Zone",
+        "url": "https://doi.org/10.25921/fd45-gt74",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:west-european-basin",
+      "kind": "zone",
+      "name": "West European Basin Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-atlanticum.zsp.geojson",
+      "sha256": "e0588c63f583e0ecd09ed1d2f82361bf0c540ae64dbd7ec6e549090880171962",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: West European Basin Zone",
+        "url": "https://doi.org/10.25921/fd45-gt74",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:canary-basin",
+      "kind": "zone",
+      "name": "Canary Basin Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-atlanticum.zsp.geojson",
+      "sha256": "e0588c63f583e0ecd09ed1d2f82361bf0c540ae64dbd7ec6e549090880171962",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Canary Basin Zone",
+        "url": "https://doi.org/10.5281/zenodo.14194897",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:cape-verde",
+      "kind": "zone",
+      "name": "Cape Verde Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-atlanticum.zsp.geojson",
+      "sha256": "e0588c63f583e0ecd09ed1d2f82361bf0c540ae64dbd7ec6e549090880171962",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Cape Verde Zone",
+        "url": "https://doi.org/10.25921/fd45-gt74",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:equatorial-atlantic",
+      "kind": "zone",
+      "name": "Equatorial Atlantic Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-atlanticum.zsp.geojson",
+      "sha256": "e0588c63f583e0ecd09ed1d2f82361bf0c540ae64dbd7ec6e549090880171962",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Equatorial Atlantic Zone",
+        "url": "https://doi.org/10.25921/fd45-gt74",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:south-mid-atlantic-ridge",
+      "kind": "zone",
+      "name": "South Mid-Atlantic Ridge Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-atlanticum.zsp.geojson",
+      "sha256": "e0588c63f583e0ecd09ed1d2f82361bf0c540ae64dbd7ec6e549090880171962",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: South Mid-Atlantic Ridge Zone",
+        "url": "https://doi.org/10.25921/fd45-gt74",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:walvis-ridge",
+      "kind": "zone",
+      "name": "Walvis Ridge Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-atlanticum.zsp.geojson",
+      "sha256": "e0588c63f583e0ecd09ed1d2f82361bf0c540ae64dbd7ec6e549090880171962",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Walvis Ridge Zone",
+        "url": "https://doi.org/10.25921/fd45-gt74",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:brazil-basin",
+      "kind": "zone",
+      "name": "Brazil Basin Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-atlanticum.zsp.geojson",
+      "sha256": "e0588c63f583e0ecd09ed1d2f82361bf0c540ae64dbd7ec6e549090880171962",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Brazil Basin Zone",
+        "url": "https://doi.org/10.25921/fd45-gt74",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:argentine-basin",
+      "kind": "zone",
+      "name": "Argentine Basin Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-atlanticum.zsp.geojson",
+      "sha256": "e0588c63f583e0ecd09ed1d2f82361bf0c540ae64dbd7ec6e549090880171962",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Argentine Basin Zone",
+        "url": "https://www.naturalearthdata.com/",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:angola-basin",
+      "kind": "zone",
+      "name": "Angola Basin Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-atlanticum.zsp.geojson",
+      "sha256": "e0588c63f583e0ecd09ed1d2f82361bf0c540ae64dbd7ec6e549090880171962",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Angola Basin Zone",
+        "url": "https://doi.org/10.25921/fd45-gt74",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:cape-basin",
+      "kind": "zone",
+      "name": "Cape Basin Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-atlanticum.zsp.geojson",
+      "sha256": "e0588c63f583e0ecd09ed1d2f82361bf0c540ae64dbd7ec6e549090880171962",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Cape Basin Zone",
+        "url": "https://www.naturalearthdata.com/",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "mare:indicum",
+      "kind": "mare",
+      "name": "Mare Indicum",
+      "from": "zsp",
+      "file": "mare-indicum.zsp.geojson",
+      "sha256": "7f832a74d180cdf104cfd565b662817a5ce5ab4f5a1a877b913b370966b8e786",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Mare Indicum",
+        "url": "https://starcom.app/geopolitical/zones/manifest.json",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:carlsberg-central-indian-ridge",
+      "kind": "zone",
+      "name": "Carlsberg and Central Indian Ridge Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-indicum.zsp.geojson",
+      "sha256": "7f832a74d180cdf104cfd565b662817a5ce5ab4f5a1a877b913b370966b8e786",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Carlsberg and Central Indian Ridge Zone",
+        "url": "https://doi.org/10.5281/zenodo.14194897",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:southwest-indian-ridge",
+      "kind": "zone",
+      "name": "Southwest Indian Ridge Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-indicum.zsp.geojson",
+      "sha256": "7f832a74d180cdf104cfd565b662817a5ce5ab4f5a1a877b913b370966b8e786",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Southwest Indian Ridge Zone",
+        "url": "https://doi.org/10.5281/zenodo.14194897",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:southeast-indian-ridge",
+      "kind": "zone",
+      "name": "Southeast Indian Ridge Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-indicum.zsp.geojson",
+      "sha256": "7f832a74d180cdf104cfd565b662817a5ce5ab4f5a1a877b913b370966b8e786",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Southeast Indian Ridge Zone",
+        "url": "https://doi.org/10.5281/zenodo.14194897",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:arabian-sea",
+      "kind": "zone",
+      "name": "Arabian Sea Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-indicum.zsp.geojson",
+      "sha256": "7f832a74d180cdf104cfd565b662817a5ce5ab4f5a1a877b913b370966b8e786",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Arabian Sea Zone",
+        "url": "https://www.naturalearthdata.com/",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:somali-basin",
+      "kind": "zone",
+      "name": "Somali Basin Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-indicum.zsp.geojson",
+      "sha256": "7f832a74d180cdf104cfd565b662817a5ce5ab4f5a1a877b913b370966b8e786",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Somali Basin Zone",
+        "url": "https://www.naturalearthdata.com/",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:mascarene-plateau",
+      "kind": "zone",
+      "name": "Mascarene Plateau Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-indicum.zsp.geojson",
+      "sha256": "7f832a74d180cdf104cfd565b662817a5ce5ab4f5a1a877b913b370966b8e786",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Mascarene Plateau Zone",
+        "url": "https://doi.org/10.25921/fd45-gt74",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:chagos-laccadive",
+      "kind": "zone",
+      "name": "Chagos–Laccadive Ridge Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-indicum.zsp.geojson",
+      "sha256": "7f832a74d180cdf104cfd565b662817a5ce5ab4f5a1a877b913b370966b8e786",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Chagos–Laccadive Ridge Zone",
+        "url": "https://doi.org/10.25921/fd45-gt74",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:central-indian-basin",
+      "kind": "zone",
+      "name": "Central Indian Basin Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-indicum.zsp.geojson",
+      "sha256": "7f832a74d180cdf104cfd565b662817a5ce5ab4f5a1a877b913b370966b8e786",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Central Indian Basin Zone",
+        "url": "https://www.naturalearthdata.com/",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:bengal-fan",
+      "kind": "zone",
+      "name": "Bengal Fan Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-indicum.zsp.geojson",
+      "sha256": "7f832a74d180cdf104cfd565b662817a5ce5ab4f5a1a877b913b370966b8e786",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Bengal Fan Zone",
+        "url": "https://www.naturalearthdata.com/",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:ninetyeast-ridge",
+      "kind": "zone",
+      "name": "Ninetyeast Ridge Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-indicum.zsp.geojson",
+      "sha256": "7f832a74d180cdf104cfd565b662817a5ce5ab4f5a1a877b913b370966b8e786",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Ninetyeast Ridge Zone",
+        "url": "https://doi.org/10.25921/fd45-gt74",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:wharton-basin",
+      "kind": "zone",
+      "name": "Wharton Basin Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-indicum.zsp.geojson",
+      "sha256": "7f832a74d180cdf104cfd565b662817a5ce5ab4f5a1a877b913b370966b8e786",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Wharton Basin Zone",
+        "url": "https://doi.org/10.5281/zenodo.14194897",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:perth-basin",
+      "kind": "zone",
+      "name": "Perth Basin Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-indicum.zsp.geojson",
+      "sha256": "7f832a74d180cdf104cfd565b662817a5ce5ab4f5a1a877b913b370966b8e786",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Perth Basin Zone",
+        "url": "https://doi.org/10.5281/zenodo.14194897",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:south-australian-basin",
+      "kind": "zone",
+      "name": "South Australian Basin Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-indicum.zsp.geojson",
+      "sha256": "7f832a74d180cdf104cfd565b662817a5ce5ab4f5a1a877b913b370966b8e786",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: South Australian Basin Zone",
+        "url": "https://www.naturalearthdata.com/",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:mozambique-basin",
+      "kind": "zone",
+      "name": "Mozambique Basin Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-indicum.zsp.geojson",
+      "sha256": "7f832a74d180cdf104cfd565b662817a5ce5ab4f5a1a877b913b370966b8e786",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Mozambique Basin Zone",
+        "url": "https://doi.org/10.5281/zenodo.14194897",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:agulhas",
+      "kind": "zone",
+      "name": "Agulhas Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-indicum.zsp.geojson",
+      "sha256": "7f832a74d180cdf104cfd565b662817a5ce5ab4f5a1a877b913b370966b8e786",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Agulhas Zone",
+        "url": "https://doi.org/10.25921/fd45-gt74",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:crozet",
+      "kind": "zone",
+      "name": "Crozet Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-indicum.zsp.geojson",
+      "sha256": "7f832a74d180cdf104cfd565b662817a5ce5ab4f5a1a877b913b370966b8e786",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Crozet Zone",
+        "url": "https://doi.org/10.25921/fd45-gt74",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:kerguelen-plateau",
+      "kind": "zone",
+      "name": "Kerguelen Plateau Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-indicum.zsp.geojson",
+      "sha256": "7f832a74d180cdf104cfd565b662817a5ce5ab4f5a1a877b913b370966b8e786",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Kerguelen Plateau Zone",
+        "url": "https://doi.org/10.25921/fd45-gt74",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "mare:arcticum",
+      "kind": "mare",
+      "name": "Mare Arcticum",
+      "from": "zsp",
+      "file": "mare-arcticum.zsp.geojson",
+      "sha256": "91906504e9df74f5ce88aa0248ffe0fd93e495eb9a16488afe7bd7a9270396c2",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Mare Arcticum",
+        "url": "https://starcom.app/geopolitical/zones/manifest.json",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:fram-strait",
+      "kind": "zone",
+      "name": "Fram Strait Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-arcticum.zsp.geojson",
+      "sha256": "91906504e9df74f5ce88aa0248ffe0fd93e495eb9a16488afe7bd7a9270396c2",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Fram Strait Zone",
+        "url": "https://doi.org/10.25921/fd45-gt74",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:nansen-basin",
+      "kind": "zone",
+      "name": "Nansen Basin Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-arcticum.zsp.geojson",
+      "sha256": "91906504e9df74f5ce88aa0248ffe0fd93e495eb9a16488afe7bd7a9270396c2",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Nansen Basin Zone",
+        "url": "https://doi.org/10.25921/fd45-gt74",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:gakkel-ridge",
+      "kind": "zone",
+      "name": "Gakkel Ridge Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-arcticum.zsp.geojson",
+      "sha256": "91906504e9df74f5ce88aa0248ffe0fd93e495eb9a16488afe7bd7a9270396c2",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Gakkel Ridge Zone",
+        "url": "https://doi.org/10.25921/fd45-gt74",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:amundsen-basin",
+      "kind": "zone",
+      "name": "Amundsen Basin Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-arcticum.zsp.geojson",
+      "sha256": "91906504e9df74f5ce88aa0248ffe0fd93e495eb9a16488afe7bd7a9270396c2",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Amundsen Basin Zone",
+        "url": "https://www.naturalearthdata.com/",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:lomonosov-ridge",
+      "kind": "zone",
+      "name": "Lomonosov Ridge Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-arcticum.zsp.geojson",
+      "sha256": "91906504e9df74f5ce88aa0248ffe0fd93e495eb9a16488afe7bd7a9270396c2",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Lomonosov Ridge Zone",
+        "url": "https://doi.org/10.25921/fd45-gt74",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:makarov-basin",
+      "kind": "zone",
+      "name": "Makarov Basin Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-arcticum.zsp.geojson",
+      "sha256": "91906504e9df74f5ce88aa0248ffe0fd93e495eb9a16488afe7bd7a9270396c2",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Makarov Basin Zone",
+        "url": "https://www.naturalearthdata.com/",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:alpha-mendeleev-ridge",
+      "kind": "zone",
+      "name": "Alpha–Mendeleev Ridge Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-arcticum.zsp.geojson",
+      "sha256": "91906504e9df74f5ce88aa0248ffe0fd93e495eb9a16488afe7bd7a9270396c2",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Alpha–Mendeleev Ridge Zone",
+        "url": "https://doi.org/10.25921/fd45-gt74",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:canada-basin",
+      "kind": "zone",
+      "name": "Canada Basin Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-arcticum.zsp.geojson",
+      "sha256": "91906504e9df74f5ce88aa0248ffe0fd93e495eb9a16488afe7bd7a9270396c2",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Canada Basin Zone",
+        "url": "https://www.naturalearthdata.com/",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "mare:australe",
+      "kind": "mare",
+      "name": "Mare Australe",
+      "from": "zsp",
+      "file": "mare-australe.zsp.geojson",
+      "sha256": "5c0c9a123d476b7aead0512bf90f127bc2d2f0aa2eed16e35ad5bd60ccc38ecb",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Mare Australe",
+        "url": "https://starcom.app/geopolitical/zones/manifest.json",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:drake-passage",
+      "kind": "zone",
+      "name": "Drake Passage Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-australe.zsp.geojson",
+      "sha256": "5c0c9a123d476b7aead0512bf90f127bc2d2f0aa2eed16e35ad5bd60ccc38ecb",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Drake Passage Zone",
+        "url": "https://doi.org/10.5281/zenodo.6586972",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:weddell-gyre",
+      "kind": "zone",
+      "name": "Weddell Gyre Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-australe.zsp.geojson",
+      "sha256": "5c0c9a123d476b7aead0512bf90f127bc2d2f0aa2eed16e35ad5bd60ccc38ecb",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Weddell Gyre Zone",
+        "url": "https://doi.org/10.25921/fd45-gt74",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:bouvet",
+      "kind": "zone",
+      "name": "Bouvet Triple Junction Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-australe.zsp.geojson",
+      "sha256": "5c0c9a123d476b7aead0512bf90f127bc2d2f0aa2eed16e35ad5bd60ccc38ecb",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Bouvet Triple Junction Zone",
+        "url": "https://doi.org/10.5281/zenodo.14194897",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:enderby-basin",
+      "kind": "zone",
+      "name": "Enderby Basin Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-australe.zsp.geojson",
+      "sha256": "5c0c9a123d476b7aead0512bf90f127bc2d2f0aa2eed16e35ad5bd60ccc38ecb",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Enderby Basin Zone",
+        "url": "https://doi.org/10.25921/fd45-gt74",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:southern-kerguelen-plateau",
+      "kind": "zone",
+      "name": "Southern Kerguelen Plateau Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-australe.zsp.geojson",
+      "sha256": "5c0c9a123d476b7aead0512bf90f127bc2d2f0aa2eed16e35ad5bd60ccc38ecb",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Southern Kerguelen Plateau Zone",
+        "url": "https://doi.org/10.25921/fd45-gt74",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:australian-antarctic-basin",
+      "kind": "zone",
+      "name": "Australian–Antarctic Basin Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-australe.zsp.geojson",
+      "sha256": "5c0c9a123d476b7aead0512bf90f127bc2d2f0aa2eed16e35ad5bd60ccc38ecb",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Australian–Antarctic Basin Zone",
+        "url": "https://doi.org/10.25921/fd45-gt74",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:ross-gyre",
+      "kind": "zone",
+      "name": "Ross Gyre Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-australe.zsp.geojson",
+      "sha256": "5c0c9a123d476b7aead0512bf90f127bc2d2f0aa2eed16e35ad5bd60ccc38ecb",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Ross Gyre Zone",
+        "url": "https://doi.org/10.25921/fd45-gt74",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:pacific-antarctic-ridge",
+      "kind": "zone",
+      "name": "Pacific–Antarctic Ridge Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-australe.zsp.geojson",
+      "sha256": "5c0c9a123d476b7aead0512bf90f127bc2d2f0aa2eed16e35ad5bd60ccc38ecb",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Pacific–Antarctic Ridge Zone",
+        "url": "https://doi.org/10.25921/fd45-gt74",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:amundsen-bellingshausen",
+      "kind": "zone",
+      "name": "Amundsen–Bellingshausen Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-australe.zsp.geojson",
+      "sha256": "5c0c9a123d476b7aead0512bf90f127bc2d2f0aa2eed16e35ad5bd60ccc38ecb",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Amundsen–Bellingshausen Zone",
+        "url": "https://doi.org/10.5281/zenodo.6586972",
+        "read": "2026-10-27"
+      }
+    },
+    {
+      "code": "zone:scotia-arc",
+      "kind": "zone",
+      "name": "Scotia Arc Zone",
+      "the": true,
+      "from": "zsp",
+      "file": "mare-australe.zsp.geojson",
+      "sha256": "5c0c9a123d476b7aead0512bf90f127bc2d2f0aa2eed16e35ad5bd60ccc38ecb",
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Scotia Arc Zone",
+        "url": "https://doi.org/10.25921/fd45-gt74",
+        "read": "2026-10-27"
+      }
+    }
+  ],
+  "retired": [
+    {
+      "code": "zone:bahia-coast-reconcavo",
+      "kind": "zone",
+      "name": "Bahia Coast and Recôncavo Zone",
+      "the": true,
+      "from": "covered",
+      "coveredBy": [
+        "zone:brazilian-shield",
+        "zone:east-brazilian-margin"
+      ],
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Bahia Coast and Recôncavo Zone",
+        "url": "https://starcom.app/geopolitical/zones/manifest.json",
+        "read": "2026-10-27"
+      },
+      "note": "Retired from the first Zones; now the Brazilian Shield Zone and the East Brazilian Margin Zone."
+    },
+    {
+      "code": "zone:central-american-dry-corridor",
+      "kind": "zone",
+      "name": "Central American Dry Corridor Zone",
+      "the": true,
+      "from": "covered",
+      "coveredBy": [
+        "zone:central-america"
+      ],
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Central American Dry Corridor Zone",
+        "url": "https://starcom.app/geopolitical/zones/manifest.json",
+        "read": "2026-10-27"
+      },
+      "note": "Retired from the first Zones; now the Central American Isthmus Zone."
+    },
+    {
+      "code": "zone:golden-triangle",
+      "kind": "zone",
+      "name": "Golden Triangle Zone",
+      "the": true,
+      "from": "covered",
+      "coveredBy": [
+        "zone:shan-tenasserim",
+        "zone:malay-peninsula",
+        "zone:annamite-khorat"
+      ],
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Golden Triangle Zone",
+        "url": "https://starcom.app/geopolitical/zones/manifest.json",
+        "read": "2026-10-27"
+      },
+      "note": "Retired from the first Zones; now the Shan Plateau and the Tenasserim Zone; the Malay Peninsula and the Thai Basins Zone; and the Annamite Range and the Khorat Plateau Zone."
+    },
+    {
+      "code": "zone:ring-of-fire",
+      "kind": "zone",
+      "name": "Pacific Ring of Fire Zone",
+      "the": true,
+      "from": "covered",
+      "coveredBy": [
+        "zone:andes",
+        "zone:alaska-bering",
+        "zone:izu-bonin-mariana",
+        "zone:sunda-arc",
+        "zone:tonga-kermadec",
+        "zone:melanesian-arcs",
+        "zone:wallacea",
+        "zone:philippines",
+        "zone:japan",
+        "zone:new-guinea-highlands",
+        "zone:basin-and-range",
+        "zone:pacific-coast",
+        "zone:sierras-madres",
+        "zone:pacific-forearc",
+        "zone:central-america",
+        "zone:new-zealand",
+        "zone:galapagos",
+        "zone:east-china-sea-taiwan",
+        "zone:cordillera",
+        "zone:arafura-papua",
+        "zone:philippine-sea",
+        "zone:kamchatka-koryak",
+        "zone:northern-andes"
+      ],
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Pacific Ring of Fire Zone",
+        "url": "https://starcom.app/geopolitical/zones/manifest.json",
+        "read": "2026-10-27"
+      },
+      "note": "Retired from the first Zones; now 23 Zones, among them the Central and Southern Andes Zone; the Alaska and the Bering Shelf Zone; and the Izu–Bonin–Mariana Arc Zone."
+    },
+    {
+      "code": "zone:sahel",
+      "kind": "zone",
+      "name": "Sahel Zone",
+      "the": true,
+      "from": "covered",
+      "coveredBy": [
+        "zone:central-african-rifts",
+        "zone:reguibat-taoudeni",
+        "zone:tuareg-shield",
+        "zone:senegal-basin",
+        "zone:leo-man",
+        "zone:nubian-shield"
+      ],
+      "source": {
+        "name": "Zone and Sector Protocol 2.0: Sahel Zone",
+        "url": "https://starcom.app/geopolitical/zones/manifest.json",
+        "read": "2026-10-27"
+      },
+      "note": "Retired from the first Zones; now 6 Zones, among them the Chad, Darfur and the Sudanese Rifts Zone; the Reguibat and Taoudeni Zone; and the Tuareg Shield and Iullemmeden Zone."
+    }
+  ]
+}

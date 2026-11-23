@@ -1,0 +1,43 @@
+/*
+ * TLP 2.0: coloured text on a black chip, in a fixed place
+ * (docs/missions/04-plan/interface-upgrade.md). TLP keeps its own black fill
+ * because its red fails on Starcom's panels; on black every one reads (tested
+ * in tokens.test.ts). Undecided is not a TLP level: no fill, a dashed border,
+ * in the grey that means not judged.
+ */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  flex: none;
+  padding: 1px 6px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  background: var(--sc-tlp-black);
+  font-family: var(--sc-font-data);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.chip[data-distribution='public'] { color: var(--sc-tlp-clear); }
+.chip[data-distribution='limited'] { color: var(--sc-tlp-green); }
+.chip[data-distribution='private'] { color: var(--sc-tlp-red); }
+
+.chip[data-distribution='undecided'] {
+  color: var(--sc-text-secondary);
+  background: transparent;
+  border: 1px dashed var(--sc-text-secondary);
+}
+
+/* Read aloud, not shown: what the word is. */
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

@@ -1,0 +1,279 @@
+.newUserHint {
+  /* Placement is the dock's job now — see components/Dock/dockOrder.ts.
+     This claimed top: 80px; right: 20px, which NotificationSystem claimed too. */
+  animation: slideInRight 0.4s ease-out;
+  pointer-events: auto;
+  /* A column that shrinks to the height its dock slot has left, with the steps
+     scrolling inside, rather than running past the globe's area (decision D-F,
+     step 3; see fitsDock in dockOrder.ts). */
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.hintCard {
+  background: linear-gradient(135deg, rgba(10, 10, 10, 0.95) 0%, rgba(26, 26, 46, 0.95) 50%, rgba(22, 33, 62, 0.95) 100%);
+  backdrop-filter: blur(15px);
+  border: 2px solid rgba(0, 255, 65, 0.4);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 255, 65, 0.2);
+  width: 320px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.hintHeader {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px 10px;
+  border-bottom: 1px solid rgba(0, 255, 65, 0.2);
+}
+
+.hintTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #00ff41;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.icon {
+  font-size: 18px;
+}
+
+.hintControls {
+  display: flex;
+  gap: 5px;
+}
+
+.minimizeButton,
+.closeButton {
+  background: none;
+  border: none;
+  color: #888888;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.minimizeButton:hover,
+.closeButton:hover {
+  color: #cccccc;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.hintContent {
+  padding: 15px 20px 20px;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+.hintContent p {
+  color: #cccccc;
+  margin: 0 0 15px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.quickTips {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.tip {
+  background: rgba(0, 255, 65, 0.05);
+  border: 1px solid rgba(0, 255, 65, 0.2);
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 13px;
+  color: #cccccc;
+}
+
+.tip strong {
+  color: #00ff41;
+}
+
+.hintActions {
+  display: flex;
+  gap: 10px;
+}
+
+.primaryAction {
+  background: linear-gradient(45deg, #00ff41, #00cc33);
+  border: none;
+  color: #000000;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex: 1;
+}
+
+.primaryAction:hover {
+  background: linear-gradient(45deg, #00cc33, #009926);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 255, 65, 0.3);
+}
+
+.secondaryAction {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #cccccc;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex: 1;
+}
+
+.secondaryAction:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Minimized state */
+.minimizedHint {
+  /* Placement is the dock's job now — see components/Dock/dockOrder.ts.
+     This claimed top: 80px; right: 20px, which is the same point its own expanded state claimed. */
+  animation: fadeIn 0.3s ease-out;
+  pointer-events: auto;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.minimizedButton {
+  background: rgba(0, 255, 65, 0.1);
+  border: 2px solid rgba(0, 255, 65, 0.3);
+  color: #00ff41;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 16px rgba(0, 255, 65, 0.1);
+}
+
+.minimizedButton:hover {
+  background: rgba(0, 255, 65, 0.2);
+  border-color: #00ff41;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 255, 65, 0.2);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .newUserHint {
+  }
+  
+  .hintCard {
+    width: auto;
+  }
+  
+  .minimizedHint {
+  }
+  
+  .hintActions {
+    flex-direction: column;
+  }
+}
+
+/* ── Pipeline steps ─────────────────────────────────────────────────────
+   Added when the first-run card became a state-derived pipeline guide.
+   Reuses the card's existing green-on-dark language rather than
+   introducing a second one. */
+.pipelineSteps {
+  list-style: none;
+  margin: 12px 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  counter-reset: none;
+}
+
+.step,
+.stepDone {
+  border-left: 2px solid rgba(0, 255, 65, 0.25);
+  padding: 6px 0 6px 10px;
+}
+
+.stepDone {
+  border-left-color: rgba(0, 255, 65, 0.8);
+  opacity: 0.75;
+}
+
+.stepLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #e8e8e8;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.stepDone .stepLabel {
+  color: #00ff41;
+}
+
+.stepMark {
+  color: #00ff41;
+  font-size: 13px;
+  width: 12px;
+  display: inline-block;
+}
+
+.stepDetail {
+  color: #9a9a9a;
+  font-size: 12px;
+  line-height: 1.45;
+  margin: 3px 0 0 20px;
+}
+
+.stepAction {
+  margin: 6px 0 0 20px;
+  background: transparent;
+  border: 1px solid rgba(0, 255, 65, 0.45);
+  color: #00ff41;
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.stepAction:hover {
+  background: rgba(0, 255, 65, 0.12);
+  border-color: rgba(0, 255, 65, 0.8);
+}
+
+.stepAction:focus-visible {
+  outline: 2px solid #00ff41;
+  outline-offset: 2px;
+}

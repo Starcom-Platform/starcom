@@ -1,0 +1,105 @@
+/*
+ * The credits, a dialog over the app (PopupManager makes it one), drawn as Settings is:
+ * a primary frame with a hairline border (interface-upgrade.md, EVA: restrained chrome),
+ * sized to fit a phone and scrolling within itself.
+ */
+.panel {
+  width: min(600px, calc(100vw - 32px));
+  max-height: calc(100vh - 64px);
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 16px 20px 18px;
+  border: 1px solid var(--sc-divider);
+  border-radius: 8px;
+  background: var(--sc-surface-panel);
+  color: var(--sc-text-body);
+  font-family: var(--sc-font-text);
+  box-shadow: 0 12px 32px var(--sc-surface-globe);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid var(--sc-divider);
+}
+
+.title {
+  margin: 0;
+  font-family: var(--sc-font-display);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--sc-text-heading);
+}
+
+.close {
+  padding: 6px 12px;
+  border: 1px solid var(--sc-input-border);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--sc-text-body);
+  font-family: var(--sc-font-text);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.close:hover {
+  background: var(--sc-surface-input);
+}
+
+.close:focus-visible,
+.link:focus-visible {
+  outline: 2px solid var(--sc-focus);
+  outline-offset: 2px;
+}
+
+.lead {
+  margin: 0 0 16px;
+  font-size: 13px;
+  color: var(--sc-text-secondary);
+}
+
+.heading {
+  margin: 16px 0 8px;
+  font-family: var(--sc-font-display);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--sc-text-heading);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 13px;
+}
+
+.what {
+  display: block;
+  color: var(--sc-text-heading);
+}
+
+.detail {
+  display: block;
+  margin-top: 2px;
+  font-size: 12px;
+  color: var(--sc-text-muted);
+}
+
+.link {
+  color: var(--sc-accent);
+}
+
+.note {
+  margin: 12px 0 0;
+  font-size: 12px;
+  color: var(--sc-text-muted);
+}

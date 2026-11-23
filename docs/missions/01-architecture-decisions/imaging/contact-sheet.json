@@ -1,0 +1,104 @@
+{
+ "about": "The card contact sheet (block I, item 5; decisions IM25, IM26): every template Starcom can draw from the kept notes, at every size, drawn by scripts/contact-cards.mjs (npm run contact:cards), and a labelled slot for each template it cannot draw yet, saying why and what unblocks it. Each row pins its moment, so any build draws the same sheet from the same notes. Nothing it makes is kept here: the golden cards are the kept references.",
+ "notes": [
+  "docs/missions/01-architecture-decisions/war-conflict/war_conflict_live_2026-10-02.json",
+  "docs/missions/01-architecture-decisions/raver-watch/raver_watch_live_2026-10-03.json"
+ ],
+ "viewport": {
+  "width": 1400,
+  "height": 900
+ },
+ "presets": [
+  "wide",
+  "square",
+  "portrait",
+  "embed",
+  "story"
+ ],
+ "rows": [
+  {
+   "template": "critical_intel",
+   "subject": "the critical EASA airspace bulletin; its role decides its badge",
+   "shot": {
+    "subject": {
+     "address": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-conflict-easa-b582f0c184d60e5f"
+    },
+    "layers": {
+     "primary": "WarConflict",
+     "pins": []
+    },
+    "time": {
+     "at": 1790974800
+    }
+   }
+  },
+  {
+   "template": "context_report",
+   "subject": "suspected drone strikes in Addis Ababa, a context item placed at its city",
+   "shot": {
+    "subject": {
+     "address": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-conflict-wikipedia-b3005c4d39ee6409"
+    },
+    "layers": {
+     "primary": "WarConflict",
+     "pins": []
+    },
+    "time": {
+     "at": 1790974800
+    }
+   }
+  },
+  {
+   "template": "conflict_brief",
+   "subject": "the War & Conflict Brief of 2 October, its front page by theatre",
+   "shot": {
+    "subject": {
+     "brief": "2026-10-02"
+    },
+    "layers": {
+     "primary": "WarConflict",
+     "pins": []
+    },
+    "time": {
+     "at": 1790974800
+    }
+   }
+  },
+  {
+   "template": "raver_alert",
+   "subject": "a red HeatRisk day in Los Angeles; a Raver Watch item is Raver Watch",
+   "shot": {
+    "subject": {
+     "address": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-los-angeles-2026-10-03"
+    },
+    "layers": {
+     "primary": "HeatRisk",
+     "pins": []
+    },
+    "time": {
+     "at": 1791050400
+    }
+   }
+  },
+  {
+   "template": "actionable_intel",
+   "notYet": "No actionable item in the kept notes: War & Conflict's of 3 October had none, and an Intel Report states no role until block H's Interchange ingest."
+  },
+  {
+   "template": "mission_package",
+   "notYet": "Mission Packages are read with block H's Interchange ingest, and renderMission waits on how Mecha Jono encodes a mission's geometry (their ask 3)."
+  },
+  {
+   "template": "field_mission",
+   "notYet": "Field missions (kind 30079, t=field_mission) are read with block H's ingest, then drawn on RaverMissions and listed in the Missions app (RW13)."
+  },
+  {
+   "template": "hazard",
+   "notYet": "Starcom's hazard layers read live feeds, which a reproducible run does not reach, and the kept notes hold no hazard: kept hazard data would draw it."
+  },
+  {
+   "template": "declassified",
+   "notYet": "A declassified item has no place: a card with no globe, which waits for block H's ingest (IM17)."
+  }
+ ]
+}

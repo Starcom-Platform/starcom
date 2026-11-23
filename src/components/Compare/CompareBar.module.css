@@ -1,0 +1,55 @@
+/* Two layers side by side (D-CM): the line where the halves meet, and the bar naming them. */
+.divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  margin-left: -1px;
+  background: color-mix(in srgb, var(--sc-accent) 70%, transparent);
+  box-shadow: 0 0 6px color-mix(in srgb, var(--sc-accent) 45%, transparent);
+  pointer-events: none;
+  z-index: var(--z-hud);
+}
+
+.bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 6px 14px;
+  max-width: min(720px, calc(100vw - 32px));
+  padding: 6px 12px;
+  background: color-mix(in srgb, var(--sc-surface-panel) 92%, transparent);
+  border: 1px solid color-mix(in srgb, var(--sc-accent) 55%, transparent);
+  font: 500 13px/1.3 var(--sc-font-text);
+  color: var(--sc-text-heading);
+  pointer-events: auto;
+}
+
+.half {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.title {
+  font: 600 11px/1.2 var(--sc-font-data);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sc-text-secondary);
+}
+
+.end {
+  background: none;
+  border: 1px solid var(--sc-divider);
+  color: var(--sc-text-secondary);
+  font: 500 12px/1.2 var(--sc-font-text);
+  padding: 3px 9px;
+  cursor: pointer;
+}
+
+.end:hover {
+  color: var(--sc-text-heading);
+  border-color: var(--sc-accent);
+}

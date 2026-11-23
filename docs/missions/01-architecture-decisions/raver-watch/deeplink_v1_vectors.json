@@ -1,0 +1,315 @@
+{
+ "spec": "docs/starcom/DEEPLINK_V1.md",
+ "version": 1,
+ "about": "Each URL and what a v1 implementation reads from it. Run them on both sides.",
+ "vectors": [
+  {
+   "name": "works today: a layer",
+   "url": "https://starcom.app/?sub=EcologicalDisasters",
+   "expect": {
+    "v": null,
+    "sub": "EcologicalDisasters",
+    "mode": "EcoNatural",
+    "at": null,
+    "pins": [],
+    "focus": null,
+    "win": null
+   }
+  },
+  {
+   "name": "works today: a mode alone lands on its default layer",
+   "url": "https://starcom.app/?mode=GeoPolitical",
+   "expect": {
+    "v": null,
+    "sub": "DiplomaticEvents",
+    "mode": "GeoPolitical",
+    "at": null,
+    "pins": [],
+    "focus": null,
+    "win": null
+   }
+  },
+  {
+   "name": "works today: a mode that does not own the layer is refused",
+   "url": "https://starcom.app/?sub=SpaceWeather&mode=GeoPolitical",
+   "expect": {
+    "v": null,
+    "sub": null,
+    "mode": null,
+    "at": null,
+    "pins": [],
+    "focus": null,
+    "win": null
+   }
+  },
+  {
+   "name": "the camera",
+   "url": "https://starcom.app/?v=1&sub=EcologicalDisasters&at=21.90,-114.10,1.20",
+   "expect": {
+    "v": 1,
+    "sub": "EcologicalDisasters",
+    "mode": "EcoNatural",
+    "at": {
+     "lat": 21.9,
+     "lng": -114.1,
+     "alt": 1.2
+    },
+    "pins": [],
+    "focus": null,
+    "win": null
+   }
+  },
+  {
+   "name": "the camera without an altitude keeps the current one",
+   "url": "https://starcom.app/?v=1&sub=SpaceWeather&at=60,-30",
+   "expect": {
+    "v": 1,
+    "sub": "SpaceWeather",
+    "mode": "EcoNatural",
+    "at": {
+     "lat": 60.0,
+     "lng": -30.0,
+     "alt": null
+    },
+    "pins": [],
+    "focus": null,
+    "win": null
+   }
+  },
+  {
+   "name": "an altitude below the floor is raised to it",
+   "url": "https://starcom.app/?v=1&sub=Satellites&at=40,-100,0.3",
+   "expect": {
+    "v": 1,
+    "sub": "Satellites",
+    "mode": "CyberCommand",
+    "at": {
+     "lat": 40.0,
+     "lng": -100.0,
+     "alt": 1.0
+    },
+    "pins": [],
+    "focus": null,
+    "win": null
+   }
+  },
+  {
+   "name": "an altitude above the ceiling is lowered to it",
+   "url": "https://starcom.app/?v=1&sub=Satellites&at=40,-100,55",
+   "expect": {
+    "v": 1,
+    "sub": "Satellites",
+    "mode": "CyberCommand",
+    "at": {
+     "lat": 40.0,
+     "lng": -100.0,
+     "alt": 10.0
+    },
+    "pins": [],
+    "focus": null,
+    "win": null
+   }
+  },
+  {
+   "name": "a place that does not exist is ignored, the rest stands",
+   "url": "https://starcom.app/?v=1&sub=ConflictZones&at=95,10,1.5",
+   "expect": {
+    "v": 1,
+    "sub": "ConflictZones",
+    "mode": "GeoPolitical",
+    "at": null,
+    "pins": [],
+    "focus": null,
+    "win": null
+   }
+  },
+  {
+   "name": "a malformed camera is ignored whole",
+   "url": "https://starcom.app/?v=1&sub=ConflictZones&at=10,10,high",
+   "expect": {
+    "v": 1,
+    "sub": "ConflictZones",
+    "mode": "GeoPolitical",
+    "at": null,
+    "pins": [],
+    "focus": null,
+    "win": null
+   }
+  },
+  {
+   "name": "layers pinned beside it, case-insensitive, duplicates and unknowns dropped",
+   "url": "https://starcom.app/?v=1&sub=ecologicaldisasters&pin=earthweather,EarthWeather,NotALayer",
+   "expect": {
+    "v": 1,
+    "sub": "EcologicalDisasters",
+    "mode": "EcoNatural",
+    "at": null,
+    "pins": [
+     "EarthWeather"
+    ],
+    "focus": null,
+    "win": null
+   }
+  },
+  {
+   "name": "RLSH is never pinned",
+   "url": "https://starcom.app/?v=1&sub=EcologicalDisasters&pin=RLSH,Satellites",
+   "expect": {
+    "v": 1,
+    "sub": "EcologicalDisasters",
+    "mode": "EcoNatural",
+    "at": null,
+    "pins": [
+     "Satellites"
+    ],
+    "focus": null,
+    "win": null
+   }
+  },
+  {
+   "name": "a featured report: Intel Reports, with the asked-for layer beside it",
+   "url": "https://starcom.app/?v=1&sub=EcologicalDisasters&at=21.90,-114.10,1.20&focus=30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-geo-gdacs-tc-1001325",
+   "expect": {
+    "v": 1,
+    "sub": "IntelReports",
+    "mode": "CyberCommand",
+    "at": {
+     "lat": 21.9,
+     "lng": -114.1,
+     "alt": 1.2
+    },
+    "pins": [
+     "EcologicalDisasters"
+    ],
+    "focus": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-geo-gdacs-tc-1001325",
+    "win": null
+   }
+  },
+  {
+   "name": "a featured report alone",
+   "url": "https://starcom.app/?v=1&focus=30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-geo-gdacs-tc-1001325",
+   "expect": {
+    "v": 1,
+    "sub": "IntelReports",
+    "mode": "CyberCommand",
+    "at": null,
+    "pins": [],
+    "focus": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-geo-gdacs-tc-1001325",
+    "win": null
+   }
+  },
+  {
+   "name": "a focus that is not a report id is ignored",
+   "url": "https://starcom.app/?v=1&sub=IntelReports&focus=javascript:alert(1)",
+   "expect": {
+    "v": 1,
+    "sub": "IntelReports",
+    "mode": "CyberCommand",
+    "at": null,
+    "pins": [],
+    "focus": null,
+    "win": null
+   }
+  },
+  {
+   "name": "unknown parameters are ignored",
+   "url": "https://starcom.app/?sub=SpaceWeather&utm_source=discord&ref=x",
+   "expect": {
+    "v": null,
+    "sub": "SpaceWeather",
+    "mode": "EcoNatural",
+    "at": null,
+    "pins": [],
+    "focus": null,
+    "win": null
+   }
+  },
+  {
+   "name": "a link built by beu.starcom_link",
+   "url": "https://starcom.app/?v=1&sub=EcologicalDisasters&at=21.90,-114.10,1.20&focus=30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-geo-gdacs-tc-1001325",
+   "expect": {
+    "v": 1,
+    "sub": "IntelReports",
+    "mode": "CyberCommand",
+    "at": {
+     "lat": 21.9,
+     "lng": -114.1,
+     "alt": 1.2
+    },
+    "pins": [
+     "EcologicalDisasters"
+    ],
+    "focus": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-geo-gdacs-tc-1001325",
+    "win": null
+   }
+  },
+  {
+   "name": "raver watch: a layer, its mode derived",
+   "url": "https://starcom.app/?v=1&sub=DrugCheckAlerts",
+   "expect": {
+    "v": 1,
+    "sub": "DrugCheckAlerts",
+    "mode": "RaverWatch",
+    "at": null,
+    "pins": [],
+    "focus": null,
+    "win": null
+   }
+  },
+  {
+   "name": "raver watch: a featured note stays on its own layer",
+   "url": "https://starcom.app/?v=1&sub=DrugCheckAlerts&focus=30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-drug-check-alert-cfsre-6958716c26069b53",
+   "expect": {
+    "v": 1,
+    "sub": "DrugCheckAlerts",
+    "mode": "RaverWatch",
+    "at": null,
+    "pins": [],
+    "focus": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-drug-check-alert-cfsre-6958716c26069b53",
+    "win": null
+   }
+  },
+  {
+   "name": "a time window",
+   "url": "https://starcom.app/?v=1&sub=SceneEvents&win=1790899200..1791158400",
+   "expect": {
+    "v": 1,
+    "sub": "SceneEvents",
+    "mode": "RaverWatch",
+    "at": null,
+    "pins": [],
+    "focus": null,
+    "win": {
+     "from": 1790899200,
+     "until": 1791158400
+    }
+   }
+  },
+  {
+   "name": "a backwards time window is ignored",
+   "url": "https://starcom.app/?v=1&sub=SceneEvents&win=1791158400..1790899200",
+   "expect": {
+    "v": 1,
+    "sub": "SceneEvents",
+    "mode": "RaverWatch",
+    "at": null,
+    "pins": [],
+    "focus": null,
+    "win": null
+   }
+  },
+  {
+   "name": "a malformed time window is ignored",
+   "url": "https://starcom.app/?v=1&sub=SceneEvents&win=friday..sunday",
+   "expect": {
+    "v": 1,
+    "sub": "SceneEvents",
+    "mode": "RaverWatch",
+    "at": null,
+    "pins": [],
+    "focus": null,
+    "win": null
+   }
+  }
+ ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "region-tag-absent-is-accepted",
+  "description": "The g tag only lets an observation be asked for by region; without one it is still an observation.",
+  "expect": {
+    "observations": 1
+  },
+  "event": {
+    "kind": 1911,
+    "created_at": 1756000000,
+    "tags": [
+      [
+        "d",
+        "st-louis/st-patrick-center"
+      ]
+    ],
+    "content": "{\"anchor\":\"st-louis/st-patrick-center\",\"observed_at\":1755996400,\"tags\":[\"locked\"],\"method\":\"saw\",\"callsign\":\"Raven\",\"precision\":\"area\",\"area\":\"dp3w\"}",
+    "pubkey": "96bafb179762225794c13c78e823b349e8f21d96f8113020032e5cabdbe59889",
+    "id": "81d6f8179b1a3300db077ef95762adaa719a8add952c5c28480d3eefc57cf7ca",
+    "sig": "b5f8c4478ee730eb50697adcc3e8d0d5d25f0a9c79845ab5a8c23f0eadd86c96d4111ffaf2dcd88609640a37bea70b31af2b56eda664cb646cbe22d4c861fd38"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "FeatureCollection",
+  "name": "landing_points",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "id": "luanda-angola", "name": "Luanda, Angola", "is_tbd": false },
+      "geometry": { "type": "Point", "coordinates": [13.234, -8.839] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "id": "manama-bahrain", "name": "Manama, Bahrain", "is_tbd": true },
+      "geometry": { "type": "Point", "coordinates": [50.6, 26.2] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "id": "missing-coords" },
+      "geometry": { "type": "Point" }
+    }
+  ]
+}

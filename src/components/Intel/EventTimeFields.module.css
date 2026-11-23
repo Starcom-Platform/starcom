@@ -1,0 +1,97 @@
+/* The event time fields sit inside the report form and the report editor, so
+   they carry their own look, on the tokens (block D, step 7). */
+.eventTime {
+  margin: 0;
+  min-width: 0;
+  padding: 8px 10px 10px;
+  border: 1px solid var(--sc-divider);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.legend {
+  padding: 0 4px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--sc-text-secondary);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.label {
+  min-width: 104px;
+  font-size: 11px;
+  color: var(--sc-text-secondary);
+}
+
+.row input[type='date'],
+.row input[type='time'],
+.row select {
+  flex: 0 1 auto;
+  max-width: 100%;
+  padding: 5px 7px;
+  border: 1px solid var(--sc-input-border);
+  border-radius: 4px;
+  background: var(--sc-surface-input);
+  color: var(--sc-text-body);
+  font-size: 12px;
+  font-family: inherit;
+  color-scheme: dark;
+}
+
+.row input:focus,
+.row select:focus {
+  outline: none;
+  border-color: var(--sc-focus);
+}
+
+.zone {
+  font-family: var(--sc-font-data);
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  color: var(--sc-text-secondary);
+}
+
+/* The report editor styles every label as a column; this one is a checkbox row. */
+.unknown {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--sc-text-secondary);
+}
+
+.hint {
+  font-size: 11px;
+  color: var(--sc-text-muted);
+}
+
+.recorded,
+.error,
+.local {
+  margin: 0;
+  font-size: 11px;
+}
+
+.recorded {
+  color: var(--sc-text-body);
+}
+
+.error {
+  color: var(--sc-caution);
+}
+
+.local {
+  color: var(--sc-text-muted);
+}

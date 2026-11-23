@@ -1,0 +1,219 @@
+{
+ "fixture_note": "Real values from our field readers, the latest at or before 26 Oct 2026 13:00 UTC. Percentiles exist only for Kp so far (against GFZ's 1932-2026 history); the other channels' histories come with the history readers, and an empty percentile means not yet computed.",
+ "provenance": {
+  "real": "every channel value, read by beu/psi_field.py from its source and held in the field table, the latest at or before 2026-10-26T13:00:00+00:00",
+  "excluded": "Kyoto Dst (internal only, D8 A)"
+ },
+ "event": {
+  "kind": 30023,
+  "pubkey": "86f824c3f1e67c60b1dc15ce110648c4de5c3fb879022fbbcc5e8deb720e402c",
+  "created_at": 1793019600,
+  "tags": [
+   [
+    "d",
+    "psi-field-2026-10-26"
+   ],
+   [
+    "title",
+    "Psi Watch field, 26 Oct 2026"
+   ],
+   [
+    "summary",
+    "The planet's field today."
+   ],
+   [
+    "channel",
+    "kp",
+    "2.0",
+    "Kp",
+    "1793005200",
+    "55",
+    "1932-2026 (GFZ Potsdam, CC BY 4.0)",
+    "swpc_kp",
+    "public domain"
+   ],
+   [
+    "channel",
+    "kp_1m",
+    "1.67",
+    "Kp (estimated)",
+    "1793019600",
+    "",
+    "",
+    "swpc_kp_1m",
+    "public domain"
+   ],
+   [
+    "channel",
+    "sw_speed",
+    "332.0",
+    "km/s",
+    "1793019360",
+    "",
+    "",
+    "swpc_sw_speed",
+    "public domain"
+   ],
+   [
+    "channel",
+    "imf_bz",
+    "-2.0",
+    "nT",
+    "1793019360",
+    "",
+    "",
+    "swpc_sw_mag",
+    "public domain"
+   ],
+   [
+    "channel",
+    "imf_bt",
+    "6.0",
+    "nT",
+    "1793019360",
+    "",
+    "",
+    "swpc_sw_mag",
+    "public domain"
+   ],
+   [
+    "channel",
+    "xray_max_24h",
+    "C1.9",
+    "class",
+    "1793003880",
+    "",
+    "",
+    "goes_xray_max",
+    "public domain"
+   ],
+   [
+    "channel",
+    "flare",
+    "B8.4",
+    "class",
+    "1793016420",
+    "",
+    "",
+    "goes_flare",
+    "public domain"
+   ],
+   [
+    "channel",
+    "aurora_max_north",
+    "24.0",
+    "%",
+    "1793018340",
+    "",
+    "",
+    "ovation",
+    "public domain"
+   ],
+   [
+    "channel",
+    "aurora_max_south",
+    "21.0",
+    "%",
+    "1793018340",
+    "",
+    "",
+    "ovation",
+    "public domain"
+   ],
+   [
+    "channel",
+    "aurora_lowlat_north",
+    "61.0",
+    "deg",
+    "1793018340",
+    "",
+    "",
+    "ovation",
+    "public domain"
+   ],
+   [
+    "channel",
+    "sw_active_source",
+    "SOLAR1",
+    "",
+    "1793004840",
+    "",
+    "",
+    "rtsw_source",
+    "public domain"
+   ],
+   [
+    "channel",
+    "beacon_egg",
+    "0.0962",
+    "z",
+    "1793019600",
+    "",
+    "",
+    "nist_beacon",
+    "not subject to copyright in the United States"
+   ],
+   [
+    "valid_from",
+    "1792972800"
+   ],
+   [
+    "valid_until",
+    "1793145600"
+   ],
+   [
+    "license",
+    "not subject to copyright in the United States"
+   ],
+   [
+    "license",
+    "public domain"
+   ],
+   [
+    "t",
+    "psi_watch"
+   ],
+   [
+    "t",
+    "psi_field"
+   ],
+   [
+    "t",
+    "experimental"
+   ],
+   [
+    "t",
+    "role:context"
+   ],
+   [
+    "t",
+    "category:psi"
+   ],
+   [
+    "t",
+    "category:psi.field"
+   ],
+   [
+    "schema_version",
+    "0"
+   ],
+   [
+    "engine",
+    "skyfield 1.54, de440s; catalogue kit-v0 (2026-10-26 to 2026-11-25)"
+   ],
+   [
+    "published_at",
+    "1793019600"
+   ],
+   [
+    "client",
+    "Mecha Jono"
+   ],
+   [
+    "alt",
+    "Psi Watch field (Experimental), 26 Oct 2026."
+   ]
+  ],
+  "content": "Kp 2.0, at Mon 26 Oct 2026 09:00 UTC (55th percentile of 1932-2026, GFZ Potsdam)\nKp (1-minute estimate) 1.67, at Mon 26 Oct 2026 13:00 UTC\nsolar wind speed 332.0 km/s, at Mon 26 Oct 2026 12:56 UTC\nIMF Bz -2.0 nT, at Mon 26 Oct 2026 12:56 UTC\nIMF Bt 6.0 nT, at Mon 26 Oct 2026 12:56 UTC\nX-ray maximum, 24 h C1.9, at Mon 26 Oct 2026 08:38 UTC\nlatest flare B8.4, at Mon 26 Oct 2026 12:07 UTC\naurora, north (max) 24.0 %, at Mon 26 Oct 2026 12:39 UTC\naurora, south (max) 21.0 %, at Mon 26 Oct 2026 12:39 UTC\naurora, north (lowest latitude) 61.0 deg, at Mon 26 Oct 2026 12:39 UTC\nsolar wind spacecraft SOLAR1, at Mon 26 Oct 2026 08:54 UTC\nNIST beacon, Stouffer Z over 190 pulses today: 0.10 (chance p 0.923; chain breaks 0)"
+ }
+}

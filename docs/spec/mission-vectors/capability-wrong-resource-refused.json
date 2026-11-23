@@ -1,0 +1,40 @@
+{
+  "name": "capability-wrong-resource-refused",
+  "description": "A grant for a different mission.",
+  "expect": {
+    "valid": false,
+    "reason": "resource-mismatch",
+    "holder": "1b84c5567b126440995d3ed5aaba0565d71e1834604819ff9c17f5e9d5dd078f"
+  },
+  "rootIssuer": "1b84c5567b126440995d3ed5aaba0565d71e1834604819ff9c17f5e9d5dd078f",
+  "resource": "mission:mission-vector-1",
+  "action": "dispatch",
+  "chain": [
+    {
+      "kind": 30081,
+      "created_at": 1768435200,
+      "tags": [
+        [
+          "d",
+          "cap:mission:some-other:1b84c5567b126440995d3ed5aaba0565d71e1834604819ff9c17f5e9d5dd078f"
+        ],
+        [
+          "resource",
+          "mission:some-other"
+        ],
+        [
+          "action",
+          "dispatch"
+        ],
+        [
+          "holder",
+          "1b84c5567b126440995d3ed5aaba0565d71e1834604819ff9c17f5e9d5dd078f"
+        ]
+      ],
+      "content": "",
+      "pubkey": "1b84c5567b126440995d3ed5aaba0565d71e1834604819ff9c17f5e9d5dd078f",
+      "id": "0b886f17825643eb6a717a122edda2b2881f6fe66311f79b648aec57380efbc7",
+      "sig": "d500db096b44ea752a646d3ed4cc4793d2929c914049437a89403759d59cc424143d398c2fb08c635972ee941f9ac8d5adfe3ec737fd95b28603d23107d88572"
+    }
+  ]
+}

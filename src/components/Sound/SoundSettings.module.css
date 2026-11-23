@@ -1,0 +1,139 @@
+/*
+ * Settings > Sound. Colours, type and focus from the tokens (plan item 8.1):
+ * cyan is what is on and what has focus; a switch also says its state in its
+ * knob's place, so colour is never the only sign.
+ */
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.heading {
+  margin: 0;
+  font-family: var(--sc-font-display);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--sc-text-heading);
+}
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.name {
+  font-size: 14px;
+  color: var(--sc-text-body);
+}
+
+.hint {
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--sc-text-secondary);
+}
+
+/* A native checkbox drawn as a switch: the keyboard, the label and the screen reader come with it. */
+.switch {
+  appearance: none;
+  flex: 0 0 auto;
+  position: relative;
+  width: 36px;
+  height: 20px;
+  margin: 1px 0 0;
+  border: 1px solid var(--sc-input-border);
+  border-radius: 10px;
+  background: var(--sc-surface-input);
+  cursor: pointer;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.switch::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--sc-text-secondary);
+  transition: transform var(--transition-fast), background-color var(--transition-fast);
+}
+
+.switch:checked {
+  border-color: var(--sc-accent);
+  background: var(--sc-button-fill);
+}
+
+.switch:checked::before {
+  transform: translateX(16px);
+  background: var(--sc-button-label);
+}
+
+.switch:focus-visible,
+.slider:focus-visible {
+  outline: 2px solid var(--sc-focus);
+  outline-offset: 2px;
+}
+
+.switch:disabled,
+.slider:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.volume {
+  display: grid;
+  grid-template-columns: auto 1fr 3.5em;
+  align-items: center;
+  gap: 12px;
+}
+
+.slider {
+  width: 100%;
+  accent-color: var(--sc-accent);
+  cursor: pointer;
+}
+
+.value {
+  font-family: var(--sc-font-data);
+  font-size: 13px;
+  color: var(--sc-text-secondary);
+  text-align: right;
+}
+
+.kinds {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 12px 0 0;
+  border: none;
+  border-top: 1px solid var(--sc-divider);
+}
+
+.kinds:disabled .row {
+  cursor: not-allowed;
+}
+
+.kinds:disabled .text {
+  opacity: 0.5;
+}
+
+.legend {
+  float: left;
+  width: 100%;
+  margin-bottom: 4px;
+  padding: 0;
+  font-size: 12px;
+  color: var(--sc-text-muted);
+}

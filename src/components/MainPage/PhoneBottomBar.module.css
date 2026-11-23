@@ -1,0 +1,134 @@
+/*
+ * The bar on a phone (K2): five buttons of equal width, each with its name.
+ * MainPage keeps it clear of the home bar (safe area). A sheet opens above it.
+ */
+.phoneBar {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  width: 100%;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  min-height: 48px;
+  padding: 4px 2px;
+  background: none;
+  border: none;
+  border-top: 2px solid transparent;
+  color: var(--sc-text-secondary);
+  font-family: var(--sc-font-text);
+  cursor: pointer;
+}
+
+.button[aria-current='page'] {
+  color: var(--sc-accent);
+  /* Its marker, in its section's tint (BD10). */
+  border-top-color: var(--section-tint, var(--sc-accent));
+}
+
+.button[aria-expanded='true'] {
+  color: var(--sc-text-heading);
+}
+
+.icon {
+  display: flex;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.label {
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.sheet {
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  bottom: calc(100% + 8px);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 6px;
+  background: var(--sc-surface-panel);
+  border: 1px solid var(--sc-divider);
+  border-radius: 8px;
+  box-shadow: 0 -4px 16px var(--sc-surface-globe);
+  z-index: var(--z-dropdown);
+}
+
+.sheetItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  min-height: 48px;
+  padding: 8px;
+  background: none;
+  border: none;
+  border-radius: 6px;
+  color: var(--sc-text-body);
+  font-family: var(--sc-font-text);
+  text-align: left;
+  cursor: pointer;
+}
+
+.sheetItem[aria-current='page'] {
+  background: var(--sc-surface-input);
+}
+
+.sheetIcon {
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.sheetText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.sheetName {
+  color: var(--sc-text-heading);
+  font-weight: 600;
+}
+
+.sheetDescription {
+  color: var(--sc-text-secondary);
+  font-size: 12px;
+}
+
+/* The running jobs' count on More (BD14). */
+.button {
+  position: relative;
+}
+
+.count {
+  position: absolute;
+  /* Beside the glyph, not over it. */
+  top: 2px;
+  left: calc(50% + 8px);
+  min-width: 16px;
+  height: 16px;
+  padding: 0 4px;
+  border-radius: 8px;
+  background: var(--sc-accent);
+  color: var(--sc-button-label);
+  font-family: var(--sc-font-data);
+  font-size: 11px;
+  line-height: 16px;
+  text-align: center;
+}
+
+.sheetJobs {
+  flex-direction: column;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--sc-divider);
+  margin-bottom: 4px;
+}
+

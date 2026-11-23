@@ -1,0 +1,66 @@
+.popup {
+  width: min(420px, 92vw);
+  max-height: 82vh;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--panel-border);
+  background: var(--panel-bg);
+  color: var(--text-primary);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  margin: 0;
+  font-size: var(--text-base);
+}
+
+.closeButton {
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius-sm);
+  background: var(--surface-interactive);
+  color: var(--starcom-accent);
+  cursor: pointer;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.label {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+/* Category emblems on or off (BA15). */
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.toggle input {
+  accent-color: var(--sc-accent);
+}
+
+.note {
+  margin: 0;
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}

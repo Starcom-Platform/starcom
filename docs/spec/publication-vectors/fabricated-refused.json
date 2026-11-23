@@ -1,0 +1,12 @@
+{
+  "name": "fabricated-refused",
+  "description": "Mock evidence never reaches the wire, signed and indistinguishable from real intelligence.",
+  "subjectKind": "organization",
+  "options": {
+    "isMock": true
+  },
+  "expect": {
+    "allowed": false,
+    "reasonMatches": "fabricated"
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Raver Watch note, v1",
+  "type": "object",
+  "required": [
+    "kind",
+    "pubkey",
+    "tags",
+    "content"
+  ],
+  "properties": {
+    "kind": {
+      "const": 30023
+    },
+    "content": {
+      "type": "string",
+      "not": {
+        "pattern": "^\\s*[\\[{]"
+      }
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "minItems": 2,
+        "items": {
+          "type": "string"
+        }
+      },
+      "allOf": [
+        {
+          "contains": {
+            "const": [
+              "t",
+              "raver_watch"
+            ]
+          }
+        },
+        {
+          "contains": {
+            "prefixItems": [
+              {
+                "const": "d"
+              },
+              {
+                "pattern": "^raver-"
+              }
+            ]
+          }
+        },
+        {
+          "contains": {
+            "prefixItems": [
+              {
+                "const": "t"
+              },
+              {
+                "enum": [
+                  "drug_check_alert",
+                  "scene_incident",
+                  "scene_event",
+                  "heat_risk",
+                  "raver_mission",
+                  "harm_reduction_site"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "contains": {
+            "prefixItems": [
+              {
+                "const": "title"
+              }
+            ]
+          }
+        },
+        {
+          "contains": {
+            "prefixItems": [
+              {
+                "const": "source"
+              }
+            ]
+          }
+        },
+        {
+          "contains": {
+            "prefixItems": [
+              {
+                "const": "valid_from"
+              },
+              {
+                "pattern": "^[0-9]+$"
+              }
+            ]
+          }
+        },
+        {
+          "contains": {
+            "prefixItems": [
+              {
+                "const": "valid_until"
+              },
+              {
+                "pattern": "^[0-9]+$"
+              }
+            ]
+          }
+        }
+      ],
+      "not": {
+        "contains": {
+          "const": [
+            "t",
+            "starcom_intel"
+          ]
+        }
+      }
+    }
+  }
+}

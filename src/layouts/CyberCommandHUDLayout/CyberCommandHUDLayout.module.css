@@ -1,0 +1,254 @@
+.cyberCommandHudLayout {
+  --primary-rail-width: 32px;
+  --sub-rail-width: 36px;
+}
+
+.cyberCommandHudLayout {
+  height: 100vh;
+  width: 100vw; /* Ensure full width of the viewport */
+  position: relative;
+  pointer-events: none; /* Allow clicks to pass through */
+}
+
+/* Special styling for embedded mode */
+.embeddedMode {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.hudLayout > div {
+  pointer-events: none; /* Allow clicks to pass through */
+}
+
+.topBar {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.0); /* transparent background */
+  pointer-events: auto; /* Enable clicks on HUD components */
+  z-index: 3;
+  top: 0;
+  width: 100%;
+  height: 5%;
+  pointer-events: auto; /* Enable clicks on HUD components */
+}
+
+.leftSideBar, .rightSideBar {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.0); /* transparent background */
+  pointer-events: auto; /* Enable clicks on HUD components */
+}
+
+.leftSideBar {
+  position: absolute;
+  z-index: 1001; /* Match the LeftSideBar component z-index */
+  top: 0;
+  left: 0;
+  width: var(--primary-rail-width);
+  bottom: 0; /* Stretch all the way to bottom - no BottomBar interference */
+}
+
+.leftSubRail {
+  position: absolute;
+  z-index: 1000;
+  top: 12%;
+  bottom: 12%;
+  left: calc(var(--primary-rail-width) + 8px);
+  width: var(--sub-rail-width);
+  pointer-events: auto;
+}
+
+.rightSideBar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: var(--primary-rail-width);
+  z-index: 1000; /* Higher z-index for proper layering */
+  pointer-events: auto;
+}
+
+/* Adjust sidebars for embedded mode */
+.embeddedMode .leftSideBar {
+  width: var(--primary-rail-width);
+}
+
+.embeddedMode .leftSubRail {
+  left: calc(var(--primary-rail-width) + 8px);
+  width: var(--sub-rail-width);
+}
+
+.embeddedMode .rightSideBar {
+  width: var(--primary-rail-width);
+}
+
+.center {
+  position: absolute;
+  top: var(--chrome-top); /* Below TopBar — was 5%, which clears the
+     48px bar only above a 960px-tall viewport. See styles/struts.css. */
+  right: var(--primary-rail-width);
+  bottom: 0; /* Extend to bottom - no BottomBar */
+  overflow: hidden;
+  pointer-events: auto;
+  z-index: 1; /* Base layer */
+}
+
+.centerWithSubRail {
+  left: calc(var(--primary-rail-width) + var(--sub-rail-width) + 8px);
+}
+
+.centerNoSubRail {
+  left: var(--primary-rail-width);
+}
+
+/*
+ * The work area: what the chrome leaves clear (between the rails, below the top
+ * bar, above the time scrubber), and the element useWorkArea measures. Not
+ * `.center`.
+ *
+ * `.center` is where the globe draws. In embedded mode, which every caller
+ * uses, `.center.embeddedCenter` spans the whole viewport so the globe runs
+ * behind the transparent rails. Measured, that published insets of 0, and
+ * docked chips on the right sat 8-12px under the rail. The globe keeps its
+ * full-bleed area; this invisible box says where the chrome ends.
+ */
+.workArea {
+  position: absolute;
+  top: var(--chrome-top);
+  right: var(--primary-rail-width);
+  bottom: var(--chrome-bottom);
+  left: var(--primary-rail-width);
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.workAreaWithSubRail {
+  left: calc(var(--primary-rail-width) + var(--sub-rail-width) + 8px);
+}
+
+/* Adjust center area for embedded mode */
+.embeddedMode .center {
+  top: var(--chrome-top); /* Below TopBar — was 5%, which clears the
+     48px bar only above a 960px-tall viewport. See styles/struts.css. */
+  right: var(--primary-rail-width);
+  bottom: 0; /* Extend to bottom - no embedded BottomBar */
+  position: absolute;
+}
+
+/*
+ * `.center.embeddedCenter`, not `.embeddedCenter`.
+ *
+ * Every declaration in here carried !important, and none of it was answering an
+ * inline style — it was answering `.embeddedMode .center` above, which is two
+ * classes to this rule's one and therefore won on specificity. Raising the
+ * selector to two classes settles it the same way and leaves the property
+ * weights alone, so the next rule that needs to override one of these can.
+ *
+ * Both selectors are two classes now, so source order decides, and this is
+ * later. That is a real dependency on order — but an ordinary one that CSS
+ * expresses, rather than six escapes that stop anything downstream.
+ */
+.center.embeddedCenter {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: var(--chrome-top); /* Below TopBar — see struts.css */
+  left: 0;
+  right: 0;
+  bottom: 0; /* Extend to bottom */
+  width: 100%;
+  height: calc(100% - var(--chrome-top)); /* Account for TopBar */
+}
+
+/* Psi Watch's Timestream (D-PW, PW38, PW65): the time control in the scrubber's place, between the rails. */
+.timestreamBar {
+  position: absolute;
+  bottom: 0;
+  left: var(--primary-rail-width);
+  right: var(--primary-rail-width);
+  z-index: 50;
+  pointer-events: auto;
+}
+
+/* TimeScrubber — fixed at bottom of center area. Held by its bottom: where its header wraps onto a second row (widths
+   between a phone and a desktop, Mecha Jono's note of 7 Nov 2026) it grows upward over the globe, never down under
+   the bottom bar, where its slider could not be seen or reached. */
+.timeScrubberBar {
+  position: absolute;
+  bottom: 0;
+  min-height: var(--chrome-bottom); /* declared in styles/struts.css; .workArea stops above it */
+  left: var(--primary-rail-width);
+  right: var(--primary-rail-width);
+  z-index: 50;
+  pointer-events: auto;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 1200px) {
+  .cyberCommandHudLayout {
+    --primary-rail-width: 30px;
+    --sub-rail-width: 34px;
+  }
+
+  .centerWithSubRail {
+    left: calc(var(--primary-rail-width) + var(--sub-rail-width) + 8px);
+  }
+
+  .centerNoSubRail {
+    left: var(--primary-rail-width);
+  }
+}
+
+@media (max-width: 768px) {
+  .cyberCommandHudLayout {
+    --primary-rail-width: 28px;
+    --sub-rail-width: 32px;
+  }
+
+  .leftSideBar {
+    width: var(--primary-rail-width);
+  }
+
+  .leftSubRail {
+    left: calc(var(--primary-rail-width) + 6px);
+    width: var(--sub-rail-width);
+    top: 14%;
+    bottom: 14%;
+  }
+  
+  .center {
+    top: 8%; /* More space for mobile top bar */
+    right: var(--primary-rail-width);
+    bottom: 0; /* Extend to bottom - no BottomBar */
+  }
+
+  .centerWithSubRail {
+    left: calc(var(--primary-rail-width) + var(--sub-rail-width) + 6px);
+  }
+
+  .workAreaWithSubRail {
+    left: calc(var(--primary-rail-width) + var(--sub-rail-width) + 6px);
+  }
+
+  .centerNoSubRail {
+    left: var(--primary-rail-width);
+  }
+}
+
+/*
+ * Psi Watch with its Timestream (PW65): the drawer takes the scrubber's place, and the work area and the globe
+ * stop at its top edge, so the globe centres in the room left above it instead of half behind the drawer.
+ */
+.timestreamMode .workArea {
+  bottom: var(--psi-timestream-height, 0px);
+}
+
+.timestreamMode .center,
+.timestreamMode .center.embeddedCenter {
+  bottom: var(--psi-timestream-height, 0px);
+  height: auto;
+}

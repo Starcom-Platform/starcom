@@ -1,0 +1,14 @@
+{
+  "name": "unrecognised-role-refused",
+  "description": "An unknown role is refused rather than coerced to private — a typo must not silently change the decision.",
+  "subjectKind": "person",
+  "options": {
+    "isMock": false,
+    "subjectRole": "head-of-state",
+    "consentToPublishAboutPerson": true
+  },
+  "expect": {
+    "allowed": false,
+    "reasonMatches": "Unrecognised subjectRole"
+  }
+}

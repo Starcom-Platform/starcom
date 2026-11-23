@@ -1,0 +1,25 @@
+{
+  "name": "anchor-tag-absent-refused",
+  "description": "No d tag. The tags say what the content says, and the d tag is the anchor.",
+  "expect": {
+    "observations": 0
+  },
+  "diagnostic": {
+    "note": "NOT normative — our drop wording, for humans and our own gate.",
+    "reasonContains": "no d (anchor) tag"
+  },
+  "event": {
+    "kind": 1911,
+    "created_at": 1756000000,
+    "tags": [
+      [
+        "g",
+        "st-louis"
+      ]
+    ],
+    "content": "{\"anchor\":\"st-louis/st-patrick-center\",\"observed_at\":1755996400,\"tags\":[\"locked\"],\"method\":\"saw\",\"callsign\":\"Raven\",\"precision\":\"area\",\"area\":\"dp3w\"}",
+    "pubkey": "96bafb179762225794c13c78e823b349e8f21d96f8113020032e5cabdbe59889",
+    "id": "d275c2e9070b1a613049a4d49c97d029e0551453c7c94b1c0e2fc7ab3b289924",
+    "sig": "84f3a95fc43267ad3014ee903152b4d13d594f5b8c7d8000e3eade849d16b0ba0972083e6006f4a9a620616dc55219e4da2046109ccdbb1752ea43e8cddca770"
+  }
+}

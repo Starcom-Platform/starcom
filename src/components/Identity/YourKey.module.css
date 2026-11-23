@@ -1,0 +1,38 @@
+/* "Your key": a panel under the header and the ticker, not a modal. Same look as the
+   key notice. At top: 64px it landed on the ticker's readouts (K16). */
+.panel {
+  position: fixed;
+  top: calc(var(--work-top) + 8px);
+  right: 16px;
+  z-index: var(--z-dropdown);
+  width: min(360px, calc(100vw - 32px));
+  padding: 14px 16px;
+  border: 1px solid #1e3a5f;
+  border-left: 3px solid #2f6fb8;
+  border-radius: 6px;
+  background: rgba(9, 14, 26, 0.97);
+  color: #e8eefc;
+  font-size: 13px;
+  line-height: 1.45;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.5);
+}
+.head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
+.heading { margin: 0; font-size: 14px; font-weight: 600; color: #cfe6ff; }
+.close { border: 0; background: transparent; color: #9fb3d9; font-size: 18px; cursor: pointer; line-height: 1; }
+.body { margin: 0 0 10px; color: #c7d6f2; }
+.note { margin: 8px 0; color: #7f93b8; font-size: 12px; }
+.npubRow { display: flex; flex-wrap: wrap; gap: 8px; align-items: baseline; }
+.npubRow code { color: #9fe3ff; }
+.link { padding: 0; border: 0; background: transparent; color: #9fe3ff; text-decoration: underline; cursor: pointer; font-size: 12px; }
+.minor { padding: 5px 10px; border: 1px solid #2a3a56; border-radius: 4px; background: transparent; color: #9fb3d9; font-size: 12px; cursor: pointer; }
+.minor:hover { background: rgba(42, 58, 86, 0.35); }
+.secret { margin-top: 8px; padding: 8px; border: 1px solid #4a3a12; border-radius: 4px; background: rgba(240, 198, 116, 0.06); }
+.nsec { display: block; margin: 6px 0; color: #ffe9b0; font-size: 11px; word-break: break-all; user-select: all; }
+.warning { margin: 0; color: #f0c674; font-size: 12px; }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+.bring { margin-top: 10px; padding-top: 8px; border-top: 1px solid #1e3a5f; }
+.work { margin-top: 10px; padding-top: 8px; border-top: 1px solid #1e3a5f; }
+.label { display: block; margin: 6px 0 4px; color: #c7d6f2; font-size: 12px; }
+.input { box-sizing: border-box; width: 100%; margin-bottom: 8px; padding: 5px 8px; border: 1px solid #2a3a56; border-radius: 4px; background: rgba(4, 8, 16, 0.9); color: #e8eefc; font: 12px ui-monospace, SFMono-Regular, Menlo, monospace; }
+.input:focus { outline: 2px solid #2f6fb8; outline-offset: 1px; }
+@media (max-width: 520px) { .panel { right: 8px; left: 8px; width: auto; } }

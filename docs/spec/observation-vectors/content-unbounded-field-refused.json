@@ -1,0 +1,29 @@
+{
+  "name": "content-unbounded-field-refused",
+  "description": "Carries a free-text `notes` field. THE vector for this format: an unbounded field is the thing it exists to refuse, and accepting one here would reopen on our side the liability surface NavCom closed on theirs.",
+  "expect": {
+    "observations": 0
+  },
+  "diagnostic": {
+    "note": "NOT normative — our drop wording, for humans and our own gate.",
+    "reasonContains": "outside the contract"
+  },
+  "event": {
+    "kind": 1911,
+    "created_at": 1756000000,
+    "tags": [
+      [
+        "g",
+        "st-louis"
+      ],
+      [
+        "d",
+        "st-louis/st-patrick-center"
+      ]
+    ],
+    "content": "{\"anchor\":\"st-louis/st-patrick-center\",\"observed_at\":1755996400,\"tags\":[\"locked\"],\"method\":\"saw\",\"callsign\":\"Raven\",\"precision\":\"area\",\"area\":\"dp3w\",\"notes\":\"the man in the blue coat was there again\"}",
+    "pubkey": "96bafb179762225794c13c78e823b349e8f21d96f8113020032e5cabdbe59889",
+    "id": "7735fb6f064412c98d18bef67776e92188007cd661644ae349d3e4ab1708875d",
+    "sig": "9cadd2f01e06a5a9027e638571f5ca6bdc0cb1a5767f51d2b816361302b199eee431bb027d4a8f8e0bc1e610556e6b16f12a26eee2da13c02b19bf9ae8e8cba4"
+  }
+}

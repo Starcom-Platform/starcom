@@ -1,0 +1,34 @@
+{
+  "format": "starcom-publishers/1",
+  "about": "Whose notes each of Starcom's layers reads by default, and the keys each of those publishers signs with. A reading choice, published so anyone can see it and change it by changing this file: not a register of who may publish, and it gives no weight to anyone's claims (refusal R-1). A key's 'starts' is the day it begins to speak for its publisher, by the publisher's own word; a key with none has not begun. 'exposed' is the day its secret got out: nothing is sealed to it, and once a newer key of its publisher starts, nothing it signed is read. Layers read 'every key' of a publisher, or only its 'newest key' (the first listed).",
+  "updated": "2026-11-21",
+  "publishers": [
+    {
+      "id": "mecha-jono",
+      "name": "Mecha Jono",
+      "agent": true,
+      "keys": [
+        {
+          "pubkey": "86f824c3f1e67c60b1dc15ce110648c4de5c3fb879022fbbcc5e8deb720e402c",
+          "sent": "2026-10-18",
+          "note": "The next key (decision K4-N), sent before anything is signed with it. Its start is set here once Mecha Jono's standing notes have been carried to it."
+        },
+        {
+          "pubkey": "6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692",
+          "starts": "2025-01-01T00:00:00Z",
+          "exposed": "2026-09-28",
+          "note": "The first key. Exposed on 28 Sep 2026, by Mecha Jono's own key-change letter of 7 Oct, as NavCom's publisher registry records it; its start is NavCom's."
+        }
+      ],
+      "layers": {
+        "raver_watch": "every key",
+        "hero_watch": "every key",
+        "ai_watch": "every key",
+        "civil_unrest": "every key",
+        "war_conflict": "every key",
+        "psi_watch": "newest key",
+        "rlsh_recurrence": "newest key"
+      }
+    }
+  ]
+}

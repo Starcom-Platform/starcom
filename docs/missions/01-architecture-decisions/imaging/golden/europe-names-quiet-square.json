@@ -1,0 +1,305 @@
+{
+ "card": {
+  "alt": "Intel Reports on the globe. The picture: the globe centred near 51.0°N, 10.0°E, showing Intel Reports and Borders, with country names. Caveats: The browser that made this had nothing to analyse: not a finding of nothing. Names: Natural Earth, de facto. Unsigned capture: one browser's view at one moment. Made by Starcom, <captured>.",
+  "frame": {
+   "height": 713,
+   "width": 1080
+  },
+  "height": 1080,
+  "mimeType": "image/webp",
+  "provenance": {
+   "appearance": {
+    "countryNames": {
+     "codes": [
+      "AFG",
+      "ARE",
+      "AUT",
+      "AZE",
+      "BGR",
+      "BLR",
+      "CPV",
+      "DEU",
+      "DZA",
+      "EGY",
+      "ERI",
+      "ESP",
+      "EST",
+      "FIN",
+      "FRA",
+      "FRO",
+      "GBR",
+      "GRC",
+      "GRL",
+      "IRN",
+      "IRQ",
+      "ISL",
+      "ITA",
+      "KAZ",
+      "KGZ",
+      "LBN",
+      "LBY",
+      "LVA",
+      "MAR",
+      "MLI",
+      "MLT",
+      "NOR",
+      "PAK",
+      "POL",
+      "ROU",
+      "RUS",
+      "SDN",
+      "SEN",
+      "SWE",
+      "TUN",
+      "TUR",
+      "UKR",
+      "UZB",
+      "YEM"
+     ],
+     "source": "Natural Earth Admin 0 (public domain): NAME, LABEL_X/Y, LABELRANK, MIN_LABEL"
+    },
+    "lightMode": "sun",
+    "quality": {
+     "atmosphere": true,
+     "clouds": true,
+     "detail": "full detail",
+     "setting": "low"
+    },
+    "skin": "Cyber-Earth",
+    "territories": "quiet"
+   },
+   "build": "<build>",
+   "camera": {
+    "altitude": 1,
+    "lat": 51,
+    "lon": 9.999999999999986
+   },
+   "capturedAt": "<captured>",
+   "card": null,
+   "caveats": [
+    "The browser that made this image had no observations of its own to analyse, so it shows no analysis. That is not a finding that there is nothing to find.",
+    "Country names and where they stand are Natural Earth's, which shows de facto control; some are disputed.",
+    "Unsigned client-side capture: one browser's view at one moment, not an attested record."
+   ],
+   "caveatsShort": [
+    "The browser that made this had nothing to analyse: not a finding of nothing.",
+    "Names: Natural Earth, de facto.",
+    "Unsigned capture: one browser's view at one moment."
+   ],
+   "credits": [],
+   "feeds": [
+    {
+     "error": null,
+     "lastUpdated": "<read>",
+     "layer": "IntelReports",
+     "loading": false,
+     "name": "Intel Reports from the relays (6 of 6 answered)",
+     "progress": {
+      "done": 6,
+      "total": 6
+     },
+     "shortName": "Intel Reports"
+    }
+   ],
+   "frame": {
+    "height": 713,
+    "width": 1080
+   },
+   "imagery": [
+    "Google Data Arts Team (Apache 2.0)",
+    "NASA",
+    "Solar System Scope (CC BY 4.0)"
+   ],
+   "layersSelectedButEmpty": [],
+   "layersShown": [
+    "Intel Reports"
+   ],
+   "legend": [
+    {
+     "areaMeans": "how precisely it was placed",
+     "badgeMeans": "how many reports share the place",
+     "colorMeans": "how the report was assessed",
+     "emblemMeans": "what it is about",
+     "emblems": [
+      {
+       "icon": "hand-heart",
+       "id": "intel-category:charity",
+       "meaning": "charities"
+      },
+      {
+       "icon": "swords",
+       "id": "intel-category:conflict",
+       "meaning": "conflict and war"
+      },
+      {
+       "icon": "cloud-lightning",
+       "id": "intel-category:hazard",
+       "meaning": "natural hazards"
+      }
+     ],
+     "layer": "Intel Reports",
+     "layerId": "IntelReports:marks",
+     "shapeMeans": "document",
+     "swatches": [
+      {
+       "color": "#4fd1ff",
+       "label": "assessed",
+       "style": "glow"
+      },
+      {
+       "color": "#8fa3b0",
+       "label": "not assessed",
+       "style": "glow"
+      }
+     ]
+    },
+    {
+     "colorMeans": "what kind of boundary it is — dashed where it is not settled",
+     "layer": "Borders",
+     "layerId": "NationalTerritories:borders",
+     "swatches": [
+      {
+       "color": "#c9d4e3",
+       "label": "international boundary",
+       "shape": "line"
+      },
+      {
+       "color": "#ff5555",
+       "label": "disputed",
+       "shape": "dashed"
+      },
+      {
+       "color": "#ffcc00",
+       "label": "line of control",
+       "shape": "dashed"
+      },
+      {
+       "color": "#888888",
+       "label": "indefinite",
+       "shape": "line"
+      }
+     ]
+    }
+   ],
+   "link": "<origin>/?v=1&sub=IntelReports&at=51,10,1&win=1791072000..1791158400",
+   "marks": {
+    "emptyReason": "no-observations",
+    "fabricated": null,
+    "shown": 0,
+    "totalObservations": null
+   },
+   "origin": "starcom-app client capture (unsigned)",
+   "schema": "starcom.globe.capture",
+   "schemaVersion": 38,
+   "shot": {
+    "appearance": {
+     "countryNames": true,
+     "light": "sun",
+     "nightFill": 0.15,
+     "skin": "auto",
+     "territories": "quiet"
+    },
+    "card": {
+     "preset": "square"
+    },
+    "emphasis": {
+     "featured": false
+    },
+    "framing": {
+     "fit": "view"
+    },
+    "layers": {
+     "pins": [],
+     "primary": "IntelReports"
+    },
+    "output": {
+     "alt": true,
+     "quality": 0.9,
+     "scale": 1,
+     "type": "image/webp"
+    },
+    "subject": {
+     "view": {
+      "altitude": 1,
+      "lat": 51,
+      "lng": 10
+     }
+    },
+    "time": {
+     "at": 1791078660
+    },
+    "v": 1
+   },
+   "typeStep": "larger",
+   "window": {
+    "from": 1791072000,
+    "until": 1791158400
+   }
+  },
+  "regions": {
+   "footer": {
+    "height": "<wraps with the run>",
+    "width": 1080,
+    "x": 0,
+    "y": 1004
+   },
+   "picture": {
+    "height": 713,
+    "width": 1080,
+    "x": 0,
+    "y": 106
+   }
+  },
+  "sourceRect": {
+   "height": 713,
+   "width": 1080,
+   "x": 0,
+   "y": 0
+  },
+  "warnings": [],
+  "width": 1080
+ },
+ "drawn": {
+  "appearance": {
+   "countryNames": true,
+   "light": "sun",
+   "nightFill": 0.15,
+   "skin": "auto",
+   "territories": "quiet"
+  },
+  "card": {
+   "preset": "square"
+  },
+  "emphasis": {
+   "featured": false
+  },
+  "framing": {
+   "fit": "view"
+  },
+  "layers": {
+   "pins": [],
+   "primary": "IntelReports"
+  },
+  "output": {
+   "alt": true,
+   "quality": 0.9,
+   "scale": 1,
+   "type": "image/webp"
+  },
+  "subject": {
+   "view": {
+    "altitude": 1,
+    "lat": 51,
+    "lng": 10
+   }
+  },
+  "time": {
+   "at": 1791078660
+  },
+  "v": 1
+ },
+ "name": "europe-names-quiet-square",
+ "notes": [],
+ "ok": true,
+ "warnings": []
+}

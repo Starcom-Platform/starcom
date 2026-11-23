@@ -1,0 +1,123 @@
+{
+  "schema": "mecha-jono/card-templates@1",
+  "common": {
+    "footer": "Starcom · Mecha Jono",
+    "deeplink": "provenance.link (deeplink v1)",
+    "never": [
+      "a person's name or face",
+      "a private individual's location",
+      "RLSH marks"
+    ]
+  },
+  "templates": {
+    "critical_intel": {
+      "badge": {
+        "text": "CRITICAL INTEL",
+        "tone": "red"
+      },
+      "fields": [
+        "title",
+        "place",
+        "window (valid_until)",
+        "what to do (first line)",
+        "source"
+      ],
+      "frame": "the event, its category's layers pinned"
+    },
+    "actionable_intel": {
+      "badge": {
+        "text": "ACTIONABLE INTEL",
+        "tone": "amber"
+      },
+      "fields": [
+        "title",
+        "place",
+        "do this",
+        "clock",
+        "source"
+      ],
+      "frame": "the event"
+    },
+    "context_report": {
+      "badge": null,
+      "fields": [
+        "title",
+        "category chip",
+        "place",
+        "source"
+      ],
+      "frame": "the event"
+    },
+    "mission_package": {
+      "badge": {
+        "text": "MISSION",
+        "tone": "blue"
+      },
+      "fields": [
+        "mission (one line)",
+        "P/S/T objective counts",
+        "win condition",
+        "clock",
+        "area"
+      ],
+      "frame": "renderMission"
+    },
+    "field_mission": {
+      "badge": {
+        "text": "FIELD MISSION",
+        "tone": "teal"
+      },
+      "fields": [
+        "mission",
+        "area",
+        "window",
+        "first objective"
+      ],
+      "frame": "frameArea(area) with the category's layers (HeatRisk, EarthWeather, ...)"
+    },
+    "conflict_brief": {
+      "badge": {
+        "text": "WAR & CONFLICT BRIEF",
+        "tone": "slate"
+      },
+      "fields": [
+        "date",
+        "count of items",
+        "theatres with their counts (theatre tags)",
+        "per item: event label · place · casualties"
+      ],
+      "frame": "renderBatch of the notes its a tags list, or planReportTour as a clip"
+    },
+    "hazard": {
+      "badge": "your existing geo card",
+      "fields": [
+        "as today"
+      ],
+      "frame": "as today"
+    },
+    "raver_alert": {
+      "badge": {
+        "text": "RAVER WATCH",
+        "tone": "magenta"
+      },
+      "fields": [
+        "English headline",
+        "where it applies",
+        "valid until"
+      ],
+      "frame": "DrugCheckAlerts, the alert's place"
+    },
+    "declassified": {
+      "badge": {
+        "text": "DECLASSIFIED",
+        "tone": "gold"
+      },
+      "fields": [
+        "title",
+        "source",
+        "date"
+      ],
+      "frame": "none: a typographic card, no globe"
+    }
+  }
+}

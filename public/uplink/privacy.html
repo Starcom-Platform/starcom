@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Starcom Uplink: privacy</title>
+<meta name="description" content="What Starcom Uplink, Starcom's browser extension, collects, keeps, and asks your browser for, and why.">
+<link rel="icon" href="/starcom.ico">
+<!--
+  Starcom Uplink's privacy page (decision D-EX, E0), for the browser stores and for anyone deciding
+  whether to install it. Every reason here is extension/permissions.json's, word for word;
+  scripts/guard-uplink-permissions.mjs holds this page to it. It loads nothing from anywhere else.
+  Colours are Starcom's palette (src/styles/tokens.ts): gunmetal ground, cyan accent.
+-->
+<style>
+  @font-face { font-family: 'Aldrich'; src: url('/assets/fonts/Aldrich-Regular.ttf') format('truetype'); font-display: swap; }
+  :root {
+    color-scheme: dark;
+    --ground: #0A1113;      /* GUNMETAL 950 */
+    --frame: #131B1E;       /* GUNMETAL 900 */
+    --divider: #3A474D;     /* GUNMETAL 600 */
+    --muted: #818F94;       /* GUNMETAL 400 */
+    --body: #C7CFD3;        /* GUNMETAL 200 */
+    --heading: #E9EEF0;     /* GUNMETAL 100 */
+    --accent: #00C3DB;      /* CYAN 400 */
+    --accent-dim: #004952;  /* CYAN 800 */
+    --text: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --data: ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+  }
+  * { box-sizing: border-box; }
+  html { background: var(--ground); }
+  body { margin: 0; padding-inline: 16px; padding-block: 40px 64px; background: var(--ground); color: var(--body); font: 16px/1.6 var(--text); }
+  main { max-width: 42rem; margin: 0 auto; display: grid; gap: 36px; }
+  header { display: grid; gap: 6px; padding-bottom: 20px; border-bottom: 1px solid var(--divider); }
+  .wordmark { margin: 0; font: 400 0.95rem/1 'Aldrich', var(--text); letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); }
+  h1 { margin: 0; font-size: 2rem; line-height: 1.2; font-weight: 600; color: var(--heading); text-wrap: balance; }
+  .stamp { margin: 0; color: var(--muted); font: 0.85rem/1.4 var(--data); }
+  section { display: grid; gap: 12px; }
+  h2 { margin: 0; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
+  p, ul, dl { margin: 0; }
+  ul { padding-left: 1.2rem; display: grid; gap: 6px; }
+  dl { display: grid; gap: 14px; }
+  .permission { display: grid; gap: 4px; padding: 12px 14px; background: var(--frame); border-left: 2px solid var(--accent-dim); border-radius: 2px; }
+  dt { color: var(--heading); font-weight: 600; }
+  dt code, .patterns { font: 0.85rem/1.5 var(--data); color: var(--accent); }
+  .patterns { overflow-wrap: anywhere; }
+  dd { margin: 0; }
+  .lead { color: var(--heading); font-size: 1.05rem; }
+  footer { padding-top: 20px; border-top: 1px solid var(--divider); color: var(--muted); font-size: 0.9rem; display: grid; gap: 6px; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <p class="wordmark">Starcom Uplink</p>
+    <h1>Privacy</h1>
+    <p class="stamp">Version 0.1.0 · this page last changed 2026-10-11</p>
+  </header>
+
+  <section>
+    <h2>What it is for</h2>
+    <p class="lead">Starcom Uplink connects Starcom (starcom.app) to your browser, so your Starcom investigations can reach the sites you allow, one site at a time, each asked for with its reason, and everything it does logged where you can read it.</p>
+  </section>
+
+  <section>
+    <h2>What it collects</h2>
+    <p>None. Uplink sends nothing about you or your browsing off your device: no analytics, no telemetry, no tracking. If you turn on timestamps, each evidence capture sends one blinded hash, from which nothing about the page can be learned, to two public OpenTimestamps calendars. When NetRunner reads a site you allowed, Uplink fetches it without your cookies. That answer, and what you capture, go to Starcom's page in this same browser, and leave it only when you publish or send them.</p>
+  </section>
+
+  <section>
+    <h2>What it keeps, in your browser</h2>
+    <ul>
+      <li>Its activity log: each thing Starcom asked it to do, the purpose Starcom gave, the site if there was one, and what came of it, refusals included. It keeps the latest 2,000.</li>
+      <li>What you send to Starcom while browsing, until Starcom's page takes it into your cases: the page's address and title, the words you selected or the link or image's address, and when.</li>
+      <li>A page you capture as evidence, until Starcom's page takes it: a picture of it, scaled to one width so it tells nothing of your screen, its HTML and its text, each with its SHA-256, and, if you turn timestamps on, each file's OpenTimestamps proof.</li>
+      <li>Whether you turned timestamps for evidence on or off, so it asks only once.</li>
+      <li>The language Starcom's page shows, so Uplink's own windows are in it too. Only Starcom's page tells it; no other site can.</li>
+      <li>The sites you have allowed it to reach, which your browser keeps, and whether power mode is on.</li>
+      <li>Your Nostr key, if you move it from Starcom: sealed under a passphrase you choose (NIP-49), and opened only until the browser closes. It never leaves your browser; Starcom's page asks Uplink to sign and never sees the key or the passphrase.</li>
+    </ul>
+    <p>Removing Uplink from your browser removes all of it.</p>
+  </section>
+
+  <section>
+    <h2>What it asks your browser for, and why</h2>
+    <dl>
+      <div class="permission">
+        <dt><code>storage</code></dt>
+        <dd>Keeps Uplink's activity log and your settings in this browser. Nothing stored is sent anywhere; Starcom's page, open in this browser, reads the log only to show it to you.</dd>
+      </div>
+      <div class="permission">
+        <dt><code>scripting</code></dt>
+        <dd>Adds Uplink's bridge to Starcom tabs already open when Uplink was installed or updated, and, when you capture a page as evidence, reads that page's HTML and text at your click. It runs nowhere else.</dd>
+      </div>
+      <div class="permission">
+        <dt><code>contextMenus</code></dt>
+        <dd>Adds "Send to Starcom" to the menu you get by right-clicking a selection, a link, an image or a web page. Nothing is captured until you choose it.</dd>
+      </div>
+      <div class="permission">
+        <dt><code>activeTab</code></dt>
+        <dd>When you send a page to Starcom or capture it as evidence, lets Uplink read that one tab, at that moment only: its address and title, and for evidence a picture of it, its HTML and its text. It reaches no other tab, and nothing after.</dd>
+      </div>
+      <div class="permission">
+        <dt><code>unlimitedStorage</code></dt>
+        <dd>Lets Uplink hold an evidence capture's picture and page copy, which can pass the browser's usual 10 MB, until Starcom takes them in. They leave Uplink's storage once Starcom has kept them.</dd>
+      </div>
+      <div class="permission">
+        <dt><code>sidePanel</code> <span class="patterns">Chrome and Brave</span></dt>
+        <dd>Shows Starcom beside the page you are reading, in the browser's side panel, when you open it. It is Starcom's own page, holding the case your captures go to.</dd>
+      </div>
+      <div class="permission">
+        <dt>Starcom's own pages <span class="patterns">https://starcom.app/*, https://www.starcom.app/*</span></dt>
+        <dd>Runs Uplink's bridge on Starcom's own pages, and adds it to Starcom tabs already open when Uplink is installed or updated, so Starcom can ask Uplink what it can do and ask it to act, always with a stated purpose. The bridge passes only those messages and reads nothing else on the page.</dd>
+      </div>
+      <div class="permission">
+        <dt>Other sites, only those you allow <span class="patterns">https://*/*, http://*/*</span></dt>
+        <dd>Optional, and never granted at install. When a feature needs a site, Uplink asks you for that one site in its own window, saying which feature wants it and why, and you can take any site back in Uplink's options. Power mode, which only you can turn on, asks for all sites at once. Uplink never asks for an address on a private or local network.</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Code from elsewhere</h2>
+    <p>None. Everything Uplink runs is in its package; it loads no code from anywhere and evaluates nothing it receives.</p>
+  </section>
+
+  <section>
+    <h2>What it never does</h2>
+    <ul>
+      <li>It never reads your cookies or sessions to act as you, and never reads your browsing history.</li>
+      <li>It never changes a page you visit, and never adds ads or trackers to one.</li>
+      <li>It never tracks or profiles a private person.</li>
+      <li>It never publishes anything on its own: what leaves your browser is what you send, to where you choose.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>This page changes with Uplink: a version that asks for something new, or keeps something new, is described here before it is published.</p>
+    <p><a href="/">Starcom</a></p>
+  </footer>
+</main>
+</body>
+</html>

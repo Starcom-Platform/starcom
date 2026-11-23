@@ -1,0 +1,29 @@
+/*
+ * A status by its meaning (BD24), in the colour rule's words: working is the
+ * plain body text, waiting the caution amber, done the ok green, closed the
+ * muted grey of what is kept and no longer worked. Never cyan, which is ours.
+ */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  flex: none;
+  gap: 5px;
+  padding: 1px 7px;
+  border: 1px solid var(--chip-colour);
+  border-radius: 10px;
+  color: var(--chip-colour);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.chip[data-tone='working'] { --chip-colour: var(--sc-text-body); }
+.chip[data-tone='waiting'] { --chip-colour: var(--sc-caution); }
+.chip[data-tone='done'] { --chip-colour: var(--sc-ok); }
+.chip[data-tone='closed'] { --chip-colour: var(--sc-text-muted); }
+
+.mark { flex: none; }
+.stroke { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.fill { fill: currentColor; }

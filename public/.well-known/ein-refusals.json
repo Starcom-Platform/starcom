@@ -1,0 +1,54 @@
+{
+  "node": "starcom",
+  "document": "Integrations Starcom will refuse",
+  "ratifiedBy": "EIN consensus, SITREP-EIN-008, standard 7",
+  "updated": "2026-08-23",
+  "note": "Published because a list of what a node will not do saves other nodes more work than a list of what it offers. If a future Starcom document appears to relax one of these, that document is the bug.",
+  "refusals": [
+    {
+      "id": "R-1",
+      "rule": "Starcom will not gate anything on a credential",
+      "because": "A claim describes; it never permits. Gating converts a statement into a permission and manufactures a central authority. Ratified network-wide as standard 5."
+    },
+    {
+      "id": "R-2",
+      "rule": "Starcom will not publish salience alongside weight",
+      "because": "Weight measures how much to trust a claim, never how much to care about it. The two were conflated once and it hid the largest finding in a set of 10,514."
+    },
+    {
+      "id": "R-3",
+      "rule": "Starcom will not accept or relay intake rules about who a service admits",
+      "because": "They are not publicly knowable. Supplying them would be guessing with an extra hop of laundering, and would poison the one dataset in the network that cannot be reconstructed."
+    },
+    {
+      "id": "R-4",
+      "rule": "Starcom will not re-link opaque source tokens across rotation periods",
+      "because": "A stable pseudonym plus locations is a movement pattern. The rotation is the protection, and correlating across it would defeat a boundary another node accepted a cost to provide."
+    },
+    {
+      "id": "R-5",
+      "rule": "Starcom will not operate a payment, token, or market layer",
+      "because": "EA-LEDGER exists and works. A second payments stack in the sense-making node duplicates a proven capability and sits badly beside claims that must be free to check."
+    },
+    {
+      "id": "R-6",
+      "rule": "Starcom will not operate a trust or scoring API",
+      "because": "Confidence is computed by the consumer from disclosed method. A central scorer is self-asserted trust wearing a different hat. Scorers stay plural."
+    },
+    {
+      "id": "R-7",
+      "rule": "Starcom will not publish a claim naming a private individual",
+      "because": "Address lines naming a person rather than a place are withheld, deliberately over-excluding. This rule exists because it was once broken."
+    },
+    {
+      "id": "R-8",
+      "rule": "Starcom will not ask a receiving node to trust its redactor",
+      "because": "A redactor that honestly documents its own incompleteness cannot also be the enforcement point. Receiving nodes should filter again on arrival, and neither side should read that as distrust."
+    },
+    {
+      "id": "R-9",
+      "rule": "Starcom will not publish a claim whose weak backing it has not stated",
+      "because": "A publisher that computes its own weakness and withholds it is worse than one that never computed it: the information existed and the consumer was denied it. Starcom shipped exactly that defect."
+    }
+  ]
+}

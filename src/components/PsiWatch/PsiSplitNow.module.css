@@ -1,0 +1,38 @@
+/* Side by side (D-PW, PW73): a divider down the globe's middle, each half's moment above it. */
+.split {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  margin-left: -1px;
+  background: var(--sc-divider);
+  opacity: 0.8;
+}
+
+.label {
+  position: absolute;
+  top: var(--space-2);
+  padding: 2px var(--space-1);
+  font-size: var(--text-sm);
+  color: var(--sc-text-heading);
+  background: var(--sc-surface-input);
+  border: 1px solid var(--sc-divider);
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+}
+
+.left {
+  right: calc(50% + var(--space-1));
+}
+
+.right {
+  left: calc(50% + var(--space-1));
+}

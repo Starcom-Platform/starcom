@@ -1,0 +1,14 @@
+{
+  "name": "private-justification-without-consent",
+  "description": "Both are required. A stated reason does not replace the decision to publish.",
+  "subjectKind": "person",
+  "options": {
+    "isMock": false,
+    "subjectRole": "private",
+    "publicInterestJustification": "documented ongoing harm"
+  },
+  "expect": {
+    "allowed": false,
+    "reasonMatches": "private individual"
+  }
+}

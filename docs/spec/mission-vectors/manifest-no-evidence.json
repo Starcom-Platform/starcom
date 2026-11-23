@@ -1,0 +1,67 @@
+{
+  "name": "manifest-no-evidence",
+  "description": "A mission with no reports, cases or objectives still produces a complete manifest — the evidentiary void, recorded.",
+  "mission": {
+    "id": "mission-vector-1",
+    "missionNumber": "MSN-2026-0001",
+    "title": "Act on nothing",
+    "briefing": "No evidence was gathered.",
+    "status": "READY_FOR_PACKAGE",
+    "visibility": "public",
+    "objectives": [],
+    "assignedTo": [],
+    "startDate": "2026-01-15T00:00:00.000Z",
+    "relatedReports": [],
+    "relatedCases": [],
+    "collaborators": [],
+    "activityLog": [],
+    "createdBy": "creator-pubkey",
+    "createdAt": "2026-01-15T00:00:00.000Z",
+    "updatedAt": "2026-01-15T00:00:00.000Z"
+  },
+  "author": "Kestrel",
+  "expect": {
+    "manifest": {
+      "id": "pkg-vector",
+      "name": "Act on nothing",
+      "version": "0.1.0",
+      "description": "No evidence was gathered.",
+      "visibility": "public",
+      "createdAt": "2026-01-15T00:00:00.000Z",
+      "author": "Kestrel",
+      "license": "PROPRIETARY",
+      "reports": [
+        {
+          "id": "mission-vector-1",
+          "title": "Act on nothing",
+          "checksum": "3afe59ee"
+        }
+      ],
+      "intel": [],
+      "assets": [],
+      "profile": {
+        "missionState": "open",
+        "claims": "many"
+      },
+      "metadata": {
+        "missionNumber": "MSN-2026-0001",
+        "status": "READY_FOR_PACKAGE",
+        "relatedReportCount": 0,
+        "relatedCaseCount": 0,
+        "objectiveCount": 0
+      }
+    },
+    "canonical": "{\"assets\":[],\"author\":\"Kestrel\",\"createdAt\":\"2026-01-15T00:00:00.000Z\",\"description\":\"No evidence was gathered.\",\"id\":\"pkg-vector\",\"intel\":[],\"license\":\"PROPRIETARY\",\"metadata\":{\"missionNumber\":\"MSN-2026-0001\",\"objectiveCount\":0,\"relatedCaseCount\":0,\"relatedReportCount\":0,\"status\":\"READY_FOR_PACKAGE\"},\"name\":\"Act on nothing\",\"profile\":{\"claims\":\"many\",\"missionState\":\"open\"},\"reports\":[{\"checksum\":\"3afe59ee\",\"id\":\"mission-vector-1\",\"title\":\"Act on nothing\"}],\"version\":\"0.1.0\",\"visibility\":\"public\"}",
+    "digest": "10dd16b546e3d0fe2401a6d5975790f2ecd2e2fecbe745b10f1ff74db2125899",
+    "tags": [
+      [
+        "mission_state",
+        "open"
+      ],
+      [
+        "claims",
+        "many"
+      ]
+    ]
+  }
+}

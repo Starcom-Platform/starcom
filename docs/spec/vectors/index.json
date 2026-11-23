@@ -1,0 +1,148 @@
+{
+  "format": "NIP-XX Attested Claims",
+  "schemaVersion": 2,
+  "generatedBy": "scripts/make-vectors.ts",
+  "deterministic": true,
+  "vectors": [
+    {
+      "name": "valid-attestation",
+      "description": "A well-formed attested claim. Signature verifies; weight derives to the values shown.",
+      "file": "valid-attestation.json"
+    },
+    {
+      "name": "tampered-value",
+      "description": "Signed honestly, then the claimed location was edited. MUST be rejected.",
+      "file": "tampered-value.json"
+    },
+    {
+      "name": "wrong-pubkey",
+      "description": "The signature block names a different key than the one that signed. MUST be rejected.",
+      "file": "wrong-pubkey.json"
+    },
+    {
+      "name": "declared-confidence",
+      "description": "Carries an author-declared confidence. MUST be rejected even though the signature is valid.",
+      "file": "declared-confidence.json"
+    },
+    {
+      "name": "missing-required-fields",
+      "description": "Validly signed, but missing claim.subjectKind and method.observedFrom. MUST be rejected, not rendered with gaps.",
+      "file": "missing-required-fields.json"
+    },
+    {
+      "name": "coarse-timing",
+      "description": "Timing known only to one week against a 24h window. Precision must drop below 1.",
+      "file": "coarse-timing.json"
+    },
+    {
+      "name": "enumeration-census",
+      "description": "A count from a complete enumeration of one authoritative register. Weighed on completeness, not corroboration.",
+      "file": "enumeration-census.json"
+    },
+    {
+      "name": "enumeration-no-boundary",
+      "description": "An enumeration with no stated boundary. A count nobody can re-run is rejected outright.",
+      "file": "enumeration-no-boundary.json"
+    },
+    {
+      "name": "retraction-valid",
+      "description": "A well-formed retraction. Published to the claim's own d tag, so the withdrawal propagates through the mechanism the claim did.",
+      "file": "retraction-valid.json"
+    },
+    {
+      "name": "retraction-no-note",
+      "description": "A retraction without a note. Withdrawing a wrong claim quickly matters more than explaining it well.",
+      "file": "retraction-no-note.json"
+    },
+    {
+      "name": "retraction-unknown-reason",
+      "description": "A retraction whose reason the format does not define. The withdrawal still stands.",
+      "file": "retraction-unknown-reason.json"
+    },
+    {
+      "name": "relayed-sources",
+      "description": "Three sources, all relayed through one aggregator. Corroboration is discounted; the raw sourceCount is unchanged.",
+      "file": "relayed-sources.json"
+    },
+    {
+      "name": "canonicalization-edge",
+      "description": "Non-ASCII subject, keys deliberately out of alphabetical order in the source. Tests the canonical stringifier, not the signature.",
+      "file": "canonicalization-edge.json"
+    },
+    {
+      "name": "missing-modality",
+      "description": "No method.modality. MUST be rejected — how a thing was observed is not optional and MUST NOT be guessed.",
+      "file": "missing-modality.json"
+    },
+    {
+      "name": "unknown-modality",
+      "description": "A modality outside the registered vocabulary. MUST be rejected rather than coerced to unknown.",
+      "file": "unknown-modality.json"
+    },
+    {
+      "name": "missing-weak-backing",
+      "description": "No method.weakBacking. MUST be rejected — an absent array is not the same statement as an empty one.",
+      "file": "missing-weak-backing.json"
+    },
+    {
+      "name": "declared-weak-backing",
+      "description": "A conformant claim naming its own unreproducible input. Accepted, and weighs exactly the same as valid-attestation.",
+      "file": "declared-weak-backing.json"
+    },
+    {
+      "name": "modality-not-a-ranking",
+      "description": "Same claim, modality in_person instead of primary_record. Weight is UNCHANGED — the vocabulary describes, it does not rank.",
+      "file": "modality-not-a-ranking.json"
+    },
+    {
+      "name": "method-credit",
+      "description": "Cites another node's method. Accepted, and weighs exactly the same as valid-attestation.",
+      "file": "method-credit.json"
+    },
+    {
+      "name": "partial-method-credit",
+      "description": "derivesFrom present but missing `specification`. MUST be rejected — an unfollowable citation is worse than no citation.",
+      "file": "partial-method-credit.json"
+    },
+    {
+      "name": "underivable-weight",
+      "description": "All required fields present and well-formed, but parameters.windowHours is missing so the published facts yield no usable weight. MUST be rejected.",
+      "file": "underivable-weight.json"
+    },
+    {
+      "name": "case-adjudication",
+      "description": "A human adjudication of a case, published as an attested claim. A consumer that has never seen this algorithm MUST still derive a weight: nothing in the derivation reads `algorithm`.",
+      "file": "case-adjudication.json"
+    },
+    {
+      "name": "case-adjudication-no-distance-threshold",
+      "description": "The same claim, checked for what it does NOT carry. `distanceThresholdKm` is absent because nothing matched by distance; a consumer MUST NOT treat its absence as zero, nor require it.",
+      "file": "case-adjudication-no-distance-threshold.json"
+    },
+    {
+      "name": "case-adjudication-unaddressed-contradictions",
+      "description": "An adjudication that left recorded contradictions unanswered. Valid, weighable, and it says so in `weakBacking` rather than in the counts alone.",
+      "file": "case-adjudication-unaddressed-contradictions.json"
+    },
+    {
+      "name": "refutation",
+      "description": "A well-formed refutation. Weighable by the same derivation as the claim it contests, and addressed by WHICH claim — author, subject, attribute and the exact publishedAt, every component percent-encoded.",
+      "file": "refutation.json"
+    },
+    {
+      "name": "refutation-unencoded-timestamp",
+      "description": "The address of the same refutation, stated in full. An implementation that leaves the ISO timestamp raw splits a four-part identifier into six on its own colons, files the contest where nobody looks, and the claim stays uncontested with no error anywhere.",
+      "file": "refutation-unencoded-timestamp.json"
+    },
+    {
+      "name": "refutation-without-method",
+      "description": "A refutation carrying no method. MUST be rejected: without one the cheapest possible message — \"wrong\" — outweighs expensive evidence, and refutation becomes a denial-of-service on truth.",
+      "file": "refutation-without-method.json"
+    },
+    {
+      "name": "refutation-unaddressed",
+      "description": "A refutation that will not say WHICH version it contests. MUST be rejected: without publishedAt it applies to every later revision of the slot, including one that fixed the very problem being refuted.",
+      "file": "refutation-unaddressed.json"
+    }
+  ]
+}

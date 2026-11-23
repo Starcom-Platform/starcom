@@ -1,0 +1,139 @@
+{
+  "zsp": "2.0",
+  "stage": 1,
+  "draft": true,
+  "grid": {
+    "width": 3600,
+    "height": 1800,
+    "cell": 0.1,
+    "origin": {
+      "lat": 90,
+      "lon": -180
+    },
+    "rows": "row 0 the northernmost",
+    "values": "at cell centres"
+  },
+  "file": "containers-0.1.u32.bin.gz",
+  "dtype": "uint32",
+  "endianness": "little",
+  "compression": "gzip",
+  "codes": {
+    "0": "the land side: the Terrae, drawn with them",
+    "1": "mare:pacificum",
+    "2": "mare:atlanticum",
+    "3": "mare:indicum",
+    "4": "mare:arcticum",
+    "5": "mare:australe"
+  },
+  "lines": [
+    {
+      "name": "the Agulhas–Falkland Fracture Zone and the Agulhas Ridge",
+      "between": "Atlanticum | Indicum",
+      "approximate": true,
+      "source": "approximate points along the fracture zone (GSFML traces, Matthews et al. 2011) and the ridge; pending review"
+    },
+    {
+      "name": "the Tasman Fracture Zone",
+      "between": "Indicum | Pacificum",
+      "approximate": true,
+      "source": "approximate points, 145.1–146.4° E (Hasterok et al. 2022, as Mecha Jono read it; GSFML traces); pending review"
+    },
+    {
+      "name": "Cape Horn's meridian across the Drake Passage",
+      "between": "Pacificum | Atlanticum",
+      "approximate": false,
+      "source": "Cape Horn, 67.27° W"
+    },
+    {
+      "name": "the Fram Strait at 79° N",
+      "between": "Atlanticum | Arcticum",
+      "approximate": false,
+      "source": "the strait between Greenland and Svalbard"
+    }
+  ],
+  "kerguelen": "the Kerguelen Plateau north of the Fawn Trough in Indicum, south of the Polar Front (approximate points)",
+  "mareKm2": {
+    "mare:arcticum": 4577438,
+    "mare:atlanticum": 65358818,
+    "mare:pacificum": 150527910,
+    "mare:indicum": 59398308,
+    "mare:australe": 29731548
+  },
+  "islandPockets": 3294,
+  "checks": {
+    "seaWithoutMare": 0,
+    "deepOnLandSide": 0,
+    "deepOnLandSideEnclosedOrInland": 87917,
+    "continentalLandAtSea": 0,
+    "means": "seaWithoutMare: sea cells in no Mare (0 expected). deepOnLandSide: water deeper than 2,000 m (ETOPO) on a continent's margin or a fragment's shelf (0 expected). deepOnLandSideEnclosedOrInland: deep water given to the land as an enclosed sea or inland water. continentalLandAtSea: dry land joined to a continent coded as sea (0 expected)."
+  },
+  "rules": [
+    "ZR4",
+    "ZR16",
+    "ZR17",
+    "ZR18"
+  ],
+  "forced": {
+    "sea": [
+      "the Scotia Sea",
+      "the Gulf of Oman",
+      "the Mozambique Channel",
+      "the Tasman Sea",
+      "the Fram Strait"
+    ],
+    "land": [
+      "the Gulf of Aden",
+      "the South China Sea",
+      "the Sea of Okhotsk",
+      "the Bering Sea",
+      "the Bering Sea, east of 180°"
+    ]
+  },
+  "notContinental": [
+    "Kerguelen Plateau",
+    "Elan Bank",
+    "Sandwich Plate",
+    "New Hebrides",
+    "Vitiaz Trench",
+    "Lau-Colville Ridge",
+    "Kermadec Ridge",
+    "Tonga Ridge",
+    "Yap Arc",
+    "Southern Palau Arc",
+    "Palau Kyushu Ridge",
+    "Oki Daito Ridge",
+    "Mariana Arc, Philippine Sea",
+    "Mariana-Caroline Arc",
+    "West Mariana Remnant Arc",
+    "Izu-Bonin Arc",
+    "Izu-Bonin Remnant Arc",
+    "Fiji",
+    "Java Trench"
+  ],
+  "areaKm2": {
+    "sea": 309594020,
+    "land": 200471189
+  },
+  "sources": [
+    {
+      "name": "Altimetry-derived Antarctic Circumpolar Current fronts, the Polar Front (Park and Durand 2019, SEANOE, doi:10.17882/59800)",
+      "licence": "CC BY 4.0",
+      "url": "https://www.seanoe.org/data/00486/59800/"
+    },
+    {
+      "name": "Natural Earth 1:10m land, minor islands, Antarctic ice shelves",
+      "licence": "public domain",
+      "url": "https://www.naturalearthdata.com/"
+    },
+    {
+      "name": "ETOPO 2022 60 arc-second ice surface (NOAA NCEI), every sixth sample, via ERDDAP",
+      "licence": "CC0",
+      "url": "https://www.ncei.noaa.gov/products/etopo-global-relief-model"
+    },
+    {
+      "name": "EarthByte continental polygons (Müller et al. 2019)",
+      "licence": "CC BY 3.0",
+      "url": "https://www.earthbyte.org/gplates-2-3-software-and-data-sets/"
+    }
+  ]
+}

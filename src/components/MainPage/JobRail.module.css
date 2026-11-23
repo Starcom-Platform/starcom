@@ -1,0 +1,126 @@
+/* The job rail (BD14): tiles in the bar's right end. A state's colour is its meaning. */
+.rail {
+  display: flex;
+  gap: 6px;
+  align-items: stretch;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  min-width: 0;
+  /* No overflow here: it would clip the detail that opens above. Tiles shrink, names ellipsised. */
+}
+
+.tile {
+  --state: var(--sc-accent);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  max-width: 240px;
+  border: 1px solid var(--sc-divider);
+  border-left: 3px solid var(--state);
+  border-radius: 3px;
+  background: var(--sc-surface-panel);
+}
+
+.tile[data-state='held'] { --state: var(--sc-caution); }
+.tile[data-state='done'] { --state: var(--sc-ok); }
+.tile[data-state='failed'] { --state: var(--sc-danger); }
+
+.head {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  background: none;
+  border: none;
+  color: var(--sc-text-body);
+  font-family: var(--sc-font-text);
+  font-size: 12px;
+  cursor: pointer;
+  min-width: 0;
+}
+
+.label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+.queued {
+  font-family: var(--sc-font-data);
+  color: var(--sc-text-secondary);
+}
+
+.state {
+  font-family: var(--sc-font-data);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--state);
+}
+
+.track {
+  display: block;
+  height: 2px;
+  margin: 0 8px 4px;
+  background: var(--sc-divider);
+  overflow: hidden;
+}
+
+.fill {
+  display: block;
+  height: 100%;
+  background: var(--state);
+}
+
+/* Where the total is not known, a sweep across the track while it runs. */
+.sweep {
+  background: linear-gradient(90deg, transparent 0%, var(--state) 50%, transparent 100%) 0 0 / 40% 100% no-repeat var(--sc-divider);
+  animation: sweep 1.4s linear infinite;
+}
+
+@keyframes sweep {
+  from { background-position: -40% 0; }
+  to { background-position: 140% 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sweep { animation: none; background-position: 50% 0; }
+}
+
+/* Opens above the bar, so the tile stays the bar's height. */
+.detail {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  right: 0;
+  z-index: var(--z-dropdown);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 220px;
+  max-width: min(320px, calc(100vw - 16px));
+  padding: 8px 10px;
+  background: var(--sc-surface-panel);
+  border: 1px solid var(--sc-divider);
+  border-radius: 4px;
+  color: var(--sc-text-secondary);
+  font-size: 12px;
+}
+
+.controls {
+  display: flex;
+  gap: 6px;
+}
+
+.controls button {
+  background: none;
+  border: 1px solid var(--sc-input-border);
+  border-radius: 2px;
+  color: var(--sc-text-heading);
+  font-family: var(--sc-font-text);
+  font-size: 12px;
+  padding: 2px 8px;
+  cursor: pointer;
+}

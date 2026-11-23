@@ -1,0 +1,59 @@
+/* Psi Watch's lab (decision D-PW, PW94–PW96): its form's fields, the shifts' chart and the draft's JSON. */
+.form {
+  display: grid;
+  gap: 6px;
+  margin: 8px 0;
+}
+
+.field {
+  display: grid;
+  grid-template-columns: 8.5em minmax(0, 1fr);
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+}
+
+.field select,
+.field input,
+.field textarea {
+  min-width: 0;
+  background: var(--sc-surface-frame);
+  border: 1px solid var(--sc-divider);
+  color: var(--sc-text-body);
+  font: 12px/1.3 var(--sc-font-text);
+  padding: 2px 4px;
+}
+
+.field textarea {
+  resize: vertical;
+}
+
+.window {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.window input {
+  width: 4.5em;
+}
+
+.chart {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 6px 0 2px;
+}
+
+.json {
+  margin: 4px 0;
+  max-height: 220px;
+  overflow: auto;
+  padding: 6px 8px;
+  background: var(--sc-surface-frame);
+  border: 1px solid var(--sc-divider);
+  color: var(--sc-text-body);
+  font: 11px/1.4 var(--sc-font-data);
+  white-space: pre;
+}

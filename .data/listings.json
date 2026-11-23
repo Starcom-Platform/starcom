@@ -1,0 +1,22 @@
+[
+  {
+    "id": "listing-1787455507158-clt20v",
+    "createdAt": "2026-08-23T03:25:07.158Z",
+    "cid": "bafy1",
+    "name": "Alpha Report",
+    "price": 5,
+    "tags": [
+      "osint"
+    ]
+  },
+  {
+    "id": "listing-1787455507158-phntc7",
+    "createdAt": "2026-08-23T03:25:07.158Z",
+    "cid": "bafy2",
+    "name": "Bravo Dossier",
+    "price": 7,
+    "tags": [
+      "sigint"
+    ]
+  }
+]

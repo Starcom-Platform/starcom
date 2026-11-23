@@ -1,0 +1,177 @@
+/* The second left rail's kits (plan A2): the rail's own button look, a layer switcher above, flyouts beside it. */
+.kits {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.switcher {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid color-mix(in srgb, var(--sc-accent) 22%, transparent);
+}
+
+.layerButton,
+.control {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  min-height: 32px;
+  border: 1px solid color-mix(in srgb, var(--sc-accent) 42%, transparent);
+  border-radius: 6px;
+  background: linear-gradient(180deg, var(--sc-gunmetal-800), var(--sc-gunmetal-900));
+  color: var(--sc-text-body);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.2s ease;
+}
+
+.layerButton {
+  min-height: 26px;
+  opacity: 0.62;
+}
+
+.layerButtonChosen {
+  opacity: 1;
+  border-color: var(--sc-accent);
+}
+
+.layerButton:hover,
+.control:hover {
+  transform: translateY(-1px);
+  border-color: var(--sc-accent);
+  box-shadow: 0 0 9px color-mix(in srgb, var(--sc-accent) 35%, transparent);
+}
+
+.layerButton:focus-visible,
+.control:focus-visible,
+.option:focus-visible,
+.allNone button:focus-visible {
+  outline: 2px solid var(--sc-focus);
+  outline-offset: 1px;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.controlOn {
+  border-color: var(--sc-ok);
+  box-shadow: 0 0 10px color-mix(in srgb, var(--sc-ok) 38%, transparent);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--sc-ok) 14%, var(--sc-gunmetal-900)), var(--sc-gunmetal-900));
+}
+
+.control[aria-pressed='false'] {
+  opacity: 0.6;
+}
+
+.controlOpen {
+  border-color: var(--sc-accent);
+}
+
+.controlNarrowed {
+  border-color: var(--sc-caution);
+}
+
+.badge {
+  position: absolute;
+  right: 2px;
+  bottom: 1px;
+  font: 600 11px/1 var(--sc-font-data);
+  color: var(--sc-caution);
+}
+
+.flyout {
+  position: fixed;
+  z-index: var(--z-dropdown);
+  min-width: 190px;
+  max-width: 260px;
+  padding: 8px;
+  border: 1px solid color-mix(in srgb, var(--sc-accent) 52%, transparent);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--sc-surface-globe) 97%, transparent);
+  box-shadow: 0 8px 22px color-mix(in srgb, var(--sc-gunmetal-950) 70%, transparent);
+  color: var(--sc-text-body);
+  font: 13px/1.35 var(--sc-font-text);
+}
+
+.flyoutTitle {
+  font-weight: 600;
+  color: var(--sc-text-heading);
+  margin: 0 2px 6px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 6px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.option:hover {
+  background: color-mix(in srgb, var(--sc-accent) 8%, transparent);
+}
+
+.optionChosen {
+  border-color: color-mix(in srgb, var(--sc-accent) 50%, transparent);
+  color: var(--sc-text-heading);
+  background: color-mix(in srgb, var(--sc-accent) 12%, transparent);
+}
+
+.option[role='checkbox'][aria-checked='false'] {
+  opacity: 0.55;
+}
+
+.swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex: none;
+}
+
+.allNone {
+  display: flex;
+  gap: 6px;
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px solid color-mix(in srgb, var(--sc-accent) 18%, transparent);
+}
+
+.allNone button {
+  flex: 1;
+  padding: 3px 6px;
+  border: 1px solid color-mix(in srgb, var(--sc-accent) 35%, transparent);
+  border-radius: 5px;
+  background: none;
+  color: var(--sc-text-body);
+  font: inherit;
+  cursor: pointer;
+}
+
+@media (max-width: 900px), (pointer: coarse) {
+  .control,
+  .layerButton {
+    min-height: 40px;
+  }
+}

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- A made-up OFAC delta file in the Sanctions List Service's format (DeltaFile 1.0): names and ids are invented. -->
+<sanctionsData xmlns="https://www.treasury.gov/ofac/DeltaFile/1.0">
+  <publicationInfo>
+    <datePublished>2026-10-13T00:00:00-04:00</datePublished>
+    <publicationType>Standard Action</publicationType>
+  </publicationInfo>
+  <entities>
+    <entity id="1" action="add">
+      <generalInfo><identityId>11</identityId><entityType refId="601">Entity</entityType></generalInfo>
+      <sanctionsLists><sanctionsList id="1" refId="1550">SDN List</sanctionsList></sanctionsLists>
+      <sanctionsPrograms>
+        <sanctionsProgram id="1" refId="2">ILLICIT-DRUGS-EO14059</sanctionsProgram>
+        <sanctionsProgram id="2" refId="3">SDGT</sanctionsProgram>
+      </sanctionsPrograms>
+      <names>
+        <name id="1">
+          <isPrimary>false</isPrimary>
+          <translations><translation id="1"><isPrimary>true</isPrimary><formattedFullName>EXAMPLE LEASING</formattedFullName></translation></translations>
+        </name>
+        <name id="2">
+          <isPrimary>true</isPrimary>
+          <translations><translation id="2"><isPrimary>true</isPrimary><formattedFullName>EXAMPLE LOGISTICS</formattedFullName></translation></translations>
+        </name>
+      </names>
+      <addresses>
+        <address id="1"><country refId="1">Mexico</country></address>
+        <address id="2"><country refId="1">Mexico</country></address>
+      </addresses>
+    </entity>
+    <entity id="2" action="add">
+      <generalInfo><identityId>12</identityId><entityType refId="600">Individual</entityType></generalInfo>
+      <sanctionsPrograms><sanctionsProgram id="3" refId="2">ILLICIT-DRUGS-EO14059</sanctionsProgram></sanctionsPrograms>
+      <names>
+        <name id="3">
+          <isPrimary>true</isPrimary>
+          <translations><translation id="3"><isPrimary>true</isPrimary><formattedFullName>INVENTED PERSONNAME</formattedFullName></translation></translations>
+        </name>
+      </names>
+      <addresses><address id="3"><country refId="1">Mexico</country></address></addresses>
+    </entity>
+    <entity id="3" action="remove">
+      <generalInfo><identityId>13</identityId><entityType refId="602">Vessel</entityType></generalInfo>
+      <sanctionsPrograms><sanctionsProgram id="4" refId="5">LIBYA3</sanctionsProgram></sanctionsPrograms>
+      <names>
+        <name id="4">
+          <isPrimary>true</isPrimary>
+          <translations><translation id="4"><isPrimary>true</isPrimary><formattedFullName>EXAMPLE STAR</formattedFullName></translation></translations>
+        </name>
+      </names>
+    </entity>
+    <entity id="4">
+      <legalAuthorities><legalAuthority id="5" refId="6" action="add">Foreign Narcotics Kingpin Designation Act</legalAuthority></legalAuthorities>
+    </entity>
+  </entities>
+</sanctionsData>

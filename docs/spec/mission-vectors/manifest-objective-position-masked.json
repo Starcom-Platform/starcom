@@ -1,0 +1,80 @@
+{
+  "name": "manifest-objective-position-masked",
+  "description": "An objective crosses as an ask (since rev 5), and a coordinate typed into it is replaced by [redacted:position].",
+  "mission": {
+    "id": "mission-vector-1",
+    "missionNumber": "MSN-2026-0001",
+    "title": "Recon",
+    "briefing": "See objectives.",
+    "status": "READY_FOR_PACKAGE",
+    "visibility": "public",
+    "objectives": [
+      {
+        "id": "o1",
+        "description": "Observe the 48.8566, 2.3522 rooftop",
+        "completed": false
+      }
+    ],
+    "assignedTo": [],
+    "startDate": "2026-01-15T00:00:00.000Z",
+    "relatedReports": [],
+    "relatedCases": [],
+    "collaborators": [],
+    "activityLog": [],
+    "createdBy": "creator-pubkey",
+    "createdAt": "2026-01-15T00:00:00.000Z",
+    "updatedAt": "2026-01-15T00:00:00.000Z"
+  },
+  "author": "Kestrel",
+  "expect": {
+    "manifest": {
+      "id": "pkg-vector",
+      "name": "Recon",
+      "version": "0.1.0",
+      "description": "See objectives.",
+      "visibility": "public",
+      "createdAt": "2026-01-15T00:00:00.000Z",
+      "author": "Kestrel",
+      "license": "PROPRIETARY",
+      "reports": [
+        {
+          "id": "mission-vector-1",
+          "title": "Recon",
+          "checksum": "67c9ecca"
+        }
+      ],
+      "intel": [],
+      "assets": [],
+      "objectives": [
+        {
+          "id": "o1",
+          "ask": "Observe the [redacted:position] rooftop",
+          "done": false
+        }
+      ],
+      "profile": {
+        "missionState": "open",
+        "claims": "many"
+      },
+      "metadata": {
+        "missionNumber": "MSN-2026-0001",
+        "status": "READY_FOR_PACKAGE",
+        "relatedReportCount": 0,
+        "relatedCaseCount": 0,
+        "objectiveCount": 1
+      }
+    },
+    "canonical": "{\"assets\":[],\"author\":\"Kestrel\",\"createdAt\":\"2026-01-15T00:00:00.000Z\",\"description\":\"See objectives.\",\"id\":\"pkg-vector\",\"intel\":[],\"license\":\"PROPRIETARY\",\"metadata\":{\"missionNumber\":\"MSN-2026-0001\",\"objectiveCount\":1,\"relatedCaseCount\":0,\"relatedReportCount\":0,\"status\":\"READY_FOR_PACKAGE\"},\"name\":\"Recon\",\"objectives\":[{\"ask\":\"Observe the [redacted:position] rooftop\",\"done\":false,\"id\":\"o1\"}],\"profile\":{\"claims\":\"many\",\"missionState\":\"open\"},\"reports\":[{\"checksum\":\"67c9ecca\",\"id\":\"mission-vector-1\",\"title\":\"Recon\"}],\"version\":\"0.1.0\",\"visibility\":\"public\"}",
+    "digest": "8639c0c5babe0ae812067abdeecfd68ecfc677230580c59add4695c08c52a336",
+    "tags": [
+      [
+        "mission_state",
+        "open"
+      ],
+      [
+        "claims",
+        "many"
+      ]
+    ]
+  }
+}

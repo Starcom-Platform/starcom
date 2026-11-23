@@ -1,0 +1,117 @@
+{
+ "fixture_note": "Real: built by beu/psi_catalogue.py for the 30 days from 26 Oct 2026 (skyfield, de440s), exactly as the catalogue will hold it. Only the catalogue version label is the kit's.",
+ "provenance": {
+  "real": "every value",
+  "catalogue_meta": {
+   "engine": "skyfield 1.54, de440s",
+   "kernel_sha256": "c1c7feeab882263fc493a9d5a5b2ddd71b54826cdf65d8d17a76126b260a49f2",
+   "frames": "apparent positions; ecliptic and equinox of date (skyfield ecliptic_frame); exact_j2000_utc for aspects in the J2000 ecliptic; sidereal_gc = of date less (Sgr A* of date - 240)",
+   "time": "exact_utc, t_in and t_out are Unix seconds (UTC) from skyfield's built-in timescale and its Delta T",
+   "rates": "rate: central difference at +-1 minute, degrees a day; accel: second difference at +-1 hour",
+   "code_sha": "b5a7dbbafc6f8035c09127bc41f8c1bb666ca5e4"
+  }
+ },
+ "event": {
+  "kind": 31923,
+  "pubkey": "86f824c3f1e67c60b1dc15ce110648c4de5c3fb879022fbbcc5e8deb720e402c",
+  "created_at": 1793019600,
+  "tags": [
+   [
+    "d",
+    "psi-sky-node-Moon-20261103T030218"
+   ],
+   [
+    "title",
+    "Moon at its descending node"
+   ],
+   [
+    "start",
+    "1793655899"
+   ],
+   [
+    "end",
+    "1793694052"
+   ],
+   [
+    "window",
+    "1793655899",
+    "1793674938",
+    "1793694052"
+   ],
+   [
+    "exact",
+    "1793674938.490"
+   ],
+   [
+    "sky",
+    "node",
+    "moon_descending"
+   ],
+   [
+    "body",
+    "Moon"
+   ],
+   [
+    "rate",
+    "13.587885"
+   ],
+   [
+    "profile",
+    "gauss_orb",
+    "1.0000",
+    "3.0000",
+    "13.587885",
+    "0.00000000"
+   ],
+   [
+    "valid_until",
+    "1793694052"
+   ],
+   [
+    "t",
+    "psi_watch"
+   ],
+   [
+    "t",
+    "psi_sky_event"
+   ],
+   [
+    "t",
+    "experimental"
+   ],
+   [
+    "t",
+    "role:context"
+   ],
+   [
+    "t",
+    "category:psi"
+   ],
+   [
+    "t",
+    "category:psi.sky_event"
+   ],
+   [
+    "schema_version",
+    "0"
+   ],
+   [
+    "engine",
+    "skyfield 1.54, de440s; catalogue kit-v0 (2026-10-26 to 2026-11-25)"
+   ],
+   [
+    "published_at",
+    "1793019600"
+   ],
+   [
+    "client",
+    "Mecha Jono"
+   ],
+   [
+    "alt",
+    "Psi Watch sky event (Experimental). Moon at its descending node: exact Tue 03 Nov 2026 03:02 UTC. Its window, to the 3° cap: Mon 02 Nov 2026 21:44 UTC to Tue 03 Nov 2026 08:20 UTC."
+   ]
+  ],
+  "content": "Moon at its descending node: exact Tue 03 Nov 2026 03:02 UTC. Its window, to the 3° cap: Mon 02 Nov 2026 21:44 UTC to Tue 03 Nov 2026 08:20 UTC."
+ }
+}

@@ -1,0 +1,299 @@
+/* GitHub Widget Styles - Streamlined Design */
+
+.githubWidget {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 380px;
+  height: 480px;
+  background: linear-gradient(135deg, #0d1117, #161b22);
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  overflow: hidden;
+  font-family: var(--sc-font-text);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(135deg, #238636, #2ea043);
+  color: white;
+  padding: 14px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(46, 160, 67, 0.2);
+  height: 52px;
+  flex-shrink: 0;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.closeButton:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Content */
+.content {
+  flex: 1;
+  overflow: hidden;
+  padding: 16px;
+  color: #f0f6fc;
+  min-height: 0;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+}
+
+.spinner {
+  width: 28px;
+  height: 28px;
+  border: 3px solid rgba(46, 160, 67, 0.3);
+  border-top: 3px solid #2ea043;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Repository Section - Main Container */
+.repoSection {
+  background: linear-gradient(135deg, #161b22, #1c2128);
+  border-radius: 10px;
+  border: 1px solid #30363d;
+  padding: 16px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.repoHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.repoIcon {
+  font-size: 1.3rem;
+  color: #7c3aed;
+}
+
+.repoInfo {
+  flex: 1;
+}
+
+.repoInfo h3 {
+  margin: 0 0 3px 0;
+  font-size: 1rem;
+  color: #f0f6fc;
+  font-weight: 600;
+}
+
+.repoPath {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #7d8590;
+}
+
+.languageBadge {
+  background: linear-gradient(135deg, #7c3aed, #8b5cf6);
+  color: white;
+  padding: 3px 8px;
+  border-radius: 10px;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+/* Stats Grid */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.statItem {
+  background: linear-gradient(135deg, #0d1117, #161b22);
+  border: 1px solid #21262d;
+  border-radius: 8px;
+  padding: 8px 6px;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.statItem:hover {
+  border-color: #30363d;
+  background: linear-gradient(135deg, #161b22, #1c2128);
+}
+
+.statNumber {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2ea043;
+  margin-bottom: 2px;
+}
+
+.statLabel {
+  font-size: 0.7rem;
+  color: #7d8590;
+  font-weight: 500;
+}
+
+/* Activity Section */
+.activitySection {
+  background: linear-gradient(135deg, #0d1117, #161b22);
+  border: 1px solid #21262d;
+  border-radius: 8px;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.activityIcon {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  color: #f78166;
+}
+
+.activityText {
+  font-size: 0.8rem;
+  color: #7d8590;
+}
+
+/* Action Buttons */
+.actionButtons {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.actionButton {
+  flex: 1;
+  background: linear-gradient(135deg, #21262d, #30363d);
+  color: #f0f6fc;
+  border: 1px solid #30363d;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.actionButton:hover {
+  background: linear-gradient(135deg, #238636, #2ea043);
+  border-color: #2ea043;
+  color: white;
+  transform: translateY(-1px);
+}
+
+.actionButton:active {
+  transform: translateY(0);
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  padding: 10px 18px;
+  background: linear-gradient(135deg, #0d1117, #161b22);
+  border-top: 1px solid #21262d;
+  font-size: 0.75rem;
+  color: #7d8590;
+  flex-shrink: 0;
+  height: 38px;
+}
+
+.uplinkIndicator {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.glowingGreenDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #2ea043;
+  box-shadow: 0 0 4px #2ea043, 0 0 8px rgba(46, 160, 67, 0.5);
+  animation: glowGreen 2s ease-in-out infinite alternate;
+}
+
+.glowingRedDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #f85149;
+  box-shadow: 0 0 4px #f85149, 0 0 8px rgba(248, 81, 73, 0.5);
+  animation: glowRed 2s ease-in-out infinite alternate;
+}
+
+@keyframes glowGreen {
+  from {
+    box-shadow: 0 0 3px #2ea043, 0 0 6px rgba(46, 160, 67, 0.4);
+  }
+  to {
+    box-shadow: 0 0 6px #2ea043, 0 0 12px rgba(46, 160, 67, 0.7);
+  }
+}
+
+@keyframes glowRed {
+  from {
+    box-shadow: 0 0 3px #f85149, 0 0 6px rgba(248, 81, 73, 0.4);
+  }
+  to {
+    box-shadow: 0 0 6px #f85149, 0 0 12px rgba(248, 81, 73, 0.7);
+  }
+}
+
+/* Scrollbar styling (if needed) */
+.content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.content::-webkit-scrollbar-track {
+  background: rgba(46, 160, 67, 0.1);
+  border-radius: 2px;
+}
+
+.content::-webkit-scrollbar-thumb {
+  background: #30363d;
+  border-radius: 2px;
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+  background: #484f58;
+}

@@ -1,0 +1,29 @@
+{
+  "name": "anchor-tag-disagrees-refused",
+  "description": "A d tag naming another place than the content does. Which subject the claim is about must not be a guess.",
+  "expect": {
+    "observations": 0
+  },
+  "diagnostic": {
+    "note": "NOT normative — our drop wording, for humans and our own gate.",
+    "reasonContains": "is not the anchor the content names"
+  },
+  "event": {
+    "kind": 1911,
+    "created_at": 1756000000,
+    "tags": [
+      [
+        "g",
+        "st-louis"
+      ],
+      [
+        "d",
+        "st-louis/somewhere-else"
+      ]
+    ],
+    "content": "{\"anchor\":\"st-louis/st-patrick-center\",\"observed_at\":1755996400,\"tags\":[\"locked\"],\"method\":\"saw\",\"callsign\":\"Raven\",\"precision\":\"area\",\"area\":\"dp3w\"}",
+    "pubkey": "96bafb179762225794c13c78e823b349e8f21d96f8113020032e5cabdbe59889",
+    "id": "bb693af38476f912a9068976639c1ad9e74bd9889e492735f6411d37bec4e71e",
+    "sig": "d131baa7d81c2d7b4ae97c752c5a7ef6f9664d5fab60d446e0d728d51077f396aa67470055675f640f3bb47dac7598c211a259b76b3786c9991a624d43d47ccb"
+  }
+}

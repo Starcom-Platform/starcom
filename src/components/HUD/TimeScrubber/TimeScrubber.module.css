@@ -1,0 +1,377 @@
+/* TimeScrubber — Temporal Navigation Control */
+
+.timeScrubber {
+  position: relative;
+  width: 100%;
+  padding: 4px 12px 6px;
+  background: linear-gradient(180deg, rgba(0, 20, 40, 0.92) 0%, rgba(0, 10, 25, 0.95) 100%);
+  border-top: 1px solid rgba(0, 200, 255, 0.2);
+  font-family: var(--sc-font-data);
+  user-select: none;
+  z-index: 100;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap; /* whole groups onto a second row where the bar is narrow, never a word broken */
+  align-items: center;
+  gap: 2px 12px;
+  margin-bottom: 2px;
+  font-size: 10px;
+  color: rgba(0, 200, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.label {
+  font-weight: 600;
+  color: rgba(0, 200, 255, 0.8);
+}
+
+.eventCount {
+  padding: 1px 6px;
+  background: rgba(0, 200, 255, 0.1);
+  border: 1px solid rgba(0, 200, 255, 0.15);
+  border-radius: 3px;
+  font-size: 9px;
+}
+
+.currentDate {
+  margin-left: auto;
+  font-size: 11px;
+  color: rgba(0, 230, 255, 0.9);
+  font-weight: 500;
+}
+
+.scrubberTrack {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rangeLabel {
+  flex-shrink: 0;
+  font-size: 9px;
+  color: rgba(0, 200, 255, 0.45);
+  min-width: 44px;
+  text-align: center;
+}
+
+.sliderContainer {
+  position: relative;
+  flex: 1;
+  height: 20px;
+  display: flex;
+  align-items: center;
+}
+
+/* Range slider styling */
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  background: rgba(0, 200, 255, 0.12);
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: rgba(0, 220, 255, 0.9);
+  border: 2px solid rgba(0, 100, 140, 0.8);
+  cursor: grab;
+  box-shadow: 0 0 8px rgba(0, 200, 255, 0.4);
+  transition: box-shadow 0.2s, transform 0.15s;
+}
+
+.slider::-webkit-slider-thumb:hover {
+  box-shadow: 0 0 14px rgba(0, 200, 255, 0.6);
+  transform: scale(1.15);
+}
+
+.slider::-webkit-slider-thumb:active {
+  cursor: grabbing;
+  box-shadow: 0 0 18px rgba(0, 200, 255, 0.8);
+}
+
+.slider::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: rgba(0, 220, 255, 0.9);
+  border: 2px solid rgba(0, 100, 140, 0.8);
+  cursor: grab;
+  box-shadow: 0 0 8px rgba(0, 200, 255, 0.4);
+}
+
+.slider::-moz-range-track {
+  background: rgba(0, 200, 255, 0.12);
+  height: 4px;
+  border-radius: 2px;
+}
+
+/* While paused: the selected window's two ends on one track (decision D-E). */
+.windowTrack {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 8px;
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(0, 200, 255, 0.12);
+  pointer-events: none;
+}
+
+.windowBand {
+  position: absolute;
+  top: 7px;
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(255, 51, 51, 0.4);
+  pointer-events: none;
+}
+
+.windowSlider {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: transparent;
+  pointer-events: none;
+}
+
+.windowSlider::-webkit-slider-thumb {
+  pointer-events: auto;
+}
+
+.windowSlider::-moz-range-thumb {
+  pointer-events: auto;
+}
+
+.windowSlider::-moz-range-track {
+  background: transparent;
+}
+
+/* LIVE button */
+.liveButton {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  background: rgba(100, 100, 100, 0.2);
+  border: 1px solid rgba(100, 100, 100, 0.3);
+  border-radius: 3px;
+  color: rgba(180, 180, 180, 0.7);
+  font-family: inherit;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.liveButton:hover {
+  border-color: rgba(0, 200, 255, 0.4);
+  color: rgba(0, 200, 255, 0.8);
+}
+
+.liveButton.liveActive {
+  background: rgba(234, 67, 53, 0.15);
+  border-color: rgba(234, 67, 53, 0.5);
+  color: rgba(234, 67, 53, 0.9);
+}
+
+.liveDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(100, 100, 100, 0.4);
+  transition: background 0.2s;
+}
+
+.liveActive .liveDot {
+  background: rgba(234, 67, 53, 0.9);
+  box-shadow: 0 0 6px rgba(234, 67, 53, 0.5);
+  animation: livePulse 1.5s ease-in-out infinite;
+}
+
+@keyframes livePulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/*
+ * The War & Conflict Brief's days (theatre-lens.md, TL8): a strip just under the
+ * track, clear of the slider's thumb, which sat over the newest days and took their
+ * clicks; a block a day in its worst war's colour, a day on no war's list in the
+ * track's own tone. The day shown is outlined.
+ */
+.briefDays {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% + 1px);
+  height: 4px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.briefDay {
+  position: absolute;
+  top: 0;
+  height: 4px;
+  min-width: 3px;
+  padding: 0;
+  border: none;
+  border-radius: 1px;
+  background: var(--sc-text-secondary);
+  opacity: 0.7;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.briefDay:hover,
+.briefDay[aria-pressed='true'] {
+  opacity: 1;
+  outline: 1px solid var(--sc-accent);
+  outline-offset: 1px;
+}
+
+/*
+ * The forecast ahead (space-weather-visualization.md, SW19): from now to the last moment a shown layer
+ * forecasts, hatched across the track, so a moment chosen there reads as a forecast's.
+ */
+.forecastZone {
+  position: absolute;
+  top: 6px;
+  right: 0;
+  height: 8px;
+  border-radius: 2px;
+  background: repeating-linear-gradient(135deg, var(--sc-text-secondary) 0 1px, transparent 1px 4px);
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.rangeLabelForecast {
+  color: var(--sc-text-secondary);
+  font-style: italic;
+}
+
+/* The one time bar's range presets and playback (critique-2026-11-01, OR17; plan C1). */
+.presets,
+.play {
+  display: inline-flex;
+  gap: 2px;
+}
+
+.play {
+  margin-left: 8px;
+}
+
+.preset {
+  padding: 0 6px;
+  white-space: nowrap; /* "24 h", "Since 2150 BC": one line each */
+  border: 1px solid var(--sc-divider);
+  border-radius: var(--radius-sm);
+  background: none;
+  color: var(--sc-text-secondary);
+  font-family: var(--sc-font-data);
+  font-size: 11px;
+  line-height: 16px;
+  text-transform: none;
+  letter-spacing: 0;
+  cursor: pointer;
+}
+
+.preset[aria-pressed='true'] {
+  border-color: var(--sc-accent);
+  color: var(--sc-text-heading);
+}
+
+.preset:hover,
+.preset:focus-visible {
+  color: var(--sc-text-heading);
+  outline: 1px solid var(--sc-focus);
+}
+
+/* "More" shows on a phone only: there the bar is slim until it is pressed (OR28). */
+.more {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .more {
+    display: inline-block;
+  }
+
+  .timeScrubber[data-expanded='false'] .presets,
+  .timeScrubber[data-expanded='false'] .play,
+  .timeScrubber[data-expanded='false'] .eventCount,
+  .timeScrubber[data-expanded='false'] .rangeLabel {
+    display: none;
+  }
+
+  .timeScrubber[data-expanded='true'] .header {
+    flex-wrap: wrap;
+  }
+}
+
+/* Eco Disasters' captured snapshots on the bar (plan C2): a tick each under the strip, in the hazards colour (set inline from the tokens). */
+.ecoTicks {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.ecoTick {
+  position: absolute;
+  bottom: 1px;
+  width: 1px;
+  height: 5px;
+  transform: translateX(-50%);
+}
+
+.ecoSpan {
+  padding: 0 4px;
+  color: var(--sc-text-secondary);
+  font-size: 11px;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+/*
+ * The open psi mission's window (decision D-PW, PW92): a bar in Psi Watch's hue just under the track, as the brief's
+ * days are, so the slider's handles never hide it; its peak a tick rising toward the track. It never takes a click.
+ */
+.missionBand {
+  position: absolute;
+  top: calc(100% + 1px);
+  height: 5px;
+  min-width: 5px;
+  border-radius: 1px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.missionFill {
+  position: absolute;
+  inset: 0;
+  border-radius: 1px;
+  opacity: 0.75;
+}
+
+.missionPeak {
+  position: absolute;
+  top: -6px;
+  bottom: 0;
+  width: 2px;
+  margin-left: -1px;
+}

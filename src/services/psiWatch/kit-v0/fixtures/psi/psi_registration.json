@@ -1,0 +1,80 @@
+{
+ "fixture_note": "Real: a sealed rung 0 registration, published as it will be before its first scored run (D15 A). Rung 0 tests the method on uniform catalogues, so it names no place.",
+ "provenance": {
+  "real": "PSI-0002 as committed and sealed (5593bf4b33ef); the content is the file's bytes, so its sha256 is the tag's"
+ },
+ "event": {
+  "kind": 30023,
+  "pubkey": "86f824c3f1e67c60b1dc15ce110648c4de5c3fb879022fbbcc5e8deb720e402c",
+  "created_at": 1793019600,
+  "tags": [
+   [
+    "d",
+    "psi-reg-PSI-0002"
+   ],
+   [
+    "title",
+    "PSI-0002: The null on storm-sized catalogues"
+   ],
+   [
+    "registration",
+    "PSI-0002",
+    "0c8df8e34d99f47605366f31637e3022e9c4389767f7ff60b13cfa2df8c072df"
+   ],
+   [
+    "seal",
+    "5593bf4b33ef37ca3abe840f22935f3bc1bb9a35",
+    "2026-10-26T08:35:00+00:00"
+   ],
+   [
+    "rung",
+    "0"
+   ],
+   [
+    "t",
+    "psi_watch"
+   ],
+   [
+    "t",
+    "psi_registration"
+   ],
+   [
+    "t",
+    "experimental"
+   ],
+   [
+    "t",
+    "role:context"
+   ],
+   [
+    "t",
+    "category:psi"
+   ],
+   [
+    "t",
+    "category:psi.registration"
+   ],
+   [
+    "schema_version",
+    "0"
+   ],
+   [
+    "engine",
+    "skyfield 1.54, de440s; catalogue kit-v0 (2026-10-26 to 2026-11-25)"
+   ],
+   [
+    "published_at",
+    "1793019600"
+   ],
+   [
+    "client",
+    "Mecha Jono"
+   ],
+   [
+    "alt",
+    "Psi Watch registration PSI-0002 (Experimental), sealed before it is scored."
+   ]
+  ],
+  "content": "{\n \"written\": \"2026-10-26\",\n \"statistic\": \"rr_w\",\n \"direction\": \"two_sided\",\n \"secondary\": null,\n \"threshold\": {},\n \"controls\": {\n  \"calendar\": false,\n  \"shams\": false,\n  \"trend\": false\n },\n \"power\": null,\n \"multiplicity\": {\n  \"bh_family\": null,\n  \"holm_group\": null\n },\n \"code\": {\n  \"beu/psi_scry.py\": \"bc32b5d2baf7dfe6e9d7cbee66cb104c23dc8c06\",\n  \"beu/psi_stats.py\": \"de2ed5bb7d775ed0a36f7d011221cdbdd5dcaf3f\",\n  \"beu/psi_classes.py\": \"df474d23107bdd964f2fcdfd3e463189bcf4ffa6\",\n  \"beu/psi_sky.py\": \"163e05ce5d87c04c5b438583fbe20970dbc1a6c3\",\n  \"beu/psi_catalogue.py\": \"709dcb37387a59d7e4ab93c090cf0a0043e47f4c\",\n  \"beu/psi_registry.py\": \"8e355f79025c03bb0b931821a9cde2d5680b0de0\"\n },\n \"amends\": null,\n \"pass_rule\": null,\n \"place\": {\n  \"kind\": \"globe\",\n  \"zsp\": \"1.0\",\n  \"zsp_sha256\": \"e7582a61dc3c1bdbefd8c42f430940089186653ba05044b1f4f27331f06df071\",\n  \"min_expected\": 30\n },\n \"id\": \"PSI-0002\",\n \"rung\": \"0\",\n \"title\": \"The null on storm-sized catalogues\",\n \"hypothesis\": \"200 uniform catalogues of 2,985 storm episodes on 1932-2025, tested within 15 days of a 182.62-day cycle at a random phase against a trend-only baseline: the null's chance rates are uniform (KS p 0.05 or more) and the mean RR is within 0.98 to 1.02.\",\n \"E\": {\n  \"adapter\": \"kp_storm\",\n  \"version\": 1,\n  \"size\": 2985,\n  \"lons\": [\n   0.0\n  ],\n  \"thinning\": \"as kp_storm v1: one episode per run of storm days\"\n },\n \"S\": {\n  \"class\": \"synthetic_cycle\",\n  \"period_days\": 182.62\n },\n \"window\": [\n  -15,\n  15\n ],\n \"L\": 45,\n \"unit\": \"utc_day\",\n \"baseline\": {\n  \"trend\": \"spline\",\n  \"knot_years\": 2,\n  \"weekday\": false,\n  \"season\": []\n },\n \"null\": {\n  \"kind\": \"block_shift\",\n  \"unit_days\": 1,\n  \"draws\": 1000,\n  \"seed\": 2\n },\n \"split\": {\n  \"exploration\": [\n   \"1932-01-01\",\n   \"2025-12-31\"\n  ]\n }\n}\n"
+ }
+}

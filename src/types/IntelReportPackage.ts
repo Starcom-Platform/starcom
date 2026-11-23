@@ -1,0 +1,532 @@
+/**
+ * IntelReportPackage - Complete Intelligence Report Container
+ * 
+ * Combines lightweight metadata (for NFT/blockchain) with heavy content (DataPack)
+ * Optimized for marketplace efficiency and graph visualization.
+ */
+
+import { IntelReportData } from '../models/IntelReportData';
+import { IntelReportDataPack } from './IntelReportDataPack';
+import type { IntelReportUI, IntelReportPriority, CreateIntelReportInput } from './intel/IntelReportUI';
+import { normalizeReportPriority } from '../services/intel/reportPriority';
+
+/**
+ * Complete Intelligence Report Package
+ * 
+ * Architecture:
+ * - IntelReport: Lightweight metadata (stored on-chain in NFT)
+ * - IntelReportDataPack: Heavy content (stored off-chain, encrypted)
+ */
+// ===== FREEZE NOTICE =====
+// This interface (IntelReportPackage) and subordinate types are FROZEN while
+// the marketplace/fin-tech work is paused. Do not add fields without updating:
+// - docs/intelMarketExchange/PARKING_LOT.md
+// - docs/intelMarketExchange/DECENTRALIZATION_TRANSITION.md (resume plan)
+// Rationale: Deterministic signing + future on-chain anchoring depend on stable schema.
+// ==========================
+// PHASE 4 NOTE:
+// This package schema predates IntelReportUI consolidation. During migration we
+// expose a derived minimal view (IntelReportUIPackageAdapter) to map essential
+// fields into IntelReportUI shape for downstream consumers that only need the
+// unified report representation (e.g., marketplace compose previews).
+// After alignment, marketplace flows should consume IntelReportUI directly and
+// only invoke this container for heavy DataPack access.
+export interface IntelReportPackage {
+  // Package identification
+  packageId: string;
+  version: string;
+  createdAt: string; // ISO timestamp
+  updatedAt: string; // ISO timestamp
+  
+  // Lightweight metadata (suitable for NFT/blockchain storage)
+  metadata: IntelReportPackageMetadata;
+  
+  // Heavy content (off-chain storage)
+  dataPack: IntelReportDataPack;
+  
+  // Package integrity and security
+  signature: PackageSignature;
+  encryption?: PackageEncryption;
+  
+  // Access control
+  accessControl: PackageAccessControl;
+  
+  // Distribution metadata
+  distribution: DistributionMetadata;
+  
+  // Marketplace metadata (for NFT trading)
+  marketplace?: MarketplaceMetadata;
+}
+
+/**
+ * Lightweight IntelReport metadata (on-chain storage)
+ * 
+ * This is what gets stored in the NFT and on the blockchain.
+ * Keep this minimal to reduce gas costs.
+ */
+export interface IntelReportPackageMetadata {
+  // Core identification
+  id: string;
+  title: string;
+  summary: string; // Brief description (max 500 chars)
+  
+  // Priority and urgency
+  priority: 'ROUTINE' | 'PRIORITY' | 'IMMEDIATE' | 'FLASH';
+  
+  // Basic metadata
+  author: string; // Wallet address or pseudonym
+  timestamp: number; // Unix timestamp
+  expiresAt?: number; // Unix timestamp
+  
+  // Geographic context (for quick filtering)
+  location: {
+    lat: number;
+    lng: number;
+    region?: string; // e.g., "North America", "Europe"
+  };
+  
+  // Content summary
+  intelligence: {
+    type: 'OSINT' | 'SIGINT' | 'HUMINT' | 'GEOINT' | 'FININT' | 'TECHINT';
+    confidence: number; // 0.0 - 1.0
+    entitiesCount: number;
+    relationshipsCount: number;
+    keyTags: string[]; // Top 5 most important tags
+  };
+  
+  // Data pack reference
+  dataPackHash: string; // SHA-256 of the data pack
+  dataPackSize: number; // Size in bytes
+  dataPackLocation: string; // IPFS hash, URL, or storage reference
+  
+  // Compatibility with existing IntelReportData
+  legacyId?: string; // Maps to existing IntelReportData.id
+}
+
+// Transitional adapter — converts frozen package metadata into IntelReportUI-compatible minimal object.
+// Does NOT include full history or rich fields; heavy content remains in dataPack.
+export function toIntelReportUIFromPackage(pkg: IntelReportPackage): IntelReportUI {
+  return {
+    id: pkg.metadata.legacyId || pkg.metadata.id,
+    title: pkg.metadata.title,
+  content: typeof pkg.dataPack.content === 'string' ? pkg.dataPack.content : '',
+    summary: pkg.metadata.summary,
+    author: pkg.metadata.author,
+    category: pkg.metadata.intelligence.type || 'GENERAL',
+    tags: pkg.metadata.intelligence.keyTags || [],
+    status: 'DRAFT', // Packages currently represent distributable drafts; status pipeline TBD
+    createdAt: new Date(pkg.createdAt),
+    updatedAt: new Date(pkg.updatedAt),
+    latitude: pkg.metadata.location?.lat,
+    longitude: pkg.metadata.location?.lng,
+    conclusions: [],
+    recommendations: [],
+    methodology: [],
+    confidence: pkg.metadata.intelligence.confidence,
+    // The package's precedence, onto the report scale (plan item 1.9): FLASH and
+    // IMMEDIATE are Critical, PRIORITY is High, ROUTINE is Low.
+    priority: ((): IntelReportPriority | undefined => {
+      if (pkg.metadata.priority === 'FLASH') return 'CRITICAL';
+      return normalizeReportPriority(pkg.metadata.priority);
+    })(),
+    targetAudience: [],
+    sourceIntelIds: [],
+    version: 1,
+    manualSummary: true,
+    history: []
+  };
+}
+
+// Helper: Build CreateIntelReportInput from a package (used when importing a package and re-hydrating into the unified system)
+export function toCreateIntelReportInputFromPackage(pkg: IntelReportPackage): CreateIntelReportInput {
+  return {
+    title: pkg.metadata.title,
+    content: typeof pkg.dataPack.content === 'string' ? pkg.dataPack.content : '',
+    summary: pkg.metadata.summary,
+    category: pkg.metadata.intelligence.type || 'general',
+    tags: pkg.metadata.intelligence.keyTags || [],
+    status: 'DRAFT',
+    latitude: pkg.metadata.location?.lat,
+    longitude: pkg.metadata.location?.lng,
+    conclusions: [],
+    recommendations: [],
+    methodology: [],
+    confidence: pkg.metadata.intelligence.confidence,
+    priority: pkg.metadata.priority === 'FLASH' ? 'CRITICAL' : normalizeReportPriority(pkg.metadata.priority),
+    targetAudience: [],
+    sourceIntelIds: [],
+  // version is managed at IntelReportUI layer; omitted here
+  };
+}
+
+// Helper: Create a minimal IntelReportPackage metadata stub from an IntelReportUI for export.
+// Heavy DataPack assembly (file graphs, obsidian structures) is out of scope for this mapping; a thin placeholder dataPack is produced.
+export function toIntelReportPackageFromUI(report: IntelReportUI): Pick<IntelReportPackage, 'metadata' | 'packageId' | 'version' | 'createdAt' | 'updatedAt'> {
+  const nowIso = (report.updatedAt || report.createdAt || new Date()).toISOString();
+  return {
+    packageId: `pkg-${report.id}`,
+    version: '1.0.0',
+    createdAt: (report.createdAt || new Date()).toISOString(),
+    updatedAt: nowIso,
+    metadata: {
+      id: report.id,
+      title: report.title,
+      summary: report.summary || report.content.slice(0, 300),
+      // Classification not captured in frozen package; defaulting to UNCLASSIFIED for export
+      // The report scale, onto the package's precedence, which must have a value:
+      // Critical is IMMEDIATE, High is PRIORITY, anything else ROUTINE (plan item 1.9).
+      priority: report.priority === 'CRITICAL' ? 'IMMEDIATE' : report.priority === 'HIGH' ? 'PRIORITY' : 'ROUTINE',
+      author: report.author || 'unknown',
+      timestamp: report.createdAt ? report.createdAt.getTime() : Date.now(),
+      location: {
+        lat: report.latitude ?? 0,
+        lng: report.longitude ?? 0
+      },
+      intelligence: {
+        type: (() => {
+          const c = report.category?.toUpperCase();
+          const allowed = ['OSINT','SIGINT','HUMINT','GEOINT','FININT','TECHINT'] as const;
+          return (allowed as readonly string[]).includes(c || '') ? (c as typeof allowed[number]) : 'OSINT';
+        })(),
+        confidence: typeof report.confidence === 'number' ? report.confidence : 0.5,
+        entitiesCount: 0,
+        relationshipsCount: 0,
+        keyTags: report.tags.slice(0, 5)
+      },
+      dataPackHash: '',
+      dataPackSize: 0,
+      dataPackLocation: '',
+      legacyId: report.id
+    }
+  };
+}
+
+/**
+ * Digital signature for package integrity
+ */
+export interface PackageSignature {
+  // Standard cryptographic signature
+  algorithm: 'ecdsa-secp256k1' | 'ed25519' | 'rsa-pss';
+  signature: string; // Base64 encoded signature
+  publicKey: string; // Base64 encoded public key
+  
+  // Post-quantum cryptography (future-proof)
+  pqcSignature?: {
+    algorithm: 'ML-DSA-65' | 'ML-DSA-87';
+    signature: string; // Base64 encoded PQC signature
+    publicKey: string; // Base64 encoded PQC public key
+  };
+  
+  // Verification metadata
+  signedAt: string; // ISO timestamp
+  signedBy: string; // Signer identifier
+  
+  // Hash of signed content
+  contentHash: string; // SHA-256 of metadata + data pack
+}
+
+/**
+ * Package encryption configuration
+ */
+export interface PackageEncryption {
+  // Encryption algorithm
+  algorithm: 'aes-256-gcm' | 'chacha20-poly1305';
+  
+  // Key derivation
+  keyDerivation: {
+    algorithm: 'pbkdf2' | 'scrypt' | 'argon2';
+    salt: string; // Base64 encoded
+    iterations?: number; // For PBKDF2
+    memory?: number; // For Argon2 (KB)
+    parallelism?: number; // For Argon2
+  };
+  
+  // Encryption metadata
+  iv: string; // Base64 encoded initialization vector
+  encryptedAt: string; // ISO timestamp
+  
+  // Hybrid encryption (for multiple recipients)
+  recipients?: EncryptionRecipient[];
+  
+  // Post-quantum encryption
+  pqcEncryption?: {
+    algorithm: 'ML-KEM-768' | 'ML-KEM-1024';
+    encapsulatedKey: string; // Base64 encoded
+    ciphertext: string; // Base64 encoded
+  };
+}
+
+/**
+ * Encryption recipient (for hybrid encryption)
+ */
+export interface EncryptionRecipient {
+  recipientId: string; // Wallet address or identifier
+  publicKey: string; // Base64 encoded public key
+  encryptedKey: string; // Base64 encoded encrypted symmetric key
+  algorithm: 'rsa-oaep' | 'ecdh-es';
+}
+
+/**
+ * Access control configuration
+ */
+export interface PackageAccessControl {
+  // Public access
+  publicRead: boolean;
+  publicDownload: boolean;
+  
+  // Authentication requirements
+  requiresWalletAuth: boolean;
+  requiresSubscription: boolean;
+  
+  // Authorized entities
+  authorizedWallets?: string[]; // Wallet addresses
+  authorizedRoles?: string[]; // Role-based access
+  
+  // Temporal restrictions
+  availableFrom?: string; // ISO timestamp
+  availableUntil?: string; // ISO timestamp
+  
+  // Geographic restrictions
+  geoRestrictions?: {
+    allowedCountries?: string[]; // ISO country codes
+    blockedCountries?: string[]; // ISO country codes
+    allowedRegions?: string[];
+  };
+  
+  // Usage restrictions
+  maxDownloads?: number;
+  maxViews?: number;
+  redistributionAllowed: boolean;
+  commercialUseAllowed: boolean;
+  
+  /*
+   * `clearanceLevel?: string` and `needToKnow?: string[]` stood here under
+   * "Compliance requirements" — a required clearance and a need-to-know
+   * category list, for a compliance regime this application does not operate
+   * and cannot enforce. Neither was ever read.
+   */
+}
+
+/**
+ * Distribution and storage metadata
+ */
+export interface DistributionMetadata {
+  // Primary storage
+  primaryLocation: StorageLocation;
+  
+  // Backup/mirror locations
+  mirrors?: StorageLocation[];
+  
+  // Content delivery
+  cdnEnabled: boolean;
+  cacheControl: {
+    maxAge: number; // Seconds
+    public: boolean;
+    immutable: boolean;
+  };
+  
+  // Redundancy and availability
+  replicationFactor: number; // Number of copies
+  availabilityTarget: number; // 0.99, 0.999, etc.
+  
+  // Bandwidth and performance
+  maxBandwidth?: number; // Bytes per second
+  compressionEnabled: boolean;
+  
+  // Distribution tracking
+  downloadCount: number;
+  lastAccessed?: string; // ISO timestamp
+  popularityScore: number; // 0.0 - 1.0
+}
+
+/**
+ * Storage location specification
+ */
+export interface StorageLocation {
+  type: 'ipfs' | 'arweave' | 'storj' | 'filecoin' | 'aws' | 'custom';
+  address: string; // Hash, URL, or identifier
+  
+  // Storage metadata
+  pinned?: boolean; // For IPFS
+  permanent?: boolean; // For Arweave
+  
+  // Access configuration
+  accessKey?: string;
+  encryption: boolean;
+  
+  // Performance metrics
+  averageLatency?: number; // Milliseconds
+  availability?: number; // 0.0 - 1.0
+  bandwidth?: number; // Bytes per second
+}
+
+/**
+ * NFT Marketplace metadata
+ */
+export interface MarketplaceMetadata {
+  // Listing information
+  listingId?: string;
+  listed: boolean;
+  price?: {
+    amount: number;
+    currency: 'SOL' | 'USDC' | 'ETH' | 'CREDITS';
+    priceHistory?: PriceHistoryEntry[];
+  };
+  
+  // NFT details
+  nftMint?: string; // Solana mint address
+  tokenStandard: 'SPL' | 'ERC-721' | 'ERC-1155';
+  royalties: {
+    percentage: number; // 0-100
+    recipient: string; // Wallet address
+  };
+  
+  // Trading metadata
+  totalSales: number;
+  uniqueOwners: number;
+  floorPrice?: number;
+  lastSalePrice?: number;
+  lastSaleDate?: string; // ISO timestamp
+  
+  // Marketplace analytics
+  views: number;
+  favorites: number;
+  shares: number;
+  
+  // Collection information
+  collectionId?: string;
+  collectionName?: string;
+  collectionFloorPrice?: number;
+  
+  // Verification status
+  verified: boolean;
+  verifiedBy?: string;
+  verificationDate?: string; // ISO timestamp
+}
+
+/**
+ * Price history entry
+ */
+export interface PriceHistoryEntry {
+  price: number;
+  currency: string;
+  date: string; // ISO timestamp
+  buyer?: string; // Wallet address
+  seller?: string; // Wallet address
+  transactionHash?: string;
+}
+
+/**
+ * Package creation options
+ */
+export interface CreatePackageOptions {
+  // Source data
+  sourceIntelReport: IntelReportData; // Existing format
+  obsidianVaultPath?: string; // Path to Obsidian vault
+  additionalFiles?: Array<{
+    path: string;
+    content: string | ArrayBuffer;
+    mimeType: string;
+  }>;
+  
+  // Encryption settings
+  encryption?: {
+    enabled: boolean;
+    password?: string;
+    recipients?: string[]; // Wallet addresses
+  };
+  
+  // Compression settings
+  compression?: {
+    enabled: boolean;
+    algorithm: 'gzip' | 'brotli' | 'lz4';
+    level?: number;
+  };
+  
+  // Storage preferences
+  storage: {
+    primary: 'ipfs' | 'arweave' | 'storj';
+    mirrors?: ('ipfs' | 'arweave' | 'storj')[];
+    pin: boolean;
+  };
+  
+  // Marketplace settings
+  marketplace?: {
+    list: boolean;
+    price?: number;
+    currency?: 'SOL' | 'USDC' | 'ETH' | 'CREDITS';
+    royalties?: number; // Percentage
+  };
+  
+  // Access control
+  accessControl?: Partial<PackageAccessControl>;
+}
+
+/**
+ * Package loading options
+ */
+export interface LoadPackageOptions {
+  // Authentication
+  walletAddress?: string;
+  signature?: string;
+  
+  // Decryption
+  password?: string;
+  privateKey?: string;
+  
+  // Performance
+  cacheEnabled: boolean;
+  preloadContent: boolean;
+  
+  // Content filtering
+  loadMetadataOnly: boolean;
+  includeFiles?: string[]; // Specific file paths to load
+  excludeFiles?: string[]; // File paths to exclude
+  
+  // Verification
+  verifySignature: boolean;
+  verifyIntegrity: boolean;
+}
+
+/**
+ * Package validation result
+ */
+export interface PackageValidationResult {
+  valid: boolean;
+  errors: ValidationError[];
+  warnings: ValidationWarning[];
+  
+  // Detailed validation results
+  metadataValid: boolean;
+  dataPackValid: boolean;
+  signatureValid: boolean;
+  integrityValid: boolean;
+  accessAllowed: boolean;
+  
+  // Performance metrics
+  validationTime: number; // Milliseconds
+  
+  // Security assessment
+  securityScore: number; // 0.0 - 1.0
+  riskFactors: string[];
+}
+
+/**
+ * Validation error
+ */
+export interface ValidationError {
+  code: string;
+  message: string;
+  field?: string;
+  severity: 'critical' | 'major' | 'minor';
+}
+
+/**
+ * Validation warning
+ */
+export interface ValidationWarning {
+  code: string;
+  message: string;
+  field?: string;
+  recommendation?: string;
+}

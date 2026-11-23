@@ -1,0 +1,11 @@
+{
+  "name": "object-publishes",
+  "description": "Threat infrastructure, vessels, hashes. Nothing here touches a person.",
+  "subjectKind": "object",
+  "options": {
+    "isMock": false
+  },
+  "expect": {
+    "allowed": true
+  }
+}

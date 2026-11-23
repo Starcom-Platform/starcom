@@ -1,0 +1,66 @@
+/*
+ * Five buttons in a row, each its badge. The chosen one is framed in the
+ * level's own colour; focus is the interactive cyan, as everywhere.
+ */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--sc-text-secondary);
+}
+
+.hint {
+  color: var(--sc-text-muted);
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.option {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 9px;
+  border: 1px solid var(--sc-divider);
+  border-radius: 3px;
+  background: var(--sc-surface-input);
+  cursor: pointer;
+}
+
+.option:hover { border-color: var(--sc-input-border); }
+
+/* The radio itself is kept for the keyboard and screen readers, and not drawn. */
+.input {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.option:has(.input:checked) {
+  border-color: var(--level-colour);
+  background: var(--sc-surface-panel);
+}
+
+.option[data-level='unset'] { --level-colour: var(--sc-text-secondary); }
+.option[data-level='low'] { --level-colour: var(--sc-severity-1); }
+.option[data-level='medium'] { --level-colour: var(--sc-severity-2); }
+.option[data-level='high'] { --level-colour: var(--sc-severity-3); }
+.option[data-level='critical'] { --level-colour: var(--sc-severity-4); }
+
+.option:has(.input:focus-visible) {
+  outline: 2px solid var(--sc-focus);
+  outline-offset: 1px;
+}

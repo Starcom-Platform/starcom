@@ -1,0 +1,86 @@
+{
+  "generatedAt": "2026-11-08T09:31:46.464Z",
+  "rows": [
+    {
+      "failureMode": "Neighbor crack/gap",
+      "detector": "Topology shared-edge invariant",
+      "status": "pass",
+      "blocking": true,
+      "detail": "Shared-edge checks passed"
+    },
+    {
+      "failureMode": "Cross-country overlap (non-disputed)",
+      "detector": "Proxy: blocking QA failures in polygon parts",
+      "status": "pass",
+      "blocking": false,
+      "detail": "No blocking QA reasons"
+    },
+    {
+      "failureMode": "Dateline bridge artifact",
+      "detector": "Max edge ratio across parts",
+      "status": "warn",
+      "blocking": true,
+      "detail": "maxEdgeToMedianEdgeRatio=34.2007"
+    },
+    {
+      "failureMode": "Polar fan degeneration",
+      "detector": "Minimum triangle area threshold",
+      "status": "pass",
+      "blocking": true,
+      "detail": "minTriangleArea=0.00007053"
+    },
+    {
+      "failureMode": "Microstate disappearance",
+      "detector": "Golden offender microstate presence",
+      "status": "pass",
+      "blocking": true,
+      "detail": "Required microstate codes verified per LOD"
+    },
+    {
+      "failureMode": "Hole inversion/fill leak",
+      "detector": "Proxy: mandatory QA status",
+      "status": "pass",
+      "blocking": false,
+      "detail": "Advanced ring leak detector pending; proxy used"
+    },
+    {
+      "failureMode": "LOD pop drift",
+      "detector": "Total triangle monotonic growth by LOD",
+      "status": "pass",
+      "blocking": false,
+      "detail": "Monotonic LOD complexity proxy applied"
+    },
+    {
+      "failureMode": "Index overflow",
+      "detector": "Index format vs vertex count",
+      "status": "pass",
+      "blocking": true,
+      "detail": "Index format bounds validated"
+    },
+    {
+      "failureMode": "Large-complex-part triangulation integrity",
+      "detector": "Euler-formula triangle completeness + outward-winding check (constrained-Delaunay parts only)",
+      "status": "warn",
+      "blocking": false,
+      "detail": "triangle-count mismatch for RUS:1-0: raw=1199 expected=316 (pointCount=318, ringCount=1) — possible duplicate points or a triangulator regression; triangle-count mismatch for USA:12-0: raw=730 expected=182 (pointCount=184, ringCount=1) — possible duplicate points or a triangulator regression; triangle-count mismatch for RUS:1-0: raw=1565 expected=590 (pointCount=592, ringCount=1) — possible duplicate points or a triangulator regression; triangle-count mismatch for MEX: raw=218 expected=150 (pointCount=152, ringCount=1) — possible duplicate points or a triangulator regression; triangle-count mismatch for KAZ: raw=278 expected=154 (pointCount=156, ringCount=1) — possible duplicate points or a triangulator regression"
+    },
+    {
+      "failureMode": "Border/fill mismatch",
+      "detector": "Source coverage parity checks",
+      "status": "pass",
+      "blocking": true,
+      "detail": "Borders source present for requested LODs"
+    },
+    {
+      "failureMode": "Decode stutter on low-tier profile",
+      "detector": "Performance benchmark gate",
+      "status": "warn",
+      "blocking": false,
+      "detail": "Pending dedicated runtime benchmark stage"
+    }
+  ],
+  "summary": {
+    "blockingFailures": 0,
+    "totalRows": 11
+  }
+}

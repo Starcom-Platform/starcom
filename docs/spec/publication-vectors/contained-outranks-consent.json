@@ -1,0 +1,18 @@
+{
+  "name": "contained-outranks-consent",
+  "description": "Containment is checked ABOVE consent — a released decision is separate from a publish decision.",
+  "subjectKind": "person",
+  "options": {
+    "isMock": false,
+    "consentToPublishAboutPerson": true,
+    "subjectRole": "public-office",
+    "containment": {
+      "contained": true,
+      "reason": "person-subject-default"
+    }
+  },
+  "expect": {
+    "allowed": false,
+    "reasonMatches": "workspace"
+  }
+}

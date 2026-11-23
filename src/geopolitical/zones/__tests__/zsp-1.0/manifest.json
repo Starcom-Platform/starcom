@@ -1,0 +1,85 @@
+{
+  "zsp": "1.0",
+  "source": "ul_agent data/zones, exported by scripts/export_zsp_to_starcom.py",
+  "zones": [
+    {
+      "id": "zone:amazon-basin",
+      "name": "Amazon Basin Zone",
+      "file": "amazon-basin.zsp.geojson",
+      "sha256": "fbe5ede8874e0da8c30170defb9d585113053be65a5d5c4c5186f7d1c2e5ea24",
+      "bytes": 111984,
+      "licence": "CC-BY-4.0"
+    },
+    {
+      "id": "zone:bahia-coast-reconcavo",
+      "name": "Bahia Coast and Recôncavo Zone",
+      "file": "bahia-coast-reconcavo.zsp.geojson",
+      "sha256": "3f34879696225334f61c3b4749ec086c820000bda79089b54dc84d0fe183a846",
+      "bytes": 95056
+    },
+    {
+      "id": "zone:balkans",
+      "name": "Balkans Zone",
+      "file": "balkans.zsp.geojson",
+      "sha256": "689f86f407dd499914729903e900e8814165972663573370143a1c9f667a9c3e",
+      "bytes": 91531
+    },
+    {
+      "id": "zone:caucasus",
+      "name": "Caucasus Zone",
+      "file": "caucasus.zsp.geojson",
+      "sha256": "3cb26f9b904fccd0c34809928672bfb1e847b2a81cc0dfd889455b5bd0a64fc6",
+      "bytes": 48587
+    },
+    {
+      "id": "zone:central-american-dry-corridor",
+      "name": "Central American Dry Corridor Zone",
+      "file": "central-american-dry-corridor.zsp.geojson",
+      "sha256": "e5c877288ad762d42f616d58190aa4ef4c4c8ef403e8ed78ddd4905c5d35a06f",
+      "bytes": 92389,
+      "licence": "CC-BY-SA-4.0"
+    },
+    {
+      "id": "zone:east-african-rift",
+      "name": "East African Rift Zone",
+      "file": "east-african-rift.zsp.geojson",
+      "sha256": "ed18cb0db0490f1313e1956e5ed42a9715f291d34d2f326d87abd2b7af10c51c",
+      "bytes": 26555
+    },
+    {
+      "id": "zone:golden-triangle",
+      "name": "Golden Triangle Zone",
+      "file": "golden-triangle.zsp.geojson",
+      "sha256": "34c7b52479387e6ad278c247333bf4d1e95236b3f9958b13bad70b076a3b2097",
+      "bytes": 48476
+    },
+    {
+      "id": "zone:horn-of-africa",
+      "name": "Horn of Africa Zone",
+      "file": "horn-of-africa.zsp.geojson",
+      "sha256": "c0b12d4abf31bf6f0d765719081591b0bc2e6593d7ef9d34e500347fa1eb76cc",
+      "bytes": 55696
+    },
+    {
+      "id": "zone:levant",
+      "name": "Levant Zone",
+      "file": "levant.zsp.geojson",
+      "sha256": "7067626cf4f677957dc1c4deacc74629cf424c87f81afae9d1b03d42ed1657cf",
+      "bytes": 42410
+    },
+    {
+      "id": "zone:ring-of-fire",
+      "name": "Pacific Ring of Fire Zone",
+      "file": "ring-of-fire.zsp.geojson",
+      "sha256": "08e822e06e9766510552268474bbc72c64fb6bca28321b9fe024badfd8814258",
+      "bytes": 170434
+    },
+    {
+      "id": "zone:sahel",
+      "name": "Sahel Zone",
+      "file": "sahel.zsp.geojson",
+      "sha256": "de80324e9467182734994e85cc1a42972ae00509fd00af07052d82231f689fef",
+      "bytes": 60496
+    }
+  ]
+}

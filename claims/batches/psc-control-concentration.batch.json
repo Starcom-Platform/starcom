@@ -1,0 +1,32 @@
+{
+  "batch": "psc-control-concentration",
+  "generator": {
+    "script": "scripts/generators/psc-control-concentration.mjs",
+    "sha256": "444fe1cc699ae92bef3a0337086d9139073ffe59a69d92bb562ce27451d5f04e"
+  },
+  "inputs": [
+    {
+      "path": "public/data/psc-control.json",
+      "sha256": "6ae7fa7698efbe0ddfc2e519a86dae460ae270d250ac63d7989e4874ccdbb604",
+      "bytes": 6079571
+    }
+  ],
+  "criteria": "Corporate entity is recorded in the Companies House PSC snapshot as a person with significant control over at least 100 UK companies; the count is the number of distinct company numbers listed for it in that snapshot.",
+  "expected": {
+    "claimCount": 191,
+    "manifestSha256": "1bdf320a543cfa631f53d0f06d34078ef4f4595b2b651e51f35f28a61782b4d3"
+  },
+  "sampling": {
+    "seed": 7,
+    "sampleSize": 6,
+    "sampledIndices": [
+      9,
+      25,
+      58,
+      77,
+      117,
+      168
+    ]
+  },
+  "review": null
+}

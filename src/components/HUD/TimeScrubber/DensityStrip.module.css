@@ -1,0 +1,10 @@
+/* The time bar's density strip (OR17, OR25): across the axis, above the handles; the handles beneath stay clickable, so it takes no pointer. */
+.strip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 9px;
+  pointer-events: none;
+  opacity: 0.9;
+}

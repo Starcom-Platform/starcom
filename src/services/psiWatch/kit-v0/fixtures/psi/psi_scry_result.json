@@ -1,0 +1,122 @@
+{
+ "fixture_note": "INVENTED for the fixture: not a measurement, not a result, never to be shown as one. The shape is the draft schema's.",
+ "provenance": {
+  "invented": "every number, the registration id PSI-9001 and its sha256"
+ },
+ "event": {
+  "kind": 30023,
+  "pubkey": "86f824c3f1e67c60b1dc15ce110648c4de5c3fb879022fbbcc5e8deb720e402c",
+  "created_at": 1793019600,
+  "tags": [
+   [
+    "d",
+    "psi-scry-PSI-9001-1"
+   ],
+   [
+    "title",
+    "PSI-9001: full moons and conflict events, 2015-2025 (FIXTURE)"
+   ],
+   [
+    "registration",
+    "PSI-9001",
+    "0000000000000000000000000000000000000000000000000000000000000000"
+   ],
+   [
+    "a",
+    "30023:86f824c3f1e67c60b1dc15ce110648c4de5c3fb879022fbbcc5e8deb720e402c:psi-reg-PSI-9001"
+   ],
+   [
+    "rr",
+    "1.07",
+    "0.98",
+    "1.17",
+    "within one local day of the full moon"
+   ],
+   [
+    "chance",
+    "0.142",
+    "1000",
+    "block_shift"
+   ],
+   [
+    "detectable",
+    "yes",
+    "0.91",
+    "1.10"
+   ],
+   [
+    "control",
+    "calendar_day_15",
+    "1.02"
+   ],
+   [
+    "control",
+    "sham_cycle_27_3d",
+    "0.99"
+   ],
+   [
+    "verdict",
+    "missed"
+   ],
+   [
+    "zone_rr",
+    "zone:sahel/sector:nile-butana-barka",
+    "1.21",
+    "0.031",
+    "412"
+   ],
+   [
+    "zone_rr",
+    "zone:sahel",
+    "1.04",
+    "0.380",
+    "1880"
+   ],
+   [
+    "t",
+    "psi_watch"
+   ],
+   [
+    "t",
+    "psi_scry_result"
+   ],
+   [
+    "t",
+    "experimental"
+   ],
+   [
+    "t",
+    "role:context"
+   ],
+   [
+    "t",
+    "category:psi"
+   ],
+   [
+    "t",
+    "category:psi.scry"
+   ],
+   [
+    "schema_version",
+    "0"
+   ],
+   [
+    "engine",
+    "skyfield 1.54, de440s; catalogue kit-v0 (2026-10-26 to 2026-11-25)"
+   ],
+   [
+    "published_at",
+    "1793019600"
+   ],
+   [
+    "client",
+    "Mecha Jono"
+   ],
+   [
+    "alt",
+    "Psi Watch result (Experimental). FIXTURE. Full moons and conflict events, 2015-2025: rate ratio 1.07 (0.98 to 1.17) within one local day of the full moon; chance rate 0.142 against 1,000 shifts of the sky; missed its registered threshold."
+   ]
+  ],
+  "content": "FIXTURE. Full moons and conflict events, 2015-2025: rate ratio 1.07 (0.98 to 1.17) within one local day of the full moon; chance rate 0.142 against 1,000 shifts of the sky; missed its registered threshold."
+ }
+}

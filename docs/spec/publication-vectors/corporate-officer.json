@@ -1,0 +1,13 @@
+{
+  "name": "corporate-officer",
+  "description": "A named officer acting in a role they hold publicly and are accountable for.",
+  "subjectKind": "person",
+  "options": {
+    "isMock": false,
+    "subjectRole": "corporate-officer",
+    "consentToPublishAboutPerson": true
+  },
+  "expect": {
+    "allowed": true
+  }
+}

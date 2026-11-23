@@ -1,0 +1,25 @@
+/* The "?" beside a word: small, round, in the palette's cyan, and clearly a button. */
+.whatIs {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  margin-left: 4px;
+  padding: 0;
+  border: 1px solid rgba(0, 195, 219, 0.6);
+  border-radius: 50%;
+  background: transparent;
+  color: #00c3db;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+  vertical-align: middle;
+  cursor: help;
+}
+
+.whatIs:hover,
+.whatIs:focus-visible {
+  background: rgba(0, 195, 219, 0.15);
+  outline: none;
+}

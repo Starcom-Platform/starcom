@@ -1,0 +1,494 @@
+/* Floating Panel Manager Styles */
+.floatingPanelManager {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Allow clicks through to globe */
+}
+
+.panelOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  /* The overlay spans the viewport but must never introduce a scrollbar of its
+     own; panels clamp themselves inside the work area. */
+  overflow: hidden;
+  z-index: 2000;
+}
+
+/* Base Floating Panel */
+.floatingPanel {
+  position: absolute;
+  pointer-events: auto;
+  background: rgba(0, 10, 20, 0.95);
+  border: 2px solid #00c4ff;
+  border-radius: 8px;
+  box-shadow: 
+    0 8px 32px rgba(0, 196, 255, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  font-family: var(--sc-font-display);
+  color: #e0f7ff;
+  /*
+   * Sized against the work area rather than the viewport, so a panel never
+   * covers the rails or the top bar. --work-* is measured from the live layout
+   * by useWorkArea, so this stays right across breakpoints and the sub-rail
+   * toggle without enumerating either.
+   *
+   * The floor of 260px matters: below it the header's title and its two buttons
+   * collide, and a panel whose close button has been squeezed out is a panel the
+   * operator cannot dismiss.
+   */
+  min-width: 120px;
+  width: max-content;
+  max-width: min(400px, max(260px, calc(var(--work-width) - 32px)));
+
+  /* Never taller than the work area. The body scrolls instead — a panel that
+     grows past the bottom of the screen takes its own content with it. */
+  max-height: calc(var(--work-height) - 32px);
+  display: flex;
+  flex-direction: column;
+
+  animation: panelSlideIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: all 0.3s ease;
+  will-change: transform, opacity;
+  contain: layout style paint;
+}
+
+.floatingPanel:hover {
+  border-color: #38bdf8;
+  box-shadow: 
+    0 12px 40px rgba(0, 196, 255, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transform: scale(1.02); /* see @keyframes panelSlideIn for why no translate */
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .floatingPanel {
+    animation: none;
+    transition: none;
+  }
+  
+  .floatingPanel:hover {
+    transform: none;
+  }
+}
+
+/*
+ * The dragging state lives in one place now: `.floatingPanel.dragging`, further
+ * down. There was a second, weaker `.dragging` rule here setting the same
+ * properties with a slightly different shadow, so which one you got depended on
+ * source order — and editing the shadow in the obvious place changed nothing.
+ */
+
+/* Panel Types */
+.bubble {
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  max-width: 150px;
+  text-align: center;
+}
+
+.bubble /* Never shrinks. It carries the drag handle and the close button, which are the
+   only ways to move or dismiss a panel. */
+.panelHeader {
+  flex: 0 0 auto;
+  display: none; /* No header for bubbles */
+}
+
+.stream {
+  padding: 0;
+  width: 200px;
+  min-height: 120px;
+}
+
+.control {
+  padding: 0;
+  width: 300px;
+  min-height: 200px;
+}
+
+/*
+ * A view that needs room to be read. The timeline and the node graph draw on
+ * canvases 800px wide, and were registered as a 200px stream and a 300px
+ * control: the timeline's canvas drew at 154×77 and its header and footer
+ * wrapped. Sized from the work area, so it still fits between the rails.
+ */
+.wide {
+  padding: 0;
+  width: min(760px, calc(var(--work-width) - 32px));
+  max-width: calc(var(--work-width) - 32px);
+  min-height: 240px;
+}
+
+/* The views inside bring their own chrome and spacing. */
+.wide .panelContent {
+  padding: 0;
+}
+
+.alert {
+  padding: 0;
+  border-color: #ff4444;
+  box-shadow: 
+    0 8px 32px rgba(255, 68, 68, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  animation: panelSlideIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), pulseAlertOnce 1s ease-out;
+}
+
+/* Panel Header */
+.panelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: rgba(0, 196, 255, 0.1);
+  border-bottom: 1px solid rgba(0, 196, 255, 0.3);
+  border-radius: 6px 6px 0 0;
+  user-select: none;
+  transition: all 0.2s ease;
+}
+
+.panelHeader:hover {
+  background: rgba(0, 196, 255, 0.15);
+  cursor: grab;
+}
+
+.panelHeader:active {
+  cursor: grabbing;
+  background: rgba(0, 196, 255, 0.2);
+}
+
+.dragHandle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.dragIcon {
+  font-size: 12px;
+  color: rgba(0, 196, 255, 0.6);
+  line-height: 1;
+  cursor: grab;
+  transition: color 0.2s ease;
+}
+
+.panelHeader:hover .dragIcon {
+  color: rgba(0, 196, 255, 0.8);
+}
+
+.panelTitle {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #00c4ff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  flex: 1;
+}
+
+/* A second .dragging rule, duplicating the one above with a different shadow.
+   Left in place rather than merged — that is a visual decision, not this
+   change's business — but its centring transform is removed for the same
+   reason. */
+.floatingPanel.dragging {
+  transform: scale(1.05); /* no centring — the frame sets top-left directly */
+  box-shadow:
+    0 20px 60px rgba(0, 196, 255, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  border-color: #60a5fa;
+  /* Follow the pointer now, not 0.3s behind it. The base rule transitions `all`,
+     which eased every mid-drag move of left and top into a lag. */
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+
+  /*
+   * No z-index here at all.
+   *
+   * It was `z-index: 9999 !important` — a number outside the scale and a weight
+   * nothing can answer. Neither did anything: React sets each panel's z-index as
+   * an inline style, and an inline style beats every selector, so this rule could
+   * never apply no matter what number it named. The !important was there to win
+   * a fight it was not even in.
+   *
+   * Raising a dragged panel is FloatingPanelManager's job and it already does it
+   * — handleDragStart sets the panel to maxZ + 1 on mousedown. Panels also live
+   * inside .panelOverlay, which is position: fixed and therefore its own
+   * stacking context, so a dragged panel never needed to outrank anything
+   * outside the overlay in the first place.
+   */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floatingPanel.dragging {
+    transition: none;
+    transform: none;
+  }
+}
+
+.floatingPanel.dragging .panelHeader {
+  background: rgba(0, 196, 255, 0.25);
+  cursor: grabbing;
+}
+
+.floatingPanel.dragging .dragIcon {
+  color: #60a5fa;
+}
+
+/* Header Buttons */
+.headerButtons {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.minimizeBtn,
+
+.minimizeBtn,
+.closeBtn {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 3px;
+  transition: all 0.2s ease;
+  min-width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.minimizeBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #60a5fa;
+}
+
+.closeBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ff6b6b;
+}
+
+/* Panel Content */
+.panelContent {
+  padding: 12px;
+  font-size: 0.7rem;
+  line-height: 1.4;
+
+  /* Was `overflow: hidden`, which silently truncated any panel taller than its
+     container — the content was simply gone, with nothing to indicate it. The
+     header is a flex sibling and does not scroll, so the way out of a panel
+     stays put however far its body is scrolled. */
+  overflow: auto;
+  overscroll-behavior: contain;
+  min-height: 0;
+  flex: 1 1 auto;
+
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Minimized Panel State */
+.floatingPanel.minimized {
+  min-height: auto !important;
+  max-height: 40px;
+}
+
+.floatingPanel.minimized .panelContent {
+  max-height: 0;
+  padding: 0 12px;
+  opacity: 0;
+}
+
+.control .panelContent,
+.stream .panelContent {
+  padding: 16px;
+}
+
+/* Animations */
+/*
+ * No translate(-50%, -50%) here any more.
+ *
+ * It used to be correct: the manager positioned panels inline with that same
+ * transform, so the animation had to carry it or the panel jumped on the first
+ * frame. Placement now happens in FloatingPanelFrame, which clamps the panel
+ * into the work area and sets its top-left directly — so a centring transform
+ * in the animation shifts the panel back off by half its own size, and the
+ * measured result was a title bar 44px above the top of the screen.
+ */
+@keyframes panelSlideIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes pulseAlert {
+  0%, 100% {
+    box-shadow: 
+      0 8px 32px rgba(255, 68, 68, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    box-shadow: 
+      0 12px 40px rgba(255, 68, 68, 0.6),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+}
+
+@keyframes pulseAlertOnce {
+  0% {
+    box-shadow: 
+      0 8px 32px rgba(255, 68, 68, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    box-shadow: 
+      0 16px 48px rgba(255, 68, 68, 0.8),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    box-shadow: 
+      0 8px 32px rgba(255, 68, 68, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .floatingPanel {
+    max-width: 280px;
+    font-size: 0.65rem;
+  }
+  
+  .control {
+    width: 250px;
+  }
+  
+  .stream {
+    width: 180px;
+  }
+
+  /* Not held to the 280px cap: a wide view squeezed to it is what this type fixes. */
+  .floatingPanel.wide {
+    max-width: calc(var(--work-width) - 32px);
+  }
+}
+
+@media (max-width: 480px) {
+  .floatingPanel {
+    max-width: 220px;
+    font-size: 0.6rem;
+  }
+  
+  .panelContent {
+    padding: 8px;
+  }
+}
+
+/* Panel Content Styling */
+.panelContent h3 {
+  margin: 0 0 8px 0;
+  font-size: 0.8rem;
+  color: #00c4ff;
+  font-weight: 600;
+}
+
+.panelContent p {
+  margin: 0 0 6px 0;
+  color: #b8e6ff;
+}
+
+.panelContent .dataValue {
+  font-weight: 600;
+  color: #00ff88;
+  font-family: var(--sc-font-data);
+}
+
+.panelContent .dataLabel {
+  color: #94a3b8;
+  font-size: 0.65rem;
+}
+
+.panelContent .statusIndicator {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.panelContent .statusGood {
+  background: #00ff88;
+  box-shadow: 0 0 6px #00ff88;
+}
+
+.panelContent .statusWarning {
+  background: #ffaa00;
+  box-shadow: 0 0 6px #ffaa00;
+}
+
+.panelContent .statusCritical {
+  background: #ff4444;
+  box-shadow: 0 0 6px #ff4444;
+}
+
+/* Button Styles within Panels */
+.panelContent .actionBtn {
+  background: rgba(0, 196, 255, 0.2);
+  border: 1px solid #00c4ff;
+  color: #00c4ff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin: 2px;
+  font-family: inherit;
+}
+
+.panelContent .actionBtn:hover {
+  background: rgba(0, 196, 255, 0.3);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 196, 255, 0.3);
+}
+
+.panelContent .actionBtn:active {
+  transform: translateY(0);
+}
+
+/* Data Grid Layout */
+.panelContent .dataGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.panelContent .dataItem {
+  background: rgba(0, 40, 80, 0.3);
+  padding: 6px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 196, 255, 0.2);
+}
+
+/* Trend Indicators */
+.panelContent .trendUp {
+  color: #00ff88;
+}
+
+.panelContent .trendDown {
+  color: #ff6b6b;
+}
+
+.panelContent .trendStable {
+  color: #94a3b8;
+}

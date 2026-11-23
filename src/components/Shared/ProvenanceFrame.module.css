@@ -1,0 +1,42 @@
+/*
+ * MIL-STD-2525's frames on the tokens (interface-upgrade.md, "Provenance"):
+ * the line style says whose, and the colour backs it. Cyan is ours; the
+ * unknown yellow and the danger red come with a mark of their own.
+ */
+.frame {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  max-width: 100%;
+  min-width: 0;
+  padding: 2px 6px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+}
+
+.block {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.frame[data-provenance='own'] { border: 1px solid var(--sc-accent); }
+.frame[data-provenance='peer'] { border: 1px dashed var(--sc-accent); }
+.frame[data-provenance='unknown'] { border: 1px dotted var(--sc-unknown); }
+.frame[data-provenance='impersonation'] { border: 1px solid var(--sc-danger); }
+
+.mark { flex: none; }
+.unknownFill { fill: var(--sc-unknown); }
+.dangerFill { fill: var(--sc-danger); }
+/* The "?" and "!" are drawn, as glyphs are, in the dark of the globe behind. */
+.markStroke { fill: none; stroke: var(--sc-surface-globe); stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.markDot { fill: var(--sc-surface-globe); }
+
+/* Read aloud, not shown: whose it is. */
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

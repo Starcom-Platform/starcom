@@ -1,0 +1,13 @@
+{
+  "name": "capability-empty-refused",
+  "description": "No capability presented. Absence is not permission.",
+  "expect": {
+    "valid": false,
+    "reason": "empty-chain",
+    "holder": "1b84c5567b126440995d3ed5aaba0565d71e1834604819ff9c17f5e9d5dd078f"
+  },
+  "rootIssuer": "1b84c5567b126440995d3ed5aaba0565d71e1834604819ff9c17f5e9d5dd078f",
+  "resource": "mission:mission-vector-1",
+  "action": "dispatch",
+  "chain": []
+}

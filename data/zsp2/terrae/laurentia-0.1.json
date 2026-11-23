@@ -1,0 +1,383 @@
+{
+  "zsp": "2.0",
+  "terra": "terra:laurentia",
+  "grid": {
+    "width": 3600,
+    "height": 1800,
+    "cell": 0.1,
+    "origin": {
+      "lat": 90,
+      "lon": -180
+    },
+    "rows": "row 0 the northernmost",
+    "values": "at cell centres"
+  },
+  "files": {
+    "zones": "laurentia-zones-0.1.u32.bin.gz",
+    "sectors": "laurentia-sectors-0.1.u32.bin.gz"
+  },
+  "dtype": "uint32",
+  "endianness": "little",
+  "compression": "gzip",
+  "areaKm2": 38270067,
+  "zones": [
+    {
+      "id": "zone:canadian-shield",
+      "name": "Canadian Shield Zone",
+      "system": "shield",
+      "provinces": [
+        "Canadian Shield"
+      ],
+      "km2": 5659185
+    },
+    {
+      "id": "zone:hudson-bay",
+      "name": "Hudson Bay Zone",
+      "system": "basin",
+      "provinces": [
+        "Hudson Bay Basin",
+        "Hudson Strait Basin",
+        "Foxe Basin"
+      ],
+      "km2": 1246890
+    },
+    {
+      "id": "zone:arctic-archipelago",
+      "name": "Arctic Archipelago and Baffin Bay Zone",
+      "system": "basin",
+      "provinces": [
+        "Sverdrup Basin",
+        "Parry Island Foldbelt",
+        "Cornwallis Foldbelt",
+        "Ellesmere Foldbelt",
+        "Boothia Basin",
+        "South Arctic Basin",
+        "Wollaston Basin",
+        "Banks Basin",
+        "Minto Arch",
+        "Arctic Coastal Shelf",
+        "Baffin Basin",
+        "West Greenland Basin",
+        "Kane Basin"
+      ],
+      "km2": 2463741
+    },
+    {
+      "id": "zone:greenland-shield",
+      "name": "Greenland Shield Zone",
+      "system": "shield",
+      "provinces": [
+        "Greenland Shield",
+        "North Greenland Platform",
+        "Southeast Greenland Basin"
+      ],
+      "km2": 2186937
+    },
+    {
+      "id": "zone:east-greenland",
+      "name": "East Greenland Caledonides Zone",
+      "system": "orogen",
+      "provinces": [
+        "East Greenland Rift Basins",
+        "East Greenland Foldbelt",
+        "North Greenland Foldbelt",
+        "Wandel Sea Basin"
+      ],
+      "km2": 630001
+    },
+    {
+      "id": "zone:mackenzie",
+      "name": "Mackenzie Basin and Mountains Zone",
+      "system": "basin",
+      "provinces": [
+        "Mackenzie Delta",
+        "Mackenzie Delta Slope",
+        "Northern Interior Basins",
+        "Mackenzie Foldbelt",
+        "Yukon Basin",
+        "Canada Basin-Beaufort Slope OCS",
+        "Beaufort Shelf OCS"
+      ],
+      "km2": 959501
+    },
+    {
+      "id": "zone:interior-plains",
+      "name": "Interior Plains: Alberta and Williston Zone",
+      "system": "basin",
+      "provinces": [
+        "Alberta Basin",
+        "Williston Basin",
+        "Sioux Arch",
+        "North-Central Montana",
+        "Powder River Basin"
+      ],
+      "km2": 2097117
+    },
+    {
+      "id": "zone:cordillera",
+      "name": "Canadian Cordillera Zone",
+      "system": "orogen",
+      "provinces": [
+        "Canadian Cordillera",
+        "Rocky Mountain Deformed Belt",
+        "Whitehorse Basin",
+        "Bowser Basin",
+        "Quesnel Basin",
+        "Georgia Basin",
+        "Queen Charlotte Basin",
+        "Tofino Basin"
+      ],
+      "km2": 1321761
+    },
+    {
+      "id": "zone:alaska-bering",
+      "name": "Alaska and the Bering Shelf Zone",
+      "system": "orogen",
+      "provinces": [
+        "Northern Alaska",
+        "Central Alaska",
+        "Southern Alaska",
+        "Cook Inlet OCS",
+        "Gulf of Alaska Shelf OCS",
+        "Shumagin-Kodiak Shelf OCS",
+        "Chukchi Shelf OCS",
+        "Chukchi Borderland OCS",
+        "Hope Basin OCS",
+        "Bering Shelf-Margin Basins OCS",
+        "Navarin Basin OCS",
+        "North Aleutian Basin OCS",
+        "St. George Basin OCS",
+        "Norton Basin OCS",
+        "St. Matthew-Hall Basin OCS",
+        "Aleutian Arc OCS"
+      ],
+      "km2": 4401123
+    },
+    {
+      "id": "zone:pacific-coast",
+      "name": "Pacific Coast Ranges and the Central Valley Zone",
+      "system": "orogen",
+      "provinces": [
+        "Western Oregon-Washington",
+        "Eastern Oregon-Washington",
+        "Klamath-Sierra Nevada",
+        "Northern Coastal",
+        "Sonoma-Livermore Basin",
+        "Sacramento Basin",
+        "San Joaquin Basin",
+        "Central Coastal",
+        "Santa Maria Basin",
+        "Ventura Basin",
+        "Los Angeles Basin",
+        "San Diego-Oceanside",
+        "Pacific Northwest OCS",
+        "Central California OCS",
+        "Santa Barbara-Ventura Basin OCS",
+        "Los Angeles Basin OCS",
+        "Inner Borderland OCS",
+        "Outer Borderland OCS"
+      ],
+      "km2": 710139
+    },
+    {
+      "id": "zone:basin-and-range",
+      "name": "Basin and Range and the Gulf of California Zone",
+      "system": "rift",
+      "provinces": [
+        "Western Great Basin",
+        "Eastern Great Basin",
+        "Idaho-Snake River Downwarp",
+        "Southern Arizona-Southwestern New Mexico",
+        "South-Central New Mexico",
+        "Sonoran Basin and Range",
+        "Chihuahuan Basin and Range",
+        "Salton Trough",
+        "Baja California Backbone",
+        "Vizcaino Basin",
+        "Purisima-Iray Basin",
+        "Guaymas-Topolobambo Basin"
+      ],
+      "km2": 1728406
+    },
+    {
+      "id": "zone:rockies-colorado-plateau",
+      "name": "Rocky Mountains and the Colorado Plateau Zone",
+      "system": "orogen",
+      "provinces": [
+        "Uinta-Piceance Basins",
+        "Paradox Basin",
+        "San Juan Basin",
+        "Northern Arizona",
+        "Albuquerque-Santa Fe Rift",
+        "Montana Thrust Belt",
+        "Southwest Montana",
+        "Big Horn Basin",
+        "Wind River Basin",
+        "Wyoming Thrust Belt",
+        "Southwestern Wyoming",
+        "Park Basins",
+        "Raton Basin-Rio Grande Uplift",
+        "Pedernal Uplift"
+      ],
+      "km2": 876750
+    },
+    {
+      "id": "zone:great-plains",
+      "name": "Great Plains and the Midcontinent Zone",
+      "system": "basin",
+      "provinces": [
+        "Denver Basin",
+        "Las Animas Arch",
+        "Palo Duro Basin",
+        "Andarko Basin",
+        "Cambridge Arch-Central Kansas Uplift",
+        "Salina Basin",
+        "Nemaha Uplift",
+        "Forest City Basin",
+        "Sedgwick Basin",
+        "Cherokee Platform",
+        "Southern Oklahoma",
+        "Arkoma Basin",
+        "Ozark Uplift",
+        "Iowa Shelf",
+        "Bend Arch-Fort Worth Basin",
+        "Permian Basin",
+        "Marathon Thrust Belt"
+      ],
+      "km2": 1635658
+    },
+    {
+      "id": "zone:gulf-of-mexico",
+      "name": "Gulf of Mexico Basin and Yucatán Zone",
+      "system": "basin",
+      "provinces": [
+        "Western Gulf",
+        "East Texas Basin",
+        "Louisiana-Mississippi Salt Basins",
+        "Gulf Cenozoic OCS",
+        "Gulf Mesozoic OCS",
+        "Florida Peninsula",
+        "Burgos Basin",
+        "Campeche-Sigsbee Salt Basin",
+        "Tampico-Misantla Basin",
+        "Veracruz Basin",
+        "Yucatan Platform",
+        "Saline-Comalcalco Basin",
+        "Villahermosa Uplift",
+        "Macuspana Basin",
+        "Tuxla Uplift"
+      ],
+      "km2": 2623513
+    },
+    {
+      "id": "zone:great-lakes",
+      "name": "Great Lakes and the Interior Lowlands Zone",
+      "system": "basin",
+      "provinces": [
+        "Superior",
+        "Michigan Basin",
+        "Illinois Basin",
+        "Cincinnati Arch",
+        "Algonquin Arch-Michigan Basin",
+        "St. Lawrence Lowlands"
+      ],
+      "km2": 1219400
+    },
+    {
+      "id": "zone:appalachians",
+      "name": "Appalachians Zone",
+      "system": "orogen",
+      "provinces": [
+        "Appalachian Basin",
+        "Blue Ridge Thrust Belt",
+        "Piedmont",
+        "Adirondack Uplift",
+        "New England",
+        "Appalachian Foldbelt",
+        "Magdalen Basin",
+        "Sidney Basin",
+        "Fundy Basin",
+        "Anticosti Basin",
+        "Black Warrior Basin"
+      ],
+      "km2": 1821061
+    },
+    {
+      "id": "zone:atlantic-margin",
+      "name": "Atlantic Margin and the Grand Banks Zone",
+      "system": "basin",
+      "provinces": [
+        "Atlantic Coastal Plain",
+        "Atlantic Mesozoic OCS",
+        "Georges Bank",
+        "Scotian Shelf",
+        "Southern Newfoundland Shelf",
+        "Labrador-Newfoundland Shelf"
+      ],
+      "km2": 1510369
+    },
+    {
+      "id": "zone:sierras-madres",
+      "name": "Sierras Madres and the Mexican Plateau Zone",
+      "system": "orogen",
+      "provinces": [
+        "Sierra Madre Occidental Volcanic Plateau",
+        "Mazatlan Basin",
+        "Sinaloa",
+        "Central Mesa",
+        "Torrecon-Sierra Madre Oriental Foldbelt",
+        "Parras Basin",
+        "Coahuila Platform",
+        "Burros Uplift",
+        "Sabinas Basin",
+        "Tamaulipas Arch",
+        "Magiscatzin Basin",
+        "Chicontepec Basin",
+        "Sierra Madre Oriental Foldbelt",
+        "Trans-mexican Neovolcanic Axis",
+        "Jalisco-Oaxaca Platform",
+        "Guerrero Basin"
+      ],
+      "km2": 1302572
+    },
+    {
+      "id": "zone:central-america",
+      "name": "Central American Isthmus Zone",
+      "system": "arc",
+      "provinces": [
+        "Sierra Madre de Chiapas-Peten Foldbelt",
+        "Chiapas Massif",
+        "Chiapas Massif-Nuclear Central America",
+        "Maya Mountains",
+        "Middle America Province"
+      ],
+      "km2": 616789
+    },
+    {
+      "id": "zone:caribbean",
+      "name": "Caribbean Sea and the Antilles Zone",
+      "system": "arc",
+      "provinces": [
+        "Greater Antilles Deformed Belt",
+        "North Carribean Deformed Belt",
+        "Puerto Rico Trench",
+        "Bahama Platform",
+        "Cayman Trough",
+        "Cayman Ridge",
+        "Yucatan Basin",
+        "North Nicaraguan Rise",
+        "South Nicaraguan Rise",
+        "Columbian Basin",
+        "Venezuelan Basin",
+        "Beata Ridge",
+        "Aves Ridge",
+        "Neogene Volcanic Belt",
+        "Lesser Antilles Deformed Belt"
+      ],
+      "km2": 3259154
+    }
+  ],
+  "sectors": 275,
+  "bytes": 701767,
+  "points": 27095
+}

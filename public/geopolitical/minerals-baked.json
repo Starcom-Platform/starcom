@@ -1,0 +1,530 @@
+{
+  "source": "USGS National Minerals Information Center, Mineral Commodity Summaries 2026 Data Release",
+  "sourceUrl": "https://www.sciencebase.gov/catalog/item/69837e43b66b01367d7ec7c7",
+  "doi": "10.5066/P1WKQ63T",
+  "license": "CC0-1.0 (public domain)",
+  "vintage": "2024 real mine production data (as published in the 2026 summary release)",
+  "note": "A curated subset (copper, gold, iron ore, lithium, rare earths) of the USGS dataset's 90+ commodities, picked as globally significant minerals for the ResourceZones visualization. Baked in rather than fetched live because USGS publishes this annually, not continuously \u2014 refresh when the next Mineral Commodity Summaries data release is available.",
+  "records": [
+    {
+      "countryISO3": "CHL",
+      "countryName": "Chile",
+      "commodity": "copper",
+      "value": 5510.0,
+      "unit": "thousand metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "COD",
+      "countryName": "Congo (Kinshasa)",
+      "commodity": "copper",
+      "value": 2990.0,
+      "unit": "thousand metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "PER",
+      "countryName": "Peru",
+      "commodity": "copper",
+      "value": 2740.0,
+      "unit": "thousand metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "CHN",
+      "countryName": "China",
+      "commodity": "copper",
+      "value": 1840.0,
+      "unit": "thousand metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "USA",
+      "countryName": "United States",
+      "commodity": "copper",
+      "value": 1050.0,
+      "unit": "thousand metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "RUS",
+      "countryName": "Russia",
+      "commodity": "copper",
+      "value": 1020.0,
+      "unit": "thousand metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "IDN",
+      "countryName": "Indonesia",
+      "commodity": "copper",
+      "value": 1010.0,
+      "unit": "thousand metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "ZMB",
+      "countryName": "Zambia",
+      "commodity": "copper",
+      "value": 823.0,
+      "unit": "thousand metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "AUS",
+      "countryName": "Australia",
+      "commodity": "copper",
+      "value": 765.0,
+      "unit": "thousand metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "KAZ",
+      "countryName": "Kazakhstan",
+      "commodity": "copper",
+      "value": 724.0,
+      "unit": "thousand metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "MEX",
+      "countryName": "Mexico",
+      "commodity": "copper",
+      "value": 717.0,
+      "unit": "thousand metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "CAN",
+      "countryName": "Canada",
+      "commodity": "copper",
+      "value": 515.0,
+      "unit": "thousand metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "POL",
+      "countryName": "Poland",
+      "commodity": "copper",
+      "value": 400.0,
+      "unit": "thousand metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "IND",
+      "countryName": "India",
+      "commodity": "copper",
+      "value": 27.0,
+      "unit": "thousand metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "CHN",
+      "countryName": "China",
+      "commodity": "gold",
+      "value": 377.0,
+      "unit": "metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "RUS",
+      "countryName": "Russia",
+      "commodity": "gold",
+      "value": 310.0,
+      "unit": "metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "AUS",
+      "countryName": "Australia",
+      "commodity": "gold",
+      "value": 284.0,
+      "unit": "metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "CAN",
+      "countryName": "Canada",
+      "commodity": "gold",
+      "value": 200.0,
+      "unit": "metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "USA",
+      "countryName": "United States",
+      "commodity": "gold",
+      "value": 163.0,
+      "unit": "metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "GHA",
+      "countryName": "Ghana",
+      "commodity": "gold",
+      "value": 149.0,
+      "unit": "metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "MEX",
+      "countryName": "Mexico",
+      "commodity": "gold",
+      "value": 140.0,
+      "unit": "metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "KAZ",
+      "countryName": "Kazakhstan",
+      "commodity": "gold",
+      "value": 130.0,
+      "unit": "metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "UZB",
+      "countryName": "Uzbekistan",
+      "commodity": "gold",
+      "value": 129.0,
+      "unit": "metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "PER",
+      "countryName": "Peru",
+      "commodity": "gold",
+      "value": 108.0,
+      "unit": "metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "IDN",
+      "countryName": "Indonesia",
+      "commodity": "gold",
+      "value": 94.0,
+      "unit": "metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "ZAF",
+      "countryName": "South Africa",
+      "commodity": "gold",
+      "value": 90.0,
+      "unit": "metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "BRA",
+      "countryName": "Brazil",
+      "commodity": "gold",
+      "value": 82.0,
+      "unit": "metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "AUS",
+      "countryName": "Australia",
+      "commodity": "lithium",
+      "value": 82700.0,
+      "unit": "metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "CHL",
+      "countryName": "Chile",
+      "commodity": "lithium",
+      "value": 48900.0,
+      "unit": "metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "CHN",
+      "countryName": "China",
+      "commodity": "lithium",
+      "value": 41400.0,
+      "unit": "metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "ZWE",
+      "countryName": "Zimbabwe",
+      "commodity": "lithium",
+      "value": 20000.0,
+      "unit": "metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "ARG",
+      "countryName": "Argentina",
+      "commodity": "lithium",
+      "value": 13800.0,
+      "unit": "metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "BRA",
+      "countryName": "Brazil",
+      "commodity": "lithium",
+      "value": 10200.0,
+      "unit": "metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "CAN",
+      "countryName": "Canada",
+      "commodity": "lithium",
+      "value": 4820.0,
+      "unit": "metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "MLI",
+      "countryName": "Mali",
+      "commodity": "lithium",
+      "value": 770.0,
+      "unit": "metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "PRT",
+      "countryName": "Portugal",
+      "commodity": "lithium",
+      "value": 380.0,
+      "unit": "metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "CHN",
+      "countryName": "China",
+      "commodity": "rare_earths",
+      "value": 270000.0,
+      "unit": "metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "USA",
+      "countryName": "United States",
+      "commodity": "rare_earths",
+      "value": 45500.0,
+      "unit": "metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "AUS",
+      "countryName": "Australia",
+      "commodity": "rare_earths",
+      "value": 29000.0,
+      "unit": "metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "MMR",
+      "countryName": "Burma",
+      "commodity": "rare_earths",
+      "value": 27000.0,
+      "unit": "metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "IND",
+      "countryName": "India",
+      "commodity": "rare_earths",
+      "value": 2900.0,
+      "unit": "metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "RUS",
+      "countryName": "Russia",
+      "commodity": "rare_earths",
+      "value": 2600.0,
+      "unit": "metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "THA",
+      "countryName": "Thailand",
+      "commodity": "rare_earths",
+      "value": 2100.0,
+      "unit": "metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "NGA",
+      "countryName": "Nigeria",
+      "commodity": "rare_earths",
+      "value": 1500.0,
+      "unit": "metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "MDG",
+      "countryName": "Madagascar",
+      "commodity": "rare_earths",
+      "value": 1400.0,
+      "unit": "metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "BRA",
+      "countryName": "Brazil",
+      "commodity": "rare_earths",
+      "value": 560.0,
+      "unit": "metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "VNM",
+      "countryName": "Vietnam",
+      "commodity": "rare_earths",
+      "value": 300.0,
+      "unit": "metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "MYS",
+      "countryName": "Malaysia",
+      "commodity": "rare_earths",
+      "value": 140.0,
+      "unit": "metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "AUS",
+      "countryName": "Australia",
+      "commodity": "iron_ore",
+      "value": 982000.0,
+      "unit": "thousand metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "BRA",
+      "countryName": "Brazil",
+      "commodity": "iron_ore",
+      "value": 428000.0,
+      "unit": "thousand metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "CHN",
+      "countryName": "China",
+      "commodity": "iron_ore",
+      "value": 293000.0,
+      "unit": "thousand metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "IND",
+      "countryName": "India",
+      "commodity": "iron_ore",
+      "value": 282000.0,
+      "unit": "thousand metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "RUS",
+      "countryName": "Russia",
+      "commodity": "iron_ore",
+      "value": 91000.0,
+      "unit": "thousand metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "IRN",
+      "countryName": "Iran",
+      "commodity": "iron_ore",
+      "value": 90000.0,
+      "unit": "thousand metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "CAN",
+      "countryName": "Canada",
+      "commodity": "iron_ore",
+      "value": 70000.0,
+      "unit": "thousand metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "ZAF",
+      "countryName": "South Africa",
+      "commodity": "iron_ore",
+      "value": 64000.0,
+      "unit": "thousand metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "UKR",
+      "countryName": "Ukraine",
+      "commodity": "iron_ore",
+      "value": 54700.0,
+      "unit": "thousand metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "USA",
+      "countryName": "United States",
+      "commodity": "iron_ore",
+      "value": 45100.0,
+      "unit": "thousand metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "KAZ",
+      "countryName": "Kazakhstan",
+      "commodity": "iron_ore",
+      "value": 37000.0,
+      "unit": "thousand metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "SWE",
+      "countryName": "Sweden",
+      "commodity": "iron_ore",
+      "value": 25000.0,
+      "unit": "thousand metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "PER",
+      "countryName": "Peru",
+      "commodity": "iron_ore",
+      "value": 19800.0,
+      "unit": "thousand metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "CHL",
+      "countryName": "Chile",
+      "commodity": "iron_ore",
+      "value": 18000.0,
+      "unit": "thousand metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "TUR",
+      "countryName": "Turkey",
+      "commodity": "iron_ore",
+      "value": 17000.0,
+      "unit": "thousand metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "MRT",
+      "countryName": "Mauritania",
+      "commodity": "iron_ore",
+      "value": 14300.0,
+      "unit": "thousand metric tons",
+      "year": "2024"
+    },
+    {
+      "countryISO3": "MEX",
+      "countryName": "Mexico",
+      "commodity": "iron_ore",
+      "value": 7800.0,
+      "unit": "thousand metric tons",
+      "year": "2024"
+    }
+  ]
+}

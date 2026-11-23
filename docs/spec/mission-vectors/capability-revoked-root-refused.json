@@ -1,0 +1,44 @@
+{
+  "name": "capability-revoked-root-refused",
+  "description": "The root grant itself is withdrawn. Nothing downstream can survive it, because every chain is rooted here.",
+  "expect": {
+    "valid": false,
+    "reason": "revoked",
+    "holder": "1b84c5567b126440995d3ed5aaba0565d71e1834604819ff9c17f5e9d5dd078f"
+  },
+  "rootIssuer": "1b84c5567b126440995d3ed5aaba0565d71e1834604819ff9c17f5e9d5dd078f",
+  "resource": "mission:mission-vector-1",
+  "action": "dispatch",
+  "chain": [
+    {
+      "kind": 30081,
+      "created_at": 1768435200,
+      "tags": [
+        [
+          "d",
+          "cap:mission:mission-vector-1:1b84c5567b126440995d3ed5aaba0565d71e1834604819ff9c17f5e9d5dd078f"
+        ],
+        [
+          "resource",
+          "mission:mission-vector-1"
+        ],
+        [
+          "action",
+          "dispatch"
+        ],
+        [
+          "holder",
+          "1b84c5567b126440995d3ed5aaba0565d71e1834604819ff9c17f5e9d5dd078f"
+        ],
+        [
+          "revoked",
+          "left the operation"
+        ]
+      ],
+      "content": "",
+      "pubkey": "1b84c5567b126440995d3ed5aaba0565d71e1834604819ff9c17f5e9d5dd078f",
+      "id": "b026319ec609e8860e6a259ee9163424c6f68edefd03ff2dae4af8c354605790",
+      "sig": "1ffc1b2f019e4646b3208ce1d13e111939f1ae01c6eb9136ffc3986b519884b5e7e83d184d37fb04dbaede57a042d0087a5d0c1ad51b79da1fbc2e0b55d5199b"
+    }
+  ]
+}

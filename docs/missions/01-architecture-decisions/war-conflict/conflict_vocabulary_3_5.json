@@ -1,0 +1,312 @@
+{
+ "theatres": [
+  {
+   "slug": "russia-ukraine",
+   "name": "Russia–Ukraine war",
+   "region": "Europe",
+   "countries": [
+    "ua",
+    "ru"
+   ]
+  },
+  {
+   "slug": "turkey-pkk",
+   "name": "Turkey and the PKK",
+   "region": "Middle East",
+   "countries": [
+    "tr",
+    "iq",
+    "sy"
+   ]
+  },
+  {
+   "slug": "israel-palestine",
+   "name": "Israel–Palestine: Gaza and the West Bank",
+   "region": "Middle East",
+   "countries": [
+    "ps",
+    "il"
+   ]
+  },
+  {
+   "slug": "iraq",
+   "name": "Iraq",
+   "region": "Middle East",
+   "countries": [
+    "iq"
+   ]
+  },
+  {
+   "slug": "israel-lebanon",
+   "name": "Israel–Lebanon and Hezbollah",
+   "region": "Middle East",
+   "countries": [
+    "lb",
+    "il"
+   ]
+  },
+  {
+   "slug": "iran",
+   "name": "Iran",
+   "region": "Middle East",
+   "countries": [
+    "ir"
+   ]
+  },
+  {
+   "slug": "yemen-red-sea",
+   "name": "Yemen and the Red Sea",
+   "region": "Middle East",
+   "countries": [
+    "ye"
+   ]
+  },
+  {
+   "slug": "syria",
+   "name": "Syria",
+   "region": "Middle East",
+   "countries": [
+    "sy"
+   ]
+  },
+  {
+   "slug": "afghanistan-pakistan",
+   "name": "Afghanistan–Pakistan war",
+   "region": "South Asia",
+   "countries": [
+    "af",
+    "pk"
+   ]
+  },
+  {
+   "slug": "pakistan-insurgency",
+   "name": "Pakistan insurgencies (Balochistan, Khyber Pakhtunkhwa)",
+   "region": "South Asia",
+   "countries": [
+    "pk"
+   ]
+  },
+  {
+   "slug": "india-pakistan",
+   "name": "India–Pakistan",
+   "region": "South Asia",
+   "countries": [
+    "in",
+    "pk"
+   ]
+  },
+  {
+   "slug": "myanmar",
+   "name": "Myanmar civil war",
+   "region": "Asia",
+   "countries": [
+    "mm"
+   ]
+  },
+  {
+   "slug": "korea",
+   "name": "Korean peninsula",
+   "region": "Asia",
+   "countries": [
+    "kp",
+    "kr"
+   ]
+  },
+  {
+   "slug": "taiwan-scs",
+   "name": "Taiwan Strait and South China Sea",
+   "region": "Asia",
+   "countries": [
+    "tw",
+    "cn",
+    "ph"
+   ]
+  },
+  {
+   "slug": "thailand-cambodia",
+   "name": "Cambodia–Thailand border",
+   "region": "Asia",
+   "countries": [
+    "kh",
+    "th"
+   ]
+  },
+  {
+   "slug": "armenia-azerbaijan",
+   "name": "Armenia–Azerbaijan",
+   "region": "Europe",
+   "countries": [
+    "am",
+    "az"
+   ]
+  },
+  {
+   "slug": "south-sudan",
+   "name": "South Sudan",
+   "region": "Africa",
+   "countries": [
+    "ss"
+   ]
+  },
+  {
+   "slug": "sudan",
+   "name": "Sudanese civil war",
+   "region": "Africa",
+   "countries": [
+    "sd"
+   ]
+  },
+  {
+   "slug": "ethiopia-eritrea",
+   "name": "Ethiopia and Eritrea",
+   "region": "Horn of Africa",
+   "countries": [
+    "et",
+    "er"
+   ]
+  },
+  {
+   "slug": "somalia",
+   "name": "Somalia: al-Shabaab and piracy",
+   "region": "Horn of Africa",
+   "countries": [
+    "so"
+   ]
+  },
+  {
+   "slug": "drc",
+   "name": "Eastern DR Congo",
+   "region": "Africa",
+   "countries": [
+    "cd"
+   ]
+  },
+  {
+   "slug": "sahel",
+   "name": "Sahel insurgencies (Mali, Burkina Faso, Niger)",
+   "region": "Africa",
+   "countries": [
+    "ml",
+    "bf",
+    "ne"
+   ]
+  },
+  {
+   "slug": "nigeria",
+   "name": "Nigeria",
+   "region": "Africa",
+   "countries": [
+    "ng"
+   ]
+  },
+  {
+   "slug": "mozambique",
+   "name": "Cabo Delgado insurgency",
+   "region": "Africa",
+   "countries": [
+    "mz"
+   ]
+  },
+  {
+   "slug": "cameroon",
+   "name": "Cameroon",
+   "region": "Africa",
+   "countries": [
+    "cm"
+   ]
+  },
+  {
+   "slug": "libya",
+   "name": "Libya",
+   "region": "Africa",
+   "countries": [
+    "ly"
+   ]
+  },
+  {
+   "slug": "haiti",
+   "name": "Haiti gang war",
+   "region": "Americas",
+   "countries": [
+    "ht"
+   ]
+  },
+  {
+   "slug": "colombia",
+   "name": "Colombian conflict",
+   "region": "Americas",
+   "countries": [
+    "co"
+   ]
+  },
+  {
+   "slug": "mexico",
+   "name": "Mexican drug war",
+   "region": "Americas",
+   "countries": [
+    "mx"
+   ]
+  },
+  {
+   "slug": "venezuela",
+   "name": "Venezuela",
+   "region": "Americas",
+   "countries": [
+    "ve"
+   ]
+  }
+ ],
+ "events": {
+  "shootdown": "Shootdown",
+  "drone_strike": "Drone strike",
+  "airstrike": "Airstrike",
+  "missile_strike": "Missile or rocket strike",
+  "shelling": "Shelling",
+  "bombing": "Bombing",
+  "explosion": "Explosion",
+  "shooting": "Shooting",
+  "ground_fighting": "Fighting",
+  "piracy": "Piracy or hijacking",
+  "hostage": "Kidnapping or hostages",
+  "attack": "Attack",
+  "terror": "Terrorism",
+  "arrest": "Arrests",
+  "diplomatic": "Diplomatic move",
+  "nuclear_safety": "Nuclear safety",
+  "ceasefire_talks": "Ceasefire or talks",
+  "troop_movement": "Troop movement",
+  "sanctions": "Sanctions or export controls",
+  "security_council": "UN Security Council",
+  "humanitarian": "Humanitarian",
+  "airspace_warning": "Airspace warning",
+  "travel_warning": "Travel warning",
+  "internet_shutdown": "Internet shutdown",
+  "dark_fleet": "Dark-fleet watch",
+  "export_controls": "Sanctions or export controls"
+ },
+ "casualty_kinds": [
+  "killed",
+  "injured",
+  "abducted",
+  "arrested"
+ ],
+ "actor_kinds": [
+  "state_force",
+  "state",
+  "police",
+  "armed_group",
+  "de_facto_government",
+  "government_in_exile",
+  "settlers",
+  "criminal",
+  "un_mission",
+  "multinational_force",
+  "alliance"
+ ],
+ "rules": [
+  "A theatre slug is stable; its name may be reworded. An item with no theatre tag belongs to no named war: group it by its title or list it.",
+  "Casualties are as the line reports them. Two `casualty` tags of the same kind are two claims (often two sides'): show both, never add them up.",
+  "An `actor` is a force, group or state, never a person.",
+  "`place` is the line's own words for where; draw `geo` when present, else the jurisdiction's outline. geo_precision `state` is a province's centre: draw it as an area, not a pin."
+ ]
+}

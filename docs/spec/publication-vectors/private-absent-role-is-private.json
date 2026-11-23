@@ -1,0 +1,13 @@
+{
+  "name": "private-absent-role-is-private",
+  "description": "No subjectRole means private. Defaulting the other way would publish anyone nobody classified.",
+  "subjectKind": "person",
+  "options": {
+    "isMock": false,
+    "consentToPublishAboutPerson": true
+  },
+  "expect": {
+    "allowed": false,
+    "reasonMatches": "private individual"
+  }
+}

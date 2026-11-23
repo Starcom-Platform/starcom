@@ -1,0 +1,70 @@
+{
+  "name": "capability-revoked-refused",
+  "description": "The issuer withdrew this delegation by publishing to its slot. The withdrawal carries the same resource, action and holder tags as the grant, so an implementation that reads those before checking for the marker will honour authority that was taken back. The cause must be `revoked`, never `malformed-grant`: a withdrawal is a deliberate act, and telling a holder their capability is broken says the wrong thing about what happened.",
+  "expect": {
+    "valid": false,
+    "reason": "revoked",
+    "holder": "4d4b6cd1361032ca9bd2aeb9d900aa4d45d9ead80ac9423374c451a7254d0766"
+  },
+  "rootIssuer": "1b84c5567b126440995d3ed5aaba0565d71e1834604819ff9c17f5e9d5dd078f",
+  "resource": "mission:mission-vector-1",
+  "action": "dispatch",
+  "chain": [
+    {
+      "kind": 30081,
+      "created_at": 1768435200,
+      "tags": [
+        [
+          "d",
+          "cap:mission:mission-vector-1:1b84c5567b126440995d3ed5aaba0565d71e1834604819ff9c17f5e9d5dd078f"
+        ],
+        [
+          "resource",
+          "mission:mission-vector-1"
+        ],
+        [
+          "action",
+          "dispatch"
+        ],
+        [
+          "holder",
+          "1b84c5567b126440995d3ed5aaba0565d71e1834604819ff9c17f5e9d5dd078f"
+        ]
+      ],
+      "content": "",
+      "pubkey": "1b84c5567b126440995d3ed5aaba0565d71e1834604819ff9c17f5e9d5dd078f",
+      "id": "fb9a53bc35c6de7f851d9b564053bf30661f0050cee6e45e99ee494223ee87b2",
+      "sig": "eb8474661eeea2cfce9920304cff1dfbecacd1ff22b3e1351fe5f3953e88171d9d9f166eb73e15c3ca1d398625b9cd77f3ed2ed9f09ef313031feefb326ed0e4"
+    },
+    {
+      "kind": 30081,
+      "created_at": 1768435200,
+      "tags": [
+        [
+          "d",
+          "cap:mission:mission-vector-1:4d4b6cd1361032ca9bd2aeb9d900aa4d45d9ead80ac9423374c451a7254d0766"
+        ],
+        [
+          "resource",
+          "mission:mission-vector-1"
+        ],
+        [
+          "action",
+          "dispatch"
+        ],
+        [
+          "holder",
+          "4d4b6cd1361032ca9bd2aeb9d900aa4d45d9ead80ac9423374c451a7254d0766"
+        ],
+        [
+          "revoked",
+          "left the operation"
+        ]
+      ],
+      "content": "",
+      "pubkey": "1b84c5567b126440995d3ed5aaba0565d71e1834604819ff9c17f5e9d5dd078f",
+      "id": "c26580a70a75a66866062b862bca4b29aea23f4b521e959b49386df96749072a",
+      "sig": "d5bc720231d46bf352037487fd1f7bcdcbc6ea6b139952e6ab87e0dfb22caacf1502e931d8f3d93cda6fce8aa4969ae51f91a4d48250e27f052c10b22de647af"
+    }
+  ]
+}

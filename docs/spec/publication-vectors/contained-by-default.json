@@ -1,0 +1,16 @@
+{
+  "name": "contained-by-default",
+  "description": "Material held in a workspace is not a publication candidate, whatever else is true.",
+  "subjectKind": "organization",
+  "options": {
+    "isMock": false,
+    "containment": {
+      "contained": true,
+      "reason": "working-material"
+    }
+  },
+  "expect": {
+    "allowed": false,
+    "reasonMatches": "workspace"
+  }
+}

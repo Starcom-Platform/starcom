@@ -1,0 +1,67 @@
+/* Relay lights and the capacity gauge (BD11, BD12): colour by what it means, from the tokens. */
+.lights {
+  display: inline-flex;
+  gap: 3px;
+  align-items: center;
+}
+
+.mark {
+  flex: 0 0 auto;
+}
+
+.ok { color: var(--sc-ok); }
+.degraded { color: var(--sc-caution); }
+.down { color: var(--sc-danger); }
+.stale { color: var(--sc-text-muted); }
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+
+.host {
+  color: var(--sc-text-body);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.words {
+  color: var(--sc-text-secondary);
+  white-space: nowrap;
+}
+
+.gauge {
+  display: inline-flex;
+  gap: 2px;
+  align-items: center;
+}
+
+.cell {
+  width: 6px;
+  height: 10px;
+  border: 1px solid currentColor;
+  border-radius: 1px;
+  opacity: 0.5;
+}
+
+.cell.on {
+  background: currentColor;
+  opacity: 1;
+}
+
+/* The last cell a publish needs: a tick below it. */
+.cell.need {
+  box-shadow: 0 2px 0 -1px currentColor;
+}

@@ -1,0 +1,296 @@
+{
+ "card": {
+  "alt": "Earth Weather on the globe. The picture: the whole planet centred near 51.0°N, 1.0°E, showing Rain and Borders. Caveats: Radar rain where radar reaches; the model's elsewhere. Unsigned capture: one browser's view at one moment. Made by Starcom, <captured>.",
+  "frame": {
+   "height": 736,
+   "width": 1080
+  },
+  "height": 1080,
+  "mimeType": "image/webp",
+  "provenance": {
+   "appearance": {
+    "lightMode": "sun",
+    "quality": {
+     "atmosphere": true,
+     "clouds": true,
+     "detail": "full detail",
+     "setting": "low"
+    },
+    "skin": "Day / Night",
+    "territories": "quiet"
+   },
+   "build": "<build>",
+   "camera": {
+    "altitude": 1,
+    "lat": 51,
+    "lon": 1
+   },
+   "capturedAt": "<captured>",
+   "card": null,
+   "caveats": [
+    "Rain is radar where radar reaches, as of its time, and the GFS model's mean rain elsewhere, for the hour stated.",
+    "Unsigned client-side capture: one browser's view at one moment, not an attested record."
+   ],
+   "caveatsShort": [
+    "Radar rain where radar reaches; the model's elsewhere.",
+    "Unsigned capture: one browser's view at one moment."
+   ],
+   "credits": [
+    "Open-Meteo.com (CC BY 4.0)",
+    "NASA EONET",
+    "NOAA GFS",
+    "RainViewer"
+   ],
+   "feeds": [
+    {
+     "credits": [
+      {
+       "keyText": "Weather data by Open-Meteo.com",
+       "licence": {
+        "name": "CC BY 4.0",
+        "url": "https://creativecommons.org/licenses/by/4.0/"
+       },
+       "text": "Open-Meteo.com",
+       "url": "https://open-meteo.com/"
+      },
+      {
+       "text": "NASA EONET",
+       "url": "https://eonet.gsfc.nasa.gov/"
+      }
+     ],
+     "error": null,
+     "lastUpdated": "<read>",
+     "layer": "EarthWeather",
+     "loading": false,
+     "name": "Open-Meteo weather",
+     "timestamped": true
+    },
+    {
+     "credits": [
+      {
+       "text": "NOAA GFS",
+       "url": "https://registry.opendata.aws/noaa-gfs-bdp-pds/"
+      }
+     ],
+     "error": null,
+     "lastUpdated": "<read>",
+     "layer": "EarthWeather",
+     "loading": false,
+     "name": "NOAA GFS mean rain, via NOAA Open Data Dissemination",
+     "note": "Rain is radar where radar reaches, as of its time, and the GFS model's mean rain elsewhere, for the hour stated.",
+     "noteShort": "Radar rain where radar reaches; the model's elsewhere.",
+     "shortName": "NOAA GFS rain"
+    },
+    {
+     "credits": [
+      {
+       "keyText": "Weather data by RainViewer",
+       "text": "RainViewer",
+       "url": "https://www.rainviewer.com/"
+      }
+     ],
+     "error": null,
+     "lastUpdated": "<read>",
+     "layer": "EarthWeather",
+     "loading": false,
+     "name": "Radar rain from RainViewer",
+     "shortName": "RainViewer radar"
+    }
+   ],
+   "frame": {
+    "height": 736,
+    "width": 1080
+   },
+   "imagery": [
+    "Solar System Scope (CC BY 4.0)",
+    "NASA"
+   ],
+   "layersSelectedButEmpty": [],
+   "layersShown": [
+    "Earth Weather"
+   ],
+   "legend": [
+    {
+     "colorMeans": "rain an hour: RainViewer radar where radar reaches, the NOAA GFS model elsewhere",
+     "layer": "Rain",
+     "layerId": "EarthWeather",
+     "swatches": [
+      {
+       "color": "#b7e4a8",
+       "label": "0.1 mm/h"
+      },
+      {
+       "color": "#4cb34f",
+       "label": "1 mm/h"
+      },
+      {
+       "color": "#e9d63b",
+       "label": "5 mm/h"
+      },
+      {
+       "color": "#e25a2a",
+       "label": "20 mm/h"
+      },
+      {
+       "color": "#a4268f",
+       "label": "70 mm/h"
+      }
+     ],
+     "when": "for 7 Oct 03:10Z (radar 03:20Z)"
+    },
+    {
+     "layer": "Earth Weather",
+     "layerId": "EarthWeather",
+     "shapeMeans": "disc",
+     "swatches": [
+      {
+       "color": "#d6f5ff",
+       "label": "tracked iceberg"
+      }
+     ]
+    },
+    {
+     "colorMeans": "what kind of boundary it is — dashed where it is not settled",
+     "layer": "Borders",
+     "layerId": "NationalTerritories:borders",
+     "swatches": [
+      {
+       "color": "#c9d4e3",
+       "label": "international boundary",
+       "shape": "line"
+      },
+      {
+       "color": "#ff5555",
+       "label": "disputed",
+       "shape": "dashed"
+      },
+      {
+       "color": "#ffcc00",
+       "label": "line of control",
+       "shape": "dashed"
+      },
+      {
+       "color": "#888888",
+       "label": "indefinite",
+       "shape": "line"
+      }
+     ]
+    }
+   ],
+   "link": "<origin>/?v=1&sub=EarthWeather&at=51,1,1&win=1791331200..1791417600",
+   "marks": null,
+   "origin": "starcom-app client capture (unsigned)",
+   "schema": "starcom.globe.capture",
+   "schemaVersion": 38,
+   "shot": {
+    "appearance": {
+     "light": "sun",
+     "nightFill": 0.15,
+     "skin": "auto",
+     "territories": "quiet"
+    },
+    "card": {
+     "preset": "square"
+    },
+    "emphasis": {
+     "featured": false
+    },
+    "framing": {
+     "fit": "planet"
+    },
+    "layers": {
+     "pins": [],
+     "primary": "EarthWeather"
+    },
+    "output": {
+     "alt": true,
+     "quality": 0.9,
+     "scale": 1,
+     "type": "image/webp"
+    },
+    "subject": {
+     "view": {
+      "altitude": 1,
+      "lat": 51,
+      "lng": 1
+     }
+    },
+    "time": {
+     "at": 1791342600
+    },
+    "v": 1
+   },
+   "typeStep": "larger",
+   "window": {
+    "from": 1791331200,
+    "until": 1791417600
+   }
+  },
+  "regions": {
+   "footer": {
+    "height": "<wraps with the run>",
+    "width": 1080,
+    "x": 0,
+    "y": 1004
+   },
+   "picture": {
+    "height": 736,
+    "width": 1080,
+    "x": 0,
+    "y": 106
+   }
+  },
+  "sourceRect": {
+   "height": 736,
+   "width": 1080,
+   "x": 0,
+   "y": 0
+  },
+  "warnings": [],
+  "width": 1080
+ },
+ "drawn": {
+  "appearance": {
+   "light": "sun",
+   "nightFill": 0.15,
+   "skin": "auto",
+   "territories": "quiet"
+  },
+  "card": {
+   "preset": "square"
+  },
+  "emphasis": {
+   "featured": false
+  },
+  "framing": {
+   "fit": "planet"
+  },
+  "layers": {
+   "pins": [],
+   "primary": "EarthWeather"
+  },
+  "output": {
+   "alt": true,
+   "quality": 0.9,
+   "scale": 1,
+   "type": "image/webp"
+  },
+  "subject": {
+   "view": {
+    "altitude": 1,
+    "lat": 51,
+    "lng": 1
+   }
+  },
+  "time": {
+   "at": 1791342600
+  },
+  "v": 1
+ },
+ "name": "weather-rain-square",
+ "notes": [],
+ "ok": true,
+ "warnings": [
+  "Earth Weather draws nothing in this picture (33 elsewhere on the globe)"
+ ]
+}

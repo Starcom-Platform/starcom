@@ -1,0 +1,29 @@
+{
+  "name": "precision-exact-refused",
+  "description": "The refined release in its own right: precision exact, with coordinates instead of an area. Set aside for the same reason.",
+  "expect": {
+    "observations": 0
+  },
+  "diagnostic": {
+    "note": "NOT normative — our drop wording, for humans and our own gate.",
+    "reasonContains": "precision \"exact\""
+  },
+  "event": {
+    "kind": 1911,
+    "created_at": 1756000000,
+    "tags": [
+      [
+        "g",
+        "st-louis"
+      ],
+      [
+        "d",
+        "st-louis/st-patrick-center"
+      ]
+    ],
+    "content": "{\"anchor\":\"st-louis/st-patrick-center\",\"observed_at\":1755996400,\"tags\":[\"locked\"],\"method\":\"saw\",\"callsign\":\"Raven\",\"precision\":\"exact\",\"lat\":38.63,\"lon\":-90.2}",
+    "pubkey": "96bafb179762225794c13c78e823b349e8f21d96f8113020032e5cabdbe59889",
+    "id": "ee901df5296a2802fb541d9f72ce86a56946ec62e132891babe73322abf35052",
+    "sig": "5748c11c89fc460feb7744523872a36376ed58b71f42ebf2e5ed57771f8c0db3e66e02bf4bee4e1093500f66d47676b8f2b8d4ce02f2aee7912c85a5527a9c72"
+  }
+}

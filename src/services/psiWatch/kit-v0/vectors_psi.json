@@ -1,0 +1,4399 @@
+{
+ "kit": "psi_rlsh_kit_v0",
+ "version": "kit-v0",
+ "about": "Conformance vectors for Starcom's PsiLines and the shared window profile (the delegation plan, docs/plans/2026-10-25-psiops-rlsh-delegation.md 3.2, 3.4 and 3.6), from Mecha Jono's reference (beu/psi_lines.py). Fixed inputs: re-running gives the same bytes.",
+ "engine": {
+  "name": "skyfield",
+  "version": "1.54",
+  "kernel": "de440s.bsp",
+  "kernel_sha256": "c1c7feeab882263fc493a9d5a5b2ddd71b54826cdf65d8d17a76126b260a49f2",
+  "timescale": "skyfield built-in (its Delta T and UT1 tables)",
+  "catalogue_engine": "skyfield 1.54, de440s"
+ },
+ "time_scale": "UTC, Unix seconds (leap seconds not counted, as JavaScript Date.getTime() / 1000)",
+ "conventions": {
+  "place": "apparent geocentric RA and Dec of date: light time, annual aberration and gravitational deflection, true equator and equinox of date (skyfield earth.at(t).observe(body).apparent().radec(epoch='date')); nutation IAU 2000A",
+  "sidereal": "Greenwich apparent sidereal time (GAST), from UT1. GMST in its place moves every line by the equation of the equinoxes: 0.0021 to 0.0029 degrees at these instants, never more than about 0.0048, below the 0.05 tolerance, so the vectors cannot tell the two apart; GAST is the one that goes with an RA of date",
+  "mc": "mc_lon = wrap180(RA - GAST)",
+  "ic": "ic_lon = wrap180(mc_lon + 180)",
+  "asc_dsc": "H0 = arccos(-tan(lat) tan(dec)) where |tan(lat) tan(dec)| <= 1; asc = wrap180(RA - GAST - H0) (rising), dsc = wrap180(RA - GAST + H0) (setting); none (null) where -tan(lat) tan(dec) < -1 (circumpolar) or > 1 (never rises)",
+  "geocentric": "no parallax: the Moon's lines are its geocentric lines. Its MC and IC hold on the ground too (on the meridian, parallax moves it along the meridian only); its ASC and DSC are about 1 degree from the topocentric horizon",
+  "horizon": "geometric, altitude 0: no refraction, no semidiameter",
+  "latitude": "geodetic (WGS84)",
+  "longitude": "degrees east, in (-180, 180]",
+  "wrap180": "x -> 180 - ((180 - x) mod 360)",
+  "speed_fraction": "stations carry [profile, speed_fraction, half, cap] (the speed as a fraction of the body's mean motion: half weight at half, the window's edge at cap). No weights vector: Starcom draws the window band from the event's start to its end (the window tag's from and until; t_in and t_out here) with its peak at exact"
+ },
+ "tolerances": {
+  "profile_weight": 0.001,
+  "mc_ic_lon_deg": 0.05,
+  "ra_dec_deg": 0.01,
+  "horizon_lon_deg": 0.05,
+  "aspect_angle_arcsec": 60
+ },
+ "profile_weights": {
+  "about": "Each case: the profile tag exactly as the wire carries it (every element a string), the window (start, end) in seconds from the anchor (gauss_orb, past_boundary: the exact time; rise_halflife: the recurrence anchor) where w is above zero, and samples [tau_s, w].",
+  "rules": {
+   "gauss_orb": "[profile, gauss_orb, h_deg, cap_deg, rate_deg_per_day, accel_deg_per_day2]: orb(tau) = rate d + accel d^2 / 2 with d = tau / 86400; w = exp(-ln2 (orb / h)^2) while |orb| <= cap on the contiguous span around tau = 0, else 0. Inside the cap includes the cap itself (w there is 2^-((cap/h)^2), 0.00195 at cap 3h).",
+   "rise_halflife": "[profile, rise_halflife, lead_min, peak_min, half_life_min, end_min]: w = 0 before -lead; linear from 0 at -lead to 1 at the peak; then 2^(-(tau - peak) / half_life), set to 0 where it falls below 0.05 or past the end.",
+   "past_boundary": "[profile, past_boundary, h_deg, cap_deg, rate_deg_per_day]: orb(tau) = |rate| tau / 86400, the travel past the boundary, negative before exactness (the applying side) whichever way the body moves; w = 0 for orb < 0, exp(-ln2 (orb / h)^2) for 0 <= orb <= cap, 0 past the cap. Computed by beu/psi_lines.py (beu/window_search.py has no such kind)."
+  },
+  "edges": "No sample sits exactly on a discontinuity except tau = 0 of past_boundary, where w = 1 (0 <= orb is inclusive), with -1 s and +1 s beside it to pin its two sides; every other sample is at least a minute from an edge.",
+  "cases": [
+   {
+    "name": "moon_pair",
+    "about": "a Moon pair: h 1, cap 3, 12.19 degrees a day (06 2.3)",
+    "tag": [
+     "profile",
+     "gauss_orb",
+     "1.0000",
+     "3.0000",
+     "12.190000",
+     "0.00000000"
+    ],
+    "window_s": [
+     -21263.331,
+     21263.331
+    ],
+    "samples": [
+     [
+      -31895,
+      0.0
+     ],
+     [
+      -22326,
+      0.0
+     ],
+     [
+      -20200,
+      0.003589
+     ],
+     [
+      -15947,
+      0.029932
+     ],
+     [
+      -10632,
+      0.210203
+     ],
+     [
+      -7088,
+      0.499978
+     ],
+     [
+      -4253,
+      0.779134
+     ],
+     [
+      -2126,
+      0.939541
+     ],
+     [
+      0,
+      1.0
+     ],
+     [
+      2126,
+      0.939541
+     ],
+     [
+      4253,
+      0.779134
+     ],
+     [
+      7088,
+      0.499978
+     ],
+     [
+      10632,
+      0.210203
+     ],
+     [
+      15947,
+      0.029932
+     ],
+     [
+      20200,
+      0.003589
+     ],
+     [
+      22326,
+      0.0
+     ],
+     [
+      31895,
+      0.0
+     ]
+    ]
+   },
+   {
+    "name": "sun_venus_like",
+    "about": "a Sun or inner-planet pair: h 2, cap 6, 1.2 degrees a day",
+    "tag": [
+     "profile",
+     "gauss_orb",
+     "2.0000",
+     "6.0000",
+     "1.200000",
+     "0.00000000"
+    ],
+    "window_s": [
+     -432000.0,
+     432000.0
+    ],
+    "samples": [
+     [
+      -648000,
+      0.0
+     ],
+     [
+      -453600,
+      0.0
+     ],
+     [
+      -410400,
+      0.003588
+     ],
+     [
+      -324000,
+      0.029925
+     ],
+     [
+      -216000,
+      0.210224
+     ],
+     [
+      -144000,
+      0.5
+     ],
+     [
+      -86400,
+      0.779165
+     ],
+     [
+      -43200,
+      0.939523
+     ],
+     [
+      0,
+      1.0
+     ],
+     [
+      43200,
+      0.939523
+     ],
+     [
+      86400,
+      0.779165
+     ],
+     [
+      144000,
+      0.5
+     ],
+     [
+      216000,
+      0.210224
+     ],
+     [
+      324000,
+      0.029925
+     ],
+     [
+      410400,
+      0.003588
+     ],
+     [
+      453600,
+      0.0
+     ],
+     [
+      648000,
+      0.0
+     ]
+    ]
+   },
+   {
+    "name": "slow_outer_accel",
+    "about": "a slow outer pair with acceleration: h 1, cap 3, 0.02 degrees a day, 0.00004 a day a day (the window is asymmetric)",
+    "tag": [
+     "profile",
+     "gauss_orb",
+     "1.0000",
+     "3.0000",
+     "0.020000",
+     "0.00004000"
+    ],
+    "window_s": [
+     -15877921.016,
+     11444157.968
+    ],
+    "samples": [
+     [
+      -23816882,
+      0.0
+     ],
+     [
+      -16671817,
+      0.0
+     ],
+     [
+      -15084025,
+      0.003159
+     ],
+     [
+      -11908441,
+      0.019936
+     ],
+     [
+      -7938961,
+      0.145078
+     ],
+     [
+      -5292640,
+      0.399779
+     ],
+     [
+      -3175584,
+      0.706438
+     ],
+     [
+      -1587792,
+      0.913724
+     ],
+     [
+      0,
+      1.0
+     ],
+     [
+      1144416,
+      0.951286
+     ],
+     [
+      2288832,
+      0.814631
+     ],
+     [
+      3814719,
+      0.554735
+     ],
+     [
+      5722079,
+      0.25095
+     ],
+     [
+      8583118,
+      0.036632
+     ],
+     [
+      10871950,
+      0.003832
+     ],
+     [
+      12016366,
+      0.0
+     ],
+     [
+      17166237,
+      0.0
+     ]
+    ]
+   },
+   {
+    "name": "rlsh_title_night",
+    "about": "an RLSH title night: lead 120 min, peak 0, half-life 60 min, end 360 min (the 0.05 cut comes first, at 259.3 min)",
+    "tag": [
+     "profile",
+     "rise_halflife",
+     "120",
+     "0",
+     "60",
+     "360"
+    ],
+    "window_s": [
+     -7200.0,
+     15558.941
+    ],
+    "samples": [
+     [
+      -10800,
+      0.0
+     ],
+     [
+      -7260,
+      0.0
+     ],
+     [
+      -7140,
+      0.008333
+     ],
+     [
+      -5400,
+      0.25
+     ],
+     [
+      -3600,
+      0.5
+     ],
+     [
+      -1800,
+      0.75
+     ],
+     [
+      0,
+      1.0
+     ],
+     [
+      1800,
+      0.707107
+     ],
+     [
+      3600,
+      0.5
+     ],
+     [
+      7200,
+      0.25
+     ],
+     [
+      10800,
+      0.125
+     ],
+     [
+      14400,
+      0.0625
+     ],
+     [
+      15300,
+      0.052556
+     ],
+     [
+      15720,
+      0.0
+     ],
+     [
+      18000,
+      0.0
+     ],
+     [
+      21660,
+      0.0
+     ]
+    ]
+   },
+   {
+    "name": "rlsh_long_lead",
+    "about": "a long lead: lead 1440 min, peak 120 min, half-life 90 min, end 300 min (the end cuts first, at 0.25)",
+    "tag": [
+     "profile",
+     "rise_halflife",
+     "1440",
+     "120",
+     "90",
+     "300"
+    ],
+    "window_s": [
+     -86400.0,
+     18000.0
+    ],
+    "samples": [
+     [
+      -90000,
+      0.0
+     ],
+     [
+      -86460,
+      0.0
+     ],
+     [
+      -86340,
+      0.000641
+     ],
+     [
+      -64800,
+      0.230769
+     ],
+     [
+      -43200,
+      0.461538
+     ],
+     [
+      -21600,
+      0.692308
+     ],
+     [
+      0,
+      0.923077
+     ],
+     [
+      3600,
+      0.961538
+     ],
+     [
+      7200,
+      1.0
+     ],
+     [
+      9900,
+      0.707107
+     ],
+     [
+      12600,
+      0.5
+     ],
+     [
+      15300,
+      0.353553
+     ],
+     [
+      17940,
+      0.251933
+     ],
+     [
+      18060,
+      0.0
+     ],
+     [
+      24000,
+      0.0
+     ]
+    ]
+   },
+   {
+    "name": "moon_ingress",
+    "about": "a Moon ingress: h 1, cap 1, 14.7 degrees a day",
+    "tag": [
+     "profile",
+     "past_boundary",
+     "1.0000",
+     "1.0000",
+     "14.700000"
+    ],
+    "window_s": [
+     0.0,
+     5877.551
+    ],
+    "samples": [
+     [
+      -3600,
+      0.0
+     ],
+     [
+      -600,
+      0.0
+     ],
+     [
+      -1,
+      0.0
+     ],
+     [
+      0,
+      1.0
+     ],
+     [
+      1,
+      1.0
+     ],
+     [
+      600,
+      0.992803
+     ],
+     [
+      1800,
+      0.937058
+     ],
+     [
+      2939,
+      0.840874
+     ],
+     [
+      4000,
+      0.725398
+     ],
+     [
+      5800,
+      0.509168
+     ],
+     [
+      5950,
+      0.0
+     ],
+     [
+      7200,
+      0.0
+     ]
+    ]
+   },
+   {
+    "name": "slow_ingress",
+    "about": "a slow ingress: h 1, cap 1, 0.5 degrees a day",
+    "tag": [
+     "profile",
+     "past_boundary",
+     "1.0000",
+     "1.0000",
+     "0.500000"
+    ],
+    "window_s": [
+     0.0,
+     172800.0
+    ],
+    "samples": [
+     [
+      -86400,
+      0.0
+     ],
+     [
+      -60,
+      0.0
+     ],
+     [
+      0,
+      1.0
+     ],
+     [
+      60,
+      1.0
+     ],
+     [
+      3600,
+      0.999699
+     ],
+     [
+      43200,
+      0.957603
+     ],
+     [
+      86400,
+      0.840896
+     ],
+     [
+      129600,
+      0.677128
+     ],
+     [
+      171000,
+      0.507235
+     ],
+     [
+      174600,
+      0.0
+     ],
+     [
+      259200,
+      0.0
+     ]
+    ]
+   },
+   {
+    "name": "slow_ingress_retrograde",
+    "about": "the same, retrograde (rate -0.5): past the boundary is after exactness whichever way the body moves, so the weights are the direct case's",
+    "tag": [
+     "profile",
+     "past_boundary",
+     "1.0000",
+     "1.0000",
+     "-0.500000"
+    ],
+    "window_s": [
+     0.0,
+     172800.0
+    ],
+    "samples": [
+     [
+      -86400,
+      0.0
+     ],
+     [
+      -60,
+      0.0
+     ],
+     [
+      0,
+      1.0
+     ],
+     [
+      60,
+      1.0
+     ],
+     [
+      3600,
+      0.999699
+     ],
+     [
+      43200,
+      0.957603
+     ],
+     [
+      86400,
+      0.840896
+     ],
+     [
+      129600,
+      0.677128
+     ],
+     [
+      171000,
+      0.507235
+     ],
+     [
+      174600,
+      0.0
+     ],
+     [
+      259200,
+      0.0
+     ]
+    ]
+   }
+  ]
+ },
+ "angular": {
+  "about": "For each instant: GAST (degrees), skyfield's Delta T (TT - UT1) and UT1 - UTC (seconds) there, and each body's apparent RA and Dec of date with its MC and IC longitudes. Tolerances: mc_lon and ic_lon 0.05 degrees; ra_deg, dec_deg and gast_deg 0.01 degrees, to localise a disagreement.",
+  "instants": [
+   {
+    "utc": "2026-11-05T13:19:00Z",
+    "t_unix": 1793884740,
+    "gast_deg": 244.539552,
+    "delta_t_s": 69.0976,
+    "ut1_minus_utc_s": 0.0864,
+    "bodies": {
+     "Sun": {
+      "ra_deg": 220.685982,
+      "dec_deg": -15.781421,
+      "mc_lon": -23.85357,
+      "ic_lon": 156.14643
+     },
+     "Moon": {
+      "ra_deg": 178.264313,
+      "dec_deg": -2.193387,
+      "mc_lon": -66.275238,
+      "ic_lon": 113.724762
+     },
+     "Mercury": {
+      "ra_deg": 218.505919,
+      "dec_deg": -15.151386,
+      "mc_lon": -26.033632,
+      "ic_lon": 153.966368
+     },
+     "Venus": {
+      "ra_deg": 201.115887,
+      "dec_deg": -12.900639,
+      "mc_lon": -43.423665,
+      "ic_lon": 136.576335
+     },
+     "Mars": {
+      "ra_deg": 143.835452,
+      "dec_deg": 16.142222,
+      "mc_lon": -100.704099,
+      "ic_lon": 79.295901
+     },
+     "Jupiter": {
+      "ra_deg": 147.381755,
+      "dec_deg": 13.902323,
+      "mc_lon": -97.157796,
+      "ic_lon": 82.842204
+     },
+     "Saturn": {
+      "ra_deg": 9.33096,
+      "dec_deg": 1.113725,
+      "mc_lon": 124.791409,
+      "ic_lon": -55.208591
+     },
+     "Uranus": {
+      "ra_deg": 62.567465,
+      "dec_deg": 20.892146,
+      "mc_lon": 178.027914,
+      "ic_lon": -1.972086
+     },
+     "Neptune": {
+      "ra_deg": 2.389677,
+      "dec_deg": -0.503861,
+      "mc_lon": 117.850126,
+      "ic_lon": -62.149874
+     },
+     "Pluto": {
+      "ra_deg": 306.538549,
+      "dec_deg": -23.598876,
+      "mc_lon": 61.998997,
+      "ic_lon": -118.001003
+     }
+    }
+   },
+   {
+    "utc": "2026-11-20T06:47:00Z",
+    "t_unix": 1795157220,
+    "gast_deg": 161.055985,
+    "delta_t_s": 69.0975,
+    "ut1_minus_utc_s": 0.0865,
+    "bodies": {
+     "Sun": {
+      "ra_deg": 235.697,
+      "dec_deg": -19.703291,
+      "mc_lon": 74.641015,
+      "ic_lon": -105.358985
+     },
+     "Moon": {
+      "ra_deg": 359.299592,
+      "dec_deg": 2.87942,
+      "mc_lon": -161.756393,
+      "ic_lon": 18.243607
+     },
+     "Mercury": {
+      "ra_deg": 216.902137,
+      "dec_deg": -12.074174,
+      "mc_lon": 55.846152,
+      "ic_lon": -124.153848
+     },
+     "Venus": {
+      "ra_deg": 201.748581,
+      "dec_deg": -9.463896,
+      "mc_lon": 40.692596,
+      "ic_lon": -139.307404
+     },
+     "Mars": {
+      "ra_deg": 150.552581,
+      "dec_deg": 14.202822,
+      "mc_lon": -10.503403,
+      "ic_lon": 169.496597
+     },
+     "Jupiter": {
+      "ra_deg": 148.703801,
+      "dec_deg": 13.49956,
+      "mc_lon": -12.352183,
+      "ic_lon": 167.647817
+     },
+     "Saturn": {
+      "ra_deg": 8.671968,
+      "dec_deg": 0.882244,
+      "mc_lon": -152.384017,
+      "ic_lon": 27.615983
+     },
+     "Uranus": {
+      "ra_deg": 61.943162,
+      "dec_deg": 20.784051,
+      "mc_lon": -99.112823,
+      "ic_lon": 80.887177
+     },
+     "Neptune": {
+      "ra_deg": 2.171097,
+      "dec_deg": -0.590376,
+      "mc_lon": -158.884888,
+      "ic_lon": 21.115112
+     },
+     "Pluto": {
+      "ra_deg": 306.739376,
+      "dec_deg": -23.544456,
+      "mc_lon": 145.683392,
+      "ic_lon": -34.316608
+     }
+    }
+   },
+   {
+    "utc": "2026-12-04T23:14:00Z",
+    "t_unix": 1796426040,
+    "gast_deg": 62.280785,
+    "delta_t_s": 69.1,
+    "ut1_minus_utc_s": 0.084,
+    "bodies": {
+     "Sun": {
+      "ra_deg": 251.372852,
+      "dec_deg": -22.333508,
+      "mc_lon": -170.907933,
+      "ic_lon": 9.092067
+     },
+     "Moon": {
+      "ra_deg": 203.578743,
+      "dec_deg": -14.682334,
+      "mc_lon": 141.297959,
+      "ic_lon": -38.702041
+     },
+     "Mercury": {
+      "ra_deg": 235.90551,
+      "dec_deg": -18.637644,
+      "mc_lon": 173.624725,
+      "ic_lon": -6.375275
+     },
+     "Venus": {
+      "ra_deg": 208.983692,
+      "dec_deg": -9.797647,
+      "mc_lon": 146.702908,
+      "ic_lon": -33.297092
+     },
+     "Mars": {
+      "ra_deg": 156.181496,
+      "dec_deg": 12.5306,
+      "mc_lon": 93.900711,
+      "ic_lon": -86.099289
+     },
+     "Jupiter": {
+      "ra_deg": 149.420793,
+      "dec_deg": 13.308641,
+      "mc_lon": 87.140009,
+      "ic_lon": -92.859991
+     },
+     "Saturn": {
+      "ra_deg": 8.328367,
+      "dec_deg": 0.796835,
+      "mc_lon": -53.952417,
+      "ic_lon": 126.047583
+     },
+     "Uranus": {
+      "ra_deg": 61.297846,
+      "dec_deg": 20.670222,
+      "mc_lon": -0.982939,
+      "ic_lon": 179.017061
+     },
+     "Neptune": {
+      "ra_deg": 2.051721,
+      "dec_deg": -0.632177,
+      "mc_lon": -60.229064,
+      "ic_lon": 119.770936
+     },
+     "Pluto": {
+      "ra_deg": 307.036718,
+      "dec_deg": -23.471243,
+      "mc_lon": -115.244066,
+      "ic_lon": 64.755934
+     }
+    }
+   },
+   {
+    "utc": "2027-03-20T14:46:00Z",
+    "t_unix": 1805553960,
+    "gast_deg": 39.412425,
+    "delta_t_s": 69.0872,
+    "ut1_minus_utc_s": 0.0968,
+    "bodies": {
+     "Sun": {
+      "ra_deg": 359.785652,
+      "dec_deg": -0.092975,
+      "mc_lon": -39.626773,
+      "ic_lon": 140.373227
+     },
+     "Moon": {
+      "ra_deg": 156.787022,
+      "dec_deg": 8.212515,
+      "mc_lon": 117.374597,
+      "ic_lon": -62.625403
+     },
+     "Mercury": {
+      "ra_deg": 334.889092,
+      "dec_deg": -11.919649,
+      "mc_lon": -64.523334,
+      "ic_lon": 115.476666
+     },
+     "Venus": {
+      "ra_deg": 325.581686,
+      "dec_deg": -14.189637,
+      "mc_lon": -73.830739,
+      "ic_lon": 106.169261
+     },
+     "Mars": {
+      "ra_deg": 145.45402,
+      "dec_deg": 17.723297,
+      "mc_lon": 106.041595,
+      "ic_lon": -73.958405
+     },
+     "Jupiter": {
+      "ra_deg": 140.637306,
+      "dec_deg": 16.492134,
+      "mc_lon": 101.224881,
+      "ic_lon": -78.775119
+     },
+     "Saturn": {
+      "ra_deg": 15.049614,
+      "dec_deg": 3.995968,
+      "mc_lon": -24.362811,
+      "ic_lon": 155.637189
+     },
+     "Uranus": {
+      "ra_deg": 60.325095,
+      "dec_deg": 20.516955,
+      "mc_lon": 20.91267,
+      "ic_lon": -159.08733
+     },
+     "Neptune": {
+      "ra_deg": 4.132164,
+      "dec_deg": 0.320933,
+      "mc_lon": -35.280261,
+      "ic_lon": 144.719739
+     },
+     "Pluto": {
+      "ra_deg": 310.221705,
+      "dec_deg": -22.865422,
+      "mc_lon": -89.19072,
+      "ic_lon": 90.80928
+     }
+    }
+   }
+  ]
+ },
+ "horizon_curves": {
+  "about": "For each instant and body: at each latitude (geodetic, -66 to 66 every 6), the ASC (rising) and DSC (setting) longitudes on the geometric horizon; both null where the body is circumpolar or never rises, with that state named. Tolerance 0.05 degrees in longitude. edge_cases: the Sun and the Moon at -80, -72, 72 and 80, where the nulls are (none of the grid's points is null at these instants).",
+  "lats": [
+   -66,
+   -60,
+   -54,
+   -48,
+   -42,
+   -36,
+   -30,
+   -24,
+   -18,
+   -12,
+   -6,
+   0,
+   6,
+   12,
+   18,
+   24,
+   30,
+   36,
+   42,
+   48,
+   54,
+   60,
+   66
+  ],
+  "edge_lats": [
+   -80,
+   -72,
+   72,
+   80
+  ],
+  "instants": [
+   {
+    "utc": "2026-11-05T13:19:00Z",
+    "t_unix": 1793884740,
+    "bodies": {
+     "Sun": [
+      {
+       "lat": -66,
+       "asc": -153.257074,
+       "dsc": 105.549935
+      },
+      {
+       "lat": -60,
+       "asc": -143.162239,
+       "dsc": 95.4551
+      },
+      {
+       "lat": -54,
+       "asc": -136.745538,
+       "dsc": 89.038398
+      },
+      {
+       "lat": -48,
+       "asc": -132.146948,
+       "dsc": 84.439808
+      },
+      {
+       "lat": -42,
+       "asc": -128.59595,
+       "dsc": 80.888811
+      },
+      {
+       "lat": -36,
+       "asc": -125.70276,
+       "dsc": 77.995621
+      },
+      {
+       "lat": -30,
+       "asc": -123.244597,
+       "dsc": 75.537458
+      },
+      {
+       "lat": -24,
+       "asc": -121.082323,
+       "dsc": 73.375184
+      },
+      {
+       "lat": -18,
+       "asc": -119.122419,
+       "dsc": 71.41528
+      },
+      {
+       "lat": -12,
+       "asc": -117.297573,
+       "dsc": 69.590434
+      },
+      {
+       "lat": -6,
+       "asc": -115.555774,
+       "dsc": 67.848634
+      },
+      {
+       "lat": 0,
+       "asc": -113.85357,
+       "dsc": 66.14643
+      },
+      {
+       "lat": 6,
+       "asc": -112.151366,
+       "dsc": 64.444226
+      },
+      {
+       "lat": 12,
+       "asc": -110.409566,
+       "dsc": 62.702427
+      },
+      {
+       "lat": 18,
+       "asc": -108.58472,
+       "dsc": 60.877581
+      },
+      {
+       "lat": 24,
+       "asc": -106.624816,
+       "dsc": 58.917677
+      },
+      {
+       "lat": 30,
+       "asc": -104.462542,
+       "dsc": 56.755403
+      },
+      {
+       "lat": 36,
+       "asc": -102.004379,
+       "dsc": 54.29724
+      },
+      {
+       "lat": 42,
+       "asc": -99.111189,
+       "dsc": 51.40405
+      },
+      {
+       "lat": 48,
+       "asc": -95.560192,
+       "dsc": 47.853052
+      },
+      {
+       "lat": 54,
+       "asc": -90.961602,
+       "dsc": 43.254462
+      },
+      {
+       "lat": 60,
+       "asc": -84.5449,
+       "dsc": 36.837761
+      },
+      {
+       "lat": 66,
+       "asc": -74.450065,
+       "dsc": 26.742926
+      }
+     ],
+     "Moon": [
+      {
+       "lat": -66,
+       "asc": -161.210174,
+       "dsc": 28.659698
+      },
+      {
+       "lat": -60,
+       "asc": -160.078947,
+       "dsc": 27.52847
+      },
+      {
+       "lat": -54,
+       "asc": -159.297053,
+       "dsc": 26.746577
+      },
+      {
+       "lat": -48,
+       "asc": -158.713168,
+       "dsc": 26.162691
+      },
+      {
+       "lat": -42,
+       "asc": -158.25153,
+       "dsc": 25.701054
+      },
+      {
+       "lat": -36,
+       "asc": -157.869812,
+       "dsc": 25.319336
+      },
+      {
+       "lat": -30,
+       "asc": -157.542313,
+       "dsc": 24.991837
+      },
+      {
+       "lat": -24,
+       "asc": -157.252322,
+       "dsc": 24.701845
+      },
+      {
+       "lat": -18,
+       "asc": -156.98828,
+       "dsc": 24.437803
+      },
+      {
+       "lat": -12,
+       "asc": -156.74169,
+       "dsc": 24.191214
+      },
+      {
+       "lat": -6,
+       "asc": -156.505886,
+       "dsc": 23.955409
+      },
+      {
+       "lat": 0,
+       "asc": -156.275238,
+       "dsc": 23.724762
+      },
+      {
+       "lat": 6,
+       "asc": -156.044591,
+       "dsc": 23.494114
+      },
+      {
+       "lat": 12,
+       "asc": -155.808786,
+       "dsc": 23.25831
+      },
+      {
+       "lat": 18,
+       "asc": -155.562197,
+       "dsc": 23.01172
+      },
+      {
+       "lat": 24,
+       "asc": -155.298155,
+       "dsc": 22.747678
+      },
+      {
+       "lat": 30,
+       "asc": -155.008163,
+       "dsc": 22.457687
+      },
+      {
+       "lat": 36,
+       "asc": -154.680664,
+       "dsc": 22.130188
+      },
+      {
+       "lat": 42,
+       "asc": -154.298946,
+       "dsc": 21.74847
+      },
+      {
+       "lat": 48,
+       "asc": -153.837309,
+       "dsc": 21.286832
+      },
+      {
+       "lat": 54,
+       "asc": -153.253423,
+       "dsc": 20.702947
+      },
+      {
+       "lat": 60,
+       "asc": -152.47153,
+       "dsc": 19.921053
+      },
+      {
+       "lat": 66,
+       "asc": -151.340302,
+       "dsc": 18.789826
+      }
+     ],
+     "Venus": [
+      {
+       "lat": -66,
+       "asc": -164.383525,
+       "dsc": 77.536196
+      },
+      {
+       "lat": -60,
+       "asc": -156.796512,
+       "dsc": 69.949182
+      },
+      {
+       "lat": -54,
+       "asc": -151.799553,
+       "dsc": 64.952223
+      },
+      {
+       "lat": -48,
+       "asc": -148.160353,
+       "dsc": 61.313023
+      },
+      {
+       "lat": -42,
+       "asc": -145.325213,
+       "dsc": 58.477883
+      },
+      {
+       "lat": -36,
+       "asc": -143.002759,
+       "dsc": 56.15543
+      },
+      {
+       "lat": -30,
+       "asc": -141.022581,
+       "dsc": 54.175251
+      },
+      {
+       "lat": -24,
+       "asc": -139.276645,
+       "dsc": 52.429316
+      },
+      {
+       "lat": -18,
+       "asc": -137.691583,
+       "dsc": 50.844253
+      },
+      {
+       "lat": -12,
+       "asc": -136.214181,
+       "dsc": 49.366851
+      },
+      {
+       "lat": -6,
+       "asc": -134.803098,
+       "dsc": 47.955768
+      },
+      {
+       "lat": 0,
+       "asc": -133.423665,
+       "dsc": 46.576335
+      },
+      {
+       "lat": 6,
+       "asc": -132.044232,
+       "dsc": 45.196902
+      },
+      {
+       "lat": 12,
+       "asc": -130.633149,
+       "dsc": 43.785819
+      },
+      {
+       "lat": 18,
+       "asc": -129.155747,
+       "dsc": 42.308417
+      },
+      {
+       "lat": 24,
+       "asc": -127.570684,
+       "dsc": 40.723355
+      },
+      {
+       "lat": 30,
+       "asc": -125.824749,
+       "dsc": 38.977419
+      },
+      {
+       "lat": 36,
+       "asc": -123.84457,
+       "dsc": 36.997241
+      },
+      {
+       "lat": 42,
+       "asc": -121.522117,
+       "dsc": 34.674787
+      },
+      {
+       "lat": 48,
+       "asc": -118.686977,
+       "dsc": 31.839647
+      },
+      {
+       "lat": 54,
+       "asc": -115.047777,
+       "dsc": 28.200447
+      },
+      {
+       "lat": 60,
+       "asc": -110.050818,
+       "dsc": 23.203488
+      },
+      {
+       "lat": 66,
+       "asc": -102.463804,
+       "dsc": 15.616475
+      }
+     ],
+     "Mars": [
+      {
+       "lat": -66,
+       "asc": -150.156571,
+       "dsc": -51.251628
+      },
+      {
+       "lat": -60,
+       "asc": -160.617143,
+       "dsc": -40.791056
+      },
+      {
+       "lat": -54,
+       "asc": -167.227704,
+       "dsc": -34.180495
+      },
+      {
+       "lat": -48,
+       "asc": -171.953545,
+       "dsc": -29.454654
+      },
+      {
+       "lat": -42,
+       "asc": -175.598004,
+       "dsc": -25.810195
+      },
+      {
+       "lat": -36,
+       "asc": -178.564995,
+       "dsc": -22.843204
+      },
+      {
+       "lat": -30,
+       "asc": 178.915417,
+       "dsc": -20.323616
+      },
+      {
+       "lat": -24,
+       "asc": 176.699862,
+       "dsc": -18.108061
+      },
+      {
+       "lat": -18,
+       "asc": 174.692124,
+       "dsc": -16.100323
+      },
+      {
+       "lat": -12,
+       "asc": 172.823023,
+       "dsc": -14.231222
+      },
+      {
+       "lat": -6,
+       "asc": 171.039147,
+       "dsc": -12.447346
+      },
+      {
+       "lat": 0,
+       "asc": 169.295901,
+       "dsc": -10.704099
+      },
+      {
+       "lat": 6,
+       "asc": 167.552654,
+       "dsc": -8.960853
+      },
+      {
+       "lat": 12,
+       "asc": 165.768778,
+       "dsc": -7.176977
+      },
+      {
+       "lat": 18,
+       "asc": 163.899677,
+       "dsc": -5.307876
+      },
+      {
+       "lat": 24,
+       "asc": 161.891939,
+       "dsc": -3.300138
+      },
+      {
+       "lat": 30,
+       "asc": 159.676384,
+       "dsc": -1.084583
+      },
+      {
+       "lat": 36,
+       "asc": 157.156796,
+       "dsc": 1.435005
+      },
+      {
+       "lat": 42,
+       "asc": 154.189805,
+       "dsc": 4.401996
+      },
+      {
+       "lat": 48,
+       "asc": 150.545346,
+       "dsc": 8.046455
+      },
+      {
+       "lat": 54,
+       "asc": 145.819505,
+       "dsc": 12.772296
+      },
+      {
+       "lat": 60,
+       "asc": 139.208944,
+       "dsc": 19.382857
+      },
+      {
+       "lat": 66,
+       "asc": 128.748372,
+       "dsc": 29.843429
+      }
+     ],
+     "Jupiter": [
+      {
+       "lat": -66,
+       "asc": -153.382689,
+       "dsc": -40.932904
+      },
+      {
+       "lat": -60,
+       "asc": -161.771837,
+       "dsc": -32.543756
+      },
+      {
+       "lat": -54,
+       "asc": -167.23953,
+       "dsc": -27.076063
+      },
+      {
+       "lat": -48,
+       "asc": -171.201945,
+       "dsc": -23.113648
+      },
+      {
+       "lat": -42,
+       "asc": -174.280361,
+       "dsc": -20.035232
+      },
+      {
+       "lat": -36,
+       "asc": -176.797801,
+       "dsc": -17.517792
+      },
+      {
+       "lat": -30,
+       "asc": -178.941839,
+       "dsc": -15.373754
+      },
+      {
+       "lat": -24,
+       "asc": 179.16917,
+       "dsc": -13.484763
+      },
+      {
+       "lat": -18,
+       "asc": 177.455111,
+       "dsc": -11.770704
+      },
+      {
+       "lat": -12,
+       "asc": 175.858017,
+       "dsc": -10.17361
+      },
+      {
+       "lat": -6,
+       "asc": 174.332932,
+       "dsc": -8.648525
+      },
+      {
+       "lat": 0,
+       "asc": 172.842204,
+       "dsc": -7.157796
+      },
+      {
+       "lat": 6,
+       "asc": 171.351475,
+       "dsc": -5.667068
+      },
+      {
+       "lat": 12,
+       "asc": 169.82639,
+       "dsc": -4.141983
+      },
+      {
+       "lat": 18,
+       "asc": 168.229296,
+       "dsc": -2.544889
+      },
+      {
+       "lat": 24,
+       "asc": 166.515237,
+       "dsc": -0.83083
+      },
+      {
+       "lat": 30,
+       "asc": 164.626246,
+       "dsc": 1.058161
+      },
+      {
+       "lat": 36,
+       "asc": 162.482208,
+       "dsc": 3.202199
+      },
+      {
+       "lat": 42,
+       "asc": 159.964768,
+       "dsc": 5.719639
+      },
+      {
+       "lat": 48,
+       "asc": 156.886352,
+       "dsc": 8.798055
+      },
+      {
+       "lat": 54,
+       "asc": 152.923937,
+       "dsc": 12.76047
+      },
+      {
+       "lat": 60,
+       "asc": 147.456244,
+       "dsc": 18.228163
+      },
+      {
+       "lat": 66,
+       "asc": 139.067096,
+       "dsc": 26.617311
+      }
+     ]
+    },
+    "edge_cases": {
+     "Sun": [
+      {
+       "lat": -80,
+       "asc": null,
+       "dsc": null,
+       "state": "circumpolar"
+      },
+      {
+       "lat": -72,
+       "asc": -174.291164,
+       "dsc": 126.584025
+      },
+      {
+       "lat": 72,
+       "asc": -53.415975,
+       "dsc": 5.708836
+      },
+      {
+       "lat": 80,
+       "asc": null,
+       "dsc": null,
+       "state": "never_rises"
+      }
+     ],
+     "Moon": [
+      {
+       "lat": -80,
+       "asc": -168.82064,
+       "dsc": 36.270163
+      },
+      {
+       "lat": -72,
+       "asc": -163.044829,
+       "dsc": 30.494353
+      },
+      {
+       "lat": 72,
+       "asc": -149.505647,
+       "dsc": 16.955171
+      },
+      {
+       "lat": 80,
+       "asc": -143.729837,
+       "dsc": 11.17936
+      }
+     ]
+    }
+   },
+   {
+    "utc": "2026-11-20T06:47:00Z",
+    "t_unix": 1795157220,
+    "bodies": {
+     "Sun": [
+      {
+       "lat": -66,
+       "asc": -68.905852,
+       "dsc": -141.812117
+      },
+      {
+       "lat": -60,
+       "asc": -53.695293,
+       "dsc": -157.022676
+      },
+      {
+       "lat": -54,
+       "asc": -44.890701,
+       "dsc": -165.827268
+      },
+      {
+       "lat": -48,
+       "asc": -38.795258,
+       "dsc": -171.922712
+      },
+      {
+       "lat": -42,
+       "asc": -34.17012,
+       "dsc": -176.547849
+      },
+      {
+       "lat": -36,
+       "asc": -30.440141,
+       "dsc": 179.722172
+      },
+      {
+       "lat": -30,
+       "asc": -27.291458,
+       "dsc": 176.573489
+      },
+      {
+       "lat": -24,
+       "asc": -24.533599,
+       "dsc": 173.815629
+      },
+      {
+       "lat": -18,
+       "asc": -22.04101,
+       "dsc": 171.32304
+      },
+      {
+       "lat": -12,
+       "asc": -19.724565,
+       "dsc": 169.006595
+      },
+      {
+       "lat": -6,
+       "asc": -17.516083,
+       "dsc": 166.798114
+      },
+      {
+       "lat": 0,
+       "asc": -15.358985,
+       "dsc": 164.641015
+      },
+      {
+       "lat": 6,
+       "asc": -13.201886,
+       "dsc": 162.483917
+      },
+      {
+       "lat": 12,
+       "asc": -10.993405,
+       "dsc": 160.275435
+      },
+      {
+       "lat": 18,
+       "asc": -8.67696,
+       "dsc": 157.95899
+      },
+      {
+       "lat": 24,
+       "asc": -6.184371,
+       "dsc": 155.466401
+      },
+      {
+       "lat": 30,
+       "asc": -3.426511,
+       "dsc": 152.708542
+      },
+      {
+       "lat": 36,
+       "asc": -0.277828,
+       "dsc": 149.559859
+      },
+      {
+       "lat": 42,
+       "asc": 3.452151,
+       "dsc": 145.82988
+      },
+      {
+       "lat": 48,
+       "asc": 8.077288,
+       "dsc": 141.204742
+      },
+      {
+       "lat": 54,
+       "asc": 14.172732,
+       "dsc": 135.109299
+      },
+      {
+       "lat": 60,
+       "asc": 22.977324,
+       "dsc": 126.304707
+      },
+      {
+       "lat": 66,
+       "asc": 38.187883,
+       "dsc": 111.094148
+      }
+     ],
+     "Moon": [
+      {
+       "lat": -66,
+       "asc": 114.730188,
+       "dsc": -78.242974
+      },
+      {
+       "lat": -60,
+       "asc": 113.241447,
+       "dsc": -76.754233
+      },
+      {
+       "lat": -54,
+       "asc": 112.213304,
+       "dsc": -75.72609
+      },
+      {
+       "lat": -48,
+       "asc": 111.445889,
+       "dsc": -74.958675
+      },
+      {
+       "lat": -42,
+       "asc": 110.839321,
+       "dsc": -74.352107
+      },
+      {
+       "lat": -36,
+       "asc": 110.337857,
+       "dsc": -73.850643
+      },
+      {
+       "lat": -30,
+       "asc": 109.907676,
+       "dsc": -73.420462
+      },
+      {
+       "lat": -24,
+       "asc": 109.526795,
+       "dsc": -73.039581
+      },
+      {
+       "lat": -18,
+       "asc": 109.180017,
+       "dsc": -72.692803
+      },
+      {
+       "lat": -12,
+       "asc": 108.856174,
+       "dsc": -72.36896
+      },
+      {
+       "lat": -6,
+       "asc": 108.546503,
+       "dsc": -72.059289
+      },
+      {
+       "lat": 0,
+       "asc": 108.243607,
+       "dsc": -71.756393
+      },
+      {
+       "lat": 6,
+       "asc": 107.940711,
+       "dsc": -71.453497
+      },
+      {
+       "lat": 12,
+       "asc": 107.63104,
+       "dsc": -71.143826
+      },
+      {
+       "lat": 18,
+       "asc": 107.307197,
+       "dsc": -70.819983
+      },
+      {
+       "lat": 24,
+       "asc": 106.960419,
+       "dsc": -70.473205
+      },
+      {
+       "lat": 30,
+       "asc": 106.579538,
+       "dsc": -70.092324
+      },
+      {
+       "lat": 36,
+       "asc": 106.149357,
+       "dsc": -69.662143
+      },
+      {
+       "lat": 42,
+       "asc": 105.647893,
+       "dsc": -69.160679
+      },
+      {
+       "lat": 48,
+       "asc": 105.041325,
+       "dsc": -68.554111
+      },
+      {
+       "lat": 54,
+       "asc": 104.27391,
+       "dsc": -67.786696
+      },
+      {
+       "lat": 60,
+       "asc": 103.245767,
+       "dsc": -66.758553
+      },
+      {
+       "lat": 66,
+       "asc": 101.757026,
+       "dsc": -65.269812
+      }
+     ],
+     "Venus": [
+      {
+       "lat": -66,
+       "asc": -71.294815,
+       "dsc": 152.680007
+      },
+      {
+       "lat": -60,
+       "asc": -66.088985,
+       "dsc": 147.474177
+      },
+      {
+       "lat": -54,
+       "asc": -62.571263,
+       "dsc": 143.956456
+      },
+      {
+       "lat": -48,
+       "asc": -59.976316,
+       "dsc": 141.361508
+      },
+      {
+       "lat": -42,
+       "asc": -57.939706,
+       "dsc": 139.324898
+      },
+      {
+       "lat": -36,
+       "asc": -56.263626,
+       "dsc": 137.648818
+      },
+      {
+       "lat": -30,
+       "asc": -54.830175,
+       "dsc": 136.215367
+      },
+      {
+       "lat": -24,
+       "asc": -53.563658,
+       "dsc": 134.94885
+      },
+      {
+       "lat": -18,
+       "asc": -52.412203,
+       "dsc": 133.797395
+      },
+      {
+       "lat": -12,
+       "asc": -51.337938,
+       "dsc": 132.72313
+      },
+      {
+       "lat": -6,
+       "asc": -50.311297,
+       "dsc": 131.696489
+      },
+      {
+       "lat": 0,
+       "asc": -49.307404,
+       "dsc": 130.692596
+      },
+      {
+       "lat": 6,
+       "asc": -48.303511,
+       "dsc": 129.688703
+      },
+      {
+       "lat": 12,
+       "asc": -47.27687,
+       "dsc": 128.662062
+      },
+      {
+       "lat": 18,
+       "asc": -46.202605,
+       "dsc": 127.587797
+      },
+      {
+       "lat": 24,
+       "asc": -45.05115,
+       "dsc": 126.436342
+      },
+      {
+       "lat": 30,
+       "asc": -43.784633,
+       "dsc": 125.169825
+      },
+      {
+       "lat": 36,
+       "asc": -42.351182,
+       "dsc": 123.736374
+      },
+      {
+       "lat": 42,
+       "asc": -40.675102,
+       "dsc": 122.060294
+      },
+      {
+       "lat": 48,
+       "asc": -38.638492,
+       "dsc": 120.023684
+      },
+      {
+       "lat": 54,
+       "asc": -36.043544,
+       "dsc": 117.428737
+      },
+      {
+       "lat": 60,
+       "asc": -32.525823,
+       "dsc": 113.911015
+      },
+      {
+       "lat": 66,
+       "asc": -27.319993,
+       "dsc": 108.705185
+      }
+     ],
+     "Mars": [
+      {
+       "lat": -66,
+       "asc": -65.861026,
+       "dsc": 44.854219
+      },
+      {
+       "lat": -60,
+       "asc": -74.503667,
+       "dsc": 53.49686
+      },
+      {
+       "lat": -54,
+       "asc": -80.116958,
+       "dsc": 59.110151
+      },
+      {
+       "lat": -48,
+       "asc": -84.178349,
+       "dsc": 63.171542
+      },
+      {
+       "lat": -42,
+       "asc": -87.330851,
+       "dsc": 66.324044
+      },
+      {
+       "lat": -36,
+       "asc": -89.907469,
+       "dsc": 68.900662
+      },
+      {
+       "lat": -30,
+       "asc": -92.101127,
+       "dsc": 71.09432
+      },
+      {
+       "lat": -24,
+       "asc": -94.033372,
+       "dsc": 73.026565
+      },
+      {
+       "lat": -18,
+       "asc": -95.786395,
+       "dsc": 74.779588
+      },
+      {
+       "lat": -12,
+       "asc": -97.419618,
+       "dsc": 76.412812
+      },
+      {
+       "lat": -6,
+       "asc": -98.9791,
+       "dsc": 77.972293
+      },
+      {
+       "lat": 0,
+       "asc": -100.503403,
+       "dsc": 79.496597
+      },
+      {
+       "lat": 6,
+       "asc": -102.027707,
+       "dsc": 81.0209
+      },
+      {
+       "lat": 12,
+       "asc": -103.587188,
+       "dsc": 82.580382
+      },
+      {
+       "lat": 18,
+       "asc": -105.220412,
+       "dsc": 84.213605
+      },
+      {
+       "lat": 24,
+       "asc": -106.973435,
+       "dsc": 85.966628
+      },
+      {
+       "lat": 30,
+       "asc": -108.90568,
+       "dsc": 87.898873
+      },
+      {
+       "lat": 36,
+       "asc": -111.099338,
+       "dsc": 90.092531
+      },
+      {
+       "lat": 42,
+       "asc": -113.675956,
+       "dsc": 92.669149
+      },
+      {
+       "lat": 48,
+       "asc": -116.828458,
+       "dsc": 95.821651
+      },
+      {
+       "lat": 54,
+       "asc": -120.889849,
+       "dsc": 99.883042
+      },
+      {
+       "lat": 60,
+       "asc": -126.50314,
+       "dsc": 105.496333
+      },
+      {
+       "lat": 66,
+       "asc": -135.145781,
+       "dsc": 114.138974
+      }
+     ],
+     "Jupiter": [
+      {
+       "lat": -66,
+       "asc": -69.722477,
+       "dsc": 45.018111
+      },
+      {
+       "lat": -60,
+       "asc": -77.78156,
+       "dsc": 53.077193
+      },
+      {
+       "lat": -54,
+       "asc": -83.057374,
+       "dsc": 58.353007
+      },
+      {
+       "lat": -48,
+       "asc": -86.888623,
+       "dsc": 62.184256
+      },
+      {
+       "lat": -42,
+       "asc": -89.868558,
+       "dsc": 65.164192
+      },
+      {
+       "lat": -36,
+       "asc": -92.307187,
+       "dsc": 67.60282
+      },
+      {
+       "lat": -30,
+       "asc": -94.38506,
+       "dsc": 69.680694
+      },
+      {
+       "lat": -24,
+       "asc": -96.216326,
+       "dsc": 71.511959
+      },
+      {
+       "lat": -18,
+       "asc": -97.878357,
+       "dsc": 73.17399
+      },
+      {
+       "lat": -12,
+       "asc": -99.42719,
+       "dsc": 74.722823
+      },
+      {
+       "lat": -6,
+       "asc": -100.906317,
+       "dsc": 76.201951
+      },
+      {
+       "lat": 0,
+       "asc": -102.352183,
+       "dsc": 77.647817
+      },
+      {
+       "lat": 6,
+       "asc": -103.798049,
+       "dsc": 79.093683
+      },
+      {
+       "lat": 12,
+       "asc": -105.277177,
+       "dsc": 80.57281
+      },
+      {
+       "lat": 18,
+       "asc": -106.82601,
+       "dsc": 82.121643
+      },
+      {
+       "lat": 24,
+       "asc": -108.488041,
+       "dsc": 83.783674
+      },
+      {
+       "lat": 30,
+       "asc": -110.319306,
+       "dsc": 85.61494
+      },
+      {
+       "lat": 36,
+       "asc": -112.39718,
+       "dsc": 87.692813
+      },
+      {
+       "lat": 42,
+       "asc": -114.835808,
+       "dsc": 90.131442
+      },
+      {
+       "lat": 48,
+       "asc": -117.815744,
+       "dsc": 93.111377
+      },
+      {
+       "lat": 54,
+       "asc": -121.646993,
+       "dsc": 96.942626
+      },
+      {
+       "lat": 60,
+       "asc": -126.922807,
+       "dsc": 102.21844
+      },
+      {
+       "lat": 66,
+       "asc": -134.981889,
+       "dsc": 110.277523
+      }
+     ]
+    },
+    "edge_cases": {
+     "Sun": [
+      {
+       "lat": -80,
+       "asc": null,
+       "dsc": null,
+       "state": "circumpolar"
+      },
+      {
+       "lat": -72,
+       "asc": null,
+       "dsc": null,
+       "state": "circumpolar"
+      },
+      {
+       "lat": 72,
+       "asc": null,
+       "dsc": null,
+       "state": "never_rises"
+      },
+      {
+       "lat": 80,
+       "asc": null,
+       "dsc": null,
+       "state": "never_rises"
+      }
+     ],
+     "Moon": [
+      {
+       "lat": -80,
+       "asc": 124.817549,
+       "dsc": -88.330335
+      },
+      {
+       "lat": -72,
+       "asc": 117.148829,
+       "dsc": -80.661616
+      },
+      {
+       "lat": 72,
+       "asc": 99.338384,
+       "dsc": -62.851171
+      },
+      {
+       "lat": 80,
+       "asc": 91.669665,
+       "dsc": -55.182451
+      }
+     ]
+    }
+   },
+   {
+    "utc": "2026-12-04T23:14:00Z",
+    "t_unix": 1796426040,
+    "bodies": {
+     "Sun": [
+      {
+       "lat": -66,
+       "asc": 31.767769,
+       "dsc": -13.583635
+      },
+      {
+       "lat": -60,
+       "asc": 53.730946,
+       "dsc": -35.546813
+      },
+      {
+       "lat": -54,
+       "asc": 64.659499,
+       "dsc": -46.475365
+      },
+      {
+       "lat": -48,
+       "asc": 71.946398,
+       "dsc": -53.762264
+      },
+      {
+       "lat": -42,
+       "asc": 77.382746,
+       "dsc": -59.198612
+      },
+      {
+       "lat": -36,
+       "asc": 81.726138,
+       "dsc": -63.542004
+      },
+      {
+       "lat": -30,
+       "asc": 85.371721,
+       "dsc": -67.187587
+      },
+      {
+       "lat": -24,
+       "asc": 88.553004,
+       "dsc": -70.36887
+      },
+      {
+       "lat": -18,
+       "asc": 91.421256,
+       "dsc": -73.237122
+      },
+      {
+       "lat": -12,
+       "asc": 94.082559,
+       "dsc": -75.898425
+      },
+      {
+       "lat": -6,
+       "asc": 96.617368,
+       "dsc": -78.433234
+      },
+      {
+       "lat": 0,
+       "asc": 99.092067,
+       "dsc": -80.907933
+      },
+      {
+       "lat": 6,
+       "asc": 101.566766,
+       "dsc": -83.382632
+      },
+      {
+       "lat": 12,
+       "asc": 104.101575,
+       "dsc": -85.917441
+      },
+      {
+       "lat": 18,
+       "asc": 106.762878,
+       "dsc": -88.578744
+      },
+      {
+       "lat": 24,
+       "asc": 109.63113,
+       "dsc": -91.446996
+      },
+      {
+       "lat": 30,
+       "asc": 112.812413,
+       "dsc": -94.628279
+      },
+      {
+       "lat": 36,
+       "asc": 116.457996,
+       "dsc": -98.273862
+      },
+      {
+       "lat": 42,
+       "asc": 120.801388,
+       "dsc": -102.617254
+      },
+      {
+       "lat": 48,
+       "asc": 126.237736,
+       "dsc": -108.053602
+      },
+      {
+       "lat": 54,
+       "asc": 133.524635,
+       "dsc": -115.340501
+      },
+      {
+       "lat": 60,
+       "asc": 144.453187,
+       "dsc": -126.269054
+      },
+      {
+       "lat": 66,
+       "asc": 166.416365,
+       "dsc": -148.232231
+      }
+     ],
+     "Moon": [
+      {
+       "lat": -66,
+       "asc": 15.247564,
+       "dsc": -92.651647
+      },
+      {
+       "lat": -60,
+       "asc": 24.308648,
+       "dsc": -101.71273
+      },
+      {
+       "lat": -54,
+       "asc": 30.158853,
+       "dsc": -107.562936
+      },
+      {
+       "lat": -48,
+       "asc": 34.380259,
+       "dsc": -111.784341
+      },
+      {
+       "lat": -42,
+       "asc": 37.652106,
+       "dsc": -115.056189
+      },
+      {
+       "lat": -36,
+       "asc": 40.323847,
+       "dsc": -117.727929
+      },
+      {
+       "lat": -30,
+       "asc": 42.597151,
+       "dsc": -120.001233
+      },
+      {
+       "lat": -24,
+       "asc": 44.59876,
+       "dsc": -122.002843
+      },
+      {
+       "lat": -18,
+       "asc": 46.414227,
+       "dsc": -123.81831
+      },
+      {
+       "lat": -12,
+       "asc": 48.105326,
+       "dsc": -125.509408
+      },
+      {
+       "lat": -6,
+       "asc": 49.719894,
+       "dsc": -127.123976
+      },
+      {
+       "lat": 0,
+       "asc": 51.297959,
+       "dsc": -128.702041
+      },
+      {
+       "lat": 6,
+       "asc": 52.876024,
+       "dsc": -130.280106
+      },
+      {
+       "lat": 12,
+       "asc": 54.490592,
+       "dsc": -131.894674
+      },
+      {
+       "lat": 18,
+       "asc": 56.18169,
+       "dsc": -133.585773
+      },
+      {
+       "lat": 24,
+       "asc": 57.997157,
+       "dsc": -135.40124
+      },
+      {
+       "lat": 30,
+       "asc": 59.998767,
+       "dsc": -137.402849
+      },
+      {
+       "lat": 36,
+       "asc": 62.272071,
+       "dsc": -139.676153
+      },
+      {
+       "lat": 42,
+       "asc": 64.943811,
+       "dsc": -142.347894
+      },
+      {
+       "lat": 48,
+       "asc": 68.215659,
+       "dsc": -145.619741
+      },
+      {
+       "lat": 54,
+       "asc": 72.437064,
+       "dsc": -149.841147
+      },
+      {
+       "lat": 60,
+       "asc": 78.28727,
+       "dsc": -155.691352
+      },
+      {
+       "lat": 66,
+       "asc": 87.348353,
+       "dsc": -164.752436
+      }
+     ],
+     "Venus": [
+      {
+       "lat": -66,
+       "asc": 33.881319,
+       "dsc": -100.475504
+      },
+      {
+       "lat": -60,
+       "asc": 39.299121,
+       "dsc": -105.893306
+      },
+      {
+       "lat": -54,
+       "asc": 42.953006,
+       "dsc": -109.547191
+      },
+      {
+       "lat": -48,
+       "asc": 45.645694,
+       "dsc": -112.239879
+      },
+      {
+       "lat": -42,
+       "asc": 47.757767,
+       "dsc": -114.351952
+      },
+      {
+       "lat": -36,
+       "asc": 49.4953,
+       "dsc": -116.089485
+      },
+      {
+       "lat": -30,
+       "asc": 50.980938,
+       "dsc": -117.575123
+      },
+      {
+       "lat": -24,
+       "asc": 52.29334,
+       "dsc": -118.887525
+      },
+      {
+       "lat": -18,
+       "asc": 53.486373,
+       "dsc": -120.080558
+      },
+      {
+       "lat": -12,
+       "asc": 54.599342,
+       "dsc": -121.193527
+      },
+      {
+       "lat": -6,
+       "asc": 55.66292,
+       "dsc": -122.257105
+      },
+      {
+       "lat": 0,
+       "asc": 56.702908,
+       "dsc": -123.297092
+      },
+      {
+       "lat": 6,
+       "asc": 57.742895,
+       "dsc": -124.33708
+      },
+      {
+       "lat": 12,
+       "asc": 58.806473,
+       "dsc": -125.400658
+      },
+      {
+       "lat": 18,
+       "asc": 59.919442,
+       "dsc": -126.513627
+      },
+      {
+       "lat": 24,
+       "asc": 61.112475,
+       "dsc": -127.70666
+      },
+      {
+       "lat": 30,
+       "asc": 62.424877,
+       "dsc": -129.019062
+      },
+      {
+       "lat": 36,
+       "asc": 63.910515,
+       "dsc": -130.5047
+      },
+      {
+       "lat": 42,
+       "asc": 65.648048,
+       "dsc": -132.242233
+      },
+      {
+       "lat": 48,
+       "asc": 67.760121,
+       "dsc": -134.354306
+      },
+      {
+       "lat": 54,
+       "asc": 70.452809,
+       "dsc": -137.046994
+      },
+      {
+       "lat": 60,
+       "asc": 74.106694,
+       "dsc": -140.700879
+      },
+      {
+       "lat": 66,
+       "asc": 79.524496,
+       "dsc": -146.118681
+      }
+     ],
+     "Mars": [
+      {
+       "lat": -66,
+       "asc": 33.847337,
+       "dsc": 153.954086
+      },
+      {
+       "lat": -60,
+       "asc": 26.541785,
+       "dsc": 161.259638
+      },
+      {
+       "lat": -54,
+       "asc": 21.713502,
+       "dsc": 166.087921
+      },
+      {
+       "lat": -48,
+       "asc": 18.191265,
+       "dsc": 169.610158
+      },
+      {
+       "lat": -42,
+       "asc": 15.44465,
+       "dsc": 172.356773
+      },
+      {
+       "lat": -36,
+       "asc": 13.193392,
+       "dsc": 174.608031
+      },
+      {
+       "lat": -30,
+       "asc": 11.273177,
+       "dsc": 176.528246
+      },
+      {
+       "lat": -24,
+       "asc": 9.579671,
+       "dsc": 178.221752
+      },
+      {
+       "lat": -18,
+       "asc": 8.041934,
+       "dsc": 179.759489
+      },
+      {
+       "lat": -12,
+       "asc": 6.608473,
+       "dsc": -178.80705
+      },
+      {
+       "lat": -6,
+       "asc": 5.23926,
+       "dsc": -177.437837
+      },
+      {
+       "lat": 0,
+       "asc": 3.900711,
+       "dsc": -176.099289
+      },
+      {
+       "lat": 6,
+       "asc": 2.562163,
+       "dsc": -174.76074
+      },
+      {
+       "lat": 12,
+       "asc": 1.19295,
+       "dsc": -173.391527
+      },
+      {
+       "lat": 18,
+       "asc": -0.240511,
+       "dsc": -171.958066
+      },
+      {
+       "lat": 24,
+       "asc": -1.778248,
+       "dsc": -170.420329
+      },
+      {
+       "lat": 30,
+       "asc": -3.471754,
+       "dsc": -168.726823
+      },
+      {
+       "lat": 36,
+       "asc": -5.391969,
+       "dsc": -166.806608
+      },
+      {
+       "lat": 42,
+       "asc": -7.643227,
+       "dsc": -164.55535
+      },
+      {
+       "lat": 48,
+       "asc": -10.389842,
+       "dsc": -161.808735
+      },
+      {
+       "lat": 54,
+       "asc": -13.912079,
+       "dsc": -158.286498
+      },
+      {
+       "lat": 60,
+       "asc": -18.740362,
+       "dsc": -153.458215
+      },
+      {
+       "lat": 66,
+       "asc": -26.045914,
+       "dsc": -146.152663
+      }
+     ],
+     "Jupiter": [
+      {
+       "lat": -66,
+       "asc": 29.233226,
+       "dsc": 145.046792
+      },
+      {
+       "lat": -60,
+       "asc": 21.32696,
+       "dsc": 152.953057
+      },
+      {
+       "lat": -54,
+       "asc": 16.140853,
+       "dsc": 158.139164
+      },
+      {
+       "lat": -48,
+       "asc": 12.371203,
+       "dsc": 161.908814
+      },
+      {
+       "lat": -42,
+       "asc": 9.437634,
+       "dsc": 164.842383
+      },
+      {
+       "lat": -36,
+       "asc": 7.036169,
+       "dsc": 167.243848
+      },
+      {
+       "lat": -30,
+       "asc": 4.989526,
+       "dsc": 169.290491
+      },
+      {
+       "lat": -24,
+       "asc": 3.185526,
+       "dsc": 171.094491
+      },
+      {
+       "lat": -18,
+       "asc": 1.548081,
+       "dsc": 172.731936
+      },
+      {
+       "lat": -12,
+       "asc": 0.022061,
+       "dsc": 174.257956
+      },
+      {
+       "lat": -6,
+       "asc": -1.435338,
+       "dsc": 175.715355
+      },
+      {
+       "lat": 0,
+       "asc": -2.859991,
+       "dsc": 177.140009
+      },
+      {
+       "lat": 6,
+       "asc": -4.284645,
+       "dsc": 178.564662
+      },
+      {
+       "lat": 12,
+       "asc": -5.742044,
+       "dsc": -179.977939
+      },
+      {
+       "lat": 18,
+       "asc": -7.268064,
+       "dsc": -178.451919
+      },
+      {
+       "lat": 24,
+       "asc": -8.905509,
+       "dsc": -176.814474
+      },
+      {
+       "lat": 30,
+       "asc": -10.709509,
+       "dsc": -175.010474
+      },
+      {
+       "lat": 36,
+       "asc": -12.756152,
+       "dsc": -172.963831
+      },
+      {
+       "lat": 42,
+       "asc": -15.157617,
+       "dsc": -170.562366
+      },
+      {
+       "lat": 48,
+       "asc": -18.091186,
+       "dsc": -167.628797
+      },
+      {
+       "lat": 54,
+       "asc": -21.860836,
+       "dsc": -163.859147
+      },
+      {
+       "lat": 60,
+       "asc": -27.046943,
+       "dsc": -158.67304
+      },
+      {
+       "lat": 66,
+       "asc": -34.953208,
+       "dsc": -150.766774
+      }
+     ]
+    },
+    "edge_cases": {
+     "Sun": [
+      {
+       "lat": -80,
+       "asc": null,
+       "dsc": null,
+       "state": "circumpolar"
+      },
+      {
+       "lat": -72,
+       "asc": null,
+       "dsc": null,
+       "state": "circumpolar"
+      },
+      {
+       "lat": 72,
+       "asc": null,
+       "dsc": null,
+       "state": "never_rises"
+      },
+      {
+       "lat": 80,
+       "asc": null,
+       "dsc": null,
+       "state": "never_rises"
+      }
+     ],
+     "Moon": [
+      {
+       "lat": -80,
+       "asc": null,
+       "dsc": null,
+       "state": "circumpolar"
+      },
+      {
+       "lat": -72,
+       "asc": -2.447815,
+       "dsc": -74.956267
+      },
+      {
+       "lat": 72,
+       "asc": 105.043733,
+       "dsc": 177.552185
+      },
+      {
+       "lat": 80,
+       "asc": null,
+       "dsc": null,
+       "state": "never_rises"
+      }
+     ]
+    }
+   },
+   {
+    "utc": "2027-03-20T14:46:00Z",
+    "t_unix": 1805553960,
+    "bodies": {
+     "Sun": [
+      {
+       "lat": -66,
+       "asc": -129.8356,
+       "dsc": 50.582054
+      },
+      {
+       "lat": -60,
+       "asc": -129.787812,
+       "dsc": 50.534265
+      },
+      {
+       "lat": -54,
+       "asc": -129.754743,
+       "dsc": 50.501197
+      },
+      {
+       "lat": -48,
+       "asc": -129.730033,
+       "dsc": 50.476486
+      },
+      {
+       "lat": -42,
+       "asc": -129.710489,
+       "dsc": 50.456942
+      },
+      {
+       "lat": -36,
+       "asc": -129.694324,
+       "dsc": 50.440777
+      },
+      {
+       "lat": -30,
+       "asc": -129.680453,
+       "dsc": 50.426906
+      },
+      {
+       "lat": -24,
+       "asc": -129.668169,
+       "dsc": 50.414622
+      },
+      {
+       "lat": -18,
+       "asc": -129.656983,
+       "dsc": 50.403436
+      },
+      {
+       "lat": -12,
+       "asc": -129.646536,
+       "dsc": 50.392989
+      },
+      {
+       "lat": -6,
+       "asc": -129.636546,
+       "dsc": 50.382999
+      },
+      {
+       "lat": 0,
+       "asc": -129.626773,
+       "dsc": 50.373227
+      },
+      {
+       "lat": 6,
+       "asc": -129.617001,
+       "dsc": 50.363454
+      },
+      {
+       "lat": 12,
+       "asc": -129.607011,
+       "dsc": 50.353464
+      },
+      {
+       "lat": 18,
+       "asc": -129.596564,
+       "dsc": 50.343017
+      },
+      {
+       "lat": 24,
+       "asc": -129.585378,
+       "dsc": 50.331831
+      },
+      {
+       "lat": 30,
+       "asc": -129.573094,
+       "dsc": 50.319547
+      },
+      {
+       "lat": 36,
+       "asc": -129.559223,
+       "dsc": 50.305676
+      },
+      {
+       "lat": 42,
+       "asc": -129.543058,
+       "dsc": 50.289511
+      },
+      {
+       "lat": 48,
+       "asc": -129.523514,
+       "dsc": 50.269967
+      },
+      {
+       "lat": 54,
+       "asc": -129.498803,
+       "dsc": 50.245257
+      },
+      {
+       "lat": 60,
+       "asc": -129.465735,
+       "dsc": 50.212188
+      },
+      {
+       "lat": 66,
+       "asc": -129.417946,
+       "dsc": 50.1644
+      }
+     ],
+     "Moon": [
+      {
+       "lat": -66,
+       "asc": 46.289266,
+       "dsc": -171.540072
+      },
+      {
+       "lat": -60,
+       "asc": 41.850838,
+       "dsc": -167.101644
+      },
+      {
+       "lat": -54,
+       "asc": 38.832421,
+       "dsc": -164.083227
+      },
+      {
+       "lat": -48,
+       "asc": 36.598288,
+       "dsc": -161.849093
+      },
+      {
+       "lat": -42,
+       "asc": 34.841356,
+       "dsc": -160.092161
+      },
+      {
+       "lat": -36,
+       "asc": 33.393604,
+       "dsc": -158.64441
+      },
+      {
+       "lat": -30,
+       "asc": 32.154377,
+       "dsc": -157.405183
+      },
+      {
+       "lat": -24,
+       "asc": 31.058831,
+       "dsc": -156.309636
+      },
+      {
+       "lat": -18,
+       "asc": 30.062416,
+       "dsc": -155.313222
+      },
+      {
+       "lat": -12,
+       "asc": 29.132551,
+       "dsc": -154.383356
+      },
+      {
+       "lat": -6,
+       "asc": 28.243761,
+       "dsc": -153.494566
+      },
+      {
+       "lat": 0,
+       "asc": 27.374597,
+       "dsc": -152.625403
+      },
+      {
+       "lat": 6,
+       "asc": 26.505434,
+       "dsc": -151.756239
+      },
+      {
+       "lat": 12,
+       "asc": 25.616644,
+       "dsc": -150.867449
+      },
+      {
+       "lat": 18,
+       "asc": 24.686778,
+       "dsc": -149.937584
+      },
+      {
+       "lat": 24,
+       "asc": 23.690364,
+       "dsc": -148.941169
+      },
+      {
+       "lat": 30,
+       "asc": 22.594817,
+       "dsc": -147.845623
+      },
+      {
+       "lat": 36,
+       "asc": 21.35559,
+       "dsc": -146.606396
+      },
+      {
+       "lat": 42,
+       "asc": 19.907839,
+       "dsc": -145.158644
+      },
+      {
+       "lat": 48,
+       "asc": 18.150907,
+       "dsc": -143.401712
+      },
+      {
+       "lat": 54,
+       "asc": 15.916773,
+       "dsc": -141.167579
+      },
+      {
+       "lat": 60,
+       "asc": 12.898356,
+       "dsc": -138.149162
+      },
+      {
+       "lat": 66,
+       "asc": 8.459928,
+       "dsc": -133.710734
+      }
+     ],
+     "Venus": [
+      {
+       "lat": -66,
+       "asc": 161.565175,
+       "dsc": 50.773347
+      },
+      {
+       "lat": -60,
+       "asc": 170.196557,
+       "dsc": 42.141966
+      },
+      {
+       "lat": -54,
+       "asc": 175.803414,
+       "dsc": 36.535109
+      },
+      {
+       "lat": -48,
+       "asc": 179.860442,
+       "dsc": 32.47808
+      },
+      {
+       "lat": -42,
+       "asc": -176.990318,
+       "dsc": 29.32884
+      },
+      {
+       "lat": -36,
+       "asc": -174.416304,
+       "dsc": 26.754826
+      },
+      {
+       "lat": -30,
+       "asc": -172.224828,
+       "dsc": 24.56335
+      },
+      {
+       "lat": -24,
+       "asc": -170.294484,
+       "dsc": 22.633007
+      },
+      {
+       "lat": -18,
+       "asc": -168.543173,
+       "dsc": 20.881695
+      },
+      {
+       "lat": -12,
+       "asc": -166.911538,
+       "dsc": 19.25006
+      },
+      {
+       "lat": -6,
+       "asc": -165.353567,
+       "dsc": 17.692089
+      },
+      {
+       "lat": 0,
+       "asc": -163.830739,
+       "dsc": 16.169261
+      },
+      {
+       "lat": 6,
+       "asc": -162.307911,
+       "dsc": 14.646433
+      },
+      {
+       "lat": 12,
+       "asc": -160.74994,
+       "dsc": 13.088462
+      },
+      {
+       "lat": 18,
+       "asc": -159.118305,
+       "dsc": 11.456827
+      },
+      {
+       "lat": 24,
+       "asc": -157.366993,
+       "dsc": 9.705516
+      },
+      {
+       "lat": 30,
+       "asc": -155.43665,
+       "dsc": 7.775172
+      },
+      {
+       "lat": 36,
+       "asc": -153.245174,
+       "dsc": 5.583696
+      },
+      {
+       "lat": 42,
+       "asc": -150.67116,
+       "dsc": 3.009682
+      },
+      {
+       "lat": 48,
+       "asc": -147.52192,
+       "dsc": -0.139558
+      },
+      {
+       "lat": 54,
+       "asc": -143.464891,
+       "dsc": -4.196586
+      },
+      {
+       "lat": 60,
+       "asc": -137.858034,
+       "dsc": -9.803443
+      },
+      {
+       "lat": 66,
+       "asc": -129.226653,
+       "dsc": -18.434825
+      }
+     ],
+     "Mars": [
+      {
+       "lat": -66,
+       "asc": 61.915409,
+       "dsc": 150.16778
+      },
+      {
+       "lat": -60,
+       "asc": 49.652084,
+       "dsc": 162.431106
+      },
+      {
+       "lat": -54,
+       "asc": 42.137579,
+       "dsc": 169.94561
+      },
+      {
+       "lat": -48,
+       "asc": 36.831319,
+       "dsc": 175.25187
+      },
+      {
+       "lat": -42,
+       "asc": 32.765435,
+       "dsc": 179.317754
+      },
+      {
+       "lat": -36,
+       "asc": 29.467921,
+       "dsc": -177.384731
+      },
+      {
+       "lat": -30,
+       "asc": 26.674433,
+       "dsc": -174.591244
+      },
+      {
+       "lat": -24,
+       "asc": 24.221981,
+       "dsc": -172.138791
+      },
+      {
+       "lat": -18,
+       "asc": 22.001973,
+       "dsc": -169.918783
+      },
+      {
+       "lat": -12,
+       "asc": 19.936736,
+       "dsc": -167.853547
+      },
+      {
+       "lat": -6,
+       "asc": 17.96653,
+       "dsc": -165.883341
+      },
+      {
+       "lat": 0,
+       "asc": 16.041595,
+       "dsc": -163.958405
+      },
+      {
+       "lat": 6,
+       "asc": 14.116659,
+       "dsc": -162.03347
+      },
+      {
+       "lat": 12,
+       "asc": 12.146453,
+       "dsc": -160.063264
+      },
+      {
+       "lat": 18,
+       "asc": 10.081217,
+       "dsc": -157.998027
+      },
+      {
+       "lat": 24,
+       "asc": 7.861209,
+       "dsc": -155.778019
+      },
+      {
+       "lat": 30,
+       "asc": 5.408756,
+       "dsc": -153.325567
+      },
+      {
+       "lat": 36,
+       "asc": 2.615269,
+       "dsc": -150.532079
+      },
+      {
+       "lat": 42,
+       "asc": -0.682246,
+       "dsc": -147.234565
+      },
+      {
+       "lat": 48,
+       "asc": -4.74813,
+       "dsc": -143.168681
+      },
+      {
+       "lat": 54,
+       "asc": -10.05439,
+       "dsc": -137.862421
+      },
+      {
+       "lat": 60,
+       "asc": -17.568894,
+       "dsc": -130.347916
+      },
+      {
+       "lat": 66,
+       "asc": -29.83222,
+       "dsc": -118.084591
+      }
+     ],
+     "Jupiter": [
+      {
+       "lat": -66,
+       "asc": 52.904982,
+       "dsc": 149.54478
+      },
+      {
+       "lat": -60,
+       "asc": 42.075276,
+       "dsc": 160.374485
+      },
+      {
+       "lat": -54,
+       "asc": 35.272601,
+       "dsc": 167.177161
+      },
+      {
+       "lat": -48,
+       "asc": 30.4216,
+       "dsc": 172.028162
+      },
+      {
+       "lat": -42,
+       "asc": 26.685582,
+       "dsc": 175.764179
+      },
+      {
+       "lat": -36,
+       "asc": 23.646463,
+       "dsc": 178.803298
+      },
+      {
+       "lat": -30,
+       "asc": 21.066935,
+       "dsc": -178.617173
+      },
+      {
+       "lat": -24,
+       "asc": 18.79944,
+       "dsc": -176.349679
+      },
+      {
+       "lat": -18,
+       "asc": 16.745104,
+       "dsc": -174.295342
+      },
+      {
+       "lat": -12,
+       "asc": 14.83291,
+       "dsc": -172.383149
+      },
+      {
+       "lat": -6,
+       "asc": 13.008076,
+       "dsc": -170.558314
+      },
+      {
+       "lat": 0,
+       "asc": 11.224881,
+       "dsc": -168.775119
+      },
+      {
+       "lat": 6,
+       "asc": 9.441686,
+       "dsc": -166.991924
+      },
+      {
+       "lat": 12,
+       "asc": 7.616851,
+       "dsc": -165.16709
+      },
+      {
+       "lat": 18,
+       "asc": 5.704658,
+       "dsc": -163.254896
+      },
+      {
+       "lat": 24,
+       "asc": 3.650321,
+       "dsc": -161.20056
+      },
+      {
+       "lat": 30,
+       "asc": 1.382827,
+       "dsc": -158.933065
+      },
+      {
+       "lat": 36,
+       "asc": -1.196702,
+       "dsc": -156.353537
+      },
+      {
+       "lat": 42,
+       "asc": -4.235821,
+       "dsc": -153.314418
+      },
+      {
+       "lat": 48,
+       "asc": -7.971838,
+       "dsc": -149.5784
+      },
+      {
+       "lat": 54,
+       "asc": -12.822839,
+       "dsc": -144.727399
+      },
+      {
+       "lat": 60,
+       "asc": -19.625515,
+       "dsc": -137.924724
+      },
+      {
+       "lat": 66,
+       "asc": -30.45522,
+       "dsc": -127.095018
+      }
+     ]
+    },
+    "edge_cases": {
+     "Sun": [
+      {
+       "lat": -80,
+       "asc": -130.154071,
+       "dsc": 50.900525
+      },
+      {
+       "lat": -72,
+       "asc": -129.912924,
+       "dsc": 50.659377
+      },
+      {
+       "lat": 72,
+       "asc": -129.340623,
+       "dsc": 50.087076
+      },
+      {
+       "lat": 80,
+       "asc": -129.099475,
+       "dsc": 49.845929
+      }
+     ],
+     "Moon": [
+      {
+       "lat": -80,
+       "asc": 82.310383,
+       "dsc": 152.438812
+      },
+      {
+       "lat": -72,
+       "asc": 53.745944,
+       "dsc": -178.99675
+      },
+      {
+       "lat": 72,
+       "asc": 1.00325,
+       "dsc": -126.254056
+      },
+      {
+       "lat": 80,
+       "asc": -27.561188,
+       "dsc": -97.689617
+      }
+     ]
+    }
+   }
+  ]
+ },
+ "aspect_times": {
+  "about": "Events from Mecha Jono's sky-event catalogue (beu/psi_catalogue.py) over the span, for Starcom's own search of the same event. The check is the angle: at our exact_utc, your defining angle minus target_deg is within 60 arcsec (1', astronomy-engine's own stated accuracy). Equivalently your exact time is within the event's tolerance_s (60 arcsec at its rate: about 2 minutes for the Moon, days for a slow pair). A station has no tolerance_s: check its body's speed changes sign within 1 hour of exact_utc. t_in and t_out are where the orb crosses orb_cap (the window's edges); rate and accel are the defining angle's, in degrees a day and a day a day.",
+  "span": {
+   "from": "2026-11-01",
+   "to": "2026-12-31",
+   "end": "exclusive",
+   "catalogue_span": "2026-11-01 to 2026-12-31"
+  },
+  "frame": "geocentric apparent ecliptic longitudes of date (true ecliptic and equinox of date, skyfield ecliptic_frame): light time, aberration and deflection; DE440s; nutation IAU 2000B (the catalogue's; within about 1 mas of 2000A). Never the J2000 ecliptic: exact_j2000_utc, where given, is the same crossing in the J2000 ecliptic, to tell a frame mix-up from an ephemeris difference (here up to 221 s apart: Uranus-Pluto, 2026-11-29).",
+  "rules": {
+   "aspect": "exact where wrap180(lon(bodies[0]) - lon(bodies[1]) - target_deg) = 0; target_deg = 360 k / n or 360 - 360 k / n (each side of the circle is its own event); rate is d/dt of that difference",
+   "lunation": "the Sun-Moon aspect at 0 (new), 180 (full), 270 (first quarter: the Moon 90 ahead of the Sun) or 90 (last quarter) in lon(Sun) - lon(Moon)",
+   "station": "exact where d lon / dt of the body crosses zero (retrograde: + to -; direct: - to +); target_deg holds the body's longitude there",
+   "eclipse": "none in this span",
+   "arcsec_in_60s": "how far the defining angle moves in 60 s at this rate",
+   "tolerance_s": "the time 60 arcsec of the defining angle is worth at this rate: the time check that is the same as the angle check"
+  },
+  "selection": "every lunation, eclipse and station in the span; the Moon's first conjunction with each of Jupiter, Saturn, Uranus, Neptune and Pluto; then the major aspects (harmonics 1, 2, 3, 4, 6) between the Sun and the planets, in time order; at most 40, listed in time order",
+  "events": [
+   {
+    "id": "lunation:last_quarter:Sun+Moon:-:20261101T202827",
+    "class": "lunation",
+    "sub": "last_quarter",
+    "bodies": [
+     "Sun",
+     "Moon"
+    ],
+    "n": 4,
+    "k": 1,
+    "target_deg": 90.0,
+    "exact_utc": 1793564907.072,
+    "exact_iso": "2026-11-01T20:28:27.072Z",
+    "t_in": 1793544872.198,
+    "t_out": 1793585036.248,
+    "rate": -12.907134,
+    "accel": 0.26085365,
+    "orb_cap": 3.0,
+    "arcsec_in_60s": 32.2678,
+    "tolerance_s": 111.6
+   },
+   {
+    "id": "aspect:harmonic:Moon+Jupiter:h1k1-0:20261102T225033",
+    "class": "aspect",
+    "sub": "harmonic",
+    "bodies": [
+     "Moon",
+     "Jupiter"
+    ],
+    "n": 1,
+    "k": 1,
+    "target_deg": 0.0,
+    "exact_utc": 1793659833.396,
+    "exact_iso": "2026-11-02T22:50:33.396Z",
+    "t_in": 1793640689.878,
+    "t_out": 1793679052.63,
+    "rate": 13.513035,
+    "accel": -0.24030438,
+    "orb_cap": 3.0,
+    "exact_j2000_utc": 1793659833.231,
+    "arcsec_in_60s": 33.7826,
+    "tolerance_s": 106.6
+   },
+   {
+    "id": "aspect:harmonic:Venus+Jupiter:h6k1-60:20261104T103121",
+    "class": "aspect",
+    "sub": "harmonic",
+    "bodies": [
+     "Venus",
+     "Jupiter"
+    ],
+    "n": 6,
+    "k": 1,
+    "target_deg": 60.0,
+    "exact_utc": 1793788281.188,
+    "exact_iso": "2026-11-04T10:31:21.188Z",
+    "t_in": 1792980969.418,
+    "t_out": 1796751884.543,
+    "rate": -0.496737,
+    "accel": 0.03878087,
+    "orb_cap": 6.0,
+    "exact_j2000_utc": 1793788324.993,
+    "arcsec_in_60s": 1.2418,
+    "tolerance_s": 2898.9
+   },
+   {
+    "id": "aspect:harmonic:Sun+Mercury:h1k1-0:20261104T142418",
+    "class": "aspect",
+    "sub": "harmonic",
+    "bodies": [
+     "Sun",
+     "Mercury"
+    ],
+    "n": 1,
+    "k": 1,
+    "target_deg": 0.0,
+    "exact_utc": 1793802258.607,
+    "exact_iso": "2026-11-04T14:24:18.607Z",
+    "t_in": 1793574696.203,
+    "t_out": 1794033231.07,
+    "rate": 2.309149,
+    "accel": -0.01158713,
+    "orb_cap": 6.0,
+    "exact_j2000_utc": 1793802259.193,
+    "arcsec_in_60s": 5.7729,
+    "tolerance_s": 623.6
+   },
+   {
+    "id": "lunation:new:Sun+Moon:-:20261109T070206",
+    "class": "lunation",
+    "sub": "new",
+    "bodies": [
+     "Sun",
+     "Moon"
+    ],
+    "n": 1,
+    "k": 1,
+    "target_deg": 0.0,
+    "exact_utc": 1794207726.92,
+    "exact_iso": "2026-11-09T07:02:06.920Z",
+    "t_in": 1794185033.392,
+    "t_out": 1794230513.625,
+    "rate": -11.398419,
+    "accel": 0.17749218,
+    "orb_cap": 3.0,
+    "arcsec_in_60s": 28.496,
+    "tolerance_s": 126.3
+   },
+   {
+    "id": "aspect:harmonic:Venus+Mars:h6k1-60:20261110T064736",
+    "class": "aspect",
+    "sub": "harmonic",
+    "bodies": [
+     "Venus",
+     "Mars"
+    ],
+    "n": 6,
+    "k": 1,
+    "target_deg": 60.0,
+    "exact_utc": 1794293256.784,
+    "exact_iso": "2026-11-10T06:47:36.784Z",
+    "t_in": 1793635680.777,
+    "t_out": 1797933342.625,
+    "rate": -0.622958,
+    "accel": 0.04502481,
+    "orb_cap": 6.0,
+    "exact_j2000_utc": 1794293288.961,
+    "arcsec_in_60s": 1.5574,
+    "tolerance_s": 2311.6
+   },
+   {
+    "id": "station:direct:Mercury:-:20261113T155352",
+    "class": "station",
+    "sub": "direct",
+    "bodies": [
+     "Mercury"
+    ],
+    "n": null,
+    "k": null,
+    "target_deg": 215.03349,
+    "exact_utc": 1794585232.328,
+    "exact_iso": "2026-11-13T15:53:52.328Z",
+    "t_in": 1794473833.217,
+    "t_out": 1794704261.511,
+    "rate": 0.0,
+    "accel": null,
+    "orb_cap": 0.25
+   },
+   {
+    "id": "station:direct:Venus:-:20261114T002727",
+    "class": "station",
+    "sub": "direct",
+    "bodies": [
+     "Venus"
+    ],
+    "n": null,
+    "k": null,
+    "target_deg": 202.863661,
+    "exact_utc": 1794616047.414,
+    "exact_iso": "2026-11-14T00:27:27.414Z",
+    "t_in": 1794094613.361,
+    "t_out": 1795178349.886,
+    "rate": 0.0,
+    "accel": null,
+    "orb_cap": 0.25
+   },
+   {
+    "id": "aspect:harmonic:Moon+Pluto:h1k1-0:20261115T160417",
+    "class": "aspect",
+    "sub": "harmonic",
+    "bodies": [
+     "Moon",
+     "Pluto"
+    ],
+    "n": 1,
+    "k": 1,
+    "target_deg": 0.0,
+    "exact_utc": 1794758657.589,
+    "exact_iso": "2026-11-15T16:04:17.589Z",
+    "t_in": 1794736741.871,
+    "t_out": 1794780526.536,
+    "rate": 11.838868,
+    "accel": 0.09979505,
+    "orb_cap": 3.0,
+    "exact_j2000_utc": 1794758656.93,
+    "arcsec_in_60s": 29.5972,
+    "tolerance_s": 121.6
+   },
+   {
+    "id": "aspect:harmonic:Mars+Jupiter:h1k1-0:20261116T062338",
+    "class": "aspect",
+    "sub": "harmonic",
+    "bodies": [
+     "Mars",
+     "Jupiter"
+    ],
+    "n": 1,
+    "k": 1,
+    "target_deg": 0.0,
+    "exact_utc": 1794810218.632,
+    "exact_iso": "2026-11-16T06:23:38.632Z",
+    "t_in": 1794107902.867,
+    "t_out": 1795538782.329,
+    "rate": 0.363126,
+    "accel": -0.00159121,
+    "orb_cap": 3.0,
+    "exact_j2000_utc": 1794810233.847,
+    "arcsec_in_60s": 0.9078,
+    "tolerance_s": 3965.6
+   },
+   {
+    "id": "lunation:first_quarter:Sun+Moon:-:20261117T114749",
+    "class": "lunation",
+    "sub": "first_quarter",
+    "bodies": [
+     "Sun",
+     "Moon"
+    ],
+    "n": 4,
+    "k": 1,
+    "target_deg": 270.0,
+    "exact_utc": 1794916069.646,
+    "exact_iso": "2026-11-17T11:47:49.646Z",
+    "t_in": 1794892807.181,
+    "t_out": 1794939184.093,
+    "rate": -11.177089,
+    "accel": -0.26592813,
+    "orb_cap": 3.0,
+    "arcsec_in_60s": 27.9427,
+    "tolerance_s": 128.8
+   },
+   {
+    "id": "aspect:harmonic:Sun+Jupiter:h4k1-90:20261118T093834",
+    "class": "aspect",
+    "sub": "harmonic",
+    "bodies": [
+     "Sun",
+     "Jupiter"
+    ],
+    "n": 4,
+    "k": 1,
+    "target_deg": 90.0,
+    "exact_utc": 1794994714.879,
+    "exact_iso": "2026-11-18T09:38:34.879Z",
+    "t_in": 1794432264.232,
+    "t_out": 1795544885.398,
+    "rate": 0.931955,
+    "accel": 0.00318823,
+    "orb_cap": 6.0,
+    "exact_j2000_utc": 1794994711.148,
+    "arcsec_in_60s": 2.3299,
+    "tolerance_s": 1545.1
+   },
+   {
+    "id": "aspect:harmonic:Sun+Mars:h4k1-90:20261119T174900",
+    "class": "aspect",
+    "sub": "harmonic",
+    "bodies": [
+     "Sun",
+     "Mars"
+    ],
+    "n": 4,
+    "k": 1,
+    "target_deg": 90.0,
+    "exact_utc": 1795110540.993,
+    "exact_iso": "2026-11-19T17:49:00.993Z",
+    "t_in": 1794173500.023,
+    "t_out": 1795966980.204,
+    "rate": 0.578968,
+    "accel": 0.00499091,
+    "orb_cap": 6.0,
+    "exact_j2000_utc": 1795110524.61,
+    "arcsec_in_60s": 1.4474,
+    "tolerance_s": 2487.2
+   },
+   {
+    "id": "aspect:harmonic:Moon+Neptune:h1k1-0:20261120T090250",
+    "class": "aspect",
+    "sub": "harmonic",
+    "bodies": [
+     "Moon",
+     "Neptune"
+    ],
+    "n": 1,
+    "k": 1,
+    "target_deg": 0.0,
+    "exact_utc": 1795165370.593,
+    "exact_iso": "2026-11-20T09:02:50.593Z",
+    "t_in": 1795145820.422,
+    "t_out": 1795184762.66,
+    "rate": 13.312143,
+    "accel": 0.47983399,
+    "orb_cap": 3.0,
+    "exact_j2000_utc": 1795165368.843,
+    "arcsec_in_60s": 33.2804,
+    "tolerance_s": 108.2
+   },
+   {
+    "id": "aspect:harmonic:Moon+Saturn:h1k1-0:20261120T204422",
+    "class": "aspect",
+    "sub": "harmonic",
+    "bodies": [
+     "Moon",
+     "Saturn"
+    ],
+    "n": 1,
+    "k": 1,
+    "target_deg": 0.0,
+    "exact_utc": 1795207462.71,
+    "exact_iso": "2026-11-20T20:44:22.710Z",
+    "t_in": 1795188288.626,
+    "t_out": 1795226483.775,
+    "rate": 13.572701,
+    "accel": 0.49218954,
+    "orb_cap": 3.0,
+    "exact_j2000_utc": 1795207460.394,
+    "arcsec_in_60s": 33.9318,
+    "tolerance_s": 106.1
+   },
+   {
+    "id": "aspect:harmonic:Sun+Neptune:h3k1-240:20261124T000740",
+    "class": "aspect",
+    "sub": "harmonic",
+    "bodies": [
+     "Sun",
+     "Neptune"
+    ],
+    "n": 3,
+    "k": 1,
+    "target_deg": 240.0,
+    "exact_utc": 1795478860.12,
+    "exact_iso": "2026-11-24T00:07:40.120Z",
+    "t_in": 1794971296.338,
+    "t_out": 1795986829.018,
+    "rate": 1.020899,
+    "accel": -0.00014325,
+    "orb_cap": 6.0,
+    "exact_j2000_utc": 1795478852.873,
+    "arcsec_in_60s": 2.5522,
+    "tolerance_s": 1410.5
+   },
+   {
+    "id": "lunation:full:Sun+Moon:-:20261124T145333",
+    "class": "lunation",
+    "sub": "full",
+    "bodies": [
+     "Sun",
+     "Moon"
+    ],
+    "n": 2,
+    "k": 1,
+    "target_deg": 180.0,
+    "exact_utc": 1795532013.719,
+    "exact_iso": "2026-11-24T14:53:33.719Z",
+    "t_in": 1795513506.538,
+    "t_out": 1795550470.48,
+    "rate": -14.025826,
+    "accel": -0.17889684,
+    "orb_cap": 3.0,
+    "arcsec_in_60s": 35.0646,
+    "tolerance_s": 102.7
+   },
+   {
+    "id": "aspect:harmonic:Moon+Uranus:h1k1-0:20261124T170641",
+    "class": "aspect",
+    "sub": "harmonic",
+    "bodies": [
+     "Moon",
+     "Uranus"
+    ],
+    "n": 1,
+    "k": 1,
+    "target_deg": 0.0,
+    "exact_utc": 1795540001.906,
+    "exact_iso": "2026-11-24T17:06:41.906Z",
+    "t_in": 1795522809.992,
+    "t_out": 1795557156.85,
+    "rate": 15.094249,
+    "accel": 0.16349815,
+    "orb_cap": 3.0,
+    "exact_j2000_utc": 1795540001.247,
+    "arcsec_in_60s": 37.7356,
+    "tolerance_s": 95.4
+   },
+   {
+    "id": "aspect:harmonic:Sun+Pluto:h6k1-300:20261125T172722",
+    "class": "aspect",
+    "sub": "harmonic",
+    "bodies": [
+     "Sun",
+     "Pluto"
+    ],
+    "n": 6,
+    "k": 1,
+    "target_deg": 300.0,
+    "exact_utc": 1795627642.28,
+    "exact_iso": "2026-11-25T17:27:22.280Z",
+    "t_in": 1795105363.907,
+    "t_out": 1796149927.056,
+    "rate": 0.992473,
+    "accel": 2.87e-06,
+    "orb_cap": 6.0,
+    "exact_j2000_utc": 1795627628.191,
+    "arcsec_in_60s": 2.4812,
+    "tolerance_s": 1450.9
+   },
+   {
+    "id": "aspect:harmonic:Sun+Uranus:h2k1-180:20261125T224117",
+    "class": "aspect",
+    "sub": "harmonic",
+    "bodies": [
+     "Sun",
+     "Uranus"
+    ],
+    "n": 2,
+    "k": 1,
+    "target_deg": 180.0,
+    "exact_utc": 1795646477.929,
+    "exact_iso": "2026-11-25T22:41:17.929Z",
+    "t_in": 1795153671.329,
+    "t_out": 1796138206.566,
+    "rate": 1.05312,
+    "accel": 0.00041048,
+    "orb_cap": 6.0,
+    "exact_j2000_utc": 1795646477.655,
+    "arcsec_in_60s": 2.6328,
+    "tolerance_s": 1367.4
+   },
+   {
+    "id": "aspect:harmonic:Venus+Jupiter:h6k1-60:20261128T120455",
+    "class": "aspect",
+    "sub": "harmonic",
+    "bodies": [
+     "Venus",
+     "Jupiter"
+    ],
+    "n": 6,
+    "k": 1,
+    "target_deg": 60.0,
+    "exact_utc": 1795867495.26,
+    "exact_iso": "2026-11-28T12:04:55.260Z",
+    "t_in": 1792980969.418,
+    "t_out": 1796751884.544,
+    "rate": 0.448135,
+    "accel": 0.03018546,
+    "orb_cap": 6.0,
+    "exact_j2000_utc": 1795867498.162,
+    "arcsec_in_60s": 1.1203,
+    "tolerance_s": 3213.3
+   },
+   {
+    "id": "aspect:harmonic:Uranus+Pluto:h3k1-120:20261129T112249",
+    "class": "aspect",
+    "sub": "harmonic",
+    "bodies": [
+     "Uranus",
+     "Pluto"
+    ],
+    "n": 3,
+    "k": 1,
+    "target_deg": 120.0,
+    "exact_utc": 1795951369.246,
+    "exact_iso": "2026-11-29T11:22:49.246Z",
+    "t_in": 1780644696.378,
+    "t_out": 1800245406.033,
+    "rate": -0.061936,
+    "accel": -0.00032706,
+    "orb_cap": 3.0,
+    "exact_j2000_utc": 1795951590.698,
+    "arcsec_in_60s": 0.1548,
+    "tolerance_s": 23249.8
+   },
+   {
+    "id": "aspect:harmonic:Sun+Saturn:h3k1-240:20261130T060538",
+    "class": "aspect",
+    "sub": "harmonic",
+    "bodies": [
+     "Sun",
+     "Saturn"
+    ],
+    "n": 3,
+    "k": 1,
+    "target_deg": 240.0,
+    "exact_utc": 1796018738.494,
+    "exact_iso": "2026-11-30T06:05:38.494Z",
+    "t_in": 1795518397.766,
+    "t_out": 1796522858.2,
+    "rate": 1.032326,
+    "accel": -0.00132414,
+    "orb_cap": 6.0,
+    "exact_j2000_utc": 1796018725.492,
+    "arcsec_in_60s": 2.5808,
+    "tolerance_s": 1394.9
+   },
+   {
+    "id": "lunation:last_quarter:Sun+Moon:-:20261201T060839",
+    "class": "lunation",
+    "sub": "last_quarter",
+    "bodies": [
+     "Sun",
+     "Moon"
+    ],
+    "n": 4,
+    "k": 1,
+    "target_deg": 90.0,
+    "exact_utc": 1796105319.872,
+    "exact_iso": "2026-12-01T06:08:39.872Z",
+    "t_in": 1796084656.315,
+    "t_out": 1796126121.937,
+    "rate": -12.501821,
+    "accel": 0.34814787,
+    "orb_cap": 3.0,
+    "arcsec_in_60s": 31.2546,
+    "tolerance_s": 115.2
+   },
+   {
+    "id": "aspect:harmonic:Mercury+Jupiter:h4k1-90:20261204T070235",
+    "class": "aspect",
+    "sub": "harmonic",
+    "bodies": [
+     "Mercury",
+     "Jupiter"
+    ],
+    "n": 4,
+    "k": 1,
+    "target_deg": 90.0,
+    "exact_utc": 1796367755.715,
+    "exact_iso": "2026-12-04T07:02:35.715Z",
+    "t_in": 1796005761.077,
+    "t_out": 1796716205.02,
+    "rate": 1.465391,
+    "accel": 0.01301089,
+    "orb_cap": 6.0,
+    "exact_j2000_utc": 1796367755.124,
+    "arcsec_in_60s": 3.6635,
+    "tolerance_s": 982.7
+   },
+   {
+    "id": "aspect:harmonic:Mars+Uranus:h4k1-90:20261204T192815",
+    "class": "aspect",
+    "sub": "harmonic",
+    "bodies": [
+     "Mars",
+     "Uranus"
+    ],
+    "n": 4,
+    "k": 1,
+    "target_deg": 90.0,
+    "exact_utc": 1796412495.885,
+    "exact_iso": "2026-12-04T19:28:15.885Z",
+    "t_in": 1795783008.315,
+    "t_out": 1797133178.021,
+    "rate": 0.389139,
+    "accel": -0.0066079,
+    "orb_cap": 3.0,
+    "exact_j2000_utc": 1796412525.746,
+    "arcsec_in_60s": 0.9728,
+    "tolerance_s": 3700.5
+   },
+   {
+    "id": "aspect:harmonic:Mercury+Neptune:h3k1-240:20261207T101525",
+    "class": "aspect",
+    "sub": "harmonic",
+    "bodies": [
+     "Mercury",
+     "Neptune"
+    ],
+    "n": 3,
+    "k": 1,
+    "target_deg": 240.0,
+    "exact_utc": 1796638525.169,
+    "exact_iso": "2026-12-07T10:15:25.169Z",
+    "t_in": 1796294616.656,
+    "t_out": 1796977633.942,
+    "rate": 1.520685,
+    "accel": 0.00512422,
+    "orb_cap": 6.0,
+    "exact_j2000_utc": 1796638521.428,
+    "arcsec_in_60s": 3.8017,
+    "tolerance_s": 946.9
+   },
+   {
+    "id": "aspect:harmonic:Mercury+Uranus:h2k1-180:20261208T102910",
+    "class": "aspect",
+    "sub": "harmonic",
+    "bodies": [
+     "Mercury",
+     "Uranus"
+    ],
+    "n": 2,
+    "k": 1,
+    "target_deg": 180.0,
+    "exact_utc": 1796725750.361,
+    "exact_iso": "2026-12-08T10:29:10.361Z",
+    "t_in": 1796391749.626,
+    "t_out": 1797055818.312,
+    "rate": 1.563401,
+    "accel": 0.00459245,
+    "orb_cap": 6.0,
+    "exact_j2000_utc": 1796725751.023,
+    "arcsec_in_60s": 3.9085,
+    "tolerance_s": 921.1
+   },
+   {
+    "id": "aspect:harmonic:Mercury+Pluto:h6k1-300:20261208T193152",
+    "class": "aspect",
+    "sub": "harmonic",
+    "bodies": [
+     "Mercury",
+     "Pluto"
+    ],
+    "n": 6,
+    "k": 1,
+    "target_deg": 300.0,
+    "exact_utc": 1796758312.074,
+    "exact_iso": "2026-12-08T19:31:52.074Z",
+    "t_in": 1796410453.972,
+    "t_out": 1797102081.134,
+    "rate": 1.501127,
+    "accel": 0.00420436,
+    "orb_cap": 6.0,
+    "exact_j2000_utc": 1796758303.501,
+    "arcsec_in_60s": 3.7528,
+    "tolerance_s": 959.3
+   },
+   {
+    "id": "lunation:new:Sun+Moon:-:20261209T005151",
+    "class": "lunation",
+    "sub": "new",
+    "bodies": [
+     "Sun",
+     "Moon"
+    ],
+    "n": 1,
+    "k": 1,
+    "target_deg": 0.0,
+    "exact_utc": 1796777511.11,
+    "exact_iso": "2026-12-09T00:51:51.110Z",
+    "t_in": 1796753883.39,
+    "t_out": 1796801198.796,
+    "rate": -10.95606,
+    "accel": 0.10145852,
+    "orb_cap": 3.0,
+    "arcsec_in_60s": 27.3901,
+    "tolerance_s": 131.4
+   },
+   {
+    "id": "aspect:harmonic:Mercury+Mars:h4k1-90:20261209T134033",
+    "class": "aspect",
+    "sub": "harmonic",
+    "bodies": [
+     "Mercury",
+     "Mars"
+    ],
+    "n": 4,
+    "k": 1,
+    "target_deg": 90.0,
+    "exact_utc": 1796823633.076,
+    "exact_iso": "2026-12-09T13:40:33.076Z",
+    "t_in": 1796384693.588,
+    "t_out": 1797242297.893,
+    "rate": 1.212311,
+    "accel": 0.01118896,
+    "orb_cap": 6.0,
+    "exact_j2000_utc": 1796823623.382,
+    "arcsec_in_60s": 3.0308,
+    "tolerance_s": 1187.8
+   },
+   {
+    "id": "aspect:harmonic:Venus+Pluto:h4k1-270:20261209T183741",
+    "class": "aspect",
+    "sub": "harmonic",
+    "bodies": [
+     "Venus",
+     "Pluto"
+    ],
+    "n": 4,
+    "k": 1,
+    "target_deg": 270.0,
+    "exact_utc": 1796841461.984,
+    "exact_iso": "2026-12-09T18:37:41.984Z",
+    "t_in": 1796011134.275,
+    "t_out": 1797509074.856,
+    "rate": 0.717445,
+    "accel": 0.01690921,
+    "orb_cap": 6.0,
+    "exact_j2000_utc": 1796841456.391,
+    "arcsec_in_60s": 1.7936,
+    "tolerance_s": 2007.1
+   },
+   {
+    "id": "station:direct:Saturn:-:20261210T233111",
+    "class": "station",
+    "sub": "direct",
+    "bodies": [
+     "Saturn"
+    ],
+    "n": null,
+    "k": null,
+    "target_deg": 7.931038,
+    "exact_utc": 1796945471.076,
+    "exact_iso": "2026-12-10T23:31:11.076Z",
+    "t_in": 1796550512.26,
+    "t_out": 1797341509.271,
+    "rate": 0.0,
+    "accel": null,
+    "orb_cap": 0.25
+   },
+   {
+    "id": "aspect:harmonic:Mercury+Saturn:h3k1-240:20261211T132522",
+    "class": "aspect",
+    "sub": "harmonic",
+    "bodies": [
+     "Mercury",
+     "Saturn"
+    ],
+    "n": 3,
+    "k": 1,
+    "target_deg": 240.0,
+    "exact_utc": 1796995522.312,
+    "exact_iso": "2026-12-11T13:25:22.312Z",
+    "t_in": 1796656717.539,
+    "t_out": 1797333116.35,
+    "rate": 1.533788,
+    "accel": 0.00126346,
+    "orb_cap": 6.0,
+    "exact_j2000_utc": 1796995514.0,
+    "arcsec_in_60s": 3.8345,
+    "tolerance_s": 938.9
+   },
+   {
+    "id": "aspect:harmonic:Venus+Mars:h6k1-60:20261212T091446",
+    "class": "aspect",
+    "sub": "harmonic",
+    "bodies": [
+     "Venus",
+     "Mars"
+    ],
+    "n": 6,
+    "k": 1,
+    "target_deg": 60.0,
+    "exact_utc": 1797066886.176,
+    "exact_iso": "2026-12-12T09:14:46.176Z",
+    "t_in": 1793635680.777,
+    "t_out": 1797933342.626,
+    "rate": 0.489116,
+    "accel": 0.02309143,
+    "orb_cap": 6.0,
+    "exact_j2000_utc": 1797066880.944,
+    "arcsec_in_60s": 1.2228,
+    "tolerance_s": 2944.1
+   },
+   {
+    "id": "station:direct:Neptune:-:20261212T221802",
+    "class": "station",
+    "sub": "direct",
+    "bodies": [
+     "Neptune"
+    ],
+    "n": null,
+    "k": null,
+    "target_deg": 1.612924,
+    "exact_utc": 1797113882.387,
+    "exact_iso": "2026-12-12T22:18:02.387Z",
+    "t_in": 1796887793.027,
+    "t_out": 1797340682.211,
+    "rate": 0.0,
+    "accel": null,
+    "orb_cap": 0.25
+   },
+   {
+    "id": "station:retrograde:Jupiter:-:20261213T005636",
+    "class": "station",
+    "sub": "retrograde",
+    "bodies": [
+     "Jupiter"
+    ],
+    "n": null,
+    "k": null,
+    "target_deg": 147.02461,
+    "exact_utc": 1797123396.597,
+    "exact_iso": "2026-12-13T00:56:36.597Z",
+    "t_in": 1796573542.616,
+    "t_out": 1797671606.215,
+    "rate": 0.0,
+    "accel": null,
+    "orb_cap": 0.25
+   },
+   {
+    "id": "lunation:first_quarter:Sun+Moon:-:20261217T054240",
+    "class": "lunation",
+    "sub": "first_quarter",
+    "bodies": [
+     "Sun",
+     "Moon"
+    ],
+    "n": 4,
+    "k": 1,
+    "target_deg": 270.0,
+    "exact_utc": 1797486160.074,
+    "exact_iso": "2026-12-17T05:42:40.074Z",
+    "t_in": 1797463861.623,
+    "t_out": 1797508271.007,
+    "rate": -11.672742,
+    "accel": -0.38370875,
+    "orb_cap": 3.0,
+    "arcsec_in_60s": 29.1819,
+    "tolerance_s": 123.4
+   },
+   {
+    "id": "lunation:full:Sun+Moon:-:20261224T012814",
+    "class": "lunation",
+    "sub": "full",
+    "bodies": [
+     "Sun",
+     "Moon"
+    ],
+    "n": 2,
+    "k": 1,
+    "target_deg": 180.0,
+    "exact_utc": 1798075694.113,
+    "exact_iso": "2026-12-24T01:28:14.113Z",
+    "t_in": 1798057568.722,
+    "t_out": 1798093814.485,
+    "rate": -14.303757,
+    "accel": -0.01887122,
+    "orb_cap": 3.0,
+    "arcsec_in_60s": 35.7594,
+    "tolerance_s": 100.7
+   },
+   {
+    "id": "lunation:last_quarter:Sun+Moon:-:20261230T185929",
+    "class": "lunation",
+    "sub": "last_quarter",
+    "bodies": [
+     "Sun",
+     "Moon"
+    ],
+    "n": 4,
+    "k": 1,
+    "target_deg": 90.0,
+    "exact_utc": 1798657169.629,
+    "exact_iso": "2026-12-30T18:59:29.629Z",
+    "t_in": 1798635709.782,
+    "t_out": 1798678792.866,
+    "rate": -12.032305,
+    "accel": 0.36614154,
+    "orb_cap": 3.0,
+    "arcsec_in_60s": 30.0808,
+    "tolerance_s": 119.7
+   }
+  ]
+ }
+}

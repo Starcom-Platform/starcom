@@ -1,0 +1,107 @@
+/*
+ * The stacking order, in one place.
+ *
+ * ─── WHY THIS EXISTS ───────────────────────────────────────────────────────
+ *
+ * Measured before writing it: 151 raw z-index declarations at or above 100, and
+ * TWO pre-existing scales that conflicted with each other. The distribution of
+ * the raw values is a textbook escalation war —
+ *
+ *     1000   ×57     everybody picked the same "safely high" number
+ *     9999   ×15     written to beat 1000
+ *    10000   ×11     written to beat 9999
+ *     3200   ×11     a subsystem picking its own private number
+ *     999, 998, 1001, 1002   people nudging around a neighbour
+ *
+ * Fifty-seven components at exactly 1000 means their stacking order is decided
+ * by DOM order rather than by anyone's intent, and the ones sharing that number
+ * are not interchangeable: four different tooltips, several widgets, a modal, a
+ * sidebar, and the global header. A tooltip rendering behind a widget is not a
+ * styling nit — it is that nothing in the system says which is supposed to be
+ * on top.
+ *
+ * AIActionsPanel appears at BOTH 1000 and 9999, which is what the escalation
+ * looks like from inside a single component.
+ *
+ * ─── THIS REPLACES TWO SCALES, IT DOES NOT ADD A THIRD ─────────────────────
+ *
+ * starcom-cyberpunk.css carried a Bootstrap-shaped scale and
+ * quantum-cyber-design-system.css carried a different one, sharing token NAMES
+ * with different VALUES — --z-modal was 1050 in one and 2000 in the other,
+ * --z-tooltip 1070 against 3000. quantum-cyber is imported from inside a CSS
+ * module but declares on :root, so loading one screen could have redefined
+ * stacking for the whole application.
+ *
+ * It never did, because BOTH scales had zero consumers — all fourteen tokens,
+ * across both files, used by nothing. That is why the collision never surfaced,
+ * and it is also why replacing them costs nothing. Both blocks are removed.
+ *
+ * ─── AND IT NOW ALSO OWNS MUI'S SCALE ──────────────────────────────────────
+ *
+ * Sixty-three files import MUI, which shipped its own zIndex block with no
+ * override — --z-tooltip tied exactly with MUI's tooltip at 1500. The values
+ * here are mirrored from styles/layers.ts, which also feeds MUI's theme, so
+ * there is one scale rather than two interleaving by luck.
+ *
+ * ─── HOW TO USE IT ─────────────────────────────────────────────────────────
+ *
+ *     z-index: var(--z-tooltip);
+ *
+ * Pick the layer by what the thing IS, not by what it needs to sit above. If
+ * two components in the same layer overlap and the order matters, that is a
+ * real design question — answer it with DOM order or a new layer, not by adding
+ * one to a number.
+ *
+ * The gaps between tiers are deliberate: room to insert a layer without
+ * renumbering, and wide enough that a component needing to sit just above a
+ * sibling can use `calc(var(--z-modal) + 1)` and stay legible about it.
+ *
+ * ─── THE TIERS ─────────────────────────────────────────────────────────────
+ *
+ * Ordered by how much they interrupt someone. A preloader covers everything
+ * because nothing else matters yet; a notification outranks a modal because it
+ * may be telling you the modal's action failed.
+ */
+:root {
+  /* MIRRORS src/styles/layers.ts. A test asserts the two agree — change both,
+     or change layers.ts and let the test tell you about this one. */
+
+  /* Below the content. Backdrops, ambient effects, the globe canvas. */
+  --z-behind: -1;
+
+  /* Ordinary in-flow content. */
+  --z-base: 0;
+
+  /* Lifted within its own section — cards, rows, floating action buttons. */
+  --z-raised: 10;
+
+  /* Persistent chrome: HUD bars, rails, the globe's own furniture. */
+  --z-hud: 100;
+
+  /* Floating panes the user opened or positioned. */
+  --z-panel: 2000;
+
+  /* Anchored to a control, dismissed by moving away: menus, context menus. */
+  --z-dropdown: 3000;
+
+  /* The dimmed backing behind a modal. Named so the two cannot drift apart. */
+  --z-modal-backdrop: 4000;
+
+  /* Demands attention and blocks what is behind it. */
+  --z-modal: 4100;
+
+  /* Outranks modals: it may be reporting that the modal's own action failed. */
+  --z-notification: 5000;
+
+  /* Annotates whatever is on top, so it sits above everything interactive.
+     This was BELOW modal in the first version, which was wrong — a tooltip on a
+     control inside a modal has to be readable, and MUI has had it this way for
+     years. */
+  --z-tooltip: 6000;
+
+  /* The application is not usable yet, so nothing below needs to be visible. */
+  --z-preloader: 9000;
+
+  /* Must be seen even when the app is broken. Deliberately almost empty. */
+  --z-critical: 9900;
+}

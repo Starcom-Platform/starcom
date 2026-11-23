@@ -1,0 +1,411 @@
+.globalHeader {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  background-color: rgba(20, 30, 40, 0.95);
+  border-bottom: 2px solid rgba(60, 100, 140, 0.7);
+  color: #e0f0ff;
+  padding: 0 15px 0 0; /* Remove left padding, keep right padding */
+  font-family: var(--sc-font-text);
+  /* The dropdown tier (K16): the search results open inside this stacking
+     context, and at 100 they painted under the rails and the Globe's corners. */
+  position: relative;
+  z-index: var(--z-dropdown);
+}
+
+.logoSection {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  gap: 12px;
+}
+
+/* The Starcom mark (BD7), in the brand cyan. It was a 305 KB animated GIF on
+   black, screen-blended onto the header; the SVG needs neither. */
+.wingCommanderLogo {
+  height: 40px;
+  width: auto;
+  margin: 0 4px 0 12px;
+  color: var(--sc-accent);
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.wingCommanderLogo:hover {
+  opacity: 1;
+}
+
+.textLogo {
+  display: flex;
+  align-items: baseline;
+  flex-direction: column;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  font-family: var(--sc-font-wordmark);
+  background: linear-gradient(to right, #50a0ff, #80c0ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.version {
+  font-size: 12px;
+  color: #607d9c;
+  line-height: 1;
+}
+
+.searchSection {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.searchBar {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+
+.searchInput {
+  width: 100%;
+  height: 36px;
+  background-color: rgba(40, 60, 80, 0.6);
+  border: 1px solid rgba(80, 120, 160, 0.5);
+  border-radius: 0;
+  color: #e0f0ff;
+  padding: 0 15px;
+  font-size: 14px;
+  outline: none;
+  transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.searchInput:focus {
+  background-color: rgba(40, 60, 80, 0.8);
+  border-color: rgba(100, 150, 200, 0.8);
+  box-shadow: 0 0 0 2px rgba(80, 160, 255, 0.3);
+}
+
+.searchHint {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  /* 2.46:1 with its own colours; 5.6:1 on the tokens (plan item 8.1). */
+  color: var(--sc-text-secondary);
+  font-size: 12px;
+  padding: 2px 6px;
+  background-color: var(--sc-surface-input);
+  border-radius: 0;
+  pointer-events: none;
+}
+
+.searchResults {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  width: 100%;
+  background-color: rgba(30, 40, 50, 0.95);
+  border: 1px solid rgba(80, 120, 160, 0.7);
+  border-radius: 0;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.searchResultItem {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-bottom: 1px solid rgba(80, 120, 160, 0.3);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.searchResultItem:hover {
+  background-color: rgba(60, 80, 100, 0.7);
+}
+
+.searchResultItem:last-child {
+  border-bottom: none;
+}
+
+.searchResultIcon {
+  flex: 0 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.searchResultContent {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.searchResultTitle {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--text-primary);
+  margin-bottom: 3px;
+}
+
+.searchResultDescription {
+  font-size: 12px;
+  color: #90b0d0;
+}
+
+.searchResultType {
+  font-size: 11px;
+  background-color: rgba(80, 120, 160, 0.3);
+  padding: 2px 6px;
+  border-radius: 0;
+  /* Was var(--cyber-cyan), which nothing defines. */
+  color: var(--sc-accent);
+  text-transform: uppercase;
+}
+
+.searchResultBadges {
+  display: flex;
+  gap: 4px;
+  margin-left: 6px;
+  flex: 0 0 auto;
+}
+
+.searchResultBadge {
+  font-size: 12px;
+  line-height: 1;
+}
+
+.actionsSection {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 0 0 auto;
+  gap: 15px;
+  position: relative;
+}
+
+/*
+ * The brand-coloured variants below — .analyticsButton, the store's button (the store left
+ * the app, 2026-11-11), and the Telegram and GitHub buttons the community menu replaced — carried `color` and hover
+ * `background-color` with !important, ten in all, and none of it was needed.
+ * They are single-class selectors exactly like this one, defined later in the
+ * file, so the cascade already gave them the win. The !important was insuring
+ * against a fight that could not happen, and it stopped anything downstream
+ * from theming these buttons.
+ */
+.iconButton {
+  background: transparent;
+  border: none;
+  color: #a0c0e0;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0%;
+  width: 36px;
+  height: 36px;
+  transition: background-color 0.2s;
+  position: relative;
+}
+
+.iconButton:hover {
+  background-color: rgba(80, 120, 160, 0.3);
+}
+.notificationDot {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  width: 8px;
+  height: 8px;
+  background-color: #ff5050;
+  border-radius: 0%;
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 8px rgba(88, 101, 242, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 12px rgba(88, 101, 242, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 8px rgba(88, 101, 242, 0.4);
+  }
+}
+
+.notificationsPanel {
+  position: absolute;
+  top: 45px;
+  right: 50px;
+  width: 300px;
+  background-color: rgba(30, 40, 50, 0.95);
+  border: 1px solid rgba(80, 120, 160, 0.7);
+  border-radius: 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.notificationsHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+  border-bottom: 1px solid rgba(80, 120, 160, 0.3);
+}
+
+.notificationsHeader h3 {
+  margin: 0;
+  font-size: 16px;
+  color: var(--text-primary);
+}
+
+.clearButton {
+  background: transparent;
+  border: none;
+  color: #80a0c0;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 2px 5px;
+}
+
+.clearButton:hover {
+  color: #a0c0e0;
+  text-decoration: underline;
+}
+
+.notificationsList {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.notificationItem {
+  display: flex;
+  padding: 10px 15px;
+  border-bottom: 1px solid rgba(80, 120, 160, 0.2);
+  transition: background-color 0.2s;
+}
+
+.notificationItem:hover {
+  background-color: rgba(60, 80, 100, 0.4);
+}
+
+.notificationIcon {
+  flex: 0 0 30px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.notificationContent {
+  flex: 1;
+}
+
+.notificationMessage {
+  font-size: 14px;
+  color: #c0d0e0;
+  margin-bottom: 3px;
+}
+
+.notificationTime {
+  font-size: 12px;
+  color: #607d9c;
+}
+
+/* Analytics Button Styles */
+.analyticsButtonContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.analyticsButton {
+  color: #4CAF50;
+  position: relative;
+}
+
+.analyticsButton:hover {
+  background-color: rgba(76, 175, 80, 0.2);
+}
+
+.analyticsButton .liveIndicator {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 6px;
+  height: 6px;
+  background: #4CAF50;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+/* Secure chat, with the comms icons (decision D-F, step 3.2) */
+.chatButtonContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/*
+ * A phone (K2; K4's compact header). At 390 px the header's fixed content was
+ * about 490 px wide, so the key button was cut off and the search hint spilled
+ * out of a box squeezed to a few letters. The mark stays and the wordmark goes;
+ * the hint, which is for keyboards, goes; the buttons sit closer; and the
+ * results take the window's width rather than the box's.
+ */
+@media (max-width: 600px) {
+  .globalHeader {
+    padding-right: 8px;
+  }
+
+  .textLogo,
+  .searchHint {
+    display: none;
+  }
+
+  .searchSection {
+    min-width: 0;
+    padding: 0 8px;
+  }
+
+  .actionsSection {
+    gap: 4px;
+  }
+
+  .searchResults {
+    position: fixed;
+    top: 64px;
+    left: 8px;
+    right: 8px;
+    width: auto;
+  }
+}
+
+/* The command palette's opener (D-CP): the box's look, its words a placeholder's. */
+.searchOpener {
+  display: block;
+  text-align: left;
+  cursor: text;
+  font: inherit;
+  font-size: 14px;
+  color: var(--sc-text-secondary);
+}

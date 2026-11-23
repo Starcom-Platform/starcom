@@ -1,0 +1,166 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Starcom deeplink v1, as parsed",
+  "description": "What a v1 implementation reads from a link. See DEEPLINK_V1.md. Every field is present; a parameter that is absent or invalid is null (or an empty list).",
+  "type": "object",
+  "required": [
+    "v",
+    "sub",
+    "mode",
+    "at",
+    "pins",
+    "focus",
+    "win"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "layer": {
+      "enum": [
+        "IntelReports",
+        "CyberThreats",
+        "Satellites",
+        "CommHubs",
+        "RLSH",
+        "DiplomaticEvents",
+        "ResourceZones",
+        "ConflictZones",
+        "SpaceWeather",
+        "EcologicalDisasters",
+        "EarthWeather",
+        "DrugCheckAlerts",
+        "SceneIncidents",
+        "SceneEvents",
+        "HeatRisk",
+        "RaverMissions",
+        "HarmReductionSites"
+      ]
+    }
+  },
+  "properties": {
+    "v": {
+      "description": "The grammar version the link stated, or null.",
+      "enum": [
+        1,
+        null
+      ]
+    },
+    "sub": {
+      "description": "The active layer, canonical case. IntelReports whenever focus is set, unless sub is a Raver Watch layer, which draws its own reports.",
+      "oneOf": [
+        {
+          "$ref": "#/$defs/layer"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "mode": {
+      "description": "The primary mode that owns sub.",
+      "enum": [
+        "CyberCommand",
+        "GeoPolitical",
+        "EcoNatural",
+        "RaverWatch",
+        null
+      ]
+    },
+    "at": {
+      "description": "The camera. alt is null when the link gave none (keep the current altitude); otherwise clamped to [1.0, 10.0].",
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "required": [
+            "lat",
+            "lng",
+            "alt"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "lat": {
+              "type": "number",
+              "minimum": -90,
+              "maximum": 90
+            },
+            "lng": {
+              "type": "number",
+              "minimum": -180,
+              "maximum": 180
+            },
+            "alt": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "number",
+                  "minimum": 1.0,
+                  "maximum": 10.0
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "pins": {
+      "description": "Layers drawn beside sub. Never contains sub or RLSH. When focus moved sub to IntelReports, the asked-for layer is first.",
+      "type": "array",
+      "maxItems": 4,
+      "uniqueItems": true,
+      "items": {
+        "allOf": [
+          {
+            "$ref": "#/$defs/layer"
+          },
+          {
+            "not": {
+              "const": "RLSH"
+            }
+          }
+        ]
+      }
+    },
+    "focus": {
+      "description": "A report id as listReports() names it.",
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string",
+          "pattern": "^(?:30023:[0-9a-f]{64}:[A-Za-z0-9._:~-]{1,200}|[0-9a-f]{64})$"
+        }
+      ]
+    },
+    "win": {
+      "description": "The time window, unix seconds: win=<from>..<until>. Null when absent, malformed, or not from < until.",
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "required": [
+            "from",
+            "until"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "from": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "until": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        }
+      ]
+    }
+  }
+}

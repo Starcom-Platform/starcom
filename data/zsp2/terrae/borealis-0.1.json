@@ -1,0 +1,205 @@
+{
+  "zsp": "2.0",
+  "terra": "terra:borealis",
+  "grid": {
+    "width": 3600,
+    "height": 1800,
+    "cell": 0.1,
+    "origin": {
+      "lat": 90,
+      "lon": -180
+    },
+    "rows": "row 0 the northernmost",
+    "values": "at cell centres"
+  },
+  "files": {
+    "zones": "borealis-zones-0.1.u32.bin.gz",
+    "sectors": "borealis-sectors-0.1.u32.bin.gz"
+  },
+  "dtype": "uint32",
+  "endianness": "little",
+  "compression": "gzip",
+  "areaKm2": 16855911,
+  "zones": [
+    {
+      "id": "zone:west-siberian-basin",
+      "name": "West Siberian Basin Zone",
+      "system": "basin",
+      "provinces": [
+        "West Siberian Basin"
+      ],
+      "km2": 2303813
+    },
+    {
+      "id": "zone:taimyr-kara",
+      "name": "Taimyr and the Kara Sea Zone",
+      "system": "orogen",
+      "provinces": [
+        "Yenisey-Khatanga Basin",
+        "Taimyr-Kara High",
+        "Severnaya Zemlya High",
+        "St. Anna Basin",
+        "Vize High",
+        "Ushakov High",
+        "Uedineniya Basin",
+        "Central Kara High",
+        "Schmidt Basin"
+      ],
+      "km2": 1129539
+    },
+    {
+      "id": "zone:tunguska",
+      "name": "Tunguska Basin and the Yenisey Ridge Zone",
+      "system": "basin",
+      "provinces": [
+        "Tunguska Basin",
+        "Turukhan-Norilsk Folded Zone",
+        "Turukhan-Igarka Uplift",
+        "Yenisey Ridge",
+        "Baykit Arch"
+      ],
+      "km2": 1113901
+    },
+    {
+      "id": "zone:angara-lena",
+      "name": "Angara–Lena Platform Zone",
+      "system": "basin",
+      "provinces": [
+        "Cis-Sayan Basin",
+        "Angara-Lena Terrace",
+        "Nepa-Botuoba Arch",
+        "Cis-Patom Foredeep",
+        "Kempendiay Region"
+      ],
+      "km2": 923154
+    },
+    {
+      "id": "zone:anabar",
+      "name": "Anabar Shield Zone",
+      "system": "shield",
+      "provinces": [
+        "Anabar-Olenek High",
+        "Anabar Basin",
+        "Khatanga Saddle"
+      ],
+      "km2": 776335
+    },
+    {
+      "id": "zone:lena-vilyuy",
+      "name": "Lena–Vilyuy Basin Zone",
+      "system": "basin",
+      "provinces": [
+        "Lena-Vilyuy Basin"
+      ],
+      "km2": 309511
+    },
+    {
+      "id": "zone:aldan-stanovoy",
+      "name": "Aldan Shield and the Stanovoy Zone",
+      "system": "shield",
+      "provinces": [
+        "Aldan Uplift",
+        "Aldan Shield"
+      ],
+      "km2": 988067
+    },
+    {
+      "id": "zone:baikal-patom",
+      "name": "Baikal–Patom Highlands Zone",
+      "system": "orogen",
+      "provinces": [
+        "Baikal-Patom Folded Region"
+      ],
+      "km2": 733792
+    },
+    {
+      "id": "zone:altai-sayan",
+      "name": "Altai, Sayan and Kuznetsk Zone",
+      "system": "orogen",
+      "provinces": [
+        "Altay-Sayan Folded Region",
+        "Kuznetsk Basin",
+        "North Minusa Basin",
+        "South Minusa Basin"
+      ],
+      "km2": 1048139
+    },
+    {
+      "id": "zone:kazakh-uplands",
+      "name": "Kazakh Uplands and the Turgay Zone",
+      "system": "shield",
+      "provinces": [
+        "Central Kazakhstan Folded Region",
+        "Turgay Depression",
+        "South Turgay Basin",
+        "Alakol Basin",
+        "Zaysan Basin"
+      ],
+      "km2": 1703618
+    },
+    {
+      "id": "zone:verkhoyansk-chukotka",
+      "name": "Verkhoyansk and Chukotka Zone",
+      "system": "orogen",
+      "provinces": [
+        "Verkhoyan-Chukotka Folded Region",
+        "Zyryanka Basin",
+        "Moma Basin",
+        "Ayon Basin",
+        "Anadyr Basin",
+        "Gangut High",
+        "Khatyrka Basin",
+        "Penzhina Basin"
+      ],
+      "km2": 3371903
+    },
+    {
+      "id": "zone:laptev-east-siberian",
+      "name": "Laptev and East Siberian Shelves Zone",
+      "system": "basin",
+      "provinces": [
+        "Laptev Shelf",
+        "Novosibirsk Basin",
+        "De Long High",
+        "Anzhu Uplift",
+        "Blagoveshchensk Basin",
+        "North Chukchi Basin",
+        "Wrangel Basin",
+        "Wrangel-Herald Uplift",
+        "South Chukchi-Hope Basin"
+      ],
+      "km2": 708457
+    },
+    {
+      "id": "zone:kamchatka-koryak",
+      "name": "Kamchatka and the Koryak Highlands Zone",
+      "system": "arc",
+      "provinces": [
+        "Koryak-Kamchatka Foldbelt",
+        "Kinkil Basin",
+        "Talov Uplift",
+        "West Kamchatka Basin",
+        "Central Kamchatka Group of Basins",
+        "East Kamchatka Uplift",
+        "Olyutor Basin",
+        "East Kamchatka Basin"
+      ],
+      "km2": 969057
+    },
+    {
+      "id": "zone:okhotsk-north",
+      "name": "Sea of Okhotsk, Northern Margin Zone",
+      "system": "basin",
+      "provinces": [
+        "North Okhotsk Group of Basins",
+        "Tinro Basin",
+        "Gizhigin Basin",
+        "Koni-Tayganos Uplift"
+      ],
+      "km2": 776625
+    }
+  ],
+  "sectors": 145,
+  "bytes": 383772,
+  "points": 16757
+}

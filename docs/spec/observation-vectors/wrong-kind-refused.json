@@ -1,0 +1,29 @@
+{
+  "name": "wrong-kind-refused",
+  "description": "Not kind 1911. A foreign event at a neighbouring integer is filtered, not misread.",
+  "expect": {
+    "observations": 0
+  },
+  "diagnostic": {
+    "note": "NOT normative — our drop wording, for humans and our own gate.",
+    "reasonContains": "is not 1911"
+  },
+  "event": {
+    "kind": 1910,
+    "created_at": 1756000000,
+    "tags": [
+      [
+        "g",
+        "st-louis"
+      ],
+      [
+        "d",
+        "st-louis/st-patrick-center"
+      ]
+    ],
+    "content": "{\"anchor\":\"st-louis/st-patrick-center\",\"observed_at\":1755996400,\"tags\":[\"locked\"],\"method\":\"saw\",\"callsign\":\"Raven\",\"precision\":\"area\",\"area\":\"dp3w\"}",
+    "pubkey": "96bafb179762225794c13c78e823b349e8f21d96f8113020032e5cabdbe59889",
+    "id": "fb5e2a26fe1580b60e39c16fc721cd5eb477c3ce0ddd3ad90e8cb8668341fa35",
+    "sig": "5d33428d36000d8d8bc68782843e3612f6a93d9fb24026cfbf8c014caf8084301cf9ae704d91f50010105de9e889920ea4186db11debf7626284101dcc6bdd57"
+  }
+}

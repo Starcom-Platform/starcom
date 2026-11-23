@@ -1,0 +1,1466 @@
+{
+  "spheres": [
+    {
+      "code": "sphere:anglosphere",
+      "kind": "sphere",
+      "influence": "cultural",
+      "name": "Anglosphere",
+      "the": true,
+      "note": "The Five Eyes, its core five; some definitions add Ireland.",
+      "from": "members",
+      "members": [
+        "au",
+        "ca",
+        "gb",
+        "nz",
+        "us"
+      ],
+      "source": {
+        "name": "Office of the Inspector-General of Intelligence and Security (New Zealand): Who we cooperate with (the Five Eyes Intelligence Oversight and Review Council)",
+        "url": "https://igis.govt.nz/about-us/cooperation",
+        "read": "2026-10-17"
+      }
+    },
+    {
+      "code": "sphere:francophonie",
+      "kind": "sphere",
+      "influence": "political",
+      "name": "Francophonie",
+      "the": true,
+      "note": "The OIF's 50 full members are drawn; its 5 associate members and 28 observers are listed, not drawn.",
+      "from": "members",
+      "members": [
+        "al",
+        "ad",
+        "am",
+        "be",
+        "bj",
+        "bg",
+        "bi",
+        "cv",
+        "kh",
+        "cm",
+        "ca",
+        "cf",
+        "cy",
+        "km",
+        "cg",
+        "cd",
+        "ci",
+        "dj",
+        "dm",
+        "eg",
+        "fr",
+        "ga",
+        "gh",
+        "gr",
+        "gn",
+        "gw",
+        "gq",
+        "ht",
+        "la",
+        "lb",
+        "lu",
+        "mk",
+        "mg",
+        "ma",
+        "mu",
+        "mr",
+        "md",
+        "mc",
+        "ro",
+        "rw",
+        "lc",
+        "st",
+        "sn",
+        "sc",
+        "ch",
+        "td",
+        "tg",
+        "tn",
+        "vu",
+        "vn"
+      ],
+      "others": [
+        {
+          "code": "ae",
+          "status": "listed"
+        },
+        {
+          "code": "nc",
+          "status": "listed"
+        },
+        {
+          "code": "xk",
+          "status": "listed"
+        },
+        {
+          "code": "qa",
+          "status": "listed"
+        },
+        {
+          "code": "rs",
+          "status": "listed"
+        },
+        {
+          "code": "ao",
+          "status": "listed"
+        },
+        {
+          "code": "ar",
+          "status": "listed"
+        },
+        {
+          "code": "at",
+          "status": "listed"
+        },
+        {
+          "code": "ba",
+          "status": "listed"
+        },
+        {
+          "code": "cl",
+          "status": "listed"
+        },
+        {
+          "code": "kr",
+          "status": "listed"
+        },
+        {
+          "code": "cr",
+          "status": "listed"
+        },
+        {
+          "code": "hr",
+          "status": "listed"
+        },
+        {
+          "code": "do",
+          "status": "listed"
+        },
+        {
+          "code": "ee",
+          "status": "listed"
+        },
+        {
+          "code": "pf",
+          "status": "listed"
+        },
+        {
+          "code": "gm",
+          "status": "listed"
+        },
+        {
+          "code": "ge",
+          "status": "listed"
+        },
+        {
+          "code": "hu",
+          "status": "listed"
+        },
+        {
+          "code": "ie",
+          "status": "listed"
+        },
+        {
+          "code": "lv",
+          "status": "listed"
+        },
+        {
+          "code": "lt",
+          "status": "listed"
+        },
+        {
+          "code": "mt",
+          "status": "listed"
+        },
+        {
+          "code": "mx",
+          "status": "listed"
+        },
+        {
+          "code": "me",
+          "status": "listed"
+        },
+        {
+          "code": "mz",
+          "status": "listed"
+        },
+        {
+          "code": "pl",
+          "status": "listed"
+        },
+        {
+          "code": "sk",
+          "status": "listed"
+        },
+        {
+          "code": "si",
+          "status": "listed"
+        },
+        {
+          "code": "cz",
+          "status": "listed"
+        },
+        {
+          "code": "th",
+          "status": "listed"
+        },
+        {
+          "code": "ua",
+          "status": "listed"
+        },
+        {
+          "code": "uy",
+          "status": "listed"
+        }
+      ],
+      "source": {
+        "name": "OIF: Liste des 93 États et gouvernements membres de plein droit, membres associés et observateurs (XIXe Sommet, novembre 2024)",
+        "url": "https://www.francophonie.org/sites/default/files/2024-11/Liste_93_Etats_et_gouvernements_OIF.pdf",
+        "read": "2026-10-17"
+      }
+    },
+    {
+      "code": "sphere:hispanosphere",
+      "kind": "sphere",
+      "influence": "semantic",
+      "name": "Hispanosphere",
+      "the": true,
+      "note": "The 20 states with Spanish as an official language, and Puerto Rico, are drawn; the United States, where CLDR records it as official only in a region, is listed, not drawn.",
+      "from": "members",
+      "members": [
+        "ar",
+        "bo",
+        "cl",
+        "co",
+        "cr",
+        "cu",
+        "do",
+        "ec",
+        "es",
+        "gq",
+        "gt",
+        "hn",
+        "mx",
+        "ni",
+        "pa",
+        "pe",
+        "pr",
+        "py",
+        "sv",
+        "uy",
+        "ve"
+      ],
+      "others": [
+        {
+          "code": "us",
+          "status": "listed"
+        }
+      ],
+      "source": {
+        "name": "Unicode CLDR 48 (cldr-json cldr-core 48.2.3), supplemental/territoryInfo.json: official status of each language in each territory",
+        "url": "https://github.com/unicode-org/cldr-json/blob/main/cldr-json/cldr-core/supplemental/territoryInfo.json",
+        "read": "2026-10-17"
+      }
+    },
+    {
+      "code": "sphere:lusosphere",
+      "kind": "sphere",
+      "influence": "political",
+      "name": "Lusosphere",
+      "the": true,
+      "note": "The CPLP's 9 member states are drawn; its 29 associate observers are listed, not drawn.",
+      "from": "members",
+      "members": [
+        "ao",
+        "br",
+        "cv",
+        "gw",
+        "gq",
+        "mz",
+        "pt",
+        "st",
+        "tl"
+      ],
+      "others": [
+        {
+          "code": "mu",
+          "status": "listed"
+        },
+        {
+          "code": "sn",
+          "status": "listed"
+        },
+        {
+          "code": "ge",
+          "status": "listed"
+        },
+        {
+          "code": "na",
+          "status": "listed"
+        },
+        {
+          "code": "tr",
+          "status": "listed"
+        },
+        {
+          "code": "jp",
+          "status": "listed"
+        },
+        {
+          "code": "hu",
+          "status": "listed"
+        },
+        {
+          "code": "cz",
+          "status": "listed"
+        },
+        {
+          "code": "sk",
+          "status": "listed"
+        },
+        {
+          "code": "uy",
+          "status": "listed"
+        },
+        {
+          "code": "lu",
+          "status": "listed"
+        },
+        {
+          "code": "ad",
+          "status": "listed"
+        },
+        {
+          "code": "gb",
+          "status": "listed"
+        },
+        {
+          "code": "ar",
+          "status": "listed"
+        },
+        {
+          "code": "cl",
+          "status": "listed"
+        },
+        {
+          "code": "fr",
+          "status": "listed"
+        },
+        {
+          "code": "it",
+          "status": "listed"
+        },
+        {
+          "code": "rs",
+          "status": "listed"
+        },
+        {
+          "code": "ca",
+          "status": "listed"
+        },
+        {
+          "code": "qa",
+          "status": "listed"
+        },
+        {
+          "code": "us",
+          "status": "listed"
+        },
+        {
+          "code": "ie",
+          "status": "listed"
+        },
+        {
+          "code": "es",
+          "status": "listed"
+        },
+        {
+          "code": "in",
+          "status": "listed"
+        },
+        {
+          "code": "ci",
+          "status": "listed"
+        },
+        {
+          "code": "pe",
+          "status": "listed"
+        },
+        {
+          "code": "gr",
+          "status": "listed"
+        },
+        {
+          "code": "ro",
+          "status": "listed"
+        },
+        {
+          "code": "py",
+          "status": "listed"
+        }
+      ],
+      "source": {
+        "name": "CPLP: Estados-Membros (the site's member list)",
+        "url": "https://www.cplp.org/",
+        "read": "2026-10-17"
+      }
+    },
+    {
+      "code": "sphere:sinosphere",
+      "kind": "sphere",
+      "influence": "cultural",
+      "name": "Sinosphere",
+      "the": true,
+      "note": "Greater China, Japan, Korea and Vietnam, with Singapore: the sources of Unicode's ideographs (the IRG).",
+      "from": "members",
+      "members": [
+        "cn",
+        "sg",
+        "hk",
+        "mo",
+        "tw",
+        "jp",
+        "kr",
+        "kp",
+        "vn"
+      ],
+      "source": {
+        "name": "Unicode Standard Annex #38, Unicode Han Database (Unihan): the IRG source properties",
+        "url": "https://www.unicode.org/reports/tr38/",
+        "read": "2026-10-17"
+      }
+    },
+    {
+      "code": "sphere:russophone",
+      "kind": "sphere",
+      "influence": "semantic",
+      "name": "Russophone world",
+      "the": true,
+      "note": "The states where Russian is an official or co-official language; it is spoken far beyond them.",
+      "from": "members",
+      "members": [
+        "by",
+        "kg",
+        "kz",
+        "ru"
+      ],
+      "source": {
+        "name": "Unicode CLDR 48 (cldr-json cldr-core 48.2.3), supplemental/territoryInfo.json: official status of each language in each territory",
+        "url": "https://github.com/unicode-org/cldr-json/blob/main/cldr-json/cldr-core/supplemental/territoryInfo.json",
+        "read": "2026-10-17"
+      }
+    },
+    {
+      "code": "sphere:arabophone",
+      "kind": "sphere",
+      "influence": "semantic",
+      "name": "Arabophone world",
+      "the": true,
+      "note": "Where Arabic is an official language: the Arab League's 22, Chad, Eritrea, and Western Sahara as the map draws it. The language, not the union.",
+      "from": "members",
+      "members": [
+        "ae",
+        "bh",
+        "dj",
+        "dz",
+        "eg",
+        "eh",
+        "er",
+        "iq",
+        "jo",
+        "km",
+        "kw",
+        "lb",
+        "ly",
+        "ma",
+        "mr",
+        "om",
+        "ps",
+        "qa",
+        "sa",
+        "sd",
+        "so",
+        "sy",
+        "td",
+        "tn",
+        "ye"
+      ],
+      "source": {
+        "name": "Unicode CLDR 48 (cldr-json cldr-core 48.2.3), supplemental/territoryInfo.json: official status of each language in each territory",
+        "url": "https://github.com/unicode-org/cldr-json/blob/main/cldr-json/cldr-core/supplemental/territoryInfo.json",
+        "read": "2026-10-17"
+      }
+    },
+    {
+      "code": "sphere:turkic",
+      "kind": "sphere",
+      "influence": "political",
+      "name": "Turkic world",
+      "the": true,
+      "note": "The Organization of Turkic States' five members are drawn; its observers Hungary and Turkmenistan are listed, not drawn.",
+      "from": "members",
+      "members": [
+        "az",
+        "kz",
+        "kg",
+        "tr",
+        "uz"
+      ],
+      "others": [
+        {
+          "code": "hu",
+          "status": "listed"
+        },
+        {
+          "code": "tm",
+          "status": "listed"
+        }
+      ],
+      "source": {
+        "name": "Republic of Türkiye Ministry of Foreign Affairs: Organization of Turkic States (OTS)",
+        "url": "https://www.mfa.gov.tr/turk-konseyi-en.en.mfa",
+        "read": "2026-10-23"
+      }
+    },
+    {
+      "code": "sphere:persianate",
+      "kind": "sphere",
+      "influence": "semantic",
+      "name": "Persianate world",
+      "the": true,
+      "note": "Where Persian is official: as Farsi in Iran, Dari in Afghanistan and Tajik in Tajikistan.",
+      "from": "members",
+      "members": [
+        "af",
+        "ir",
+        "tj"
+      ],
+      "source": {
+        "name": "Unicode CLDR 48 (cldr-json cldr-core 48.2.3), supplemental/territoryInfo.json: official status of each language in each territory",
+        "url": "https://github.com/unicode-org/cldr-json/blob/main/cldr-json/cldr-core/supplemental/territoryInfo.json",
+        "read": "2026-10-17"
+      }
+    },
+    {
+      "code": "sphere:germanosphere",
+      "kind": "sphere",
+      "influence": "semantic",
+      "name": "Germanosphere",
+      "the": true,
+      "note": "The 6 states where German is an official language, in Belgium, Luxembourg and Switzerland one of several, are drawn; Denmark and Poland, where CLDR records it as official only in a region, are listed, not drawn.",
+      "from": "members",
+      "members": [
+        "at",
+        "be",
+        "ch",
+        "de",
+        "li",
+        "lu"
+      ],
+      "others": [
+        {
+          "code": "dk",
+          "status": "listed"
+        },
+        {
+          "code": "pl",
+          "status": "listed"
+        }
+      ],
+      "source": {
+        "name": "Unicode CLDR 48 (cldr-json cldr-core 48.2.3), supplemental/territoryInfo.json: official status of each language in each territory",
+        "url": "https://github.com/unicode-org/cldr-json/blob/main/cldr-json/cldr-core/supplemental/territoryInfo.json",
+        "read": "2026-10-17"
+      }
+    },
+    {
+      "code": "sphere:malay",
+      "kind": "sphere",
+      "influence": "semantic",
+      "name": "Malay world",
+      "the": true,
+      "note": "Where Malay, or Indonesian, its standard form there, is a national language.",
+      "from": "members",
+      "members": [
+        "bn",
+        "id",
+        "my",
+        "sg"
+      ],
+      "source": {
+        "name": "Unicode CLDR 48 (cldr-json cldr-core 48.2.3), supplemental/territoryInfo.json: official status of each language in each territory",
+        "url": "https://github.com/unicode-org/cldr-json/blob/main/cldr-json/cldr-core/supplemental/territoryInfo.json",
+        "read": "2026-10-17"
+      }
+    },
+    {
+      "code": "sphere:swahili",
+      "kind": "sphere",
+      "influence": "semantic",
+      "name": "Swahili sphere",
+      "the": true,
+      "note": "The 4 states where Swahili is an official or national language are drawn; DR Congo, where CLDR records it as official only in a region, is listed, not drawn.",
+      "from": "members",
+      "members": [
+        "ke",
+        "rw",
+        "tz",
+        "ug"
+      ],
+      "others": [
+        {
+          "code": "cd",
+          "status": "listed"
+        }
+      ],
+      "source": {
+        "name": "Unicode CLDR 48 (cldr-json cldr-core 48.2.3), supplemental/territoryInfo.json: official status of each language in each territory",
+        "url": "https://github.com/unicode-org/cldr-json/blob/main/cldr-json/cldr-core/supplemental/territoryInfo.json",
+        "read": "2026-10-17"
+      }
+    },
+    {
+      "code": "sphere:nordic",
+      "kind": "sphere",
+      "influence": "political",
+      "name": "Nordic world",
+      "the": true,
+      "note": "The Nordic Council's five states and its three autonomous territories, the Faroe Islands, Greenland and Åland.",
+      "from": "members",
+      "members": [
+        "dk",
+        "fi",
+        "is",
+        "no",
+        "se",
+        "fo",
+        "gl",
+        "ax"
+      ],
+      "source": {
+        "name": "Sveriges riksdag: The Nordic Council",
+        "url": "https://www.riksdagen.se/en/how-the-riksdag-works/the-international-work-of-the-riksdag/parliamentary-assemblies/the-nordic-council/",
+        "read": "2026-10-23"
+      }
+    }
+  ],
+  "unions": [
+    {
+      "code": "union:eu",
+      "kind": "union",
+      "name": "European Union",
+      "the": true,
+      "note": "27 members are drawn; the 10 candidates are listed, not drawn. Northern Cyprus is left out: EU law is suspended there.",
+      "from": "members",
+      "members": [
+        "at",
+        "be",
+        "bg",
+        "cy",
+        "cz",
+        "de",
+        "dk",
+        "ee",
+        "es",
+        "fi",
+        "fr",
+        "gr",
+        "hr",
+        "hu",
+        "ie",
+        "it",
+        "lt",
+        "lu",
+        "lv",
+        "mt",
+        "nl",
+        "pl",
+        "pt",
+        "ro",
+        "se",
+        "si",
+        "sk"
+      ],
+      "others": [
+        {
+          "code": "al",
+          "status": "candidate",
+          "since": "2014-06"
+        },
+        {
+          "code": "ba",
+          "status": "candidate",
+          "since": "2022-12"
+        },
+        {
+          "code": "ge",
+          "status": "candidate",
+          "since": "2023-12-14"
+        },
+        {
+          "code": "md",
+          "status": "candidate",
+          "since": "2022-06"
+        },
+        {
+          "code": "me",
+          "status": "candidate",
+          "since": "2010-12"
+        },
+        {
+          "code": "mk",
+          "status": "candidate",
+          "since": "2005-12"
+        },
+        {
+          "code": "rs",
+          "status": "candidate",
+          "since": "2012-03"
+        },
+        {
+          "code": "tr",
+          "status": "candidate",
+          "since": "1999"
+        },
+        {
+          "code": "ua",
+          "status": "candidate",
+          "since": "2022-06"
+        },
+        {
+          "code": "xk",
+          "status": "candidate",
+          "since": "2003-06"
+        }
+      ],
+      "source": {
+        "name": "European Union: EU countries (both pages of the list)",
+        "url": "https://european-union.europa.eu/principles-countries-history/eu-countries_en",
+        "read": "2026-10-23"
+      }
+    },
+    {
+      "code": "union:brics",
+      "kind": "union",
+      "name": "BRICS",
+      "note": "11 members are drawn; the 10 partner countries are listed, not drawn.",
+      "from": "members",
+      "members": [
+        "br",
+        "ru",
+        "in",
+        "cn",
+        "za",
+        "eg",
+        "et",
+        "ir",
+        "ae",
+        "sa",
+        "id"
+      ],
+      "others": [
+        {
+          "code": "by",
+          "status": "partner",
+          "since": "2025"
+        },
+        {
+          "code": "bo",
+          "status": "partner",
+          "since": "2025"
+        },
+        {
+          "code": "cu",
+          "status": "partner",
+          "since": "2025"
+        },
+        {
+          "code": "kz",
+          "status": "partner",
+          "since": "2025"
+        },
+        {
+          "code": "my",
+          "status": "partner",
+          "since": "2025"
+        },
+        {
+          "code": "ng",
+          "status": "partner",
+          "since": "2025"
+        },
+        {
+          "code": "th",
+          "status": "partner",
+          "since": "2025"
+        },
+        {
+          "code": "ug",
+          "status": "partner",
+          "since": "2025"
+        },
+        {
+          "code": "uz",
+          "status": "partner",
+          "since": "2025"
+        },
+        {
+          "code": "vn",
+          "status": "partner",
+          "since": "2025"
+        }
+      ],
+      "source": {
+        "name": "BRICS India 2026 (the chair's official site): FAQ, members and partners",
+        "url": "https://www.brics2026.gov.in/",
+        "read": "2026-10-17"
+      }
+    },
+    {
+      "code": "union:asean",
+      "kind": "union",
+      "name": "Association of Southeast Asian Nations",
+      "the": true,
+      "note": "Timor-Leste joined on 26 October 2025, the eleventh member.",
+      "from": "members",
+      "members": [
+        "id",
+        "my",
+        "ph",
+        "sg",
+        "th",
+        "bn",
+        "vn",
+        "la",
+        "mm",
+        "kh",
+        "tl"
+      ],
+      "source": {
+        "name": "Ministry of Foreign Affairs, Brunei Darussalam: Association of South East Asian Nations (ASEAN)",
+        "url": "https://www.mfa.gov.bn/Pages/ASEAN.aspx",
+        "read": "2026-10-23"
+      }
+    },
+    {
+      "code": "union:au",
+      "kind": "union",
+      "name": "African Union",
+      "the": true,
+      "note": "49 members are drawn; the 6 the Union has suspended (Burkina Faso, Guinea-Bissau, Madagascar, Mali, Niger and Sudan) are listed, not drawn. Somaliland is drawn as part of Somalia, a member.",
+      "from": "members",
+      "members": [
+        "ao",
+        "bi",
+        "bj",
+        "bw",
+        "cd",
+        "cf",
+        "cg",
+        "ci",
+        "cm",
+        "cv",
+        "dj",
+        "dz",
+        "eg",
+        "eh",
+        "er",
+        "et",
+        "ga",
+        "gh",
+        "gm",
+        "gn",
+        "gq",
+        "ke",
+        "km",
+        "lr",
+        "ls",
+        "ly",
+        "ma",
+        "mr",
+        "mu",
+        "mw",
+        "mz",
+        "na",
+        "ng",
+        "rw",
+        "sc",
+        "sl",
+        "sn",
+        "so",
+        "ss",
+        "st",
+        "sz",
+        "td",
+        "tg",
+        "tn",
+        "tz",
+        "ug",
+        "za",
+        "zm",
+        "zw"
+      ],
+      "others": [
+        {
+          "code": "bf",
+          "status": "suspended",
+          "since": "2022-01-31"
+        },
+        {
+          "code": "gw",
+          "status": "suspended",
+          "since": "2025-11-28"
+        },
+        {
+          "code": "mg",
+          "status": "suspended",
+          "since": "2025-10-15"
+        },
+        {
+          "code": "ml",
+          "status": "suspended",
+          "since": "2021-06-01"
+        },
+        {
+          "code": "ne",
+          "status": "suspended",
+          "since": "2023-08-14"
+        },
+        {
+          "code": "sd",
+          "status": "suspended",
+          "since": "2021-10"
+        }
+      ],
+      "source": {
+        "name": "African Union: Member States",
+        "url": "https://au.int/en/member_states/countryprofiles2",
+        "read": "2026-10-17"
+      }
+    },
+    {
+      "code": "union:nato",
+      "kind": "union",
+      "name": "North Atlantic Treaty Organization",
+      "the": true,
+      "note": "32 members are drawn; the 3 aspirants (Bosnia and Herzegovina, Georgia and Ukraine) are listed, not drawn.",
+      "from": "members",
+      "members": [
+        "al",
+        "be",
+        "bg",
+        "ca",
+        "cz",
+        "de",
+        "dk",
+        "ee",
+        "es",
+        "fi",
+        "fr",
+        "gb",
+        "gr",
+        "hr",
+        "hu",
+        "is",
+        "it",
+        "lt",
+        "lu",
+        "lv",
+        "me",
+        "mk",
+        "nl",
+        "no",
+        "pl",
+        "pt",
+        "ro",
+        "se",
+        "si",
+        "sk",
+        "tr",
+        "us"
+      ],
+      "others": [
+        {
+          "code": "ba",
+          "status": "candidate",
+          "since": "2010-04"
+        },
+        {
+          "code": "ge",
+          "status": "candidate",
+          "since": "2008-04"
+        },
+        {
+          "code": "ua",
+          "status": "candidate",
+          "since": "2008-04"
+        }
+      ],
+      "source": {
+        "name": "NATO: Member countries (updated 11 March 2024)",
+        "url": "https://www.nato.int/en/about-us/organization/nato-member-countries",
+        "read": "2026-10-23"
+      }
+    },
+    {
+      "code": "union:sco",
+      "kind": "union",
+      "name": "Shanghai Cooperation Organisation",
+      "the": true,
+      "note": "10 members are drawn; its 2 observers and 15 dialogue partners are listed, not drawn.",
+      "from": "members",
+      "members": [
+        "cn",
+        "kz",
+        "kg",
+        "ru",
+        "tj",
+        "uz",
+        "in",
+        "pk",
+        "ir",
+        "by"
+      ],
+      "others": [
+        {
+          "code": "af",
+          "status": "observer",
+          "since": "2012-06-07"
+        },
+        {
+          "code": "mn",
+          "status": "observer",
+          "since": "2004-06-17"
+        },
+        {
+          "code": "ae",
+          "status": "partner",
+          "since": "2022-09-16"
+        },
+        {
+          "code": "am",
+          "status": "partner",
+          "since": "2015-07-10"
+        },
+        {
+          "code": "az",
+          "status": "partner",
+          "since": "2015-07-10"
+        },
+        {
+          "code": "bh",
+          "status": "partner",
+          "since": "2022-09-10"
+        },
+        {
+          "code": "eg",
+          "status": "partner",
+          "since": "2021-09-17"
+        },
+        {
+          "code": "kh",
+          "status": "partner",
+          "since": "2015-07-10"
+        },
+        {
+          "code": "kw",
+          "status": "partner",
+          "since": "2022-09-16"
+        },
+        {
+          "code": "la",
+          "status": "partner",
+          "since": "2025-09-01"
+        },
+        {
+          "code": "lk",
+          "status": "partner",
+          "since": "2009-06-16"
+        },
+        {
+          "code": "mm",
+          "status": "partner",
+          "since": "2022-09-16"
+        },
+        {
+          "code": "mv",
+          "status": "partner",
+          "since": "2022-09-16"
+        },
+        {
+          "code": "np",
+          "status": "partner",
+          "since": "2015-07-10"
+        },
+        {
+          "code": "qa",
+          "status": "partner",
+          "since": "2021-09-17"
+        },
+        {
+          "code": "sa",
+          "status": "partner",
+          "since": "2021-09-17"
+        },
+        {
+          "code": "tr",
+          "status": "partner",
+          "since": "2012-06-07"
+        }
+      ],
+      "source": {
+        "name": "SCO: General information",
+        "url": "https://eng.sectsco.org/20170109/192193.html",
+        "read": "2026-10-23"
+      }
+    },
+    {
+      "code": "union:opec",
+      "kind": "union",
+      "name": "Organization of the Petroleum Exporting Countries",
+      "the": true,
+      "from": "members",
+      "members": [
+        "cg",
+        "dz",
+        "ga",
+        "gq",
+        "iq",
+        "ir",
+        "kw",
+        "ly",
+        "ng",
+        "sa",
+        "ve"
+      ],
+      "source": {
+        "name": "U.S. EIA Glossary: Organization of Petroleum Exporting Countries (OPEC), current members with years",
+        "url": "https://www.eia.gov/tools/glossary/index.php?id=Organization+of+Petroleum+Exporting+Countries+%28OPEC%29",
+        "read": "2026-10-23"
+      }
+    },
+    {
+      "code": "union:mercosur",
+      "kind": "union",
+      "name": "Mercosur",
+      "note": "Bolivia became a full member in 2024. Venezuela, suspended since 5 August 2017, and the 7 associated states are listed, not drawn.",
+      "from": "members",
+      "members": [
+        "ar",
+        "br",
+        "py",
+        "uy",
+        "bo"
+      ],
+      "others": [
+        {
+          "code": "ve",
+          "status": "suspended",
+          "since": "2017-08-05"
+        },
+        {
+          "code": "cl",
+          "status": "partner",
+          "since": "1996"
+        },
+        {
+          "code": "pe",
+          "status": "partner",
+          "since": "2003-12-15"
+        },
+        {
+          "code": "co",
+          "status": "partner",
+          "since": "2004-12-16"
+        },
+        {
+          "code": "ec",
+          "status": "partner",
+          "since": "2004-12-16"
+        },
+        {
+          "code": "gy",
+          "status": "partner",
+          "since": "2013-07-11"
+        },
+        {
+          "code": "sr",
+          "status": "partner",
+          "since": "2013-07-11"
+        },
+        {
+          "code": "pa",
+          "status": "partner",
+          "since": "2024-12-06"
+        }
+      ],
+      "source": {
+        "name": "Argentina, Boletín Oficial: Ley 23.981, approving the Treaty of Asunción (signed 26 March 1991 by Argentina, Brazil, Paraguay and Uruguay)",
+        "url": "https://www.argentina.gob.ar/normativa/nacional/ley-23981-380/texto",
+        "read": "2026-10-23"
+      }
+    },
+    {
+      "code": "union:gcc",
+      "kind": "union",
+      "name": "Gulf Cooperation Council",
+      "the": true,
+      "from": "members",
+      "members": [
+        "ae",
+        "bh",
+        "sa",
+        "om",
+        "qa",
+        "kw"
+      ],
+      "source": {
+        "name": "GCC Secretariat General: About us (the Charter, signed 25 May 1981 by the six)",
+        "url": "https://www.gcc-sg.org/en/AboutUs/Pages/default.aspx",
+        "read": "2026-10-17"
+      }
+    },
+    {
+      "code": "union:commonwealth",
+      "kind": "union",
+      "name": "Commonwealth of Nations",
+      "the": true,
+      "from": "members",
+      "members": [
+        "ag",
+        "au",
+        "bb",
+        "bd",
+        "bn",
+        "bs",
+        "bw",
+        "bz",
+        "ca",
+        "cm",
+        "cy",
+        "dm",
+        "fj",
+        "ga",
+        "gb",
+        "gd",
+        "gh",
+        "gm",
+        "gy",
+        "in",
+        "jm",
+        "ke",
+        "ki",
+        "kn",
+        "lc",
+        "lk",
+        "ls",
+        "mt",
+        "mu",
+        "mv",
+        "mw",
+        "my",
+        "mz",
+        "na",
+        "ng",
+        "nr",
+        "nz",
+        "pg",
+        "pk",
+        "rw",
+        "sb",
+        "sc",
+        "sg",
+        "sl",
+        "sz",
+        "tg",
+        "to",
+        "tt",
+        "tv",
+        "tz",
+        "ug",
+        "vc",
+        "vu",
+        "ws",
+        "za",
+        "zm"
+      ],
+      "source": {
+        "name": "The Commonwealth: Our member countries (56), and each country's page",
+        "url": "https://thecommonwealth.org/our-member-countries",
+        "read": "2026-10-17"
+      }
+    },
+    {
+      "code": "union:oas",
+      "kind": "union",
+      "name": "Organization of American States",
+      "the": true,
+      "from": "members",
+      "members": [
+        "ag",
+        "ar",
+        "bb",
+        "bo",
+        "br",
+        "bs",
+        "bz",
+        "ca",
+        "cl",
+        "co",
+        "cr",
+        "cu",
+        "dm",
+        "do",
+        "ec",
+        "gd",
+        "gt",
+        "gy",
+        "hn",
+        "ht",
+        "jm",
+        "kn",
+        "lc",
+        "mx",
+        "pa",
+        "pe",
+        "py",
+        "sr",
+        "sv",
+        "tt",
+        "us",
+        "uy",
+        "vc",
+        "ve"
+      ],
+      "source": {
+        "name": "OAS: Charter of the OAS (A-41), signatories and ratifications",
+        "url": "https://www.oas.org/en/sla/dil/inter_american_treaties_A-41_charter_OAS_signatories.asp",
+        "read": "2026-10-17"
+      }
+    },
+    {
+      "code": "union:arab-league",
+      "kind": "union",
+      "name": "League of Arab States",
+      "the": true,
+      "note": "Somaliland is drawn as part of Somalia, a member.",
+      "from": "members",
+      "members": [
+        "ae",
+        "bh",
+        "dj",
+        "dz",
+        "eg",
+        "iq",
+        "jo",
+        "km",
+        "kw",
+        "lb",
+        "ly",
+        "ma",
+        "mr",
+        "om",
+        "qa",
+        "sa",
+        "sd",
+        "so",
+        "sy",
+        "tn",
+        "ye",
+        "ps"
+      ],
+      "source": {
+        "name": "League of Arab States: Member states (each state's page gives its Membership Date)",
+        "url": "https://web.archive.org/web/20251015011909/http://www.lasportal.org/en/aboutlas/Pages/CountryData.aspx",
+        "read": "2026-10-23"
+      }
+    },
+    {
+      "code": "union:ecowas",
+      "kind": "union",
+      "name": "Economic Community of West African States",
+      "the": true,
+      "note": "11 members are drawn; Guinea-Bissau, suspended since 27 November 2025, is listed, not drawn.",
+      "from": "members",
+      "members": [
+        "bj",
+        "ci",
+        "gm",
+        "gh",
+        "gn",
+        "lr",
+        "ng",
+        "sn",
+        "sl",
+        "tg",
+        "cv"
+      ],
+      "others": [
+        {
+          "code": "gw",
+          "status": "suspended",
+          "since": "2025-11-27"
+        }
+      ],
+      "source": {
+        "name": "ECOWAS: Member States (12 listed)",
+        "url": "https://www.ecowas.int/member-states/",
+        "read": "2026-10-17"
+      }
+    },
+    {
+      "code": "union:csto",
+      "kind": "union",
+      "name": "Collective Security Treaty Organization",
+      "the": true,
+      "from": "members",
+      "members": [
+        "kz",
+        "kg",
+        "ru",
+        "tj",
+        "am",
+        "by"
+      ],
+      "source": {
+        "name": "CSTO: History of creation (the 25 years page)",
+        "url": "https://en.odkb-csto.org/25years/",
+        "read": "2026-10-17"
+      }
+    },
+    {
+      "code": "union:pif",
+      "kind": "union",
+      "name": "Pacific Islands Forum",
+      "the": true,
+      "from": "members",
+      "members": [
+        "au",
+        "ck",
+        "fm",
+        "fj",
+        "pf",
+        "ki",
+        "nr",
+        "nc",
+        "nz",
+        "nu",
+        "pw",
+        "pg",
+        "mh",
+        "ws",
+        "sb",
+        "to",
+        "tv",
+        "vu"
+      ],
+      "source": {
+        "name": "Pacific Islands Forum Secretariat: Timeline of Major Forum Events",
+        "url": "https://forumsec.org/timeline-major-forum-events",
+        "read": "2026-10-23"
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "private-consent-alone-refused",
+  "description": "THE LOAD-BEARING CASE. Consent alone published a whistleblower identity, a child's home address, a private donor and a recruitment candidate.",
+  "subjectKind": "person",
+  "options": {
+    "isMock": false,
+    "consentToPublishAboutPerson": true
+  },
+  "expect": {
+    "allowed": false,
+    "reasonMatches": "private individual"
+  }
+}

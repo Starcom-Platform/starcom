@@ -1,0 +1,182 @@
+{
+  "zsp": "2.0",
+  "terra": "terra:sundaica",
+  "grid": {
+    "width": 3600,
+    "height": 1800,
+    "cell": 0.1,
+    "origin": {
+      "lat": 90,
+      "lon": -180
+    },
+    "rows": "row 0 the northernmost",
+    "values": "at cell centres"
+  },
+  "files": {
+    "zones": "sundaica-zones-0.1.u32.bin.gz",
+    "sectors": "sundaica-sectors-0.1.u32.bin.gz"
+  },
+  "dtype": "uint32",
+  "endianness": "little",
+  "compression": "gzip",
+  "areaKm2": 11374612,
+  "zones": [
+    {
+      "id": "zone:indo-burman-irrawaddy",
+      "name": "Indo-Burman Ranges and the Irrawaddy Zone",
+      "system": "arc",
+      "provinces": [
+        "Indo-Burman",
+        "Irrawaddy",
+        "North Burma"
+      ],
+      "km2": 775465
+    },
+    {
+      "id": "zone:shan-tenasserim",
+      "name": "Shan Plateau and the Tenasserim Zone",
+      "system": "plateau",
+      "provinces": [
+        "Tenasserim-Shan",
+        "Lanping Simao Basin"
+      ],
+      "km2": 609956
+    },
+    {
+      "id": "zone:annamite-khorat",
+      "name": "Annamite Range and the Khorat Plateau Zone",
+      "system": "orogen",
+      "provinces": [
+        "Truong Son Fold Belt",
+        "Khorat Platform",
+        "Tonle Sap-Phnom Penh Basin"
+      ],
+      "km2": 869100
+    },
+    {
+      "id": "zone:mekong-gulf-thailand",
+      "name": "Mekong Delta and the Gulf of Thailand Zone",
+      "system": "delta",
+      "provinces": [
+        "Mekong/Cuulong/Vung Tau Basin",
+        "Saigon Basin",
+        "Panjang/Cardomomes Basin",
+        "Thai Basin",
+        "Central Vietnam Basin"
+      ],
+      "km2": 611822
+    },
+    {
+      "id": "zone:malay-peninsula",
+      "name": "Malay Peninsula and the Thai Basins Zone",
+      "system": "orogen",
+      "provinces": [
+        "Thailand Mesozoic Basin Belt",
+        "Malay Peninsula",
+        "Malay Basin"
+      ],
+      "km2": 757715
+    },
+    {
+      "id": "zone:sunda-arc",
+      "name": "Sunda Arc: Sumatra, Java and the Lesser Sundas Zone",
+      "system": "arc",
+      "provinces": [
+        "North Sumatra Basin",
+        "Central Sumatra Basin",
+        "South Sumatra Basin",
+        "Sumatra/Java Magmatic Arc",
+        "Sumatra/Java Accretionary Prism",
+        "Sumatra/Java Fore-Arc Basins",
+        "Northwest Java Basin",
+        "East Java Basin"
+      ],
+      "km2": 1617969
+    },
+    {
+      "id": "zone:sunda-shelf",
+      "name": "Sunda Shelf and the Java Sea Zone",
+      "system": "basin",
+      "provinces": [
+        "Sunda Platform",
+        "Penyu/West Natuna Basin",
+        "East Natuna Basin"
+      ],
+      "km2": 870869
+    },
+    {
+      "id": "zone:borneo",
+      "name": "Borneo Zone",
+      "system": "shield",
+      "provinces": [
+        "Greater Sarawak Basin",
+        "Rajang-Crocker Accretionary Prism",
+        "Baram Delta/Brunei-Sabah Basin",
+        "Ketuneau/Sintang Terrane",
+        "Kutei Basin",
+        "Barito Basin",
+        "Melawi Basin",
+        "Meratus High",
+        "Pamusian Tarakan Basin"
+      ],
+      "km2": 1120700
+    },
+    {
+      "id": "zone:south-china-sea",
+      "name": "South China Sea Zone",
+      "system": "basin",
+      "provinces": [
+        "South China Ocean Basin",
+        "South China Sea Platform",
+        "Reed Bank Basin",
+        "Xisha Trough"
+      ],
+      "km2": 887563
+    },
+    {
+      "id": "zone:philippines",
+      "name": "Philippine Mobile Belt and the Sulu Sea Zone",
+      "system": "arc",
+      "provinces": [
+        "Philippine Accretionary Prism",
+        "Philippine Magmatic Arc",
+        "Visayan",
+        "Cagayan Basin",
+        "Bicol Shelf Basin",
+        "Cotabato Basin",
+        "Zambalez/Central Luzon Basin",
+        "Palawan Shelf",
+        "Sulu Arch",
+        "Sulu Sea Basin"
+      ],
+      "km2": 1148582
+    },
+    {
+      "id": "zone:wallacea",
+      "name": "Wallacea Zone",
+      "system": "arc",
+      "provinces": [
+        "Sulawesi Accretionary Prism",
+        "Sulawesi Magmatic Arc",
+        "Banda Arc",
+        "North Banda Basin",
+        "South Banda Basin",
+        "Weber Basin",
+        "Halmahera Basin",
+        "Halmahera Platform",
+        "Bone Basin",
+        "Gorontalo Basin",
+        "Flores Basin",
+        "Sumba Province",
+        "Celebes Sea",
+        "South Makassar Basin",
+        "Bali Basin",
+        "Java/Banda Sea"
+      ],
+      "km2": 2104869
+    }
+  ],
+  "sectors": 77,
+  "bytes": 184377,
+  "points": 6318
+}

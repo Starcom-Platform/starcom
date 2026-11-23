@@ -1,0 +1,8 @@
+/* Finding a country by name, in the report form; on the tokens (block D, step 7). */
+.finder { display: flex; flex-direction: column; gap: 4px; }
+.finder input { background: var(--sc-surface-input); border: 1px solid var(--sc-input-border); color: var(--sc-text-body); padding: 6px 8px; border-radius: 4px; font-size: 12px; font-family: inherit; }
+.finder input:focus { outline: none; border-color: var(--sc-focus); }
+.matches { display: flex; flex-wrap: wrap; gap: 4px; }
+.match { background: var(--sc-surface-input); border: 1px solid var(--sc-input-border); color: var(--sc-accent); padding: 3px 8px; border-radius: 4px; font-size: 12px; font-family: inherit; cursor: pointer; }
+.match:hover, .match:focus-visible { border-color: var(--sc-focus); outline: none; }
+.note { font-size: 11px; color: var(--sc-text-secondary); }

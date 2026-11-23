@@ -1,0 +1,15 @@
+{
+  "name": "private-blank-justification",
+  "description": "Whitespace is not a justification. An empty field would let the check be satisfied by pressing a key.",
+  "subjectKind": "person",
+  "options": {
+    "isMock": false,
+    "subjectRole": "private",
+    "consentToPublishAboutPerson": true,
+    "publicInterestJustification": "   "
+  },
+  "expect": {
+    "allowed": false,
+    "reasonMatches": "private individual"
+  }
+}

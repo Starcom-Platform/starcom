@@ -1,0 +1,292 @@
+{
+  "zsp": "2.0",
+  "terra": "terra:sinica",
+  "grid": {
+    "width": 3600,
+    "height": 1800,
+    "cell": 0.1,
+    "origin": {
+      "lat": 90,
+      "lon": -180
+    },
+    "rows": "row 0 the northernmost",
+    "values": "at cell centres"
+  },
+  "files": {
+    "zones": "sinica-zones-0.1.u32.bin.gz",
+    "sectors": "sinica-sectors-0.1.u32.bin.gz"
+  },
+  "dtype": "uint32",
+  "endianness": "little",
+  "compression": "gzip",
+  "areaKm2": 15873707,
+  "zones": [
+    {
+      "id": "zone:tarim",
+      "name": "Tarim Basin Zone",
+      "system": "basin",
+      "provinces": [
+        "Tarim Basin"
+      ],
+      "km2": 604505
+    },
+    {
+      "id": "zone:dzungaria",
+      "name": "Dzungaria Zone",
+      "system": "basin",
+      "provinces": [
+        "Junggar Basin",
+        "Karamay Thrust Belt"
+      ],
+      "km2": 344119
+    },
+    {
+      "id": "zone:qiangtang",
+      "name": "Qiangtang and the Changtang Zone",
+      "system": "plateau",
+      "provinces": [
+        "Qiangtang Terrane",
+        "Qiangtang Tanggula Basin"
+      ],
+      "km2": 663253
+    },
+    {
+      "id": "zone:lhasa-block",
+      "name": "Lhasa Block and the Tsangpo Zone",
+      "system": "plateau",
+      "provinces": [
+        "Lhasa Terrane",
+        "Lhasa Basin",
+        "Cuoqing Lunpola Basin",
+        "Qabdu Basin"
+      ],
+      "km2": 575791
+    },
+    {
+      "id": "zone:kunlun-qaidam",
+      "name": "Kunlun and the Qaidam Zone",
+      "system": "orogen",
+      "provinces": [
+        "Kunlunshan Fold Belt",
+        "Altunshan Fold Belt",
+        "Qaidam Basin",
+        "Kumukulig Basin"
+      ],
+      "km2": 444772
+    },
+    {
+      "id": "zone:qilian-alxa",
+      "name": "Qilian Shan and the Alxa Zone",
+      "system": "orogen",
+      "provinces": [
+        "Qilianshan Fold Belt",
+        "Jiuquan Minle Wuwei Basin",
+        "Alashan Yinshan Fold Belt"
+      ],
+      "km2": 746699
+    },
+    {
+      "id": "zone:songpan-ganzi",
+      "name": "Songpan–Ganzi and the Longmen Shan Zone",
+      "system": "orogen",
+      "provinces": [
+        "Songpan Ganzi Fold Belt",
+        "Longmenshan Dabashan Fold Belt",
+        "Sulongshan Fold Belt"
+      ],
+      "km2": 632163
+    },
+    {
+      "id": "zone:sichuan",
+      "name": "Sichuan Basin Zone",
+      "system": "basin",
+      "provinces": [
+        "Sichuan Basin"
+      ],
+      "km2": 211873
+    },
+    {
+      "id": "zone:ordos-loess",
+      "name": "Ordos and the Loess Plateau Zone",
+      "system": "basin",
+      "provinces": [
+        "Ordos Basin",
+        "Shanxi Plateau"
+      ],
+      "km2": 480140
+    },
+    {
+      "id": "zone:north-china-plain",
+      "name": "North China Plain and the Yellow Sea Zone",
+      "system": "basin",
+      "provinces": [
+        "Bohaiwan Basin",
+        "Taihangshan Yanshan Fold Belt",
+        "Taikang Hefei Basin",
+        "Nanyang Basin",
+        "Subei Yellow Sea Basin",
+        "Korea Bay Basin",
+        "Luxi Jiaoliao Uplift"
+      ],
+      "km2": 1067951
+    },
+    {
+      "id": "zone:qinling-dabie",
+      "name": "Qinling–Dabie Zone",
+      "system": "orogen",
+      "provinces": [
+        "Qinling Dabieshan Fold Belt"
+      ],
+      "km2": 283066
+    },
+    {
+      "id": "zone:yangtze",
+      "name": "Yangtze Platform Zone",
+      "system": "basin",
+      "provinces": [
+        "Jianghan Basin",
+        "Jiangnan South Jiangsu Fold Belt",
+        "Yunnan Guizhou Hubei Fold Belt",
+        "Xichang Yunnan Fold Belt",
+        "Chuxiong Basin",
+        "Nanpanjiang Depression",
+        "Bose Basin"
+      ],
+      "km2": 929446
+    },
+    {
+      "id": "zone:south-china",
+      "name": "South China and the Pearl River Zone",
+      "system": "orogen",
+      "provinces": [
+        "South China Fold Belt",
+        "Pearl River Mouth Basin",
+        "Sanshui Basin",
+        "Shiwan Dashan Basin",
+        "Beibuwan Basin",
+        "Leidong Basin",
+        "Qiongdongnan Basin",
+        "Taixinan Basin",
+        "Bijianan Basin"
+      ],
+      "km2": 1671083
+    },
+    {
+      "id": "zone:east-china-sea-taiwan",
+      "name": "East China Sea, Taiwan and the Ryukyus Zone",
+      "system": "arc",
+      "provinces": [
+        "East China Sea Basin",
+        "Taiwan Thrust and Fold Belt",
+        "Taiwan Melange Belt",
+        "Okinawa Trough",
+        "Ryukyu Volcanic Arc",
+        "Sinzi Uplift"
+      ],
+      "km2": 739625
+    },
+    {
+      "id": "zone:korean-peninsula",
+      "name": "Korean Peninsula Zone",
+      "system": "shield",
+      "provinces": [
+        "Korean Craton",
+        "Gyeongsang Basin",
+        "Gensan Basin",
+        "Korean Continental Shelf",
+        "Huksan Platform"
+      ],
+      "km2": 565571
+    },
+    {
+      "id": "zone:japan",
+      "name": "Japan Arc and the Sea of Japan Zone",
+      "system": "arc",
+      "provinces": [
+        "Japan Volcanic Arc/Accreted Terrane",
+        "Akita Basin",
+        "Honshu Ridge",
+        "Ishikari Hidaka Basin",
+        "Joban Basin",
+        "Kanto Basin",
+        "Miyazaki Basin",
+        "Niigata Basin",
+        "Sagara Basin",
+        "Tokachi Basin",
+        "Tottori Basin",
+        "Tsushima Basin",
+        "Sea of Japan Backarc Basin"
+      ],
+      "km2": 1427908
+    },
+    {
+      "id": "zone:manchuria",
+      "name": "Manchuria and the Greater Khingan Zone",
+      "system": "basin",
+      "provinces": [
+        "Songliao Basin",
+        "Yinshan Da&Xiao Hingganling Uplift",
+        "Zhangguangcailing Uplift",
+        "Yitong Graben",
+        "Erlian Basin",
+        "Temtsag Hailar Basin",
+        "Mohe Basin",
+        "Heilongjiang Basin",
+        "Ushumun Basin"
+      ],
+      "km2": 1303511
+    },
+    {
+      "id": "zone:mongolian-plateau",
+      "name": "Mongolian Plateau Zone",
+      "system": "plateau",
+      "provinces": [
+        "Mongol-Okhotsk Folded Region",
+        "Gobi Basin",
+        "Great Lake Basin",
+        "Great Lake Uplift",
+        "Ulan Bator Basin",
+        "Nyalga Basin",
+        "Choybalsan Basin",
+        "Erlian Uplift"
+      ],
+      "km2": 1777429
+    },
+    {
+      "id": "zone:amur-sikhote-alin",
+      "name": "Amur and the Sikhote-Alin Zone",
+      "system": "orogen",
+      "provinces": [
+        "Sikhote-Alin Folded Region",
+        "Khanka Basin",
+        "Suifun Basin",
+        "Middle Amur Basin",
+        "Bureya-Dunbey Region",
+        "Zeya-Bureya Basin",
+        "Upper Bureya Basin",
+        "Upper Zeya Basin"
+      ],
+      "km2": 821283
+    },
+    {
+      "id": "zone:sakhalin-okhotsk",
+      "name": "Sakhalin, the Kurils and the Sea of Okhotsk Zone",
+      "system": "arc",
+      "provinces": [
+        "North Sakhalin Basin",
+        "East Sakhalin Uplift",
+        "Terpeniya Bay Basin",
+        "West Sakhalin Uplift",
+        "Susunay Uplift",
+        "Aniva Basin",
+        "Tatar Strait Basin",
+        "Onekotan Basin",
+        "South Kuril Basin"
+      ],
+      "km2": 583517
+    }
+  ],
+  "sectors": 131,
+  "bytes": 348789,
+  "points": 13487
+}

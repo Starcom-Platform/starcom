@@ -1,0 +1,40 @@
+/*
+ * The stepper's marks (BD24): where the record has been, in the ok green;
+ * where it stands, in the cyan of what is selected; ahead, a hollow grey.
+ */
+.mark { display: inline-flex; line-height: 0; }
+.mark[data-step='passed'] { color: var(--sc-ok); }
+.mark[data-step='current'] { color: var(--sc-accent); }
+.mark[data-step='ahead'] { color: var(--sc-text-muted); }
+
+.ring { fill: none; stroke: currentColor; stroke-width: 2; }
+.disc { fill: currentColor; }
+.dot { fill: currentColor; }
+.tick { fill: none; stroke: var(--sc-surface-globe); stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+
+/*
+ * Phones: five steps share about 326 px, and "Dispatched" ran past the edge.
+ * Tighter steps and 11 px labels fit them; a word that still cannot fit breaks.
+ */
+/* The current step's name beside what it means, for a path drawn as marks alone (below). */
+.compactName { display: none; }
+
+@media (max-width: 600px) {
+  .stepper :global(.MuiStep-root) { min-width: 0; padding-left: 2px; padding-right: 2px; }
+  .stepper :global(.MuiStepLabel-label) { font-size: 11px; overflow-wrap: anywhere; }
+
+  /*
+   * Six steps leave about 50 px each, and "Planning" broke mid-word. The marks
+   * are drawn alone, each name kept for screen readers, and the current one is
+   * named in the line below.
+   */
+  .stepper[data-compact] :global(.MuiStepLabel-labelContainer) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+  .compactName { display: inline; }
+}

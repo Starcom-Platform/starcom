@@ -1,0 +1,27 @@
+{
+  "type": "FeatureCollection",
+  "name": "submarine_cables",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "id": "2africa", "name": "2Africa", "color": "#e63946", "feature_id": "2africa-0" },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [[[13.234, -8.839], [20.0, -5.0], [50.6, 26.2]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "id": "aqualink", "name": "Aqualink", "color": "#457b9d", "feature_id": "aqualink-0" },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [[[139.7, 35.6], [-122.4, 37.8]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "id": "no-geometry-cable", "name": "Bad Cable" },
+      "geometry": { "type": "MultiLineString", "coordinates": "not-real-coordinates" }
+    }
+  ]
+}

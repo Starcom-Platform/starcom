@@ -1,0 +1,13 @@
+{
+  "name": "public-office-without-consent",
+  "description": "Publishable, but still deliberate. Consent keeps it an act rather than a side effect.",
+  "subjectKind": "person",
+  "options": {
+    "isMock": false,
+    "subjectRole": "public-office"
+  },
+  "expect": {
+    "allowed": false,
+    "reasonMatches": "public office capacity"
+  }
+}

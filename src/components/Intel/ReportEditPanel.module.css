@@ -1,0 +1,57 @@
+/*
+ * The report editor, on the tokens (block D, step 7). Save is the interactive
+ * cyan; it was green, which means "done". Delete is red, as danger. A field
+ * changed and not yet saved is marked in cyan, yours.
+ */
+.panelRoot { border-left: 1px solid var(--sc-divider); background: var(--sc-surface-frame); color: var(--sc-text-body); width: clamp(320px, 32vw, 420px); padding: 16px; display: flex; flex-direction: column; gap: 12px; box-sizing: border-box; font-family: var(--sc-font-text); }
+.header { display: flex; justify-content: space-between; align-items: center; }
+.header h3 { margin: 0; font-family: var(--sc-font-display); font-size: 15px; font-weight: 600; color: var(--sc-text-heading); }
+.formGrid { display: flex; flex-direction: column; gap: 12px; overflow-y: auto; overflow-x: hidden; padding-right: 4px; }
+.row { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 8px; }
+.row > * { min-width: 0; }
+/* Scoped: a bare element selector in a module is global, and this one turned every
+   label in the app into an upper-case column once the editor had loaded (found with
+   the reviews panel, plan item 5.1). Scoped through :where(), so the rule keeps an
+   element's weight: the panel's own class rules, EventTimeFields' .unknown among
+   them, and MUI's still win over it, as they did before it was scoped. */
+:where(.panelRoot) label { display: flex; flex-direction: column; gap: 4px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--sc-text-secondary); }
+.fieldColumn { display: flex; flex-direction: column; gap: 4px; }
+.labelHeader { display: flex; align-items: center; gap: 6px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--sc-text-secondary); }
+:where(.panelRoot) input, :where(.panelRoot) select, :where(.panelRoot) textarea { background: var(--sc-surface-input); border: 1px solid var(--sc-input-border); color: var(--sc-text-body); border-radius: 4px; padding: 6px 8px; font-size: 12px; font-family: inherit; }
+:where(.panelRoot) input:focus, :where(.panelRoot) select:focus, :where(.panelRoot) textarea:focus { outline: none; border-color: var(--sc-focus); }
+/* Changed here and not yet saved. */
+.changed { border-left: 3px solid var(--sc-accent); padding-left: 5px; }
+.small { font-size: 11px; color: var(--sc-text-muted); }
+.actions { display: flex; gap: 8px; justify-content: flex-end; padding-top: 4px; }
+.button { padding: 6px 14px; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: 600; font-family: inherit; border: 1px solid var(--sc-divider); background: var(--sc-surface-input); color: var(--sc-text-body); }
+.button:hover { border-color: var(--sc-input-border); }
+.button:focus-visible { outline: 2px solid var(--sc-focus); outline-offset: 1px; }
+.primary { background: var(--sc-button-fill); color: var(--sc-button-label); border-color: var(--sc-button-fill); }
+.danger { color: var(--sc-danger); border-color: var(--sc-danger); background: transparent; }
+.button:disabled { opacity: 0.5; cursor: not-allowed; }
+.section { border-top: 1px solid var(--sc-divider); padding-top: 8px; }
+.sectionHeading { display: flex; align-items: center; justify-content: space-between; gap: 6px; flex-wrap: wrap; }
+.sectionTitle { font-size: 12px; font-weight: 600; color: var(--sc-text-heading); margin: 0; }
+.localOnly { font-weight: 400; color: var(--sc-text-muted); }
+.inline { display: inline-block; }
+.msg { font-size: 12px; color: var(--sc-text-secondary); }
+.msgCaution { color: var(--sc-caution); }
+.msgDanger { color: var(--sc-danger); }
+
+.infoWrapper { position: relative; display: inline-flex; align-items: center; flex-shrink: 0; }
+.infoIcon { width: 18px; height: 18px; border-radius: 50%; border: 1px solid var(--sc-input-border); background: var(--sc-surface-input); color: var(--sc-text-body); font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; padding: 0; cursor: pointer; transition: all 0.15s ease; flex: 0 0 18px; }
+.infoIcon:hover, .infoIcon:focus { border-color: var(--sc-focus); color: var(--sc-text-heading); }
+.infoPopover { position: absolute; top: 120%; right: 0; min-width: 200px; max-width: min(260px, 70vw); background: var(--sc-surface-panel); border: 1px solid var(--sc-divider); border-radius: 6px; padding: 10px 12px; box-shadow: 0 12px 24px var(--sc-surface-globe); z-index: 20; }
+.infoPopover p { margin: 0; font-size: 12px; line-height: 1.5; color: var(--sc-text-body); }
+.closePopover { margin-top: 8px; margin-right: 12px; background: none; border: none; color: var(--sc-accent); font-size: 12px; font-weight: 600; font-family: inherit; cursor: pointer; padding: 0; }
+.closePopover:hover { text-decoration: underline; }
+
+@media (max-width: 1100px) {
+	.panelRoot { width: clamp(280px, 45vw, 380px); }
+	.formGrid { padding-right: 0; }
+}
+
+/* Phones: the editor takes the screen in place of the list (the console's stylesheet). */
+@media (max-width: 600px) {
+	.panelRoot { width: 100%; flex: 1; min-height: 0; border-left: none; padding: 12px; }
+}

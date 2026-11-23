@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "esModuleInterop": true
+  },
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" },
+    { "path": "./tsconfig.starcom.json" },
+    { "path": "./tsconfig.netrunner.json" }
+  ],
+  "exclude": ["jest.config.ts"]
+}

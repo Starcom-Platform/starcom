@@ -1,0 +1,132 @@
+/* IdentityNoticeRoot — a corner panel, not a modal: it informs without blocking.
+   The bottom-right dock places it (K16); it was fixed there at z 3200. */
+.panel {
+  /* An explicit width, not just a max: shrink-to-fit resolved to zero when the
+     containing block had no width (see the component's note on the portal). */
+  width: min(360px, calc(100vw - 32px));
+  padding: 14px 16px;
+  border: 1px solid #1e3a5f;
+  border-left: 3px solid #f0c674;
+  border-radius: 6px;
+  background: rgba(9, 14, 26, 0.96);
+  color: #e8eefc;
+  font-size: 13px;
+  line-height: 1.45;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.5);
+}
+
+.heading {
+  margin: 0 0 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #f0c674;
+}
+
+.body { margin: 0 0 10px; color: #c7d6f2; }
+
+.pubkey {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: baseline;
+  margin: 0 0 10px;
+  font-size: 12px;
+}
+
+.label { color: #7f93b8; }
+
+.pubkey code { color: #9fe3ff; word-break: break-all; }
+
+.secret {
+  margin: 0 0 10px;
+  padding: 8px;
+  border: 1px solid #4a3a12;
+  border-radius: 4px;
+  background: rgba(240, 198, 116, 0.06);
+}
+
+/* The key itself: selectable and wrapped, because the point is to copy it down. */
+.nsec {
+  display: block;
+  margin: 6px 0;
+  color: #ffe9b0;
+  font-size: 11px;
+  word-break: break-all;
+  user-select: all;
+}
+
+.warning { margin: 0; color: #f0c674; font-size: 12px; }
+
+.actions, .secretActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.confirm { margin-top: 8px; }
+
+.primary, .minor, .danger {
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  background: transparent;
+}
+
+.primary { border: 1px solid #2f6fb8; color: #cfe6ff; }
+.primary:hover { background: rgba(47, 111, 184, 0.2); }
+
+.minor { border: 1px solid #2a3a56; color: #9fb3d9; }
+.minor:hover { background: rgba(42, 58, 86, 0.35); }
+
+.danger { border: 1px solid #7a2b2b; color: #ffb4b4; }
+.danger:hover { background: rgba(122, 43, 43, 0.3); }
+
+.footnote {
+  margin: 10px 0 0;
+  color: #7f93b8;
+  font-size: 11px;
+}
+
+/* Deleting sits apart from the first row as a plain text control: reachable, and it
+   still asks first, but never the obvious next click. #a07a7a is 4.9:1 on the panel. */
+.deleteRow { margin-top: 8px; padding-top: 8px; border-top: 1px solid #1e3a5f; }
+.quiet {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #a07a7a;
+  font-size: 11px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.quiet:hover { color: #ffb4b4; }
+
+/*
+ * The same corner panel, asking a plain question (OwnNameRoot). Amber above
+ * means caution, which a name question is not, so the accent is the blue of
+ * this panel's own controls.
+ */
+.plain { border-left-color: #2f6fb8; }
+.plain .heading { color: #cfe6ff; }
+
+.nameInput {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 4px 0 0;
+  padding: 6px 8px;
+  border: 1px solid #2a3a56;
+  border-radius: 4px;
+  background: rgba(20, 30, 50, 0.9);
+  color: #e8eefc;
+  font-size: 13px;
+}
+.agentRow { display: flex; gap: 8px; align-items: flex-start; margin-top: 10px; cursor: pointer; }
+
+.nameInput:focus-visible { outline: 2px solid #2f6fb8; outline-offset: 1px; }
+
+@media (max-width: 520px) {
+  .panel { right: 8px; left: 8px; bottom: 8px; max-width: none; }
+}

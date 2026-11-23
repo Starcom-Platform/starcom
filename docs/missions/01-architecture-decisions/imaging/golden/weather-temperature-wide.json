@@ -1,0 +1,358 @@
+{
+ "card": {
+  "alt": "Earth Weather on the globe. The picture: the whole planet centred near 30.0°N, 30.0°W, showing Temperature, Wind, Clouds and Borders. Caveats: The satellite cloud image was 3h 10m older than the moment shown. A weather model's value per 1° cell, not a station reading. Wind streaks are sped up; their direction is the model's. Satellite clouds to 80°; the model's nearer the poles. Unsigned capture: one browser's view at one moment. Made by Starcom, <captured>.",
+  "frame": {
+   "height": 630,
+   "width": 630
+  },
+  "height": 630,
+  "mimeType": "image/webp",
+  "provenance": {
+   "appearance": {
+    "lightMode": "sun",
+    "quality": {
+     "atmosphere": true,
+     "clouds": true,
+     "detail": "full detail",
+     "setting": "low"
+    },
+    "skin": "Day / Night",
+    "territories": "quiet"
+   },
+   "build": "<build>",
+   "camera": {
+    "altitude": 2.5,
+    "lat": 30.000000000000007,
+    "lon": -30.000000000000014
+   },
+   "capturedAt": "<captured>",
+   "card": null,
+   "caveats": [
+    "Clouds from EUMETSAT's Geostationary Ring infrared, with GFS cloud cover at the poles was last updated 3h 10m before the moment shown.",
+    "Temperature is a weather model's value for each 1° cell, about 110 km across, at the hour stated. It is not a station's reading.",
+    "The wind streaks' pace is sped up for viewing; their direction and relative speed are the model's.",
+    "Clouds are as geostationary satellites saw them in infrared, at the hour stated, to 80° of latitude; nearer the poles they are the GFS model's.",
+    "Unsigned client-side capture: one browser's view at one moment, not an attested record."
+   ],
+   "caveatsShort": [
+    "The satellite cloud image was 3h 10m older than the moment shown.",
+    "A weather model's value per 1° cell, not a station reading.",
+    "Wind streaks are sped up; their direction is the model's.",
+    "Satellite clouds to 80°; the model's nearer the poles.",
+    "Unsigned capture: one browser's view at one moment."
+   ],
+   "credits": [
+    "Open-Meteo.com (CC BY 4.0)",
+    "NASA EONET",
+    "NOAA GFS",
+    "Contains modified EUMETSAT data (CC BY 4.0)"
+   ],
+   "feeds": [
+    {
+     "credits": [
+      {
+       "keyText": "Weather data by Open-Meteo.com",
+       "licence": {
+        "name": "CC BY 4.0",
+        "url": "https://creativecommons.org/licenses/by/4.0/"
+       },
+       "text": "Open-Meteo.com",
+       "url": "https://open-meteo.com/"
+      },
+      {
+       "text": "NASA EONET",
+       "url": "https://eonet.gsfc.nasa.gov/"
+      }
+     ],
+     "error": null,
+     "lastUpdated": "<read>",
+     "layer": "EarthWeather",
+     "loading": false,
+     "name": "Open-Meteo weather",
+     "timestamped": true
+    },
+    {
+     "credits": [
+      {
+       "text": "NOAA GFS",
+       "url": "https://registry.opendata.aws/noaa-gfs-bdp-pds/"
+      }
+     ],
+     "error": null,
+     "lastUpdated": "<read>",
+     "layer": "EarthWeather",
+     "loading": false,
+     "name": "NOAA GFS temperature, via NOAA Open Data Dissemination",
+     "note": "Temperature is a weather model's value for each 1° cell, about 110 km across, at the hour stated. It is not a station's reading.",
+     "noteShort": "A weather model's value per 1° cell, not a station reading.",
+     "shortName": "NOAA GFS"
+    },
+    {
+     "credits": [
+      {
+       "text": "NOAA GFS",
+       "url": "https://registry.opendata.aws/noaa-gfs-bdp-pds/"
+      }
+     ],
+     "error": null,
+     "lastUpdated": "<read>",
+     "layer": "EarthWeather",
+     "loading": false,
+     "name": "NOAA GFS wind at 10 m, via NOAA Open Data Dissemination",
+     "note": "The wind streaks' pace is sped up for viewing; their direction and relative speed are the model's.",
+     "noteShort": "Wind streaks are sped up; their direction is the model's.",
+     "shortName": "NOAA GFS wind"
+    },
+    {
+     "credits": [
+      {
+       "keyText": "Contains modified EUMETSAT Geostationary Ring data",
+       "licence": {
+        "name": "CC BY 4.0",
+        "url": "https://creativecommons.org/licenses/by/4.0/"
+       },
+       "text": "Contains modified EUMETSAT data",
+       "url": "https://view.eumetsat.int/"
+      },
+      {
+       "text": "NOAA GFS",
+       "url": "https://registry.opendata.aws/noaa-gfs-bdp-pds/"
+      }
+     ],
+     "error": null,
+     "lastUpdated": "<read>",
+     "layer": "EarthWeather",
+     "loading": false,
+     "name": "Clouds from EUMETSAT's Geostationary Ring infrared, with GFS cloud cover at the poles",
+     "note": "Clouds are as geostationary satellites saw them in infrared, at the hour stated, to 80° of latitude; nearer the poles they are the GFS model's.",
+     "noteShort": "Satellite clouds to 80°; the model's nearer the poles.",
+     "shortName": "The satellite cloud image"
+    }
+   ],
+   "frame": {
+    "height": 630,
+    "width": 630
+   },
+   "imagery": [
+    "Solar System Scope (CC BY 4.0)",
+    "NASA"
+   ],
+   "layersSelectedButEmpty": [],
+   "layersShown": [
+    "Earth Weather"
+   ],
+   "legend": [
+    {
+     "colorMeans": "air temperature 2 m above the ground, NOAA GFS model",
+     "layer": "Temperature",
+     "layerId": "EarthWeather",
+     "shapeMeans": "the coloured ground",
+     "swatches": [
+      {
+       "color": "#4a1f8f",
+       "label": "-40 °C"
+      },
+      {
+       "color": "#2f6bd6",
+       "label": "-20 °C"
+      },
+      {
+       "color": "#dbe7f3",
+       "label": "0 °C"
+      },
+      {
+       "color": "#f1d33d",
+       "label": "20 °C"
+      },
+      {
+       "color": "#8f1441",
+       "label": "40 °C"
+      }
+     ],
+     "when": "for 7 Oct 03:10Z"
+    },
+    {
+     "layer": "Wind",
+     "layerId": "EarthWeather",
+     "shapeMeans": "streaks moving with the wind",
+     "sizeMeans": "a longer, brighter streak is a stronger wind",
+     "swatches": [
+      {
+       "color": "#E9EEF0",
+       "label": "wind 10 m above the ground, NOAA GFS model"
+      }
+     ],
+     "when": "for 7 Oct 03:10Z"
+    },
+    {
+     "layer": "Clouds",
+     "layerId": "EarthWeather",
+     "shapeMeans": "cloud as satellites see it in infrared, raised where its tops are colder",
+     "swatches": [
+      {
+       "color": "#E9EEF0",
+       "label": "cloud seen by EUMETSAT's Geostationary Ring"
+      },
+      {
+       "color": "#A1ADB2",
+       "label": "cloud nearer the poles, the GFS model's"
+      }
+     ],
+     "when": "seen 7 Oct 00:00Z"
+    },
+    {
+     "layer": "Earth Weather",
+     "layerId": "EarthWeather",
+     "shapeMeans": "disc",
+     "swatches": [
+      {
+       "color": "#d6f5ff",
+       "label": "tracked iceberg"
+      }
+     ]
+    },
+    {
+     "colorMeans": "what kind of boundary it is — dashed where it is not settled",
+     "layer": "Borders",
+     "layerId": "NationalTerritories:borders",
+     "swatches": [
+      {
+       "color": "#c9d4e3",
+       "label": "international boundary",
+       "shape": "line"
+      },
+      {
+       "color": "#ff5555",
+       "label": "disputed",
+       "shape": "dashed"
+      },
+      {
+       "color": "#ffcc00",
+       "label": "line of control",
+       "shape": "dashed"
+      },
+      {
+       "color": "#888888",
+       "label": "indefinite",
+       "shape": "line"
+      }
+     ]
+    }
+   ],
+   "link": "<origin>/?v=1&sub=EarthWeather&at=30,-30,2.5&win=1791331200..1791417600",
+   "marks": null,
+   "origin": "starcom-app client capture (unsigned)",
+   "schema": "starcom.globe.capture",
+   "schemaVersion": 38,
+   "shot": {
+    "appearance": {
+     "light": "sun",
+     "nightFill": 0.15,
+     "skin": "auto",
+     "territories": "quiet"
+    },
+    "card": {
+     "preset": "wide"
+    },
+    "emphasis": {
+     "featured": false
+    },
+    "framing": {
+     "fit": "planet"
+    },
+    "layers": {
+     "pins": [],
+     "primary": "EarthWeather"
+    },
+    "output": {
+     "alt": true,
+     "quality": 0.9,
+     "scale": 1,
+     "type": "image/webp"
+    },
+    "subject": {
+     "view": {
+      "altitude": 2.5,
+      "lat": 30,
+      "lng": -30
+     }
+    },
+    "time": {
+     "at": 1791342600
+    },
+    "v": 1
+   },
+   "typeStep": "larger",
+   "window": {
+    "from": 1791331200,
+    "until": 1791417600
+   }
+  },
+  "regions": {
+   "footer": {
+    "height": "<wraps with the run>",
+    "width": 570,
+    "x": 630,
+    "y": 342
+   },
+   "picture": {
+    "height": 630,
+    "width": 630,
+    "x": 0,
+    "y": 0
+   }
+  },
+  "sourceRect": {
+   "height": 630,
+   "width": 630,
+   "x": 0,
+   "y": 0
+  },
+  "warnings": [],
+  "width": 1200
+ },
+ "drawn": {
+  "appearance": {
+   "light": "sun",
+   "nightFill": 0.15,
+   "skin": "auto",
+   "territories": "quiet"
+  },
+  "card": {
+   "preset": "wide"
+  },
+  "emphasis": {
+   "featured": false
+  },
+  "framing": {
+   "fit": "planet"
+  },
+  "layers": {
+   "pins": [],
+   "primary": "EarthWeather"
+  },
+  "output": {
+   "alt": true,
+   "quality": 0.9,
+   "scale": 1,
+   "type": "image/webp"
+  },
+  "subject": {
+   "view": {
+    "altitude": 2.5,
+    "lat": 30,
+    "lng": -30
+   }
+  },
+  "time": {
+   "at": 1791342600
+  },
+  "v": 1
+ },
+ "name": "weather-temperature-wide",
+ "notes": [],
+ "ok": true,
+ "warnings": [
+  "Earth Weather draws nothing in this picture (33 elsewhere on the globe)"
+ ]
+}

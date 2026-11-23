@@ -1,0 +1,39 @@
+/* How a source stands (SourceStatus.tsx). One colour per meaning, from the tokens. */
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: var(--sc-font-text);
+  font-size: 13px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.line,
+.badge {
+  color: var(--sc-text-secondary);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  padding: 1px 6px;
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.glyph {
+  display: inline-block;
+  width: 1.1em;
+  text-align: center;
+}
+
+/* Scoped to this module's classes: a bare [data-state] here would be global. */
+.line[data-state='ready'], .badge[data-state='ready'] { color: var(--sc-ok); }
+.line[data-state='failed'], .badge[data-state='failed'],
+.line[data-state='timeout'], .badge[data-state='timeout'] { color: var(--sc-danger); }
+.line[data-state='paused'], .badge[data-state='paused'] { color: var(--sc-caution); }
+.line[data-state='waiting'], .badge[data-state='waiting'] { color: var(--sc-text-muted); }

@@ -1,0 +1,196 @@
+{
+  "zsp": "2.0",
+  "terra": "terra:tethyana",
+  "grid": {
+    "width": 3600,
+    "height": 1800,
+    "cell": 0.1,
+    "origin": {
+      "lat": 90,
+      "lon": -180
+    },
+    "rows": "row 0 the northernmost",
+    "values": "at cell centres"
+  },
+  "files": {
+    "zones": "tethyana-zones-0.1.u32.bin.gz",
+    "sectors": "tethyana-sectors-0.1.u32.bin.gz"
+  },
+  "dtype": "uint32",
+  "endianness": "little",
+  "compression": "gzip",
+  "areaKm2": 6881605,
+  "zones": [
+    {
+      "id": "zone:anatolian-plateau",
+      "name": "Anatolian Plateau and the Taurus Zone",
+      "system": "plateau",
+      "provinces": [
+        "Tuz/Corum",
+        "Adana/Sivas"
+      ],
+      "km2": 258646
+    },
+    {
+      "id": "zone:pontides",
+      "name": "Pontic Mountains Zone",
+      "system": "orogen",
+      "provinces": [
+        "Thrace/Samsun"
+      ],
+      "km2": 106543
+    },
+    {
+      "id": "zone:western-anatolia",
+      "name": "Western Anatolia and the Menderes Massif Zone",
+      "system": "rift",
+      "provinces": [
+        "Kardiff/Menders Massif"
+      ],
+      "km2": 186963
+    },
+    {
+      "id": "zone:lesser-caucasus",
+      "name": "Lesser Caucasus and the Armenian Highlands Zone",
+      "system": "orogen",
+      "provinces": [
+        "Lesser Caucasus",
+        "Araks"
+      ],
+      "km2": 415552
+    },
+    {
+      "id": "zone:caucasus",
+      "name": "Caucasus Zone",
+      "system": "orogen",
+      "provinces": [
+        "Great Caucasus Foldbelt",
+        "Rioni Basin",
+        "Kura Basin"
+      ],
+      "km2": 156217
+    },
+    {
+      "id": "zone:caspian-sea",
+      "name": "Caspian Sea Zone",
+      "system": "basin",
+      "provinces": [
+        "South Caspian Basin"
+      ],
+      "km2": 549200
+    },
+    {
+      "id": "zone:black-sea-south",
+      "name": "Black Sea, Anatolian Margin Zone",
+      "system": "basin",
+      "provinces": [],
+      "km2": 182818
+    },
+    {
+      "id": "zone:zagros",
+      "name": "Zagros Zone",
+      "system": "orogen",
+      "provinces": [
+        "Zagros Fold Belt",
+        "Zagros Thrust Zone"
+      ],
+      "km2": 572336
+    },
+    {
+      "id": "zone:iranian-plateau",
+      "name": "Iranian Plateau Zone",
+      "system": "plateau",
+      "provinces": [
+        "Central Iranian Basins",
+        "Cen. Iranian Microcontinents",
+        "Lut Block and Depression"
+      ],
+      "km2": 868470
+    },
+    {
+      "id": "zone:alborz-kopet-dag",
+      "name": "Alborz and Kopet Dag Zone",
+      "system": "orogen",
+      "provinces": [
+        "Alborz Fold Belt",
+        "Kopet-Dag Foldbelt"
+      ],
+      "km2": 158656
+    },
+    {
+      "id": "zone:makran-baluchistan",
+      "name": "Makran and Baluchistan Zone",
+      "system": "arc",
+      "provinces": [
+        "Makran",
+        "Baluchistan"
+      ],
+      "km2": 450246
+    },
+    {
+      "id": "zone:hindu-kush",
+      "name": "Hindu Kush and the Afghan Blocks Zone",
+      "system": "orogen",
+      "provinces": [
+        "Central Afghanistan",
+        "Southeast Afghanistan",
+        "Afghan-Tajik Basin"
+      ],
+      "km2": 547408
+    },
+    {
+      "id": "zone:pamirs",
+      "name": "Pamirs Zone",
+      "system": "orogen",
+      "provinces": [
+        "Pamir High",
+        "Alay Basin"
+      ],
+      "km2": 68265
+    },
+    {
+      "id": "zone:tian-shan",
+      "name": "Tian Shan Zone",
+      "system": "orogen",
+      "provinces": [
+        "Tian Shan Foldbelt",
+        "Fergana Basin",
+        "Naryn Basin",
+        "Issyk-Kul Basin",
+        "West Ili Basin",
+        "East Ili Basin",
+        "Bogdashan Fold Belt",
+        "Turpan Basin"
+      ],
+      "km2": 895662
+    },
+    {
+      "id": "zone:karakum-amu-darya",
+      "name": "Karakum and the Amu Darya Zone",
+      "system": "basin",
+      "provinces": [
+        "Amu-Darya Basin",
+        "Karabogaz-Karakum High"
+      ],
+      "km2": 541625
+    },
+    {
+      "id": "zone:aral-syr-darya",
+      "name": "Aral Sea, the Syr Darya and the Ustyurt Zone",
+      "system": "basin",
+      "provinces": [
+        "Syr-Darya Basin",
+        "East Aral Slope",
+        "East Aral Basin",
+        "North Ustyurt Basin",
+        "Mangyshlak-Ustyurt Foldbelt",
+        "Mugodzhary-South Emba",
+        "Chu-Sarysu Basin"
+      ],
+      "km2": 923000
+    }
+  ],
+  "sectors": 56,
+  "bytes": 163541,
+  "points": 6462
+}

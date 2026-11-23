@@ -1,0 +1,11 @@
+{
+  "name": "unknown-subject-publishes",
+  "description": "Deliberately allowed. Blocking it would make the person prompt routine, and a prompt that appears constantly stops being deliberation.",
+  "subjectKind": "unknown",
+  "options": {
+    "isMock": false
+  },
+  "expect": {
+    "allowed": true
+  }
+}

@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Starcom | Public data on a live globe</title>
+    <meta name="description" content="Public data on a live 3D globe, with reports, cases and missions you sign and publish on Nostr. No server, no accounts, no tracking." />
+    <link rel="canonical" href="https://starcom.app/" />
+    <meta name="robots" content="index,follow" />
+    <meta name="theme-color" content="#0a1a29" />
+
+    <!-- Icons and manifest -->
+    <link rel="icon" type="image/x-icon" href="/starcom.ico" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/starcom-192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/starcom-512.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="mask-icon" href="/mask-icon.svg" color="#0a1a29" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:title" content="Starcom | Public data on a live globe" />
+    <meta property="og:description" content="Earthquakes, weather, space weather and conflict on a live 3D globe. Publish what you find as signed, open records on Nostr." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://starcom.app/" />
+    <meta property="og:site_name" content="Starcom" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content="https://starcom.app/social/starcom-app-banner-1200x630.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="An illustration of Earth framed by interface graphics, with the words Starcom App" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Starcom | Public data on a live globe" />
+    <meta name="twitter:description" content="Earthquakes, weather, space weather and conflict on a live 3D globe. Publish what you find as signed, open records on Nostr." />
+    <meta name="twitter:image" content="https://starcom.app/social/starcom-app-banner-1200x630.jpg" />
+    <meta name="twitter:image:alt" content="An illustration of Earth framed by interface graphics, with the words Starcom App" />
+    <meta name="twitter:site" content="@StarcomApp" />
+    
+    <!-- Type is self-hosted from @fontsource and loaded with the app (plan item 8.2). -->
+    
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Starcom App",
+        "url": "https://starcom.app/",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Starcom App",
+          "url": "https://starcom.app/",
+          "logo": "https://starcom.app/starcom.png"
+        },
+        "inLanguage": "en"
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Starcom | Public data on a live globe",
+        "headline": "Starcom | Public data on a live globe",
+        "description": "Public data on a live 3D globe, with reports, cases and missions you sign and publish on Nostr. No server, no accounts, no tracking.",
+        "url": "https://starcom.app/",
+        "inLanguage": "en",
+        "image": "https://starcom.app/social/starcom-app-banner-1200x630.jpg",
+        "datePublished": "2024-12-15",
+        "dateModified": "2026-11-20",
+        "isPartOf": {
+          "@type": "WebSite",
+          "url": "https://starcom.app/",
+          "name": "Starcom App"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Starcom App",
+          "url": "https://starcom.app/"
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Starcom App",
+        "operatingSystem": "Web",
+        "applicationCategory": "ReferenceApplication",
+        "description": "Public data on a live 3D globe, with reports, cases and missions you sign and publish on Nostr. No server, no accounts, no tracking.",
+        "url": "https://starcom.app/",
+        "image": "https://starcom.app/social/starcom-app-banner-1200x630.jpg",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "creator": {
+          "@type": "Organization",
+          "name": "Starcom App",
+          "url": "https://starcom.app/"
+        },
+        "inLanguage": "en"
+      }
+    </script>
+    
+    
+    <script src="/boot/globals.js"></script>
+  </head>
+  <body>
+    <!-- Immediate preloader - shows instantly before React loads -->
+    <div id="initial-preloader" style="
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 10001;
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    ">
+      <div style="text-align: center;">
+        <!-- Text removed to prevent font loading inconsistencies -->
+        <!-- Only show the loading spinner until React takes over -->
+        <div style="
+          width: 60px;
+          height: 60px;
+          border: 4px solid rgba(0, 255, 255, 0.3);
+          border-top: 4px solid #00ffff;
+          border-radius: 50%;
+          margin: 0 auto;
+          animation: spin 1s linear infinite;
+        "></div>
+      </div>
+      <style>
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+      </style>
+    </div>
+    
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <script src="/boot/preloader.js"></script>
+  </body>
+</html>

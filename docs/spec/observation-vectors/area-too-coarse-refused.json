@@ -1,0 +1,29 @@
+{
+  "name": "area-too-coarse-refused",
+  "description": "A 3-character geohash. An area is exactly four characters, as NavCom's builder writes it.",
+  "expect": {
+    "observations": 0
+  },
+  "diagnostic": {
+    "note": "NOT normative — our drop wording, for humans and our own gate.",
+    "reasonContains": "an area is 4 characters"
+  },
+  "event": {
+    "kind": 1911,
+    "created_at": 1756000000,
+    "tags": [
+      [
+        "g",
+        "st-louis"
+      ],
+      [
+        "d",
+        "st-louis/st-patrick-center"
+      ]
+    ],
+    "content": "{\"anchor\":\"st-louis/st-patrick-center\",\"observed_at\":1755996400,\"tags\":[\"locked\"],\"method\":\"saw\",\"callsign\":\"Raven\",\"precision\":\"area\",\"area\":\"dp3\"}",
+    "pubkey": "96bafb179762225794c13c78e823b349e8f21d96f8113020032e5cabdbe59889",
+    "id": "3edfef81ec395bc9ecca2306fb41bc2d77856c7f3901c0112f03980320d9c848",
+    "sig": "6925bc130e4e163de12d4e8454b5017ddb69701e3214770c73f467700c4a27ce2cf86e1186acdb967dfbaa8844f5401bd9f2a0b92e0c54f16103d99c700484e1"
+  }
+}

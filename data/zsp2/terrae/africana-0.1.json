@@ -1,0 +1,264 @@
+{
+  "zsp": "2.0",
+  "terra": "terra:africana",
+  "grid": {
+    "width": 3600,
+    "height": 1800,
+    "cell": 0.1,
+    "origin": {
+      "lat": 90,
+      "lon": -180
+    },
+    "rows": "row 0 the northernmost",
+    "values": "at cell centres"
+  },
+  "files": {
+    "zones": "africana-zones-0.1.u32.bin.gz",
+    "sectors": "africana-sectors-0.1.u32.bin.gz"
+  },
+  "dtype": "uint32",
+  "endianness": "little",
+  "compression": "gzip",
+  "areaKm2": 33218717,
+  "zones": [
+    {
+      "id": "zone:atlas",
+      "name": "Atlas Zone",
+      "system": "orogen",
+      "provinces": [
+        "Atlas Uplift",
+        "Atlas Basin",
+        "Rif Basin",
+        "Tellian Uplift",
+        "Tellian Foredeep",
+        "Hauts Basin",
+        "Guercif Basin",
+        "Rabat Basin",
+        "Essaouni Basin"
+      ],
+      "km2": 912727
+    },
+    {
+      "id": "zone:reguibat-taoudeni",
+      "name": "Reguibat and Taoudeni Zone",
+      "system": "basin",
+      "provinces": [
+        "Taoudeni Basin",
+        "Reguibate Uplift",
+        "Tindouf Basin",
+        "Ougarta Uplift",
+        "Aaiun-Tarfaya Basin",
+        "Reggane Basin"
+      ],
+      "km2": 2895247
+    },
+    {
+      "id": "zone:senegal-basin",
+      "name": "Senegal Basin Zone",
+      "system": "basin",
+      "provinces": [
+        "Senegal",
+        "Baffa"
+      ],
+      "km2": 577278
+    },
+    {
+      "id": "zone:leo-man",
+      "name": "Leo–Man Shield and the Guinea Coast Zone",
+      "system": "shield",
+      "provinces": [
+        "West African Shield",
+        "Volta",
+        "Gulf of Guinea",
+        "West African Coastal"
+      ],
+      "km2": 1693528
+    },
+    {
+      "id": "zone:saharan-basins",
+      "name": "Ghadames, Illizi and Murzuq Zone",
+      "system": "basin",
+      "provinces": [
+        "Grand Erg/Ahnet Basin",
+        "Trias/Ghadames Basin",
+        "Illizi Basin",
+        "Hamra Basin",
+        "Nefusn Uplift",
+        "Murzuk Basin",
+        "Fezzan Uplift"
+      ],
+      "km2": 1735452
+    },
+    {
+      "id": "zone:tuareg-shield",
+      "name": "Tuareg Shield and Iullemmeden Zone",
+      "system": "shield",
+      "provinces": [
+        "Hoggar",
+        "Thiemboka Uplift",
+        "Iullemmeden"
+      ],
+      "km2": 1235906
+    },
+    {
+      "id": "zone:sirte-ionian",
+      "name": "Sirte and the Ionian–Levantine Sea Zone",
+      "system": "basin",
+      "provinces": [
+        "Sirte Basin",
+        "Cyrenacia Basin",
+        "Cyrenacia Uplift",
+        "Pelagian Basin",
+        "Mediterranean Basin"
+      ],
+      "km2": 1533801
+    },
+    {
+      "id": "zone:libyan-desert-nile",
+      "name": "Libyan Desert and the Nile Delta Zone",
+      "system": "basin",
+      "provinces": [
+        "Erdis Kufra",
+        "Nubian Uplift",
+        "Upper Egypt Basin",
+        "North Egypt Basin",
+        "Abu Gharadiq Basin",
+        "Nile Delta Basin",
+        "Syrian Arch"
+      ],
+      "km2": 2044454
+    },
+    {
+      "id": "zone:nubian-shield",
+      "name": "Nubian Shield Zone",
+      "system": "shield",
+      "provinces": [
+        "North Red Sea Shield",
+        "South Red Sea Shield"
+      ],
+      "km2": 587294
+    },
+    {
+      "id": "zone:red-sea-aden-africa",
+      "name": "Red Sea and Gulf of Aden, African Margin Zone",
+      "system": "rift",
+      "provinces": [
+        "Red Sea Basin"
+      ],
+      "km2": 166455
+    },
+    {
+      "id": "zone:central-african-rifts",
+      "name": "Chad, Darfur and the Sudanese Rifts Zone",
+      "system": "rift",
+      "provinces": [
+        "Chad",
+        "Sud",
+        "Khartoum",
+        "Western Nubian Shield"
+      ],
+      "km2": 2999382
+    },
+    {
+      "id": "zone:niger-benue",
+      "name": "Niger Delta and the Benue Trough Zone",
+      "system": "delta",
+      "provinces": [
+        "Niger Delta",
+        "Benue",
+        "Nigerian Massive"
+      ],
+      "km2": 782206
+    },
+    {
+      "id": "zone:congo-basin",
+      "name": "Congo Basin Zone",
+      "system": "basin",
+      "provinces": [
+        "Zaire",
+        "East Zaire Precambrian Belt"
+      ],
+      "km2": 2676810
+    },
+    {
+      "id": "zone:west-congo-angola",
+      "name": "West Congo Belt and the Angolan Margin Zone",
+      "system": "orogen",
+      "provinces": [
+        "West Zaire Precambrian Belt",
+        "West-central Coastal"
+      ],
+      "km2": 2043261
+    },
+    {
+      "id": "zone:horn-of-africa",
+      "name": "Horn of Africa Zone",
+      "system": "basin",
+      "provinces": [
+        "Somali",
+        "Somali Deep Sea"
+      ],
+      "km2": 1376918
+    },
+    {
+      "id": "zone:east-african-rift",
+      "name": "East African Rift Zone",
+      "system": "rift",
+      "provinces": [
+        "East African Rift",
+        "Amhara Plateau"
+      ],
+      "km2": 4126979
+    },
+    {
+      "id": "zone:swahili-coast",
+      "name": "Tanzania and Mozambique Coastal Basins Zone",
+      "system": "basin",
+      "provinces": [
+        "Tanzania Coastal",
+        "Mozambique Coastal"
+      ],
+      "km2": 460772
+    },
+    {
+      "id": "zone:kalahari-damara",
+      "name": "Kalahari and the Damara Belt Zone",
+      "system": "basin",
+      "provinces": [
+        "Kalahari",
+        "Etosha",
+        "Luffillian Arch",
+        "Damer Belt",
+        "Orange River Coastal"
+      ],
+      "km2": 2844532
+    },
+    {
+      "id": "zone:kaapvaal-karoo-cape",
+      "name": "Kaapvaal, Karoo and the Cape Zone",
+      "system": "shield",
+      "provinces": [
+        "E. Kalahari Precambrian Belt",
+        "Karoo",
+        "South African Coastal"
+      ],
+      "km2": 1742026
+    },
+    {
+      "id": "zone:madagascar-seychelles",
+      "name": "Madagascar and the Seychelles Zone",
+      "system": "plateau",
+      "provinces": [
+        "Madagascar",
+        "Morondava",
+        "Tamatave",
+        "Madagascar Offshore",
+        "Seychelles"
+      ],
+      "km2": 783691
+    }
+  ],
+  "sectors": 281,
+  "bytes": 605407,
+  "points": 23181
+}

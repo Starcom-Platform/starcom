@@ -1,0 +1,13 @@
+{
+  "name": "criminal-persona",
+  "description": "A threat actor handle attributed by its own conduct. Core cyber investigation work.",
+  "subjectKind": "person",
+  "options": {
+    "isMock": false,
+    "subjectRole": "criminal-persona",
+    "consentToPublishAboutPerson": true
+  },
+  "expect": {
+    "allowed": true
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "released-then-judged",
+  "description": "Released material still faces every check below it. Release is not permission.",
+  "subjectKind": "person",
+  "options": {
+    "isMock": false,
+    "containment": {
+      "contained": false,
+      "releasedBy": "a",
+      "releasedReason": "r",
+      "releasedAt": "2026-08-26T00:00:00Z"
+    }
+  },
+  "expect": {
+    "allowed": false,
+    "reasonMatches": "private individual"
+  }
+}

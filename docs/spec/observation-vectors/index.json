@@ -1,0 +1,183 @@
+{
+  "format": "NavCom field observations (kind 1911), in the form NavCom's builder writes, as Starcom consumes them",
+  "contract": "navcom-intel/0.1.0",
+  "kind": 1911,
+  "direction": "Navcom produces, Starcom consumes. These describe THIS consumer's decisions, not the wire format, which Navcom owns.",
+  "generatedBy": "scripts/make-observation-vectors.ts",
+  "deterministic": true,
+  "signedBy": "96bafb179762225794c13c78e823b349e8f21d96f8113020032e5cabdbe59889",
+  "normative": "expect.observations only. `diagnostic` is our drop wording — useful to read, not something to implement against.",
+  "count": 34,
+  "vectors": [
+    {
+      "name": "valid-observation",
+      "description": "A well-formed field observation in NavCom's form. Derives one observation, positioned at the CENTRE of the 4-character geohash cell in content.area, with the cell radius as its precision — never at a point.",
+      "file": "valid-observation.json"
+    },
+    {
+      "name": "two-tags-become-two-observations",
+      "description": "One event asserting two things about one anchor. Derives TWO observations, because corroboration works per (subject, attribute) claim and two claims in one record could otherwise never be corroborated or contradicted separately. Non-obvious from the prose; the most likely thing for a producer to get wrong.",
+      "file": "two-tags-become-two-observations.json"
+    },
+    {
+      "name": "method-told-is-accepted",
+      "description": "Hearsay is accepted, not refused. It carries less weight than a first-hand sighting, but the weighing happens downstream from this adapter — dropping it here would discard real intelligence.",
+      "file": "method-told-is-accepted.json"
+    },
+    {
+      "name": "method-inferred-is-accepted",
+      "description": "Inference is the third method, and is accepted like the others.",
+      "file": "method-inferred-is-accepted.json"
+    },
+    {
+      "name": "anonymous-callsign-is-accepted",
+      "description": "An operator may file as `anonymous`; the key still tells two operators apart.",
+      "file": "anonymous-callsign-is-accepted.json"
+    },
+    {
+      "name": "supersedes-own-account-is-accepted",
+      "description": "An author's later account names the event it replaces. Accepted; the earlier event, read in the same batch from the same author, is dropped.",
+      "file": "supersedes-own-account-is-accepted.json"
+    },
+    {
+      "name": "region-slug-is-never-a-position",
+      "description": "The g tag is a region slug, and some slugs happen to parse as a geohash. It is never decoded: the position comes only from content.area, so this derives the same position as valid-observation.",
+      "file": "region-slug-is-never-a-position.json"
+    },
+    {
+      "name": "region-tag-absent-is-accepted",
+      "description": "The g tag only lets an observation be asked for by region; without one it is still an observation.",
+      "file": "region-tag-absent-is-accepted.json"
+    },
+    {
+      "name": "signature-invalid-refused",
+      "description": "Signed honestly, then the content was edited. Checked before anything else is read.",
+      "file": "signature-invalid-refused.json"
+    },
+    {
+      "name": "wrong-kind-refused",
+      "description": "Not kind 1911. A foreign event at a neighbouring integer is filtered, not misread.",
+      "file": "wrong-kind-refused.json"
+    },
+    {
+      "name": "refinement-event-refused",
+      "description": "Carries a refines tag: the exact half of a pair, published 48 hours later. Until a pair is read as one observation, ingesting both would double-count one sighting.",
+      "file": "refinement-event-refused.json"
+    },
+    {
+      "name": "precision-exact-refused",
+      "description": "The refined release in its own right: precision exact, with coordinates instead of an area. Set aside for the same reason.",
+      "file": "precision-exact-refused.json"
+    },
+    {
+      "name": "content-not-json-refused",
+      "description": "Content is not a JSON object. Parsed, never repaired.",
+      "file": "content-not-json-refused.json"
+    },
+    {
+      "name": "content-unbounded-field-refused",
+      "description": "Carries a free-text `notes` field. THE vector for this format: an unbounded field is the thing it exists to refuse, and accepting one here would reopen on our side the liability surface NavCom closed on theirs.",
+      "file": "content-unbounded-field-refused.json"
+    },
+    {
+      "name": "anchor-absent-refused",
+      "description": "No anchor in the content. An observation with no subject cannot be corroborated by anything.",
+      "file": "anchor-absent-refused.json"
+    },
+    {
+      "name": "anchor-tag-absent-refused",
+      "description": "No d tag. The tags say what the content says, and the d tag is the anchor.",
+      "file": "anchor-tag-absent-refused.json"
+    },
+    {
+      "name": "anchor-tag-disagrees-refused",
+      "description": "A d tag naming another place than the content does. Which subject the claim is about must not be a guess.",
+      "file": "anchor-tag-disagrees-refused.json"
+    },
+    {
+      "name": "anchor-tag-repeated-refused",
+      "description": "Two d tags. Ambiguous again, and refused rather than resolved by picking one.",
+      "file": "anchor-tag-repeated-refused.json"
+    },
+    {
+      "name": "observed-at-absent-refused",
+      "description": "No observed_at. Falling back to created_at would make a two-day-old sighting look fresh and a backfill look like a flood of new intelligence.",
+      "file": "observed-at-absent-refused.json"
+    },
+    {
+      "name": "observed-at-as-a-date-refused",
+      "description": "observed_at written as an ISO date rather than unix seconds, as an early draft had it. Refused, not converted.",
+      "file": "observed-at-as-a-date-refused.json"
+    },
+    {
+      "name": "method-absent-refused",
+      "description": "No method. How the observer came to know is not optional; weight derives from it.",
+      "file": "method-absent-refused.json"
+    },
+    {
+      "name": "method-unknown-refused",
+      "description": "A method outside saw, told and inferred has no weight this consumer can derive.",
+      "file": "method-unknown-refused.json"
+    },
+    {
+      "name": "callsign-absent-refused",
+      "description": "No callsign. `anonymous` is the word for an operator who gives none.",
+      "file": "callsign-absent-refused.json"
+    },
+    {
+      "name": "callsign-too-long-refused",
+      "description": "A callsign of 65 characters: bounded, so it cannot become a field for prose.",
+      "file": "callsign-too-long-refused.json"
+    },
+    {
+      "name": "supersedes-malformed-refused",
+      "description": "supersedes that is not an event id.",
+      "file": "supersedes-malformed-refused.json"
+    },
+    {
+      "name": "precision-absent-refused",
+      "description": "No precision. It says which half of the two-stage release this is, and is required.",
+      "file": "precision-absent-refused.json"
+    },
+    {
+      "name": "precision-unknown-refused",
+      "description": "A precision outside the published table.",
+      "file": "precision-unknown-refused.json"
+    },
+    {
+      "name": "area-absent-refused",
+      "description": "An area observation with no area. An observation with no place is not one.",
+      "file": "area-absent-refused.json"
+    },
+    {
+      "name": "area-malformed-refused",
+      "description": "Not a geohash: a, i, l and o are not in the base32 alphabet.",
+      "file": "area-malformed-refused.json"
+    },
+    {
+      "name": "area-too-fine-refused",
+      "description": "A 6-character geohash. Refused even though it is MORE precise: an over-precise area has escaped the coarsening that protects the operator who filed it.",
+      "file": "area-too-fine-refused.json"
+    },
+    {
+      "name": "area-too-coarse-refused",
+      "description": "A 3-character geohash. An area is exactly four characters, as NavCom's builder writes it.",
+      "file": "area-too-coarse-refused.json"
+    },
+    {
+      "name": "tags-absent-refused",
+      "description": "No tags. An observation asserting nothing is not one.",
+      "file": "tags-absent-refused.json"
+    },
+    {
+      "name": "tags-not-members-refused",
+      "description": "A tag that is not a bare lower-case member: NavCom writes `locked`, never `facility.Locked`.",
+      "file": "tags-not-members-refused.json"
+    },
+    {
+      "name": "tags-too-many-refused",
+      "description": "Nine tags. NavCom's limit is eight.",
+      "file": "tags-too-many-refused.json"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "name": "manifest-position-in-title",
+  "description": "The title is masked too — it reaches the wire in both name and reports[].title.",
+  "mission": {
+    "id": "mission-vector-1",
+    "missionNumber": "MSN-2026-0001",
+    "title": "Strike at 52.52, 13.405",
+    "briefing": "Proceed as briefed.",
+    "status": "READY_FOR_PACKAGE",
+    "visibility": "public",
+    "objectives": [],
+    "assignedTo": [],
+    "startDate": "2026-01-15T00:00:00.000Z",
+    "relatedReports": [],
+    "relatedCases": [],
+    "collaborators": [],
+    "activityLog": [],
+    "createdBy": "creator-pubkey",
+    "createdAt": "2026-01-15T00:00:00.000Z",
+    "updatedAt": "2026-01-15T00:00:00.000Z"
+  },
+  "author": "Kestrel",
+  "expect": {
+    "manifest": {
+      "id": "pkg-vector",
+      "name": "Strike at [redacted:position]",
+      "version": "0.1.0",
+      "description": "Proceed as briefed.",
+      "visibility": "public",
+      "createdAt": "2026-01-15T00:00:00.000Z",
+      "author": "Kestrel",
+      "license": "PROPRIETARY",
+      "reports": [
+        {
+          "id": "mission-vector-1",
+          "title": "Strike at [redacted:position]",
+          "checksum": "7fff633"
+        }
+      ],
+      "intel": [],
+      "assets": [],
+      "profile": {
+        "missionState": "open",
+        "claims": "many"
+      },
+      "metadata": {
+        "missionNumber": "MSN-2026-0001",
+        "status": "READY_FOR_PACKAGE",
+        "relatedReportCount": 0,
+        "relatedCaseCount": 0,
+        "objectiveCount": 0
+      }
+    },
+    "canonical": "{\"assets\":[],\"author\":\"Kestrel\",\"createdAt\":\"2026-01-15T00:00:00.000Z\",\"description\":\"Proceed as briefed.\",\"id\":\"pkg-vector\",\"intel\":[],\"license\":\"PROPRIETARY\",\"metadata\":{\"missionNumber\":\"MSN-2026-0001\",\"objectiveCount\":0,\"relatedCaseCount\":0,\"relatedReportCount\":0,\"status\":\"READY_FOR_PACKAGE\"},\"name\":\"Strike at [redacted:position]\",\"profile\":{\"claims\":\"many\",\"missionState\":\"open\"},\"reports\":[{\"checksum\":\"7fff633\",\"id\":\"mission-vector-1\",\"title\":\"Strike at [redacted:position]\"}],\"version\":\"0.1.0\",\"visibility\":\"public\"}",
+    "digest": "910ef4ae85457a6279b0a59d775525becd8e2ba68ca3dee27a31a25e64876064",
+    "tags": [
+      [
+        "mission_state",
+        "open"
+      ],
+      [
+        "claims",
+        "many"
+      ]
+    ]
+  }
+}

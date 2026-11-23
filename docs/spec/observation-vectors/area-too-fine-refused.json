@@ -1,0 +1,29 @@
+{
+  "name": "area-too-fine-refused",
+  "description": "A 6-character geohash. Refused even though it is MORE precise: an over-precise area has escaped the coarsening that protects the operator who filed it.",
+  "expect": {
+    "observations": 0
+  },
+  "diagnostic": {
+    "note": "NOT normative — our drop wording, for humans and our own gate.",
+    "reasonContains": "an area is 4 characters"
+  },
+  "event": {
+    "kind": 1911,
+    "created_at": 1756000000,
+    "tags": [
+      [
+        "g",
+        "st-louis"
+      ],
+      [
+        "d",
+        "st-louis/st-patrick-center"
+      ]
+    ],
+    "content": "{\"anchor\":\"st-louis/st-patrick-center\",\"observed_at\":1755996400,\"tags\":[\"locked\"],\"method\":\"saw\",\"callsign\":\"Raven\",\"precision\":\"area\",\"area\":\"dp3wjz\"}",
+    "pubkey": "96bafb179762225794c13c78e823b349e8f21d96f8113020032e5cabdbe59889",
+    "id": "57dc3079936936507a23b0c68fd47322bdf01f45abfc33987dd0aef1081f6837",
+    "sig": "7b23d13fec1e983837c3d3bb9f84b1f6fbea400b1f9a3292028b01277c601a1d751a00164eb2fd00bab00d4660c8576331b9d7db331f44f673ecb13f05a9c510"
+  }
+}

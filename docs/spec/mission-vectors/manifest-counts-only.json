@@ -1,0 +1,72 @@
+{
+  "name": "manifest-counts-only",
+  "description": "Linked reports and cases cross as counts, never as ids or content.",
+  "mission": {
+    "id": "mission-vector-1",
+    "missionNumber": "MSN-2026-0001",
+    "title": "Assembled",
+    "briefing": "Built from linked evidence.",
+    "status": "READY_FOR_PACKAGE",
+    "visibility": "public",
+    "objectives": [],
+    "assignedTo": [],
+    "startDate": "2026-01-15T00:00:00.000Z",
+    "relatedReports": [
+      "report-a",
+      "report-b"
+    ],
+    "relatedCases": [
+      "case-a"
+    ],
+    "collaborators": [],
+    "activityLog": [],
+    "createdBy": "creator-pubkey",
+    "createdAt": "2026-01-15T00:00:00.000Z",
+    "updatedAt": "2026-01-15T00:00:00.000Z"
+  },
+  "author": "Kestrel",
+  "expect": {
+    "manifest": {
+      "id": "pkg-vector",
+      "name": "Assembled",
+      "version": "0.1.0",
+      "description": "Built from linked evidence.",
+      "visibility": "public",
+      "createdAt": "2026-01-15T00:00:00.000Z",
+      "author": "Kestrel",
+      "license": "PROPRIETARY",
+      "reports": [
+        {
+          "id": "mission-vector-1",
+          "title": "Assembled",
+          "checksum": "28f1f930"
+        }
+      ],
+      "intel": [],
+      "assets": [],
+      "profile": {
+        "missionState": "open",
+        "claims": "many"
+      },
+      "metadata": {
+        "missionNumber": "MSN-2026-0001",
+        "status": "READY_FOR_PACKAGE",
+        "relatedReportCount": 2,
+        "relatedCaseCount": 1,
+        "objectiveCount": 0
+      }
+    },
+    "canonical": "{\"assets\":[],\"author\":\"Kestrel\",\"createdAt\":\"2026-01-15T00:00:00.000Z\",\"description\":\"Built from linked evidence.\",\"id\":\"pkg-vector\",\"intel\":[],\"license\":\"PROPRIETARY\",\"metadata\":{\"missionNumber\":\"MSN-2026-0001\",\"objectiveCount\":0,\"relatedCaseCount\":1,\"relatedReportCount\":2,\"status\":\"READY_FOR_PACKAGE\"},\"name\":\"Assembled\",\"profile\":{\"claims\":\"many\",\"missionState\":\"open\"},\"reports\":[{\"checksum\":\"28f1f930\",\"id\":\"mission-vector-1\",\"title\":\"Assembled\"}],\"version\":\"0.1.0\",\"visibility\":\"public\"}",
+    "digest": "8c34772e2f2b9acc2d5cbfb8d3335063ac2dab8b4e1363b4e9d8b43245a71c8a",
+    "tags": [
+      [
+        "mission_state",
+        "open"
+      ],
+      [
+        "claims",
+        "many"
+      ]
+    ]
+  }
+}

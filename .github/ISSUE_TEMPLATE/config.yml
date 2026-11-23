@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Report a vulnerability privately
+    url: https://starcom.app/.well-known/security.txt
+    about: Never in a public issue. SECURITY.md says how.
+  - name: Ask on Discord
+    url: https://discord.gg/Mea5v8pQmt
+    about: Questions and discussion

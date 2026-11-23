@@ -1,0 +1,60 @@
+/*
+ * The chrome's own dimensions, and a floor under the work area.
+ *
+ * ─── WHY THE CHROME SIZES LIVE HERE ────────────────────────────────────────
+ *
+ * The TopBar is 48px tall, and until now that number lived only inside
+ * CyberCommandTopBar.module.css. Everything that needed to clear it guessed:
+ * `.center` used `top: 5%` with the comment "Below TopBar", which clears 48px
+ * at 960px viewport height and does NOT below it — at 800px tall the work area
+ * starts at 40px while the bar ends at 48px, so the top 8px of everything
+ * centred sits underneath.
+ *
+ * The same thing happened horizontally. Three files carried three different
+ * widths for one sidebar: 110px in BottomBar (comment: "Respect LeftSideBar
+ * width (110px)"), 120px in DeepSettingsPanel, against its actual 128px. All
+ * three were correct when written.
+ *
+ * So the chrome declares its size here and consumes it there, rather than the
+ * reverse.
+ *
+ * ─── AND WHY --work-* IS ONLY A FALLBACK ───────────────────────────────────
+ *
+ * The real --work-* values are published at runtime by useWorkArea, which
+ * MEASURES the element the layout CSS already positioned. That is the only way
+ * to get breakpoints, embedded mode and the sub-rail toggle right without
+ * re-deriving them, and re-deriving them is how the numbers above drifted.
+ *
+ * The values below are what a consumer sees before the first measurement lands
+ * — one frame, plus any test that renders a component without the shell. They
+ * are deliberately the un-toggled desktop case: wrong by a rail's width in some
+ * states, but never zero, because zero would put a component under the chrome
+ * rather than merely near it.
+ */
+:root {
+  /* The Globe's own top bar, gone since K4: the one ticker under the header carries
+     its readings. Kept at 0 so the layout's rails, .center and .workArea start at the
+     HUD's top, and so a bar that comes back declares its height here. */
+  --chrome-top: 0px;
+
+  /* The time scrubber along the bottom of the globe's HUD, declared here as the
+     top bar is: the scrubber takes this height, and .workArea stops above it.
+     Measured at 52px at 1400, 1100 and 760px wide. Before it was declared, the
+     work area ran down behind it, and bottom docks sat 32px over it. */
+  --chrome-bottom: 52px;
+
+  /* Rail widths live in CyberCommandHUDLayout.module.css, which varies them by
+     breakpoint. They are not lifted here: nothing outside the layout needs
+     them, and the measured --work-* already carries their effect. */
+
+  /* Fallbacks. Overwritten on :root by useWorkArea on first measurement. The top is
+     the header and the ticker above the work area, 100px at desktop (layout audit,
+     2026-10-05): with the Globe's own top bar gone it is no longer --chrome-top, and
+     a fallback of zero would put a docked panel on the header for a frame. */
+  --work-top: 100px;
+  --work-right: 32px;
+  --work-bottom: 0px;
+  --work-left: 68px;
+  --work-width: calc(100vw - var(--work-left) - var(--work-right));
+  --work-height: calc(100vh - var(--work-top) - var(--work-bottom));
+}

@@ -1,0 +1,29 @@
+{
+  "name": "observed-at-as-a-date-refused",
+  "description": "observed_at written as an ISO date rather than unix seconds, as an early draft had it. Refused, not converted.",
+  "expect": {
+    "observations": 0
+  },
+  "diagnostic": {
+    "note": "NOT normative — our drop wording, for humans and our own gate.",
+    "reasonContains": "not unix seconds"
+  },
+  "event": {
+    "kind": 1911,
+    "created_at": 1756000000,
+    "tags": [
+      [
+        "g",
+        "st-louis"
+      ],
+      [
+        "d",
+        "st-louis/st-patrick-center"
+      ]
+    ],
+    "content": "{\"anchor\":\"st-louis/st-patrick-center\",\"observed_at\":\"2026-08-23T23:06:40.000Z\",\"tags\":[\"locked\"],\"method\":\"saw\",\"callsign\":\"Raven\",\"precision\":\"area\",\"area\":\"dp3w\"}",
+    "pubkey": "96bafb179762225794c13c78e823b349e8f21d96f8113020032e5cabdbe59889",
+    "id": "529a2ece7ebde94c1a17678804359b29fbcc7ccf1bd313450507430a2ecc7e77",
+    "sig": "adaaca5ecfc25e1f132cec31ae8ffc8e48e2023928e7eea94037d5c63aa467c671073d1004e885f84c560b938da95b054ae256db15e9cdf4ee1fc65b840f04a6"
+  }
+}

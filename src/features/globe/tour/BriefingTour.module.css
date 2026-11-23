@@ -1,0 +1,146 @@
+/* The briefing tour: its button beside the camera's, its picker, and its caption (block G, item 6.1). */
+
+.control {
+  position: relative;
+  display: flex;
+}
+
+.button {
+  height: 28px;
+  padding: 0 var(--space-2);
+  background: var(--panel-bg);
+  color: var(--starcom-accent);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-xs);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.button:focus-visible,
+.pick:focus-visible,
+.action:focus-visible {
+  outline: 2px solid var(--starcom-accent);
+  outline-offset: 1px;
+}
+
+/* Opens upward: the camera buttons sit in the bottom-left corner. */
+.picker {
+  position: absolute;
+  bottom: calc(100% + 4px);
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 200px;
+  padding: var(--space-1);
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius-sm);
+  z-index: 2;
+}
+
+.pick {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-1) var(--space-2);
+  background: none;
+  color: var(--text-primary);
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
+  text-align: left;
+  cursor: pointer;
+}
+
+.pick:hover {
+  background: var(--surface-interactive);
+  border-color: var(--panel-border);
+}
+
+/* Where subtitles go: the middle of the globe's lower edge, above the timeline. */
+.caption {
+  position: absolute;
+  left: 50%;
+  bottom: 88px;
+  transform: translateX(-50%);
+  width: min(560px, calc(100% - 32px));
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-3) var(--space-4);
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border-active);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  z-index: 1001;
+  pointer-events: auto;
+}
+
+.meta {
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0;
+  font-size: var(--text-base);
+  font-weight: var(--font-weight-semibold);
+  /* Mecha Jono's titles run long: two lines, so the caption leaves the stop in view. */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+}
+
+.why {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--starcom-accent);
+}
+
+.lines {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-1);
+}
+
+.action {
+  padding: 2px var(--space-2);
+  background: none;
+  color: var(--starcom-accent);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-xs);
+  cursor: pointer;
+}
+
+/* Loop, while on (C34). */
+.action[aria-pressed='true'] {
+  border-color: var(--starcom-accent);
+  background: var(--sc-cyan-900);
+}
+
+.hint {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}

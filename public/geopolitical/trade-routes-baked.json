@@ -1,0 +1,96 @@
+{
+  "source": "UN Comtrade (comtradeapi.un.org, free preview tier)",
+  "sourceUrl": "https://comtradeapi.un.org/public/v1/preview/C/A/HS",
+  "vintage": "Real reported bilateral export values (FOB, USD) for calendar year 2023, the most recent complete year with broad reporter coverage when this was extracted",
+  "note": "A curated set of major real bilateral export flows for HS 27 (mineral fuels/oils), HS 26 (ores/slag/ash), and HS 74 (copper) \u2014 the commodity groups most relevant to ResourceZones oil/gas/minerals categories. Baked in rather than queried live: the free preview API is aggressively rate-limited (429s after a handful of requests even with delays), and real bilateral trade flows do not change day-to-day. Several well-known major flows (e.g. Saudi Arabia/Russia/Iraq crude exports to China) returned no data from this tier even after retries \u2014 those governments\u2019 detailed HS-level exports are not consistently present in UN Comtrade\u2019s public reporting, a real limitation of the source, not an omission on our part. Refresh by re-querying comtradeapi.un.org for a more recent year if this becomes stale.",
+  "routes": [
+    {
+      "from": "ARE",
+      "to": "IND",
+      "hsCode": "27",
+      "commodity": "Mineral fuels, oils",
+      "value": 576582545,
+      "id": "ARE-IND-27"
+    },
+    {
+      "from": "QAT",
+      "to": "JPN",
+      "hsCode": "27",
+      "commodity": "Mineral fuels, oils",
+      "value": 7483538478,
+      "id": "QAT-JPN-27"
+    },
+    {
+      "from": "BRA",
+      "to": "CHN",
+      "hsCode": "26",
+      "commodity": "Ores, slag and ash",
+      "value": 20716438653,
+      "id": "BRA-CHN-26"
+    },
+    {
+      "from": "PER",
+      "to": "CHN",
+      "hsCode": "74",
+      "commodity": "Copper and articles thereof",
+      "value": 1178978185,
+      "id": "PER-CHN-74"
+    },
+    {
+      "from": "AUS",
+      "to": "JPN",
+      "hsCode": "27",
+      "commodity": "Mineral fuels, oils",
+      "value": 24714005150,
+      "id": "AUS-JPN-27"
+    },
+    {
+      "from": "CAN",
+      "to": "USA",
+      "hsCode": "27",
+      "commodity": "Mineral fuels, oils",
+      "value": 13854866134,
+      "id": "CAN-USA-27"
+    },
+    {
+      "from": "NOR",
+      "to": "DEU",
+      "hsCode": "27",
+      "commodity": "Mineral fuels, oils",
+      "value": 29298901827,
+      "id": "NOR-DEU-27"
+    },
+    {
+      "from": "AUS",
+      "to": "CHN",
+      "hsCode": "26",
+      "commodity": "Ores, slag and ash",
+      "value": 79375640727,
+      "id": "AUS-CHN-26"
+    },
+    {
+      "from": "CHL",
+      "to": "CHN",
+      "hsCode": "74",
+      "commodity": "Copper and articles thereof",
+      "value": 7309242876,
+      "id": "CHL-CHN-74"
+    },
+    {
+      "from": "COD",
+      "to": "CHN",
+      "hsCode": "74",
+      "commodity": "Copper and articles thereof",
+      "value": 11126347360,
+      "id": "COD-CHN-74"
+    },
+    {
+      "from": "AUS",
+      "to": "KOR",
+      "hsCode": "27",
+      "commodity": "Mineral fuels, oils",
+      "value": 8458020510,
+      "id": "AUS-KOR-27"
+    }
+  ]
+}

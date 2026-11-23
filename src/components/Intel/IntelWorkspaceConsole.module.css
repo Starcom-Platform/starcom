@@ -1,0 +1,84 @@
+/*
+ * The Intel Dashboard's workspace and its report form, on the tokens (block D,
+ * step 7). Every colour is a role: surfaces, text, the input border, cyan for
+ * what is interactive or selected, amber for what is missing. Create was
+ * green, which means "done"; it is the interactive cyan now.
+ */
+.consoleRoot { display: flex; height: 100%; font-family: var(--sc-font-text); color: var(--sc-text-body); }
+.sidebar { width: 240px; background: var(--sc-surface-frame); border-right: 1px solid var(--sc-divider); padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+.sidebar h2 { margin: 0 0 8px; font-family: var(--sc-font-display); font-size: 16px; letter-spacing: 0.5px; color: var(--sc-text-heading); }
+.tab, .activeTab, .actionButton { background: var(--sc-surface-panel); border: 1px solid var(--sc-divider); color: var(--sc-text-body); padding: 8px 10px; text-align: left; cursor: pointer; border-radius: 4px; font-size: 13px; font-family: inherit; }
+.activeTab { background: var(--sc-surface-input); color: var(--sc-text-heading); border-color: var(--sc-accent); }
+.tab:hover, .actionButton:hover { border-color: var(--sc-input-border); }
+.actionButton { text-align: center; font-weight: 600; }
+.main { flex: 1; padding: 16px 20px; overflow: auto; display: flex; flex-direction: column; gap: 16px; position: relative; }
+.listSection h3 { margin: 0 0 12px; font-family: var(--sc-font-display); font-size: 15px; font-weight: 600; color: var(--sc-text-heading); }
+.list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.listItem { padding: 10px 12px; border: 1px solid var(--sc-divider); background: var(--sc-surface-panel); border-radius: 6px; cursor: pointer; }
+.listItem:hover { border-color: var(--sc-input-border); }
+/* A report opened from elsewhere (the globe, IntelWeb), until something else is chosen. */
+.highlighted { outline: 2px solid var(--sc-focus); outline-offset: 1px; }
+.itemTitle { font-size: 14px; font-weight: 600; color: var(--sc-text-heading); margin-bottom: 4px; }
+/* Severity and distribution, the same badge and chip every screen draws (BD3). */
+.itemMarks { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 4px; }
+.itemMeta { font-size: 11px; color: var(--sc-text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+.small { color: var(--sc-text-secondary); font-weight: 400; }
+.loading { padding: 40px; text-align: center; color: var(--sc-text-secondary); }
+.empty { font-size: 12px; color: var(--sc-text-secondary); padding: 8px 0; }
+.createPanel { border: 1px solid var(--sc-divider); background: var(--sc-surface-panel); padding: 14px 16px; border-radius: 8px; display: flex; flex-direction: column; gap: 12px; }
+.createPanel h3 { margin: 0; font-family: var(--sc-font-display); font-size: 15px; color: var(--sc-text-heading); }
+.formRow { display: flex; flex-wrap: wrap; gap: 8px; align-items: flex-end; }
+.formRow input, .formRow select { flex: 1; background: var(--sc-surface-input); border: 1px solid var(--sc-input-border); color: var(--sc-text-body); padding: 6px 8px; border-radius: 4px; font-size: 12px; }
+/* Scoped: bare, it restyled every text box in the app (plan item 5.1). Through
+   :where(), so MUI's own text fields inside the console still win over it. */
+:where(.consoleRoot) textarea { width: 100%; background: var(--sc-surface-input); border: 1px solid var(--sc-input-border); color: var(--sc-text-body); padding: 8px; border-radius: 4px; resize: vertical; font-size: 12px; font-family: inherit; }
+.createPanel input[type="number"] { max-width: 90px; }
+.createPanel input { background: var(--sc-surface-input); border: 1px solid var(--sc-input-border); color: var(--sc-text-body); padding: 6px 8px; border-radius: 4px; font-size: 12px; font-family: inherit; }
+/* These took their look from the report editor's stylesheet, whose bare
+   input and select rules reached the whole app; scoped now (plan item 5.1). */
+.createPanel select { background: var(--sc-surface-input); border: 1px solid var(--sc-input-border); color: var(--sc-text-body); padding: 6px 8px; border-radius: 4px; font-size: 12px; font-family: inherit; }
+.searchInput { background: var(--sc-surface-input); border: 1px solid var(--sc-input-border); color: var(--sc-text-body); border-radius: 4px; padding: 6px 8px; font-size: 12px; font-family: inherit; }
+.createPanel input:focus, .createPanel select:focus, .searchInput:focus, :where(.consoleRoot) textarea:focus { outline: none; border-color: var(--sc-focus); }
+.formActions { display: flex; justify-content: flex-end; align-items: center; gap: 10px; margin-top: 4px; }
+/* A labelled field (plan item 1.9): the label stays above the input while typing. */
+.field { display: flex; flex-direction: column; gap: 4px; flex: 1; min-width: 0; }
+.field input, .field select, .field textarea { width: 100%; box-sizing: border-box; }
+.fieldLabel { font-size: 12px; color: var(--sc-text-secondary); }
+.fieldHint { color: var(--sc-text-muted); font-weight: 400; }
+.required { color: var(--sc-caution); }
+.formMissing { font-size: 12px; color: var(--sc-caution); margin-right: auto; }
+/* What a report rests on (D-MX, MX19): said above its fields, and removable. */
+.restsOn { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 12px; color: var(--sc-text-secondary); border-left: 2px solid var(--sc-accent); padding-left: 8px; }
+.restsOn span { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.saveBtn, .cancelBtn { padding: 6px 14px; font-size: 12px; border-radius: 4px; cursor: pointer; font-weight: 600; font-family: inherit; }
+.saveBtn { background: var(--sc-button-fill); color: var(--sc-button-label); border: 1px solid var(--sc-button-fill); }
+.saveBtn:disabled { opacity: 0.5; cursor: not-allowed; }
+.cancelBtn { background: var(--sc-surface-input); color: var(--sc-text-body); border: 1px solid var(--sc-divider); }
+.cancelBtn:hover { border-color: var(--sc-input-border); }
+.saveBtn:focus-visible, .cancelBtn:focus-visible, .tab:focus-visible, .activeTab:focus-visible, .actionButton:focus-visible { outline: 2px solid var(--sc-focus); outline-offset: 1px; }
+.withDetail { display: flex; flex: 1; overflow: hidden; }
+.listColumn { flex: 1; overflow: auto; padding-right: 12px; }
+.importResults h4 { margin: 0 0 8px; color: var(--sc-text-heading); }
+.errorBox { color: var(--sc-danger); font-size: 12px; }
+.warningBox { color: var(--sc-caution); font-size: 12px; }
+
+/*
+ * Phones (600 px and less, as the phone bar): the sidebar is a row above the
+ * work, and an open report or the editor takes the screen in place of the
+ * list; the form, while open, takes it back. Three columns in 390 px ran the
+ * report's page off the edge.
+ */
+@media (max-width: 600px) {
+  .consoleRoot { flex-direction: column; }
+  .sidebar { width: auto; flex-direction: row; flex-wrap: wrap; align-items: center; gap: 8px; padding: 10px 12px; border-right: none; border-bottom: 1px solid var(--sc-divider); }
+  .sidebar h2 { flex: 1 1 100%; margin: 0; font-size: 13px; }
+  .tab, .activeTab, .actionButton { flex: 1 1 auto; text-align: center; }
+  .searchInput { flex: 1 1 100%; }
+  .lensFilter { flex: 1 1 100%; }
+  .main { padding: 12px; }
+  .listColumn { padding-right: 0; }
+  .withDetail { flex-direction: column; }
+  .withDetail[data-detail-open='true'] > .listColumn { display: none; }
+  .withDetail[data-detail-open='false'] > :not(.listColumn) { display: none; }
+  .field { flex: 1 1 140px; }
+}

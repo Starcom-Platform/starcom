@@ -1,0 +1,129 @@
+/* Starcom in Uplink's side panel (D-EX, E2, W6): narrow, quiet, the app's own tokens. */
+.panel {
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 12px 14px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: var(--sc-surface-frame);
+  color: var(--sc-text-body);
+  font-family: var(--sc-font-text);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--sc-divider);
+}
+
+.wordmark {
+  font-family: var(--sc-font-wordmark);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sc-accent);
+}
+
+.status {
+  margin-left: auto;
+  font-size: 12px;
+  color: var(--sc-text-muted);
+}
+
+.status[data-status='connected'] {
+  color: var(--sc-ok);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.label,
+.heading {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sc-text-secondary);
+}
+
+.select {
+  width: 100%;
+  padding: 6px 8px;
+  font: inherit;
+  color: var(--sc-text-heading);
+  background: var(--sc-surface-frame);
+  border: 1px solid var(--sc-divider);
+  border-radius: 4px;
+}
+
+.note {
+  margin: 0;
+  font-size: 12px;
+  color: var(--sc-text-muted);
+}
+
+.list {
+  margin: 0;
+  padding: 0 0 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.capture {
+  list-style: none;
+  margin-left: -16px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--sc-divider);
+}
+
+.title {
+  color: var(--sc-text-heading);
+  overflow-wrap: anywhere;
+}
+
+.meta {
+  font-size: 12px;
+  color: var(--sc-text-muted);
+}
+
+.mission {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.missionTitle {
+  color: var(--sc-accent);
+  font-weight: 600;
+}
+
+.limits {
+  display: block;
+  font-size: 12px;
+  color: var(--sc-caution);
+}
+
+.foot {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 10px;
+  border-top: 1px solid var(--sc-divider);
+}
+
+.foot a {
+  color: var(--sc-accent);
+}

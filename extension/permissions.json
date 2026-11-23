@@ -1,0 +1,31 @@
+{
+  "about": "What Starcom Uplink asks the browser for, and why (decision D-EX, E0). The manifest is made from this file; the privacy page (public/uplink/privacy.html) and the store listing (extension/store/listing.md) give each reason word for word; scripts/guard-uplink-permissions.mjs holds all of them, and any built manifest, to it.",
+  "single_purpose": "Starcom Uplink connects Starcom (starcom.app) to your browser, so your Starcom investigations can reach the sites you allow, one site at a time, each asked for with its reason, and everything it does logged where you can read it.",
+  "permissions": {
+    "storage": "Keeps Uplink's activity log and your settings in this browser. Nothing stored is sent anywhere; Starcom's page, open in this browser, reads the log only to show it to you.",
+    "scripting": "Adds Uplink's bridge to Starcom tabs already open when Uplink was installed or updated, and, when you capture a page as evidence, reads that page's HTML and text at your click. It runs nowhere else.",
+    "contextMenus": "Adds \"Send to Starcom\" to the menu you get by right-clicking a selection, a link, an image or a web page. Nothing is captured until you choose it.",
+    "activeTab": "When you send a page to Starcom or capture it as evidence, lets Uplink read that one tab, at that moment only: its address and title, and for evidence a picture of it, its HTML and its text. It reaches no other tab, and nothing after.",
+    "sidePanel": "Shows Starcom beside the page you are reading, in the browser's side panel, when you open it. It is Starcom's own page, holding the case your captures go to.",
+    "unlimitedStorage": "Lets Uplink hold an evidence capture's picture and page copy, which can pass the browser's usual 10 MB, until Starcom takes them in. They leave Uplink's storage once Starcom has kept them."
+  },
+  "chromium_only": [
+    "sidePanel"
+  ],
+  "bridge_pages": {
+    "patterns": [
+      "https://starcom.app/*",
+      "https://www.starcom.app/*"
+    ],
+    "reason": "Runs Uplink's bridge on Starcom's own pages, and adds it to Starcom tabs already open when Uplink is installed or updated, so Starcom can ask Uplink what it can do and ask it to act, always with a stated purpose. The bridge passes only those messages and reads nothing else on the page."
+  },
+  "optional_host_permissions": {
+    "patterns": [
+      "https://*/*",
+      "http://*/*"
+    ],
+    "reason": "Optional, and never granted at install. When a feature needs a site, Uplink asks you for that one site in its own window, saying which feature wants it and why, and you can take any site back in Uplink's options. Power mode, which only you can turn on, asks for all sites at once. Uplink never asks for an address on a private or local network."
+  },
+  "remote_code": "None. Everything Uplink runs is in its package; it loads no code from anywhere and evaluates nothing it receives.",
+  "data_collected": "None. Uplink sends nothing about you or your browsing off your device: no analytics, no telemetry, no tracking. If you turn on timestamps, each evidence capture sends one blinded hash, from which nothing about the page can be learned, to two public OpenTimestamps calendars. When NetRunner reads a site you allowed, Uplink fetches it without your cookies. That answer, and what you capture, go to Starcom's page in this same browser, and leave it only when you publish or send them."
+}

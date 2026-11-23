@@ -1,0 +1,126 @@
+{
+  "zsp": "2.0",
+  "terra": "terra:indica",
+  "grid": {
+    "width": 3600,
+    "height": 1800,
+    "cell": 0.1,
+    "origin": {
+      "lat": 90,
+      "lon": -180
+    },
+    "rows": "row 0 the northernmost",
+    "values": "at cell centres"
+  },
+  "files": {
+    "zones": "indica-zones-0.1.u32.bin.gz",
+    "sectors": "indica-sectors-0.1.u32.bin.gz"
+  },
+  "dtype": "uint32",
+  "endianness": "little",
+  "compression": "gzip",
+  "areaKm2": 5063419,
+  "zones": [
+    {
+      "id": "zone:himalaya",
+      "name": "Himalaya Zone",
+      "system": "orogen",
+      "provinces": [
+        "Himalayan"
+      ],
+      "km2": 767621
+    },
+    {
+      "id": "zone:ganges-plain",
+      "name": "Ganges Plain Zone",
+      "system": "basin",
+      "provinces": [
+        "Himalayan Foreland"
+      ],
+      "km2": 384339
+    },
+    {
+      "id": "zone:indus",
+      "name": "Indus Basin Zone",
+      "system": "basin",
+      "provinces": [
+        "Indus",
+        "Kohat-Potwar"
+      ],
+      "km2": 641859
+    },
+    {
+      "id": "zone:sulaiman-kirthar",
+      "name": "Sulaiman and Kirthar Ranges Zone",
+      "system": "orogen",
+      "provinces": [
+        "Sulaiman-Kirthar"
+      ],
+      "km2": 170636
+    },
+    {
+      "id": "zone:cambay-bombay",
+      "name": "Cambay Rift and Bombay High Zone",
+      "system": "rift",
+      "provinces": [
+        "Bombay"
+      ],
+      "km2": 339906
+    },
+    {
+      "id": "zone:konkan",
+      "name": "Konkan and the Western Margin Zone",
+      "system": "basin",
+      "provinces": [
+        "Konkan"
+      ],
+      "km2": 163164
+    },
+    {
+      "id": "zone:indian-shield",
+      "name": "Deccan, the Indian Shield and the Gondwana Rifts Zone",
+      "system": "shield",
+      "provinces": [
+        "Indian Shield",
+        "Chindwara",
+        "Satpura_Brahmani",
+        "Damodar",
+        "Pranhita-Godavari"
+      ],
+      "km2": 1872690
+    },
+    {
+      "id": "zone:east-coast-basins",
+      "name": "East Coast Basins Zone",
+      "system": "basin",
+      "provinces": [
+        "Cauvery",
+        "Krishna-Godavari",
+        "Mahanadi"
+      ],
+      "km2": 253397
+    },
+    {
+      "id": "zone:bengal-assam",
+      "name": "Bengal Basin and Assam Zone",
+      "system": "delta",
+      "provinces": [
+        "Ganges-Brahmaputra Delta",
+        "Assam"
+      ],
+      "km2": 411321
+    },
+    {
+      "id": "zone:sri-lanka",
+      "name": "Sri Lanka Zone",
+      "system": "shield",
+      "provinces": [
+        "Sri Lanka"
+      ],
+      "km2": 58485
+    }
+  ],
+  "sectors": 52,
+  "bytes": 122486,
+  "points": 4111
+}

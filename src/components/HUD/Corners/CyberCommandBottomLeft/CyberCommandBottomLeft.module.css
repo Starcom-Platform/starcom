@@ -1,0 +1,42 @@
+/* BottomLeft corner — Temporal position */
+.bottomLeft {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  pointer-events: none;
+  user-select: none;
+}
+
+.badge {
+  font-family: var(--sc-font-display);
+  font-size: 0.6rem;
+  font-weight: bold;
+  letter-spacing: 0.15em;
+  padding: 1px 6px;
+  border-radius: 3px;
+}
+
+.liveBadge {
+  color: #000;
+  background: #00ff88;
+  box-shadow: 0 0 4px rgba(0, 255, 136, 0.5);
+}
+
+.scrubBadge {
+  color: #000;
+  background: #ff6600;
+  box-shadow: 0 0 4px rgba(255, 102, 0, 0.5);
+}
+
+.timeRange {
+  font-family: var(--sc-font-data);
+  font-size: 0.55rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.position {
+  font-family: var(--sc-font-data);
+  font-size: 0.6rem;
+  color: rgba(0, 255, 255, 0.7);
+  letter-spacing: 0.08em;
+}

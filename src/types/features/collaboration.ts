@@ -1,0 +1,442 @@
+/**
+ * Collaboration Type System
+ *
+ * Types for secure, real-time collaboration through Web3-based intelligence
+ * sharing and post-quantum communication protocols.
+ *
+ * The header named three US military commands as the parties collaborating
+ * here. They are not parties to anything in this repository. The commands are
+ * not named in their place, on purpose — see
+ * scripts/guard-no-institutional-claims.mjs, which does not strip comments
+ * because in an open-source repository a comment is published text.
+ */
+
+// ============================================================================
+// CORE COLLABORATION TYPES
+// ============================================================================
+
+// TODO: Implement data model backup and recovery mechanisms - PRIORITY: MEDIUM
+// TODO: Implement environment-specific configuration validation and deployment - PRIORITY: MEDIUM
+/*
+ * An `AgencyType` union of six real US government and military institutions
+ * stood here, and nine fields across this file were typed to it — a team's
+ * agency, a session's lead agency, an operator's agency, the sender of every
+ * message, the actor on every audit entry.
+ *
+ * None of them was ever compared. Starcom is not governmental and no such body
+ * uses it, so every one of those fields asserted a relationship this project
+ * cannot support. In an open-source repository that assertion is published
+ * whether or not anything renders it.
+ *
+ * Deleted rather than replaced with a free-text organisation field: adding one
+ * is a product decision about self-declared, unverifiable affiliation, not part
+ * of removing a false claim. If it is ever wanted, it arrives with the surface
+ * that needs it and is labelled unverified.
+ */
+
+export type CollaborationRole = 
+  | 'LEAD_ANALYST' 
+  | 'SUPPORT_ANALYST' 
+  | 'OBSERVER' 
+  | 'GUEST' 
+  | 'COORDINATOR' 
+  | 'ADMIN';
+
+export interface Operator {
+  id: string;
+  name: string;
+  role: CollaborationRole;
+  specializations: string[];
+  avatarUrl?: string;
+  status: 'ONLINE' | 'AWAY' | 'BUSY' | 'OFFLINE';
+  lastActivity: Date;
+  walletAddress?: string; // Solana wallet address for blockchain operations
+  permissions?: string[]; // Additional permissions for team operations
+}
+
+export interface Team {
+  id: string;
+  name: string;
+  description: string;
+  members: Operator[];
+  createdAt: Date;
+  updatedAt: Date;
+  status: 'ACTIVE' | 'SUSPENDED' | 'ARCHIVED';
+}
+
+// ============================================================================
+// COLLABORATION SESSION MANAGEMENT
+// ============================================================================
+
+export interface CollaborationSession {
+  id: string;
+  name: string;
+  description: string;
+  participants: Operator[];
+  invitedOperators: string[];
+  createdAt: Date;
+  updatedAt: Date;
+  status: 'ACTIVE' | 'SUSPENDED' | 'COMPLETED' | 'ARCHIVED';
+  sharedContexts: SharedContext[];
+  communicationChannels: CommunicationChannel[];
+  intelligenceAssets: SharedIntelligenceAsset[];
+}
+
+export interface SharedContext {
+  id: string;
+  name: string;
+  sessionId: string;
+  ownerId: string;
+  sharedWith: string[];
+  contextSnapshot: Record<string, unknown>; // Full context state snapshot
+  permissions: ContextPermissions;
+  encryptionStatus: EncryptionStatus;
+  lastSynchronized: Date;
+  annotationLayers: CollaborativeAnnotation[];
+}
+
+export interface ContextPermissions {
+  canView: string[];
+  canEdit: string[];
+  canShare: string[];
+  canAnnotate: string[];
+}
+
+// ============================================================================
+// REAL-TIME COLLABORATION FEATURES
+// ============================================================================
+
+export interface CollaborativeAnnotation {
+  id: string;
+  authorId: string;
+  authorName: string;
+  content: string;
+  position: AnnotationPosition;
+  type: 'NOTE' | 'MARKER' | 'HIGHLIGHT' | 'LINK' | 'WARNING';
+  createdAt: Date;
+  linkedAssets?: string[];
+  responses?: CollaborativeAnnotation[];
+}
+
+export interface AnnotationPosition {
+  viewType: 'GLOBE' | 'TIMELINE' | 'NODE_GRAPH';
+  coordinates?: {
+    lat?: number;
+    lng?: number;
+    x?: number;
+    y?: number;
+    timestamp?: Date;
+  };
+  elementId?: string;
+  boundingBox?: {
+    x: number;
+    y: number;
+    width: number;
+    height: number;
+  };
+}
+
+export interface CommunicationChannel {
+  id: string;
+  name: string;
+  type: 'TEXT' | 'VOICE' | 'VIDEO' | 'SECURE_RELAY';
+  participants: string[];
+  encryptionType: 'PQC' | 'AES256' | 'WEB3_SECURED';
+  isActive: boolean;
+  messageHistory: CollaborationMessage[];
+}
+
+export interface CollaborationMessage {
+  id: string;
+  senderId: string;
+  senderName: string;
+  content: string;
+  type: 'TEXT' | 'INTELLIGENCE_SHARE' | 'CONTEXT_UPDATE' | 'ANNOTATION' | 'ALERT';
+  timestamp: Date;
+  attachments?: MessageAttachment[];
+  linkedContexts?: string[];
+}
+
+export interface MessageAttachment {
+  id: string;
+  name: string;
+  type: 'INTELLIGENCE_ASSET' | 'CONTEXT_SNAPSHOT' | 'ANALYSIS_REPORT' | 'FILE';
+  url: string;
+  size: number;
+  encryptionStatus: EncryptionStatus;
+}
+
+// ============================================================================
+// WEB3 INTELLIGENCE MARKETPLACE
+// ============================================================================
+
+export interface SharedIntelligenceAsset {
+  id: string;
+  name: string;
+  description: string;
+  category: IntelligenceCategory;
+  creatorId: string;
+  trustScore: number;
+  validationStatus: 'PENDING' | 'VERIFIED' | 'DISPUTED' | 'REJECTED';
+  metadata: IntelligenceMetadata;
+  accessRequirements: AccessRequirement[];
+  pricing: AssetPricing;
+  provenance: ProvenanceChain[];
+  encryptionStatus: EncryptionStatus;
+  downloadCount: number;
+  ratingAverage: number;
+  createdAt: Date;
+  expiresAt?: Date;
+}
+
+export type IntelligenceCategory = 
+  | 'THREAT_ANALYSIS'
+  | 'GEOSPATIAL_DATA'
+  | 'NETWORK_TOPOLOGY'
+  | 'COMMUNICATION_PATTERNS'
+  | 'BEHAVIORAL_ANALYSIS'
+  | 'SATELLITE_IMAGERY'
+  | 'CYBER_INDICATORS'
+  | 'HUMAN_INTELLIGENCE';
+
+export interface IntelligenceMetadata {
+  format: string;
+  size: number;
+  geographicScope?: string;
+  temporalScope?: {
+    startDate: Date;
+    endDate: Date;
+  };
+  dataQuality: number;
+  confidenceScore: number;
+  sources: string[];
+  relatedAssets: string[];
+  tags: string[];
+}
+
+export interface AccessRequirement {
+  type: 'CLEARANCE' | 'AGENCY' | 'ROLE' | 'TOKEN_BALANCE' | 'APPROVAL';
+  value: string | number;
+  description: string;
+}
+
+export interface AssetPricing {
+  model: 'FREE' | 'TOKEN_BASED' | 'SUBSCRIPTION' | 'EXCHANGE';
+  tokenCost?: number;
+  fiatCost?: number;
+  currency?: string;
+  subscriptionTier?: string;
+}
+
+export interface ProvenanceChain {
+  transactionId: string;
+  blockHash: string;
+  timestamp: Date;
+  action: 'CREATED' | 'SHARED' | 'MODIFIED' | 'VALIDATED' | 'ACCESSED';
+  actorId: string;
+  signature: string;
+  metadata?: Record<string, string | number | boolean>;
+}
+
+// ============================================================================
+// SECURITY AND ENCRYPTION
+// ============================================================================
+
+export interface EncryptionStatus {
+  algorithm: 'PQC_KYBER' | 'AES256_GCM' | 'WEB3_NATIVE' | 'HYBRID_PQC';
+  keyId: string;
+  encryptedAt: Date;
+  isQuantumSafe: boolean;
+  sharedWith: string[];
+  decryptionLogs: DecryptionLog[];
+}
+
+export interface DecryptionLog {
+  operatorId: string;
+  timestamp: Date;
+  ipAddress: string;
+  deviceFingerprint: string;
+  accessGranted: boolean;
+  reason?: string;
+}
+
+export interface Web3AuthState {
+  walletAddress?: string;
+  chainId?: number;
+  isConnected: boolean;
+  authenticationMethod: 'METAMASK' | 'WALLET_CONNECT' | 'LEDGER' | 'GOVERNMENT_PKI';
+  tokenBalance: number;
+  governmentCertificate?: GovernmentCertificate;
+  lastAuthenticated?: Date;
+}
+
+export interface GovernmentCertificate {
+  certificateId: string;
+  issuingAuthority: string;
+  operatorId: string;
+  validFrom: Date;
+  validTo: Date;
+  publicKey: string;
+  signature: string;
+}
+
+// ============================================================================
+// COLLABORATION STATE MANAGEMENT
+// ============================================================================
+
+export interface CollaborationState {
+  currentSession: CollaborationSession | null;
+  availableSessions: CollaborationSession[];
+  operator: Operator | null;
+  sharedContexts: SharedContext[];
+  pendingInvitations: SessionInvitation[];
+  communicationChannels: CommunicationChannel[];
+  recentMessages: CollaborationMessage[];
+  intelligenceMarketplace: MarketplaceState;
+  notifications: CollaborationNotification[];
+  connectionStatus: ConnectionStatus;
+}
+
+export interface SessionInvitation {
+  id: string;
+  sessionId: string;
+  inviterId: string;
+  inviteeId: string;
+  status: 'PENDING' | 'ACCEPTED' | 'DECLINED' | 'EXPIRED';
+  message?: string;
+  createdAt: Date;
+  expiresAt: Date;
+}
+
+export interface MarketplaceState {
+  availableAssets: SharedIntelligenceAsset[];
+  myAssets: SharedIntelligenceAsset[];
+  purchasedAssets: SharedIntelligenceAsset[];
+  searchQuery: string;
+  selectedCategory: IntelligenceCategory | null;
+  sortBy: 'RELEVANCE' | 'TRUST_SCORE' | 'PRICE' | 'DATE' | 'RATING';
+  filters: MarketplaceFilters;
+  isLoading: boolean;
+}
+
+export interface MarketplaceFilters {
+  priceRange: {
+    min: number;
+    max: number;
+  };
+  categories: IntelligenceCategory[];
+  trustScoreMin: number;
+  dateRange: {
+    start: Date;
+    end: Date;
+  };
+}
+
+export interface CollaborationNotification {
+  id: string;
+  recipientId: string;
+  type: 'INVITATION' | 'MESSAGE' | 'ASSET_SHARED' | 'SESSION_UPDATE' | 'ALERT';
+  title: string;
+  message: string;
+  relatedEntityId: string;
+  isRead: boolean;
+  createdAt: Date;
+  // Optional action metadata for UI prioritization
+  actionRequired?: boolean;
+  actionUrl?: string;
+}
+
+export interface ConnectionStatus {
+  isConnected: boolean;
+  serverLatency: number;
+  lastSync: Date;
+  syncStatus: 'SYNCED' | 'SYNCING' | 'CONFLICT' | 'ERROR';
+  participantCount: number;
+  bandwidthUsage: number;
+  encryptionActive: boolean;
+}
+
+// ============================================================================
+// COLLABORATION ACTIONS
+// ============================================================================
+
+export type CollaborationAction =
+  | { type: 'COLLABORATION_SET_OPERATOR'; payload: Operator }
+  | { type: 'COLLABORATION_JOIN_SESSION'; payload: CollaborationSession }
+  | { type: 'COLLABORATION_LEAVE_SESSION' }
+  | { type: 'COLLABORATION_CREATE_SESSION'; payload: Partial<CollaborationSession> }
+  | { type: 'COLLABORATION_UPDATE_SESSION'; payload: Partial<CollaborationSession> }
+  | { type: 'COLLABORATION_ADD_PARTICIPANT'; payload: { sessionId: string; operator: Operator } }
+  | { type: 'COLLABORATION_REMOVE_PARTICIPANT'; payload: { sessionId: string; operatorId: string } }
+  | { type: 'COLLABORATION_SHARE_CONTEXT'; payload: SharedContext }
+  | { type: 'COLLABORATION_UPDATE_SHARED_CONTEXT'; payload: Partial<SharedContext> }
+  | { type: 'COLLABORATION_ADD_ANNOTATION'; payload: CollaborativeAnnotation }
+  | { type: 'COLLABORATION_UPDATE_ANNOTATION'; payload: Partial<CollaborativeAnnotation> }
+  | { type: 'COLLABORATION_REMOVE_ANNOTATION'; payload: string }
+  | { type: 'COLLABORATION_SEND_MESSAGE'; payload: CollaborationMessage }
+  | { type: 'COLLABORATION_RECEIVE_MESSAGE'; payload: CollaborationMessage }
+  | { type: 'COLLABORATION_CREATE_CHANNEL'; payload: CommunicationChannel }
+  | { type: 'COLLABORATION_JOIN_CHANNEL'; payload: string }
+  | { type: 'COLLABORATION_LEAVE_CHANNEL'; payload: string }
+  | { type: 'COLLABORATION_MARKETPLACE_SEARCH'; payload: { query: string; filters: Partial<MarketplaceFilters> } }
+  | { type: 'COLLABORATION_MARKETPLACE_PURCHASE'; payload: string }
+  | { type: 'COLLABORATION_MARKETPLACE_SHARE'; payload: SharedIntelligenceAsset }
+  | { type: 'COLLABORATION_ADD_NOTIFICATION'; payload: CollaborationNotification }
+  | { type: 'COLLABORATION_MARK_NOTIFICATION_READ'; payload: string }
+  | { type: 'COLLABORATION_CLEAR_NOTIFICATIONS' }
+  | { type: 'COLLABORATION_UPDATE_CONNECTION_STATUS'; payload: Partial<ConnectionStatus> }
+  | { type: 'COLLABORATION_ACCEPT_INVITATION'; payload: string }
+  | { type: 'COLLABORATION_DECLINE_INVITATION'; payload: string }
+  | { type: 'COLLABORATION_SET_WEB3_AUTH'; payload: Web3AuthState };
+
+// ============================================================================
+// REAL-TIME SYNCHRONIZATION
+// ============================================================================
+
+export interface SyncEvent {
+  type: 'CONTEXT_UPDATE' | 'ANNOTATION_ADD' | 'ANNOTATION_UPDATE' | 'MESSAGE' | 'PARTICIPANT_JOIN' | 'PARTICIPANT_LEAVE';
+  sessionId: string;
+  operatorId: string;
+  timestamp: Date;
+  data: Record<string, unknown>;
+  signature: string;
+}
+
+export interface ConflictResolution {
+  conflictId: string;
+  type: 'ANNOTATION_CONFLICT' | 'CONTEXT_CONFLICT' | 'PERMISSION_CONFLICT';
+  conflictingOperators: string[];
+  resolution: 'MERGE' | 'OVERRIDE' | 'MANUAL_REVIEW';
+  resolvedBy?: string;
+  resolvedAt?: Date;
+  resolutionData?: Record<string, unknown>;
+}
+
+// ============================================================================
+// COLLABORATION HOOKS AND UTILITIES
+// ============================================================================
+
+export interface UseCollaborationReturn {
+  // Session Management
+  currentSession: CollaborationSession | null;
+  joinSession: (sessionId: string) => Promise<void>;
+  leaveSession: () => Promise<void>;
+  createSession: (sessionData: Partial<CollaborationSession>) => Promise<string>;
+  
+  // Real-time Communication
+  sendMessage: (content: string, channelId?: string) => void;
+  addAnnotation: (annotation: Omit<CollaborativeAnnotation, 'id' | 'createdAt'>) => void;
+  shareContext: (contextId: string, permissions: ContextPermissions) => void;
+  
+  // Intelligence Marketplace
+  searchIntelligence: (query: string, filters?: Partial<MarketplaceFilters>) => void;
+  purchaseIntelligence: (assetId: string) => Promise<void>;
+  shareIntelligence: (asset: Omit<SharedIntelligenceAsset, 'id' | 'createdAt'>) => Promise<string>;
+  
+  // State Access
+  collaborationState: CollaborationState;
+  isConnected: boolean;
+  participantCount: number;
+  unreadMessageCount: number;
+  pendingInvitationCount: number;
+}

@@ -1,0 +1,62 @@
+{
+  "fixture_note": "mission_totals after the night (the existing family, D-RS RS23), built by beu/mission_reports.totals and totals_body from three settled reports. The reports and every sum (212 water bottles, 17 first-aid supplies, 3 calls to 911) are INVENTED. It names no reporter.",
+  "provenance": {
+    "real": "the package it sums (the fixture's)",
+    "invented": "the reports and every sum"
+  },
+  "event": {
+    "pubkey": "86f824c3f1e67c60b1dc15ce110648c4de5c3fb879022fbbcc5e8deb720e402c",
+    "created_at": 1812898800,
+    "kind": 30023,
+    "tags": [
+      [
+        "d",
+        "mission-totals-starcom_mission_package_field-celebration_safety-knicks_clinch_or_title-nyc_midtown-2027-finals-g6"
+      ],
+      [
+        "title",
+        "Mission totals: Clinch night safety: Midtown, Thu 10 Jun 2027"
+      ],
+      [
+        "published_at",
+        "1812898800"
+      ],
+      [
+        "client",
+        "Mecha Jono"
+      ],
+      [
+        "t",
+        "mission_totals"
+      ],
+      [
+        "a",
+        "30079:86f824c3f1e67c60b1dc15ce110648c4de5c3fb879022fbbcc5e8deb720e402c:starcom_mission_package_field-celebration_safety-knicks_clinch_or_title-nyc_midtown-2027-finals-g6"
+      ],
+      [
+        "total",
+        "Calls to 911 made",
+        "3"
+      ],
+      [
+        "total",
+        "First-aid supplies used",
+        "17"
+      ],
+      [
+        "total",
+        "Water bottles handed out",
+        "212"
+      ],
+      [
+        "reports",
+        "3"
+      ],
+      [
+        "as_of",
+        "2027-06-12"
+      ]
+    ],
+    "content": "Mission totals: Clinch night safety: Midtown, Thu 10 Jun 2027, as of 2027-06-12, from 3 settled reports.\n\n- Calls to 911 made: 3\n- First-aid supplies used: 17\n- Water bottles handed out: 212\n\nCounts only. Who reported is not kept and never published."
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "unmeasured-provenance-refused",
+  "description": "Undefined is refused alongside true: \"nobody said\" is not permission.",
+  "subjectKind": "organization",
+  "options": {},
+  "expect": {
+    "allowed": false,
+    "reasonMatches": "does not state whether it is real"
+  }
+}

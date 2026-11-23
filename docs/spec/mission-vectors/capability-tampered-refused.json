@@ -1,0 +1,40 @@
+{
+  "name": "capability-tampered-refused",
+  "description": "A valid grant whose holder tag was edited after signing. Implementations that trust a cached verification flag will WRONGLY pass this.",
+  "expect": {
+    "valid": false,
+    "reason": "bad-signature",
+    "holder": "531fe6068134503d2723133227c867ac8fa6c83c537e9a44c3c5bdbdcb1fe337"
+  },
+  "rootIssuer": "1b84c5567b126440995d3ed5aaba0565d71e1834604819ff9c17f5e9d5dd078f",
+  "resource": "mission:mission-vector-1",
+  "action": "dispatch",
+  "chain": [
+    {
+      "kind": 30081,
+      "created_at": 1768435200,
+      "tags": [
+        [
+          "d",
+          "cap:mission:mission-vector-1:1b84c5567b126440995d3ed5aaba0565d71e1834604819ff9c17f5e9d5dd078f"
+        ],
+        [
+          "resource",
+          "mission:mission-vector-1"
+        ],
+        [
+          "action",
+          "dispatch"
+        ],
+        [
+          "holder",
+          "531fe6068134503d2723133227c867ac8fa6c83c537e9a44c3c5bdbdcb1fe337"
+        ]
+      ],
+      "content": "",
+      "pubkey": "1b84c5567b126440995d3ed5aaba0565d71e1834604819ff9c17f5e9d5dd078f",
+      "id": "fb9a53bc35c6de7f851d9b564053bf30661f0050cee6e45e99ee494223ee87b2",
+      "sig": "eb8474661eeea2cfce9920304cff1dfbecacd1ff22b3e1351fe5f3953e88171d9d9f166eb73e15c3ca1d398625b9cd77f3ed2ed9f09ef313031feefb326ed0e4"
+    }
+  ]
+}

@@ -1,0 +1,269 @@
+{
+ "card": {
+  "alt": "RAVER WATCH: Trimbos Red Alert: Zeer gevaarlijke XTC met PMMA aangetroffen. Drug-check alert, level red, from Trimbos-instituut. Applies from 28 Aug 2026 until 12 Oct 2026. Applies to Netherlands. A signed Nostr event from The Record; its signature was checked on intake. The picture: the globe centred near 52.3°N, 5.7°E, the item marked and labelled, showing Drug-check alerts and Borders. Caveats: Raver Watch items show while they apply, placed to about 11 km, or at a public venue. Unsigned capture: one browser's view at one moment. Made by Starcom, <captured>.",
+  "frame": {
+   "height": 728,
+   "width": 1080
+  },
+  "height": 1350,
+  "mimeType": "image/webp",
+  "provenance": {
+   "appearance": {
+    "lightMode": "sun",
+    "quality": {
+     "atmosphere": true,
+     "clouds": true,
+     "detail": "full detail",
+     "setting": "low"
+    },
+    "skin": "Day / Night",
+    "territories": "quiet"
+   },
+   "build": "<build>",
+   "camera": {
+    "altitude": 1.0000010000000001,
+    "lat": 52.29999999999998,
+    "lon": 5.700000000000003
+   },
+   "capturedAt": "<captured>",
+   "card": {
+    "badge": "RAVER WATCH",
+    "chosenBy": "item",
+    "template": "raver_alert"
+   },
+   "caveats": [
+    "Raver Watch: each item is drawn while it applies, by the dates its note states, faded as its end nears, and placed no finer than about 11 km, except a scene event at a public venue, drawn at the venue.",
+    "Unsigned client-side capture: one browser's view at one moment, not an attested record."
+   ],
+   "caveatsShort": [
+    "Raver Watch items show while they apply, placed to about 11 km, or at a public venue.",
+    "Unsigned capture: one browser's view at one moment."
+   ],
+   "credits": [],
+   "featured": {
+    "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-drug-check-alert-trimbos-83029564c1c28f44",
+    "lines": [
+     "Drug-check alert · level red · from Trimbos-instituut",
+     "Applies from 28 Aug 2026 until 12 Oct 2026",
+     "Applies to Netherlands",
+     "A signed Nostr event from The Record; its signature was checked on intake"
+    ],
+    "title": "Trimbos Red Alert: Zeer gevaarlijke XTC met PMMA aangetroffen"
+   },
+   "feeds": [
+    {
+     "credits": [],
+     "error": null,
+     "lastUpdated": "<read>",
+     "layer": "DrugCheckAlerts",
+     "loading": false,
+     "name": "Drug-check alerts from WEDINOS (Public Health Wales), checkit! Wien, Energy Control, Trimbos-instituut (1 naming no place, listed)",
+     "note": "Raver Watch: each item is drawn while it applies, by the dates its note states, faded as its end nears, and placed no finer than about 11 km, except a scene event at a public venue, drawn at the venue.",
+     "noteShort": "Raver Watch items show while they apply, placed to about 11 km, or at a public venue.",
+     "shortName": "Drug-check alerts"
+    }
+   ],
+   "frame": {
+    "height": 728,
+    "width": 1080
+   },
+   "imagery": [
+    "Solar System Scope (CC BY 4.0)",
+    "NASA"
+   ],
+   "layersSelectedButEmpty": [],
+   "layersShown": [
+    "Drug-check alerts"
+   ],
+   "legend": [
+    {
+     "colorMeans": "the level its note states; the backing says it too",
+     "layer": "Drug-check alerts",
+     "layerId": "DrugCheckAlerts",
+     "shapeMeans": "the lab’s flask; a country an alert applies to is outlined in violet, and named here with its level; a ring is a whole state",
+     "swatches": [
+      {
+       "color": "#ff4d4f",
+       "label": "level red (a glow)",
+       "style": "glow"
+      },
+      {
+       "color": "#c77dff",
+       "label": "United Kingdom: level amber",
+       "shape": "line"
+      },
+      {
+       "color": "#c77dff",
+       "label": "Spain: level red",
+       "shape": "line"
+      },
+      {
+       "color": "#c77dff",
+       "label": "Netherlands: level red",
+       "shape": "line"
+      }
+     ]
+    },
+    {
+     "colorMeans": "what kind of boundary it is — dashed where it is not settled",
+     "layer": "Borders",
+     "layerId": "NationalTerritories:borders",
+     "swatches": [
+      {
+       "color": "#c9d4e3",
+       "label": "international boundary",
+       "shape": "line"
+      },
+      {
+       "color": "#ff5555",
+       "label": "disputed",
+       "shape": "dashed"
+      },
+      {
+       "color": "#ffcc00",
+       "label": "line of control",
+       "shape": "dashed"
+      },
+      {
+       "color": "#888888",
+       "label": "indefinite",
+       "shape": "line"
+      }
+     ]
+    }
+   ],
+   "link": "<origin>/?v=1&sub=DrugCheckAlerts&at=52.3,5.7,1&focus=30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-drug-check-alert-trimbos-83029564c1c28f44&win=1790985600..1791072000",
+   "marks": null,
+   "origin": "starcom-app client capture (unsigned)",
+   "raverWatchItems": [
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-drug-check-alert-wedinos-94b738b3fc473173",
+     "layer": "DrugCheckAlerts",
+     "level": "amber"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-drug-check-alert-checkit-40d8c4364d4fdde2",
+     "layer": "DrugCheckAlerts",
+     "level": "red"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-drug-check-alert-energycontrol-f7b1abc741d6970e",
+     "layer": "DrugCheckAlerts",
+     "level": "red"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-drug-check-alert-trimbos-83029564c1c28f44",
+     "layer": "DrugCheckAlerts",
+     "level": "red"
+    }
+   ],
+   "schema": "starcom.globe.capture",
+   "schemaVersion": 38,
+   "shot": {
+    "appearance": {
+     "light": "sun",
+     "nightFill": 0.15,
+     "skin": "auto",
+     "territories": "quiet"
+    },
+    "card": {
+     "preset": "portrait",
+     "template": "raver_alert"
+    },
+    "emphasis": {
+     "featured": true
+    },
+    "framing": {
+     "fit": "view"
+    },
+    "layers": {
+     "pins": [],
+     "primary": "DrugCheckAlerts"
+    },
+    "output": {
+     "alt": true,
+     "quality": 0.9,
+     "scale": 1,
+     "type": "image/webp"
+    },
+    "subject": {
+     "address": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-drug-check-alert-trimbos-83029564c1c28f44"
+    },
+    "time": {
+     "at": 1791050400
+    },
+    "v": 1
+   },
+   "typeStep": "larger",
+   "window": {
+    "from": 1790985600,
+    "until": 1791072000
+   }
+  },
+  "regions": {
+   "footer": {
+    "height": "<wraps with the run>",
+    "width": 1080,
+    "x": 0,
+    "y": 1266
+   },
+   "picture": {
+    "height": 728,
+    "width": 1080,
+    "x": 0,
+    "y": 215
+   }
+  },
+  "sourceRect": {
+   "height": 728,
+   "width": 1080,
+   "x": 0,
+   "y": 0
+  },
+  "warnings": [
+   "The label on the picture was shortened to fit; the headline below carries the title."
+  ],
+  "width": 1080
+ },
+ "drawn": {
+  "appearance": {
+   "light": "sun",
+   "nightFill": 0.15,
+   "skin": "auto",
+   "territories": "quiet"
+  },
+  "card": {
+   "preset": "portrait",
+   "template": "raver_alert"
+  },
+  "emphasis": {
+   "featured": true
+  },
+  "framing": {
+   "fit": "view"
+  },
+  "layers": {
+   "pins": [],
+   "primary": "DrugCheckAlerts"
+  },
+  "output": {
+   "alt": true,
+   "quality": 0.9,
+   "scale": 1,
+   "type": "image/webp"
+  },
+  "subject": {
+   "address": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-drug-check-alert-trimbos-83029564c1c28f44"
+  },
+  "time": {
+   "at": 1791050400
+  },
+  "v": 1
+ },
+ "name": "alert-portrait",
+ "notes": [],
+ "ok": true,
+ "warnings": [
+  "The label on the picture was shortened to fit; the headline below carries the title."
+ ]
+}

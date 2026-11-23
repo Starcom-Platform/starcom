@@ -1,0 +1,70 @@
+{
+ "fixture_note": "INVENTED for the fixture: not a measurement, not a result, never to be shown as one. The envelope is the PackageManifest our other packages use; a psi mission carries t=psi_mission_package and never t=starcom_mission_package (working assumption for question 1).",
+ "provenance": {
+  "invented": "the mission and its objective"
+ },
+ "event": {
+  "kind": 30079,
+  "pubkey": "86f824c3f1e67c60b1dc15ce110648c4de5c3fb879022fbbcc5e8deb720e402c",
+  "created_at": 1793019600,
+  "tags": [
+   [
+    "d",
+    "psi_mission_package_focus-fixture"
+   ],
+   [
+    "t",
+    "psi_mission"
+   ],
+   [
+    "a",
+    "31923:86f824c3f1e67c60b1dc15ce110648c4de5c3fb879022fbbcc5e8deb720e402c:psi-window-focus-20261101"
+   ],
+   [
+    "t",
+    "psi_watch"
+   ],
+   [
+    "t",
+    "psi_mission_package"
+   ],
+   [
+    "t",
+    "experimental"
+   ],
+   [
+    "t",
+    "role:context"
+   ],
+   [
+    "t",
+    "category:psi"
+   ],
+   [
+    "t",
+    "category:psi.window"
+   ],
+   [
+    "schema_version",
+    "0"
+   ],
+   [
+    "engine",
+    "skyfield 1.54, de440s; catalogue kit-v0 (2026-10-26 to 2026-11-25)"
+   ],
+   [
+    "published_at",
+    "1793019600"
+   ],
+   [
+    "client",
+    "Mecha Jono"
+   ],
+   [
+    "alt",
+    "Psi Watch mission (Experimental), FIXTURE."
+   ]
+  ],
+  "content": "{\"assets\": [], \"author\": \"Mecha Jono\", \"createdAt\": \"2026-10-26T13:00:00+00:00\", \"description\": \"FIXTURE. A PsiOps mission in the PackageManifest envelope. Nobody is told what to conclude; the window and its method travel with it.\", \"id\": \"psi_focus-fixture\", \"intel\": [], \"license\": \"CC-BY\", \"metadata\": {\"mechaJono\": {\"psi\": {\"engine\": \"skyfield 1.54, de440s; catalogue kit-v0 (2026-10-26 to 2026-11-25)\", \"profile\": [\"gauss_orb\", \"1.0000\", \"3.0000\", \"-12.907134\", \"0.26085365\"], \"registration\": null, \"window\": {\"from\": 1793544872, \"peak\": 1793564907, \"until\": 1793585037}, \"window_note\": \"31923:86f824c3f1e67c60b1dc15ce110648c4de5c3fb879022fbbcc5e8deb720e402c:psi-window-focus-20261101\"}}}, \"name\": \"Psi Watch focus window (FIXTURE)\", \"objectives\": [{\"id\": \"observe\", \"kind\": \"observe\", \"label\": \"Note what you see in the window, and when\"}], \"reports\": [], \"version\": \"0.0.1\", \"visibility\": \"public\"}"
+ }
+}

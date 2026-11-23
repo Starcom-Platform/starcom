@@ -1,0 +1,29 @@
+{
+  "name": "tags-absent-refused",
+  "description": "No tags. An observation asserting nothing is not one.",
+  "expect": {
+    "observations": 0
+  },
+  "diagnostic": {
+    "note": "NOT normative — our drop wording, for humans and our own gate.",
+    "reasonContains": "no tags"
+  },
+  "event": {
+    "kind": 1911,
+    "created_at": 1756000000,
+    "tags": [
+      [
+        "g",
+        "st-louis"
+      ],
+      [
+        "d",
+        "st-louis/st-patrick-center"
+      ]
+    ],
+    "content": "{\"anchor\":\"st-louis/st-patrick-center\",\"observed_at\":1755996400,\"method\":\"saw\",\"callsign\":\"Raven\",\"precision\":\"area\",\"area\":\"dp3w\"}",
+    "pubkey": "96bafb179762225794c13c78e823b349e8f21d96f8113020032e5cabdbe59889",
+    "id": "87d3358f5eb4009c8e640adb93d6a4130d0b65e5cad20f572b5303f3e2c04dcb",
+    "sig": "82b4b95a36317b5887b0919e96349e86531cd9c819358daf7c4bc8121fc2ea10687193f670dd3fd32f676afd8d29b676251ac40f60d9c814548e253f541e74dc"
+  }
+}

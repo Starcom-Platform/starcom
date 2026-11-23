@@ -1,0 +1,248 @@
+{
+  "zsp": "2.0",
+  "terra": "terra:amazonia",
+  "grid": {
+    "width": 3600,
+    "height": 1800,
+    "cell": 0.1,
+    "origin": {
+      "lat": 90,
+      "lon": -180
+    },
+    "rows": "row 0 the northernmost",
+    "values": "at cell centres"
+  },
+  "files": {
+    "zones": "amazonia-zones-0.1.u32.bin.gz",
+    "sectors": "amazonia-sectors-0.1.u32.bin.gz"
+  },
+  "dtype": "uint32",
+  "endianness": "little",
+  "compression": "gzip",
+  "areaKm2": 21453472,
+  "zones": [
+    {
+      "id": "zone:guiana-shield",
+      "name": "Guiana Shield Zone",
+      "system": "shield",
+      "provinces": [
+        "Guyana Shield",
+        "Tacutu Basin"
+      ],
+      "km2": 1718999
+    },
+    {
+      "id": "zone:brazilian-shield",
+      "name": "Brazilian Shield Zone",
+      "system": "shield",
+      "provinces": [
+        "Brazilian Shield",
+        "Sucunduri Province",
+        "Xingu Province",
+        "Diamantina Province",
+        "Araripe Province",
+        "Parecis Province"
+      ],
+      "km2": 3801628
+    },
+    {
+      "id": "zone:amazon-basin",
+      "name": "Amazon Basin Zone",
+      "system": "basin",
+      "provinces": [
+        "Solimoes Basin",
+        "Amazonas Basin"
+      ],
+      "km2": 1411570
+    },
+    {
+      "id": "zone:equatorial-margin",
+      "name": "Amazon Fan and the Equatorial Margin Zone",
+      "system": "basin",
+      "provinces": [
+        "Foz de Amazonas Basin",
+        "Santana Platform",
+        "Guyana-Suriname Basin",
+        "San Luis Basin",
+        "Barreieinas Basin",
+        "Caera Basin",
+        "Potigar Basin"
+      ],
+      "km2": 831571
+    },
+    {
+      "id": "zone:parnaiba-sao-francisco",
+      "name": "Parnaíba and São Francisco Basins Zone",
+      "system": "basin",
+      "provinces": [
+        "Parnaiba Basin",
+        "Sao Francisco Basin"
+      ],
+      "km2": 1051642
+    },
+    {
+      "id": "zone:east-brazilian-margin",
+      "name": "East Brazilian Margin Zone",
+      "system": "basin",
+      "provinces": [
+        "Pernambuco Basin",
+        "Sergipe-Alagoas Basin",
+        "Jatoba Basin",
+        "Tucano Basin",
+        "Reconcavo Basin",
+        "Bahia Sul Basin",
+        "Espirito Santo Basin",
+        "Campos Basin",
+        "Santos Basin"
+      ],
+      "km2": 483564
+    },
+    {
+      "id": "zone:parana",
+      "name": "Paraná Basin and the Pelotas Margin Zone",
+      "system": "basin",
+      "provinces": [
+        "Parana Basin",
+        "Pelotas Basin"
+      ],
+      "km2": 1592089
+    },
+    {
+      "id": "zone:chaco-pampas",
+      "name": "Chaco and the Pampas Zone",
+      "system": "basin",
+      "provinces": [
+        "Chaco Basin",
+        "Oran-Olmedo Basin",
+        "Santa Cruz-Tarija Basin",
+        "Laboulaye-Macachin Basin",
+        "Salado Basin",
+        "Mercedes Basin"
+      ],
+      "km2": 1925188
+    },
+    {
+      "id": "zone:sub-andean-foreland",
+      "name": "Sub-Andean Foreland Basins Zone",
+      "system": "basin",
+      "provinces": [
+        "Putumayo-Oriente-Maranon Basin",
+        "Ucayali Basin",
+        "Huallaga Basin",
+        "Acre Basin",
+        "Madre dos Dios Basin",
+        "Beni Basin",
+        "Santiago Basin"
+      ],
+      "km2": 1563034
+    },
+    {
+      "id": "zone:northern-andes",
+      "name": "Northern Andes and the Caribbean Coast Zone",
+      "system": "orogen",
+      "provinces": [
+        "West-Central Cordillera",
+        "Eastern Cordillera Basin",
+        "Upper Magdelena",
+        "Middle Magdelena",
+        "Lower Magdelena",
+        "Cauca Basin",
+        "Cesar Basin",
+        "Sierra Nevada de Santa Marta",
+        "Perija-Venezuela-Coastal Ranges",
+        "Maracaibo Basin",
+        "Falcon Basin",
+        "Guajira Basin",
+        "Bonaire Basin",
+        "Cariaco Basin",
+        "Tobago Trough"
+      ],
+      "km2": 1045996
+    },
+    {
+      "id": "zone:llanos-orinoco",
+      "name": "Llanos and the Orinoco Zone",
+      "system": "basin",
+      "provinces": [
+        "Llanos Basin",
+        "Barinas-Apure Basin",
+        "East Venezuela Basin"
+      ],
+      "km2": 681013
+    },
+    {
+      "id": "zone:andes",
+      "name": "Central and Southern Andes Zone",
+      "system": "orogen",
+      "provinces": [
+        "Andean Province",
+        "Altiplano Basin",
+        "Familina Province",
+        "Salar de Atacama Basin",
+        "Cuyo Basin",
+        "Bermejo Basin",
+        "Bolsones Basin",
+        "Mascasin Basin",
+        "Neuquen Basin"
+      ],
+      "km2": 2672969
+    },
+    {
+      "id": "zone:pacific-forearc",
+      "name": "Pacific Forearc Basins Zone",
+      "system": "basin",
+      "provinces": [
+        "Central Chile Forearc Basin",
+        "Temuco Basin",
+        "Curico Basin",
+        "Osorno-Llanquihue Basin",
+        "Mollendo-Tarapaca Basin",
+        "Moquegua-Tamaruga Basin",
+        "Pisco Basin",
+        "Lima Basin",
+        "Salaverry Basin",
+        "Trujillo Basin",
+        "Sechura Basin",
+        "Talara Basin",
+        "Lancones Basin",
+        "Progreso Basin",
+        "Manabi Basin",
+        "Borbon Basin",
+        "Penas Basin",
+        "Madre de Dios Basin",
+        "Diego Ramirez Basin"
+      ],
+      "km2": 513665
+    },
+    {
+      "id": "zone:patagonia",
+      "name": "Patagonia Zone",
+      "system": "plateau",
+      "provinces": [
+        "Canadon Asfalto",
+        "Deseado-Falklands Province",
+        "San Jorge Basin",
+        "Colorado Basin",
+        "Nirihuau Basin",
+        "East Patagonia Basin",
+        "Magallanes Basin",
+        "Malvinas Basin"
+      ],
+      "km2": 1682726
+    },
+    {
+      "id": "zone:falkland-plateau",
+      "name": "Falkland Plateau and the North Scotia Ridge Zone",
+      "system": "plateau",
+      "provinces": [
+        "Falklands Plateau",
+        "Malvinas Plateau",
+        "Burdwood Bank - North Scotia Ridge"
+      ],
+      "km2": 477817
+    }
+  ],
+  "sectors": 186,
+  "bytes": 410724,
+  "points": 14033
+}

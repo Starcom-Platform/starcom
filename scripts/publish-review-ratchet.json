@@ -1,0 +1,4 @@
+{
+  "why": "Direct publish calls still being moved behind the publish review (plan item 0.1). guard-publish-review.mjs fails on a direct call not listed here, and on a listed call that is gone, so this list only shrinks. When it is empty, every publish goes through the review.",
+  "notYetReviewed": {}
+}

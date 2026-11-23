@@ -1,0 +1,11 @@
+{
+  "name": "place-publishes",
+  "description": "A location where something regulated happened.",
+  "subjectKind": "place",
+  "options": {
+    "isMock": false
+  },
+  "expect": {
+    "allowed": true
+  }
+}

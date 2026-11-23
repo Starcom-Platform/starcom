@@ -1,0 +1,89 @@
+/*
+ * Settings > Language (D-ML, L1). Colours, type and focus from the tokens, as Sound's section has them.
+ */
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.heading {
+  margin: 0;
+  font-family: var(--sc-font-display);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--sc-text-heading);
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--sc-text-body);
+}
+
+.select {
+  padding: 6px 8px;
+  border: 1px solid var(--sc-input-border);
+  border-radius: 4px;
+  background: var(--sc-surface-input);
+  color: var(--sc-text-body);
+  font-family: var(--sc-font-text);
+  font-size: 14px;
+}
+
+.select:focus-visible {
+  outline: 2px solid var(--sc-focus);
+  outline-offset: 2px;
+}
+
+.hint {
+  margin: 0;
+  font-size: 12px;
+  color: var(--sc-text-secondary);
+}
+
+/* Translation in the cloud, with the person's own key (D-ML, T3). */
+.cloud {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 10px;
+  border-top: 1px solid var(--sc-divider);
+}
+
+.subheading {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--sc-text-heading);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.button {
+  align-self: flex-start;
+  padding: 4px 10px;
+  border: 1px solid var(--sc-input-border);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--sc-accent);
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.button:disabled {
+  color: var(--sc-text-muted);
+  cursor: default;
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--sc-focus);
+  outline-offset: 2px;
+}

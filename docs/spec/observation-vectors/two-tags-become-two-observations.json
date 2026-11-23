@@ -1,0 +1,25 @@
+{
+  "name": "two-tags-become-two-observations",
+  "description": "One event asserting two things about one anchor. Derives TWO observations, because corroboration works per (subject, attribute) claim and two claims in one record could otherwise never be corroborated or contradicted separately. Non-obvious from the prose; the most likely thing for a producer to get wrong.",
+  "expect": {
+    "observations": 2
+  },
+  "event": {
+    "kind": 1911,
+    "created_at": 1756000000,
+    "tags": [
+      [
+        "g",
+        "st-louis"
+      ],
+      [
+        "d",
+        "st-louis/st-patrick-center"
+      ]
+    ],
+    "content": "{\"anchor\":\"st-louis/st-patrick-center\",\"observed_at\":1755996400,\"tags\":[\"locked\",\"crowded\"],\"method\":\"saw\",\"callsign\":\"Raven\",\"precision\":\"area\",\"area\":\"dp3w\"}",
+    "pubkey": "96bafb179762225794c13c78e823b349e8f21d96f8113020032e5cabdbe59889",
+    "id": "86e0313c22a76f38f0524abada4cb2f4297d2650ad2089de8eb5ebf9b9a8ad31",
+    "sig": "50053c6fb310da0c6ef0fb5feba31128d52d91d8cceed9c6e62322ec5764825ddcde5a6db49a25025719157da4bf49cc063407f822ba13cbbe9527a7d0db1260"
+  }
+}

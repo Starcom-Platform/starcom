@@ -1,0 +1,25 @@
+{
+  "name": "starcom-uplink",
+  "description": "Starcom Uplink: the browser extension for Starcom (decision D-EX)",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "wxt",
+    "dev:firefox": "wxt -b firefox",
+    "build": "wxt build",
+    "build:firefox": "wxt build -b firefox",
+    "zip": "wxt zip",
+    "zip:firefox": "wxt zip -b firefox",
+    "typecheck": "tsc --noEmit",
+    "postinstall": "wxt prepare"
+  },
+  "devDependencies": {
+    "typescript": "~5.6.2",
+    "vite": "^6.3.5",
+    "wxt": "^0.21.4"
+  },
+  "dependencies": {
+    "nostr-tools": "2.25.2"
+  }
+}

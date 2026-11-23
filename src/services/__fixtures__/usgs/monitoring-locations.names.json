@@ -1,0 +1,55 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "monitoring_location_name": "NEW R AT INTERNATIONAL BOUNDARY AT CALEXICO CA"
+   },
+   "id": "USGS-10254970",
+   "geometry": null
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "monitoring_location_name": "PROSSER C BL PROSSER C DAM NR TRUCKEE CA"
+   },
+   "id": "USGS-10340500",
+   "geometry": null
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "monitoring_location_name": "TRES PINOS C NR TRES PINOS CA"
+   },
+   "id": "USGS-11157500",
+   "geometry": null
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "monitoring_location_name": "SACRAMENTO R A FREEPORT CA"
+   },
+   "id": "USGS-11447650",
+   "geometry": null
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "monitoring_location_name": "TRINITY R NR BURNT RANCH CA"
+   },
+   "id": "USGS-11527000",
+   "geometry": null
+  }
+ ],
+ "numberReturned": 5,
+ "links": [
+  {
+   "type": "application/geo+json",
+   "rel": "self",
+   "title": "This document as GeoJSON",
+   "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/monitoring-locations/items?f=json&filter=id%20IN%20%28%27USGS-10254970%27,%27USGS-10340500%27,%27USGS-11157500%27,%27USGS-11447650%27,%27USGS-11527000%27%29&filter-lang=cql2-text&properties=monitoring_location_name&skipGeometry=true&limit=5"
+  }
+ ],
+ "timeStamp": "2026-10-07T05:53:18.648652Z"
+}

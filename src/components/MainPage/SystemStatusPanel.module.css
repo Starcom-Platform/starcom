@@ -1,0 +1,81 @@
+/* The status panel the strip opens (decision D-F, step 3.4). It borrows the strip's
+   own language rather than introducing a second one. */
+.panel {
+  width: min(560px, 92vw);
+  max-height: min(70vh, 640px);
+  overflow-y: auto;
+  background: rgba(20, 30, 40, 0.98);
+  border: 1px solid rgba(120, 160, 200, 0.5);
+  border-radius: 4px;
+  box-shadow: 0 8px 32px rgba(0, 20, 40, 0.6);
+  color: #e0f0ff;
+  font-family: var(--sc-font-display);
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 16px;
+  background: rgba(20, 30, 40, 0.98);
+  border-bottom: 1px solid rgba(120, 160, 200, 0.35);
+}
+
+.title {
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.close {
+  background: none;
+  border: 1px solid rgba(120, 160, 200, 0.4);
+  border-radius: 2px;
+  color: #b7d9ff;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+  padding: 2px 8px;
+}
+
+.close:hover {
+  background: rgba(120, 160, 200, 0.18);
+  color: #e0f0ff;
+}
+
+.readouts {
+  margin: 0;
+  padding: 8px 16px 16px;
+}
+
+.readout {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(120, 160, 200, 0.15);
+}
+
+.readout:last-child {
+  border-bottom: none;
+}
+
+.label {
+  margin: 0;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  color: #7fa8d8;
+}
+
+.value {
+  margin: 0;
+  font-size: 12px;
+  text-align: right;
+  color: #b7d9ff;
+  text-shadow: 0 0 5px rgba(0, 100, 255, 0.5);
+}

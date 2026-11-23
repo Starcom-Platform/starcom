@@ -1,0 +1,2467 @@
+{
+  "name": "__starcomShareCard",
+  "version": 84,
+  "properties": [
+    "version"
+  ],
+  "methods": {
+    "compose": {
+      "args": 1,
+      "options": [
+        "scale",
+        "preset",
+        "fit"
+      ]
+    },
+    "captureFrame": {
+      "args": 1,
+      "options": [
+        "scale",
+        "width",
+        "height",
+        "mimeType",
+        "quality",
+        "stillAt"
+      ]
+    },
+    "getView": {
+      "args": 0,
+      "options": []
+    },
+    "setView": {
+      "args": 2,
+      "options": [
+        "lat",
+        "lng",
+        "altitude",
+        "transitionMs",
+        "settleMs"
+      ]
+    },
+    "recordClip": {
+      "args": 1,
+      "options": [
+        "keyframes",
+        "fps",
+        "quality",
+        "settleMs",
+        "endCard",
+        "replay",
+        "sweep",
+        "countryNames",
+        "markStyle"
+      ]
+    },
+    "recordTour": {
+      "args": 1,
+      "options": [
+        "playlist",
+        "fps",
+        "quality",
+        "settleMs",
+        "endCard",
+        "timeoutMs",
+        "markStyle"
+      ]
+    },
+    "recordStory": {
+      "args": 1,
+      "options": [
+        "story",
+        "fps",
+        "quality",
+        "settleMs",
+        "endCard"
+      ]
+    },
+    "listLayers": {
+      "args": 0,
+      "options": []
+    },
+    "setLayer": {
+      "args": 2,
+      "options": [
+        "pin",
+        "clearOtherPins"
+      ]
+    },
+    "pinLayers": {
+      "args": 1,
+      "options": []
+    },
+    "setMarkerStyle": {
+      "args": 2,
+      "options": []
+    },
+    "whenReady": {
+      "args": 1,
+      "options": [
+        "timeoutMs",
+        "address"
+      ]
+    },
+    "listReports": {
+      "args": 1,
+      "options": [
+        "counts",
+        "area"
+      ]
+    },
+    "listGroups": {
+      "args": 0,
+      "options": []
+    },
+    "listAreas": {
+      "args": 0,
+      "options": []
+    },
+    "frameReports": {
+      "args": 2,
+      "options": [
+        "preset",
+        "transitionMs",
+        "settleMs"
+      ]
+    },
+    "frameArea": {
+      "args": 2,
+      "options": [
+        "preset",
+        "transitionMs",
+        "settleMs"
+      ]
+    },
+    "focusReport": {
+      "args": 1,
+      "options": []
+    },
+    "describeView": {
+      "args": 1,
+      "options": [
+        "preset",
+        "fit"
+      ]
+    },
+    "planReportTour": {
+      "args": 2,
+      "options": [
+        "preset",
+        "maxStops",
+        "holdMs",
+        "travelMs"
+      ]
+    },
+    "setTimeWindow": {
+      "args": 1,
+      "options": [
+        "from",
+        "until"
+      ]
+    },
+    "getTimeWindow": {
+      "args": 0,
+      "options": []
+    },
+    "renderBatch": {
+      "args": 2,
+      "options": [
+        "timeoutMs"
+      ]
+    },
+    "planShot": {
+      "args": 2,
+      "options": [
+        "timeoutMs"
+      ]
+    },
+    "renderShot": {
+      "args": 2,
+      "options": [
+        "timeoutMs"
+      ]
+    },
+    "layersFor": {
+      "args": 1,
+      "options": []
+    },
+    "composeFor": {
+      "args": 2,
+      "options": [
+        "template",
+        "preset",
+        "scale",
+        "timeoutMs"
+      ]
+    },
+    "setReportCap": {
+      "args": 1,
+      "options": []
+    },
+    "getReportCap": {
+      "args": 0,
+      "options": []
+    },
+    "setReportLook": {
+      "args": 1,
+      "options": []
+    },
+    "getReportLook": {
+      "args": 0,
+      "options": []
+    },
+    "setLayerChoices": {
+      "args": 2,
+      "options": []
+    },
+    "getLayerChoices": {
+      "args": 1,
+      "options": []
+    },
+    "setWeather": {
+      "args": 1,
+      "options": [
+        "colour",
+        "wind",
+        "clouds"
+      ]
+    },
+    "getWeather": {
+      "args": 0,
+      "options": []
+    },
+    "setScale": {
+      "args": 1,
+      "options": []
+    },
+    "getScale": {
+      "args": 0,
+      "options": []
+    },
+    "setCompare": {
+      "args": 1,
+      "options": [
+        "left",
+        "right",
+        "layer",
+        "earlier",
+        "window",
+        "ahead"
+      ]
+    },
+    "getCompare": {
+      "args": 0,
+      "options": []
+    },
+    "setSky": {
+      "args": 1,
+      "options": [
+        "az",
+        "alt",
+        "fov"
+      ]
+    },
+    "getSky": {
+      "args": 0,
+      "options": []
+    },
+    "whatsNew": {
+      "args": 2,
+      "options": [
+        "until"
+      ]
+    }
+  },
+  "shot": {
+    "version": 1,
+    "built": [
+      "v",
+      "subject.address",
+      "subject.view",
+      "subject.brief",
+      "subject.area",
+      "subject.theatre",
+      "subject.theatres",
+      "subject.tonight",
+      "subject.week",
+      "subject.declassified",
+      "subject.psiEvent",
+      "subject.at",
+      "subject.psiBriefing",
+      "layers.primary",
+      "layers.pins",
+      "time.live",
+      "time.window",
+      "time.at",
+      "emphasis.featured",
+      "framing.fit",
+      "appearance.skin",
+      "appearance.light",
+      "appearance.nightFill",
+      "appearance.territories",
+      "appearance.countryNames",
+      "appearance.markStyle",
+      "appearance.psiLooks",
+      "card.preset",
+      "card.template",
+      "card.qr",
+      "card.inset",
+      "card.strip",
+      "card.chart",
+      "output.type",
+      "output.quality",
+      "output.scale",
+      "output.maxBytes",
+      "output.alt"
+    ],
+    "notBuilt": [
+      "subject.mission",
+      "framing.tilt",
+      "framing.padding",
+      "framing.offset",
+      "layers.opacity",
+      "emphasis.others",
+      "appearance.clouds",
+      "appearance.atmosphere",
+      "card.timeZone",
+      "card.callouts"
+    ]
+  },
+  "batchRequest": [
+    "address",
+    "area",
+    "theatre",
+    "brief",
+    "theatres",
+    "tonight",
+    "week",
+    "declassified",
+    "psiEvent",
+    "at",
+    "psiBriefing",
+    "preset",
+    "layers",
+    "window",
+    "template"
+  ],
+  "stripLanes": [
+    "windows",
+    "kp",
+    "bodies"
+  ],
+  "sweep": {
+    "fields": [
+      "from",
+      "until",
+      "step"
+    ],
+    "maxSeconds": 86400,
+    "maxSecondsWithoutForecasts": 34560000,
+    "forecastLayers": [
+      "EarthWeather",
+      "SpaceWeather"
+    ],
+    "minStepSeconds": 60
+  },
+  "endCards": [
+    "read",
+    "poster"
+  ],
+  "playlists": [
+    "war",
+    "raves",
+    "heat",
+    "heroes"
+  ],
+  "replayPaces": [
+    "even",
+    "time"
+  ],
+  "replayBounds": [
+    "from",
+    "until"
+  ],
+  "replaySpans": [
+    "named",
+    "window",
+    "reports"
+  ],
+  "replayQuakeDecays": [
+    1,
+    4,
+    10
+  ],
+  "compareMomentLayers": [
+    "EcologicalDisasters",
+    "EarthWeather"
+  ],
+  "compareEarlier": [
+    "1w",
+    "1mo",
+    "1y",
+    "10y"
+  ],
+  "compareAhead": [
+    6,
+    12,
+    24,
+    72,
+    168
+  ],
+  "typeSteps": [
+    "larger",
+    "compact"
+  ],
+  "reportCap": {
+    "steps": [
+      50,
+      100,
+      250,
+      500
+    ],
+    "max": 1000,
+    "min": 10,
+    "default": 50,
+    "named": [
+      "max",
+      "unlimited"
+    ]
+  },
+  "reportCategories": {
+    "words": [
+      {
+        "word": "conflict",
+        "meaning": "conflict and war",
+        "icon": "swords"
+      },
+      {
+        "word": "charity",
+        "meaning": "charities",
+        "icon": "hand-heart"
+      },
+      {
+        "word": "health",
+        "meaning": "health and outbreaks",
+        "icon": "heart-pulse"
+      },
+      {
+        "word": "funding",
+        "meaning": "funding and grants",
+        "icon": "banknote"
+      },
+      {
+        "word": "civic",
+        "meaning": "civic process and public comment",
+        "icon": "landmark"
+      },
+      {
+        "word": "cyber",
+        "meaning": "cyber security",
+        "icon": "shield-alert"
+      },
+      {
+        "word": "safety",
+        "meaning": "safety and recalls",
+        "icon": "hard-hat"
+      },
+      {
+        "word": "intel",
+        "meaning": "intelligence and convergence",
+        "icon": "radar"
+      },
+      {
+        "word": "world",
+        "meaning": "world news",
+        "icon": "globe"
+      },
+      {
+        "word": "remedy",
+        "meaning": "remedies and redress",
+        "icon": "scale"
+      },
+      {
+        "word": "hazard",
+        "meaning": "natural hazards",
+        "icon": "cloud-lightning"
+      },
+      {
+        "word": "digital",
+        "meaning": "connectivity and shutdowns",
+        "icon": "wifi"
+      },
+      {
+        "word": "aid",
+        "meaning": "disaster aid",
+        "icon": "life-buoy"
+      },
+      {
+        "word": "accountability",
+        "meaning": "accountability and exclusions",
+        "icon": "gavel"
+      }
+    ],
+    "other": {
+      "meaning": "another category",
+      "icon": "tag"
+    }
+  },
+  "areas": [
+    {
+      "code": "continent:africa",
+      "kind": "continent",
+      "name": "Africa"
+    },
+    {
+      "code": "continent:antarctica",
+      "kind": "continent",
+      "name": "Antarctica"
+    },
+    {
+      "code": "continent:asia",
+      "kind": "continent",
+      "name": "Asia"
+    },
+    {
+      "code": "continent:europe",
+      "kind": "continent",
+      "name": "Europe"
+    },
+    {
+      "code": "continent:north-america",
+      "kind": "continent",
+      "name": "North America"
+    },
+    {
+      "code": "continent:oceania",
+      "kind": "continent",
+      "name": "Oceania"
+    },
+    {
+      "code": "continent:south-america",
+      "kind": "continent",
+      "name": "South America"
+    },
+    {
+      "code": "union:eu",
+      "kind": "union",
+      "name": "European Union"
+    },
+    {
+      "code": "union:au",
+      "kind": "union",
+      "name": "African Union"
+    },
+    {
+      "code": "union:asean",
+      "kind": "union",
+      "name": "Association of Southeast Asian Nations"
+    },
+    {
+      "code": "union:arab-league",
+      "kind": "union",
+      "name": "League of Arab States"
+    },
+    {
+      "code": "union:gcc",
+      "kind": "union",
+      "name": "Gulf Cooperation Council"
+    },
+    {
+      "code": "union:mercosur",
+      "kind": "union",
+      "name": "Mercosur"
+    },
+    {
+      "code": "sphere:anglosphere",
+      "kind": "sphere",
+      "name": "Anglosphere"
+    },
+    {
+      "code": "sphere:francophonie",
+      "kind": "sphere",
+      "name": "Francophonie"
+    },
+    {
+      "code": "sphere:hispanosphere",
+      "kind": "sphere",
+      "name": "Hispanosphere"
+    },
+    {
+      "code": "sphere:lusosphere",
+      "kind": "sphere",
+      "name": "Lusosphere"
+    },
+    {
+      "code": "sphere:sinosphere",
+      "kind": "sphere",
+      "name": "Sinosphere"
+    },
+    {
+      "code": "sphere:russophone",
+      "kind": "sphere",
+      "name": "Russophone world"
+    },
+    {
+      "code": "sphere:arabophone",
+      "kind": "sphere",
+      "name": "Arabophone world"
+    },
+    {
+      "code": "sphere:turkic",
+      "kind": "sphere",
+      "name": "Turkic world"
+    },
+    {
+      "code": "sphere:persianate",
+      "kind": "sphere",
+      "name": "Persianate world"
+    },
+    {
+      "code": "sphere:germanosphere",
+      "kind": "sphere",
+      "name": "Germanosphere"
+    },
+    {
+      "code": "sphere:malay",
+      "kind": "sphere",
+      "name": "Malay world"
+    },
+    {
+      "code": "sphere:swahili",
+      "kind": "sphere",
+      "name": "Swahili sphere"
+    },
+    {
+      "code": "sphere:nordic",
+      "kind": "sphere",
+      "name": "Nordic world"
+    },
+    {
+      "code": "union:brics",
+      "kind": "union",
+      "name": "BRICS"
+    },
+    {
+      "code": "union:nato",
+      "kind": "union",
+      "name": "North Atlantic Treaty Organization"
+    },
+    {
+      "code": "union:sco",
+      "kind": "union",
+      "name": "Shanghai Cooperation Organisation"
+    },
+    {
+      "code": "union:opec",
+      "kind": "union",
+      "name": "Organization of the Petroleum Exporting Countries"
+    },
+    {
+      "code": "union:commonwealth",
+      "kind": "union",
+      "name": "Commonwealth of Nations"
+    },
+    {
+      "code": "union:oas",
+      "kind": "union",
+      "name": "Organization of American States"
+    },
+    {
+      "code": "union:ecowas",
+      "kind": "union",
+      "name": "Economic Community of West African States"
+    },
+    {
+      "code": "union:csto",
+      "kind": "union",
+      "name": "Collective Security Treaty Organization"
+    },
+    {
+      "code": "union:pif",
+      "kind": "union",
+      "name": "Pacific Islands Forum"
+    },
+    {
+      "code": "terra:africana",
+      "kind": "terra",
+      "name": "Terra Africana"
+    },
+    {
+      "code": "zone:atlas",
+      "kind": "zone",
+      "name": "Atlas Zone"
+    },
+    {
+      "code": "zone:reguibat-taoudeni",
+      "kind": "zone",
+      "name": "Reguibat and Taoudeni Zone"
+    },
+    {
+      "code": "zone:senegal-basin",
+      "kind": "zone",
+      "name": "Senegal Basin Zone"
+    },
+    {
+      "code": "zone:leo-man",
+      "kind": "zone",
+      "name": "Leo–Man Shield and the Guinea Coast Zone"
+    },
+    {
+      "code": "zone:saharan-basins",
+      "kind": "zone",
+      "name": "Ghadames, Illizi and Murzuq Zone"
+    },
+    {
+      "code": "zone:tuareg-shield",
+      "kind": "zone",
+      "name": "Tuareg Shield and Iullemmeden Zone"
+    },
+    {
+      "code": "zone:sirte-ionian",
+      "kind": "zone",
+      "name": "Sirte and the Ionian–Levantine Sea Zone"
+    },
+    {
+      "code": "zone:libyan-desert-nile",
+      "kind": "zone",
+      "name": "Libyan Desert and the Nile Delta Zone"
+    },
+    {
+      "code": "zone:nubian-shield",
+      "kind": "zone",
+      "name": "Nubian Shield Zone"
+    },
+    {
+      "code": "zone:red-sea-aden-africa",
+      "kind": "zone",
+      "name": "Red Sea and Gulf of Aden, African Margin Zone"
+    },
+    {
+      "code": "zone:central-african-rifts",
+      "kind": "zone",
+      "name": "Chad, Darfur and the Sudanese Rifts Zone"
+    },
+    {
+      "code": "zone:niger-benue",
+      "kind": "zone",
+      "name": "Niger Delta and the Benue Trough Zone"
+    },
+    {
+      "code": "zone:congo-basin",
+      "kind": "zone",
+      "name": "Congo Basin Zone"
+    },
+    {
+      "code": "zone:west-congo-angola",
+      "kind": "zone",
+      "name": "West Congo Belt and the Angolan Margin Zone"
+    },
+    {
+      "code": "zone:horn-of-africa",
+      "kind": "zone",
+      "name": "Horn of Africa Zone"
+    },
+    {
+      "code": "zone:east-african-rift",
+      "kind": "zone",
+      "name": "East African Rift Zone"
+    },
+    {
+      "code": "zone:swahili-coast",
+      "kind": "zone",
+      "name": "Tanzania and Mozambique Coastal Basins Zone"
+    },
+    {
+      "code": "zone:kalahari-damara",
+      "kind": "zone",
+      "name": "Kalahari and the Damara Belt Zone"
+    },
+    {
+      "code": "zone:kaapvaal-karoo-cape",
+      "kind": "zone",
+      "name": "Kaapvaal, Karoo and the Cape Zone"
+    },
+    {
+      "code": "zone:madagascar-seychelles",
+      "kind": "zone",
+      "name": "Madagascar and the Seychelles Zone"
+    },
+    {
+      "code": "terra:arabica",
+      "kind": "terra",
+      "name": "Terra Arabica"
+    },
+    {
+      "code": "zone:levant",
+      "kind": "zone",
+      "name": "Levant Zone"
+    },
+    {
+      "code": "zone:arabian-shield",
+      "kind": "zone",
+      "name": "Arabian Shield Zone"
+    },
+    {
+      "code": "zone:red-sea-aden-arabia",
+      "kind": "zone",
+      "name": "Red Sea, Arabian Margin Zone"
+    },
+    {
+      "code": "zone:yemen-aden",
+      "kind": "zone",
+      "name": "Yemen Highlands and the Gulf of Aden Zone"
+    },
+    {
+      "code": "zone:rub-al-khali",
+      "kind": "zone",
+      "name": "Rub' al Khali Zone"
+    },
+    {
+      "code": "zone:oman",
+      "kind": "zone",
+      "name": "Oman Mountains and Salt Basins Zone"
+    },
+    {
+      "code": "zone:central-arabian-arch",
+      "kind": "zone",
+      "name": "Central Arabian Arch Zone"
+    },
+    {
+      "code": "zone:mesopotamia-gulf",
+      "kind": "zone",
+      "name": "Mesopotamia and the Persian Gulf Zone"
+    },
+    {
+      "code": "zone:widyan-arches",
+      "kind": "zone",
+      "name": "Widyan and the Northern Arches Zone"
+    },
+    {
+      "code": "terra:europaea",
+      "kind": "terra",
+      "name": "Terra Europaea"
+    },
+    {
+      "code": "zone:fennoscandian-shield",
+      "kind": "zone",
+      "name": "Fennoscandian Shield and the Caledonides Zone"
+    },
+    {
+      "code": "zone:barents-shelf",
+      "kind": "zone",
+      "name": "Barents Shelf Zone"
+    },
+    {
+      "code": "zone:urals-novaya-zemlya",
+      "kind": "zone",
+      "name": "Urals and Novaya Zemlya Zone"
+    },
+    {
+      "code": "zone:timan-pechora",
+      "kind": "zone",
+      "name": "Timan–Pechora Zone"
+    },
+    {
+      "code": "zone:volga-ural",
+      "kind": "zone",
+      "name": "Volga–Ural Zone"
+    },
+    {
+      "code": "zone:moscow-voronezh",
+      "kind": "zone",
+      "name": "Moscow Basin and the Voronezh High Zone"
+    },
+    {
+      "code": "zone:ukrainian-shield",
+      "kind": "zone",
+      "name": "Ukrainian Shield and the Dnieper–Donets Zone"
+    },
+    {
+      "code": "zone:pontic-caspian-steppe",
+      "kind": "zone",
+      "name": "Pontic–Caspian Steppe Zone"
+    },
+    {
+      "code": "zone:black-sea-north",
+      "kind": "zone",
+      "name": "Black Sea, European Margin Zone"
+    },
+    {
+      "code": "zone:north-european-plain",
+      "kind": "zone",
+      "name": "North European Plain and the Baltic Zone"
+    },
+    {
+      "code": "zone:north-sea-british-isles",
+      "kind": "zone",
+      "name": "North Sea and the British Isles Zone"
+    },
+    {
+      "code": "zone:paris-basin-massifs",
+      "kind": "zone",
+      "name": "Paris Basin and the Hercynian Massifs Zone"
+    },
+    {
+      "code": "zone:alps",
+      "kind": "zone",
+      "name": "Alps Zone"
+    },
+    {
+      "code": "zone:carpathians-pannonian",
+      "kind": "zone",
+      "name": "Carpathians and the Pannonian Basin Zone"
+    },
+    {
+      "code": "zone:apennines-tyrrhenian",
+      "kind": "zone",
+      "name": "Apennines and the Tyrrhenian Sea Zone"
+    },
+    {
+      "code": "zone:balkans",
+      "kind": "zone",
+      "name": "Balkans Zone"
+    },
+    {
+      "code": "zone:iberia",
+      "kind": "zone",
+      "name": "Iberian Massif and the Betics Zone"
+    },
+    {
+      "code": "zone:western-mediterranean",
+      "kind": "zone",
+      "name": "Western Mediterranean Basin Zone"
+    },
+    {
+      "code": "terra:tethyana",
+      "kind": "terra",
+      "name": "Terra Tethyana"
+    },
+    {
+      "code": "zone:anatolian-plateau",
+      "kind": "zone",
+      "name": "Anatolian Plateau and the Taurus Zone"
+    },
+    {
+      "code": "zone:pontides",
+      "kind": "zone",
+      "name": "Pontic Mountains Zone"
+    },
+    {
+      "code": "zone:western-anatolia",
+      "kind": "zone",
+      "name": "Western Anatolia and the Menderes Massif Zone"
+    },
+    {
+      "code": "zone:lesser-caucasus",
+      "kind": "zone",
+      "name": "Lesser Caucasus and the Armenian Highlands Zone"
+    },
+    {
+      "code": "zone:caucasus",
+      "kind": "zone",
+      "name": "Caucasus Zone"
+    },
+    {
+      "code": "zone:caspian-sea",
+      "kind": "zone",
+      "name": "Caspian Sea Zone"
+    },
+    {
+      "code": "zone:black-sea-south",
+      "kind": "zone",
+      "name": "Black Sea, Anatolian Margin Zone"
+    },
+    {
+      "code": "zone:zagros",
+      "kind": "zone",
+      "name": "Zagros Zone"
+    },
+    {
+      "code": "zone:iranian-plateau",
+      "kind": "zone",
+      "name": "Iranian Plateau Zone"
+    },
+    {
+      "code": "zone:alborz-kopet-dag",
+      "kind": "zone",
+      "name": "Alborz and Kopet Dag Zone"
+    },
+    {
+      "code": "zone:makran-baluchistan",
+      "kind": "zone",
+      "name": "Makran and Baluchistan Zone"
+    },
+    {
+      "code": "zone:hindu-kush",
+      "kind": "zone",
+      "name": "Hindu Kush and the Afghan Blocks Zone"
+    },
+    {
+      "code": "zone:pamirs",
+      "kind": "zone",
+      "name": "Pamirs Zone"
+    },
+    {
+      "code": "zone:tian-shan",
+      "kind": "zone",
+      "name": "Tian Shan Zone"
+    },
+    {
+      "code": "zone:karakum-amu-darya",
+      "kind": "zone",
+      "name": "Karakum and the Amu Darya Zone"
+    },
+    {
+      "code": "zone:aral-syr-darya",
+      "kind": "zone",
+      "name": "Aral Sea, the Syr Darya and the Ustyurt Zone"
+    },
+    {
+      "code": "terra:borealis",
+      "kind": "terra",
+      "name": "Terra Borealis"
+    },
+    {
+      "code": "zone:west-siberian-basin",
+      "kind": "zone",
+      "name": "West Siberian Basin Zone"
+    },
+    {
+      "code": "zone:taimyr-kara",
+      "kind": "zone",
+      "name": "Taimyr and the Kara Sea Zone"
+    },
+    {
+      "code": "zone:tunguska",
+      "kind": "zone",
+      "name": "Tunguska Basin and the Yenisey Ridge Zone"
+    },
+    {
+      "code": "zone:angara-lena",
+      "kind": "zone",
+      "name": "Angara–Lena Platform Zone"
+    },
+    {
+      "code": "zone:anabar",
+      "kind": "zone",
+      "name": "Anabar Shield Zone"
+    },
+    {
+      "code": "zone:lena-vilyuy",
+      "kind": "zone",
+      "name": "Lena–Vilyuy Basin Zone"
+    },
+    {
+      "code": "zone:aldan-stanovoy",
+      "kind": "zone",
+      "name": "Aldan Shield and the Stanovoy Zone"
+    },
+    {
+      "code": "zone:baikal-patom",
+      "kind": "zone",
+      "name": "Baikal–Patom Highlands Zone"
+    },
+    {
+      "code": "zone:altai-sayan",
+      "kind": "zone",
+      "name": "Altai, Sayan and Kuznetsk Zone"
+    },
+    {
+      "code": "zone:kazakh-uplands",
+      "kind": "zone",
+      "name": "Kazakh Uplands and the Turgay Zone"
+    },
+    {
+      "code": "zone:verkhoyansk-chukotka",
+      "kind": "zone",
+      "name": "Verkhoyansk and Chukotka Zone"
+    },
+    {
+      "code": "zone:laptev-east-siberian",
+      "kind": "zone",
+      "name": "Laptev and East Siberian Shelves Zone"
+    },
+    {
+      "code": "zone:kamchatka-koryak",
+      "kind": "zone",
+      "name": "Kamchatka and the Koryak Highlands Zone"
+    },
+    {
+      "code": "zone:okhotsk-north",
+      "kind": "zone",
+      "name": "Sea of Okhotsk, Northern Margin Zone"
+    },
+    {
+      "code": "terra:sinica",
+      "kind": "terra",
+      "name": "Terra Sinica"
+    },
+    {
+      "code": "zone:tarim",
+      "kind": "zone",
+      "name": "Tarim Basin Zone"
+    },
+    {
+      "code": "zone:dzungaria",
+      "kind": "zone",
+      "name": "Dzungaria Zone"
+    },
+    {
+      "code": "zone:qiangtang",
+      "kind": "zone",
+      "name": "Qiangtang and the Changtang Zone"
+    },
+    {
+      "code": "zone:lhasa-block",
+      "kind": "zone",
+      "name": "Lhasa Block and the Tsangpo Zone"
+    },
+    {
+      "code": "zone:kunlun-qaidam",
+      "kind": "zone",
+      "name": "Kunlun and the Qaidam Zone"
+    },
+    {
+      "code": "zone:qilian-alxa",
+      "kind": "zone",
+      "name": "Qilian Shan and the Alxa Zone"
+    },
+    {
+      "code": "zone:songpan-ganzi",
+      "kind": "zone",
+      "name": "Songpan–Ganzi and the Longmen Shan Zone"
+    },
+    {
+      "code": "zone:sichuan",
+      "kind": "zone",
+      "name": "Sichuan Basin Zone"
+    },
+    {
+      "code": "zone:ordos-loess",
+      "kind": "zone",
+      "name": "Ordos and the Loess Plateau Zone"
+    },
+    {
+      "code": "zone:north-china-plain",
+      "kind": "zone",
+      "name": "North China Plain and the Yellow Sea Zone"
+    },
+    {
+      "code": "zone:qinling-dabie",
+      "kind": "zone",
+      "name": "Qinling–Dabie Zone"
+    },
+    {
+      "code": "zone:yangtze",
+      "kind": "zone",
+      "name": "Yangtze Platform Zone"
+    },
+    {
+      "code": "zone:south-china",
+      "kind": "zone",
+      "name": "South China and the Pearl River Zone"
+    },
+    {
+      "code": "zone:east-china-sea-taiwan",
+      "kind": "zone",
+      "name": "East China Sea, Taiwan and the Ryukyus Zone"
+    },
+    {
+      "code": "zone:korean-peninsula",
+      "kind": "zone",
+      "name": "Korean Peninsula Zone"
+    },
+    {
+      "code": "zone:japan",
+      "kind": "zone",
+      "name": "Japan Arc and the Sea of Japan Zone"
+    },
+    {
+      "code": "zone:manchuria",
+      "kind": "zone",
+      "name": "Manchuria and the Greater Khingan Zone"
+    },
+    {
+      "code": "zone:mongolian-plateau",
+      "kind": "zone",
+      "name": "Mongolian Plateau Zone"
+    },
+    {
+      "code": "zone:amur-sikhote-alin",
+      "kind": "zone",
+      "name": "Amur and the Sikhote-Alin Zone"
+    },
+    {
+      "code": "zone:sakhalin-okhotsk",
+      "kind": "zone",
+      "name": "Sakhalin, the Kurils and the Sea of Okhotsk Zone"
+    },
+    {
+      "code": "terra:indica",
+      "kind": "terra",
+      "name": "Terra Indica"
+    },
+    {
+      "code": "zone:himalaya",
+      "kind": "zone",
+      "name": "Himalaya Zone"
+    },
+    {
+      "code": "zone:ganges-plain",
+      "kind": "zone",
+      "name": "Ganges Plain Zone"
+    },
+    {
+      "code": "zone:indus",
+      "kind": "zone",
+      "name": "Indus Basin Zone"
+    },
+    {
+      "code": "zone:sulaiman-kirthar",
+      "kind": "zone",
+      "name": "Sulaiman and Kirthar Ranges Zone"
+    },
+    {
+      "code": "zone:cambay-bombay",
+      "kind": "zone",
+      "name": "Cambay Rift and Bombay High Zone"
+    },
+    {
+      "code": "zone:konkan",
+      "kind": "zone",
+      "name": "Konkan and the Western Margin Zone"
+    },
+    {
+      "code": "zone:indian-shield",
+      "kind": "zone",
+      "name": "Deccan, the Indian Shield and the Gondwana Rifts Zone"
+    },
+    {
+      "code": "zone:east-coast-basins",
+      "kind": "zone",
+      "name": "East Coast Basins Zone"
+    },
+    {
+      "code": "zone:bengal-assam",
+      "kind": "zone",
+      "name": "Bengal Basin and Assam Zone"
+    },
+    {
+      "code": "zone:sri-lanka",
+      "kind": "zone",
+      "name": "Sri Lanka Zone"
+    },
+    {
+      "code": "terra:sundaica",
+      "kind": "terra",
+      "name": "Terra Sundaica"
+    },
+    {
+      "code": "zone:indo-burman-irrawaddy",
+      "kind": "zone",
+      "name": "Indo-Burman Ranges and the Irrawaddy Zone"
+    },
+    {
+      "code": "zone:shan-tenasserim",
+      "kind": "zone",
+      "name": "Shan Plateau and the Tenasserim Zone"
+    },
+    {
+      "code": "zone:annamite-khorat",
+      "kind": "zone",
+      "name": "Annamite Range and the Khorat Plateau Zone"
+    },
+    {
+      "code": "zone:mekong-gulf-thailand",
+      "kind": "zone",
+      "name": "Mekong Delta and the Gulf of Thailand Zone"
+    },
+    {
+      "code": "zone:malay-peninsula",
+      "kind": "zone",
+      "name": "Malay Peninsula and the Thai Basins Zone"
+    },
+    {
+      "code": "zone:sunda-arc",
+      "kind": "zone",
+      "name": "Sunda Arc: Sumatra, Java and the Lesser Sundas Zone"
+    },
+    {
+      "code": "zone:sunda-shelf",
+      "kind": "zone",
+      "name": "Sunda Shelf and the Java Sea Zone"
+    },
+    {
+      "code": "zone:borneo",
+      "kind": "zone",
+      "name": "Borneo Zone"
+    },
+    {
+      "code": "zone:south-china-sea",
+      "kind": "zone",
+      "name": "South China Sea Zone"
+    },
+    {
+      "code": "zone:philippines",
+      "kind": "zone",
+      "name": "Philippine Mobile Belt and the Sulu Sea Zone"
+    },
+    {
+      "code": "zone:wallacea",
+      "kind": "zone",
+      "name": "Wallacea Zone"
+    },
+    {
+      "code": "terra:sahulica",
+      "kind": "terra",
+      "name": "Terra Sahulica"
+    },
+    {
+      "code": "zone:yilgarn-pilbara",
+      "kind": "zone",
+      "name": "Yilgarn and Pilbara Cratons Zone"
+    },
+    {
+      "code": "zone:western-margin",
+      "kind": "zone",
+      "name": "Western Margin and the North West Shelf Zone"
+    },
+    {
+      "code": "zone:kimberley-canning",
+      "kind": "zone",
+      "name": "Kimberley and the Canning Basin Zone"
+    },
+    {
+      "code": "zone:north-australian-craton",
+      "kind": "zone",
+      "name": "North Australian Craton Zone"
+    },
+    {
+      "code": "zone:central-australia",
+      "kind": "zone",
+      "name": "Central Australian Basins and Ranges Zone"
+    },
+    {
+      "code": "zone:gawler-eucla",
+      "kind": "zone",
+      "name": "Gawler Craton and the Eucla Zone"
+    },
+    {
+      "code": "zone:great-artesian",
+      "kind": "zone",
+      "name": "Great Artesian Basin Zone"
+    },
+    {
+      "code": "zone:murray-darling",
+      "kind": "zone",
+      "name": "Murray–Darling and the Flinders Ranges Zone"
+    },
+    {
+      "code": "zone:tasmanides",
+      "kind": "zone",
+      "name": "Great Dividing Range and the Tasmanides Zone"
+    },
+    {
+      "code": "zone:tasmania-bass",
+      "kind": "zone",
+      "name": "Tasmania and Bass Strait Zone"
+    },
+    {
+      "code": "zone:coral-sea",
+      "kind": "zone",
+      "name": "Coral Sea Plateaus and the Great Barrier Reef Zone"
+    },
+    {
+      "code": "zone:new-guinea-highlands",
+      "kind": "zone",
+      "name": "New Guinea Highlands and the Mobile Belt Zone"
+    },
+    {
+      "code": "zone:arafura-papua",
+      "kind": "zone",
+      "name": "Arafura Shelf, Papua and the Bird's Head Zone"
+    },
+    {
+      "code": "zone:new-zealand",
+      "kind": "zone",
+      "name": "New Zealand Zone"
+    },
+    {
+      "code": "zone:new-caledonia",
+      "kind": "zone",
+      "name": "New Caledonia and the Norfolk Ridge Zone"
+    },
+    {
+      "code": "terra:laurentia",
+      "kind": "terra",
+      "name": "Terra Laurentia"
+    },
+    {
+      "code": "zone:canadian-shield",
+      "kind": "zone",
+      "name": "Canadian Shield Zone"
+    },
+    {
+      "code": "zone:hudson-bay",
+      "kind": "zone",
+      "name": "Hudson Bay Zone"
+    },
+    {
+      "code": "zone:arctic-archipelago",
+      "kind": "zone",
+      "name": "Arctic Archipelago and Baffin Bay Zone"
+    },
+    {
+      "code": "zone:greenland-shield",
+      "kind": "zone",
+      "name": "Greenland Shield Zone"
+    },
+    {
+      "code": "zone:east-greenland",
+      "kind": "zone",
+      "name": "East Greenland Caledonides Zone"
+    },
+    {
+      "code": "zone:mackenzie",
+      "kind": "zone",
+      "name": "Mackenzie Basin and Mountains Zone"
+    },
+    {
+      "code": "zone:interior-plains",
+      "kind": "zone",
+      "name": "Interior Plains: Alberta and Williston Zone"
+    },
+    {
+      "code": "zone:cordillera",
+      "kind": "zone",
+      "name": "Canadian Cordillera Zone"
+    },
+    {
+      "code": "zone:alaska-bering",
+      "kind": "zone",
+      "name": "Alaska and the Bering Shelf Zone"
+    },
+    {
+      "code": "zone:pacific-coast",
+      "kind": "zone",
+      "name": "Pacific Coast Ranges and the Central Valley Zone"
+    },
+    {
+      "code": "zone:basin-and-range",
+      "kind": "zone",
+      "name": "Basin and Range and the Gulf of California Zone"
+    },
+    {
+      "code": "zone:rockies-colorado-plateau",
+      "kind": "zone",
+      "name": "Rocky Mountains and the Colorado Plateau Zone"
+    },
+    {
+      "code": "zone:great-plains",
+      "kind": "zone",
+      "name": "Great Plains and the Midcontinent Zone"
+    },
+    {
+      "code": "zone:gulf-of-mexico",
+      "kind": "zone",
+      "name": "Gulf of Mexico Basin and Yucatán Zone"
+    },
+    {
+      "code": "zone:great-lakes",
+      "kind": "zone",
+      "name": "Great Lakes and the Interior Lowlands Zone"
+    },
+    {
+      "code": "zone:appalachians",
+      "kind": "zone",
+      "name": "Appalachians Zone"
+    },
+    {
+      "code": "zone:atlantic-margin",
+      "kind": "zone",
+      "name": "Atlantic Margin and the Grand Banks Zone"
+    },
+    {
+      "code": "zone:sierras-madres",
+      "kind": "zone",
+      "name": "Sierras Madres and the Mexican Plateau Zone"
+    },
+    {
+      "code": "zone:central-america",
+      "kind": "zone",
+      "name": "Central American Isthmus Zone"
+    },
+    {
+      "code": "zone:caribbean",
+      "kind": "zone",
+      "name": "Caribbean Sea and the Antilles Zone"
+    },
+    {
+      "code": "terra:amazonia",
+      "kind": "terra",
+      "name": "Terra Amazonia"
+    },
+    {
+      "code": "zone:guiana-shield",
+      "kind": "zone",
+      "name": "Guiana Shield Zone"
+    },
+    {
+      "code": "zone:brazilian-shield",
+      "kind": "zone",
+      "name": "Brazilian Shield Zone"
+    },
+    {
+      "code": "zone:amazon-basin",
+      "kind": "zone",
+      "name": "Amazon Basin Zone"
+    },
+    {
+      "code": "zone:equatorial-margin",
+      "kind": "zone",
+      "name": "Amazon Fan and the Equatorial Margin Zone"
+    },
+    {
+      "code": "zone:parnaiba-sao-francisco",
+      "kind": "zone",
+      "name": "Parnaíba and São Francisco Basins Zone"
+    },
+    {
+      "code": "zone:east-brazilian-margin",
+      "kind": "zone",
+      "name": "East Brazilian Margin Zone"
+    },
+    {
+      "code": "zone:parana",
+      "kind": "zone",
+      "name": "Paraná Basin and the Pelotas Margin Zone"
+    },
+    {
+      "code": "zone:chaco-pampas",
+      "kind": "zone",
+      "name": "Chaco and the Pampas Zone"
+    },
+    {
+      "code": "zone:sub-andean-foreland",
+      "kind": "zone",
+      "name": "Sub-Andean Foreland Basins Zone"
+    },
+    {
+      "code": "zone:northern-andes",
+      "kind": "zone",
+      "name": "Northern Andes and the Caribbean Coast Zone"
+    },
+    {
+      "code": "zone:llanos-orinoco",
+      "kind": "zone",
+      "name": "Llanos and the Orinoco Zone"
+    },
+    {
+      "code": "zone:andes",
+      "kind": "zone",
+      "name": "Central and Southern Andes Zone"
+    },
+    {
+      "code": "zone:pacific-forearc",
+      "kind": "zone",
+      "name": "Pacific Forearc Basins Zone"
+    },
+    {
+      "code": "zone:patagonia",
+      "kind": "zone",
+      "name": "Patagonia Zone"
+    },
+    {
+      "code": "zone:falkland-plateau",
+      "kind": "zone",
+      "name": "Falkland Plateau and the North Scotia Ridge Zone"
+    },
+    {
+      "code": "terra:antarctica",
+      "kind": "terra",
+      "name": "Terra Antarctica"
+    },
+    {
+      "code": "zone:antarctic-peninsula",
+      "kind": "zone",
+      "name": "Antarctic Peninsula and the South Shetlands Zone"
+    },
+    {
+      "code": "zone:weddell",
+      "kind": "zone",
+      "name": "Weddell Sea and the Filchner–Ronne Zone"
+    },
+    {
+      "code": "zone:queen-maud-land",
+      "kind": "zone",
+      "name": "Queen Maud Land Zone"
+    },
+    {
+      "code": "zone:amundsen-bellingshausen-shelf",
+      "kind": "zone",
+      "name": "Amundsen and Bellingshausen Shelf Zone"
+    },
+    {
+      "code": "zone:polar-plateau",
+      "kind": "zone",
+      "name": "Polar Plateau Zone"
+    },
+    {
+      "code": "zone:marie-byrd-land",
+      "kind": "zone",
+      "name": "Marie Byrd Land Zone"
+    },
+    {
+      "code": "zone:transantarctic-mountains",
+      "kind": "zone",
+      "name": "Transantarctic Mountains Zone"
+    },
+    {
+      "code": "zone:wilkes-land",
+      "kind": "zone",
+      "name": "Wilkes Land and the East Antarctic Shield Zone"
+    },
+    {
+      "code": "zone:ross",
+      "kind": "zone",
+      "name": "Ross Sea and the Ross Ice Shelf Zone"
+    },
+    {
+      "code": "mare:pacificum",
+      "kind": "mare",
+      "name": "Mare Pacificum"
+    },
+    {
+      "code": "zone:northwest-pacific-basin",
+      "kind": "zone",
+      "name": "Northwest Pacific Basin Zone"
+    },
+    {
+      "code": "zone:hawaiian-emperor",
+      "kind": "zone",
+      "name": "Hawaiian–Emperor Chain Zone"
+    },
+    {
+      "code": "zone:northeast-pacific-basin",
+      "kind": "zone",
+      "name": "Northeast Pacific Basin Zone"
+    },
+    {
+      "code": "zone:juan-de-fuca",
+      "kind": "zone",
+      "name": "Juan de Fuca Zone"
+    },
+    {
+      "code": "zone:clarion-clipperton",
+      "kind": "zone",
+      "name": "Clarion–Clipperton Zone"
+    },
+    {
+      "code": "zone:east-pacific-rise",
+      "kind": "zone",
+      "name": "East Pacific Rise Zone"
+    },
+    {
+      "code": "zone:galapagos",
+      "kind": "zone",
+      "name": "Galápagos Zone"
+    },
+    {
+      "code": "zone:peru-basin",
+      "kind": "zone",
+      "name": "Peru Basin Zone"
+    },
+    {
+      "code": "zone:rapa-nui-nazca",
+      "kind": "zone",
+      "name": "Rapa Nui–Nazca Ridge Zone"
+    },
+    {
+      "code": "zone:chile-rise",
+      "kind": "zone",
+      "name": "Chile Rise Zone"
+    },
+    {
+      "code": "zone:polynesian-superswell",
+      "kind": "zone",
+      "name": "Polynesian Superswell Zone"
+    },
+    {
+      "code": "zone:mid-pacific-seamounts",
+      "kind": "zone",
+      "name": "Mid-Pacific Seamount Zone"
+    },
+    {
+      "code": "zone:ontong-java",
+      "kind": "zone",
+      "name": "Ontong Java Plateau Zone"
+    },
+    {
+      "code": "zone:caroline",
+      "kind": "zone",
+      "name": "Caroline Zone"
+    },
+    {
+      "code": "zone:philippine-sea",
+      "kind": "zone",
+      "name": "Philippine Sea Zone"
+    },
+    {
+      "code": "zone:izu-bonin-mariana",
+      "kind": "zone",
+      "name": "Izu–Bonin–Mariana Arc Zone"
+    },
+    {
+      "code": "zone:melanesian-arcs",
+      "kind": "zone",
+      "name": "Melanesian Arcs Zone"
+    },
+    {
+      "code": "zone:tonga-kermadec",
+      "kind": "zone",
+      "name": "Tonga–Kermadec Arc Zone"
+    },
+    {
+      "code": "zone:southwest-pacific-basin",
+      "kind": "zone",
+      "name": "Southwest Pacific Basin Zone"
+    },
+    {
+      "code": "zone:macquarie-ridge",
+      "kind": "zone",
+      "name": "Macquarie Ridge Zone"
+    },
+    {
+      "code": "zone:zealandia-north",
+      "kind": "zone",
+      "name": "North Zealandia Zone"
+    },
+    {
+      "code": "zone:zealandia-south",
+      "kind": "zone",
+      "name": "South Zealandia Zone"
+    },
+    {
+      "code": "zone:tasman-basin",
+      "kind": "zone",
+      "name": "Tasman Basin Zone"
+    },
+    {
+      "code": "mare:atlanticum",
+      "kind": "mare",
+      "name": "Mare Atlanticum"
+    },
+    {
+      "code": "zone:nordic-seas",
+      "kind": "zone",
+      "name": "Nordic Seas Zone"
+    },
+    {
+      "code": "zone:iceland-plume",
+      "kind": "zone",
+      "name": "Iceland Plume Zone"
+    },
+    {
+      "code": "zone:labrador-sea",
+      "kind": "zone",
+      "name": "Labrador Sea Zone"
+    },
+    {
+      "code": "zone:north-american-basin",
+      "kind": "zone",
+      "name": "North American Basin Zone"
+    },
+    {
+      "code": "zone:north-mid-atlantic-ridge",
+      "kind": "zone",
+      "name": "North Mid-Atlantic Ridge Zone"
+    },
+    {
+      "code": "zone:azores-gibraltar",
+      "kind": "zone",
+      "name": "Azores–Gibraltar Zone"
+    },
+    {
+      "code": "zone:west-european-basin",
+      "kind": "zone",
+      "name": "West European Basin Zone"
+    },
+    {
+      "code": "zone:canary-basin",
+      "kind": "zone",
+      "name": "Canary Basin Zone"
+    },
+    {
+      "code": "zone:cape-verde",
+      "kind": "zone",
+      "name": "Cape Verde Zone"
+    },
+    {
+      "code": "zone:equatorial-atlantic",
+      "kind": "zone",
+      "name": "Equatorial Atlantic Zone"
+    },
+    {
+      "code": "zone:south-mid-atlantic-ridge",
+      "kind": "zone",
+      "name": "South Mid-Atlantic Ridge Zone"
+    },
+    {
+      "code": "zone:walvis-ridge",
+      "kind": "zone",
+      "name": "Walvis Ridge Zone"
+    },
+    {
+      "code": "zone:brazil-basin",
+      "kind": "zone",
+      "name": "Brazil Basin Zone"
+    },
+    {
+      "code": "zone:argentine-basin",
+      "kind": "zone",
+      "name": "Argentine Basin Zone"
+    },
+    {
+      "code": "zone:angola-basin",
+      "kind": "zone",
+      "name": "Angola Basin Zone"
+    },
+    {
+      "code": "zone:cape-basin",
+      "kind": "zone",
+      "name": "Cape Basin Zone"
+    },
+    {
+      "code": "mare:indicum",
+      "kind": "mare",
+      "name": "Mare Indicum"
+    },
+    {
+      "code": "zone:carlsberg-central-indian-ridge",
+      "kind": "zone",
+      "name": "Carlsberg and Central Indian Ridge Zone"
+    },
+    {
+      "code": "zone:southwest-indian-ridge",
+      "kind": "zone",
+      "name": "Southwest Indian Ridge Zone"
+    },
+    {
+      "code": "zone:southeast-indian-ridge",
+      "kind": "zone",
+      "name": "Southeast Indian Ridge Zone"
+    },
+    {
+      "code": "zone:arabian-sea",
+      "kind": "zone",
+      "name": "Arabian Sea Zone"
+    },
+    {
+      "code": "zone:somali-basin",
+      "kind": "zone",
+      "name": "Somali Basin Zone"
+    },
+    {
+      "code": "zone:mascarene-plateau",
+      "kind": "zone",
+      "name": "Mascarene Plateau Zone"
+    },
+    {
+      "code": "zone:chagos-laccadive",
+      "kind": "zone",
+      "name": "Chagos–Laccadive Ridge Zone"
+    },
+    {
+      "code": "zone:central-indian-basin",
+      "kind": "zone",
+      "name": "Central Indian Basin Zone"
+    },
+    {
+      "code": "zone:bengal-fan",
+      "kind": "zone",
+      "name": "Bengal Fan Zone"
+    },
+    {
+      "code": "zone:ninetyeast-ridge",
+      "kind": "zone",
+      "name": "Ninetyeast Ridge Zone"
+    },
+    {
+      "code": "zone:wharton-basin",
+      "kind": "zone",
+      "name": "Wharton Basin Zone"
+    },
+    {
+      "code": "zone:perth-basin",
+      "kind": "zone",
+      "name": "Perth Basin Zone"
+    },
+    {
+      "code": "zone:south-australian-basin",
+      "kind": "zone",
+      "name": "South Australian Basin Zone"
+    },
+    {
+      "code": "zone:mozambique-basin",
+      "kind": "zone",
+      "name": "Mozambique Basin Zone"
+    },
+    {
+      "code": "zone:agulhas",
+      "kind": "zone",
+      "name": "Agulhas Zone"
+    },
+    {
+      "code": "zone:crozet",
+      "kind": "zone",
+      "name": "Crozet Zone"
+    },
+    {
+      "code": "zone:kerguelen-plateau",
+      "kind": "zone",
+      "name": "Kerguelen Plateau Zone"
+    },
+    {
+      "code": "mare:arcticum",
+      "kind": "mare",
+      "name": "Mare Arcticum"
+    },
+    {
+      "code": "zone:fram-strait",
+      "kind": "zone",
+      "name": "Fram Strait Zone"
+    },
+    {
+      "code": "zone:nansen-basin",
+      "kind": "zone",
+      "name": "Nansen Basin Zone"
+    },
+    {
+      "code": "zone:gakkel-ridge",
+      "kind": "zone",
+      "name": "Gakkel Ridge Zone"
+    },
+    {
+      "code": "zone:amundsen-basin",
+      "kind": "zone",
+      "name": "Amundsen Basin Zone"
+    },
+    {
+      "code": "zone:lomonosov-ridge",
+      "kind": "zone",
+      "name": "Lomonosov Ridge Zone"
+    },
+    {
+      "code": "zone:makarov-basin",
+      "kind": "zone",
+      "name": "Makarov Basin Zone"
+    },
+    {
+      "code": "zone:alpha-mendeleev-ridge",
+      "kind": "zone",
+      "name": "Alpha–Mendeleev Ridge Zone"
+    },
+    {
+      "code": "zone:canada-basin",
+      "kind": "zone",
+      "name": "Canada Basin Zone"
+    },
+    {
+      "code": "mare:australe",
+      "kind": "mare",
+      "name": "Mare Australe"
+    },
+    {
+      "code": "zone:drake-passage",
+      "kind": "zone",
+      "name": "Drake Passage Zone"
+    },
+    {
+      "code": "zone:weddell-gyre",
+      "kind": "zone",
+      "name": "Weddell Gyre Zone"
+    },
+    {
+      "code": "zone:bouvet",
+      "kind": "zone",
+      "name": "Bouvet Triple Junction Zone"
+    },
+    {
+      "code": "zone:enderby-basin",
+      "kind": "zone",
+      "name": "Enderby Basin Zone"
+    },
+    {
+      "code": "zone:southern-kerguelen-plateau",
+      "kind": "zone",
+      "name": "Southern Kerguelen Plateau Zone"
+    },
+    {
+      "code": "zone:australian-antarctic-basin",
+      "kind": "zone",
+      "name": "Australian–Antarctic Basin Zone"
+    },
+    {
+      "code": "zone:ross-gyre",
+      "kind": "zone",
+      "name": "Ross Gyre Zone"
+    },
+    {
+      "code": "zone:pacific-antarctic-ridge",
+      "kind": "zone",
+      "name": "Pacific–Antarctic Ridge Zone"
+    },
+    {
+      "code": "zone:amundsen-bellingshausen",
+      "kind": "zone",
+      "name": "Amundsen–Bellingshausen Zone"
+    },
+    {
+      "code": "zone:scotia-arc",
+      "kind": "zone",
+      "name": "Scotia Arc Zone"
+    },
+    {
+      "code": "zone:bahia-coast-reconcavo",
+      "kind": "zone",
+      "name": "Bahia Coast and Recôncavo Zone"
+    },
+    {
+      "code": "zone:central-american-dry-corridor",
+      "kind": "zone",
+      "name": "Central American Dry Corridor Zone"
+    },
+    {
+      "code": "zone:golden-triangle",
+      "kind": "zone",
+      "name": "Golden Triangle Zone"
+    },
+    {
+      "code": "zone:ring-of-fire",
+      "kind": "zone",
+      "name": "Pacific Ring of Fire Zone"
+    },
+    {
+      "code": "zone:sahel",
+      "kind": "zone",
+      "name": "Sahel Zone"
+    }
+  ],
+  "areaAliases": {
+    "eu": "union:eu"
+  },
+  "weatherColours": [
+    "temperature",
+    "rain",
+    "airQuality",
+    "none"
+  ],
+  "solarScales": [
+    "compact",
+    "true",
+    "diagram",
+    "sky"
+  ],
+  "territoryStyles": [
+    "classic",
+    "quiet"
+  ],
+  "framing": {
+    "altitudeFloor": 1,
+    "altitudeCeiling": 4
+  },
+  "presets": [
+    "wide",
+    "square",
+    "portrait",
+    "embed",
+    "story"
+  ],
+  "presetSizes": {
+    "wide": [
+      1200,
+      630
+    ],
+    "square": [
+      1080,
+      1080
+    ],
+    "portrait": [
+      1080,
+      1350
+    ],
+    "embed": [
+      1280,
+      800
+    ],
+    "story": [
+      1080,
+      1920
+    ]
+  },
+  "templates": {
+    "built": [
+      "critical_intel",
+      "actionable_intel",
+      "context_report",
+      "conflict_brief",
+      "hazard",
+      "raver_alert",
+      "field_mission",
+      "declassified",
+      "psi"
+    ],
+    "notBuilt": [
+      "mission_package"
+    ]
+  },
+  "fileRecord": {
+    "format": "XMP",
+    "namespace": "https://starcom.app/ns/capture/1.0/",
+    "png": "iTXt XML:com.adobe.xmp",
+    "jpeg": "APP1",
+    "webp": "XMP "
+  },
+  "fits": [
+    "view",
+    "planet"
+  ],
+  "markerStyles": [
+    "disc",
+    "glow",
+    "ring"
+  ],
+  "layerChoices": {
+    "WarConflict": [
+      "war:items",
+      "war:arcs",
+      "war:deaths",
+      "war:map"
+    ],
+    "CivilUnrest": [
+      "unrest:events",
+      "unrest:surges",
+      "unrest:tint"
+    ],
+    "EcologicalDisasters": [
+      "eco:mark",
+      "eco:depth",
+      "eco:colour",
+      "eco:plates",
+      "eco:volcanoes",
+      "eco:magnitudes",
+      "eco:depths"
+    ],
+    "PsiLines": [
+      "psi:bands",
+      "psi:parans"
+    ],
+    "ConflictZones": [
+      "conflict:view",
+      "conflict:mark"
+    ]
+  },
+  "layers": [
+    "IntelReports",
+    "CyberThreats",
+    "Satellites",
+    "CommHubs",
+    "RLSH",
+    "DiplomaticEvents",
+    "ResourceZones",
+    "ConflictZones",
+    "SpaceWeather",
+    "EcologicalDisasters",
+    "EarthWeather",
+    "DrugCheckAlerts",
+    "SceneIncidents",
+    "SceneEvents",
+    "HeatRisk",
+    "RaverMissions",
+    "HarmReductionSites",
+    "WarConflict",
+    "Lifeboats",
+    "Relief",
+    "FieldMissions",
+    "AiIncidents",
+    "AiFrontier",
+    "AiWar",
+    "AiSafety",
+    "OpenMissions",
+    "CampaignsOperations",
+    "SafetyWindows",
+    "CivilUnrest",
+    "ProtestSurges",
+    "PsiLines",
+    "PsiField",
+    "PsiZones",
+    "PsiRifts",
+    "PsiWindows",
+    "MagneticShield",
+    "PsiModel"
+  ],
+  "returns": {
+    "compose": [
+      "dataUrl",
+      "width",
+      "height",
+      "mimeType",
+      "provenance",
+      "sourceRect",
+      "frame",
+      "alt",
+      "warnings",
+      "regions"
+    ],
+    "captureFrame": [
+      "dataUrl",
+      "width",
+      "height",
+      "mimeType"
+    ],
+    "getView": [
+      "lat",
+      "lng",
+      "altitude"
+    ],
+    "setView": [
+      "lat",
+      "lng",
+      "altitude"
+    ],
+    "recordClip": [
+      "frames",
+      "fps",
+      "mimeType",
+      "width",
+      "height",
+      "provenance",
+      "stats"
+    ],
+    "recordTour": [
+      "frames",
+      "fps",
+      "mimeType",
+      "width",
+      "height",
+      "provenance",
+      "stats"
+    ],
+    "recordStory": [
+      "frames",
+      "fps",
+      "mimeType",
+      "width",
+      "height",
+      "provenance",
+      "stats"
+    ],
+    "listLayers": [
+      "id",
+      "label",
+      "category",
+      "implemented",
+      "active",
+      "primary",
+      "pinned"
+    ],
+    "setLayer": [
+      "primary",
+      "pinned"
+    ],
+    "pinLayers": [
+      "pinned"
+    ],
+    "setMarkerStyle": [
+      "layer",
+      "style"
+    ],
+    "whenReady": [
+      "ready",
+      "waitedMs",
+      "reason"
+    ],
+    "listReports": [
+      "id",
+      "layer",
+      "title",
+      "variant",
+      "variantMeans",
+      "author",
+      "time",
+      "precisionM",
+      "lat",
+      "lng",
+      "sharesPlaceWith",
+      "role",
+      "territories",
+      "group",
+      "category"
+    ],
+    "listGroups": [
+      "key",
+      "kind",
+      "size",
+      "members",
+      "lat",
+      "lng",
+      "territory"
+    ],
+    "listAreas": [
+      "code",
+      "kind",
+      "name",
+      "members",
+      "source",
+      "note"
+    ],
+    "frameReports": [
+      "lat",
+      "lng",
+      "altitude"
+    ],
+    "frameArea": [
+      "lat",
+      "lng",
+      "altitude",
+      "outside"
+    ],
+    "focusReport": [
+      "featured"
+    ],
+    "describeView": [
+      "preset",
+      "fit",
+      "layers",
+      "notCounted"
+    ],
+    "planReportTour": [
+      "keyframes",
+      "stops",
+      "durationMs",
+      "skipped"
+    ],
+    "setTimeWindow": [
+      "from",
+      "until",
+      "live"
+    ],
+    "getTimeWindow": [
+      "from",
+      "until",
+      "live"
+    ],
+    "setReportCap": [
+      "cap",
+      "label",
+      "from"
+    ],
+    "getReportCap": [
+      "cap",
+      "label",
+      "from"
+    ],
+    "setReportLook": [
+      "emblems",
+      "from"
+    ],
+    "getReportLook": [
+      "emblems",
+      "from"
+    ],
+    "setLayerChoices": [
+      "layer",
+      "choices",
+      "from"
+    ],
+    "getLayerChoices": [
+      "layer",
+      "choices",
+      "from"
+    ],
+    "setWeather": [
+      "colour",
+      "wind",
+      "clouds",
+      "from"
+    ],
+    "getWeather": [
+      "colour",
+      "wind",
+      "clouds",
+      "from"
+    ],
+    "setScale": [
+      "scale",
+      "from"
+    ],
+    "getScale": [
+      "scale",
+      "from"
+    ],
+    "setSky": [
+      "lat",
+      "lng",
+      "az",
+      "alt",
+      "fov"
+    ],
+    "getSky": [
+      "lat",
+      "lng",
+      "az",
+      "alt",
+      "fov"
+    ],
+    "renderBatch": [
+      "ok",
+      "card",
+      "reason",
+      "note",
+      "notes",
+      "shot",
+      "timing"
+    ],
+    "planShot": [
+      "ok",
+      "shot",
+      "notes",
+      "warnings",
+      "inFrame",
+      "estimatedComposeMs",
+      "reason"
+    ],
+    "renderShot": [
+      "ok",
+      "card",
+      "shot",
+      "notes",
+      "warnings",
+      "timing",
+      "reason"
+    ],
+    "layersFor": [
+      "category",
+      "layers",
+      "from"
+    ],
+    "composeFor": [
+      "dataUrl",
+      "width",
+      "height",
+      "mimeType",
+      "provenance",
+      "sourceRect",
+      "frame",
+      "alt",
+      "warnings",
+      "regions"
+    ],
+    "whatsNew": [
+      "since",
+      "until",
+      "layers"
+    ]
+  },
+  "availableOn": "any page rendering the 3D globe",
+  "note": "Attached to window once the globe view mounts. Check `version` before calling. The provenance payload a card carries is versioned separately, as schemaVersion."
+}

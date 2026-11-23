@@ -1,0 +1,36 @@
+/*
+ * A report's glyph off the globe, moving as it moves there (intelReportSprites.ts's
+ * shader): a pulse in size of a tenth times its motion, and a breath down to 82% of
+ * its light at full motion, on the shader's period of 2.1 s. Still glyphs do not move,
+ * and nothing moves for a reader who asks for less motion.
+ */
+.glyph {
+  display: block;
+  flex: none;
+}
+
+.moving {
+  animation: glyph-motion 2.1s ease-in-out infinite;
+}
+
+@keyframes glyph-motion {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  25% {
+    transform: scale(calc(1 + 0.1 * var(--glyph-motion)));
+    opacity: 1;
+  }
+  75% {
+    transform: scale(calc(1 - 0.1 * var(--glyph-motion)));
+    opacity: calc(1 - 0.18 * var(--glyph-motion));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .moving {
+    animation: none;
+  }
+}

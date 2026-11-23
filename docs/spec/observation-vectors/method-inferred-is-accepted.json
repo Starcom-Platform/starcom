@@ -1,0 +1,25 @@
+{
+  "name": "method-inferred-is-accepted",
+  "description": "Inference is the third method, and is accepted like the others.",
+  "expect": {
+    "observations": 1
+  },
+  "event": {
+    "kind": 1911,
+    "created_at": 1756000000,
+    "tags": [
+      [
+        "g",
+        "st-louis"
+      ],
+      [
+        "d",
+        "st-louis/st-patrick-center"
+      ]
+    ],
+    "content": "{\"anchor\":\"st-louis/st-patrick-center\",\"observed_at\":1755996400,\"tags\":[\"locked\"],\"method\":\"inferred\",\"callsign\":\"Raven\",\"precision\":\"area\",\"area\":\"dp3w\"}",
+    "pubkey": "96bafb179762225794c13c78e823b349e8f21d96f8113020032e5cabdbe59889",
+    "id": "143bc1cc1ecf3924adaf6f0198bf78c63d5ad9c8034a10d59c6843ef023fecf0",
+    "sig": "a20e2c13f4886612b3488fcda91ab2412a6aad0c5cfb98d91fc88f267713539b8aa427bbd235d7762f9ff05c2bd30efd7368a7e3e031384a1749e28f151771fd"
+  }
+}

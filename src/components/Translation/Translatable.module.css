@@ -1,0 +1,10 @@
+/* "Translate" beneath someone's words, and the marked translation (D-ML, T1). */
+.translatable { margin-top: 6px; display: flex; flex-direction: column; gap: 6px; }
+.row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.label { font-size: 12px; color: var(--sc-text-secondary); }
+.button { align-self: flex-start; font: inherit; font-size: 12px; padding: 2px 8px; border-radius: 4px; border: 1px solid var(--sc-divider); background: transparent; color: var(--sc-accent); cursor: pointer; }
+.note { margin: 0; font-size: 12px; color: var(--sc-text-muted); }
+.offer { display: flex; flex-direction: column; gap: 6px; }
+.translation { border-left: 2px solid var(--sc-divider); padding-left: 8px; display: flex; flex-direction: column; gap: 4px; }
+.mark { margin: 0; font-size: 11px; color: var(--sc-text-muted); }
+.words { margin: 0; white-space: pre-wrap; color: var(--sc-text-body); }

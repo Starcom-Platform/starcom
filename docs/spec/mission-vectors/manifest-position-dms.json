@@ -1,0 +1,67 @@
+{
+  "name": "manifest-position-dms",
+  "description": "Degrees-minutes-seconds is masked, not only decimal pairs.",
+  "mission": {
+    "id": "mission-vector-1",
+    "missionNumber": "MSN-2026-0001",
+    "title": "Recon",
+    "briefing": "Observe from 52°31'12\"N 13°24'18\"E at dusk.",
+    "status": "READY_FOR_PACKAGE",
+    "visibility": "public",
+    "objectives": [],
+    "assignedTo": [],
+    "startDate": "2026-01-15T00:00:00.000Z",
+    "relatedReports": [],
+    "relatedCases": [],
+    "collaborators": [],
+    "activityLog": [],
+    "createdBy": "creator-pubkey",
+    "createdAt": "2026-01-15T00:00:00.000Z",
+    "updatedAt": "2026-01-15T00:00:00.000Z"
+  },
+  "author": "Kestrel",
+  "expect": {
+    "manifest": {
+      "id": "pkg-vector",
+      "name": "Recon",
+      "version": "0.1.0",
+      "description": "Observe from [redacted:position] [redacted:position] at dusk.",
+      "visibility": "public",
+      "createdAt": "2026-01-15T00:00:00.000Z",
+      "author": "Kestrel",
+      "license": "PROPRIETARY",
+      "reports": [
+        {
+          "id": "mission-vector-1",
+          "title": "Recon",
+          "checksum": "4bfad12"
+        }
+      ],
+      "intel": [],
+      "assets": [],
+      "profile": {
+        "missionState": "open",
+        "claims": "many"
+      },
+      "metadata": {
+        "missionNumber": "MSN-2026-0001",
+        "status": "READY_FOR_PACKAGE",
+        "relatedReportCount": 0,
+        "relatedCaseCount": 0,
+        "objectiveCount": 0
+      }
+    },
+    "canonical": "{\"assets\":[],\"author\":\"Kestrel\",\"createdAt\":\"2026-01-15T00:00:00.000Z\",\"description\":\"Observe from [redacted:position] [redacted:position] at dusk.\",\"id\":\"pkg-vector\",\"intel\":[],\"license\":\"PROPRIETARY\",\"metadata\":{\"missionNumber\":\"MSN-2026-0001\",\"objectiveCount\":0,\"relatedCaseCount\":0,\"relatedReportCount\":0,\"status\":\"READY_FOR_PACKAGE\"},\"name\":\"Recon\",\"profile\":{\"claims\":\"many\",\"missionState\":\"open\"},\"reports\":[{\"checksum\":\"4bfad12\",\"id\":\"mission-vector-1\",\"title\":\"Recon\"}],\"version\":\"0.1.0\",\"visibility\":\"public\"}",
+    "digest": "de09ba700f119b0b174b102ec04452f739fcb0800ac860a1518ba7fe2f6dd864",
+    "tags": [
+      [
+        "mission_state",
+        "open"
+      ],
+      [
+        "claims",
+        "many"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "generatedAt": "2026-11-08T09:31:18.505Z",
+  "sourceDir": "/Users/jono/Documents/GitHub/starcom-app/public/geopolitical",
+  "provider": "natural-earth",
+  "status": "pass",
+  "datasets": [
+    {
+      "id": "world-borders",
+      "version": "2025.08.09",
+      "file": "world-borders.geojson",
+      "sha256": "d605dba07ddb045309a2645321117458960ead087475d92a65dc0e0d15bc8289",
+      "license": "Public Domain (Natural Earth)",
+      "updated": "2025-08-09",
+      "filePath": "/Users/jono/Documents/GitHub/starcom-app/public/geopolitical/world-borders.geojson",
+      "exists": true,
+      "actualSha256": "d605dba07ddb045309a2645321117458960ead087475d92a65dc0e0d15bc8289",
+      "shaMatch": true
+    },
+    {
+      "id": "world-territories",
+      "version": "2026.11.08",
+      "file": "world-territories.geojson",
+      "sha256": "a4dcd384c7ac2a98dec985f315d59b99658dea1a76d7e7099d7076072c69ef6c",
+      "license": "Public Domain (Natural Earth / derived; France's five overseas regions as their own territories from its 1:50m map units, scripts/geopolitical/split-france-overseas.mjs)",
+      "updated": "2026-11-08",
+      "filePath": "/Users/jono/Documents/GitHub/starcom-app/public/geopolitical/world-territories.geojson",
+      "exists": true,
+      "actualSha256": "a4dcd384c7ac2a98dec985f315d59b99658dea1a76d7e7099d7076072c69ef6c",
+      "shaMatch": true
+    },
+    {
+      "id": "us-states",
+      "version": "2026.09.29",
+      "file": "us-states-50m.geojson",
+      "sha256": "525ee9708d85e846e884a0d4d8e7262fdb8c1a4785efdb418133ec008f9cc249",
+      "license": "Public Domain (Natural Earth admin-1, 1:50m / derived by scripts/build-us-states.mjs)",
+      "updated": "2026-09-29",
+      "filePath": "/Users/jono/Documents/GitHub/starcom-app/public/geopolitical/us-states-50m.geojson",
+      "exists": true,
+      "actualSha256": "525ee9708d85e846e884a0d4d8e7262fdb8c1a4785efdb418133ec008f9cc249",
+      "shaMatch": true
+    },
+    {
+      "id": "areas",
+      "version": "2026.11.08",
+      "file": "areas-lod0.geojson",
+      "sha256": "04af4a2f7b17cb3f2c3c43bf084d6add7d569b9f4e7076ef2fbc81ddd70454dd",
+      "license": "Public Domain (Natural Earth / derived by scripts/geopolitical/bake-areas.ts); zones drawn by Starcom from cited sources",
+      "updated": "2026-11-08",
+      "filePath": "/Users/jono/Documents/GitHub/starcom-app/public/geopolitical/areas-lod0.geojson",
+      "exists": true,
+      "actualSha256": "04af4a2f7b17cb3f2c3c43bf084d6add7d569b9f4e7076ef2fbc81ddd70454dd",
+      "shaMatch": true
+    }
+  ],
+  "lodCoverage": [
+    {
+      "lod": 0,
+      "territories": "/Users/jono/Documents/GitHub/starcom-app/public/geopolitical/world-territories-lod0.geojson",
+      "borders": "/Users/jono/Documents/GitHub/starcom-app/public/geopolitical/world-borders-lod0.geojson",
+      "territoriesExists": true,
+      "bordersExists": true
+    },
+    {
+      "lod": 1,
+      "territories": "/Users/jono/Documents/GitHub/starcom-app/public/geopolitical/world-territories-lod1.geojson",
+      "borders": "/Users/jono/Documents/GitHub/starcom-app/public/geopolitical/world-borders-lod1.geojson",
+      "territoriesExists": true,
+      "bordersExists": true
+    },
+    {
+      "lod": 2,
+      "territories": "/Users/jono/Documents/GitHub/starcom-app/public/geopolitical/world-territories-lod2.geojson",
+      "borders": "/Users/jono/Documents/GitHub/starcom-app/public/geopolitical/world-borders-lod2.geojson",
+      "territoriesExists": true,
+      "bordersExists": true
+    }
+  ],
+  "issues": [],
+  "summary": {
+    "datasets": 4,
+    "errors": 0,
+    "warnings": 0
+  }
+}

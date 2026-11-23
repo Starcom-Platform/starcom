@@ -1,0 +1,237 @@
+{
+  "zsp": "2.0",
+  "terra": "terra:sahulica",
+  "grid": {
+    "width": 3600,
+    "height": 1800,
+    "cell": 0.1,
+    "origin": {
+      "lat": 90,
+      "lon": -180
+    },
+    "rows": "row 0 the northernmost",
+    "values": "at cell centres"
+  },
+  "files": {
+    "zones": "sahulica-zones-0.1.u32.bin.gz",
+    "sectors": "sahulica-sectors-0.1.u32.bin.gz"
+  },
+  "dtype": "uint32",
+  "endianness": "little",
+  "compression": "gzip",
+  "areaKm2": 13987539,
+  "zones": [
+    {
+      "id": "zone:yilgarn-pilbara",
+      "name": "Yilgarn and Pilbara Cratons Zone",
+      "system": "shield",
+      "provinces": [
+        "Yilgarn Block",
+        "Pilbara Block",
+        "Gascoyne Block",
+        "Bangemall and Nabberu Basins",
+        "Albany-Fraser Province",
+        "Paterson Province"
+      ],
+      "km2": 1221480
+    },
+    {
+      "id": "zone:western-margin",
+      "name": "Western Margin and the North West Shelf Zone",
+      "system": "basin",
+      "provinces": [
+        "Perth Basin",
+        "Carnarvon Basin",
+        "Northwest Shelf"
+      ],
+      "km2": 852225
+    },
+    {
+      "id": "zone:kimberley-canning",
+      "name": "Kimberley and the Canning Basin Zone",
+      "system": "basin",
+      "provinces": [
+        "Canning Basin",
+        "Kimberley Basin",
+        "Halls Creek Province",
+        "Browse Basin"
+      ],
+      "km2": 845274
+    },
+    {
+      "id": "zone:north-australian-craton",
+      "name": "North Australian Craton Zone",
+      "system": "shield",
+      "provinces": [
+        "Bonaparte Gulf Basin",
+        "Pine Creek Geosyncline",
+        "Daly River Basin",
+        "Money Shoal Basin",
+        "Victoria River Basin",
+        "Birrindudu Basin and Tanami Block",
+        "McArthur Basin",
+        "Wiso Basin",
+        "Tennant Creek Block",
+        "Australian Arafura Basin"
+      ],
+      "km2": 1335373
+    },
+    {
+      "id": "zone:central-australia",
+      "name": "Central Australian Basins and Ranges Zone",
+      "system": "basin",
+      "provinces": [
+        "Amadeus Basin",
+        "Arunta Block",
+        "Ngalia Basin",
+        "Musgrave Block",
+        "Officer Basin",
+        "Georgina Basin",
+        "Mt.Isa Block"
+      ],
+      "km2": 1268134
+    },
+    {
+      "id": "zone:gawler-eucla",
+      "name": "Gawler Craton and the Eucla Zone",
+      "system": "shield",
+      "provinces": [
+        "Eucla Basin",
+        "Gawler Block",
+        "Great Australian Bight Basin",
+        "Bremer Basin",
+        "Stuart Shelf"
+      ],
+      "km2": 747710
+    },
+    {
+      "id": "zone:great-artesian",
+      "name": "Great Artesian Basin Zone",
+      "system": "basin",
+      "provinces": [
+        "Eromanga Basin",
+        "Carpentaria Basin",
+        "Surat Basin",
+        "Galilee Basin",
+        "Laura Basin",
+        "Coen-Yambo Block"
+      ],
+      "km2": 2362547
+    },
+    {
+      "id": "zone:murray-darling",
+      "name": "Murray–Darling and the Flinders Ranges Zone",
+      "system": "basin",
+      "provinces": [
+        "Murray Basin",
+        "Darling Basin",
+        "Adelaide & Kanmantoo Fold Belts"
+      ],
+      "km2": 526058
+    },
+    {
+      "id": "zone:tasmanides",
+      "name": "Great Dividing Range and the Tasmanides Zone",
+      "system": "orogen",
+      "provinces": [
+        "Lacklan Fold Belt",
+        "New England Fold Belt",
+        "Hodgkinson/Lachlan Fold Belt",
+        "Drummond Fold Belt and Anakie High",
+        "Bowen Basin",
+        "Sydney Basin",
+        "Clarence-Moreton Basin",
+        "Maryborough Basin"
+      ],
+      "km2": 1124185
+    },
+    {
+      "id": "zone:tasmania-bass",
+      "name": "Tasmania and Bass Strait Zone",
+      "system": "basin",
+      "provinces": [
+        "Bass Basin",
+        "Bassian Rise",
+        "Gippsland Basin",
+        "Otway Basin",
+        "Tasmania Basin",
+        "Rocky Cape Block/Dundas Trough"
+      ],
+      "km2": 367579
+    },
+    {
+      "id": "zone:coral-sea",
+      "name": "Coral Sea Plateaus and the Great Barrier Reef Zone",
+      "system": "plateau",
+      "provinces": [
+        "Queensland Plateau",
+        "Marion Terrain",
+        "Halifax Basin",
+        "Capricorn Basin"
+      ],
+      "km2": 537317
+    },
+    {
+      "id": "zone:new-guinea-highlands",
+      "name": "New Guinea Highlands and the Mobile Belt Zone",
+      "system": "orogen",
+      "provinces": [
+        "New Guinea Mobile Belt",
+        "New Guinea Foreland Basin-Fold Belt",
+        "Sepik-Ramu Basin",
+        "Cape Vogel Basin",
+        "Northern Irian Jaya Waropen Basin",
+        "New Ireland Basin",
+        "South Bismarck Volcanic Arc"
+      ],
+      "km2": 1072933
+    },
+    {
+      "id": "zone:arafura-papua",
+      "name": "Arafura Shelf, Papua and the Bird's Head Zone",
+      "system": "basin",
+      "provinces": [
+        "Arafura Basin-Irian Jaya",
+        "Merauke Platform",
+        "Papuan Basin-Shelf Platform",
+        "Bintuni/Sulawati Province"
+      ],
+      "km2": 1067566
+    },
+    {
+      "id": "zone:new-zealand",
+      "name": "New Zealand Zone",
+      "system": "orogen",
+      "provinces": [
+        "New Zealand Orogenic Belt",
+        "New Zealand East Coast Basin",
+        "Northland Basin",
+        "Solander-Waiau Basin",
+        "Taranaki Basin",
+        "Wanganui Basin",
+        "Waikato Basin",
+        "Hikurani Trough",
+        "Great South Basin",
+        "Challenger Plateau",
+        "Chatham Rise",
+        "Three Kings Rise"
+      ],
+      "km2": 576267
+    },
+    {
+      "id": "zone:new-caledonia",
+      "name": "New Caledonia and the Norfolk Ridge Zone",
+      "system": "ridge",
+      "provinces": [
+        "New Caledonia",
+        "Loyalty Island Ridge",
+        "Norfolk Island Ridge",
+        "Lord Howe Rise"
+      ],
+      "km2": 82892
+    }
+  ],
+  "sectors": 119,
+  "bytes": 285083,
+  "points": 9607
+}

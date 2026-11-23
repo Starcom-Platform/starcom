@@ -1,0 +1,114 @@
+{
+ "fixture_note": "The window and profile are the real sky event's (the first fixture); the places are INVENTED.",
+ "provenance": {
+  "real": "start, end, exact, profile",
+  "invented": "zone, jurisdiction, state"
+ },
+ "event": {
+  "kind": 31923,
+  "pubkey": "86f824c3f1e67c60b1dc15ce110648c4de5c3fb879022fbbcc5e8deb720e402c",
+  "created_at": 1793019600,
+  "tags": [
+   [
+    "d",
+    "psi-window-focus-20261101"
+   ],
+   [
+    "title",
+    "Psi Watch focus window (FIXTURE places)"
+   ],
+   [
+    "start",
+    "1793544872"
+   ],
+   [
+    "end",
+    "1793585037"
+   ],
+   [
+    "window",
+    "1793544872",
+    "1793564907",
+    "1793585037"
+   ],
+   [
+    "exact",
+    "1793564907.072"
+   ],
+   [
+    "profile",
+    "gauss_orb",
+    "1.0000",
+    "3.0000",
+    "-12.907134",
+    "0.26085365"
+   ],
+   [
+    "zone",
+    "zone:sahel",
+    "Sahel Zone"
+   ],
+   [
+    "jurisdiction",
+    "SD"
+   ],
+   [
+    "a",
+    "31923:86f824c3f1e67c60b1dc15ce110648c4de5c3fb879022fbbcc5e8deb720e402c:psi-sky-lunation-Sun_Moon-h4k1-20261101T202827"
+   ],
+   [
+    "window_state",
+    "armed"
+   ],
+   [
+    "valid_until",
+    "1793585037"
+   ],
+   [
+    "t",
+    "psi_watch"
+   ],
+   [
+    "t",
+    "psi_window"
+   ],
+   [
+    "t",
+    "experimental"
+   ],
+   [
+    "t",
+    "role:context"
+   ],
+   [
+    "t",
+    "category:psi"
+   ],
+   [
+    "t",
+    "category:psi.window"
+   ],
+   [
+    "schema_version",
+    "0"
+   ],
+   [
+    "engine",
+    "skyfield 1.54, de440s; catalogue kit-v0 (2026-10-26 to 2026-11-25)"
+   ],
+   [
+    "published_at",
+    "1793019600"
+   ],
+   [
+    "client",
+    "Mecha Jono"
+   ],
+   [
+    "alt",
+    "Psi Watch window (Experimental). FIXTURE. A focus window on the sky event it names, in the places listed. The places are invented."
+   ]
+  ],
+  "content": "FIXTURE. A focus window on the sky event it names, in the places listed. The places are invented."
+ }
+}

@@ -1,0 +1,362 @@
+{
+ "generator": "tools.starcom_sfx",
+ "version": "1",
+ "sample_rate": 48000,
+ "channels": 2,
+ "licence": "none: synthesised here, nothing sampled, no third-party material",
+ "sounds": [
+  {
+   "id": "hover-tick",
+   "family": "ui",
+   "family_name": "Interface",
+   "name": "Hover tick",
+   "what": "The pointer passes over an option.",
+   "file": "hover-tick.wav",
+   "seconds": 0.018,
+   "loops": false,
+   "peak_db": -9.0,
+   "recipe": "hover_tick",
+   "params": {},
+   "seed": 301,
+   "round": 1,
+   "experimental": false,
+   "sha256": "cfc75eb33cbf3b3bd6637abf2d2f22d2b7345683e3a69a01250906e113890cae",
+   "moments": [
+    "hover"
+   ],
+   "loudest_50ms_lufs": -21.5
+  },
+  {
+   "id": "select",
+   "family": "ui",
+   "family_name": "Interface",
+   "name": "Select",
+   "what": "An option chosen.",
+   "file": "select.wav",
+   "seconds": 0.06,
+   "loops": false,
+   "peak_db": -6.0,
+   "recipe": "select",
+   "params": {},
+   "seed": 304,
+   "round": 1,
+   "experimental": false,
+   "sha256": "94cf221266483d86000e49bcb96b152fcf5c1b07aaab07b7e784f7158ff721a9",
+   "moments": [
+    "click"
+   ],
+   "loudest_50ms_lufs": -19.5
+  },
+  {
+   "id": "select-relay",
+   "family": "ui",
+   "family_name": "Interface",
+   "name": "Select · relay",
+   "what": "A relay's clack and a low blip.",
+   "file": "select-relay.wav",
+   "seconds": 0.06,
+   "loops": false,
+   "peak_db": -6.0,
+   "recipe": "select_mech",
+   "params": {},
+   "seed": 904,
+   "round": 2,
+   "experimental": false,
+   "sha256": "c5b48ba92b326d4562d62bf8dcbd029fddc9b0a54124d62b2497bad9a3f792b6",
+   "moments": [
+    "switch"
+   ],
+   "loudest_50ms_lufs": -17.5
+  },
+  {
+   "id": "toggle-on",
+   "family": "ui",
+   "family_name": "Interface",
+   "name": "Toggle on",
+   "what": "A quick chirp up.",
+   "file": "toggle-on.wav",
+   "seconds": 0.05,
+   "loops": false,
+   "peak_db": -6.0,
+   "recipe": "toggle",
+   "params": {},
+   "seed": 906,
+   "round": 2,
+   "experimental": false,
+   "sha256": "94a0e488d057ece8d9a35d96fcbe8e74e3a48fb8e0adc9b448ad49dcb77ee706",
+   "moments": [
+    "toggleOn"
+   ],
+   "loudest_50ms_lufs": -12.0
+  },
+  {
+   "id": "toggle-off",
+   "family": "ui",
+   "family_name": "Interface",
+   "name": "Toggle off",
+   "what": "A quick chirp down.",
+   "file": "toggle-off.wav",
+   "seconds": 0.05,
+   "loops": false,
+   "peak_db": -6.0,
+   "recipe": "toggle",
+   "params": {
+    "up": false
+   },
+   "seed": 907,
+   "round": 2,
+   "experimental": false,
+   "sha256": "ab1476cb1cc098e19f50d2932d83e570161a10d194fe8609d4142304786b230d",
+   "moments": [
+    "toggleOff"
+   ],
+   "loudest_50ms_lufs": -10.3
+  },
+  {
+   "id": "panel-open",
+   "family": "ui",
+   "family_name": "Interface",
+   "name": "Panel open",
+   "what": "A short swish and a blip: a panel slides open.",
+   "file": "panel-open.wav",
+   "seconds": 0.2,
+   "loops": false,
+   "peak_db": -6.0,
+   "recipe": "panel_open",
+   "params": {},
+   "seed": 908,
+   "round": 2,
+   "experimental": true,
+   "sha256": "bbefacd566bf724cedcca1b6991f58321bde9f1bfecb6ebeb3091fbbefee0bd8",
+   "moments": [
+    "open"
+   ],
+   "loudest_50ms_lufs": -12.6
+  },
+  {
+   "id": "back",
+   "family": "ui",
+   "family_name": "Interface",
+   "name": "Back",
+   "what": "Back or cancel: two notes down, muted.",
+   "file": "back.wav",
+   "seconds": 0.11,
+   "loops": false,
+   "peak_db": -6.0,
+   "recipe": "back_cancel",
+   "params": {},
+   "seed": 306,
+   "round": 1,
+   "experimental": false,
+   "sha256": "41526b8e721cecf0d17eed6a41b498a298fbc53d4ffdc151cd76fa4f9d74718c",
+   "moments": [
+    "close"
+   ],
+   "loudest_50ms_lufs": -14.3
+  },
+  {
+   "id": "select-confirm",
+   "family": "ui",
+   "family_name": "Interface",
+   "name": "Confirm",
+   "what": "A choice confirmed: two notes up.",
+   "file": "select-confirm.wav",
+   "seconds": 0.11,
+   "loops": false,
+   "peak_db": -6.0,
+   "recipe": "select_confirm",
+   "params": {},
+   "seed": 305,
+   "round": 1,
+   "experimental": false,
+   "sha256": "f71201d0d187eb400f5cf0b71d92c2df7c0018a209246a213083ede65087570b",
+   "moments": [
+    "confirm"
+   ],
+   "loudest_50ms_lufs": -18.2
+  },
+  {
+   "id": "deny",
+   "family": "ui",
+   "family_name": "Interface",
+   "name": "Deny",
+   "what": "Not available.",
+   "file": "deny.wav",
+   "seconds": 0.18,
+   "loops": false,
+   "peak_db": -6.0,
+   "recipe": "deny",
+   "params": {},
+   "seed": 308,
+   "round": 1,
+   "experimental": false,
+   "sha256": "a32a2513ec5c0fe97430b36398b8b7995249aadf9eb92da28c2bf7a6739607f7",
+   "moments": [
+    "deny"
+   ],
+   "loudest_50ms_lufs": -6.2
+  },
+  {
+   "id": "target-ping-double",
+   "family": "lock",
+   "family_name": "Target lock",
+   "name": "Target ping · double",
+   "what": "Two quick pings, then the returns.",
+   "file": "target-ping-double.wav",
+   "seconds": 1.77,
+   "loops": false,
+   "peak_db": -3.0,
+   "recipe": "ping_variant",
+   "params": {
+    "pings": 2
+   },
+   "seed": 803,
+   "round": 2,
+   "experimental": false,
+   "sha256": "b832b166d97d201b517da52febbe33b1d105b0a3850a56a8192dbabaae508433",
+   "moments": [
+    "spot"
+   ],
+   "loudest_50ms_lufs": -15.3
+  },
+  {
+   "id": "designate",
+   "family": "lock",
+   "family_name": "Target lock",
+   "name": "Designate",
+   "what": "A target marked: two clicks and a digital blip.",
+   "file": "designate.wav",
+   "seconds": 0.13,
+   "loops": false,
+   "peak_db": -3.0,
+   "recipe": "designate",
+   "params": {},
+   "seed": 204,
+   "round": 1,
+   "experimental": false,
+   "sha256": "03aca06f5e53d90294105129f926f70b5dbf0e86b5b35f49ae7535a2e519d926",
+   "moments": [
+    "designate"
+   ],
+   "loudest_50ms_lufs": -19.3
+  },
+  {
+   "id": "confirm-fifth",
+   "family": "ui",
+   "family_name": "Interface",
+   "name": "Confirm · fifth",
+   "what": "Two square notes up a fifth, lower than Confirm.",
+   "file": "confirm-fifth.wav",
+   "seconds": 0.125,
+   "loops": false,
+   "peak_db": -6.0,
+   "recipe": "confirm_fifth",
+   "params": {},
+   "seed": 905,
+   "round": 2,
+   "experimental": false,
+   "sha256": "a7b1e5077be7fd49c0e162e109a023a4a603d2c07ef79ead04772d03458e3597",
+   "moments": [
+    "success"
+   ],
+   "loudest_50ms_lufs": -13.8
+  },
+  {
+   "id": "blend-alert-ground",
+   "family": "blends",
+   "family_name": "Blends",
+   "name": "Alert beeps + keyed burst",
+   "what": "A general alert, then a communique from the ground.",
+   "file": "blend-alert-ground.wav",
+   "seconds": 1.25,
+   "loops": false,
+   "peak_db": -3.0,
+   "recipe": "blend",
+   "params": {
+    "layers": [
+     [
+      "alert-beeps",
+      0.0,
+      0.0
+     ],
+     [
+      "data-fsk",
+      0.35,
+      -5.0
+     ]
+    ]
+   },
+   "seed": 1504,
+   "round": 3,
+   "experimental": false,
+   "sha256": "61d756491a2fb9b530356478ff2d48eb22e0b7997abb4247d0d1297977ec1b93",
+   "moments": [
+    "warning"
+   ],
+   "loudest_50ms_lufs": -7.3
+  },
+  {
+   "id": "alert-low-triple",
+   "family": "alerts",
+   "family_name": "Alerts",
+   "name": "Alert · low triple",
+   "what": "Three low, driven beeps.",
+   "file": "alert-low-triple.wav",
+   "seconds": 0.52,
+   "loops": false,
+   "peak_db": -3.0,
+   "recipe": "alert_low_triple",
+   "params": {},
+   "seed": 1002,
+   "round": 2,
+   "experimental": false,
+   "sha256": "a95f92bf367cab62d25fcdd7a429ae9bb694852d00c0d123c43e52ca325221ee",
+   "moments": [
+    "error"
+   ],
+   "loudest_50ms_lufs": -2.3
+  },
+  {
+   "id": "data-fsk",
+   "family": "data",
+   "family_name": "Data streams",
+   "name": "Data · keyed burst",
+   "what": "Two packets of keyed data tones in the radio band.",
+   "file": "data-fsk.wav",
+   "seconds": 0.9,
+   "loops": false,
+   "peak_db": -9.0,
+   "recipe": "data_fsk",
+   "params": {},
+   "seed": 1102,
+   "round": 2,
+   "experimental": false,
+   "sha256": "6edb84a5eec456084b7a97c14af697c612fde1a1dfa53999503e7529712104ab",
+   "moments": [
+    "message"
+   ],
+   "loudest_50ms_lufs": -6.6
+  },
+  {
+   "id": "alert-beeps",
+   "family": "alerts",
+   "family_name": "Alerts",
+   "name": "Alert beeps",
+   "what": "Attention: three beeps.",
+   "file": "alert-beeps.wav",
+   "seconds": 0.39,
+   "loops": false,
+   "peak_db": -3.0,
+   "recipe": "alert_beeps",
+   "params": {},
+   "seed": 401,
+   "round": 1,
+   "experimental": false,
+   "sha256": "f7680decdaa7df0c826edd11a96b85c5ce86dfca8e6193bfaaba9b808f64e03f",
+   "moments": [
+    "alert"
+   ],
+   "loudest_50ms_lufs": -5.5
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "public-office-with-consent",
+  "description": "A legislator taking money from the regulator they chair. The least controversial publication in journalism.",
+  "subjectKind": "person",
+  "options": {
+    "isMock": false,
+    "subjectRole": "public-office",
+    "consentToPublishAboutPerson": true
+  },
+  "expect": {
+    "allowed": true
+  }
+}

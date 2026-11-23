@@ -1,0 +1,139 @@
+{
+  "zsp": "2.0",
+  "terra": "terra:arabica",
+  "grid": {
+    "width": 3600,
+    "height": 1800,
+    "cell": 0.1,
+    "origin": {
+      "lat": 90,
+      "lon": -180
+    },
+    "rows": "row 0 the northernmost",
+    "values": "at cell centres"
+  },
+  "files": {
+    "zones": "arabica-zones-0.1.u32.bin.gz",
+    "sectors": "arabica-sectors-0.1.u32.bin.gz"
+  },
+  "dtype": "uint32",
+  "endianness": "little",
+  "compression": "gzip",
+  "areaKm2": 4414758,
+  "zones": [
+    {
+      "id": "zone:levant",
+      "name": "Levant Zone",
+      "system": "rift",
+      "provinces": [
+        "Levantine Basin",
+        "Sinai Basin",
+        "Beirut",
+        "Palmyra Zone",
+        "Haleb",
+        "Jafr-Tabuk Basin",
+        "Wadi-Surhan Basin",
+        "North Harrah Volcanics"
+      ],
+      "km2": 583552
+    },
+    {
+      "id": "zone:arabian-shield",
+      "name": "Arabian Shield Zone",
+      "system": "shield",
+      "provinces": [
+        "Arabian Shield",
+        "South Harrah Volcanics"
+      ],
+      "km2": 644092
+    },
+    {
+      "id": "zone:red-sea-aden-arabia",
+      "name": "Red Sea, Arabian Margin Zone",
+      "system": "rift",
+      "provinces": [],
+      "km2": 360684
+    },
+    {
+      "id": "zone:yemen-aden",
+      "name": "Yemen Highlands and the Gulf of Aden Zone",
+      "system": "rift",
+      "provinces": [
+        "Yemen Volcanic Basin (North)",
+        "Yemen Volcanic Basin (South)",
+        "Hays Structural Belt",
+        "Ma'Rib-Al Jawf Basin",
+        "Mukalla Rift Basin",
+        "Shabwah Basin",
+        "Sharmah Rift Basin",
+        "Masila-Jeza Basin"
+      ],
+      "km2": 422640
+    },
+    {
+      "id": "zone:rub-al-khali",
+      "name": "Rub' al Khali Zone",
+      "system": "basin",
+      "provinces": [
+        "Rub Al Khali Basin",
+        "Ghudun-Khasfeh Flank Province",
+        "Mirbat Precambrian Basement"
+      ],
+      "km2": 793546
+    },
+    {
+      "id": "zone:oman",
+      "name": "Oman Mountains and Salt Basins Zone",
+      "system": "orogen",
+      "provinces": [
+        "South Oman Salt Basin",
+        "East Flank Oman Sub-basin",
+        "Huqf-Haushi Uplift",
+        "Ghaba Salt Basin",
+        "Central Oman Platform",
+        "Fahud Salt Basin",
+        "Oman Mountains",
+        "Masirah Trough",
+        "Gulf of Oman Basin"
+      ],
+      "km2": 298548
+    },
+    {
+      "id": "zone:central-arabian-arch",
+      "name": "Central Arabian Arch Zone",
+      "system": "basin",
+      "provinces": [
+        "Interior Homocline-Central Arch",
+        "Greater Ghawar Uplift",
+        "Qatar Arch"
+      ],
+      "km2": 478500
+    },
+    {
+      "id": "zone:mesopotamia-gulf",
+      "name": "Mesopotamia and the Persian Gulf Zone",
+      "system": "basin",
+      "provinces": [
+        "Mesopotamian Foredeep Basin",
+        "Euphrates/Mardin",
+        "Anah Graben",
+        "Khleisha Uplift"
+      ],
+      "km2": 395107
+    },
+    {
+      "id": "zone:widyan-arches",
+      "name": "Widyan and the Northern Arches Zone",
+      "system": "basin",
+      "provinces": [
+        "Widyan Basin-Int. Platform",
+        "Hail-Ga'Ara Arch",
+        "Rutbah Uplift"
+      ],
+      "km2": 438090
+    }
+  ],
+  "sectors": 41,
+  "bytes": 98909,
+  "points": 3365
+}

@@ -1,0 +1,597 @@
+{
+ "card": {
+  "alt": "RAVER WATCH: HeatRisk Red in Los Angeles, CA on Sat 3 Oct. Heat risk, level red, from National Weather Service HeatRisk. NWS HeatRisk Red (3 of 4), applies from 2 Oct 2026 05:25Z until 4 Oct 2026 13:00Z. Near 34.1°, -118.2°, placed to within about 11 km. A signed Nostr event from The Record; its signature was checked on intake. The picture: the globe centred near 34.1°N, 118.2°W, the item marked and labelled, showing Heat risk and Borders. An inset shows 13 heat towns of California the same day by level, the featured one ringed, placed to about 11 km, with a 200 km scale bar. Caveats: Raver Watch items show while they apply, placed to about 11 km, or at a public venue. Unsigned capture: one browser's view at one moment. Made by Starcom, <captured>.",
+  "frame": {
+   "height": 800,
+   "width": 800
+  },
+  "height": 800,
+  "mimeType": "image/webp",
+  "provenance": {
+   "appearance": {
+    "lightMode": "sun",
+    "quality": {
+     "atmosphere": true,
+     "clouds": true,
+     "detail": "full detail",
+     "setting": "low"
+    },
+    "skin": "Day / Night",
+    "territories": "quiet"
+   },
+   "build": "<build>",
+   "camera": {
+    "altitude": 1.0000010000000001,
+    "lat": 34.10000000000001,
+    "lon": -118.19999999999999
+   },
+   "capturedAt": "<captured>",
+   "card": {
+    "badge": "RAVER WATCH",
+    "chosenBy": "item",
+    "template": "raver_alert"
+   },
+   "caveats": [
+    "Raver Watch: each item is drawn while it applies, by the dates its note states, faded as its end nears, and placed no finer than about 11 km, except a scene event at a public venue, drawn at the venue.",
+    "Unsigned client-side capture: one browser's view at one moment, not an attested record."
+   ],
+   "caveatsShort": [
+    "Raver Watch items show while they apply, placed to about 11 km, or at a public venue.",
+    "Unsigned capture: one browser's view at one moment."
+   ],
+   "credits": [],
+   "featured": {
+    "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-los-angeles-2026-10-03",
+    "lines": [
+     "Heat risk · level red · from National Weather Service HeatRisk",
+     "NWS HeatRisk Red (3 of 4) · applies from 2 Oct 2026 05:25Z until 4 Oct 2026 13:00Z",
+     "Near 34.1°, -118.2° · placed to within about 11 km",
+     "A signed Nostr event from The Record; its signature was checked on intake"
+    ],
+    "title": "HeatRisk Red in Los Angeles, CA on Sat 3 Oct"
+   },
+   "feeds": [
+    {
+     "credits": [],
+     "error": null,
+     "lastUpdated": "<read>",
+     "layer": "HeatRisk",
+     "loading": false,
+     "name": "Heat risk from National Weather Service HeatRisk",
+     "note": "Raver Watch: each item is drawn while it applies, by the dates its note states, faded as its end nears, and placed no finer than about 11 km, except a scene event at a public venue, drawn at the venue.",
+     "noteShort": "Raver Watch items show while they apply, placed to about 11 km, or at a public venue.",
+     "shortName": "Heat risk"
+    }
+   ],
+   "frame": {
+    "height": 800,
+    "width": 800
+   },
+   "imagery": [
+    "Solar System Scope (CC BY 4.0)",
+    "NASA"
+   ],
+   "inset": {
+    "featured": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-los-angeles-2026-10-03",
+    "gridKm": null,
+    "kind": "heat",
+    "placedTo": "about 11 km",
+    "scale": "200 km",
+    "shown": 13,
+    "within": "California"
+   },
+   "layersSelectedButEmpty": [],
+   "layersShown": [
+    "Heat risk"
+   ],
+   "legend": [
+    {
+     "colorMeans": "the level its note states, red from HeatRisk 3 and amber at 2; the backing says it too",
+     "layer": "Heat risk",
+     "layerId": "HeatRisk",
+     "shapeMeans": "a thermometer at a town with an event this week, where the NWS HeatRisk is Orange (2 of 4) or higher; one mark a town, at its worst day, its hover naming each day",
+     "swatches": [
+      {
+       "color": "#ff4d4f",
+       "label": "level red (a glow)",
+       "style": "glow"
+      },
+      {
+       "color": "#ffb02e",
+       "label": "level amber (a ring)",
+       "style": "ring"
+      }
+     ]
+    },
+    {
+     "colorMeans": "what kind of boundary it is — dashed where it is not settled",
+     "layer": "Borders",
+     "layerId": "NationalTerritories:borders",
+     "swatches": [
+      {
+       "color": "#c9d4e3",
+       "label": "international boundary",
+       "shape": "line"
+      },
+      {
+       "color": "#ff5555",
+       "label": "disputed",
+       "shape": "dashed"
+      },
+      {
+       "color": "#ffcc00",
+       "label": "line of control",
+       "shape": "dashed"
+      },
+      {
+       "color": "#888888",
+       "label": "indefinite",
+       "shape": "line"
+      }
+     ]
+    }
+   ],
+   "link": "<origin>/?v=1&sub=HeatRisk&at=34.1,-118.2,1&focus=30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-los-angeles-2026-10-03&win=1790985600..1791072000",
+   "marks": null,
+   "origin": "starcom-app client capture (unsigned)",
+   "raverWatchItems": [
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-fl-miami-2026-10-05",
+     "layer": "HeatRisk",
+     "level": "amber"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-santa-rosa-2026-10-03",
+     "layer": "HeatRisk",
+     "level": "red"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-santa-cruz-2026-10-04",
+     "layer": "HeatRisk",
+     "level": "red"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-oakland-2026-10-03",
+     "layer": "HeatRisk",
+     "level": "amber"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-whittier-2026-10-09",
+     "layer": "HeatRisk",
+     "level": "red"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-costa-mesa-2026-10-09",
+     "layer": "HeatRisk",
+     "level": "red"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-west-sacramento-2026-10-09",
+     "layer": "HeatRisk",
+     "level": "amber"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-ventura-2026-10-09",
+     "layer": "HeatRisk",
+     "level": "amber"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-fresno-2026-10-03",
+     "layer": "HeatRisk",
+     "level": "amber"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-santa-cruz-2026-10-03",
+     "layer": "HeatRisk",
+     "level": "amber"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-santa-cruz-2026-10-09",
+     "layer": "HeatRisk",
+     "level": "amber"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-az-phoenix-2026-10-05",
+     "layer": "HeatRisk",
+     "level": "amber"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-fl-sunrise-2026-10-03",
+     "layer": "HeatRisk",
+     "level": "amber"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-fl-miami-beach-2026-10-09",
+     "layer": "HeatRisk",
+     "level": "amber"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-fl-miami-beach-2026-10-07",
+     "layer": "HeatRisk",
+     "level": "amber"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-sacramento-2026-10-04",
+     "layer": "HeatRisk",
+     "level": "amber"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-los-angeles-2026-10-09",
+     "layer": "HeatRisk",
+     "level": "red"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-san-diego-2026-10-09",
+     "layer": "HeatRisk",
+     "level": "red"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-oakland-2026-10-08",
+     "layer": "HeatRisk",
+     "level": "amber"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-santa-cruz-2026-10-07",
+     "layer": "HeatRisk",
+     "level": "red"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-rowland-heights-2026-10-08",
+     "layer": "HeatRisk",
+     "level": "red"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-san-francisco-2026-10-07",
+     "layer": "HeatRisk",
+     "level": "amber"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-long-beach-2026-10-02",
+     "layer": "HeatRisk",
+     "level": "amber"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-san-jose-2026-10-08",
+     "layer": "HeatRisk",
+     "level": "amber"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-tx-austin-2026-10-02",
+     "layer": "HeatRisk",
+     "level": "amber"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-tx-san-antonio-2026-10-02",
+     "layer": "HeatRisk",
+     "level": "amber"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ma-cambridge-2026-10-02",
+     "layer": "HeatRisk",
+     "level": "amber"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-sunnyvale-2026-10-02",
+     "layer": "HeatRisk",
+     "level": "amber"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-napa-2026-10-03",
+     "layer": "HeatRisk",
+     "level": "red"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-chico-2026-10-03",
+     "layer": "HeatRisk",
+     "level": "amber"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-ventura-2026-10-08",
+     "layer": "HeatRisk",
+     "level": "amber"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-monterey-park-2026-10-03",
+     "layer": "HeatRisk",
+     "level": "red"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-costa-mesa-2026-10-08",
+     "layer": "HeatRisk",
+     "level": "red"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-costa-mesa-2026-10-03",
+     "layer": "HeatRisk",
+     "level": "red"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-costa-mesa-2026-10-02",
+     "layer": "HeatRisk",
+     "level": "red"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-santa-ana-2026-10-08",
+     "layer": "HeatRisk",
+     "level": "red"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-santa-ana-2026-10-02",
+     "layer": "HeatRisk",
+     "level": "red"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-huntington-beach-2026-10-02",
+     "layer": "HeatRisk",
+     "level": "amber"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-campbell-2026-10-02",
+     "layer": "HeatRisk",
+     "level": "amber"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-san-jose-2026-10-04",
+     "layer": "HeatRisk",
+     "level": "red"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-san-jose-2026-10-03",
+     "layer": "HeatRisk",
+     "level": "red"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-sacramento-2026-10-03",
+     "layer": "HeatRisk",
+     "level": "amber"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-sacramento-2026-10-08",
+     "layer": "HeatRisk",
+     "level": "amber"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-san-jose-2026-10-02",
+     "layer": "HeatRisk",
+     "level": "amber"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-san-diego-2026-10-08",
+     "layer": "HeatRisk",
+     "level": "red"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-san-diego-2026-10-04",
+     "layer": "HeatRisk",
+     "level": "red"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-san-diego-2026-10-03",
+     "layer": "HeatRisk",
+     "level": "red"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-san-diego-2026-10-02",
+     "layer": "HeatRisk",
+     "level": "red"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-fl-fort-lauderdale-2026-10-03",
+     "layer": "HeatRisk",
+     "level": "amber"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-fl-miami-beach-2026-10-03",
+     "layer": "HeatRisk",
+     "level": "amber"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-fl-fort-lauderdale-2026-10-02",
+     "layer": "HeatRisk",
+     "level": "amber"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-fl-miami-beach-2026-10-02",
+     "layer": "HeatRisk",
+     "level": "amber"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ga-atlanta-2026-10-02",
+     "layer": "HeatRisk",
+     "level": "amber"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-fl-hollywood-2026-10-02",
+     "layer": "HeatRisk",
+     "level": "amber"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-fl-miami-2026-10-04",
+     "layer": "HeatRisk",
+     "level": "amber"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-fl-miami-2026-10-02",
+     "layer": "HeatRisk",
+     "level": "amber"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-fl-miami-2026-10-03",
+     "layer": "HeatRisk",
+     "level": "amber"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-san-francisco-2026-10-04",
+     "layer": "HeatRisk",
+     "level": "amber"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-tx-houston-2026-10-03",
+     "layer": "HeatRisk",
+     "level": "amber"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-san-francisco-2026-10-03",
+     "layer": "HeatRisk",
+     "level": "amber"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-tx-houston-2026-10-02",
+     "layer": "HeatRisk",
+     "level": "amber"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-santa-cruz-2026-10-02",
+     "layer": "HeatRisk",
+     "level": "amber"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-los-angeles-2026-10-08",
+     "layer": "HeatRisk",
+     "level": "red"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-los-angeles-2026-10-07",
+     "layer": "HeatRisk",
+     "level": "red"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-los-angeles-2026-10-06",
+     "layer": "HeatRisk",
+     "level": "red"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-los-angeles-2026-10-05",
+     "layer": "HeatRisk",
+     "level": "red"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-los-angeles-2026-10-03",
+     "layer": "HeatRisk",
+     "level": "red"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-los-angeles-2026-10-04",
+     "layer": "HeatRisk",
+     "level": "red"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-los-angeles-2026-10-02",
+     "layer": "HeatRisk",
+     "level": "amber"
+    }
+   ],
+   "schema": "starcom.globe.capture",
+   "schemaVersion": 38,
+   "shot": {
+    "appearance": {
+     "light": "sun",
+     "nightFill": 0.15,
+     "skin": "auto",
+     "territories": "quiet"
+    },
+    "card": {
+     "inset": true,
+     "preset": "embed",
+     "template": "raver_alert"
+    },
+    "emphasis": {
+     "featured": true
+    },
+    "framing": {
+     "fit": "view"
+    },
+    "layers": {
+     "pins": [],
+     "primary": "HeatRisk"
+    },
+    "output": {
+     "alt": true,
+     "quality": 0.9,
+     "scale": 1,
+     "type": "image/webp"
+    },
+    "subject": {
+     "address": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-los-angeles-2026-10-03"
+    },
+    "time": {
+     "at": 1791050400
+    },
+    "v": 1
+   },
+   "typeStep": "larger",
+   "window": {
+    "from": 1790985600,
+    "until": 1791072000
+   }
+  },
+  "regions": {
+   "footer": {
+    "height": "<wraps with the run>",
+    "width": 480,
+    "x": 800,
+    "y": 538
+   },
+   "inset": {
+    "height": 336,
+    "width": 336,
+    "x": 450,
+    "y": 450
+   },
+   "picture": {
+    "height": 800,
+    "width": 800,
+    "x": 0,
+    "y": 0
+   }
+  },
+  "sourceRect": {
+   "height": 800,
+   "width": 800,
+   "x": 0,
+   "y": 0
+  },
+  "warnings": [],
+  "width": 1280
+ },
+ "drawn": {
+  "appearance": {
+   "light": "sun",
+   "nightFill": 0.15,
+   "skin": "auto",
+   "territories": "quiet"
+  },
+  "card": {
+   "inset": true,
+   "preset": "embed",
+   "template": "raver_alert"
+  },
+  "emphasis": {
+   "featured": true
+  },
+  "framing": {
+   "fit": "view"
+  },
+  "layers": {
+   "pins": [],
+   "primary": "HeatRisk"
+  },
+  "output": {
+   "alt": true,
+   "quality": 0.9,
+   "scale": 1,
+   "type": "image/webp"
+  },
+  "subject": {
+   "address": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-los-angeles-2026-10-03"
+  },
+  "time": {
+   "at": 1791050400
+  },
+  "v": 1
+ },
+ "name": "heat-inset-embed",
+ "notes": [],
+ "ok": true,
+ "warnings": []
+}

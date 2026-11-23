@@ -1,0 +1,21 @@
+{
+    "git.ignoreLimitWarning": true,
+    "cmake.sourceDirectory": "/Users/jono/Documents/GitHub/starcom-app/node_modules/@ipshipyard/node-datachannel",
+    "chat.tools.terminal.autoApprove": {
+        "EOF": true,
+        "git checkout": true,
+        "git add": true
+    },
+    "files.watcherExclude": {
+        "**/dist/**": true,
+        "**/test-results/**": true,
+        "**/playwright-report/**": true,
+        "**/node_modules/**": true
+    },
+    "search.exclude": {
+        "**/dist": true,
+        "**/test-results": true,
+        "**/playwright-report": true
+    },
+    "jest.runMode": "on-demand"
+}

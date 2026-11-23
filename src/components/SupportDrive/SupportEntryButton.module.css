@@ -1,0 +1,85 @@
+/* Sized for the bottom navigation bar it sits in, not floated over the page. */
+.supportButton {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.4rem 0.95rem;
+  white-space: nowrap;
+  border-radius: 8px;
+  border: 1px solid rgba(67, 214, 255, 0.8);
+  background: linear-gradient(120deg, rgba(12, 24, 36, 0.92), rgba(16, 30, 44, 0.9));
+  color: #e9f8ff;
+  cursor: pointer;
+  font-family: var(--sc-font-text);
+  letter-spacing: 0.06em;
+  box-shadow: 0 0 14px rgba(67, 214, 255, 0.28);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border 0.2s ease, background-position 0.6s ease;
+  overflow: hidden;
+  background-size: 180% 180%;
+}
+
+.supportButton::before,
+.supportButton::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.supportButton::before {
+  border: 1px solid rgba(67, 214, 255, 0.25);
+  box-shadow: inset 0 0 0 1px rgba(23, 201, 180, 0.12);
+  opacity: 0.8;
+}
+
+.supportButton::after {
+  background: radial-gradient(circle at 20% 30%, rgba(67, 214, 255, 0.18), transparent 38%),
+    linear-gradient(120deg, rgba(67, 214, 255, 0.08), rgba(23, 201, 180, 0.08));
+  opacity: 0.55;
+  mix-blend-mode: screen;
+}
+
+.supportButton:hover,
+.supportButton:focus-visible {
+  transform: translateY(-1px);
+  border-color: #43d6ff;
+  box-shadow: 0 0 20px rgba(67, 214, 255, 0.45);
+  outline: none;
+  background-position: 90% 50%;
+}
+
+.icon {
+  font-size: 1rem;
+  filter: drop-shadow(0 0 4px rgba(67, 214, 255, 0.6));
+}
+
+.label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+/* The bar scrolls on a narrow screen; the entry keeps its place as an icon. */
+@media (max-width: 640px) {
+  .supportButton {
+    padding: 0.4rem 0.6rem;
+  }
+  .label {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .supportButton {
+    transition: none;
+  }
+
+  .supportButton:hover,
+  .supportButton:focus-visible {
+    transform: none;
+    box-shadow: 0 0 14px rgba(67, 214, 255, 0.28);
+    border-color: rgba(67, 214, 255, 0.8);
+  }
+}

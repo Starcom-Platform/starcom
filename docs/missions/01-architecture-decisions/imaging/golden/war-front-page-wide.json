@@ -1,0 +1,559 @@
+{
+ "card": {
+  "alt": "WAR & CONFLICT BRIEF: War & Conflict Brief, 2 Oct 2026. 30 items reported on 2 Oct 2026 (UTC), posted on The Record. Ethiopia and Eritrea, 4 items, a major war. Most serious: A diplomat from Egypt is told to leave Ethiopia within 48… Israel–Palestine: Gaza and the West Bank, 4 items, a major war. Most serious: Israeli settlers shoot and kill a Palestinian man at his… Russia–Ukraine war, 3 items, a major war. Most serious: A Russian Su-35 fighter jet shoots down a Russian Mi-8… Eastern DR Congo, 1 item, a major war. Most serious: Ebola response faces setback as transit centre burns down in… The picture: the whole planet centred near 21.6°N, 32.6°E, showing War & Conflict and Borders. Caveats: War & Conflict items stand three days; casualty claims are as reported, never added. Unsigned capture: one browser's view at one moment. Made by Starcom, <captured>.",
+  "frame": {
+   "height": 630,
+   "width": 606
+  },
+  "height": 630,
+  "mimeType": "image/webp",
+  "provenance": {
+   "appearance": {
+    "lightMode": "sun",
+    "quality": {
+     "atmosphere": true,
+     "clouds": true,
+     "detail": "full detail",
+     "setting": "low"
+    },
+    "skin": "Blue Marble",
+    "territories": "quiet"
+   },
+   "build": "<build>",
+   "camera": {
+    "altitude": 2.5,
+    "lat": 21.6416663286863,
+    "lon": 32.57266808368352
+   },
+   "capturedAt": "<captured>",
+   "card": {
+    "badge": "WAR & CONFLICT BRIEF",
+    "chosenBy": "subject",
+    "template": "conflict_brief"
+   },
+   "caveats": [
+    "War & Conflict: each item stands for three days from when it was reported, or until a warning ends; a point is placed no finer than about 11 km, and a mark at a country's centre is news about the whole country. Casualty claims are shown as reported, each side apart, never added.",
+    "Unsigned client-side capture: one browser's view at one moment, not an attested record."
+   ],
+   "caveatsShort": [
+    "War & Conflict items stand three days; casualty claims are as reported, never added.",
+    "Unsigned capture: one browser's view at one moment."
+   ],
+   "credits": [
+    "Wikipedia's List of ongoing armed conflicts (CC BY-SA 4.0)"
+   ],
+   "feeds": [
+    {
+     "credits": [],
+     "error": null,
+     "lastUpdated": "<read>",
+     "layer": "WarConflict",
+     "loading": false,
+     "name": "War & Conflict from US State Department travel advice, Global Affairs Canada travel advice, the IAEA, Cloudflare Radar, UN News, Wikipedia's Current events portal, UK Foreign Office travel advice, EASA conflict zone bulletins (17 past its three days, not drawn)",
+     "note": "War & Conflict: each item stands for three days from when it was reported, or until a warning ends; a point is placed no finer than about 11 km, and a mark at a country's centre is news about the whole country. Casualty claims are shown as reported, each side apart, never added.",
+     "noteShort": "War & Conflict items stand three days; casualty claims are as reported, never added.",
+     "shortName": "War & Conflict"
+    },
+    {
+     "credits": [
+      {
+       "licence": {
+        "name": "CC BY-SA 4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+       },
+       "text": "Wikipedia's List of ongoing armed conflicts",
+       "url": "https://en.wikipedia.org/wiki/List_of_ongoing_armed_conflicts"
+      }
+     ],
+     "error": null,
+     "lastUpdated": "<read>",
+     "layer": "WarConflict",
+     "loading": false,
+     "name": "The world's wars: 48, from Wikipedia's List of ongoing armed conflicts",
+     "note": "War & Conflict: each item stands for three days from when it was reported, or until a warning ends; a point is placed no finer than about 11 km, and a mark at a country's centre is news about the whole country. Casualty claims are shown as reported, each side apart, never added.",
+     "noteShort": "War & Conflict items stand three days; casualty claims are as reported, never added.",
+     "shortName": "The war map"
+    }
+   ],
+   "frame": {
+    "height": 630,
+    "width": 606
+   },
+   "frontPage": {
+    "count": 30,
+    "day": "2026-10-02",
+    "lines": [
+     "30 items reported on 2 Oct 2026 (UTC), posted on The Record",
+     "Ethiopia and Eritrea · 4 items · a major war",
+     "Most serious: A diplomat from Egypt is told to leave Ethiopia within 48…",
+     "Israel–Palestine: Gaza and the West Bank · 4 items · a major war",
+     "Most serious: Israeli settlers shoot and kill a Palestinian man at his…",
+     "Russia–Ukraine war · 3 items · a major war",
+     "Most serious: A Russian Su-35 fighter jet shoots down a Russian Mi-8…",
+     "Eastern DR Congo · 1 item · a major war",
+     "Most serious: Ebola response faces setback as transit centre burns down in…"
+    ],
+    "lit": [
+     "ethiopia-eritrea",
+     "israel-palestine",
+     "russia-ukraine",
+     "drc"
+    ],
+    "noTheatre": 12,
+    "template": "conflict_brief",
+    "theatres": [
+     {
+      "count": 4,
+      "name": "Ethiopia and Eritrea",
+      "tier": "major_war"
+     },
+     {
+      "count": 4,
+      "name": "Israel–Palestine: Gaza and the West Bank",
+      "tier": "major_war"
+     },
+     {
+      "count": 3,
+      "name": "Russia–Ukraine war",
+      "tier": "major_war"
+     },
+     {
+      "count": 1,
+      "name": "Eastern DR Congo",
+      "tier": "major_war"
+     },
+     {
+      "count": 1,
+      "name": "Israel–Lebanon and Hezbollah",
+      "tier": "major_war"
+     },
+     {
+      "count": 1,
+      "name": "Somalia: al-Shabaab and piracy",
+      "tier": "major_war"
+     },
+     {
+      "count": 1,
+      "name": "Sudanese civil war",
+      "tier": "major_war"
+     },
+     {
+      "count": 1,
+      "name": "Afghanistan–Pakistan war",
+      "tier": "minor_war"
+     },
+     {
+      "count": 1,
+      "name": "Haiti gang war",
+      "tier": "minor_war"
+     },
+     {
+      "count": 1,
+      "name": "Iraq",
+      "tier": "conflict"
+     }
+    ],
+    "title": "War & Conflict Brief · 2 Oct 2026"
+   },
+   "imagery": [
+    "NASA"
+   ],
+   "layersSelectedButEmpty": [],
+   "layersShown": [
+    "War & Conflict"
+   ],
+   "legend": [
+    {
+     "colorMeans": "a mark's backing is the most serious thing about it; a country's fill is its war's tier on Wikipedia's list, where the war is fought; an outline in that colour is a country on its list where it is not",
+     "layer": "War & Conflict",
+     "layerId": "WarConflict",
+     "shapeMeans": "the glyph is what happened: humanitarian, fighting, shooting or an attack, a strike, shelling, an explosion or a missile launch, a warning: airspace, travel, an emergency or an election, nuclear safety, an internet shutdown, diplomacy, talks or the Security Council; a mark at a country's centre is news about the whole country; a ring is a province; a number on a mark counts the reports it stands for, with those of marks crowded under it; a wider ring round a mark, more deaths reported: its area grows with the largest figure, as reported, never added",
+     "swatches": [
+      {
+       "color": "#FF7266",
+       "label": "a critical warning (a glow)",
+       "style": "glow"
+      },
+      {
+       "color": "#FF7266",
+       "label": "deaths reported (a ring)",
+       "style": "ring"
+      },
+      {
+       "color": "#A1ADB2",
+       "label": "a report (a disc)",
+       "style": "disc"
+      },
+      {
+       "color": "#FB594D",
+       "label": "Major war: 8 (10,000 or more combat deaths a year)",
+       "shape": "area"
+      },
+      {
+       "color": "#FD8537",
+       "label": "Minor war: 13 (1,000 to 9,999)",
+       "shape": "area"
+      },
+      {
+       "color": "#FAAB3F",
+       "label": "Conflict: 15 (100 to 999)",
+       "shape": "area"
+      },
+      {
+       "color": "#EACF83",
+       "label": "Skirmishes: 12 (under 100)",
+       "shape": "area"
+      },
+      {
+       "color": "#FB594D",
+       "label": "hatched: on a war's list, not where it is fought",
+       "shape": "hatch"
+      },
+      {
+       "color": "#FF7266",
+       "label": "an arc: a state's forces from another country, coloured as its item",
+       "shape": "arc"
+      }
+     ]
+    },
+    {
+     "colorMeans": "what kind of boundary it is — dashed where it is not settled",
+     "layer": "Borders",
+     "layerId": "NationalTerritories:borders",
+     "swatches": [
+      {
+       "color": "#c9d4e3",
+       "label": "international boundary",
+       "shape": "line"
+      },
+      {
+       "color": "#ff5555",
+       "label": "disputed",
+       "shape": "dashed"
+      },
+      {
+       "color": "#ffcc00",
+       "label": "line of control",
+       "shape": "dashed"
+      },
+      {
+       "color": "#888888",
+       "label": "indefinite",
+       "shape": "line"
+      }
+     ]
+    }
+   ],
+   "link": "<origin>/?v=1&sub=WarConflict&at=21.64,32.57,2.5&win=1790899200..1790985600",
+   "marks": null,
+   "origin": "starcom-app client capture (unsigned)",
+   "raverWatchItems": [
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-conflict-travel-226b496cba490d6d",
+     "layer": "WarConflict",
+     "level": "report"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-conflict-canada-067ac60bd917bee5",
+     "layer": "WarConflict",
+     "level": "report"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-conflict-canada-6fd50ddc500a485d",
+     "layer": "WarConflict",
+     "level": "report"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-conflict-canada-14fc917ae839a3c4",
+     "layer": "WarConflict",
+     "level": "report"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-conflict-travel-01f80ff0f65824f0",
+     "layer": "WarConflict",
+     "level": "report"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-conflict-travel-6d7aaef0c6fc89bd",
+     "layer": "WarConflict",
+     "level": "report"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-conflict-iaea-0629f04d87283930",
+     "layer": "WarConflict",
+     "level": "report"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-conflict-iaea-3a812ac34305a5fb",
+     "layer": "WarConflict",
+     "level": "report"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-conflict-radar-88b82308d570d71f",
+     "layer": "WarConflict",
+     "level": "report"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-conflict-radar-b93e56aec7724213",
+     "layer": "WarConflict",
+     "level": "report"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-conflict-travel-2abc2c3f639c47e9",
+     "layer": "WarConflict",
+     "level": "report"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-conflict-travel-4537b09134059cf8",
+     "layer": "WarConflict",
+     "level": "report"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-conflict-un_news-c8c4c1c7cdf9052a",
+     "layer": "WarConflict",
+     "level": "report"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-conflict-un_news-cd8751f30f2ec6d5",
+     "layer": "WarConflict",
+     "level": "report"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-conflict-un_news-3570491157a7a3b6",
+     "layer": "WarConflict",
+     "level": "report"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-conflict-un_news-bf09f9f72d6f9cba",
+     "layer": "WarConflict",
+     "level": "report"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-conflict-un_news-7d02e526ac619563",
+     "layer": "WarConflict",
+     "level": "report"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-conflict-un_news-a1134f9304469847",
+     "layer": "WarConflict",
+     "level": "report"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-conflict-un_news-19bb3f84bfd4f288",
+     "layer": "WarConflict",
+     "level": "report"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-conflict-wikipedia-8484dfd17b17d1dc",
+     "layer": "WarConflict",
+     "level": "report"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-conflict-wikipedia-ee3eb4ba85ed9da4",
+     "layer": "WarConflict",
+     "level": "report"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-conflict-wikipedia-506978fd48b1d4d4",
+     "layer": "WarConflict",
+     "level": "report"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-conflict-wikipedia-f0dc7b8a67bfeaa8",
+     "layer": "WarConflict",
+     "level": "report"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-conflict-wikipedia-a6c4e0d033ae3f05",
+     "layer": "WarConflict",
+     "level": "report"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-conflict-wikipedia-8b12506d8d1a4565",
+     "layer": "WarConflict",
+     "level": "deadly"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-conflict-wikipedia-b3005c4d39ee6409",
+     "layer": "WarConflict",
+     "level": "report"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-conflict-wikipedia-6a1753bba60b0d00",
+     "layer": "WarConflict",
+     "level": "deadly"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-conflict-wikipedia-99fbcafeda078948",
+     "layer": "WarConflict",
+     "level": "deadly"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-conflict-wikipedia-e87d82283b39ff53",
+     "layer": "WarConflict",
+     "level": "deadly"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-conflict-fcdo-8577490aacf7c1a4",
+     "layer": "WarConflict",
+     "level": "report"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-conflict-easa-e49f05b775bcf6fb",
+     "layer": "WarConflict",
+     "level": "report"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-conflict-easa-e39cdea4d414666c",
+     "layer": "WarConflict",
+     "level": "report"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-conflict-easa-42119a96dea200f6",
+     "layer": "WarConflict",
+     "level": "report"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-conflict-easa-fcf7b66145f208cc",
+     "layer": "WarConflict",
+     "level": "report"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-conflict-easa-8175899a3b52ab96",
+     "layer": "WarConflict",
+     "level": "report"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-conflict-easa-ac1850c5f6434d0c",
+     "layer": "WarConflict",
+     "level": "report"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-conflict-easa-e4608bc797b8d0c4",
+     "layer": "WarConflict",
+     "level": "report"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-conflict-easa-e53a3c29498b2bb7",
+     "layer": "WarConflict",
+     "level": "report"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-conflict-easa-788a0ff8140b4aba",
+     "layer": "WarConflict",
+     "level": "report"
+    },
+    {
+     "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-conflict-easa-b582f0c184d60e5f",
+     "layer": "WarConflict",
+     "level": "critical"
+    }
+   ],
+   "schema": "starcom.globe.capture",
+   "schemaVersion": 38,
+   "shot": {
+    "appearance": {
+     "light": "sun",
+     "nightFill": 0.15,
+     "skin": "auto",
+     "territories": "quiet"
+    },
+    "card": {
+     "preset": "wide",
+     "template": "conflict_brief"
+    },
+    "emphasis": {
+     "featured": false
+    },
+    "framing": {
+     "fit": "planet"
+    },
+    "layers": {
+     "pins": [],
+     "primary": "WarConflict"
+    },
+    "output": {
+     "alt": true,
+     "quality": 0.9,
+     "scale": 1,
+     "type": "image/webp"
+    },
+    "subject": {
+     "brief": "2026-10-02",
+     "theatres": 4
+    },
+    "time": {
+     "at": 1790974800
+    },
+    "v": 1
+   },
+   "typeStep": "larger",
+   "window": {
+    "from": 1790899200,
+    "until": 1790985600
+   }
+  },
+  "regions": {
+   "footer": {
+    "height": "<wraps with the run>",
+    "width": 594,
+    "x": 606,
+    "y": 541
+   },
+   "picture": {
+    "height": 630,
+    "width": 606,
+    "x": 0,
+    "y": 0
+   }
+  },
+  "sourceRect": {
+   "height": 630,
+   "width": 606,
+   "x": 0,
+   "y": 0
+  },
+  "warnings": [],
+  "width": 1200
+ },
+ "drawn": {
+  "appearance": {
+   "light": "sun",
+   "nightFill": 0.15,
+   "skin": "auto",
+   "territories": "quiet"
+  },
+  "card": {
+   "preset": "wide",
+   "template": "conflict_brief"
+  },
+  "emphasis": {
+   "featured": false
+  },
+  "framing": {
+   "fit": "planet"
+  },
+  "layers": {
+   "pins": [],
+   "primary": "WarConflict"
+  },
+  "output": {
+   "alt": true,
+   "quality": 0.9,
+   "scale": 1,
+   "type": "image/webp"
+  },
+  "subject": {
+   "brief": "2026-10-02",
+   "theatres": 4
+  },
+  "time": {
+   "at": 1790974800
+  },
+  "v": 1
+ },
+ "name": "war-front-page-wide",
+ "notes": [],
+ "ok": true,
+ "warnings": []
+}

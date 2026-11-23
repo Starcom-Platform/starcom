@@ -1,0 +1,294 @@
+# Vercel deployment ignore file
+# This file excludes files and directories from Vercel deployment
+# to stay under the 15,000 file limit
+
+# Backup directories (major culprits)
+backup/
+backup_logs/
+starcom-mk2-backup/
+
+# ─── NOT WEB BUILD INPUTS, AND VERY LARGE ──────────────────────────────────
+#
+# A deploy was measured uploading 609MB. `desktop/` alone is 1.088GB, of which
+# desktop/release is 637MB of BUILT DESKTOP BINARIES — uploaded on every deploy,
+# for a web build that references none of it (checked against vite.config.ts and
+# package.json). node_modules inside it was already excluded by the pattern
+# below; the release output never was.
+#
+# This is the upload half of the deployment-size problem. The other half — what
+# each deployment STORES — is minify-dist-json.mjs and the asset work in the
+# same series.
+#
+# If any of these ever becomes a build input, guard-vercel-build-inputs fails
+# the build rather than letting the deploy die on MODULE_NOT_FOUND. That guard
+# is why excluding aggressively here is safe.
+# Anchored with a leading slash. Unanchored, `tools/` matches a directory of
+# that name at ANY depth — it excluded src/applications/netrunner/tools and the
+# build failed to resolve NetRunnerPowerTools. guard-vercel-build-inputs did not
+# catch it because it checks the files the build CHAIN runs, not what src
+# imports.
+/desktop/
+/archives/
+/tools/
+
+# ─── MEASURED, NOT ASSUMED ─────────────────────────────────────────────────
+#
+# The upload was measured at 1076MB before these rules and 202MB after the
+# three above. These three are what was left, and none is a web build input:
+#
+#   .venv     76MB  a Python virtualenv
+#   .vercel   36MB  the CLI's own local state; .vercel/output is 36MB of a
+#                   PREVIOUS build's output. project.json is read off disk by
+#                   the CLI before it uploads anything, so excluding it from
+#                   the upload costs nothing.
+#   .generated 18MB baked territory artifacts, written by
+#                   scripts/geopolitical/bake-territories.ts and read by
+#                   nothing in the build — the shipped copies live in
+#                   public/geopolitical.
+#
+# What remains is public/ (52MB of assets that must ship) and src/ (17MB).
+/.venv/
+/.vercel/
+/.generated/
+
+# Node modules (should be excluded anyway)
+node_modules/
+**/node_modules/
+
+# Build outputs and dependencies
+target/
+dist/
+dist-ssr/
+build/
+out/
+
+# Development and test files
+#
+# ─── ANCHORED, FOR THE THIRD TIME ──────────────────────────────────────────
+#
+# `coverage/` was unanchored and matched src/services/intel/coverage, so the
+# deploy died on "Could not resolve ../../../services/intel/coverage/coverage"
+# — three production builds in a row, while the last good one stayed live and
+# the site served an ever-staler version of itself.
+#
+# This is the same mistake as `tools/` above, which excluded
+# src/applications/netrunner/tools, and the same as the parent-exclusion block
+# further down. Unanchored, a directory pattern matches at ANY depth, and this
+# repository keeps a `coverage`, a `tests` and a `contracts` directory inside
+# src/ that are nothing to do with the ones meant here.
+#
+# `tests/` and `contracts/` were not breaking anything yet — nothing in src
+# imports across them today — and they are anchored anyway, because "not
+# imported yet" is a property of this afternoon rather than of the pattern.
+test-results/
+/tests/
+playwright-report/
+/coverage/
+.cache/
+.npm/
+.yarn/
+
+# Documentation and scripts (not needed for deployment)
+# `docs/*` used to be here, and it is why four build steps failed in a row.
+#
+# Excluding the PARENT means `!docs/spec/**` below cannot bring the specs back:
+# git documents that a re-include cannot reach inside an excluded directory, and
+# the deploy export behaved that way — docs/spec/vectors/index.json was absent,
+# which is not a .md and so was excluded by the directory rule alone.
+# guard-spec-drift, guard-hardcoded-relays and conformance all read from
+# docs/spec, and publish-spec.mjs SERVES it later in the same chain.
+#
+# So the parent is not excluded any more. `*.md` above already removes the bulk
+# of docs (16MB of markdown), and docs/assets is 48MB of the remaining 48MB.
+# What is left of docs is under a megabyte, and docs/spec arrives intact without
+# depending on re-include semantics that differ between implementations.
+docs/assets/
+# The decision records and the samples kept beside them, read by tests and probes, never by the build
+# (checked 2026-10-13: no build-chain script or app module reads them). Uploaded, a push of a sample alone
+# was a build: the Ignored Build Step (scripts/vercel-build-input.mjs) saw `docs` change.
+/docs/missions/
+# Restrict ignoring of build/utility scripts to the root-level scripts directory only.
+# `/scripts/*` used to be here, with fifteen negations below trying to undo it.
+#
+# It is gone, and the negations with it. The whole arrangement existed to save
+# 2.2MB — the entire scripts directory — while `desktop/` shipped 1GB of built
+# binaries that nobody had excluded. That is the wrong trade twice over.
+#
+# It was also actively breaking. Excluding the PARENT means a negation cannot
+# reach inside it: `!/scripts/peer/**` did not bring scripts/peer back, and the
+# deploy died on MODULE_NOT_FOUND for scripts/peer/peer.mjs — the same failure
+# the block below records costing five months of deploys, returning by the same
+# mechanism. docs/spec was absent for the identical reason.
+#
+# Only the tests are excluded now, which no build step runs.
+scripts/__tests__/
+# Ensure NetRunner engine "scripts" subtree (nested) is retained (overrides broader patterns just in case)
+!src/applications/netrunner/scripts/
+!src/applications/netrunner/scripts/engine/
+!src/applications/netrunner/scripts/engine/**
+*.sh
+*.md
+!README.md
+
+# Asset development files (exclude development assets, keep production ones)
+asset development/
+
+# Exclude asset files from development directories only
+asset development/**/*.psd
+asset development/**/*.ai
+asset development/**/*.svg
+asset development/**/*.png
+asset development/**/*.jpg
+asset development/**/*.jpeg
+asset development/**/*.gif
+asset development/**/*.ico
+asset development/**/*.glb
+
+# Exclude root-level asset files (not in public or src directories)
+/*.svg
+/*.png
+/*.jpg
+/*.jpeg
+/*.gif
+/*.ico
+/*.glb
+
+# Configuration files that aren't needed for deployment
+*.config.js
+*.config.ts
+*.config.cjs
+*.config.mjs
+!vite.config.*
+!next.config.*
+!tailwind.config.*
+!postcss.config.*
+# Keep all TypeScript config files - they're needed for Vite build
+# tsconfig.*.json
+# !tsconfig.json
+eslint.config.js
+vitest.config.ts
+
+# Log files
+*.log
+*.log.*
+backup_verify_log.txt
+
+# Development database files
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+/data/
+!src/data/
+!src/data/rlshEmbeddedDataset.ts
+!src/data/rlshCuratedRegistration.ts
+!src/data/rlshRoles/
+!src/data/rlshRoles/**
+
+# Git files
+.git/
+.gitignore
+.gitmodules
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+*.tmp
+*.temp
+
+# Environment files (should be configured in Vercel dashboard)
+.env
+.env.*
+!.env.example
+
+# Rust specific
+Cargo.lock
+**/*.rs.bk
+
+# Contracts (if not needed for frontend). Anchored: src/contracts exists.
+/contracts/
+
+# Any other large asset directories (exclude only asset model directories, not src/models)
+/models/
+public/models/*.glb
+public/models/*.gltf
+asset development/models/
+stock/
+
+# ── Build-time requirements — MUST reach the build container ─────────────
+#
+# These negations sit last on purpose: .vercelignore is gitignore-shaped, so
+# the final matching pattern wins, and the broad `*.md` and `docs/` rules above
+# would otherwise re-exclude them.
+#
+# This block exists because omitting it cost five months of deploys. `/scripts/`
+# was excluded while package.json's build ran `tsx scripts/verify-netrunner-
+# engine.ts`, so every build died with MODULE_NOT_FOUND before reaching vite —
+# and the last successful deploy stayed live from March to August while `main`
+# moved 156 commits ahead of it. Nothing reported this: the site kept serving,
+# just an ever-staler version of itself.
+#
+# If you add a step to the build chain, add its file here in the same commit.
+
+# Every .mjs in the root scripts directory, as a PATTERN rather than a list.
+#
+# The list this replaces held eight names while the build chain needed nineteen,
+# so eleven build steps were being stripped from the container — including the
+# very first one, which is why the deploy died before reaching vite. The block
+# above says "if you add a step to the build chain, add its file here in the
+# same commit"; that instruction was followed zero times out of eleven,
+# including by the commit that added guard-native-capabilities.mjs.
+#
+# An instruction obeyed nobody is a design problem, not a discipline problem. A
+# pattern cannot be forgotten, and scripts/guard-vercel-build-inputs.mjs now
+# fails the build locally if a build step would not survive this file.
+
+# And every .ts in that directory, for the same reason and by the same argument.
+#
+# The pattern above was applied to .mjs and the .ts files were listed by name
+# instead — so scripts/make-vectors.ts, which nothing in the build chain runs,
+# was stripped from the container. That is not a missing build step; it is a
+# missing CONSUMER. guard-orphan-exports scans the tree it is given, found
+# contentDigest with no caller left, and correctly failed the build for an
+# orphan that does not exist in the repository.
+#
+# A guard that reads the source tree answers differently when the tree is
+# truncated, so the tree the guards see must be the tree that exists. A pattern
+# cannot be forgotten; a list of four names already was.
+
+# Guards that now run IN the build, because CI does not run at all — 79 startup
+# failures to 2 successes, the same billing signature two peer repos hit. Every
+# guard in this repository was CI-only and had therefore never executed once.
+# Added here in the same commit as the build-chain change, per the rule above.
+
+# The published specification and its conformance vectors. publish-spec.mjs
+# copies these into the served output so peers can fetch what they build
+# against; four other nodes depend on them being retrievable.
+!docs/spec/
+!docs/spec/**
+
+# ── Served documents that are NOT regenerated at build time ──────────────
+#
+# `public/` is by definition what the site serves. The broad `*.md` rule near
+# the top is aimed at repository documentation, but it matches there too, and
+# the result is a document that exists in the tree, passes review, deploys
+# without error, and 404s at the URL it is published under.
+#
+# It went unnoticed because public/spec/*.md serves fine — those are written by
+# publish-spec.mjs DURING the build, after this filter has already been applied,
+# so the only markdown anyone checked was the markdown that regenerates itself.
+# security-policy.md is hand-authored, and it is the document security.txt sends
+# a journalist or a relay operator to. It was returning 404 while security.txt,
+# in the same directory, served correctly.
+#
+# A pattern rather than a filename, for the reason the scripts block above
+# records: that list held eight names while nineteen were needed.
+!public/**/*.md

@@ -1,0 +1,90 @@
+{
+ "fixture_note": "INVENTED for the fixture: not a measurement, not a result, never to be shown as one.",
+ "provenance": {
+  "invented": "every count"
+ },
+ "event": {
+  "kind": 30023,
+  "pubkey": "86f824c3f1e67c60b1dc15ce110648c4de5c3fb879022fbbcc5e8deb720e402c",
+  "created_at": 1793019600,
+  "tags": [
+   [
+    "d",
+    "psi-ledger-2026-w44"
+   ],
+   [
+    "title",
+    "Psi Watch ledger, 2026 week 44 (FIXTURE)"
+   ],
+   [
+    "a",
+    "30023:86f824c3f1e67c60b1dc15ce110648c4de5c3fb879022fbbcc5e8deb720e402c:psi-scry-PSI-9001-1"
+   ],
+   [
+    "count",
+    "registered",
+    "3"
+   ],
+   [
+    "count",
+    "scored",
+    "1"
+   ],
+   [
+    "count",
+    "met",
+    "0"
+   ],
+   [
+    "count",
+    "missed",
+    "1"
+   ],
+   [
+    "t",
+    "psi_watch"
+   ],
+   [
+    "t",
+    "psi_ledger"
+   ],
+   [
+    "t",
+    "experimental"
+   ],
+   [
+    "t",
+    "role:context"
+   ],
+   [
+    "t",
+    "category:psi"
+   ],
+   [
+    "t",
+    "category:psi.ledger"
+   ],
+   [
+    "schema_version",
+    "0"
+   ],
+   [
+    "engine",
+    "skyfield 1.54, de440s; catalogue kit-v0 (2026-10-26 to 2026-11-25)"
+   ],
+   [
+    "published_at",
+    "1793019600"
+   ],
+   [
+    "client",
+    "Mecha Jono"
+   ],
+   [
+    "alt",
+    "Psi Watch ledger (Experimental). FIXTURE. Week 44: 3 registered, 1 scored, 0 met, 1 missed. Every result is listed, met or missed."
+   ]
+  ],
+  "content": "FIXTURE. Week 44: 3 registered, 1 scored, 0 met, 1 missed. Every result is listed, met or missed."
+ }
+}

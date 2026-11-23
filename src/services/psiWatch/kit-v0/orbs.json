@@ -1,0 +1,150 @@
+{
+ "kit": "psi_rlsh_kit_v0",
+ "source": "configs/psi/classes.json (version 1)",
+ "pair_kind": {
+  "rule": "moon if the Moon is in the pair; else inner if the Sun, Mercury or Venus is; else outer (fixed points count as the other body: Sun+GC is inner, Mars+GC outer)",
+  "moon": "the Moon is in the pair",
+  "inner": "else the Sun, Mercury or Venus is",
+  "outer": "otherwise"
+ },
+ "bodies": [
+  "Sun",
+  "Moon",
+  "Mercury",
+  "Venus",
+  "Mars",
+  "Jupiter",
+  "Saturn",
+  "Uranus",
+  "Neptune",
+  "Pluto"
+ ],
+ "fixed_points": [
+  "NODE",
+  "GC",
+  "GAC"
+ ],
+ "measured": "A class's default profile is replaced, class by class, by the shape a sealed registration measures (source measured:<registration>); that change raises schema_version and is listed.",
+ "window_edges": "An event's window tag (t_in, t_out) is the sky's own crossing of the cap, solved from the ephemeris. The profile's rate and acceleration describe the orb near exactness; at a slow pair's far edges the two part by hours. Bound a curve by the window tag.",
+ "classes": {
+  "aspect": {
+   "kernel": "gauss_orb",
+   "card": {
+    "harmonics": [
+     1,
+     2,
+     3,
+     4,
+     6
+    ],
+    "moon_to": "slow_bodies"
+   },
+   "harmonics_max": 12,
+   "h_deg": {
+    "moon": 1.0,
+    "inner": 2.0,
+    "outer": 1.0
+   },
+   "cap_deg": {
+    "moon": 3.0,
+    "inner": 6.0,
+    "outer": 3.0
+   }
+  },
+  "lunation": {
+   "kernel": "gauss_orb",
+   "card": true,
+   "harmonics_max": null,
+   "h_deg": {
+    "moon": 1.0
+   },
+   "cap_deg": {
+    "moon": 3.0
+   }
+  },
+  "eclipse": {
+   "kernel": "gauss_orb",
+   "card": true,
+   "harmonics_max": null,
+   "h_deg": {
+    "moon": 1.0
+   },
+   "cap_deg": {
+    "moon": 3.0
+   }
+  },
+  "station": {
+   "kernel": "speed_fraction",
+   "card": true,
+   "harmonics_max": null,
+   "half": 0.1,
+   "cap": 0.25,
+   "meaning": "the body's |speed| as a fraction of its mean motion"
+  },
+  "ingress": {
+   "kernel": "past_boundary",
+   "card": true,
+   "harmonics_max": null,
+   "h_deg": 1.0,
+   "cap_deg": 1.0,
+   "applying_weight": 0
+  },
+  "node": {
+   "kernel": "gauss_orb",
+   "card": true,
+   "harmonics_max": null,
+   "h_deg": {
+    "moon": 1.0
+   },
+   "cap_deg": {
+    "moon": 3.0
+   }
+  },
+  "lunar_distance": {
+   "kernel": "gauss_orb",
+   "card": false,
+   "harmonics_max": null,
+   "h_deg": {
+    "moon": 1.0
+   },
+   "cap_deg": {
+    "moon": 3.0
+   }
+  },
+  "gc_contact": {
+   "kernel": "gauss_orb",
+   "card": false,
+   "harmonics_max": null,
+   "h_deg": {
+    "moon": 1.0,
+    "inner": 2.0,
+    "outer": 1.0
+   },
+   "cap_deg": {
+    "moon": 3.0,
+    "inner": 6.0,
+    "outer": 3.0
+   }
+  },
+  "declination": {
+   "kernel": "gauss_orb",
+   "card": false,
+   "harmonics_max": null,
+   "h_deg": {
+    "moon": 1.0,
+    "inner": 2.0,
+    "outer": 1.0
+   },
+   "cap_deg": {
+    "moon": 3.0,
+    "inner": 6.0,
+    "outer": 3.0
+   }
+  },
+  "formation": {
+   "kernel": "members",
+   "card": true,
+   "harmonics_max": null
+  }
+ }
+}

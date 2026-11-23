@@ -1,0 +1,14 @@
+{
+  "name": "private-with-justification",
+  "description": "No absolute bar, deliberately: absolute bars get routed around. A landlord with 214 unremedied violations publishes because someone wrote down why.",
+  "subjectKind": "person",
+  "options": {
+    "isMock": false,
+    "subjectRole": "private",
+    "consentToPublishAboutPerson": true,
+    "publicInterestJustification": "214 unremedied housing-code violations across 30 buildings; harm ongoing"
+  },
+  "expect": {
+    "allowed": true
+  }
+}

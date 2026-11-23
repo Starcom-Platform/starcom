@@ -1,0 +1,29 @@
+{
+  "name": "area-absent-refused",
+  "description": "An area observation with no area. An observation with no place is not one.",
+  "expect": {
+    "observations": 0
+  },
+  "diagnostic": {
+    "note": "NOT normative — our drop wording, for humans and our own gate.",
+    "reasonContains": "names no area"
+  },
+  "event": {
+    "kind": 1911,
+    "created_at": 1756000000,
+    "tags": [
+      [
+        "g",
+        "st-louis"
+      ],
+      [
+        "d",
+        "st-louis/st-patrick-center"
+      ]
+    ],
+    "content": "{\"anchor\":\"st-louis/st-patrick-center\",\"observed_at\":1755996400,\"tags\":[\"locked\"],\"method\":\"saw\",\"callsign\":\"Raven\",\"precision\":\"area\"}",
+    "pubkey": "96bafb179762225794c13c78e823b349e8f21d96f8113020032e5cabdbe59889",
+    "id": "04c8168eff39ef0c73fd76f5861c74f33b4dcf226f1b70b2f895b6bf78a8af02",
+    "sig": "37efeb63ca7766b1625349da5c8d28dd56d505562813bfefa39c747053c6c730ff5acc4208c31c82174107b236e4ddfa01cb31260f0c9b95e695bd5097352a42"
+  }
+}

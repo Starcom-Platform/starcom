@@ -1,0 +1,25 @@
+{
+  "name": "valid-observation",
+  "description": "A well-formed field observation in NavCom's form. Derives one observation, positioned at the CENTRE of the 4-character geohash cell in content.area, with the cell radius as its precision — never at a point.",
+  "expect": {
+    "observations": 1
+  },
+  "event": {
+    "kind": 1911,
+    "created_at": 1756000000,
+    "tags": [
+      [
+        "g",
+        "st-louis"
+      ],
+      [
+        "d",
+        "st-louis/st-patrick-center"
+      ]
+    ],
+    "content": "{\"anchor\":\"st-louis/st-patrick-center\",\"observed_at\":1755996400,\"tags\":[\"locked\"],\"method\":\"saw\",\"callsign\":\"Raven\",\"precision\":\"area\",\"area\":\"dp3w\"}",
+    "pubkey": "96bafb179762225794c13c78e823b349e8f21d96f8113020032e5cabdbe59889",
+    "id": "e8d09c359707a3b8ca7b51a2a9a9a4b84db8405d3880936d31392f120f9221eb",
+    "sig": "f77072b2557aecc3d72958ee6d16728f335256b25d35148af1a64a23a6c0365bfff4ba06ceacaf3f9e950fc759a07ef806d098ecfa0fb90c07bdee04c7abc643"
+  }
+}

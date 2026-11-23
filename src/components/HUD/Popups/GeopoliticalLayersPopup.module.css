@@ -1,0 +1,374 @@
+.popup {
+  width: min(420px, 92vw);
+  max-height: 82vh;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 196, 255, 0.35);
+  background: rgba(0, 16, 36, 0.95);
+  color: #d9f6ff;
+  font-size: 12px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.title {
+  margin: 0;
+  font-size: 16px;
+  flex: 1;
+}
+
+.integrityBadge {
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: #222;
+  border: 1px solid #444;
+  color: #ccc;
+  white-space: nowrap;
+}
+
+.integrity-verified {
+  color: #55ff55;
+  border-color: rgba(85, 255, 85, 0.4);
+}
+
+.integrity-mismatch,
+.integrity-error {
+  color: #ff6666;
+  border-color: rgba(255, 102, 102, 0.4);
+}
+
+.integrity-verifying {
+  color: #ffcc00;
+  border-color: rgba(255, 204, 0, 0.4);
+}
+
+.closeButton {
+  width: 28px;
+  height: 28px;
+  flex: none;
+  border: 1px solid rgba(0, 196, 255, 0.35);
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.4);
+  color: #00c4ff;
+  cursor: pointer;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-top: 1px solid rgba(0, 196, 255, 0.15);
+  padding-top: 8px;
+}
+
+.section:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.sectionTitle {
+  font-weight: 600;
+  margin-bottom: 2px;
+  color: #7fd8ff;
+}
+
+.sectionTitleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 2px;
+}
+
+.sectionTitleRow .sectionTitle {
+  margin-bottom: 0;
+}
+
+/* The data badges are the shared SourceStatusBadge (plan item 8.3c). */
+
+.styleRow {
+  display: flex;
+  gap: var(--space-1);
+  margin: 4px 0 2px;
+}
+
+.styleOption {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 3px 6px;
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-size: var(--text-xs);
+  cursor: pointer;
+}
+
+.styleOption[data-active] {
+  border-color: var(--starcom-accent);
+  color: var(--text-primary);
+  background: var(--surface-interactive);
+}
+
+.styleOption input { margin: 0; }
+.styleOption:focus-within { outline: 2px solid var(--starcom-accent); outline-offset: 1px; }
+
+/* A border kind's colour: one row of palette swatches, the radio under each (K5, step 5). */
+.swatchRow {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.swatchOption {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+}
+
+.swatchOption input {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.swatch {
+  display: block;
+  width: 14px;
+  height: 14px;
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius-sm);
+}
+
+.swatchOption input:checked + .swatch { outline: 2px solid var(--starcom-accent); outline-offset: 1px; }
+.swatchOption:focus-within .swatch { outline: 2px solid var(--text-primary); outline-offset: 1px; }
+
+.toggleRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.sliderRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/*
+ * Was a fixed 60px, which wrapped every two-word label the territories panel
+ * added — "Fill opacity", "Colour scheme", "Label visibility" each broke across
+ * two lines and pushed their row out of alignment with its neighbours. Sized to
+ * the longest label instead, and told not to wrap, so the sliders line up.
+ */
+.sliderLabel {
+  width: 92px;
+  flex: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.slider {
+  flex: 1;
+}
+
+.sliderValue {
+  width: 30px;
+  text-align: right;
+  flex: none;
+  font-variant-numeric: tabular-nums;
+}
+
+.artifactList {
+  max-height: 140px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.artifactRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.artifactPath {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.artifactStatus {
+  color: #ccc;
+}
+
+.artifact-verified {
+  color: #55ff55;
+}
+
+.artifact-mismatch {
+  color: #ff6666;
+}
+
+.artifactSize {
+  opacity: 0.65;
+  font-variant-numeric: tabular-nums;
+}
+
+.lodReadout {
+  opacity: 0.75;
+  margin-top: 2px;
+}
+
+.errorSection {
+  color: #ff6666;
+  border-top: 1px solid rgba(255, 102, 102, 0.3);
+  padding-top: 8px;
+}
+
+
+/* ── Territory appearance controls ──────────────────────────────────────────
+ *
+ * Added with the national-territories panel. The popup already had toggleRow,
+ * sliderRow and their parts; these are the shapes it did not have — a select, a
+ * subsection heading, and a disclosure for the controls that only matter when
+ * something looks wrong.
+ */
+
+.selectRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 4px 0;
+  font-size: 0.72rem;
+}
+
+.select {
+  flex: 0 1 auto;
+  min-width: 108px;
+  background: rgba(0, 20, 40, 0.9);
+  color: #cfefff;
+  border: 1px solid rgba(0, 196, 255, 0.35);
+  border-radius: 3px;
+  padding: 3px 6px;
+  font-family: inherit;
+  font-size: 0.72rem;
+}
+
+.select:focus-visible {
+  outline: 2px solid #00c4ff;
+  outline-offset: 1px;
+}
+
+/* A heading inside a section, for grouping without starting a new panel. */
+.subTitle {
+  margin-top: 10px;
+  margin-bottom: 2px;
+  font-size: 0.63rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: rgba(0, 196, 255, 0.65);
+}
+
+/*
+ * The controls that only matter when something looks wrong — level of detail,
+ * depth-fighting, picking. Collapsed by default: an operator adjusting border
+ * colour should not have to scroll past polygon offset units to reach opacity.
+ */
+.advanced {
+  margin-top: 10px;
+  border-top: 1px solid rgba(0, 196, 255, 0.18);
+  padding-top: 6px;
+}
+
+.advanced > summary {
+  cursor: pointer;
+  font-size: 0.63rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: rgba(0, 196, 255, 0.65);
+  list-style: none;
+  padding: 2px 0;
+}
+
+.advanced > summary::-webkit-details-marker { display: none; }
+
+.advanced > summary::before {
+  content: '▸';
+  display: inline-block;
+  width: 12px;
+  transition: transform 0.15s ease;
+}
+
+.advanced[open] > summary::before { transform: rotate(90deg); }
+
+.advanced > summary:focus-visible {
+  outline: 2px solid #00c4ff;
+  outline-offset: 2px;
+}
+
+.hint {
+  font-size: 0.62rem;
+  line-height: 1.45;
+  color: rgba(180, 220, 245, 0.6);
+  margin: 2px 0 6px;
+}
+
+.resetRow {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+.resetButton {
+  background: rgba(0, 40, 70, 0.6);
+  border: 1px solid rgba(0, 196, 255, 0.35);
+  color: #9fd8f5;
+  border-radius: 3px;
+  padding: 3px 10px;
+  font-family: inherit;
+  font-size: 0.66rem;
+  cursor: pointer;
+}
+
+.resetButton:hover { background: rgba(0, 60, 100, 0.7); color: #d6f2ff; }
+.resetButton:focus-visible { outline: 2px solid #00c4ff; outline-offset: 1px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .advanced > summary::before { transition: none; }
+}
+
+/* How many events a diplomacy choice keeps (D-DP, DP10): quiet, in figures that line up. */
+.count {
+  opacity: 0.65;
+  font-size: 0.72rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.countEnd {
+  margin-left: auto;
+}

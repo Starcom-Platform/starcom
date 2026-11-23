@@ -1,0 +1,49 @@
+/* The secure chat's button in the header. Its size and hover come from the header's
+   icon button; this adds the icon, the count of open chats and the connection mark. */
+.chatButton {
+  position: relative;
+}
+
+.icon {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.unread {
+  position: absolute;
+  top: -4px;
+  right: -6px;
+  min-width: 14px;
+  height: 14px;
+  padding: 0 3px;
+  border-radius: 7px;
+  background: #38bdf8;
+  color: #04121f;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 14px;
+  text-align: center;
+}
+
+/* The connection, by colour; the button's label says it in words. */
+.mark {
+  position: absolute;
+  right: 2px;
+  bottom: 2px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid rgba(8, 12, 20, 0.9);
+}
+
+.mark[data-connection='connected'] {
+  background: #4ade80;
+}
+
+.mark[data-connection='partial'] {
+  background: #facc15;
+}
+
+.mark[data-connection='offline'] {
+  background: #ef4444;
+}

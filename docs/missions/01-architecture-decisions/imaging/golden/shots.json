@@ -1,0 +1,483 @@
+{
+ "about": "The golden cards (block I, item 5; decisions IM21, IM22): each shot, drawn by scripts/golden-cards.mjs from the kept notes below, against its kept copy here: <name>.webp, 400 px wide, and <name>.json, what the card states with the run's own values (capture moment, build, when each feed was read, origin) set aside. A card matches when what it states is the same, and its picture, outside the footer's band, differs by more than pixelDelta in at most share of its pixels. Each shot pins its moment, so a card does not change as the notes age. A shot with a look draws Earth Weather (decision D-W, step 5d): its look is set with setWeather, and its feeds answer from the files kept in weatherFeeds, the page's clock starting when they were kept; golden-cards.mjs --keep-feeds --update keeps them again.",
+ "notes": [
+  "docs/missions/01-architecture-decisions/war-conflict/war_conflict_live_2026-10-02.json",
+  "docs/missions/01-architecture-decisions/raver-watch/raver_watch_live_2026-10-03.json",
+  "docs/missions/01-architecture-decisions/intel-reports/intel_reports_live_2026-10-04.json"
+ ],
+ "weatherFeeds": "docs/missions/01-architecture-decisions/imaging/golden/feeds",
+ "viewport": {
+  "width": 1400,
+  "height": 900
+ },
+ "golden": {
+  "width": 400,
+  "type": "image/webp",
+  "quality": 0.9
+ },
+ "match": {
+  "pixelDelta": 48,
+  "share": 0.002
+ },
+ "shots": [
+  {
+   "name": "war-critical-square",
+   "why": "the one critical War & Conflict item, an EASA airspace bulletin, as a square card: badge from its role, view fit",
+   "shot": {
+    "subject": {
+     "address": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-conflict-easa-b582f0c184d60e5f"
+    },
+    "layers": {
+     "primary": "WarConflict",
+     "pins": []
+    },
+    "time": {
+     "at": 1790974800
+    },
+    "card": {
+     "preset": "square"
+    },
+    "output": {
+     "type": "image/webp",
+     "quality": 0.9,
+     "alt": true
+    }
+   }
+  },
+  {
+   "name": "war-brief-wide",
+   "why": "the War & Conflict Brief's front page for 2 October: theatres worst first, the planet fit",
+   "shot": {
+    "subject": {
+     "brief": "2026-10-02"
+    },
+    "layers": {
+     "primary": "WarConflict",
+     "pins": []
+    },
+    "time": {
+     "at": 1790974800
+    },
+    "card": {
+     "preset": "wide"
+    },
+    "output": {
+     "type": "image/webp",
+     "quality": 0.9,
+     "alt": true
+    }
+   }
+  },
+  {
+   "name": "war-theatre-square",
+   "why": "a card about the Russia\u2013Ukraine theatre (theatre-lens.md, TL3, TL14), square: its countries lit and the war map faded, framed on Ukraine round the smallest country rather than on Siberia, its items counted by backing",
+   "shot": {
+    "subject": {
+     "theatre": "russia-ukraine"
+    },
+    "layers": {
+     "primary": "WarConflict",
+     "pins": []
+    },
+    "time": {
+     "at": 1790974800
+    },
+    "card": {
+     "preset": "square"
+    },
+    "output": {
+     "type": "image/webp",
+     "quality": 0.9,
+     "alt": true
+    }
+   }
+  },
+  {
+   "name": "war-front-page-wide",
+   "why": "the War & Conflict Brief for 2 October narrowed to its four worst theatres (theatre-lens.md, TL15\u2013TL17): one planet centred among them, their countries lit together, a row each with its items, its war's tier and its most serious item",
+   "shot": {
+    "subject": {
+     "brief": "2026-10-02",
+     "theatres": 4
+    },
+    "layers": {
+     "primary": "WarConflict",
+     "pins": []
+    },
+    "time": {
+     "at": 1790974800
+    },
+    "card": {
+     "preset": "wide"
+    },
+    "output": {
+     "type": "image/webp",
+     "quality": 0.9,
+     "alt": true
+    }
+   }
+  },
+  {
+   "name": "planet-wide",
+   "why": "the whole planet with no featured item: the default card, the war map and the sun at 21:00Z",
+   "shot": {
+    "subject": {
+     "view": {
+      "lat": 25,
+      "lng": 30,
+      "altitude": 2.5
+     }
+    },
+    "layers": {
+     "primary": "WarConflict",
+     "pins": []
+    },
+    "time": {
+     "at": 1790974800
+    },
+    "framing": {
+     "fit": "planet"
+    },
+    "card": {
+     "preset": "wide"
+    },
+    "output": {
+     "type": "image/webp",
+     "quality": 0.9,
+     "alt": true
+    }
+   }
+  },
+  {
+   "name": "raver-night-story",
+   "why": "a venue night at a public venue (RW12, to 0.001 degrees) as the 9:16 story card, during the night",
+   "shot": {
+    "subject": {
+     "address": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-110256691da4b2c6"
+    },
+    "layers": {
+     "primary": "SceneEvents",
+     "pins": []
+    },
+    "time": {
+     "at": 1791003600
+    },
+    "card": {
+     "preset": "story"
+    },
+    "output": {
+     "type": "image/webp",
+     "quality": 0.9,
+     "alt": true
+    }
+   }
+  },
+  {
+   "name": "raver-tonight-wide",
+   "why": "tonight's card (raver-nights.md, RN3, RN7\u2013RN9): the twelve hours from 23:00Z on 2 October, as night falls on the East Coast, the planet turned to the middle of tonight's scene events, a row a region with its events, how many under heat and the first to start, the halos and flares drawn",
+   "shot": {
+    "subject": {
+     "tonight": "latest"
+    },
+    "layers": {
+     "primary": "SceneEvents",
+     "pins": []
+    },
+    "time": {
+     "at": 1790982000
+    },
+    "card": {
+     "preset": "wide"
+    },
+    "output": {
+     "type": "image/webp",
+     "quality": 0.9,
+     "alt": true
+    }
+   }
+  },
+  {
+   "name": "heat-embed",
+   "why": "a red HeatRisk day in Los Angeles as the 1280x800 embed card",
+   "shot": {
+    "subject": {
+     "address": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-los-angeles-2026-10-03"
+    },
+    "layers": {
+     "primary": "HeatRisk",
+     "pins": []
+    },
+    "time": {
+     "at": 1791050400
+    },
+    "card": {
+     "preset": "embed"
+    },
+    "output": {
+     "type": "image/webp",
+     "quality": 0.9,
+     "alt": true
+    }
+   }
+  },
+  {
+   "name": "alert-portrait",
+   "why": "the critical Trimbos drug-check alert, which the 500-per-filter cap hid (globe record, section 22), as a portrait card",
+   "shot": {
+    "subject": {
+     "address": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-drug-check-alert-trimbos-83029564c1c28f44"
+    },
+    "layers": {
+     "primary": "DrugCheckAlerts",
+     "pins": []
+    },
+    "time": {
+     "at": 1791050400
+    },
+    "card": {
+     "preset": "portrait"
+    },
+    "output": {
+     "type": "image/webp",
+     "quality": 0.9,
+     "alt": true
+    }
+   }
+  },
+  {
+   "name": "qr-embed",
+   "why": "the critical EASA item at Discord's 1280x800 with its QR code (IM13, IM30-IM32): the short view link on starcom.app, in the column's bottom-right corner",
+   "shot": {
+    "subject": {
+     "address": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-conflict-easa-b582f0c184d60e5f"
+    },
+    "layers": {
+     "primary": "WarConflict",
+     "pins": []
+    },
+    "time": {
+     "at": 1790974800
+    },
+    "card": {
+     "preset": "embed",
+     "qr": true
+    },
+    "output": {
+     "type": "image/webp",
+     "quality": 0.9,
+     "alt": true
+    }
+   }
+  },
+  {
+   "name": "venue-inset-story",
+   "why": "the 9:16 night card with its close-up (IM34): Bill Graham Civic Auditorium among the public venues open that night within 25 km, on a 1 km grid",
+   "shot": {
+    "subject": {
+     "address": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-110256691da4b2c6"
+    },
+    "layers": {
+     "primary": "SceneEvents",
+     "pins": []
+    },
+    "time": {
+     "at": 1791003600
+    },
+    "card": {
+     "preset": "story",
+     "inset": true
+    },
+    "output": {
+     "type": "image/webp",
+     "quality": 0.9,
+     "alt": true
+    }
+   }
+  },
+  {
+   "name": "heat-inset-embed",
+   "why": "the embed heat card with its close-up (IM34, IM37): Los Angeles among California's heat towns that day, inside Starcom's own state lines, Mexico outlined",
+   "shot": {
+    "subject": {
+     "address": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-heat-risk-ca-los-angeles-2026-10-03"
+    },
+    "layers": {
+     "primary": "HeatRisk",
+     "pins": []
+    },
+    "time": {
+     "at": 1791050400
+    },
+    "card": {
+     "preset": "embed",
+     "inset": true
+    },
+    "output": {
+     "type": "image/webp",
+     "quality": 0.9,
+     "alt": true
+    }
+   }
+  },
+  {
+   "name": "intel-emblem-wide",
+   "why": "an Intel Report about a charity as a wide card: its category’s emblem inside the glyphs, the hollow page of a report nobody assessed, and the card naming its category first (BA13, BA14)",
+   "shot": {
+    "subject": {
+     "address": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-ic-jurisdiction-ef6a8c814c"
+    },
+    "layers": {
+     "primary": "IntelReports",
+     "pins": []
+    },
+    "time": {
+     "at": 1791078660
+    },
+    "card": {
+     "preset": "wide"
+    },
+    "output": {
+     "type": "image/webp",
+     "quality": 0.9,
+     "alt": true
+    }
+   }
+  },
+  {
+   "name": "weather-temperature-wide",
+   "why": "Earth Weather's default look over the Atlantic: GFS temperature and wind blended between two model steps, EUMETSAT's satellite clouds with the model's near the poles, each part's hour in the key",
+   "look": {
+    "colour": "temperature",
+    "wind": true,
+    "clouds": true
+   },
+   "shot": {
+    "subject": {
+     "view": {
+      "lat": 30,
+      "lng": -30,
+      "altitude": 2.5
+     }
+    },
+    "layers": {
+     "primary": "EarthWeather",
+     "pins": []
+    },
+    "time": {
+     "at": 1791342600
+    },
+    "card": {
+     "preset": "wide"
+    },
+    "output": {
+     "type": "image/webp",
+     "quality": 0.9,
+     "alt": true
+    }
+   }
+  },
+  {
+   "name": "weather-rain-square",
+   "why": "Earth Weather's rain over western Europe: RainViewer's radar where radar reaches, the GFS model's mean rain elsewhere; wind and clouds off, so the rain alone is compared",
+   "look": {
+    "colour": "rain",
+    "wind": false,
+    "clouds": false
+   },
+   "shot": {
+    "subject": {
+     "view": {
+      "lat": 51,
+      "lng": 1,
+      "altitude": 1
+     }
+    },
+    "layers": {
+     "primary": "EarthWeather",
+     "pins": []
+    },
+    "time": {
+     "at": 1791342600
+    },
+    "card": {
+     "preset": "square"
+    },
+    "output": {
+     "type": "image/webp",
+     "quality": 0.9,
+     "alt": true
+    }
+   }
+  },
+  {
+   "name": "planet-names-classic-wide",
+   "why": "the whole planet in Classic with Natural Earth's country names, as a shot asks for them (decision K5, TS10-TS14): the names under the war map's marks, the Names credit and the de facto caveat",
+   "shot": {
+    "subject": {
+     "view": {
+      "lat": 25,
+      "lng": 30,
+      "altitude": 2.5
+     }
+    },
+    "layers": {
+     "primary": "WarConflict",
+     "pins": []
+    },
+    "time": {
+     "at": 1790974800
+    },
+    "framing": {
+     "fit": "planet"
+    },
+    "card": {
+     "preset": "wide"
+    },
+    "output": {
+     "type": "image/webp",
+     "quality": 0.9,
+     "alt": true
+    },
+    "appearance": {
+     "territories": "classic",
+     "countryNames": true
+    }
+   }
+  },
+  {
+   "name": "europe-names-quiet-square",
+   "why": "Europe in Quiet with country names over the Intel Reports, so the names keep clear of the report glyphs and their count badges (decision K5, step 4)",
+   "shot": {
+    "subject": {
+     "view": {
+      "lat": 51,
+      "lng": 10,
+      "altitude": 1
+     }
+    },
+    "layers": {
+     "primary": "IntelReports",
+     "pins": []
+    },
+    "time": {
+     "at": 1791078660
+    },
+    "framing": {
+     "fit": "view"
+    },
+    "appearance": {
+     "territories": "quiet",
+     "countryNames": true
+    },
+    "card": {
+     "preset": "square"
+    },
+    "output": {
+     "type": "image/webp",
+     "quality": 0.9,
+     "alt": true
+    }
+   }
+  }
+ ]
+}

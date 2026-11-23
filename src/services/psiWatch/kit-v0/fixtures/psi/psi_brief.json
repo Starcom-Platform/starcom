@@ -1,0 +1,86 @@
+{
+ "fixture_note": "Built from the sky and field fixtures beside it; the public daily note. The operator's private lines (the Seer's Log, 'Carried', the draft meanings) never appear in it.",
+ "provenance": {
+  "real": "the sky lines and the field lines"
+ },
+ "event": {
+  "kind": 30023,
+  "pubkey": "86f824c3f1e67c60b1dc15ce110648c4de5c3fb879022fbbcc5e8deb720e402c",
+  "created_at": 1793019600,
+  "tags": [
+   [
+    "d",
+    "psi-brief-2026-10-26"
+   ],
+   [
+    "title",
+    "Psi Watch, Mon 26 Oct 2026"
+   ],
+   [
+    "a",
+    "31923:86f824c3f1e67c60b1dc15ce110648c4de5c3fb879022fbbcc5e8deb720e402c:psi-sky-aspect-Moon_Mars-h4k1-20261027T021806"
+   ],
+   [
+    "a",
+    "31923:86f824c3f1e67c60b1dc15ce110648c4de5c3fb879022fbbcc5e8deb720e402c:psi-sky-ingress_tropical-Moon-20261028T010153"
+   ],
+   [
+    "a",
+    "31923:86f824c3f1e67c60b1dc15ce110648c4de5c3fb879022fbbcc5e8deb720e402c:psi-sky-ingress_sidereal_gc-Moon-20261027T203005"
+   ],
+   [
+    "a",
+    "31923:86f824c3f1e67c60b1dc15ce110648c4de5c3fb879022fbbcc5e8deb720e402c:psi-sky-lunar_distance-Moon-20261028T181347"
+   ],
+   [
+    "a",
+    "30023:86f824c3f1e67c60b1dc15ce110648c4de5c3fb879022fbbcc5e8deb720e402c:psi-field-2026-10-26"
+   ],
+   [
+    "t",
+    "psi_watch"
+   ],
+   [
+    "t",
+    "psi_brief"
+   ],
+   [
+    "t",
+    "experimental"
+   ],
+   [
+    "t",
+    "role:context"
+   ],
+   [
+    "t",
+    "category:psi"
+   ],
+   [
+    "t",
+    "category:psi.brief"
+   ],
+   [
+    "schema_version",
+    "0"
+   ],
+   [
+    "engine",
+    "skyfield 1.54, de440s; catalogue kit-v0 (2026-10-26 to 2026-11-25)"
+   ],
+   [
+    "published_at",
+    "1793019600"
+   ],
+   [
+    "client",
+    "Mecha Jono"
+   ],
+   [
+    "alt",
+    "Psi Watch daily note (Experimental), 26 Oct 2026."
+   ]
+  ],
+  "content": "Sky, next 72 h\nMoon and Mars at change (square): exact Tue 27 Oct 2026 02:18 UTC. Its window, to the 3° cap: Mon 26 Oct 2026 21:10 UTC to Tue 27 Oct 2026 07:24 UTC.\nMoon enters Gemini (trop.): exact Wed 28 Oct 2026 01:01 UTC. Its window, to the 1° cap: Wed 28 Oct 2026 01:01 UTC to Wed 28 Oct 2026 02:39 UTC.\nMoon enters Taurus (GC): exact Tue 27 Oct 2026 20:30 UTC. Its window, to the 1° cap: Tue 27 Oct 2026 20:30 UTC to Tue 27 Oct 2026 22:08 UTC.\nMoon at perigee: exact Wed 28 Oct 2026 18:13 UTC. Its window, to the 3° cap: Wed 28 Oct 2026 13:20 UTC to Wed 28 Oct 2026 23:07 UTC.\n\nField\nKp 2.0, at Mon 26 Oct 2026 09:00 UTC (55th percentile of 1932-2026, GFZ Potsdam)\nKp (1-minute estimate) 1.67, at Mon 26 Oct 2026 13:00 UTC\nsolar wind speed 332.0 km/s, at Mon 26 Oct 2026 12:56 UTC\nIMF Bz -2.0 nT, at Mon 26 Oct 2026 12:56 UTC\nIMF Bt 6.0 nT, at Mon 26 Oct 2026 12:56 UTC\nX-ray maximum, 24 h C1.9, at Mon 26 Oct 2026 08:38 UTC\nlatest flare B8.4, at Mon 26 Oct 2026 12:07 UTC\naurora, north (max) 24.0 %, at Mon 26 Oct 2026 12:39 UTC\naurora, south (max) 21.0 %, at Mon 26 Oct 2026 12:39 UTC\naurora, north (lowest latitude) 61.0 deg, at Mon 26 Oct 2026 12:39 UTC\nsolar wind spacecraft SOLAR1, at Mon 26 Oct 2026 08:54 UTC\nNIST beacon, Stouffer Z over 190 pulses today: 0.10 (chance p 0.923; chain breaks 0)"
+ }
+}

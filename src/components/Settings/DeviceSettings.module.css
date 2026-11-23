@@ -1,0 +1,57 @@
+/*
+ * Settings > This device (D-CS, 12 Nov). Type, colour and focus from the tokens, as Language's section has them; the
+ * confirming button in the danger colour, since it cannot be undone.
+ */
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.heading {
+  margin: 0;
+  font-family: var(--sc-font-display);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--sc-text-heading);
+}
+
+.note {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--sc-text-body);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.button {
+  align-self: flex-start;
+  padding: 4px 10px;
+  border: 1px solid var(--sc-input-border);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--sc-accent);
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.danger {
+  border-color: var(--sc-danger);
+  color: var(--sc-danger);
+}
+
+.button:disabled {
+  color: var(--sc-text-muted);
+  cursor: default;
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--sc-focus);
+  outline-offset: 2px;
+}

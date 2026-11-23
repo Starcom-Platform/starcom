@@ -1,0 +1,395 @@
+{
+ "about": "Earth Weather's feeds as they answered when kept (decision D-W, step 5d): each answer to the golden weather shots, served by card-harness.mjs in their place, the page's clock starting at keptAt. Kept again with golden-cards.mjs --keep-feeds --update.",
+ "keptAt": "2026-10-07T03:24:46.668Z",
+ "answers": [
+  {
+   "url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/?list-type=2&prefix=gfs.20261007/&delimiter=/",
+   "status": 200,
+   "type": "application/xml",
+   "file": "56c5dd14f33fa691.xml",
+   "bytes": 350
+  },
+  {
+   "url": "https://air-quality-api.open-meteo.com/v1/air-quality?latitude=-70,-70,-70,-70,-70,-70,-70,-70,-70,-70,-70,-70,-70,-70,-70,-70,-70,-70,-50,-50,-50,-50,-50,-50,-50,-50,-50,-50,-50,-50,-50,-50,-50,-50,-50,-50,-30,-30,-30,-30,-30,-30,-30,-30,-30,-30,-30,-30,-30,-30,-30,-30,-30,-30,-10,-10,-10,-10,-10,-10,-10,-10,-10,-10,-10,-10,-10,-10,-10,-10,-10,-10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70&longitude=-180,-160,-140,-120,-100,-80,-60,-40,-20,0,20,40,60,80,100,120,140,160,-180,-160,-140,-120,-100,-80,-60,-40,-20,0,20,40,60,80,100,120,140,160,-180,-160,-140,-120,-100,-80,-60,-40,-20,0,20,40,60,80,100,120,140,160,-180,-160,-140,-120,-100,-80,-60,-40,-20,0,20,40,60,80,100,120,140,160,-180,-160,-140,-120,-100,-80,-60,-40,-20,0,20,40,60,80,100,120,140,160,-180,-160,-140,-120,-100,-80,-60,-40,-20,0,20,40,60,80,100,120,140,160,-180,-160,-140,-120,-100,-80,-60,-40,-20,0,20,40,60,80,100,120,140,160,-180,-160,-140,-120,-100,-80,-60,-40,-20,0,20,40,60,80,100,120,140,160&current=pm2_5,pm10,us_aqi&timezone=UTC",
+   "status": 200,
+   "type": "application/json",
+   "file": "221d43bfb45cafed.json",
+   "bytes": 54407
+  },
+  {
+   "url": "https://api.open-meteo.com/v1/forecast?latitude=-70,-70,-70,-70,-70,-70,-70,-70,-70,-70,-70,-70,-70,-70,-70,-70,-70,-70,-50,-50,-50,-50,-50,-50,-50,-50,-50,-50,-50,-50,-50,-50,-50,-50,-50,-50,-30,-30,-30,-30,-30,-30,-30,-30,-30,-30,-30,-30,-30,-30,-30,-30,-30,-30,-10,-10,-10,-10,-10,-10,-10,-10,-10,-10,-10,-10,-10,-10,-10,-10,-10,-10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70&longitude=-180,-160,-140,-120,-100,-80,-60,-40,-20,0,20,40,60,80,100,120,140,160,-180,-160,-140,-120,-100,-80,-60,-40,-20,0,20,40,60,80,100,120,140,160,-180,-160,-140,-120,-100,-80,-60,-40,-20,0,20,40,60,80,100,120,140,160,-180,-160,-140,-120,-100,-80,-60,-40,-20,0,20,40,60,80,100,120,140,160,-180,-160,-140,-120,-100,-80,-60,-40,-20,0,20,40,60,80,100,120,140,160,-180,-160,-140,-120,-100,-80,-60,-40,-20,0,20,40,60,80,100,120,140,160,-180,-160,-140,-120,-100,-80,-60,-40,-20,0,20,40,60,80,100,120,140,160,-180,-160,-140,-120,-100,-80,-60,-40,-20,0,20,40,60,80,100,120,140,160&current=temperature_2m,precipitation,cloud_cover,wind_speed_10m,wind_direction_10m,relative_humidity_2m,surface_pressure&timezone=UTC",
+   "status": 200,
+   "type": "application/json",
+   "file": "3b736785e966723d.json",
+   "bytes": 89108
+  },
+  {
+   "url": "https://eonet.gsfc.nasa.gov/api/v3/events?category=seaLakeIce&status=open",
+   "status": 200,
+   "type": "application/rss+xml",
+   "file": "8e70fffcc4afdf8c.bin",
+   "bytes": 136543
+  },
+  {
+   "url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/?list-type=2&prefix=gfs.20261006/&delimiter=/",
+   "status": 200,
+   "type": "application/xml",
+   "file": "d35a3220ff5215fa.xml",
+   "bytes": 548
+  },
+  {
+   "url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20261007/00/atmos/gfs.t00z.pgrb2.1p00.f003.idx",
+   "status": 404,
+   "type": "application/xml",
+   "file": "d6a4bba0dc76d580.xml",
+   "bytes": 321
+  },
+  {
+   "url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20261006/18/atmos/gfs.t18z.pgrb2.1p00.f009.idx",
+   "status": 200,
+   "type": "binary/octet-stream",
+   "file": "eb66fdc6376cf647.idx",
+   "bytes": 39706
+  },
+  {
+   "url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20261006/18/atmos/gfs.t18z.pgrb2.1p00.f012.idx",
+   "status": 200,
+   "type": "binary/octet-stream",
+   "file": "a2ae751d6262d6fe.idx",
+   "bytes": 40449
+  },
+  {
+   "url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20261006/18/atmos/gfs.t18z.pgrb2.1p00.f009",
+   "range": "bytes=34644900-34692134",
+   "status": 206,
+   "type": "binary/octet-stream",
+   "file": "860331c502abd52d.bin",
+   "bytes": 47235
+  },
+  {
+   "url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20261006/18/atmos/gfs.t18z.pgrb2.1p00.f012",
+   "range": "bytes=34478969-34553466",
+   "status": 206,
+   "type": "binary/octet-stream",
+   "file": "59ecd9abb510cd6e.bin",
+   "bytes": 74498
+  },
+  {
+   "url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20261006/18/atmos/gfs.t18z.pgrb2.1p00.f009",
+   "range": "bytes=35049562-35128329",
+   "status": 206,
+   "type": "binary/octet-stream",
+   "file": "187ce6f3a0f105b8.bin",
+   "bytes": 78768
+  },
+  {
+   "url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20261006/18/atmos/gfs.t18z.pgrb2.1p00.f012",
+   "range": "bytes=34992515-35070989",
+   "status": 206,
+   "type": "binary/octet-stream",
+   "file": "c9b323339df96fd2.bin",
+   "bytes": 78475
+  },
+  {
+   "url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20261006/18/atmos/gfs.t18z.pgrb2.1p00.f009",
+   "range": "bytes=37087267-37156758",
+   "status": 206,
+   "type": "binary/octet-stream",
+   "file": "28075a64d5fd5f27.bin",
+   "bytes": 69492
+  },
+  {
+   "url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20261006/18/atmos/gfs.t18z.pgrb2.1p00.f012",
+   "range": "bytes=37074787-37143963",
+   "status": 206,
+   "type": "binary/octet-stream",
+   "file": "92805754037655a1.bin",
+   "bytes": 69177
+  },
+  {
+   "url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20261006/18/atmos/gfs.t18z.pgrb2.1p00.f009",
+   "range": "bytes=35128330-35207666",
+   "status": 206,
+   "type": "binary/octet-stream",
+   "file": "22b904d6857e76a5.bin",
+   "bytes": 79337
+  },
+  {
+   "url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20261006/18/atmos/gfs.t18z.pgrb2.1p00.f012",
+   "range": "bytes=35070990-35150087",
+   "status": 206,
+   "type": "binary/octet-stream",
+   "file": "d6bb6c17a4cca4c6.bin",
+   "bytes": 79098
+  },
+  {
+   "url": "https://view.eumetsat.int/geoserver/wms?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=mumi:worldcloudmap_ir108&STYLES=&CRS=EPSG:4326&BBOX=-90,-180,90,180&WIDTH=2048&HEIGHT=1024&FORMAT=image%2Fpng&TIME=2026-10-07T00:00:00Z",
+   "status": 200,
+   "type": "image/png",
+   "file": "86ce6533d5b40334.png",
+   "bytes": 1837041
+  },
+  {
+   "url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20261006/18/atmos/gfs.t18z.pgrb2.1p00.f006.idx",
+   "status": 200,
+   "type": "binary/octet-stream",
+   "file": "d719530a47418319.idx",
+   "bytes": 39704
+  },
+  {
+   "url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20261006/18/atmos/gfs.t18z.pgrb2.1p00.f006",
+   "range": "bytes=34299796-34347024",
+   "status": 206,
+   "type": "binary/octet-stream",
+   "file": "bea3e21d957e9027.bin",
+   "bytes": 47229
+  },
+  {
+   "url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20261006/18/atmos/gfs.t18z.pgrb2.1p00.f009",
+   "range": "bytes=35436360-35492900",
+   "status": 206,
+   "type": "binary/octet-stream",
+   "file": "247964cef39fdbd1.bin",
+   "bytes": 56541
+  },
+  {
+   "url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20261006/18/atmos/gfs.t18z.pgrb2.1p00.f012",
+   "range": "bytes=35383094-35444796",
+   "status": 206,
+   "type": "binary/octet-stream",
+   "file": "98a4be698b2a8733.bin",
+   "bytes": 61703
+  },
+  {
+   "url": "https://api.rainviewer.com/public/weather-maps.json",
+   "status": 200,
+   "type": "application/json",
+   "file": "52e49c6b66c0f093.json",
+   "bytes": 818
+  },
+  {
+   "url": "https://tilecache.rainviewer.com/v2/coverage/0/256/2/0/0/0/0_0.png",
+   "status": 200,
+   "type": "image/png",
+   "file": "6ee174d70cbeaf58.png",
+   "bytes": 1096
+  },
+  {
+   "url": "https://tilecache.rainviewer.com/v2/radar/196233e0ee92/256/2/0/0/2/0_1.png",
+   "status": 200,
+   "type": "image/png",
+   "file": "baaf9e34b807a4ac.png",
+   "bytes": 349
+  },
+  {
+   "url": "https://tilecache.rainviewer.com/v2/coverage/0/256/2/1/0/0/0_0.png",
+   "status": 200,
+   "type": "image/png",
+   "file": "09a6468eed867c2b.png",
+   "bytes": 1025
+  },
+  {
+   "url": "https://tilecache.rainviewer.com/v2/radar/196233e0ee92/256/2/1/0/2/0_1.png",
+   "status": 200,
+   "type": "image/png",
+   "file": "d9b104095669fe44.png",
+   "bytes": 681
+  },
+  {
+   "url": "https://tilecache.rainviewer.com/v2/coverage/0/256/2/2/0/0/0_0.png",
+   "status": 200,
+   "type": "image/png",
+   "file": "d67d0c16080ef79a.png",
+   "bytes": 1311
+  },
+  {
+   "url": "https://tilecache.rainviewer.com/v2/radar/196233e0ee92/256/2/2/0/2/0_1.png",
+   "status": 200,
+   "type": "image/png",
+   "file": "943b66e5807a5104.png",
+   "bytes": 3077
+  },
+  {
+   "url": "https://tilecache.rainviewer.com/v2/coverage/0/256/2/3/0/0/0_0.png",
+   "status": 200,
+   "type": "image/png",
+   "file": "5ddb5456eea4da0b.png",
+   "bytes": 914
+  },
+  {
+   "url": "https://tilecache.rainviewer.com/v2/radar/196233e0ee92/256/2/3/0/2/0_1.png",
+   "status": 200,
+   "type": "image/png",
+   "file": "8551377a284e38ea.png",
+   "bytes": 334
+  },
+  {
+   "url": "https://tilecache.rainviewer.com/v2/coverage/0/256/2/0/1/0/0_0.png",
+   "status": 200,
+   "type": "image/png",
+   "file": "4f95ca44052b31a9.png",
+   "bytes": 2163
+  },
+  {
+   "url": "https://tilecache.rainviewer.com/v2/radar/196233e0ee92/256/2/0/1/2/0_1.png",
+   "status": 200,
+   "type": "image/png",
+   "file": "0ab7d5bda0ca4c5f.png",
+   "bytes": 8096
+  },
+  {
+   "url": "https://tilecache.rainviewer.com/v2/coverage/0/256/2/1/1/0/0_0.png",
+   "status": 200,
+   "type": "image/png",
+   "file": "a05ca5430a010ccb.png",
+   "bytes": 2478
+  },
+  {
+   "url": "https://tilecache.rainviewer.com/v2/radar/196233e0ee92/256/2/1/1/2/0_1.png",
+   "status": 200,
+   "type": "image/png",
+   "file": "aca198ce91f6f50a.png",
+   "bytes": 9543
+  },
+  {
+   "url": "https://tilecache.rainviewer.com/v2/coverage/0/256/2/2/1/0/0_0.png",
+   "status": 200,
+   "type": "image/png",
+   "file": "82467e90751bb26e.png",
+   "bytes": 3012
+  },
+  {
+   "url": "https://tilecache.rainviewer.com/v2/radar/196233e0ee92/256/2/2/1/2/0_1.png",
+   "status": 200,
+   "type": "image/png",
+   "file": "7d14cacc38343808.png",
+   "bytes": 7821
+  },
+  {
+   "url": "https://tilecache.rainviewer.com/v2/coverage/0/256/2/3/1/0/0_0.png",
+   "status": 200,
+   "type": "image/png",
+   "file": "a64aceb1c1b045df.png",
+   "bytes": 2361
+  },
+  {
+   "url": "https://tilecache.rainviewer.com/v2/radar/196233e0ee92/256/2/3/1/2/0_1.png",
+   "status": 200,
+   "type": "image/png",
+   "file": "10694ef3041c14c9.png",
+   "bytes": 4524
+  },
+  {
+   "url": "https://tilecache.rainviewer.com/v2/coverage/0/256/2/0/2/0/0_0.png",
+   "status": 200,
+   "type": "image/png",
+   "file": "58f4820e6ff24b81.png",
+   "bytes": 1038
+  },
+  {
+   "url": "https://tilecache.rainviewer.com/v2/radar/196233e0ee92/256/2/0/2/2/0_1.png",
+   "status": 200,
+   "type": "image/png",
+   "file": "7d8b2dc12c5e5f99.png",
+   "bytes": 334
+  },
+  {
+   "url": "https://tilecache.rainviewer.com/v2/coverage/0/256/2/1/2/0/0_0.png",
+   "status": 200,
+   "type": "image/png",
+   "file": "097f5d065ca33efc.png",
+   "bytes": 1679
+  },
+  {
+   "url": "https://tilecache.rainviewer.com/v2/radar/196233e0ee92/256/2/1/2/2/0_1.png",
+   "status": 200,
+   "type": "image/png",
+   "file": "9df5ab2370eec936.png",
+   "bytes": 1091
+  },
+  {
+   "url": "https://tilecache.rainviewer.com/v2/coverage/0/256/2/2/2/0/0_0.png",
+   "status": 200,
+   "type": "image/png",
+   "file": "69e32a19594196a0.png",
+   "bytes": 1067
+  },
+  {
+   "url": "https://tilecache.rainviewer.com/v2/radar/196233e0ee92/256/2/2/2/2/0_1.png",
+   "status": 200,
+   "type": "image/png",
+   "file": "4b8e564b80ce4b7d.png",
+   "bytes": 622
+  },
+  {
+   "url": "https://tilecache.rainviewer.com/v2/coverage/0/256/2/3/2/0/0_0.png",
+   "status": 200,
+   "type": "image/png",
+   "file": "8b1fa2119f0a8414.png",
+   "bytes": 2409
+  },
+  {
+   "url": "https://tilecache.rainviewer.com/v2/radar/196233e0ee92/256/2/3/2/2/0_1.png",
+   "status": 200,
+   "type": "image/png",
+   "file": "db7aec86ede277ed.png",
+   "bytes": 2100
+  },
+  {
+   "url": "https://tilecache.rainviewer.com/v2/coverage/0/256/2/0/3/0/0_0.png",
+   "status": 200,
+   "type": "image/png",
+   "file": "33acdf84d4b5541e.png",
+   "bytes": 914
+  },
+  {
+   "url": "https://tilecache.rainviewer.com/v2/radar/196233e0ee92/256/2/0/3/2/0_1.png",
+   "status": 200,
+   "type": "image/png",
+   "file": "02bae346dc7282fb.png",
+   "bytes": 334
+  },
+  {
+   "url": "https://tilecache.rainviewer.com/v2/coverage/0/256/2/1/3/0/0_0.png",
+   "status": 200,
+   "type": "image/png",
+   "file": "1b900a4b7f6f8cbe.png",
+   "bytes": 914
+  },
+  {
+   "url": "https://tilecache.rainviewer.com/v2/radar/196233e0ee92/256/2/1/3/2/0_1.png",
+   "status": 200,
+   "type": "image/png",
+   "file": "74645302dcbbbf72.png",
+   "bytes": 334
+  },
+  {
+   "url": "https://tilecache.rainviewer.com/v2/coverage/0/256/2/2/3/0/0_0.png",
+   "status": 200,
+   "type": "image/png",
+   "file": "d0317836a0f79178.png",
+   "bytes": 914
+  },
+  {
+   "url": "https://tilecache.rainviewer.com/v2/radar/196233e0ee92/256/2/2/3/2/0_1.png",
+   "status": 200,
+   "type": "image/png",
+   "file": "818c9da73df42b30.png",
+   "bytes": 334
+  },
+  {
+   "url": "https://tilecache.rainviewer.com/v2/coverage/0/256/2/3/3/0/0_0.png",
+   "status": 200,
+   "type": "image/png",
+   "file": "d2b45eff4a9adc1e.png",
+   "bytes": 914
+  },
+  {
+   "url": "https://tilecache.rainviewer.com/v2/radar/196233e0ee92/256/2/3/3/2/0_1.png",
+   "status": 200,
+   "type": "image/png",
+   "file": "05aca34df8adeba2.png",
+   "bytes": 334
+  }
+ ]
+}

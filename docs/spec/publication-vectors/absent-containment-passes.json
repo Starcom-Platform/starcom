@@ -1,0 +1,11 @@
+{
+  "name": "absent-containment-passes",
+  "description": "Absent containment means NOT containment-managed, and does not block. Opt-in, not universal.",
+  "subjectKind": "organization",
+  "options": {
+    "isMock": false
+  },
+  "expect": {
+    "allowed": true
+  }
+}

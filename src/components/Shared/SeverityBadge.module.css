@@ -1,0 +1,33 @@
+/*
+ * The severity ramp from the interface spec (docs/missions/04-plan/interface-upgrade.md),
+ * sand to red, each 6.3:1 or better on a panel. No green: low harm is not
+ * "good". Not assessed is grey, which means not judged.
+ */
+.severity {
+  display: inline-flex;
+  align-items: center;
+  flex: none;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  color: var(--severity-colour);
+}
+
+.severity[data-level='low'] { --severity-colour: var(--sc-severity-1); }
+.severity[data-level='medium'] { --severity-colour: var(--sc-severity-2); }
+.severity[data-level='high'] { --severity-colour: var(--sc-severity-3); }
+.severity[data-level='critical'] { --severity-colour: var(--sc-severity-4); }
+.severity[data-level='unset'] { --severity-colour: var(--sc-text-secondary); font-weight: 400; font-style: italic; }
+
+.pips { display: inline-flex; gap: 2px; }
+
+.pip {
+  width: 6px;
+  height: 6px;
+  border-radius: 1px;
+  border: 1px solid var(--severity-colour);
+}
+
+.pip[data-pip='on'] { background: var(--severity-colour); }

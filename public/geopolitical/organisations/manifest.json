@@ -1,0 +1,2574 @@
+{
+  "lists": "1.0",
+  "generated": "2026-10-25T22:02:28Z",
+  "licence": "CC-BY-4.0",
+  "organisations": [
+    {
+      "id": "union:eu",
+      "name": "European Union",
+      "kind": "union",
+      "founded": "1958",
+      "read": "2026-10-23",
+      "sources": [
+        {
+          "name": "European Union: EU countries (both pages of the list)",
+          "url": "https://european-union.europa.eu/principles-countries-history/eu-countries_en"
+        },
+        {
+          "name": "European Commission (DG Enlargement): Albania",
+          "url": "https://enlargement.ec.europa.eu/countries/albania_en"
+        },
+        {
+          "name": "European Commission (DG Enlargement): Bosnia and Herzegovina",
+          "url": "https://enlargement.ec.europa.eu/countries/bosnia-and-herzegovina_en"
+        },
+        {
+          "name": "European Commission (DG Enlargement): Georgia",
+          "url": "https://enlargement.ec.europa.eu/countries/georgia_en"
+        },
+        {
+          "name": "European Commission (DG Enlargement): Moldova",
+          "url": "https://enlargement.ec.europa.eu/countries/moldova_en"
+        },
+        {
+          "name": "European Commission (DG Enlargement): Montenegro",
+          "url": "https://enlargement.ec.europa.eu/countries/montenegro_en"
+        },
+        {
+          "name": "European Commission (DG Enlargement): North Macedonia",
+          "url": "https://enlargement.ec.europa.eu/countries/north-macedonia_en"
+        },
+        {
+          "name": "European Commission (DG Enlargement): Serbia",
+          "url": "https://enlargement.ec.europa.eu/countries/serbia_en"
+        },
+        {
+          "name": "European Commission (DG Enlargement): Türkiye",
+          "url": "https://enlargement.ec.europa.eu/countries/turkiye_en"
+        },
+        {
+          "name": "European Commission (DG Enlargement): Ukraine",
+          "url": "https://enlargement.ec.europa.eu/countries/ukraine_en"
+        },
+        {
+          "name": "European Commission (DG Enlargement): Kosovo",
+          "url": "https://enlargement.ec.europa.eu/countries/kosovo_en"
+        }
+      ],
+      "members": [
+        {
+          "code": "at",
+          "status": "member",
+          "since": "1995",
+          "source": "https://european-union.europa.eu/principles-countries-history/eu-countries_en"
+        },
+        {
+          "code": "be",
+          "status": "member",
+          "since": "1958",
+          "source": "https://european-union.europa.eu/principles-countries-history/eu-countries_en"
+        },
+        {
+          "code": "bg",
+          "status": "member",
+          "since": "2007",
+          "source": "https://european-union.europa.eu/principles-countries-history/eu-countries_en"
+        },
+        {
+          "code": "cy",
+          "status": "member",
+          "since": "2004",
+          "source": "https://european-union.europa.eu/principles-countries-history/eu-countries_en"
+        },
+        {
+          "code": "cz",
+          "status": "member",
+          "since": "2004",
+          "source": "https://european-union.europa.eu/principles-countries-history/eu-countries_en"
+        },
+        {
+          "code": "de",
+          "status": "member",
+          "since": "1958",
+          "source": "https://european-union.europa.eu/principles-countries-history/eu-countries_en"
+        },
+        {
+          "code": "dk",
+          "status": "member",
+          "since": "1973",
+          "source": "https://european-union.europa.eu/principles-countries-history/eu-countries_en"
+        },
+        {
+          "code": "ee",
+          "status": "member",
+          "since": "2004",
+          "source": "https://european-union.europa.eu/principles-countries-history/eu-countries_en"
+        },
+        {
+          "code": "es",
+          "status": "member",
+          "since": "1986",
+          "source": "https://european-union.europa.eu/principles-countries-history/eu-countries_en"
+        },
+        {
+          "code": "fi",
+          "status": "member",
+          "since": "1995",
+          "source": "https://european-union.europa.eu/principles-countries-history/eu-countries_en"
+        },
+        {
+          "code": "fr",
+          "status": "member",
+          "since": "1958",
+          "source": "https://european-union.europa.eu/principles-countries-history/eu-countries_en"
+        },
+        {
+          "code": "gr",
+          "status": "member",
+          "since": "1981",
+          "source": "https://european-union.europa.eu/principles-countries-history/eu-countries_en"
+        },
+        {
+          "code": "hr",
+          "status": "member",
+          "since": "2013",
+          "source": "https://european-union.europa.eu/principles-countries-history/eu-countries_en"
+        },
+        {
+          "code": "hu",
+          "status": "member",
+          "since": "2004",
+          "source": "https://european-union.europa.eu/principles-countries-history/eu-countries_en"
+        },
+        {
+          "code": "ie",
+          "status": "member",
+          "since": "1973",
+          "source": "https://european-union.europa.eu/principles-countries-history/eu-countries_en"
+        },
+        {
+          "code": "it",
+          "status": "member",
+          "since": "1958",
+          "source": "https://european-union.europa.eu/principles-countries-history/eu-countries_en"
+        },
+        {
+          "code": "lt",
+          "status": "member",
+          "since": "2004",
+          "source": "https://european-union.europa.eu/principles-countries-history/eu-countries_en"
+        },
+        {
+          "code": "lu",
+          "status": "member",
+          "since": "1958",
+          "source": "https://european-union.europa.eu/principles-countries-history/eu-countries_en"
+        },
+        {
+          "code": "lv",
+          "status": "member",
+          "since": "2004",
+          "source": "https://european-union.europa.eu/principles-countries-history/eu-countries_en"
+        },
+        {
+          "code": "mt",
+          "status": "member",
+          "since": "2004",
+          "source": "https://european-union.europa.eu/principles-countries-history/eu-countries_en"
+        },
+        {
+          "code": "nl",
+          "status": "member",
+          "since": "1958",
+          "source": "https://european-union.europa.eu/principles-countries-history/eu-countries_en"
+        },
+        {
+          "code": "pl",
+          "status": "member",
+          "since": "2004",
+          "source": "https://european-union.europa.eu/principles-countries-history/eu-countries_en"
+        },
+        {
+          "code": "pt",
+          "status": "member",
+          "since": "1986",
+          "source": "https://european-union.europa.eu/principles-countries-history/eu-countries_en"
+        },
+        {
+          "code": "ro",
+          "status": "member",
+          "since": "2007",
+          "source": "https://european-union.europa.eu/principles-countries-history/eu-countries_en"
+        },
+        {
+          "code": "se",
+          "status": "member",
+          "since": "1995",
+          "source": "https://european-union.europa.eu/principles-countries-history/eu-countries_en"
+        },
+        {
+          "code": "si",
+          "status": "member",
+          "since": "2004",
+          "source": "https://european-union.europa.eu/principles-countries-history/eu-countries_en"
+        },
+        {
+          "code": "sk",
+          "status": "member",
+          "since": "2004",
+          "source": "https://european-union.europa.eu/principles-countries-history/eu-countries_en"
+        },
+        {
+          "code": "al",
+          "status": "candidate",
+          "since": "2014-06",
+          "source": "https://enlargement.ec.europa.eu/countries/albania_en"
+        },
+        {
+          "code": "ba",
+          "status": "candidate",
+          "since": "2022-12",
+          "source": "https://enlargement.ec.europa.eu/countries/bosnia-and-herzegovina_en"
+        },
+        {
+          "code": "ge",
+          "status": "candidate",
+          "since": "2023-12-14",
+          "source": "https://enlargement.ec.europa.eu/countries/georgia_en"
+        },
+        {
+          "code": "md",
+          "status": "candidate",
+          "since": "2022-06",
+          "source": "https://enlargement.ec.europa.eu/countries/moldova_en"
+        },
+        {
+          "code": "me",
+          "status": "candidate",
+          "since": "2010-12",
+          "source": "https://enlargement.ec.europa.eu/countries/montenegro_en"
+        },
+        {
+          "code": "mk",
+          "status": "candidate",
+          "since": "2005-12",
+          "source": "https://enlargement.ec.europa.eu/countries/north-macedonia_en"
+        },
+        {
+          "code": "rs",
+          "status": "candidate",
+          "since": "2012-03",
+          "source": "https://enlargement.ec.europa.eu/countries/serbia_en"
+        },
+        {
+          "code": "tr",
+          "status": "candidate",
+          "since": "1999",
+          "source": "https://enlargement.ec.europa.eu/countries/turkiye_en"
+        },
+        {
+          "code": "ua",
+          "status": "candidate",
+          "since": "2022-06",
+          "source": "https://enlargement.ec.europa.eu/countries/ukraine_en"
+        },
+        {
+          "code": "xk",
+          "status": "candidate",
+          "since": "2003-06",
+          "source": "https://enlargement.ec.europa.eu/countries/kosovo_en"
+        }
+      ],
+      "the": true,
+      "note": "27 members are drawn; the 10 candidates are listed, not drawn. Northern Cyprus is left out: EU law is suspended there."
+    },
+    {
+      "id": "union:brics",
+      "name": "BRICS",
+      "kind": "bloc",
+      "founded": "2006",
+      "read": "2026-10-17",
+      "sources": [
+        {
+          "name": "BRICS India 2026 (the chair's official site): FAQ, members and partners",
+          "url": "https://www.brics2026.gov.in/"
+        }
+      ],
+      "members": [
+        {
+          "code": "br",
+          "status": "member",
+          "since": "2006",
+          "source": "https://www.brics2026.gov.in/"
+        },
+        {
+          "code": "ru",
+          "status": "member",
+          "since": "2006",
+          "source": "https://www.brics2026.gov.in/"
+        },
+        {
+          "code": "in",
+          "status": "member",
+          "since": "2006",
+          "source": "https://www.brics2026.gov.in/"
+        },
+        {
+          "code": "cn",
+          "status": "member",
+          "since": "2006",
+          "source": "https://www.brics2026.gov.in/"
+        },
+        {
+          "code": "za",
+          "status": "member",
+          "since": "2011",
+          "source": "https://www.brics2026.gov.in/"
+        },
+        {
+          "code": "eg",
+          "status": "member",
+          "since": "2024",
+          "source": "https://www.brics2026.gov.in/"
+        },
+        {
+          "code": "et",
+          "status": "member",
+          "since": "2024",
+          "source": "https://www.brics2026.gov.in/"
+        },
+        {
+          "code": "ir",
+          "status": "member",
+          "since": "2024",
+          "source": "https://www.brics2026.gov.in/"
+        },
+        {
+          "code": "ae",
+          "status": "member",
+          "since": "2024",
+          "source": "https://www.brics2026.gov.in/"
+        },
+        {
+          "code": "sa",
+          "status": "member",
+          "since": "2024",
+          "source": "https://www.brics2026.gov.in/"
+        },
+        {
+          "code": "id",
+          "status": "member",
+          "since": "2025",
+          "source": "https://www.brics2026.gov.in/"
+        },
+        {
+          "code": "by",
+          "status": "partner",
+          "since": "2025",
+          "source": "https://www.brics2026.gov.in/"
+        },
+        {
+          "code": "bo",
+          "status": "partner",
+          "since": "2025",
+          "source": "https://www.brics2026.gov.in/"
+        },
+        {
+          "code": "cu",
+          "status": "partner",
+          "since": "2025",
+          "source": "https://www.brics2026.gov.in/"
+        },
+        {
+          "code": "kz",
+          "status": "partner",
+          "since": "2025",
+          "source": "https://www.brics2026.gov.in/"
+        },
+        {
+          "code": "my",
+          "status": "partner",
+          "since": "2025",
+          "source": "https://www.brics2026.gov.in/"
+        },
+        {
+          "code": "ng",
+          "status": "partner",
+          "since": "2025",
+          "source": "https://www.brics2026.gov.in/"
+        },
+        {
+          "code": "th",
+          "status": "partner",
+          "since": "2025",
+          "source": "https://www.brics2026.gov.in/"
+        },
+        {
+          "code": "ug",
+          "status": "partner",
+          "since": "2025",
+          "source": "https://www.brics2026.gov.in/"
+        },
+        {
+          "code": "uz",
+          "status": "partner",
+          "since": "2025",
+          "source": "https://www.brics2026.gov.in/"
+        },
+        {
+          "code": "vn",
+          "status": "partner",
+          "since": "2025",
+          "source": "https://www.brics2026.gov.in/"
+        }
+      ],
+      "note": "11 members are drawn; the 10 partner countries are listed, not drawn."
+    },
+    {
+      "id": "union:asean",
+      "name": "Association of Southeast Asian Nations",
+      "kind": "bloc",
+      "founded": "1967-08-08",
+      "read": "2026-10-23",
+      "sources": [
+        {
+          "name": "Ministry of Foreign Affairs, Brunei Darussalam: Association of South East Asian Nations (ASEAN)",
+          "url": "https://www.mfa.gov.bn/Pages/ASEAN.aspx"
+        },
+        {
+          "name": "TATOLI (Timor-Leste's state news agency): Timor-Leste officially admitted to ASEAN as 11th member (26 Oct 2025)",
+          "url": "https://en.tatoli.tl/?p=65690"
+        },
+        {
+          "name": "ASEAN-Japan Centre: About ASEAN",
+          "url": "https://www.asean.or.jp/en/asean/"
+        }
+      ],
+      "members": [
+        {
+          "code": "id",
+          "status": "member",
+          "since": "1967-08-08",
+          "source": "https://www.mfa.gov.bn/Pages/ASEAN.aspx"
+        },
+        {
+          "code": "my",
+          "status": "member",
+          "since": "1967-08-08",
+          "source": "https://www.mfa.gov.bn/Pages/ASEAN.aspx"
+        },
+        {
+          "code": "ph",
+          "status": "member",
+          "since": "1967-08-08",
+          "source": "https://www.mfa.gov.bn/Pages/ASEAN.aspx"
+        },
+        {
+          "code": "sg",
+          "status": "member",
+          "since": "1967-08-08",
+          "source": "https://www.mfa.gov.bn/Pages/ASEAN.aspx"
+        },
+        {
+          "code": "th",
+          "status": "member",
+          "since": "1967-08-08",
+          "source": "https://www.mfa.gov.bn/Pages/ASEAN.aspx"
+        },
+        {
+          "code": "bn",
+          "status": "member",
+          "since": "1984-01",
+          "source": "https://www.mfa.gov.bn/Pages/ASEAN.aspx"
+        },
+        {
+          "code": "vn",
+          "status": "member",
+          "since": "1995-07-28",
+          "source": "https://www.mfa.gov.bn/Pages/ASEAN.aspx"
+        },
+        {
+          "code": "la",
+          "status": "member",
+          "since": "1997-07-23",
+          "source": "https://www.mfa.gov.bn/Pages/ASEAN.aspx"
+        },
+        {
+          "code": "mm",
+          "status": "member",
+          "since": "1997-07-23",
+          "source": "https://www.mfa.gov.bn/Pages/ASEAN.aspx"
+        },
+        {
+          "code": "kh",
+          "status": "member",
+          "since": "1999-04-30",
+          "source": "https://www.mfa.gov.bn/Pages/ASEAN.aspx"
+        },
+        {
+          "code": "tl",
+          "status": "member",
+          "since": "2025-10-26",
+          "source": "https://en.tatoli.tl/?p=65690"
+        }
+      ],
+      "the": true,
+      "note": "Timor-Leste joined on 26 October 2025, the eleventh member."
+    },
+    {
+      "id": "union:au",
+      "name": "African Union",
+      "kind": "union",
+      "founded": "2002-07-09",
+      "read": "2026-10-17",
+      "sources": [
+        {
+          "name": "African Union: Member States",
+          "url": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "name": "AU PSC 1062nd meeting, 31 Jan 2022: suspends Burkina Faso",
+          "url": "https://www.peaceau.org/en/article/communique-of-the-1062nd-meeting-of-the-psc-held-on-31-january-2022-on-the-situation-in-burkina-faso"
+        },
+        {
+          "name": "AU PSC 1315th meeting, 28 Nov 2025: suspends Guinea-Bissau",
+          "url": "https://www.peaceau.org/en/article/communique-of-the-1315th-meeting-emergency-of-the-peace-and-security-council-held-on-28-november-2025-on-the-consideration-of-the-emergency-situation-in-guinea-bissau"
+        },
+        {
+          "name": "AU PSC 1306th meeting, 15 Oct 2025: suspends Madagascar",
+          "url": "https://www.peaceau.org/en/article/communique-of-the-1306th-meeting-of-the-psc-emergency-session-held-on-15-october-2025-on-updated-briefing-on-the-situation-in-the-republic-of-madagascar"
+        },
+        {
+          "name": "AU PSC 1001st meeting, 1 Jun 2021: suspends Mali",
+          "url": "https://www.peaceau.org/en/article/communique-of-1001st-meeting-of-the-african-union-peace-and-security-council-on-the-situation-in-mali-1st-of-june-2021"
+        },
+        {
+          "name": "AU PSC 1168th meeting, 14 Aug 2023: suspends Niger",
+          "url": "https://www.peaceau.org/en/article/communique-of-the-1168th-meeting-of-the-psc-held-on-14-august-2023-on-updated-briefing-on-the-situation-in-niger"
+        },
+        {
+          "name": "JURIST: African Union condemns ongoing violence and maintains Sudan membership suspension (Feb 2026)",
+          "url": "https://www.jurist.org/news/2026/02/african-union-condemns-ongoing-violence-and-maintains-sudan-membership-suspension/"
+        }
+      ],
+      "members": [
+        {
+          "code": "ao",
+          "status": "member",
+          "since": "1975-02-11",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "code": "bf",
+          "status": "suspended",
+          "since": "2022-01-31",
+          "source": "https://www.peaceau.org/en/article/communique-of-the-1062nd-meeting-of-the-psc-held-on-31-january-2022-on-the-situation-in-burkina-faso"
+        },
+        {
+          "code": "bi",
+          "status": "member",
+          "since": "1963-05-25",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "code": "bj",
+          "status": "member",
+          "since": "1963-05-25",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "code": "bw",
+          "status": "member",
+          "since": "1966-10-31",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "code": "cd",
+          "status": "member",
+          "since": "1963-05-25",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "code": "cf",
+          "status": "member",
+          "since": "1963-05-25",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "code": "cg",
+          "status": "member",
+          "since": "1963-05-25",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "code": "ci",
+          "status": "member",
+          "since": "1963-05-25",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "code": "cm",
+          "status": "member",
+          "since": "1963-05-25",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "code": "cv",
+          "status": "member",
+          "since": "1975-07-18",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "code": "dj",
+          "status": "member",
+          "since": "1977-06-27",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "code": "dz",
+          "status": "member",
+          "since": "1963-05-25",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "code": "eg",
+          "status": "member",
+          "since": "1963-05-25",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "code": "eh",
+          "status": "member",
+          "since": "1982-02-22",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "code": "er",
+          "status": "member",
+          "since": "1993-05-24",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "code": "et",
+          "status": "member",
+          "since": "1963-05-25",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "code": "ga",
+          "status": "member",
+          "since": "1963-05-25",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "code": "gh",
+          "status": "member",
+          "since": "1963-05-25",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "code": "gm",
+          "status": "member",
+          "since": "1965-03-09",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "code": "gn",
+          "status": "member",
+          "since": "1963-05-25",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "code": "gq",
+          "status": "member",
+          "since": "1968-10-12",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "code": "gw",
+          "status": "suspended",
+          "since": "2025-11-28",
+          "source": "https://www.peaceau.org/en/article/communique-of-the-1315th-meeting-emergency-of-the-peace-and-security-council-held-on-28-november-2025-on-the-consideration-of-the-emergency-situation-in-guinea-bissau"
+        },
+        {
+          "code": "ke",
+          "status": "member",
+          "since": "1963-05-25",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "code": "km",
+          "status": "member",
+          "since": "1975-07-18",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "code": "lr",
+          "status": "member",
+          "since": "1963-05-25",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "code": "ls",
+          "status": "member",
+          "since": "1966-10-31",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "code": "ly",
+          "status": "member",
+          "since": "1963-05-25",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "code": "ma",
+          "status": "member",
+          "since": "2017-01-31",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "code": "mg",
+          "status": "suspended",
+          "since": "2025-10-15",
+          "source": "https://www.peaceau.org/en/article/communique-of-the-1306th-meeting-of-the-psc-emergency-session-held-on-15-october-2025-on-updated-briefing-on-the-situation-in-the-republic-of-madagascar"
+        },
+        {
+          "code": "ml",
+          "status": "suspended",
+          "since": "2021-06-01",
+          "source": "https://www.peaceau.org/en/article/communique-of-1001st-meeting-of-the-african-union-peace-and-security-council-on-the-situation-in-mali-1st-of-june-2021"
+        },
+        {
+          "code": "mr",
+          "status": "member",
+          "since": "1963-05-25",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "code": "mu",
+          "status": "member",
+          "since": "1968-08",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "code": "mw",
+          "status": "member",
+          "since": "1964-07-13",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "code": "mz",
+          "status": "member",
+          "since": "1975-07-18",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "code": "na",
+          "status": "member",
+          "since": "1990-06",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "code": "ne",
+          "status": "suspended",
+          "since": "2023-08-14",
+          "source": "https://www.peaceau.org/en/article/communique-of-the-1168th-meeting-of-the-psc-held-on-14-august-2023-on-updated-briefing-on-the-situation-in-niger"
+        },
+        {
+          "code": "ng",
+          "status": "member",
+          "since": "1963-05-25",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "code": "rw",
+          "status": "member",
+          "since": "1963-05-25",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "code": "sc",
+          "status": "member",
+          "since": "1976-06-29",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "code": "sd",
+          "status": "suspended",
+          "since": "2021-10",
+          "source": "https://www.jurist.org/news/2026/02/african-union-condemns-ongoing-violence-and-maintains-sudan-membership-suspension/"
+        },
+        {
+          "code": "sl",
+          "status": "member",
+          "since": "1963-05-25",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "code": "sn",
+          "status": "member",
+          "since": "1963-05-25",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "code": "so",
+          "status": "member",
+          "since": "1963-05-25",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "code": "ss",
+          "status": "member",
+          "since": "2011-07-27",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "code": "st",
+          "status": "member",
+          "since": "1975-07-18",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "code": "sz",
+          "status": "member",
+          "since": "1968-09-24",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "code": "td",
+          "status": "member",
+          "since": "1963-05-25",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "code": "tg",
+          "status": "member",
+          "since": "1963-05-25",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "code": "tn",
+          "status": "member",
+          "since": "1963-05-25",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "code": "tz",
+          "status": "member",
+          "since": "1963-05-25",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "code": "ug",
+          "status": "member",
+          "since": "1963-05-25",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "code": "za",
+          "status": "member",
+          "since": "1994-06-06",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "code": "zm",
+          "status": "member",
+          "since": "1964-12-16",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        },
+        {
+          "code": "zw",
+          "status": "member",
+          "since": "1980-06-18",
+          "source": "https://au.int/en/member_states/countryprofiles2"
+        }
+      ],
+      "the": true,
+      "note": "49 members are drawn; the 6 the Union has suspended (Burkina Faso, Guinea-Bissau, Madagascar, Mali, Niger and Sudan) are listed, not drawn. Somaliland is drawn as part of Somalia, a member."
+    },
+    {
+      "id": "union:nato",
+      "name": "North Atlantic Treaty Organization",
+      "kind": "alliance",
+      "founded": "1949",
+      "read": "2026-10-23",
+      "sources": [
+        {
+          "name": "NATO: Member countries (updated 11 March 2024)",
+          "url": "https://www.nato.int/en/about-us/organization/nato-member-countries"
+        },
+        {
+          "name": "NATO: Enlargement and Article 10",
+          "url": "https://www.nato.int/en/what-we-do/partnerships-and-cooperation/enlargement-and-article-10"
+        },
+        {
+          "name": "NATO: Relations with Georgia (updated 3 March 2026)",
+          "url": "https://www.nato.int/en/what-we-do/partnerships-and-cooperation/relations-with-georgia"
+        },
+        {
+          "name": "NATO: Relations with Ukraine",
+          "url": "https://www.nato.int/en/what-we-do/partnerships-and-cooperation/relations-with-ukraine"
+        }
+      ],
+      "members": [
+        {
+          "code": "al",
+          "status": "member",
+          "since": "2009",
+          "source": "https://www.nato.int/en/about-us/organization/nato-member-countries"
+        },
+        {
+          "code": "be",
+          "status": "member",
+          "since": "1949",
+          "source": "https://www.nato.int/en/about-us/organization/nato-member-countries"
+        },
+        {
+          "code": "bg",
+          "status": "member",
+          "since": "2004",
+          "source": "https://www.nato.int/en/about-us/organization/nato-member-countries"
+        },
+        {
+          "code": "ca",
+          "status": "member",
+          "since": "1949",
+          "source": "https://www.nato.int/en/about-us/organization/nato-member-countries"
+        },
+        {
+          "code": "cz",
+          "status": "member",
+          "since": "1999",
+          "source": "https://www.nato.int/en/about-us/organization/nato-member-countries"
+        },
+        {
+          "code": "de",
+          "status": "member",
+          "since": "1955",
+          "source": "https://www.nato.int/en/about-us/organization/nato-member-countries"
+        },
+        {
+          "code": "dk",
+          "status": "member",
+          "since": "1949",
+          "source": "https://www.nato.int/en/about-us/organization/nato-member-countries"
+        },
+        {
+          "code": "ee",
+          "status": "member",
+          "since": "2004",
+          "source": "https://www.nato.int/en/about-us/organization/nato-member-countries"
+        },
+        {
+          "code": "es",
+          "status": "member",
+          "since": "1982",
+          "source": "https://www.nato.int/en/about-us/organization/nato-member-countries"
+        },
+        {
+          "code": "fi",
+          "status": "member",
+          "since": "2023",
+          "source": "https://www.nato.int/en/about-us/organization/nato-member-countries"
+        },
+        {
+          "code": "fr",
+          "status": "member",
+          "since": "1949",
+          "source": "https://www.nato.int/en/about-us/organization/nato-member-countries"
+        },
+        {
+          "code": "gb",
+          "status": "member",
+          "since": "1949",
+          "source": "https://www.nato.int/en/about-us/organization/nato-member-countries"
+        },
+        {
+          "code": "gr",
+          "status": "member",
+          "since": "1952",
+          "source": "https://www.nato.int/en/about-us/organization/nato-member-countries"
+        },
+        {
+          "code": "hr",
+          "status": "member",
+          "since": "2009",
+          "source": "https://www.nato.int/en/about-us/organization/nato-member-countries"
+        },
+        {
+          "code": "hu",
+          "status": "member",
+          "since": "1999",
+          "source": "https://www.nato.int/en/about-us/organization/nato-member-countries"
+        },
+        {
+          "code": "is",
+          "status": "member",
+          "since": "1949",
+          "source": "https://www.nato.int/en/about-us/organization/nato-member-countries"
+        },
+        {
+          "code": "it",
+          "status": "member",
+          "since": "1949",
+          "source": "https://www.nato.int/en/about-us/organization/nato-member-countries"
+        },
+        {
+          "code": "lt",
+          "status": "member",
+          "since": "2004",
+          "source": "https://www.nato.int/en/about-us/organization/nato-member-countries"
+        },
+        {
+          "code": "lu",
+          "status": "member",
+          "since": "1949",
+          "source": "https://www.nato.int/en/about-us/organization/nato-member-countries"
+        },
+        {
+          "code": "lv",
+          "status": "member",
+          "since": "2004",
+          "source": "https://www.nato.int/en/about-us/organization/nato-member-countries"
+        },
+        {
+          "code": "me",
+          "status": "member",
+          "since": "2017",
+          "source": "https://www.nato.int/en/about-us/organization/nato-member-countries"
+        },
+        {
+          "code": "mk",
+          "status": "member",
+          "since": "2020",
+          "source": "https://www.nato.int/en/about-us/organization/nato-member-countries"
+        },
+        {
+          "code": "nl",
+          "status": "member",
+          "since": "1949",
+          "source": "https://www.nato.int/en/about-us/organization/nato-member-countries"
+        },
+        {
+          "code": "no",
+          "status": "member",
+          "since": "1949",
+          "source": "https://www.nato.int/en/about-us/organization/nato-member-countries"
+        },
+        {
+          "code": "pl",
+          "status": "member",
+          "since": "1999",
+          "source": "https://www.nato.int/en/about-us/organization/nato-member-countries"
+        },
+        {
+          "code": "pt",
+          "status": "member",
+          "since": "1949",
+          "source": "https://www.nato.int/en/about-us/organization/nato-member-countries"
+        },
+        {
+          "code": "ro",
+          "status": "member",
+          "since": "2004",
+          "source": "https://www.nato.int/en/about-us/organization/nato-member-countries"
+        },
+        {
+          "code": "se",
+          "status": "member",
+          "since": "2024",
+          "source": "https://www.nato.int/en/about-us/organization/nato-member-countries"
+        },
+        {
+          "code": "si",
+          "status": "member",
+          "since": "2004",
+          "source": "https://www.nato.int/en/about-us/organization/nato-member-countries"
+        },
+        {
+          "code": "sk",
+          "status": "member",
+          "since": "2004",
+          "source": "https://www.nato.int/en/about-us/organization/nato-member-countries"
+        },
+        {
+          "code": "tr",
+          "status": "member",
+          "since": "1952",
+          "source": "https://www.nato.int/en/about-us/organization/nato-member-countries"
+        },
+        {
+          "code": "us",
+          "status": "member",
+          "since": "1949",
+          "source": "https://www.nato.int/en/about-us/organization/nato-member-countries"
+        },
+        {
+          "code": "ba",
+          "status": "candidate",
+          "since": "2010-04",
+          "source": "https://www.nato.int/en/what-we-do/partnerships-and-cooperation/enlargement-and-article-10"
+        },
+        {
+          "code": "ge",
+          "status": "candidate",
+          "since": "2008-04",
+          "source": "https://www.nato.int/en/what-we-do/partnerships-and-cooperation/relations-with-georgia"
+        },
+        {
+          "code": "ua",
+          "status": "candidate",
+          "since": "2008-04",
+          "source": "https://www.nato.int/en/what-we-do/partnerships-and-cooperation/relations-with-ukraine"
+        }
+      ],
+      "the": true,
+      "note": "32 members are drawn; the 3 aspirants (Bosnia and Herzegovina, Georgia and Ukraine) are listed, not drawn."
+    },
+    {
+      "id": "union:sco",
+      "name": "Shanghai Cooperation Organisation",
+      "kind": "bloc",
+      "founded": "2001-06-15",
+      "read": "2026-10-23",
+      "sources": [
+        {
+          "name": "SCO: General information",
+          "url": "https://eng.sectsco.org/20170109/192193.html"
+        },
+        {
+          "name": "SCO: Regular SCO Heads of State Council Meeting (4 July 2023)",
+          "url": "https://eng.sectsco.org/20230704/Regular-SCO-Heads-of-State-Council-Meeting-948760.html"
+        },
+        {
+          "name": "SCO: Observers and dialogue partners (6 March 2026)",
+          "url": "https://eng.sectsco.org/20260306/2185663.html"
+        }
+      ],
+      "members": [
+        {
+          "code": "cn",
+          "status": "member",
+          "since": "2001-06-15",
+          "source": "https://eng.sectsco.org/20170109/192193.html"
+        },
+        {
+          "code": "kz",
+          "status": "member",
+          "since": "2001-06-15",
+          "source": "https://eng.sectsco.org/20170109/192193.html"
+        },
+        {
+          "code": "kg",
+          "status": "member",
+          "since": "2001-06-15",
+          "source": "https://eng.sectsco.org/20170109/192193.html"
+        },
+        {
+          "code": "ru",
+          "status": "member",
+          "since": "2001-06-15",
+          "source": "https://eng.sectsco.org/20170109/192193.html"
+        },
+        {
+          "code": "tj",
+          "status": "member",
+          "since": "2001-06-15",
+          "source": "https://eng.sectsco.org/20170109/192193.html"
+        },
+        {
+          "code": "uz",
+          "status": "member",
+          "since": "2001-06-15",
+          "source": "https://eng.sectsco.org/20170109/192193.html"
+        },
+        {
+          "code": "in",
+          "status": "member",
+          "since": "2017",
+          "source": "https://eng.sectsco.org/20170109/192193.html"
+        },
+        {
+          "code": "pk",
+          "status": "member",
+          "since": "2017",
+          "source": "https://eng.sectsco.org/20170109/192193.html"
+        },
+        {
+          "code": "ir",
+          "status": "member",
+          "since": "2023-07-04",
+          "source": "https://eng.sectsco.org/20230704/Regular-SCO-Heads-of-State-Council-Meeting-948760.html"
+        },
+        {
+          "code": "by",
+          "status": "member",
+          "since": "2024",
+          "source": "https://eng.sectsco.org/20170109/192193.html"
+        },
+        {
+          "code": "af",
+          "status": "observer",
+          "since": "2012-06-07",
+          "source": "https://eng.sectsco.org/20260306/2185663.html"
+        },
+        {
+          "code": "mn",
+          "status": "observer",
+          "since": "2004-06-17",
+          "source": "https://eng.sectsco.org/20260306/2185663.html"
+        },
+        {
+          "code": "ae",
+          "status": "partner",
+          "since": "2022-09-16",
+          "source": "https://eng.sectsco.org/20260306/2185663.html"
+        },
+        {
+          "code": "am",
+          "status": "partner",
+          "since": "2015-07-10",
+          "source": "https://eng.sectsco.org/20260306/2185663.html"
+        },
+        {
+          "code": "az",
+          "status": "partner",
+          "since": "2015-07-10",
+          "source": "https://eng.sectsco.org/20260306/2185663.html"
+        },
+        {
+          "code": "bh",
+          "status": "partner",
+          "since": "2022-09-10",
+          "source": "https://eng.sectsco.org/20260306/2185663.html"
+        },
+        {
+          "code": "eg",
+          "status": "partner",
+          "since": "2021-09-17",
+          "source": "https://eng.sectsco.org/20260306/2185663.html"
+        },
+        {
+          "code": "kh",
+          "status": "partner",
+          "since": "2015-07-10",
+          "source": "https://eng.sectsco.org/20260306/2185663.html"
+        },
+        {
+          "code": "kw",
+          "status": "partner",
+          "since": "2022-09-16",
+          "source": "https://eng.sectsco.org/20260306/2185663.html"
+        },
+        {
+          "code": "la",
+          "status": "partner",
+          "since": "2025-09-01",
+          "source": "https://eng.sectsco.org/20260306/2185663.html"
+        },
+        {
+          "code": "lk",
+          "status": "partner",
+          "since": "2009-06-16",
+          "source": "https://eng.sectsco.org/20260306/2185663.html"
+        },
+        {
+          "code": "mm",
+          "status": "partner",
+          "since": "2022-09-16",
+          "source": "https://eng.sectsco.org/20260306/2185663.html"
+        },
+        {
+          "code": "mv",
+          "status": "partner",
+          "since": "2022-09-16",
+          "source": "https://eng.sectsco.org/20260306/2185663.html"
+        },
+        {
+          "code": "np",
+          "status": "partner",
+          "since": "2015-07-10",
+          "source": "https://eng.sectsco.org/20260306/2185663.html"
+        },
+        {
+          "code": "qa",
+          "status": "partner",
+          "since": "2021-09-17",
+          "source": "https://eng.sectsco.org/20260306/2185663.html"
+        },
+        {
+          "code": "sa",
+          "status": "partner",
+          "since": "2021-09-17",
+          "source": "https://eng.sectsco.org/20260306/2185663.html"
+        },
+        {
+          "code": "tr",
+          "status": "partner",
+          "since": "2012-06-07",
+          "source": "https://eng.sectsco.org/20260306/2185663.html"
+        }
+      ],
+      "the": true,
+      "note": "10 members are drawn; its 2 observers and 15 dialogue partners are listed, not drawn."
+    },
+    {
+      "id": "union:opec",
+      "name": "Organization of the Petroleum Exporting Countries",
+      "kind": "bloc",
+      "founded": "1960-09",
+      "read": "2026-10-23",
+      "sources": [
+        {
+          "name": "U.S. EIA Glossary: Organization of Petroleum Exporting Countries (OPEC), current members with years",
+          "url": "https://www.eia.gov/tools/glossary/index.php?id=Organization+of+Petroleum+Exporting+Countries+%28OPEC%29"
+        }
+      ],
+      "members": [
+        {
+          "code": "cg",
+          "status": "member",
+          "since": "2018-06",
+          "source": "https://www.eia.gov/tools/glossary/index.php?id=Organization+of+Petroleum+Exporting+Countries+%28OPEC%29"
+        },
+        {
+          "code": "dz",
+          "status": "member",
+          "since": "1969",
+          "source": "https://www.eia.gov/tools/glossary/index.php?id=Organization+of+Petroleum+Exporting+Countries+%28OPEC%29"
+        },
+        {
+          "code": "ga",
+          "status": "member",
+          "since": "2016",
+          "source": "https://www.eia.gov/tools/glossary/index.php?id=Organization+of+Petroleum+Exporting+Countries+%28OPEC%29"
+        },
+        {
+          "code": "gq",
+          "status": "member",
+          "since": "2017",
+          "source": "https://www.eia.gov/tools/glossary/index.php?id=Organization+of+Petroleum+Exporting+Countries+%28OPEC%29"
+        },
+        {
+          "code": "iq",
+          "status": "member",
+          "since": "1960",
+          "source": "https://www.eia.gov/tools/glossary/index.php?id=Organization+of+Petroleum+Exporting+Countries+%28OPEC%29"
+        },
+        {
+          "code": "ir",
+          "status": "member",
+          "since": "1960",
+          "source": "https://www.eia.gov/tools/glossary/index.php?id=Organization+of+Petroleum+Exporting+Countries+%28OPEC%29"
+        },
+        {
+          "code": "kw",
+          "status": "member",
+          "since": "1960",
+          "source": "https://www.eia.gov/tools/glossary/index.php?id=Organization+of+Petroleum+Exporting+Countries+%28OPEC%29"
+        },
+        {
+          "code": "ly",
+          "status": "member",
+          "since": "1962",
+          "source": "https://www.eia.gov/tools/glossary/index.php?id=Organization+of+Petroleum+Exporting+Countries+%28OPEC%29"
+        },
+        {
+          "code": "ng",
+          "status": "member",
+          "since": "1971",
+          "source": "https://www.eia.gov/tools/glossary/index.php?id=Organization+of+Petroleum+Exporting+Countries+%28OPEC%29"
+        },
+        {
+          "code": "sa",
+          "status": "member",
+          "since": "1960",
+          "source": "https://www.eia.gov/tools/glossary/index.php?id=Organization+of+Petroleum+Exporting+Countries+%28OPEC%29"
+        },
+        {
+          "code": "ve",
+          "status": "member",
+          "since": "1960",
+          "source": "https://www.eia.gov/tools/glossary/index.php?id=Organization+of+Petroleum+Exporting+Countries+%28OPEC%29"
+        }
+      ],
+      "the": true
+    },
+    {
+      "id": "union:mercosur",
+      "name": "Mercosur",
+      "kind": "bloc",
+      "founded": "1991-03-26",
+      "read": "2026-10-23",
+      "sources": [
+        {
+          "name": "Argentina, Boletín Oficial: Ley 23.981, approving the Treaty of Asunción (signed 26 March 1991 by Argentina, Brazil, Paraguay and Uruguay)",
+          "url": "https://www.argentina.gob.ar/normativa/nacional/ley-23981-380/texto"
+        },
+        {
+          "name": "Ministerio de Relaciones Exteriores de Bolivia: Bolivia oficializa su adhesión al MERCOSUR (5 Jul 2024)",
+          "url": "https://cancilleria.gob.bo/mre/2024/07/05/16383/"
+        },
+        {
+          "name": "Cancillería Argentina: Decision regarding the suspension of the Bolivarian Republic of Venezuela in MERCOSUR (5 Aug 2017, Ushuaia Protocol)",
+          "url": "https://cancilleria.gob.ar/en/news/releases/decision-regarding-suspension-bolivarian-republic-venezuela-mercosur-through"
+        },
+        {
+          "name": "Subsecretaría de Relaciones Económicas Internacionales (Chile): Chile - Mercosur, ACE N° 35",
+          "url": "https://www.subrei.gob.cl/acuerdos-comerciales/acuerdos-comerciales-vigentes/mercosur"
+        },
+        {
+          "name": "Argentina, Boletín Oficial: Decisión CMC N° 39/03, Participación de la República de Perú (XXV CMC, Montevideo, 15/XII/03)",
+          "url": "https://www.argentina.gob.ar/normativa/nacional/norma-96505/texto"
+        },
+        {
+          "name": "Argentina, Boletín Oficial: Decisión CMC N° 44/04, Colombia as an Associated State (XXVII CMC, Belo Horizonte, 16/XII/04)",
+          "url": "https://www.argentina.gob.ar/normativa/nacional/norma-105967/texto"
+        },
+        {
+          "name": "Argentina, Boletín Oficial: Decisión CMC N° 43/04, Ecuador as an Associated State (XXVII CMC, Belo Horizonte, 16/XII/04)",
+          "url": "https://www.argentina.gob.ar/normativa/nacional/norma-105966/texto"
+        },
+        {
+          "name": "Argentina, Boletín Oficial: Decisión CMC N° 12/13, Guyana as an Associated State (XLV CMC, Montevideo, 11/VII/13)",
+          "url": "https://www.argentina.gob.ar/normativa/nacional/norma-244756/texto"
+        },
+        {
+          "name": "Argentina, Boletín Oficial: Decisión CMC N° 13/13, Suriname as an Associated State (XLV CMC, Montevideo, 11/VII/13)",
+          "url": "https://www.argentina.gob.ar/normativa/nacional/norma-244757/texto"
+        },
+        {
+          "name": "Presidencia de Uruguay: Mercosur concretó ingreso de Panamá como estado asociado (06/12/2024)",
+          "url": "https://www.gub.uy/presidencia/comunicacion/noticias/mercosur-concreto-ingreso-panama-estado-asociado"
+        }
+      ],
+      "members": [
+        {
+          "code": "ar",
+          "status": "member",
+          "since": "1991-03-26",
+          "source": "https://www.argentina.gob.ar/normativa/nacional/ley-23981-380/texto"
+        },
+        {
+          "code": "br",
+          "status": "member",
+          "since": "1991-03-26",
+          "source": "https://www.argentina.gob.ar/normativa/nacional/ley-23981-380/texto"
+        },
+        {
+          "code": "py",
+          "status": "member",
+          "since": "1991-03-26",
+          "source": "https://www.argentina.gob.ar/normativa/nacional/ley-23981-380/texto"
+        },
+        {
+          "code": "uy",
+          "status": "member",
+          "since": "1991-03-26",
+          "source": "https://www.argentina.gob.ar/normativa/nacional/ley-23981-380/texto"
+        },
+        {
+          "code": "bo",
+          "status": "member",
+          "since": "2024",
+          "source": "https://cancilleria.gob.bo/mre/2024/07/05/16383/"
+        },
+        {
+          "code": "ve",
+          "status": "suspended",
+          "since": "2017-08-05",
+          "source": "https://cancilleria.gob.ar/en/news/releases/decision-regarding-suspension-bolivarian-republic-venezuela-mercosur-through"
+        },
+        {
+          "code": "cl",
+          "status": "partner",
+          "since": "1996",
+          "source": "https://www.subrei.gob.cl/acuerdos-comerciales/acuerdos-comerciales-vigentes/mercosur"
+        },
+        {
+          "code": "pe",
+          "status": "partner",
+          "since": "2003-12-15",
+          "source": "https://www.argentina.gob.ar/normativa/nacional/norma-96505/texto"
+        },
+        {
+          "code": "co",
+          "status": "partner",
+          "since": "2004-12-16",
+          "source": "https://www.argentina.gob.ar/normativa/nacional/norma-105967/texto"
+        },
+        {
+          "code": "ec",
+          "status": "partner",
+          "since": "2004-12-16",
+          "source": "https://www.argentina.gob.ar/normativa/nacional/norma-105966/texto"
+        },
+        {
+          "code": "gy",
+          "status": "partner",
+          "since": "2013-07-11",
+          "source": "https://www.argentina.gob.ar/normativa/nacional/norma-244756/texto"
+        },
+        {
+          "code": "sr",
+          "status": "partner",
+          "since": "2013-07-11",
+          "source": "https://www.argentina.gob.ar/normativa/nacional/norma-244757/texto"
+        },
+        {
+          "code": "pa",
+          "status": "partner",
+          "since": "2024-12-06",
+          "source": "https://www.gub.uy/presidencia/comunicacion/noticias/mercosur-concreto-ingreso-panama-estado-asociado"
+        }
+      ],
+      "note": "Bolivia became a full member in 2024. Venezuela, suspended since 5 August 2017, and the 7 associated states are listed, not drawn."
+    },
+    {
+      "id": "union:gcc",
+      "name": "Gulf Cooperation Council",
+      "kind": "bloc",
+      "founded": "1981-05-25",
+      "read": "2026-10-17",
+      "sources": [
+        {
+          "name": "GCC Secretariat General: About us (the Charter, signed 25 May 1981 by the six)",
+          "url": "https://www.gcc-sg.org/en/AboutUs/Pages/default.aspx"
+        }
+      ],
+      "members": [
+        {
+          "code": "ae",
+          "status": "member",
+          "since": "1981-05-25",
+          "source": "https://www.gcc-sg.org/en/AboutUs/Pages/default.aspx"
+        },
+        {
+          "code": "bh",
+          "status": "member",
+          "since": "1981-05-25",
+          "source": "https://www.gcc-sg.org/en/AboutUs/Pages/default.aspx"
+        },
+        {
+          "code": "sa",
+          "status": "member",
+          "since": "1981-05-25",
+          "source": "https://www.gcc-sg.org/en/AboutUs/Pages/default.aspx"
+        },
+        {
+          "code": "om",
+          "status": "member",
+          "since": "1981-05-25",
+          "source": "https://www.gcc-sg.org/en/AboutUs/Pages/default.aspx"
+        },
+        {
+          "code": "qa",
+          "status": "member",
+          "since": "1981-05-25",
+          "source": "https://www.gcc-sg.org/en/AboutUs/Pages/default.aspx"
+        },
+        {
+          "code": "kw",
+          "status": "member",
+          "since": "1981-05-25",
+          "source": "https://www.gcc-sg.org/en/AboutUs/Pages/default.aspx"
+        }
+      ],
+      "the": true
+    },
+    {
+      "id": "union:commonwealth",
+      "name": "Commonwealth of Nations",
+      "kind": "forum",
+      "founded": "1926",
+      "read": "2026-10-17",
+      "sources": [
+        {
+          "name": "The Commonwealth: Our member countries (56), and each country's page",
+          "url": "https://thecommonwealth.org/our-member-countries"
+        }
+      ],
+      "members": [
+        {
+          "code": "ag",
+          "status": "member",
+          "since": "1981",
+          "source": "https://thecommonwealth.org/our-member-countries/antigua-and-barbuda"
+        },
+        {
+          "code": "au",
+          "status": "member",
+          "since": "1931",
+          "source": "https://thecommonwealth.org/our-member-countries/australia"
+        },
+        {
+          "code": "bb",
+          "status": "member",
+          "since": "1966",
+          "source": "https://thecommonwealth.org/our-member-countries/barbados"
+        },
+        {
+          "code": "bd",
+          "status": "member",
+          "since": "1972",
+          "source": "https://thecommonwealth.org/our-member-countries/bangladesh"
+        },
+        {
+          "code": "bn",
+          "status": "member",
+          "since": "1984",
+          "source": "https://thecommonwealth.org/our-member-countries/brunei-darussalam"
+        },
+        {
+          "code": "bs",
+          "status": "member",
+          "since": "1973",
+          "source": "https://thecommonwealth.org/our-member-countries/bahamas"
+        },
+        {
+          "code": "bw",
+          "status": "member",
+          "since": "1966",
+          "source": "https://thecommonwealth.org/our-member-countries/botswana"
+        },
+        {
+          "code": "bz",
+          "status": "member",
+          "since": "1981",
+          "source": "https://thecommonwealth.org/our-member-countries/belize"
+        },
+        {
+          "code": "ca",
+          "status": "member",
+          "since": "1931",
+          "source": "https://thecommonwealth.org/our-member-countries/canada"
+        },
+        {
+          "code": "cm",
+          "status": "member",
+          "since": "1960",
+          "source": "https://thecommonwealth.org/our-member-countries/cameroon"
+        },
+        {
+          "code": "cy",
+          "status": "member",
+          "since": "1961",
+          "source": "https://thecommonwealth.org/our-member-countries/cyprus"
+        },
+        {
+          "code": "dm",
+          "status": "member",
+          "since": "1978",
+          "source": "https://thecommonwealth.org/our-member-countries/dominica"
+        },
+        {
+          "code": "fj",
+          "status": "member",
+          "since": "1970",
+          "source": "https://thecommonwealth.org/our-member-countries/fiji"
+        },
+        {
+          "code": "ga",
+          "status": "member",
+          "since": "2022-06",
+          "source": "https://thecommonwealth.org/our-member-countries/gabon"
+        },
+        {
+          "code": "gb",
+          "status": "member",
+          "since": "1926",
+          "source": "https://thecommonwealth.org/our-member-countries/united-kingdom"
+        },
+        {
+          "code": "gd",
+          "status": "member",
+          "since": "1974",
+          "source": "https://thecommonwealth.org/our-member-countries/grenada"
+        },
+        {
+          "code": "gh",
+          "status": "member",
+          "since": "1957",
+          "source": "https://thecommonwealth.org/our-member-countries/ghana"
+        },
+        {
+          "code": "gm",
+          "status": "member",
+          "since": "2018-02",
+          "source": "https://thecommonwealth.org/our-member-countries/gambia"
+        },
+        {
+          "code": "gy",
+          "status": "member",
+          "since": "1966",
+          "source": "https://thecommonwealth.org/our-member-countries/guyana"
+        },
+        {
+          "code": "in",
+          "status": "member",
+          "since": "1947",
+          "source": "https://thecommonwealth.org/our-member-countries/india"
+        },
+        {
+          "code": "jm",
+          "status": "member",
+          "since": "1962",
+          "source": "https://thecommonwealth.org/our-member-countries/jamaica"
+        },
+        {
+          "code": "ke",
+          "status": "member",
+          "since": "1963",
+          "source": "https://thecommonwealth.org/our-member-countries/kenya"
+        },
+        {
+          "code": "ki",
+          "status": "member",
+          "since": "1979",
+          "source": "https://thecommonwealth.org/our-member-countries/kiribati"
+        },
+        {
+          "code": "kn",
+          "status": "member",
+          "since": "1983",
+          "source": "https://thecommonwealth.org/our-member-countries/st-kitts-and-nevis"
+        },
+        {
+          "code": "lc",
+          "status": "member",
+          "since": "1979",
+          "source": "https://thecommonwealth.org/our-member-countries/saint-lucia"
+        },
+        {
+          "code": "lk",
+          "status": "member",
+          "since": "1948",
+          "source": "https://thecommonwealth.org/our-member-countries/sri-lanka"
+        },
+        {
+          "code": "ls",
+          "status": "member",
+          "since": "1966",
+          "source": "https://thecommonwealth.org/our-member-countries/lesotho"
+        },
+        {
+          "code": "mt",
+          "status": "member",
+          "since": "1964",
+          "source": "https://thecommonwealth.org/our-member-countries/malta"
+        },
+        {
+          "code": "mu",
+          "status": "member",
+          "since": "1968",
+          "source": "https://thecommonwealth.org/our-member-countries/mauritius"
+        },
+        {
+          "code": "mv",
+          "status": "member",
+          "since": "2020-02-01",
+          "source": "https://thecommonwealth.org/our-member-countries/maldives"
+        },
+        {
+          "code": "mw",
+          "status": "member",
+          "since": "1964",
+          "source": "https://thecommonwealth.org/our-member-countries/malawi"
+        },
+        {
+          "code": "my",
+          "status": "member",
+          "since": "1957",
+          "source": "https://thecommonwealth.org/our-member-countries/malaysia"
+        },
+        {
+          "code": "mz",
+          "status": "member",
+          "since": "1995",
+          "source": "https://thecommonwealth.org/our-member-countries/mozambique"
+        },
+        {
+          "code": "na",
+          "status": "member",
+          "since": "1990",
+          "source": "https://thecommonwealth.org/our-member-countries/namibia"
+        },
+        {
+          "code": "ng",
+          "status": "member",
+          "since": "1960",
+          "source": "https://thecommonwealth.org/our-member-countries/nigeria"
+        },
+        {
+          "code": "nr",
+          "status": "member",
+          "since": "1999",
+          "source": "https://thecommonwealth.org/our-member-countries/naeoro"
+        },
+        {
+          "code": "nz",
+          "status": "member",
+          "since": "1931",
+          "source": "https://thecommonwealth.org/our-member-countries/new-zealand"
+        },
+        {
+          "code": "pg",
+          "status": "member",
+          "since": "1975",
+          "source": "https://thecommonwealth.org/our-member-countries/papua-new-guinea"
+        },
+        {
+          "code": "pk",
+          "status": "member",
+          "since": "1989",
+          "source": "https://thecommonwealth.org/our-member-countries/pakistan"
+        },
+        {
+          "code": "rw",
+          "status": "member",
+          "since": "2009",
+          "source": "https://thecommonwealth.org/our-member-countries/rwanda"
+        },
+        {
+          "code": "sb",
+          "status": "member",
+          "since": "1978",
+          "source": "https://thecommonwealth.org/our-member-countries/solomon-islands"
+        },
+        {
+          "code": "sc",
+          "status": "member",
+          "since": "1976",
+          "source": "https://thecommonwealth.org/our-member-countries/seychelles"
+        },
+        {
+          "code": "sg",
+          "status": "member",
+          "since": "1965",
+          "source": "https://thecommonwealth.org/our-member-countries/singapore"
+        },
+        {
+          "code": "sl",
+          "status": "member",
+          "since": "1961",
+          "source": "https://thecommonwealth.org/our-member-countries/sierra-leone"
+        },
+        {
+          "code": "sz",
+          "status": "member",
+          "since": "1968",
+          "source": "https://thecommonwealth.org/our-member-countries/kingdom-eswatini"
+        },
+        {
+          "code": "tg",
+          "status": "member",
+          "since": "2022-06",
+          "source": "https://thecommonwealth.org/our-member-countries/togo"
+        },
+        {
+          "code": "to",
+          "status": "member",
+          "since": "1970",
+          "source": "https://thecommonwealth.org/our-member-countries/tonga"
+        },
+        {
+          "code": "tt",
+          "status": "member",
+          "since": "1962",
+          "source": "https://thecommonwealth.org/our-member-countries/trinidad-and-tobago"
+        },
+        {
+          "code": "tv",
+          "status": "member",
+          "since": "1978",
+          "source": "https://thecommonwealth.org/our-member-countries/tuvalu"
+        },
+        {
+          "code": "tz",
+          "status": "member",
+          "since": "1961",
+          "source": "https://thecommonwealth.org/our-member-countries/united-republic-tanzania"
+        },
+        {
+          "code": "ug",
+          "status": "member",
+          "since": "1962",
+          "source": "https://thecommonwealth.org/our-member-countries/uganda"
+        },
+        {
+          "code": "vc",
+          "status": "member",
+          "since": "1979",
+          "source": "https://thecommonwealth.org/our-member-countries/st-vincent-and-grenadines"
+        },
+        {
+          "code": "vu",
+          "status": "member",
+          "since": "1980",
+          "source": "https://thecommonwealth.org/our-member-countries/vanuatu"
+        },
+        {
+          "code": "ws",
+          "status": "member",
+          "since": "1970",
+          "source": "https://thecommonwealth.org/our-member-countries/samoa"
+        },
+        {
+          "code": "za",
+          "status": "member",
+          "since": "1994",
+          "source": "https://thecommonwealth.org/our-member-countries/south-africa"
+        },
+        {
+          "code": "zm",
+          "status": "member",
+          "since": "1964",
+          "source": "https://thecommonwealth.org/our-member-countries/zambia"
+        }
+      ],
+      "the": true
+    },
+    {
+      "id": "union:oas",
+      "name": "Organization of American States",
+      "kind": "forum",
+      "founded": "1948-04-30",
+      "read": "2026-10-17",
+      "sources": [
+        {
+          "name": "OAS: Charter of the OAS (A-41), signatories and ratifications",
+          "url": "https://www.oas.org/en/sla/dil/inter_american_treaties_A-41_charter_OAS_signatories.asp"
+        }
+      ],
+      "members": [
+        {
+          "code": "ag",
+          "status": "member",
+          "since": "1981-12-03",
+          "source": "https://www.oas.org/en/sla/dil/inter_american_treaties_A-41_charter_OAS_signatories.asp"
+        },
+        {
+          "code": "ar",
+          "status": "member",
+          "since": "1956-04-10",
+          "source": "https://www.oas.org/en/sla/dil/inter_american_treaties_A-41_charter_OAS_signatories.asp"
+        },
+        {
+          "code": "bb",
+          "status": "member",
+          "since": "1967-11-15",
+          "source": "https://www.oas.org/en/sla/dil/inter_american_treaties_A-41_charter_OAS_signatories.asp"
+        },
+        {
+          "code": "bo",
+          "status": "member",
+          "since": "1950-10-18",
+          "source": "https://www.oas.org/en/sla/dil/inter_american_treaties_A-41_charter_OAS_signatories.asp"
+        },
+        {
+          "code": "br",
+          "status": "member",
+          "since": "1950-03-13",
+          "source": "https://www.oas.org/en/sla/dil/inter_american_treaties_A-41_charter_OAS_signatories.asp"
+        },
+        {
+          "code": "bs",
+          "status": "member",
+          "since": "1982-03-03",
+          "source": "https://www.oas.org/en/sla/dil/inter_american_treaties_A-41_charter_OAS_signatories.asp"
+        },
+        {
+          "code": "bz",
+          "status": "member",
+          "since": "1991-01-08",
+          "source": "https://www.oas.org/en/sla/dil/inter_american_treaties_A-41_charter_OAS_signatories.asp"
+        },
+        {
+          "code": "ca",
+          "status": "member",
+          "since": "1990-01-08",
+          "source": "https://www.oas.org/en/sla/dil/inter_american_treaties_A-41_charter_OAS_signatories.asp"
+        },
+        {
+          "code": "cl",
+          "status": "member",
+          "since": "1953-06-05",
+          "source": "https://www.oas.org/en/sla/dil/inter_american_treaties_A-41_charter_OAS_signatories.asp"
+        },
+        {
+          "code": "co",
+          "status": "member",
+          "since": "1951-12-13",
+          "source": "https://www.oas.org/en/sla/dil/inter_american_treaties_A-41_charter_OAS_signatories.asp"
+        },
+        {
+          "code": "cr",
+          "status": "member",
+          "since": "1948-11-16",
+          "source": "https://www.oas.org/en/sla/dil/inter_american_treaties_A-41_charter_OAS_signatories.asp"
+        },
+        {
+          "code": "cu",
+          "status": "member",
+          "since": "1952-07-16",
+          "source": "https://www.oas.org/en/sla/dil/inter_american_treaties_A-41_charter_OAS_signatories.asp"
+        },
+        {
+          "code": "dm",
+          "status": "member",
+          "since": "1979-05-22",
+          "source": "https://www.oas.org/en/sla/dil/inter_american_treaties_A-41_charter_OAS_signatories.asp"
+        },
+        {
+          "code": "do",
+          "status": "member",
+          "since": "1949-04-22",
+          "source": "https://www.oas.org/en/sla/dil/inter_american_treaties_A-41_charter_OAS_signatories.asp"
+        },
+        {
+          "code": "ec",
+          "status": "member",
+          "since": "1950-12-28",
+          "source": "https://www.oas.org/en/sla/dil/inter_american_treaties_A-41_charter_OAS_signatories.asp"
+        },
+        {
+          "code": "gd",
+          "status": "member",
+          "since": "1975-05-13",
+          "source": "https://www.oas.org/en/sla/dil/inter_american_treaties_A-41_charter_OAS_signatories.asp"
+        },
+        {
+          "code": "gt",
+          "status": "member",
+          "since": "1955-04-06",
+          "source": "https://www.oas.org/en/sla/dil/inter_american_treaties_A-41_charter_OAS_signatories.asp"
+        },
+        {
+          "code": "gy",
+          "status": "member",
+          "since": "1991-01-08",
+          "source": "https://www.oas.org/en/sla/dil/inter_american_treaties_A-41_charter_OAS_signatories.asp"
+        },
+        {
+          "code": "hn",
+          "status": "member",
+          "since": "1950-02-07",
+          "source": "https://www.oas.org/en/sla/dil/inter_american_treaties_A-41_charter_OAS_signatories.asp"
+        },
+        {
+          "code": "ht",
+          "status": "member",
+          "since": "1951-03-28",
+          "source": "https://www.oas.org/en/sla/dil/inter_american_treaties_A-41_charter_OAS_signatories.asp"
+        },
+        {
+          "code": "jm",
+          "status": "member",
+          "since": "1969-08-20",
+          "source": "https://www.oas.org/en/sla/dil/inter_american_treaties_A-41_charter_OAS_signatories.asp"
+        },
+        {
+          "code": "kn",
+          "status": "member",
+          "since": "1984-03-12",
+          "source": "https://www.oas.org/en/sla/dil/inter_american_treaties_A-41_charter_OAS_signatories.asp"
+        },
+        {
+          "code": "lc",
+          "status": "member",
+          "since": "1979-05-22",
+          "source": "https://www.oas.org/en/sla/dil/inter_american_treaties_A-41_charter_OAS_signatories.asp"
+        },
+        {
+          "code": "mx",
+          "status": "member",
+          "since": "1948-11-23",
+          "source": "https://www.oas.org/en/sla/dil/inter_american_treaties_A-41_charter_OAS_signatories.asp"
+        },
+        {
+          "code": "pa",
+          "status": "member",
+          "since": "1951-03-22",
+          "source": "https://www.oas.org/en/sla/dil/inter_american_treaties_A-41_charter_OAS_signatories.asp"
+        },
+        {
+          "code": "pe",
+          "status": "member",
+          "since": "1954-02-12",
+          "source": "https://www.oas.org/en/sla/dil/inter_american_treaties_A-41_charter_OAS_signatories.asp"
+        },
+        {
+          "code": "py",
+          "status": "member",
+          "since": "1950-05-03",
+          "source": "https://www.oas.org/en/sla/dil/inter_american_treaties_A-41_charter_OAS_signatories.asp"
+        },
+        {
+          "code": "sr",
+          "status": "member",
+          "since": "1977-06-08",
+          "source": "https://www.oas.org/en/sla/dil/inter_american_treaties_A-41_charter_OAS_signatories.asp"
+        },
+        {
+          "code": "sv",
+          "status": "member",
+          "since": "1950-09-11",
+          "source": "https://www.oas.org/en/sla/dil/inter_american_treaties_A-41_charter_OAS_signatories.asp"
+        },
+        {
+          "code": "tt",
+          "status": "member",
+          "since": "1967-03-17",
+          "source": "https://www.oas.org/en/sla/dil/inter_american_treaties_A-41_charter_OAS_signatories.asp"
+        },
+        {
+          "code": "us",
+          "status": "member",
+          "since": "1951-06-19",
+          "source": "https://www.oas.org/en/sla/dil/inter_american_treaties_A-41_charter_OAS_signatories.asp"
+        },
+        {
+          "code": "uy",
+          "status": "member",
+          "since": "1955-09-01",
+          "source": "https://www.oas.org/en/sla/dil/inter_american_treaties_A-41_charter_OAS_signatories.asp"
+        },
+        {
+          "code": "vc",
+          "status": "member",
+          "since": "1981-12-03",
+          "source": "https://www.oas.org/en/sla/dil/inter_american_treaties_A-41_charter_OAS_signatories.asp"
+        },
+        {
+          "code": "ve",
+          "status": "member",
+          "since": "1951-12-29",
+          "source": "https://www.oas.org/en/sla/dil/inter_american_treaties_A-41_charter_OAS_signatories.asp"
+        }
+      ],
+      "the": true
+    },
+    {
+      "id": "union:arab-league",
+      "name": "League of Arab States",
+      "kind": "forum",
+      "founded": "1945-03-22",
+      "read": "2026-10-23",
+      "sources": [
+        {
+          "name": "League of Arab States: Member states (each state's page gives its Membership Date)",
+          "url": "https://web.archive.org/web/20251015011909/http://www.lasportal.org/en/aboutlas/Pages/CountryData.aspx"
+        }
+      ],
+      "members": [
+        {
+          "code": "ae",
+          "status": "member",
+          "since": "1971",
+          "source": "https://web.archive.org/web/20201008121439/http://www.lasportal.org/en/aboutlas/Pages/CountryDataDetails.aspx?RID=11"
+        },
+        {
+          "code": "bh",
+          "status": "member",
+          "since": "1971-09-11",
+          "source": "https://web.archive.org/web/20251119043305/http://www.lasportal.org/en/aboutlas/Pages/CountryDataDetails.aspx?RID=9"
+        },
+        {
+          "code": "dj",
+          "status": "member",
+          "since": "1977-09-04",
+          "source": "https://web.archive.org/web/20251209231222/http://www.lasportal.org/en/aboutlas/Pages/CountryDataDetails.aspx?RID=20"
+        },
+        {
+          "code": "dz",
+          "status": "member",
+          "since": "1962-08-16",
+          "source": "https://web.archive.org/web/20251118130930/http://www.lasportal.org/en/aboutlas/Pages/CountryDataDetails.aspx?RID=17"
+        },
+        {
+          "code": "eg",
+          "status": "member",
+          "since": "1945-03-22",
+          "source": "https://web.archive.org/web/20251119050954/http://www.lasportal.org/en/aboutlas/Pages/CountryDataDetails.aspx?RID=6"
+        },
+        {
+          "code": "iq",
+          "status": "member",
+          "since": "1945-03-22",
+          "source": "https://web.archive.org/web/20251119042415/http://www.lasportal.org/en/aboutlas/Pages/CountryDataDetails.aspx?RID=3"
+        },
+        {
+          "code": "jo",
+          "status": "member",
+          "since": "1945-03-22",
+          "source": "https://web.archive.org/web/20251119042739/http://www.lasportal.org/en/aboutlas/Pages/CountryDataDetails.aspx?RID=5"
+        },
+        {
+          "code": "km",
+          "status": "member",
+          "since": "1993-11-20",
+          "source": "https://web.archive.org/web/20201008232332/http://www.lasportal.org/en/aboutlas/Pages/CountryDataDetails.aspx?RID=22"
+        },
+        {
+          "code": "kw",
+          "status": "member",
+          "since": "1961-07-20",
+          "source": "https://web.archive.org/web/20260309093202/http://www.lasportal.org/en/aboutlas/Pages/CountryDataDetails.aspx?RID=10"
+        },
+        {
+          "code": "lb",
+          "status": "member",
+          "since": "1945-03-22",
+          "source": "https://web.archive.org/web/20250909034255/http://www.lasportal.org/en/aboutlas/Pages/CountryDataDetails.aspx?RID=1"
+        },
+        {
+          "code": "ly",
+          "status": "member",
+          "since": "1953-03-28",
+          "source": "https://web.archive.org/web/20260317005106/http://www.lasportal.org/en/aboutlas/Pages/CountryDataDetails.aspx?RID=15"
+        },
+        {
+          "code": "ma",
+          "status": "member",
+          "since": "1958-10-01",
+          "source": "https://web.archive.org/web/20251209224102/http://www.lasportal.org/en/aboutlas/Pages/CountryDataDetails.aspx?RID=18"
+        },
+        {
+          "code": "mr",
+          "status": "member",
+          "since": "1973-11-26",
+          "source": "https://web.archive.org/web/20201009072428/http://www.lasportal.org/en/aboutlas/Pages/CountryDataDetails.aspx?RID=19"
+        },
+        {
+          "code": "om",
+          "status": "member",
+          "since": "1971-09-29",
+          "source": "https://web.archive.org/web/20251118132722/http://www.lasportal.org/en/aboutlas/Pages/CountryDataDetails.aspx?RID=12"
+        },
+        {
+          "code": "qa",
+          "status": "member",
+          "since": "1971-09-11",
+          "source": "https://web.archive.org/web/20201009030608/http://www.lasportal.org/en/aboutlas/Pages/CountryDataDetails.aspx?RID=8"
+        },
+        {
+          "code": "sa",
+          "status": "member",
+          "since": "1945-03-22",
+          "source": "https://web.archive.org/web/20251119042946/http://www.lasportal.org/en/aboutlas/Pages/CountryDataDetails.aspx?RID=7"
+        },
+        {
+          "code": "sd",
+          "status": "member",
+          "since": "1956-01-19",
+          "source": "https://web.archive.org/web/20251118123253/http://www.lasportal.org/en/aboutlas/Pages/CountryDataDetails.aspx?RID=14"
+        },
+        {
+          "code": "so",
+          "status": "member",
+          "since": "1974-02-14",
+          "source": "https://web.archive.org/web/20251015014156/http://www.lasportal.org/en/aboutlas/Pages/CountryDataDetails.aspx?RID=21"
+        },
+        {
+          "code": "sy",
+          "status": "member",
+          "since": "1945-03-22",
+          "source": "https://web.archive.org/web/20250805053310/http://www.lasportal.org/en/aboutlas/Pages/CountryDataDetails.aspx?RID=2"
+        },
+        {
+          "code": "tn",
+          "status": "member",
+          "since": "1958-10-01",
+          "source": "https://web.archive.org/web/20201008135107/http://www.lasportal.org/en/aboutlas/Pages/CountryDataDetails.aspx?RID=16"
+        },
+        {
+          "code": "ye",
+          "status": "member",
+          "since": "1945-03-22",
+          "source": "https://web.archive.org/web/20251119041842/http://www.lasportal.org/en/aboutlas/Pages/CountryDataDetails.aspx?RID=13"
+        },
+        {
+          "code": "ps",
+          "status": "member",
+          "since": "1976-09-09",
+          "source": "https://web.archive.org/web/20260518181916/http://www.lasportal.org/en/aboutlas/Pages/CountryDataDetails.aspx?RID=4"
+        }
+      ],
+      "the": true,
+      "note": "Somaliland is drawn as part of Somalia, a member."
+    },
+    {
+      "id": "union:ecowas",
+      "name": "Economic Community of West African States",
+      "kind": "bloc",
+      "founded": "1975",
+      "read": "2026-10-17",
+      "sources": [
+        {
+          "name": "ECOWAS: Member States (12 listed)",
+          "url": "https://www.ecowas.int/member-states/"
+        },
+        {
+          "name": "ECOWAS: Creation (History)",
+          "url": "https://www.ecowas.int/history/"
+        },
+        {
+          "name": "AllAfrica (Leadership): Coup - ECOWAS suspends Guinea-Bissau from decision-making bodies (28 Nov 2025)",
+          "url": "https://allafrica.com/stories/202511280084.html"
+        }
+      ],
+      "members": [
+        {
+          "code": "bj",
+          "status": "member",
+          "since": "1975",
+          "source": "https://www.ecowas.int/member-states/"
+        },
+        {
+          "code": "ci",
+          "status": "member",
+          "since": "1975",
+          "source": "https://www.ecowas.int/member-states/"
+        },
+        {
+          "code": "gm",
+          "status": "member",
+          "since": "1975",
+          "source": "https://www.ecowas.int/member-states/"
+        },
+        {
+          "code": "gh",
+          "status": "member",
+          "since": "1975",
+          "source": "https://www.ecowas.int/member-states/"
+        },
+        {
+          "code": "gn",
+          "status": "member",
+          "since": "1975",
+          "source": "https://www.ecowas.int/member-states/"
+        },
+        {
+          "code": "gw",
+          "status": "suspended",
+          "since": "2025-11-27",
+          "source": "https://allafrica.com/stories/202511280084.html"
+        },
+        {
+          "code": "lr",
+          "status": "member",
+          "since": "1975",
+          "source": "https://www.ecowas.int/member-states/"
+        },
+        {
+          "code": "ng",
+          "status": "member",
+          "since": "1975",
+          "source": "https://www.ecowas.int/member-states/"
+        },
+        {
+          "code": "sn",
+          "status": "member",
+          "since": "1975",
+          "source": "https://www.ecowas.int/member-states/"
+        },
+        {
+          "code": "sl",
+          "status": "member",
+          "since": "1975",
+          "source": "https://www.ecowas.int/member-states/"
+        },
+        {
+          "code": "tg",
+          "status": "member",
+          "since": "1975",
+          "source": "https://www.ecowas.int/member-states/"
+        },
+        {
+          "code": "cv",
+          "status": "member",
+          "since": "1976",
+          "source": "https://www.ecowas.int/history/"
+        }
+      ],
+      "the": true,
+      "note": "11 members are drawn; Guinea-Bissau, suspended since 27 November 2025, is listed, not drawn."
+    },
+    {
+      "id": "union:csto",
+      "name": "Collective Security Treaty Organization",
+      "kind": "alliance",
+      "founded": "2002-10-07",
+      "read": "2026-10-17",
+      "sources": [
+        {
+          "name": "CSTO: History of creation (the 25 years page)",
+          "url": "https://en.odkb-csto.org/25years/"
+        }
+      ],
+      "members": [
+        {
+          "code": "kz",
+          "status": "member",
+          "since": "1992-05-15",
+          "source": "https://en.odkb-csto.org/25years/"
+        },
+        {
+          "code": "kg",
+          "status": "member",
+          "since": "1992-05-15",
+          "source": "https://en.odkb-csto.org/25years/"
+        },
+        {
+          "code": "ru",
+          "status": "member",
+          "since": "1992-05-15",
+          "source": "https://en.odkb-csto.org/25years/"
+        },
+        {
+          "code": "tj",
+          "status": "member",
+          "since": "1992-05-15",
+          "source": "https://en.odkb-csto.org/25years/"
+        },
+        {
+          "code": "am",
+          "status": "member",
+          "since": "1992-05-15",
+          "source": "https://en.odkb-csto.org/25years/"
+        },
+        {
+          "code": "by",
+          "status": "member",
+          "since": "1993",
+          "source": "https://en.odkb-csto.org/25years/"
+        }
+      ],
+      "the": true
+    },
+    {
+      "id": "union:pif",
+      "name": "Pacific Islands Forum",
+      "kind": "forum",
+      "founded": "1971",
+      "read": "2026-10-23",
+      "sources": [
+        {
+          "name": "Pacific Islands Forum Secretariat: Timeline of Major Forum Events",
+          "url": "https://forumsec.org/timeline-major-forum-events"
+        }
+      ],
+      "members": [
+        {
+          "code": "au",
+          "status": "member",
+          "since": "1971",
+          "source": "https://forumsec.org/timeline-major-forum-events"
+        },
+        {
+          "code": "ck",
+          "status": "member",
+          "since": "1971",
+          "source": "https://forumsec.org/timeline-major-forum-events"
+        },
+        {
+          "code": "fm",
+          "status": "member",
+          "since": "1987",
+          "source": "https://forumsec.org/timeline-major-forum-events"
+        },
+        {
+          "code": "fj",
+          "status": "member",
+          "since": "1971",
+          "source": "https://forumsec.org/timeline-major-forum-events"
+        },
+        {
+          "code": "pf",
+          "status": "member",
+          "since": "2016-09",
+          "source": "https://forumsec.org/timeline-major-forum-events"
+        },
+        {
+          "code": "ki",
+          "status": "member",
+          "since": "1977",
+          "source": "https://forumsec.org/timeline-major-forum-events"
+        },
+        {
+          "code": "nr",
+          "status": "member",
+          "since": "1971",
+          "source": "https://forumsec.org/timeline-major-forum-events"
+        },
+        {
+          "code": "nc",
+          "status": "member",
+          "since": "2016-09",
+          "source": "https://forumsec.org/timeline-major-forum-events"
+        },
+        {
+          "code": "nz",
+          "status": "member",
+          "since": "1971",
+          "source": "https://forumsec.org/timeline-major-forum-events"
+        },
+        {
+          "code": "nu",
+          "status": "member",
+          "since": "1975",
+          "source": "https://forumsec.org/timeline-major-forum-events"
+        },
+        {
+          "code": "pw",
+          "status": "member",
+          "since": "1995",
+          "source": "https://forumsec.org/timeline-major-forum-events"
+        },
+        {
+          "code": "pg",
+          "status": "member",
+          "since": "1974",
+          "source": "https://forumsec.org/timeline-major-forum-events"
+        },
+        {
+          "code": "mh",
+          "status": "member",
+          "since": "1987",
+          "source": "https://forumsec.org/timeline-major-forum-events"
+        },
+        {
+          "code": "ws",
+          "status": "member",
+          "since": "1971",
+          "source": "https://forumsec.org/timeline-major-forum-events"
+        },
+        {
+          "code": "sb",
+          "status": "member",
+          "since": "1978",
+          "source": "https://forumsec.org/timeline-major-forum-events"
+        },
+        {
+          "code": "to",
+          "status": "member",
+          "since": "1971",
+          "source": "https://forumsec.org/timeline-major-forum-events"
+        },
+        {
+          "code": "tv",
+          "status": "member",
+          "since": "1978",
+          "source": "https://forumsec.org/timeline-major-forum-events"
+        },
+        {
+          "code": "vu",
+          "status": "member",
+          "since": "1980",
+          "source": "https://forumsec.org/timeline-major-forum-events"
+        }
+      ],
+      "the": true
+    }
+  ]
+}

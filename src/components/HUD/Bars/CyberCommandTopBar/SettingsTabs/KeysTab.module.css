@@ -1,0 +1,152 @@
+/* KeysTab.module.css — follows the settings tabs' palette (DataTab.module.css) */
+.keysTab {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+}
+
+.intro {
+  color: #94a3b8;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.provider {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.providerHeader {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.providerName {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #38bdf8;
+  margin: 0;
+}
+
+.status {
+  font-family: var(--sc-font-data);
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.statusSet {
+  color: #4ade80;
+  background: rgba(34, 197, 94, 0.12);
+  border: 1px solid rgba(34, 197, 94, 0.35);
+}
+
+.statusNone {
+  color: #94a3b8;
+  background: rgba(100, 116, 139, 0.15);
+  border: 1px solid rgba(100, 116, 139, 0.35);
+}
+
+.usedBy {
+  color: #cbd5e1;
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.input {
+  flex: 1 1 220px;
+  min-width: 0;
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 6px;
+  color: #f1f5f9;
+  font-family: var(--sc-font-data);
+  font-size: 0.8125rem;
+  padding: 8px 10px;
+}
+
+.input::placeholder {
+  color: #64748b;
+}
+
+.button {
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 6px;
+  color: #e2e8f0;
+  font-size: 0.8125rem;
+  padding: 7px 12px;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.button:hover:not(:disabled) {
+  background: rgba(56, 189, 248, 0.15);
+  border-color: rgba(56, 189, 248, 0.6);
+}
+
+.button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.primary {
+  color: #38bdf8;
+  border-color: rgba(56, 189, 248, 0.55);
+}
+
+.danger {
+  color: #fca5a5;
+  border-color: rgba(248, 113, 113, 0.4);
+}
+
+.danger:hover:not(:disabled) {
+  background: rgba(248, 113, 113, 0.12);
+  border-color: rgba(248, 113, 113, 0.7);
+}
+
+.input:focus-visible,
+.button:focus-visible,
+.getKey:focus-visible {
+  outline: 2px solid #38bdf8;
+  outline-offset: 2px;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 0.75rem;
+}
+
+.getKey {
+  color: #38bdf8;
+}
+
+.note {
+  color: #94a3b8;
+}
+
+.refused {
+  color: #fca5a5;
+}

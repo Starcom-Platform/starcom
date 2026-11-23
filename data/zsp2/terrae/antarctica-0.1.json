@@ -1,0 +1,113 @@
+{
+  "zsp": "2.0",
+  "terra": "terra:antarctica",
+  "grid": {
+    "width": 3600,
+    "height": 1800,
+    "cell": 0.1,
+    "origin": {
+      "lat": 90,
+      "lon": -180
+    },
+    "rows": "row 0 the northernmost",
+    "values": "at cell centres"
+  },
+  "files": {
+    "zones": "antarctica-zones-0.1.u32.bin.gz",
+    "sectors": "antarctica-sectors-0.1.u32.bin.gz"
+  },
+  "dtype": "uint32",
+  "endianness": "little",
+  "compression": "gzip",
+  "areaKm2": 17075637,
+  "zones": [
+    {
+      "id": "zone:antarctic-peninsula",
+      "name": "Antarctic Peninsula and the South Shetlands Zone",
+      "system": "arc",
+      "provinces": [
+        "Antarctica Peninsula",
+        "Bransfield Offshore",
+        "Scotia Ridge Offshore"
+      ],
+      "km2": 740252
+    },
+    {
+      "id": "zone:weddell",
+      "name": "Weddell Sea and the Filchner–Ronne Zone",
+      "system": "basin",
+      "provinces": [
+        "Weddell Offshore"
+      ],
+      "km2": 1566840
+    },
+    {
+      "id": "zone:queen-maud-land",
+      "name": "Queen Maud Land Zone",
+      "system": "shield",
+      "provinces": [
+        "Queen Maud Onshore",
+        "Queen Maud/Enderby Offshore"
+      ],
+      "km2": 1818687
+    },
+    {
+      "id": "zone:amundsen-bellingshausen-shelf",
+      "name": "Amundsen and Bellingshausen Shelf Zone",
+      "system": "basin",
+      "provinces": [
+        "Amundsen/Bellingshausen Offshore"
+      ],
+      "km2": 897815
+    },
+    {
+      "id": "zone:polar-plateau",
+      "name": "Polar Plateau Zone",
+      "system": "plateau",
+      "provinces": [
+        "Polar Province"
+      ],
+      "km2": 3902954
+    },
+    {
+      "id": "zone:marie-byrd-land",
+      "name": "Marie Byrd Land Zone",
+      "system": "rift",
+      "provinces": [
+        "Marie Byrd Onshore"
+      ],
+      "km2": 1517096
+    },
+    {
+      "id": "zone:transantarctic-mountains",
+      "name": "Transantarctic Mountains Zone",
+      "system": "orogen",
+      "provinces": [
+        "Transantarctica Mountains"
+      ],
+      "km2": 1405743
+    },
+    {
+      "id": "zone:wilkes-land",
+      "name": "Wilkes Land and the East Antarctic Shield Zone",
+      "system": "shield",
+      "provinces": [
+        "Wilkes Onshore",
+        "Scott Offshore"
+      ],
+      "km2": 4189356
+    },
+    {
+      "id": "zone:ross",
+      "name": "Ross Sea and the Ross Ice Shelf Zone",
+      "system": "basin",
+      "provinces": [
+        "Ross Offshore"
+      ],
+      "km2": 1036893
+    }
+  ],
+  "sectors": 142,
+  "bytes": 388442,
+  "points": 16616
+}

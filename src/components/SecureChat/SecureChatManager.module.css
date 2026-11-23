@@ -1,0 +1,120 @@
+/* Earth Alliance Secure Chat Manager */
+.chatManager {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 900;
+  font-family: var(--sc-font-text);
+}
+
+/* Chat Window Container */
+.chatWindowContainer {
+  pointer-events: auto;
+  position: relative;
+}
+
+.chatWindowContainer:hover {
+  z-index: 1001;
+}
+
+/* Emergency Mode Overlay */
+.emergencyOverlay {
+  /* not-a-dialog: an ambient status banner. It has no controls and cannot be
+     dismissed — there is nothing to focus and nothing to trap. It should
+     probably be a role="status" live region so it is announced rather than
+     silently painted over the screen, but that is a change to what it IS, not
+     to how it stacks, and belongs in its own commit. */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(239, 68, 68, 0.1);
+  backdrop-filter: blur(2px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+  z-index: 999;
+  animation: emergencyOverlayPulse 3s infinite;
+}
+
+@keyframes emergencyOverlayPulse {
+  0%, 100% {
+    background: rgba(239, 68, 68, 0.1);
+  }
+  50% {
+    background: rgba(239, 68, 68, 0.15);
+  }
+}
+
+.emergencyMessage {
+  background: rgba(15, 23, 42, 0.9);
+  border: 2px solid #ef4444;
+  border-radius: 16px;
+  padding: 24px 32px;
+  text-align: center;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  color: #ef4444;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  animation: emergencyMessagePulse 2s infinite;
+}
+
+@keyframes emergencyMessagePulse {
+  0%, 100% {
+    transform: scale(1);
+    border-color: #ef4444;
+  }
+  50% {
+    transform: scale(1.02);
+    border-color: #dc2626;
+  }
+}
+
+.emergencySubtext {
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #f87171;
+  text-transform: none;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .emergencyMessage {
+    margin: 16px;
+    padding: 20px 24px;
+    font-size: 16px;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .emergencyOverlay,
+  .emergencyMessage {
+    animation: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .emergencyMessage {
+    border-width: 3px;
+  }
+}
+
+/* Dark mode specific adjustments */
+@media (prefers-color-scheme: dark) {
+  .emergencyMessage {
+    background: rgba(0, 0, 0, 0.9);
+  }
+}

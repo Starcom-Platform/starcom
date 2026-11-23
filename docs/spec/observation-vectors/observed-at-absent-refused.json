@@ -1,0 +1,29 @@
+{
+  "name": "observed-at-absent-refused",
+  "description": "No observed_at. Falling back to created_at would make a two-day-old sighting look fresh and a backfill look like a flood of new intelligence.",
+  "expect": {
+    "observations": 0
+  },
+  "diagnostic": {
+    "note": "NOT normative — our drop wording, for humans and our own gate.",
+    "reasonContains": "observed_at is absent"
+  },
+  "event": {
+    "kind": 1911,
+    "created_at": 1756000000,
+    "tags": [
+      [
+        "g",
+        "st-louis"
+      ],
+      [
+        "d",
+        "st-louis/st-patrick-center"
+      ]
+    ],
+    "content": "{\"anchor\":\"st-louis/st-patrick-center\",\"tags\":[\"locked\"],\"method\":\"saw\",\"callsign\":\"Raven\",\"precision\":\"area\",\"area\":\"dp3w\"}",
+    "pubkey": "96bafb179762225794c13c78e823b349e8f21d96f8113020032e5cabdbe59889",
+    "id": "14b0a59e457a7d3714cf42868a29c2b2dd722e02cb681438ddfd8d7f291e2414",
+    "sig": "47e7b103f61d413de63c6d60529d23456391f44a568da1e854c3557405b4a1747dbad20487fc9d0d14deb304d53a2b9ac506506a45e206652d56dfff3fe3a326"
+  }
+}

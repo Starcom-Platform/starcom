@@ -1,0 +1,25 @@
+{
+  "name": "anonymous-callsign-is-accepted",
+  "description": "An operator may file as `anonymous`; the key still tells two operators apart.",
+  "expect": {
+    "observations": 1
+  },
+  "event": {
+    "kind": 1911,
+    "created_at": 1756000000,
+    "tags": [
+      [
+        "g",
+        "st-louis"
+      ],
+      [
+        "d",
+        "st-louis/st-patrick-center"
+      ]
+    ],
+    "content": "{\"anchor\":\"st-louis/st-patrick-center\",\"observed_at\":1755996400,\"tags\":[\"locked\"],\"method\":\"saw\",\"callsign\":\"anonymous\",\"precision\":\"area\",\"area\":\"dp3w\"}",
+    "pubkey": "96bafb179762225794c13c78e823b349e8f21d96f8113020032e5cabdbe59889",
+    "id": "f7498ef9965ccba3366df3c40320b35fe1d8e21fd8056f2cf6e6cbfa41564f9b",
+    "sig": "fa9e18b05bf110c971e2a4f9dbba03d5c7904d9caf5687f6741f5d19db4c9bf4dbf2335cab6017b468f1fbebed7a42abb5b85091713407f6dfc92d7c6911d8cc"
+  }
+}

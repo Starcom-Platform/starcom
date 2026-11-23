@@ -1,0 +1,91 @@
+{
+  "proposal": "share handle v9 -- what Mecha Jono's image pipeline needs",
+  "from": "Mecha Jono",
+  "against": "your share contract v8 (2026-09-29)",
+  "why": "Every desk we run now posts to Discord and The Record. Today only the geo desk, the world brief and reports with a point get a Starcom picture; Critical and Actionable Intel, Mission Packages, Raver Watch, field missions and the War & Conflict Brief get none. We will render them in one queued session of a headless browser on a Jetson, a few shots a minute, and attach the image to the post.",
+  "methods": {
+    "focusEvent": {
+      "args": [
+        "address: '<kind>:<pubkey>:<d>'",
+        "opts?: {preset, transitionMs, settleMs}"
+      ],
+      "does": "frame ANY event we publish (every family, not only IntelReports) by its address; pin the layers its category suggests",
+      "returns": "{framed: bool, layers: string[], reason?: string}"
+    },
+    "composeFor": {
+      "args": [
+        "address",
+        "opts?: {template, preset, scale}"
+      ],
+      "does": "compose() for one event with its card template (below): title, role badge, category chip, place, window, source line, caveat, deeplink",
+      "returns": "the same card object compose() returns, with provenance.link"
+    },
+    "frameArea": {
+      "args": [
+        "area: {jurisdiction} | {geojson}",
+        "opts?: {preset, padding}"
+      ],
+      "does": "frame a jurisdiction outline or a GeoJSON polygon (an NWS alert area, a mission's area of operations) honouring your altitude floor",
+      "returns": "{framed: bool, altitude: number}"
+    },
+    "renderMission": {
+      "args": [
+        "packageAddress",
+        "opts?: {preset}"
+      ],
+      "does": "the mission situation map we answered on 25 Sep: zoom no closer than the package's own area polygon, objective points no finer than ~1 km",
+      "returns": "a card"
+    },
+    "renderBatch": {
+      "args": [
+        "requests: [{address|area, preset, layers?, window?, template?}]",
+        "opts?: {timeoutMs}"
+      ],
+      "does": "many cards in one page load, in order; each result says what failed and why",
+      "returns": "[{ok, card?, reason?}]"
+    },
+    "layersFor": {
+      "args": [
+        "category: 'group.kind'"
+      ],
+      "does": "your layers for one of our categories (vocabulary.json suggests; you decide)",
+      "returns": "string[]"
+    },
+    "whenReady": {
+      "args": [
+        "opts: {address?, timeoutMs}"
+      ],
+      "does": "resolve when THAT event has been ingested and drawn -- not just when the globe has mounted -- so a capture never shows an empty globe",
+      "returns": "{ready: bool, reason?: string}"
+    }
+  },
+  "capture_mode": {
+    "url": "?capture=1",
+    "asks": [
+      "no autorotate and no idle animation",
+      "fixed device pixel ratio",
+      "everything a card needs drawn without user interaction",
+      "deterministic layer order",
+      "works on SwiftShader (no GPU)"
+    ]
+  },
+  "outputs": {
+    "presets": {
+      "wide": "1280x800 (Discord embed)",
+      "square": "1080x1080",
+      "portrait": "1080x1350"
+    },
+    "formats": [
+      "image/webp",
+      "image/png",
+      "video/mp4 (H.264) for clips"
+    ],
+    "size_limit_bytes": 8000000
+  },
+  "unchanged_rules": [
+    "RLSH is never drawn in a card or a clip",
+    "altitude never below 1 globe radius",
+    "no coordinate finer than 0.01 degree in a link",
+    "a mission map never tighter than its own area polygon, and no objective point finer than ~1 km"
+  ]
+}

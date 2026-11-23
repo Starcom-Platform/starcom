@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>noaa-gfs-bdp-pds</Name><Prefix>gfs.20261006/</Prefix><KeyCount>4</KeyCount><MaxKeys>1000</MaxKeys><Delimiter>/</Delimiter><IsTruncated>false</IsTruncated><CommonPrefixes><Prefix>gfs.20261006/00/</Prefix></CommonPrefixes><CommonPrefixes><Prefix>gfs.20261006/06/</Prefix></CommonPrefixes><CommonPrefixes><Prefix>gfs.20261006/12/</Prefix></CommonPrefixes><CommonPrefixes><Prefix>gfs.20261006/18/</Prefix></CommonPrefixes></ListBucketResult>

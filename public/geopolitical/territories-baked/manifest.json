@@ -1,0 +1,140 @@
+{
+  "version": "territories-bake-v1",
+  "generatedAt": "2026-11-08T09:31:19.306Z",
+  "packageId": "territories-bake-2026-11-08T09:31:19.306Z",
+  "source": {
+    "dataset": "world-territories-lod*.geojson",
+    "sourceDir": "/Users/jono/Documents/GitHub/starcom-app/public/geopolitical",
+    "validationReport": "/Users/jono/Documents/GitHub/starcom-app/.generated/geopolitical/territories-baked/source-validation.json",
+    "provider": "natural-earth",
+    "status": "pass"
+  },
+  "topology": {
+    "report": "/Users/jono/Documents/GitHub/starcom-app/.generated/geopolitical/territories-baked/topology/territories-topology-report.json",
+    "topologyGraphHash": "ebfd4fd703b7f66ed6379a504370623563c3e078050e541394956e9e8ae7e6e1",
+    "quantizationScale": 1000000
+  },
+  "lods": {
+    "0": {
+      "parts": 334,
+      "vertices": 11202,
+      "triangles": 15402,
+      "chunkCount": 10,
+      "failedParts": 0,
+      "warnParts": 4,
+      "bytes": {
+        "index": 234319,
+        "mesh": 1988803,
+        "chunks": 2004120
+      },
+      "sourceFeatures": 247,
+      "sourceFile": "/Users/jono/Documents/GitHub/starcom-app/public/geopolitical/world-territories-lod0.geojson",
+      "outputFile": "/Users/jono/Documents/GitHub/starcom-app/.generated/geopolitical/territories-baked/lod0/parts-index.json",
+      "meshFile": "/Users/jono/Documents/GitHub/starcom-app/.generated/geopolitical/territories-baked/lod0/parts-mesh.json",
+      "chunksIndexFile": "/Users/jono/Documents/GitHub/starcom-app/.generated/geopolitical/territories-baked/lod0/chunks-index.json"
+    },
+    "1": {
+      "parts": 425,
+      "vertices": 15579,
+      "triangles": 18985,
+      "chunkCount": 12,
+      "failedParts": 0,
+      "warnParts": 8,
+      "bytes": {
+        "index": 298432,
+        "mesh": 2643502,
+        "chunks": 2663361
+      },
+      "sourceFeatures": 247,
+      "sourceFile": "/Users/jono/Documents/GitHub/starcom-app/public/geopolitical/world-territories-lod1.geojson",
+      "outputFile": "/Users/jono/Documents/GitHub/starcom-app/.generated/geopolitical/territories-baked/lod1/parts-index.json",
+      "meshFile": "/Users/jono/Documents/GitHub/starcom-app/.generated/geopolitical/territories-baked/lod1/parts-mesh.json",
+      "chunksIndexFile": "/Users/jono/Documents/GitHub/starcom-app/.generated/geopolitical/territories-baked/lod1/chunks-index.json"
+    },
+    "2": {
+      "parts": 616,
+      "vertices": 24739,
+      "triangles": 26972,
+      "chunkCount": 18,
+      "failedParts": 0,
+      "warnParts": 23,
+      "bytes": {
+        "index": 432837,
+        "mesh": 4035126,
+        "chunks": 4065413
+      },
+      "sourceFeatures": 247,
+      "sourceFile": "/Users/jono/Documents/GitHub/starcom-app/public/geopolitical/world-territories-lod2.geojson",
+      "outputFile": "/Users/jono/Documents/GitHub/starcom-app/.generated/geopolitical/territories-baked/lod2/parts-index.json",
+      "meshFile": "/Users/jono/Documents/GitHub/starcom-app/.generated/geopolitical/territories-baked/lod2/parts-mesh.json",
+      "chunksIndexFile": "/Users/jono/Documents/GitHub/starcom-app/.generated/geopolitical/territories-baked/lod2/chunks-index.json"
+    }
+  },
+  "qaSummary": {
+    "status": "warn",
+    "failedParts": 0,
+    "warnParts": 35,
+    "failedInvariants": 0,
+    "failureModeBlockingFailures": 0,
+    "goldenOffenderStatus": "pass",
+    "budgetStatus": "pass",
+    "reports": {
+      "failureModeMatrix": "/Users/jono/Documents/GitHub/starcom-app/.generated/geopolitical/territories-baked/qa-reports/failure-mode-matrix.json",
+      "goldenOffenders": "/Users/jono/Documents/GitHub/starcom-app/.generated/geopolitical/territories-baked/qa-reports/golden-offenders.json",
+      "budget": "/Users/jono/Documents/GitHub/starcom-app/.generated/geopolitical/territories-baked/qa-reports/budget-report.json"
+    }
+  },
+  "invariantsSummary": [
+    {
+      "key": "topologyHash",
+      "status": "pass",
+      "detail": "topologyGraphHash=ebfd4fd703b7f66ed6379a504370623563c3e078050e541394956e9e8ae7e6e1"
+    },
+    {
+      "key": "lod0:neighborInvariant",
+      "status": "pass",
+      "detail": "sharedEdgeRatio=0.3432 (1616/4709)"
+    },
+    {
+      "key": "lod1:neighborInvariant",
+      "status": "pass",
+      "detail": "sharedEdgeRatio=0.3186 (2745/8616)"
+    },
+    {
+      "key": "lod2:neighborInvariant",
+      "status": "pass",
+      "detail": "sharedEdgeRatio=0.2862 (4707/16449)"
+    },
+    {
+      "key": "lod0:coverageInvariant",
+      "status": "pass",
+      "detail": "Territories source present"
+    },
+    {
+      "key": "lod0:borderFillParity",
+      "status": "pass",
+      "detail": "Borders source present"
+    },
+    {
+      "key": "lod1:coverageInvariant",
+      "status": "pass",
+      "detail": "Territories source present"
+    },
+    {
+      "key": "lod1:borderFillParity",
+      "status": "pass",
+      "detail": "Borders source present"
+    },
+    {
+      "key": "lod2:coverageInvariant",
+      "status": "pass",
+      "detail": "Territories source present"
+    },
+    {
+      "key": "lod2:borderFillParity",
+      "status": "pass",
+      "detail": "Borders source present"
+    }
+  ],
+  "qaGeneratedAt": "2026-11-08T09:31:46.467Z"
+}

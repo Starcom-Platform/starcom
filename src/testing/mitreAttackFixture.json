@@ -1,0 +1,69 @@
+{
+  "objects": [
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--00f67a77-86a4-4adf-be26-1a54fc713340",
+      "name": "APT38",
+      "aliases": ["APT38", "NICKEL GLADSTONE", "BeagleBoyz", "Bluenoroff"],
+      "description": "APT38 is a North Korean state-sponsored threat group that specializes in financial cyber operations.",
+      "external_references": [
+        { "source_name": "mitre-attack", "url": "https://attack.mitre.org/groups/G0082", "external_id": "G0082" }
+      ]
+    },
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--no-mitre-id",
+      "name": "Unreferenced Group",
+      "aliases": [],
+      "description": "A group with no mitre-attack external reference — should be skipped.",
+      "external_references": [
+        { "source_name": "some-other-source", "url": "https://example.com", "external_id": "X0001" }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--0042a9f5-f053-4769-b3ef-9ad018dfa298",
+      "name": "Extra Window Memory Injection",
+      "external_references": [
+        { "source_name": "mitre-attack", "url": "https://attack.mitre.org/techniques/T1055/011", "external_id": "T1055.011" }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--unused",
+      "name": "Unused Technique",
+      "external_references": [
+        { "source_name": "mitre-attack", "url": "https://attack.mitre.org/techniques/T1000", "external_id": "T1000" }
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--007b44b6-e4c5-480b-b5b9-56f2081b1b7b",
+      "name": "HDoor",
+      "external_references": [
+        { "source_name": "mitre-attack", "url": "https://attack.mitre.org/software/S0061", "external_id": "S0061" }
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--04791b5e-1795-4a1c-a10d-71f919fc420e",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--00f67a77-86a4-4adf-be26-1a54fc713340",
+      "target_ref": "attack-pattern--0042a9f5-f053-4769-b3ef-9ad018dfa298"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--campaign-to-technique",
+      "relationship_type": "uses",
+      "source_ref": "campaign--0257b35b-93ef-4a70-80dd-ad5258e6045b",
+      "target_ref": "attack-pattern--unused"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--revoked-by",
+      "relationship_type": "revoked-by",
+      "source_ref": "intrusion-set--00f67a77-86a4-4adf-be26-1a54fc713340",
+      "target_ref": "attack-pattern--unused"
+    }
+  ]
+}

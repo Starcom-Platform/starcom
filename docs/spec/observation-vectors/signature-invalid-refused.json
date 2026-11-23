@@ -1,0 +1,29 @@
+{
+  "name": "signature-invalid-refused",
+  "description": "Signed honestly, then the content was edited. Checked before anything else is read.",
+  "expect": {
+    "observations": 0
+  },
+  "diagnostic": {
+    "note": "NOT normative — our drop wording, for humans and our own gate.",
+    "reasonContains": "signature did not verify"
+  },
+  "event": {
+    "kind": 1911,
+    "created_at": 1756000000,
+    "tags": [
+      [
+        "g",
+        "st-louis"
+      ],
+      [
+        "d",
+        "st-louis/st-patrick-center"
+      ]
+    ],
+    "content": "{\"anchor\":\"st-louis/st-patrick-center\",\"observed_at\":1755996400,\"tags\":[\"tampered\"],\"method\":\"saw\",\"callsign\":\"Raven\",\"precision\":\"area\",\"area\":\"dp3w\"}",
+    "pubkey": "96bafb179762225794c13c78e823b349e8f21d96f8113020032e5cabdbe59889",
+    "id": "e8d09c359707a3b8ca7b51a2a9a9a4b84db8405d3880936d31392f120f9221eb",
+    "sig": "965d3e882f48cc985a627f0776811491ebb9e352eb2fbece19c928fb2350c01b104e550d83d1705916ba22efacd7ceeb65154509b06af1860ac52ed0912bc2a9"
+  }
+}

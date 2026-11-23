@@ -1,0 +1,87 @@
+{
+ "kit": "psi_rlsh_kit_v0",
+ "what": "the event set for Starcom's Psi Watch board: timed, placed, by kind",
+ "use": "Exploration and hypotheses. A registered test is scored on events after its seal; these files are history, and each file says where its later events come from.",
+ "files": {
+  "ucdp_exact.csv": {
+   "rows": 119143,
+   "bytes": 10750226,
+   "sha256": "601e169baf34e9b3a196ec619a922aa1657e11eb9386f4bf281c96338c381646",
+   "columns": [
+    "key",
+    "day",
+    "lat",
+    "lon",
+    "where_prec",
+    "zone",
+    "sector",
+    "country",
+    "spheres",
+    "violence",
+    "deaths_first_event",
+    "events"
+   ],
+   "kind": "organised violence: an event where armed force killed at least one person (UCDP GED 26.1)",
+   "time": "day (UCDP's local day; date_prec 1, one-day events only), 1989-01-01 to 2025-12-31",
+   "place": "UCDP's coordinates to 4 decimals with where_prec (1 exact place .. 5 first-order region; 6 and 7 country level, placed in no Zone or Sector); ZSP 1.0 Zone and Sector ids where the point lies in one; country as ISO 3166 alpha-2",
+   "episodes": "events of one dyad in one Sector (else one country) within 3 days are one episode; it keeps its first event's id, day and place, `deaths_first_event` is that event's best estimate, and `events` counts the episode's events. Never sum deaths_first_event as a death toll",
+   "violence": "1 state-based, 2 non-state, 3 one-sided",
+   "left_out": "1181 events whose side is named for a person; multi-day and imprecisely dated events",
+   "licence": "CC BY 4.0 (UCDP: free to use and redistribute, citing the publications below)",
+   "credit": "Uppsala Conflict Data Program (UCDP). Davies, Shawn, Therése Pettersson and Magnus Öberg (2026), Organized violence 1989–2025, and violent political protests, Journal of Peace Research; Sundberg, Ralph and Erik Melander (2013), Introducing the UCDP Georeferenced Event Dataset, Journal of Peace Research 50(4). UCDP is part of and funded by DEMSCORE, national research infrastructure grant 2021-00162 from the Swedish Research Council.",
+   "later_events": "UCDP's candidate events, monthly, about the 20th of the next month",
+   "class_table": "ucdp_exact-v1-caf39eb30fc7.json",
+   "class_table_sha256": "caf39eb30fc78611f919ecb51d88cc34e80c60adc5acc778a8f61b7053c797b1",
+   "zone_geometry": "ZSP 1.0",
+   "zone_geometry_sha256": "e7582a61dc3c1bdbefd8c42f430940089186653ba05044b1f4f27331f06df071"
+  },
+  "comcat_m55.csv": {
+   "rows": 12160,
+   "bytes": 1327385,
+   "sha256": "a4ba974f9d94209ec8f4eacd09dbe6a87bb9a1390f63f0846fab61d13b9c12ba",
+   "columns": [
+    "key",
+    "time_utc",
+    "iso",
+    "lat",
+    "lon",
+    "depth_km",
+    "mag",
+    "zone",
+    "sector"
+   ],
+   "kind": "earthquakes of magnitude 5.5 and up (USGS ComCat), declustered: the 12,160 independent events of 23,258, by the Gardner-Knopoff windows (the aftershocks and foreshocks removed)",
+   "time": "to the second (Unix seconds, UTC), 1976-01-01 to 2025-12-31",
+   "place": "epicentre to 3 decimals, depth in km; ZSP 1.0 Zone and Sector ids where the epicentre lies in one",
+   "licence": "public domain (USGS)",
+   "credit": "U.S. Geological Survey, ANSS Comprehensive Earthquake Catalog (ComCat)",
+   "later_events": "ComCat, live",
+   "class_table": "comcat_m55-v1-ff4830c46abf.json",
+   "class_table_sha256": "ff4830c46abf220f3763e5a0a9dd66fee6855927b9cfce976c990d0ab9fa2099",
+   "zone_geometry": "ZSP 1.0",
+   "zone_geometry_sha256": "e7582a61dc3c1bdbefd8c42f430940089186653ba05044b1f4f27331f06df071"
+  },
+  "kp_storm.csv": {
+   "rows": 2985,
+   "bytes": 149296,
+   "sha256": "e6495f8c0dd4cd7eb8c7bc86476b3fa262576e3137fb2553f74b2430c35f27e6",
+   "columns": [
+    "key",
+    "first_day",
+    "last_day",
+    "days",
+    "max_kp"
+   ],
+   "kind": "geomagnetic storm days, Kp 5 or more (G1+), consecutive days joined into one episode",
+   "time": "UTC day, 1932-01-01 to 2025-12-31",
+   "place": "the whole Earth (a planetary index): no place",
+   "licence": "CC BY 4.0 (GFZ Potsdam)",
+   "credit": "Matzka, J., Stolle, C., Yamazaki, Y., Bronkalla, O. and Morschhauser, A. (2021), The geomagnetic Kp index and derived indices of geomagnetic activity, Space Weather; GFZ Data Services",
+   "later_events": "GFZ's nowcast and SWPC's Kp, live",
+   "class_table": "kp_storm-v1-f1101a40a851.json",
+   "class_table_sha256": "f1101a40a8514382b6cf8da92e174dbbd5f85bc5686024583be7ef00fecb4582",
+   "zone_geometry": "ZSP 1.0",
+   "zone_geometry_sha256": "e7582a61dc3c1bdbefd8c42f430940089186653ba05044b1f4f27331f06df071"
+  }
+ }
+}

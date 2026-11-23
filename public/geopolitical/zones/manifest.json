@@ -1,0 +1,211 @@
+{
+  "zsp": "2.0",
+  "generated": "2026-10-27T03:01:31.700Z",
+  "generator": "scripts/zones/build-terrae.ts",
+  "licence": "CC-BY-4.0",
+  "containers": [
+    {
+      "id": "terra:africana",
+      "name": "Terra Africana",
+      "level": "terra",
+      "file": "terra-africana.zsp.geojson",
+      "sha256": "fae2564402f19323046c017159cf979198355fe47fa9cee5a67a3e7616e6949a",
+      "bytes": 605407
+    },
+    {
+      "id": "terra:arabica",
+      "name": "Terra Arabica",
+      "level": "terra",
+      "file": "terra-arabica.zsp.geojson",
+      "sha256": "8b3363e9055f8af224a3336fbc78515ac34cba61985279d055403394b8679b37",
+      "bytes": 98909
+    },
+    {
+      "id": "terra:europaea",
+      "name": "Terra Europaea",
+      "level": "terra",
+      "file": "terra-europaea.zsp.geojson",
+      "sha256": "22ee3871c48dd1bb96ac583e1146b016b3d9d12dd9f5799beeb77d51a2328d6c",
+      "bytes": 307169
+    },
+    {
+      "id": "terra:tethyana",
+      "name": "Terra Tethyana",
+      "level": "terra",
+      "file": "terra-tethyana.zsp.geojson",
+      "sha256": "f8b3036e68642594c307f07e668241ce0ed6b1e0a28cc309e7c9dcbe8391d8f8",
+      "bytes": 163541
+    },
+    {
+      "id": "terra:borealis",
+      "name": "Terra Borealis",
+      "level": "terra",
+      "file": "terra-borealis.zsp.geojson",
+      "sha256": "9a55f3238dfa3ef55ea9347f994985a73aefe4c280e9a64494206271e669ffe6",
+      "bytes": 383772
+    },
+    {
+      "id": "terra:sinica",
+      "name": "Terra Sinica",
+      "level": "terra",
+      "file": "terra-sinica.zsp.geojson",
+      "sha256": "8f3d59086a8a93b3777b5a6918048b6b4d88ee75fcad243ba860ae005d87177b",
+      "bytes": 348789
+    },
+    {
+      "id": "terra:indica",
+      "name": "Terra Indica",
+      "level": "terra",
+      "file": "terra-indica.zsp.geojson",
+      "sha256": "725c678e657458193f21392b886630e4198f0c0d25adccabeaa8ada82d2ee6cc",
+      "bytes": 122486
+    },
+    {
+      "id": "terra:sundaica",
+      "name": "Terra Sundaica",
+      "level": "terra",
+      "file": "terra-sundaica.zsp.geojson",
+      "sha256": "9c3fdb6d9aba29b58624822bb6b56b777c149af840874257c431b866a28c9da2",
+      "bytes": 184377
+    },
+    {
+      "id": "terra:sahulica",
+      "name": "Terra Sahulica",
+      "level": "terra",
+      "file": "terra-sahulica.zsp.geojson",
+      "sha256": "d0ebf29ecb86571b18c2f674c0196545e080d23085046b2952b4e38d73efd81c",
+      "bytes": 285083
+    },
+    {
+      "id": "terra:laurentia",
+      "name": "Terra Laurentia",
+      "level": "terra",
+      "file": "terra-laurentia.zsp.geojson",
+      "sha256": "c61636cc30a9d0d8f957e6fa119d9bbb991f406d67e48a0a278b9e259d09f587",
+      "bytes": 701767
+    },
+    {
+      "id": "terra:amazonia",
+      "name": "Terra Amazonia",
+      "level": "terra",
+      "file": "terra-amazonia.zsp.geojson",
+      "sha256": "6972204a9d75c77822d2c9030f88e0477a394ad3294a9292d6d1aaf852c3ec46",
+      "bytes": 410724
+    },
+    {
+      "id": "terra:antarctica",
+      "name": "Terra Antarctica",
+      "level": "terra",
+      "file": "terra-antarctica.zsp.geojson",
+      "sha256": "13e3f6982dd072744a5d778e1c778f2c504bc1cd56f75ae7684e55fd78f178d9",
+      "bytes": 388442
+    },
+    {
+      "id": "mare:pacificum",
+      "name": "Mare Pacificum",
+      "level": "mare",
+      "file": "mare-pacificum.zsp.geojson",
+      "sha256": "783f700a8bc567da94671812534a5320e4a044b55f0c3d2f6421b032167238f9",
+      "bytes": 1359649
+    },
+    {
+      "id": "mare:atlanticum",
+      "name": "Mare Atlanticum",
+      "level": "mare",
+      "file": "mare-atlanticum.zsp.geojson",
+      "sha256": "e0588c63f583e0ecd09ed1d2f82361bf0c540ae64dbd7ec6e549090880171962",
+      "bytes": 636274
+    },
+    {
+      "id": "mare:indicum",
+      "name": "Mare Indicum",
+      "level": "mare",
+      "file": "mare-indicum.zsp.geojson",
+      "sha256": "7f832a74d180cdf104cfd565b662817a5ce5ab4f5a1a877b913b370966b8e786",
+      "bytes": 686147
+    },
+    {
+      "id": "mare:arcticum",
+      "name": "Mare Arcticum",
+      "level": "mare",
+      "file": "mare-arcticum.zsp.geojson",
+      "sha256": "91906504e9df74f5ce88aa0248ffe0fd93e495eb9a16488afe7bd7a9270396c2",
+      "bytes": 128580
+    },
+    {
+      "id": "mare:australe",
+      "name": "Mare Australe",
+      "level": "mare",
+      "file": "mare-australe.zsp.geojson",
+      "sha256": "5c0c9a123d476b7aead0512bf90f127bc2d2f0aa2eed16e35ad5bd60ccc38ecb",
+      "bytes": 466947
+    }
+  ],
+  "retired": [
+    {
+      "id": "zone:bahia-coast-reconcavo",
+      "name": "Bahia Coast and Recôncavo Zone",
+      "covered_by": [
+        "zone:brazilian-shield",
+        "zone:east-brazilian-margin"
+      ]
+    },
+    {
+      "id": "zone:central-american-dry-corridor",
+      "name": "Central American Dry Corridor Zone",
+      "covered_by": [
+        "zone:central-america"
+      ]
+    },
+    {
+      "id": "zone:golden-triangle",
+      "name": "Golden Triangle Zone",
+      "covered_by": [
+        "zone:shan-tenasserim",
+        "zone:malay-peninsula",
+        "zone:annamite-khorat"
+      ]
+    },
+    {
+      "id": "zone:ring-of-fire",
+      "name": "Pacific Ring of Fire Zone",
+      "covered_by": [
+        "zone:andes",
+        "zone:alaska-bering",
+        "zone:izu-bonin-mariana",
+        "zone:sunda-arc",
+        "zone:tonga-kermadec",
+        "zone:melanesian-arcs",
+        "zone:wallacea",
+        "zone:philippines",
+        "zone:japan",
+        "zone:new-guinea-highlands",
+        "zone:basin-and-range",
+        "zone:pacific-coast",
+        "zone:sierras-madres",
+        "zone:pacific-forearc",
+        "zone:central-america",
+        "zone:new-zealand",
+        "zone:galapagos",
+        "zone:east-china-sea-taiwan",
+        "zone:cordillera",
+        "zone:arafura-papua",
+        "zone:philippine-sea",
+        "zone:kamchatka-koryak",
+        "zone:northern-andes"
+      ]
+    },
+    {
+      "id": "zone:sahel",
+      "name": "Sahel Zone",
+      "covered_by": [
+        "zone:central-african-rifts",
+        "zone:reguibat-taoudeni",
+        "zone:tuareg-shield",
+        "zone:senegal-basin",
+        "zone:leo-man",
+        "zone:nubian-shield"
+      ]
+    }
+  ]
+}

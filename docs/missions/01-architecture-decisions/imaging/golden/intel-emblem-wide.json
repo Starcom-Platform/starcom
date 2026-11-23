@@ -1,0 +1,260 @@
+{
+ "card": {
+  "alt": "5 charities in Jackson, TN lost their 501(c)(3) exemption in the last 18 months -- 29% of every revocation ever recorded there, against 11% nationally. Of the 5 we checked against the IRS's own NTEE code, 3 are direct-service organisations. charity, not assessed, by npub1vvquf5…v9ue. Written 2026-10-04 00:50Z; when it happened was not stated. Near 35.6°, -88.8°, placed to within 10 km. A signed Nostr event from record.cosmiccodex.app; its signature was checked on intake. The picture: the globe centred near 35.6°N, 88.8°W, the item marked and labelled, showing Intel Reports and Borders. Caveats: The browser that made this had nothing to analyse: not a finding of nothing. Unsigned capture: one browser's view at one moment. Made by Starcom, <captured>.",
+  "frame": {
+   "height": 630,
+   "width": 630
+  },
+  "height": 630,
+  "mimeType": "image/webp",
+  "provenance": {
+   "appearance": {
+    "lightMode": "sun",
+    "quality": {
+     "atmosphere": true,
+     "clouds": true,
+     "detail": "full detail",
+     "setting": "low"
+    },
+    "skin": "Cyber-Earth",
+    "territories": "quiet"
+   },
+   "build": "<build>",
+   "camera": {
+    "altitude": 1.0000010000000001,
+    "lat": 35.599999999999994,
+    "lon": -88.80000000000001
+   },
+   "capturedAt": "<captured>",
+   "card": null,
+   "caveats": [
+    "The browser that made this image had no observations of its own to analyse, so it shows no analysis. That is not a finding that there is nothing to find.",
+    "Unsigned client-side capture: one browser's view at one moment, not an attested record."
+   ],
+   "caveatsShort": [
+    "The browser that made this had nothing to analyse: not a finding of nothing.",
+    "Unsigned capture: one browser's view at one moment."
+   ],
+   "credits": [],
+   "featured": {
+    "id": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-ic-jurisdiction-ef6a8c814c",
+    "lines": [
+     "charity · not assessed · by npub1vvquf5…v9ue",
+     "Written 2026-10-04 00:50Z; when it happened was not stated",
+     "Near 35.6°, -88.8° · placed to within 10 km",
+     "A signed Nostr event from record.cosmiccodex.app; its signature was checked on intake"
+    ],
+    "title": "5 charities in Jackson, TN lost their 501(c)(3) exemption in the last 18 months -- 29% of every revocation ever recorded there, against 11% nationally. Of the 5 we checked against the IRS's own NTEE code, 3 are direct-service organisations"
+   },
+   "feeds": [
+    {
+     "error": null,
+     "lastUpdated": "<read>",
+     "layer": "IntelReports",
+     "loading": false,
+     "name": "Intel Reports from the relays (6 of 6 answered)",
+     "progress": {
+      "done": 6,
+      "total": 6
+     },
+     "shortName": "Intel Reports"
+    }
+   ],
+   "frame": {
+    "height": 630,
+    "width": 630
+   },
+   "imagery": [
+    "Google Data Arts Team (Apache 2.0)",
+    "NASA",
+    "Solar System Scope (CC BY 4.0)"
+   ],
+   "layersSelectedButEmpty": [],
+   "layersShown": [
+    "Intel Reports"
+   ],
+   "legend": [
+    {
+     "areaMeans": "how precisely it was placed",
+     "badgeMeans": "how many reports share the place",
+     "colorMeans": "how the report was assessed",
+     "emblemMeans": "what it is about",
+     "emblems": [
+      {
+       "icon": "hand-heart",
+       "id": "intel-category:charity",
+       "meaning": "charities"
+      },
+      {
+       "icon": "swords",
+       "id": "intel-category:conflict",
+       "meaning": "conflict and war"
+      },
+      {
+       "icon": "cloud-lightning",
+       "id": "intel-category:hazard",
+       "meaning": "natural hazards"
+      }
+     ],
+     "layer": "Intel Reports",
+     "layerId": "IntelReports:marks",
+     "shapeMeans": "document",
+     "swatches": [
+      {
+       "color": "#4fd1ff",
+       "label": "assessed",
+       "style": "glow"
+      },
+      {
+       "color": "#8fa3b0",
+       "label": "not assessed",
+       "style": "glow"
+      }
+     ]
+    },
+    {
+     "colorMeans": "what kind of boundary it is — dashed where it is not settled",
+     "layer": "Borders",
+     "layerId": "NationalTerritories:borders",
+     "swatches": [
+      {
+       "color": "#c9d4e3",
+       "label": "international boundary",
+       "shape": "line"
+      },
+      {
+       "color": "#ff5555",
+       "label": "disputed",
+       "shape": "dashed"
+      },
+      {
+       "color": "#ffcc00",
+       "label": "line of control",
+       "shape": "dashed"
+      },
+      {
+       "color": "#888888",
+       "label": "indefinite",
+       "shape": "line"
+      }
+     ]
+    }
+   ],
+   "link": "<origin>/?v=1&sub=IntelReports&at=35.6,-88.8,1&focus=30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-ic-jurisdiction-ef6a8c814c&win=1791072000..1791158400",
+   "marks": {
+    "emptyReason": "no-observations",
+    "fabricated": null,
+    "shown": 0,
+    "totalObservations": null
+   },
+   "origin": "starcom-app client capture (unsigned)",
+   "schema": "starcom.globe.capture",
+   "schemaVersion": 38,
+   "shot": {
+    "appearance": {
+     "light": "sun",
+     "nightFill": 0.15,
+     "skin": "auto",
+     "territories": "quiet"
+    },
+    "card": {
+     "preset": "wide"
+    },
+    "emphasis": {
+     "featured": true
+    },
+    "framing": {
+     "fit": "view"
+    },
+    "layers": {
+     "pins": [],
+     "primary": "IntelReports"
+    },
+    "output": {
+     "alt": true,
+     "quality": 0.9,
+     "scale": 1,
+     "type": "image/webp"
+    },
+    "subject": {
+     "address": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-ic-jurisdiction-ef6a8c814c"
+    },
+    "time": {
+     "at": 1791078660
+    },
+    "v": 1
+   },
+   "typeStep": "larger",
+   "window": {
+    "from": 1791072000,
+    "until": 1791158400
+   }
+  },
+  "regions": {
+   "footer": {
+    "height": "<wraps with the run>",
+    "width": 570,
+    "x": 630,
+    "y": 365
+   },
+   "picture": {
+    "height": 630,
+    "width": 630,
+    "x": 0,
+    "y": 0
+   }
+  },
+  "sourceRect": {
+   "height": 630,
+   "width": 630,
+   "x": 0,
+   "y": 0
+  },
+  "warnings": [
+   "The headline was shortened to fit; the whole title is in the alt text and the provenance.",
+   "The label on the picture was shortened to fit; the headline below carries the title."
+  ],
+  "width": 1200
+ },
+ "drawn": {
+  "appearance": {
+   "light": "sun",
+   "nightFill": 0.15,
+   "skin": "auto",
+   "territories": "quiet"
+  },
+  "card": {
+   "preset": "wide"
+  },
+  "emphasis": {
+   "featured": true
+  },
+  "framing": {
+   "fit": "view"
+  },
+  "layers": {
+   "pins": [],
+   "primary": "IntelReports"
+  },
+  "output": {
+   "alt": true,
+   "quality": 0.9,
+   "scale": 1,
+   "type": "image/webp"
+  },
+  "subject": {
+   "address": "30023:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:starcom-intel-ic-jurisdiction-ef6a8c814c"
+  },
+  "time": {
+   "at": 1791078660
+  },
+  "v": 1
+ },
+ "name": "intel-emblem-wide",
+ "notes": [],
+ "ok": true,
+ "warnings": [
+  "The headline was shortened to fit; the whole title is in the alt text and the provenance.",
+  "The label on the picture was shortened to fit; the headline below carries the title."
+ ]
+}

@@ -1,0 +1,121 @@
+{
+ "fixture_note": "INVENTED for the fixture: not a measurement, not a result, never to be shown as one. The Zone id is real (ZSP 1.0).",
+ "provenance": {
+  "invented": "every value"
+ },
+ "event": {
+  "kind": 30023,
+  "pubkey": "86f824c3f1e67c60b1dc15ce110648c4de5c3fb879022fbbcc5e8deb720e402c",
+  "created_at": 1793019600,
+  "tags": [
+   [
+    "d",
+    "psi-alert-sahel-2026102613"
+   ],
+   [
+    "title",
+    "Psi Watch: three channels high together, Sahel Zone (FIXTURE)"
+   ],
+   [
+    "channel",
+    "kp",
+    "6.33",
+    "",
+    "1793019600",
+    "97",
+    "1932-2026 (GFZ Potsdam, CC BY 4.0)",
+    "swpc_kp",
+    "public domain (NOAA NWS)"
+   ],
+   [
+    "channel",
+    "sky",
+    "lunation:full",
+    "",
+    "1793019600",
+    "",
+    "",
+    "psi_catalogue",
+    ""
+   ],
+   [
+    "channel",
+    "intel",
+    "ucdp_exact",
+    "",
+    "1793019600",
+    "99",
+    "trailing 365 days",
+    "psi_classes",
+    ""
+   ],
+   [
+    "zone",
+    "zone:sahel",
+    "Sahel Zone"
+   ],
+   [
+    "valid_from",
+    "1793019600"
+   ],
+   [
+    "valid_until",
+    "1793149200"
+   ],
+   [
+    "budget",
+    "1",
+    "4"
+   ],
+   [
+    "window_state",
+    "live"
+   ],
+   [
+    "t",
+    "psi_watch"
+   ],
+   [
+    "t",
+    "psi_alert"
+   ],
+   [
+    "t",
+    "experimental"
+   ],
+   [
+    "t",
+    "role:context"
+   ],
+   [
+    "t",
+    "category:psi"
+   ],
+   [
+    "t",
+    "category:psi.alert"
+   ],
+   [
+    "schema_version",
+    "0"
+   ],
+   [
+    "engine",
+    "skyfield 1.54, de440s; catalogue kit-v0 (2026-10-26 to 2026-11-25)"
+   ],
+   [
+    "published_at",
+    "1793019600"
+   ],
+   [
+    "client",
+    "Mecha Jono"
+   ],
+   [
+    "alt",
+    "Psi Watch alert (Experimental). FIXTURE. Three channels high together in the Sahel Zone: Kp at its 97th percentile, a full moon in its window, and conflict events at the 99th percentile of their trailing year. The first of 4 this month. Ends in 36 hours; replaced by its ending at the same address."
+   ]
+  ],
+  "content": "FIXTURE. Three channels high together in the Sahel Zone: Kp at its 97th percentile, a full moon in its window, and conflict events at the 99th percentile of their trailing year. The first of 4 this month. Ends in 36 hours; replaced by its ending at the same address."
+ }
+}

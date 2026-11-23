@@ -1,0 +1,11 @@
+{
+  "name": "organization-publishes",
+  "description": "Institutions are accountable. This is the ordinary case and must not prompt.",
+  "subjectKind": "organization",
+  "options": {
+    "isMock": false
+  },
+  "expect": {
+    "allowed": true
+  }
+}

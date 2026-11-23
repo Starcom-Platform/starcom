@@ -1,0 +1,98 @@
+{
+ "_about": "Expected values for the PacIOOS ERDDAP netCDF fixture, read by SciPy 1.18.1's netcdf_file, not by Starcom. The fixture is the fallback's own request: tmp2m at 2026-10-05T21:00Z on the 1\u00b0 grid, fetched 2026-10-05.",
+ "dims": [
+  "time",
+  "latitude",
+  "longitude"
+ ],
+ "shape": [
+  1,
+  181,
+  360
+ ],
+ "attributes": {
+  "_FillValue": -999000000.0,
+  "colorBarMaximum": 318.15,
+  "colorBarMinimum": 228.15,
+  "coordinates": "time_run time latitude longitude",
+  "ioos_category": "Temperature",
+  "long_name": "air temperature at 2m",
+  "standard_name": "air_temperature",
+  "units": "K"
+ },
+ "latitude": {
+  "first": 90.0,
+  "last": -90.0,
+  "count": 181
+ },
+ "longitude": {
+  "first": 0.0,
+  "last": 359.0,
+  "count": 360
+ },
+ "time": {
+  "value": 1791234000.0,
+  "units": "seconds since 1970-01-01T00:00:00Z"
+ },
+ "min": 209.1746368408203,
+ "max": 312.07464599609375,
+ "sum": 18250178.73918152,
+ "samples": [
+  {
+   "row": 0,
+   "col": 0,
+   "lat": 90.0,
+   "lon": 0.0,
+   "value": 253.3746337890625
+  },
+  {
+   "row": 0,
+   "col": 359,
+   "lat": 90.0,
+   "lon": 359.0,
+   "value": 253.3746337890625
+  },
+  {
+   "row": 90,
+   "col": 31,
+   "lat": 0.0,
+   "lon": 31.0,
+   "value": 291.2746276855469
+  },
+  {
+   "row": 60,
+   "col": 11,
+   "lat": 30.0,
+   "lon": 11.0,
+   "value": 294.4746398925781
+  },
+  {
+   "row": 168,
+   "col": 167,
+   "lat": -78.0,
+   "lon": 167.0,
+   "value": 261.9746398925781
+  },
+  {
+   "row": 93,
+   "col": 300,
+   "lat": -3.0,
+   "lon": 300.0,
+   "value": 309.4746398925781
+  },
+  {
+   "row": 180,
+   "col": 359,
+   "lat": -90.0,
+   "lon": 359.0,
+   "value": 243.6746368408203
+  },
+  {
+   "row": 45,
+   "col": 180,
+   "lat": 45.0,
+   "lon": 180.0,
+   "value": 286.2746276855469
+  }
+ ]
+}

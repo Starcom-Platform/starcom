@@ -1,0 +1,122 @@
+/* An event chart (D-PW, PW86): docked on the left where Story and RLSH open, one of them at a time. Colours from the tokens. */
+.panel {
+  position: fixed;
+  top: calc(var(--work-top) + 8px);
+  left: calc(var(--primary-rail-width, 48px) + 16px);
+  z-index: var(--z-dropdown);
+  /* Clear of the rail on the left and 16 px from the right edge, on a phone too. */
+  width: min(400px, calc(100vw - var(--primary-rail-width, 48px) - 32px));
+  max-height: calc(100vh - var(--work-top) - 96px);
+  overflow-y: auto;
+  padding: 14px 16px;
+  border: 1px solid var(--sc-divider);
+  border-left: 3px solid var(--sc-accent);
+  /* Opaque: in Psi Watch it opens over the Psi panel, whose words showed through a 97% wash (seen on the build, 11 Nov). */
+  background: var(--sc-surface-panel);
+  color: var(--sc-text-heading);
+  font: 400 13px/1.4 var(--sc-font-text);
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.heading {
+  margin: 0;
+  flex: 1;
+  font: 600 13px/1.2 var(--sc-font-data);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.badge {
+  padding: 0 4px;
+  border: 1px solid var(--sc-text-muted);
+  border-radius: var(--radius-sm);
+  color: var(--sc-text-secondary);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+}
+
+.close {
+  border: 0;
+  background: transparent;
+  color: var(--sc-text-secondary);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.subject {
+  margin: 0 0 4px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.quiet {
+  margin: 2px 0;
+  color: var(--sc-text-secondary);
+  font-size: 12px;
+}
+
+.subheading {
+  margin: 12px 0 4px;
+  font: 600 12px/1.2 var(--sc-font-data);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--sc-text-secondary);
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 2px 0;
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+
+.frames {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+  margin: 8px 0;
+}
+
+.chip {
+  background: none;
+  border: 1px solid var(--sc-divider);
+  color: var(--sc-text-secondary);
+  font: 500 12px/1.3 var(--sc-font-text);
+  padding: 2px 8px;
+  cursor: pointer;
+}
+
+.chip[aria-pressed='true'] {
+  border-color: var(--sc-accent);
+  color: var(--sc-text-heading);
+}
+
+.chip:hover,
+.chip:focus-visible {
+  color: var(--sc-text-heading);
+  outline: 1px solid var(--sc-focus);
+}
+
+.stated {
+  margin: 12px 0 2px;
+  padding-top: 8px;
+  border-top: 1px solid var(--sc-divider);
+  color: var(--sc-text-secondary);
+  font-size: 11px;
+}

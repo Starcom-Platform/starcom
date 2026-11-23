@@ -1,0 +1,145 @@
+/* Psi Watch's panel (decision D-PW, step 3): shrinks to the room the corner has and scrolls inside, as the other modes' panels. */
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-height: 0;
+  max-width: 360px;
+  overflow-y: auto;
+  padding: var(--space-1) var(--space-2);
+  border: 1px solid var(--sc-divider);
+  border-radius: var(--radius-sm);
+  background: var(--sc-surface-panel);
+  color: var(--sc-text-body);
+  font-family: var(--sc-font-data);
+  font-size: var(--text-xs);
+  line-height: 1.4;
+  pointer-events: auto;
+}
+
+.head {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+}
+
+.title {
+  color: var(--sc-text-heading);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* The one badge (PW12, the kit's rule): small, once, in the legend; never alarm styling. */
+.badge {
+  padding: 0 var(--space-1);
+  border: 1px solid var(--sc-text-muted);
+  border-radius: var(--radius-sm);
+  color: var(--sc-text-secondary);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+}
+
+.legend,
+.list {
+  display: grid;
+  gap: 2px;
+  margin: 2px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.list {
+  max-height: 140px;
+  overflow-y: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-1) var(--space-2);
+}
+
+.value {
+  color: var(--sc-text-heading);
+}
+
+.muted {
+  margin: 0;
+  color: var(--sc-text-muted);
+}
+
+/* Outside the span brushed on the Timestream (PW50): kept, dimmed. */
+.dimmed {
+  opacity: 0.45;
+}
+
+.credit {
+  margin: 2px 0 0;
+  color: var(--sc-text-secondary);
+}
+
+.subhead {
+  margin: var(--space-1) 0 0;
+  color: var(--sc-text-secondary);
+}
+
+.pick {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--sc-text-body);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.pick[aria-pressed='true'] {
+  color: var(--sc-accent);
+}
+
+
+.windowNote {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.windowNote p {
+  margin: 0;
+}
+
+.panel summary {
+  cursor: pointer;
+}
+
+.reading {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: var(--space-2);
+}
+
+.readingNote {
+  grid-column: 1 / -1;
+  color: var(--sc-text-muted);
+}
+
+/* The Finder's charts (D-PW, PW70): a control's bars and its reading under them. */
+.finderResult {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: var(--space-1) 0;
+}
+
+.finderChart {
+  display: block;
+}
+
+.looks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-3);
+  margin: var(--space-1) 0 0;
+  padding: 0;
+  list-style: none;
+}

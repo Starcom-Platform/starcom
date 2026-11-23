@@ -1,0 +1,29 @@
+{
+  "name": "tags-not-members-refused",
+  "description": "A tag that is not a bare lower-case member: NavCom writes `locked`, never `facility.Locked`.",
+  "expect": {
+    "observations": 0
+  },
+  "diagnostic": {
+    "note": "NOT normative — our drop wording, for humans and our own gate.",
+    "reasonContains": "are not vocabulary members in shape"
+  },
+  "event": {
+    "kind": 1911,
+    "created_at": 1756000000,
+    "tags": [
+      [
+        "g",
+        "st-louis"
+      ],
+      [
+        "d",
+        "st-louis/st-patrick-center"
+      ]
+    ],
+    "content": "{\"anchor\":\"st-louis/st-patrick-center\",\"observed_at\":1755996400,\"tags\":[\"facility.Locked\"],\"method\":\"saw\",\"callsign\":\"Raven\",\"precision\":\"area\",\"area\":\"dp3w\"}",
+    "pubkey": "96bafb179762225794c13c78e823b349e8f21d96f8113020032e5cabdbe59889",
+    "id": "a4ec8e42e8a4fe505ef60aabc0a5a9eb9582a2ff3434008de1515b3d080aec54",
+    "sig": "5585f926cce5802885979f3bd90ff342cdff7b288b3e8e8f9d75e5ff10f257d1e1cb21af0ed695d465e1bd48c4c927689fc60781cf3e852df8bacccaf410ef84"
+  }
+}

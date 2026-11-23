@@ -1,0 +1,162 @@
+/*
+ * Dock geometry. Every offset comes from --work-*, which useWorkArea measures
+ * from the element the layout CSS positions — so a dock clears the chrome
+ * without knowing the chrome exists, and stays right across breakpoints,
+ * embedded mode and the sub-rail toggle.
+ *
+ * The `20px` below is the only literal, and it is a gutter between the dock and
+ * the chrome, not a guess at where the chrome ends. That distinction is the
+ * whole difference from the `top: 20px` this replaces.
+ */
+
+.dock {
+  position: fixed;
+  display: flex;
+  gap: 8px;
+  /*
+   * --z-notification, not --z-hud.
+   *
+   * `position: fixed` creates a stacking context whatever the z-index, so a
+   * docked component cannot climb out of its dock — the container's number is
+   * the number for everything inside it. That makes this one value a compromise
+   * between a notification and a status chip.
+   *
+   * It resolves toward the notification, because the alternative fails harder.
+   * There are still 143 raw z-index declarations in the app, 57 of them at
+   * exactly 1000; a dock at --z-hud would put every notification behind them.
+   *
+   * This is not a promotion. Before docking, these components sat at 9000
+   * (PhaseTransitionManager), 9999 (AdaptiveUIController, and a settings toast since retired)
+   * and 10000 (NotificationSystem) — every one of them already above everything.
+   * 5000 is lower than all of those and still clears the 1000 crowd. The chips
+   * riding above a modal is inherited behaviour, not new behaviour, and it gets
+   * fixed when the raw values do and the docks can drop to their real tiers.
+   */
+  z-index: var(--z-notification);
+
+  /* The dock spans real screen area and the globe underneath must stay
+     draggable through the empty parts of it. Children re-enable. */
+  pointer-events: none;
+
+  /* Never grow past the work area — a dock that overflows the chrome is the bug
+     it exists to prevent, just further down the screen. */
+  max-height: calc(var(--work-height) - 40px);
+  max-width: calc(var(--work-width) / 2);
+  overflow: visible;
+}
+
+.dock > * {
+  pointer-events: auto;
+}
+
+/*
+ * Columns, growing away from the corner they are anchored to: the item with the
+ * lowest `order` always sits nearest the corner, whichever corner it is. That is
+ * what column-reverse buys on the bottom docks — without it, `order: 0` would
+ * mean "nearest the corner" at the top and "furthest from it" at the bottom.
+ */
+.topLeft,
+.topRight {
+  flex-direction: column;
+  top: calc(var(--work-top) + 20px);
+}
+
+/*
+ * A top dock stops short of the bottom dock on its side. DockHost publishes the room
+ * each bottom dock takes, its height and a gap; without it the opened pipeline guide
+ * reached down over the Layers button (decision D-F, step 3).
+ */
+.topLeft {
+  max-height: calc(var(--work-height) - 40px - var(--dock-bottom-left-space, 0px));
+}
+
+.topRight {
+  max-height: calc(var(--work-height) - 40px - var(--dock-bottom-right-space, 0px));
+}
+
+.bottomLeft,
+.bottomRight {
+  flex-direction: column-reverse;
+  bottom: calc(var(--work-bottom) + 20px);
+}
+
+/*
+ * And a bottom dock stops short of the top dock's fixed slots on its side, which
+ * DockHost publishes the same way. At 1280×720 the bottom-left column ran up over
+ * the clock and the minimap (BD4); its slots that fit the dock now give way first.
+ */
+.bottomLeft {
+  max-height: calc(var(--work-height) - 40px - var(--dock-top-left-fixed, 0px));
+  /* The width the bottom-right dock leaves (K2), not half the work area. */
+  max-width: calc(var(--work-width) - 40px - var(--dock-bottom-right-width, 0px));
+}
+
+.bottomRight {
+  max-height: calc(var(--work-height) - 40px - var(--dock-top-right-fixed, 0px));
+}
+
+.topLeft,
+.bottomLeft {
+  left: calc(var(--work-left) + 20px);
+  align-items: flex-start;
+}
+
+.topRight,
+.bottomRight {
+  right: calc(var(--work-right) + 20px);
+  align-items: flex-end;
+}
+
+/*
+ * Three corners drop to their real tier. Only the top-right dock holds
+ * notifications, so only it needs the compromise above. The other three hold the
+ * minimap, the camera controls and status chips, and at --z-notification they
+ * drew over every floating panel a person opened: the zoom buttons sat on top of
+ * the Intelligence Timeline. Measured before this change at 1400, 1100 and
+ * 760px in the default and RLSH modes, with these three lowered: nothing covered
+ * any docked item, and an opened panel drew above the ones it overlapped.
+ */
+.topLeft,
+.bottomLeft,
+.bottomRight {
+  z-index: var(--z-hud);
+}
+
+/*
+ * A slot carries only the order. It sets no size, no background and no padding:
+ * whatever is docked keeps looking exactly like itself, so moving a component
+ * into a dock is a placement change and never a visual redesign.
+ */
+.slot {
+  flex: 0 0 auto;
+  min-width: 0;
+}
+
+/*
+ * Top centre, under the mode bar: the globe's loading status (decision D-LS, LS1), where the eye
+ * goes when a layer is chosen and the globe stays empty. Narrow, so the top corners keep their room
+ * on a wide screen; on a phone it takes the width, and goes when the layer has loaded.
+ */
+.topCenter {
+  flex-direction: column;
+  align-items: center;
+  top: calc(var(--work-top) + 20px);
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: min(520px, calc(var(--work-width) - 40px));
+  z-index: var(--z-hud);
+}
+
+/*
+ * A slot the registry marks `fitsDock` takes only the height its dock has left, so
+ * what is docked there scrolls inside instead of running past the work area. The
+ * pipeline guide, expanded, is taller than a 1280×720 corner has room for and ran
+ * onto the bottom bar (decision D-F, step 3). What is docked has to be a column that
+ * can shrink for the limit to reach its scrolling part.
+ */
+.slot[data-dock-fit='true'] {
+  flex: 0 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}

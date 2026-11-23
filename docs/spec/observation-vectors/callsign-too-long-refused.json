@@ -1,0 +1,29 @@
+{
+  "name": "callsign-too-long-refused",
+  "description": "A callsign of 65 characters: bounded, so it cannot become a field for prose.",
+  "expect": {
+    "observations": 0
+  },
+  "diagnostic": {
+    "note": "NOT normative — our drop wording, for humans and our own gate.",
+    "reasonContains": "longer than a callsign is"
+  },
+  "event": {
+    "kind": 1911,
+    "created_at": 1756000000,
+    "tags": [
+      [
+        "g",
+        "st-louis"
+      ],
+      [
+        "d",
+        "st-louis/st-patrick-center"
+      ]
+    ],
+    "content": "{\"anchor\":\"st-louis/st-patrick-center\",\"observed_at\":1755996400,\"tags\":[\"locked\"],\"method\":\"saw\",\"callsign\":\"RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR\",\"precision\":\"area\",\"area\":\"dp3w\"}",
+    "pubkey": "96bafb179762225794c13c78e823b349e8f21d96f8113020032e5cabdbe59889",
+    "id": "231524fa772c0458ad5ca8de6d47cf8f1588f147df3c10b83f71b142a2df48c6",
+    "sig": "f6d6686547decddcb984124944b669a211191aa31b7e4807867514206ed1511fdda714ec7cd4fb304b04703623052e8fb61fb06d0cc631ececb7b1a4c7ced518"
+  }
+}

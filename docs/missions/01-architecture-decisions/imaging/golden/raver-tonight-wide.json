@@ -1,0 +1,1340 @@
+{
+ "card": {
+  "alt": "Raver Watch, tonight from 2 Oct 2026 23:00Z. 199 scene events start in the twelve hours from 23:00Z, 89 in a hot town. US Eastern, 39 events, 34 under heat, first 19:00 EDT. US Mountain, 19 events, first 17:00 MDT. Toronto time, 13 events, first 19:30 EDT. Sao Paulo time, 9 events, first 20:59 GMT-3. US Central, 29 events, 9 under heat, first 19:00 CDT. US Pacific, 82 events, 46 under heat, first 17:00 PDT. and 1 more region. The picture: the whole planet centred near 33.4°N, 98.9°W, showing Scene events and Borders. Caveats: Raver Watch items show while they apply, placed to about 11 km, or at a public venue. 5 events under way at 23:00Z are drawn, not counted. Unsigned capture: one browser's view at one moment. Made by Starcom, <captured>.",
+  "frame": {
+   "height": 630,
+   "width": 630
+  },
+  "height": 630,
+  "mimeType": "image/webp",
+  "provenance": {
+   "appearance": {
+    "lightMode": "sun",
+    "quality": {
+     "atmosphere": true,
+     "clouds": true,
+     "detail": "full detail",
+     "setting": "low"
+    },
+    "skin": "Day / Night",
+    "territories": "quiet"
+   },
+   "build": "<build>",
+   "camera": {
+    "altitude": 2.5000000000000004,
+    "lat": 33.39890236560956,
+    "lon": -98.93996664299937
+   },
+   "capturedAt": "<captured>",
+   "card": null,
+   "caveats": [
+    "Raver Watch: each item is drawn while it applies, by the dates its note states, faded as its end nears, and placed no finer than about 11 km, except a scene event at a public venue, drawn at the venue.",
+    "5 scene events already under way at 23:00Z are drawn on this card and not counted: its lines count the events starting in the twelve hours from then.",
+    "Unsigned client-side capture: one browser's view at one moment, not an attested record."
+   ],
+   "caveatsShort": [
+    "Raver Watch items show while they apply, placed to about 11 km, or at a public venue.",
+    "5 events under way at 23:00Z are drawn, not counted.",
+    "Unsigned capture: one browser's view at one moment."
+   ],
+   "credits": [
+    "ODbL-1.0 (venue: OpenStreetMap contributors)"
+   ],
+   "feeds": [
+    {
+     "credits": [],
+     "error": null,
+     "lastUpdated": "<read>",
+     "layer": "SceneEvents",
+     "loading": false,
+     "name": "Scene events from 19hz.info, EDMTunes, Alataj, Buenos Aliens, Agenda Eletrônica, Dancing Astronaut, 909originals, Dance Music NW, Mixmag Asia (38 past its end, not drawn; 311 not begun; 16 scene news, listed)",
+     "note": "Raver Watch: each item is drawn while it applies, by the dates its note states, faded as its end nears, and placed no finer than about 11 km, except a scene event at a public venue, drawn at the venue.",
+     "noteShort": "Raver Watch items show while they apply, placed to about 11 km, or at a public venue.",
+     "shortName": "Scene events"
+    }
+   ],
+   "frame": {
+    "height": 630,
+    "width": 630
+   },
+   "frontPage": {
+    "count": 199,
+    "fromS": 1790982000,
+    "kind": "tonight",
+    "lines": [
+     "199 scene events start in the twelve hours from 23:00Z, 89 in a hot town",
+     "US Eastern · 39 events · 34 under heat · first 19:00 EDT",
+     "US Mountain · 19 events · first 17:00 MDT",
+     "Toronto time · 13 events · first 19:30 EDT",
+     "Sao Paulo time · 9 events · first 20:59 GMT-3",
+     "US Central · 29 events · 9 under heat · first 19:00 CDT",
+     "US Pacific · 82 events · 46 under heat · first 17:00 PDT",
+     "and 1 more region"
+    ],
+    "regions": [
+     {
+      "count": 39,
+      "first": {
+       "atS": 1790982000,
+       "local": "19:00 EDT"
+      },
+      "name": "US Eastern",
+      "underHeat": 34
+     },
+     {
+      "count": 19,
+      "first": {
+       "atS": 1790982000,
+       "local": "17:00 MDT"
+      },
+      "name": "US Mountain",
+      "underHeat": 0
+     },
+     {
+      "count": 13,
+      "first": {
+       "atS": 1790983800,
+       "local": "19:30 EDT"
+      },
+      "name": "Toronto time",
+      "underHeat": 0
+     },
+     {
+      "count": 9,
+      "first": {
+       "atS": 1790985540,
+       "local": "20:59 GMT-3"
+      },
+      "name": "Sao Paulo time",
+      "underHeat": 0
+     },
+     {
+      "count": 29,
+      "first": {
+       "atS": 1790985600,
+       "local": "19:00 CDT"
+      },
+      "name": "US Central",
+      "underHeat": 9
+     },
+     {
+      "count": 82,
+      "first": {
+       "atS": 1790985600,
+       "local": "17:00 PDT"
+      },
+      "name": "US Pacific",
+      "underHeat": 46
+     },
+     {
+      "count": 8,
+      "first": {
+       "atS": 1790992800,
+       "local": "23:00 GMT-3"
+      },
+      "name": "Buenos Aires time",
+      "underHeat": 0
+     }
+    ],
+    "title": "Raver Watch · tonight from 2 Oct 2026 23:00Z",
+    "underHeat": 89,
+    "underWay": 5,
+    "untilS": 1791025200
+   },
+   "imagery": [
+    "Solar System Scope (CC BY 4.0)",
+    "NASA"
+   ],
+   "layersSelectedButEmpty": [],
+   "layersShown": [
+    "Scene events"
+   ],
+   "legend": [
+    {
+     "colorMeans": "scene events carry no level: violet, the mode’s own",
+     "layer": "Scene events",
+     "layerId": "SceneEvents",
+     "shapeMeans": "one mark a town, or a public venue where the listing names one (venue and address: OpenStreetMap contributors, ODbL); faint until the first begins, struck through when all are called off",
+     "swatches": [
+      {
+       "color": "#c77dff",
+       "label": "a scene event (a disc)",
+       "style": "disc"
+      },
+      {
+       "color": "#F5A524",
+       "label": "in a town at HeatRisk 2 (Orange) that day: a halo",
+       "shape": "glow"
+      },
+      {
+       "color": "#D93B2E",
+       "label": "in a town at HeatRisk 3 (Red) that day: a halo",
+       "shape": "glow"
+      },
+      {
+       "color": "#c77dff",
+       "label": "just started: a ring that swells and fades",
+       "shape": "ring"
+      }
+     ]
+    },
+    {
+     "colorMeans": "what kind of boundary it is — dashed where it is not settled",
+     "layer": "Borders",
+     "layerId": "NationalTerritories:borders",
+     "swatches": [
+      {
+       "color": "#c9d4e3",
+       "label": "international boundary",
+       "shape": "line"
+      },
+      {
+       "color": "#ff5555",
+       "label": "disputed",
+       "shape": "dashed"
+      },
+      {
+       "color": "#ffcc00",
+       "label": "line of control",
+       "shape": "dashed"
+      },
+      {
+       "color": "#888888",
+       "label": "indefinite",
+       "shape": "line"
+      }
+     ]
+    }
+   ],
+   "licences": [
+    "ODbL-1.0 (venue: OpenStreetMap contributors)"
+   ],
+   "link": "<origin>/?v=1&sub=SceneEvents&at=33.4,-98.94,2.5&win=1790982000..1791025200",
+   "marks": null,
+   "origin": "starcom-app client capture (unsigned)",
+   "raverWatchItems": [
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-fa9ccb99f9fd958a",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-645283f14670f380",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-ce08a62abd583410",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-7ad0874df4e9896c",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-8200227086633719",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-96e788c027512b98",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-224f0101be832bc2",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-790b2fbb317d91c9",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-5876397a538ccdb8",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-60c9eaa8280d9306",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-ecdf31695710bf42",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-95d3a9b8ad50d4df",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-235db60a03bf182d",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-d23574e60ce86717",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-ce5ba9ee9f0ce78d",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-e8ebaad31d2ca8f9",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-c2ea73234356aa61",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-b44632e1f67b6ce2",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-c1111c48c892df00",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-8b3b7eaa4891ab4e",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-9658211f3763e36d",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-9ea96a8847a8defc",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-7d9c6d4697d907cc",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-68093ebb6a02731b",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-695126afc49c7eb0",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-43fd5dbfd4852715",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-3da36bdb13b5bb3a",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-3d43e45fb3456011",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-4c06176935a08e93",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-308e60302b7315d6",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-378a0dfecb7a424f",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-223783e590295e12",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-17301b8f9b009dff",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-1160dca0a40565aa",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-172ede76ecd82e24",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-0f22eb18edf0adbd",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-fb76ad2bfaf98017",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-be6ae2817e225ad6",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-0e4f47e3141dbf67",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-2c84682aed43c3a6",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-f983ce324b1816cd",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-89676495dde7d47d",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-9a7cb6f801fe0448",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-f227d31e66d1d580",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-f04dba28c9a9cf74",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-f33836214d3b9f3f",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-ee2059c2c17bf26e",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-eedbe7e514fff58d",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-e81e7a7f87abaf6a",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-d833a473db601fed",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-e324b359d87d718c",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-e2cf745ca7676aac",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-ce681aaa424aa25b",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-c048c2decc5714fa",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-b3f83aa3f85314b4",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-82cea2ec1940eba3",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-3ccd901c3614c2e0",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-a73d2715a6f95de4",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-03dcfeb92d099762",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-1adeed126bfb7ade",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-0303927c4be980a8",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-542ce9206eaa518f",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-bb17983dbed1a277",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-b9740d233a161882",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-b1ba90539f4c372a",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-a63690e5d93fc665",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-a3cfc77fb4f1738a",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-9d92517a967c714e",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-a1802507d0497793",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-8e9e6313a9254fb8",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-7f413755797ab94d",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-8a01d4a1a20f7eed",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-7cc492c1427f1ec8",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-7cbdeea45203603f",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-751516a03c06be50",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-635b4fdf0954c21e",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-731ca8060ca0f011",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-713f3604903e684f",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-612dbcff99bf6da5",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-5b4475761ad21666",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-4a5c802e8b56ae6b",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-401a5ad048e23bb9",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-240589326b94eda4",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-3403b33c97c901a5",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-252399977489da3b",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-1cc88802d1f5d1d9",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-0ede03b04216d122",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-11234c3a9bec3050",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-0837c0e4c6c5aa95",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-b61dcb09b7bca1f8",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-da689bcad7336878",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-fd8d1a50966d1d0f",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-c0c8ba76cdb8c54f",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-bd320f990290fdc1",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-bfcca3994b63527c",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-b2a7d3a458dae2e6",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-a086c472c221fdf1",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-a51d2ae564ab6265",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-85d502bbaa1599ed",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-875b05b5ac186661",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-969161c23f17cd44",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-82ea76f3342a227e",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-6524201fb8dc27b9",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-5e18811062253cff",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-5b5dcf41939bf31f",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-41f50b0d4b743956",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-52d317f413029d57",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-172c40ce5729a60c",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-22f0a59e534cfb4f",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-11ac841e361a0bdf",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-buenosaliens-85c98285449c6488",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-87c60c7e4ad749a8",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-110256691da4b2c6",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-312f253baace1437",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-buenosaliens-990ad84d2aaa2aab",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-5760d2456c9099ca",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-buenosaliens-7d4707c19feaeeaa",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-buenosaliens-895e0b6543eb849f",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-buenosaliens-7aa28594aad5abf8",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-buenosaliens-62af4a587392073a",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-buenosaliens-18f4c2b7252ff595",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-agendaeletronica-727990db670901f5",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-agendaeletronica-b99b5e42b3d53b4f",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-agendaeletronica-209bb63936adedef",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-buenosaliens-06249e0a99f086b3",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-agendaeletronica-11231e005261f02d",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-f63766229980a22b",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-d376fa045cfba2a2",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-d7deaa08de2937a3",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-ef33cffb11158ce8",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-d7797f943f19b3c3",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-be5d0d4dce21c9cc",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-bb40c8573fdebafc",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-cde666a73af7f90b",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-b75b31037b4021f9",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-9dc3dd12b12e2599",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-a891a2fc5c594c17",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-8993fb75ec76cb28",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-95121bf46f144ede",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-970aa83c9545eed7",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-7ce80e1638d36c3d",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-7e7b28fb37757b1d",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-7c22a862c0e9e8d5",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-70632d9705a70f67",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-62898bed2ab6449e",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-661f6f86cb087f62",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-60b5eaf12c8d65a6",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-62486f258700bd69",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-3e67d73ab815ba27",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-540ab7e9f1301eb3",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-3a36876b4ca90bea",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-39f6b4b9b4576ff9",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-36fa394a18319595",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-38ddeb0039513040",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-28556c14816d1219",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-28f42b801df34232",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-308d96692519887b",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-1b1bfcb6332dc6db",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-19f3ed7385058c57",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-2284a71c305068fe",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-01ecbc6019fd20a5",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-167f1f0a0c0f5fa4",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-agendaeletronica-38eda845a5904619",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-agendaeletronica-ea58eaaa60891670",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-agendaeletronica-bc2f080ffd62f218",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-ecc5ca88a9d48cd7",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-agendaeletronica-abb0486a7fac756c",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-abf4b225a21c0dd2",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-d6ab50ab5587bb3f",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-bdf0d0d7fbfaa01c",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-9c8ba2a1fc75f0e3",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-9f3ec5d4d773b2ce",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-aa444ea3f7088b0c",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-8105875609128233",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-7f382db16765660f",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-975fa4b4720b9e16",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-753ab20355134686",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-66daf57e5d07d4c5",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-795df17f1659e278",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-490f682634241cbb",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-66d4635a5d9bd8eb",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-fdc899858ae73a51",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-d6e7d67460469302",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-e00e5ad9a61a7ecd",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-dae97eec38f32c29",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-dc119624409e6f46",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-d16fc7e3999ace29",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-b84ba98a7c2469d7",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-b15e247617db1318",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-7292a163136b30e1",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-34b41b3ae16af694",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-54680bec10cd2d95",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-371e0a7873de1093",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-0952cfdbee3fdf3e",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-agendaeletronica-d71e3334fc024695",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-e719ee0d14786ab7",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-c0e93b05c4daae1c",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-11e84530ea8f5abe",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-37eae9f859795c8f",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-agendaeletronica-ebae450b1a351198",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-657e987a9247cd0e",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-6314ef018f632860",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-64b1f429b3111925",
+     "layer": "SceneEvents",
+     "level": "info"
+    },
+    {
+     "id": "31923:6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692:raver-scene-event-19hz-cc4c4a77b075417c",
+     "layer": "SceneEvents",
+     "level": "info"
+    }
+   ],
+   "schema": "starcom.globe.capture",
+   "schemaVersion": 38,
+   "shot": {
+    "appearance": {
+     "light": "sun",
+     "nightFill": 0.15,
+     "skin": "auto",
+     "territories": "quiet"
+    },
+    "card": {
+     "preset": "wide"
+    },
+    "emphasis": {
+     "featured": false
+    },
+    "framing": {
+     "fit": "planet"
+    },
+    "layers": {
+     "pins": [],
+     "primary": "SceneEvents"
+    },
+    "output": {
+     "alt": true,
+     "quality": 0.9,
+     "scale": 1,
+     "type": "image/webp"
+    },
+    "subject": {
+     "tonight": "latest"
+    },
+    "time": {
+     "at": 1790982000
+    },
+    "v": 1
+   },
+   "typeStep": "larger",
+   "window": {
+    "from": 1790982000,
+    "until": 1791025200
+   }
+  },
+  "regions": {
+   "footer": {
+    "height": "<wraps with the run>",
+    "width": 570,
+    "x": 630,
+    "y": 516
+   },
+   "picture": {
+    "height": 630,
+    "width": 630,
+    "x": 0,
+    "y": 0
+   }
+  },
+  "sourceRect": {
+   "height": 630,
+   "width": 630,
+   "x": 0,
+   "y": 0
+  },
+  "warnings": [],
+  "width": 1200
+ },
+ "drawn": {
+  "appearance": {
+   "light": "sun",
+   "nightFill": 0.15,
+   "skin": "auto",
+   "territories": "quiet"
+  },
+  "card": {
+   "preset": "wide"
+  },
+  "emphasis": {
+   "featured": false
+  },
+  "framing": {
+   "fit": "planet"
+  },
+  "layers": {
+   "pins": [],
+   "primary": "SceneEvents"
+  },
+  "output": {
+   "alt": true,
+   "quality": 0.9,
+   "scale": 1,
+   "type": "image/webp"
+  },
+  "subject": {
+   "tonight": "latest"
+  },
+  "time": {
+   "at": 1790982000
+  },
+  "v": 1
+ },
+ "name": "raver-tonight-wide",
+ "notes": [],
+ "ok": true,
+ "warnings": []
+}

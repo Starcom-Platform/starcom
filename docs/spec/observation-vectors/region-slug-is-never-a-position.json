@@ -1,0 +1,25 @@
+{
+  "name": "region-slug-is-never-a-position",
+  "description": "The g tag is a region slug, and some slugs happen to parse as a geohash. It is never decoded: the position comes only from content.area, so this derives the same position as valid-observation.",
+  "expect": {
+    "observations": 1
+  },
+  "event": {
+    "kind": 1911,
+    "created_at": 1756000000,
+    "tags": [
+      [
+        "g",
+        "dr5r"
+      ],
+      [
+        "d",
+        "st-louis/st-patrick-center"
+      ]
+    ],
+    "content": "{\"anchor\":\"st-louis/st-patrick-center\",\"observed_at\":1755996400,\"tags\":[\"locked\"],\"method\":\"saw\",\"callsign\":\"Raven\",\"precision\":\"area\",\"area\":\"dp3w\"}",
+    "pubkey": "96bafb179762225794c13c78e823b349e8f21d96f8113020032e5cabdbe59889",
+    "id": "1674364d1bebf4ad0d76a589dd5d96d5249662e11e508052c911fab1707c01f4",
+    "sig": "68d8d5f0e2451c9dad1277810a19cf7bf3a246ac3bfa4c7fbabb239151ed86a7229b8d049f49895b176ad197b7a44da92af556b4015485ec41dd0eb4d6f7bd24"
+  }
+}

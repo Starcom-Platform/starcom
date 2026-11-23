@@ -1,0 +1,29 @@
+{
+  "name": "supersedes-malformed-refused",
+  "description": "supersedes that is not an event id.",
+  "expect": {
+    "observations": 0
+  },
+  "diagnostic": {
+    "note": "NOT normative — our drop wording, for humans and our own gate.",
+    "reasonContains": "supersedes is not an event id"
+  },
+  "event": {
+    "kind": 1911,
+    "created_at": 1756000000,
+    "tags": [
+      [
+        "g",
+        "st-louis"
+      ],
+      [
+        "d",
+        "st-louis/st-patrick-center"
+      ]
+    ],
+    "content": "{\"anchor\":\"st-louis/st-patrick-center\",\"observed_at\":1755996400,\"tags\":[\"locked\"],\"method\":\"saw\",\"callsign\":\"Raven\",\"precision\":\"area\",\"area\":\"dp3w\",\"supersedes\":\"my earlier one\"}",
+    "pubkey": "96bafb179762225794c13c78e823b349e8f21d96f8113020032e5cabdbe59889",
+    "id": "2e078f753393ad26f143e4b061ec60fc902f4f191bad0fbe5f99a71a7eced54c",
+    "sig": "8e30b94f7aa7e8e80c318ab8ed9e49d272bfd440483511f07d8bbf8b57cade318ffe5f4c49dd34cab8cb8d35c8e6c4964b8301fc78c2cf2b381193fb7aaf13e5"
+  }
+}

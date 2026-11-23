@@ -1,0 +1,2199 @@
+{
+  "schema": "mecha-jono/starcom-kit-v0-rlsh",
+  "version": "0.1.0",
+  "generated_by": "tools/starcom_kit_v0_rlsh.py",
+  "note": "Draft v0. Unsigned; nothing here is on The Record. The weight rule: tau = t - anchor, where anchor = window.from + lead_min * 60; w = 0 for tau < -lead or tau > end; w = (tau + lead) / (lead + peak) on [-lead, peak] (1 when lead + peak = 0); after the peak w = 2^(-(tau - peak) / half_life), and 0 where that is below 0.05. until = anchor + floor(min(end, peak + half_life * log2(20))) in seconds. The shown state: closed if published closed or now > until; drafted if published drafted; else armed before from and live on [from, until]. The coalition count: shown only when now > until and the package carries taking_part.",
+  "profile_weights": {
+    "tolerance": 0.001,
+    "cases": [
+      {
+        "id": "title_night_estimated",
+        "note": "The armed window's profile (docs/rlsh/02 section 4, rounded by hand).",
+        "anchor": 1812683100,
+        "profile_tag": [
+          "profile",
+          "rise_halflife",
+          "155",
+          "75",
+          "60",
+          "300"
+        ],
+        "window_tag": [
+          "window",
+          "1812673800",
+          "1812687600",
+          "1812701100"
+        ],
+        "until_offset_s": 18000,
+        "samples": [
+          {
+            "offset_s": -9301,
+            "w": 0.0
+          },
+          {
+            "offset_s": -9300,
+            "w": 0.0
+          },
+          {
+            "offset_s": -4650,
+            "w": 0.336957
+          },
+          {
+            "offset_s": 0,
+            "w": 0.673913
+          },
+          {
+            "offset_s": 4499,
+            "w": 0.999928
+          },
+          {
+            "offset_s": 4500,
+            "w": 1.0
+          },
+          {
+            "offset_s": 8100,
+            "w": 0.5
+          },
+          {
+            "offset_s": 11700,
+            "w": 0.25
+          },
+          {
+            "offset_s": 18000,
+            "w": 0.074325
+          },
+          {
+            "offset_s": 18001,
+            "w": 0.0
+          }
+        ]
+      },
+      {
+        "id": "title_night_actual",
+        "note": "The live window's profile: the buzzer 7 minutes late, the window still opening at tip-off.",
+        "anchor": 1812683520,
+        "profile_tag": [
+          "profile",
+          "rise_halflife",
+          "162",
+          "75",
+          "60",
+          "300"
+        ],
+        "window_tag": [
+          "window",
+          "1812673800",
+          "1812688020",
+          "1812701520"
+        ],
+        "until_offset_s": 18000,
+        "samples": [
+          {
+            "offset_s": -9721,
+            "w": 0.0
+          },
+          {
+            "offset_s": -9720,
+            "w": 0.0
+          },
+          {
+            "offset_s": -4860,
+            "w": 0.341772
+          },
+          {
+            "offset_s": 0,
+            "w": 0.683544
+          },
+          {
+            "offset_s": 4499,
+            "w": 0.99993
+          },
+          {
+            "offset_s": 4500,
+            "w": 1.0
+          },
+          {
+            "offset_s": 8100,
+            "w": 0.5
+          },
+          {
+            "offset_s": 11700,
+            "w": 0.25
+          },
+          {
+            "offset_s": 18000,
+            "w": 0.074325
+          },
+          {
+            "offset_s": 18001,
+            "w": 0.0
+          }
+        ]
+      },
+      {
+        "id": "floor_cuts_first",
+        "note": "INVENTED test parameters: the weight falls below 0.05 before `end`, so `until` is where it does.",
+        "anchor": 1812683100,
+        "profile_tag": [
+          "profile",
+          "rise_halflife",
+          "60",
+          "30",
+          "30",
+          "600"
+        ],
+        "window_tag": [
+          "window",
+          "1812679500",
+          "1812684900",
+          "1812692679"
+        ],
+        "until_offset_s": 9579,
+        "samples": [
+          {
+            "offset_s": -3601,
+            "w": 0.0
+          },
+          {
+            "offset_s": -3600,
+            "w": 0.0
+          },
+          {
+            "offset_s": -1800,
+            "w": 0.333333
+          },
+          {
+            "offset_s": 0,
+            "w": 0.666667
+          },
+          {
+            "offset_s": 1799,
+            "w": 0.999815
+          },
+          {
+            "offset_s": 1800,
+            "w": 1.0
+          },
+          {
+            "offset_s": 3600,
+            "w": 0.5
+          },
+          {
+            "offset_s": 5400,
+            "w": 0.25
+          },
+          {
+            "offset_s": 9579,
+            "w": 0.050009
+          },
+          {
+            "offset_s": 9580,
+            "w": 0.0
+          }
+        ]
+      },
+      {
+        "id": "no_lead_no_peak",
+        "note": "INVENTED test parameters: lead 0 and peak 0, so the weight is 1 at the anchor and 0 the second before.",
+        "anchor": 1812683100,
+        "profile_tag": [
+          "profile",
+          "rise_halflife",
+          "0",
+          "0",
+          "60",
+          "180"
+        ],
+        "window_tag": [
+          "window",
+          "1812683100",
+          "1812683100",
+          "1812693900"
+        ],
+        "until_offset_s": 10800,
+        "samples": [
+          {
+            "offset_s": -1,
+            "w": 0.0
+          },
+          {
+            "offset_s": 0,
+            "w": 1.0
+          },
+          {
+            "offset_s": 3600,
+            "w": 0.5
+          },
+          {
+            "offset_s": 7200,
+            "w": 0.25
+          },
+          {
+            "offset_s": 10800,
+            "w": 0.125
+          },
+          {
+            "offset_s": 10801,
+            "w": 0.0
+          }
+        ]
+      },
+      {
+        "id": "fractional_minutes",
+        "note": "INVENTED test parameters in decimal minutes.",
+        "anchor": 1812683100,
+        "profile_tag": [
+          "profile",
+          "rise_halflife",
+          "90.5",
+          "45.25",
+          "30.5",
+          "240"
+        ],
+        "window_tag": [
+          "window",
+          "1812677670",
+          "1812685815",
+          "1812693724"
+        ],
+        "until_offset_s": 10624,
+        "samples": [
+          {
+            "offset_s": -5431,
+            "w": 0.0
+          },
+          {
+            "offset_s": -5430,
+            "w": 0.0
+          },
+          {
+            "offset_s": -2715,
+            "w": 0.333333
+          },
+          {
+            "offset_s": 0,
+            "w": 0.666667
+          },
+          {
+            "offset_s": 2714,
+            "w": 0.999877
+          },
+          {
+            "offset_s": 2715,
+            "w": 1.0
+          },
+          {
+            "offset_s": 4545,
+            "w": 0.5
+          },
+          {
+            "offset_s": 6375,
+            "w": 0.25
+          },
+          {
+            "offset_s": 10624,
+            "w": 0.050002
+          },
+          {
+            "offset_s": 10625,
+            "w": 0.0
+          }
+        ]
+      }
+    ]
+  },
+  "window_states": {
+    "tolerance": "exact",
+    "cases": [
+      {
+        "published_state": "drafted",
+        "window": [
+          "window",
+          "1812673800",
+          "1812687600",
+          "1812701100"
+        ],
+        "published_at": 1812470400,
+        "now": 1812587400,
+        "expect": {
+          "state": "drafted",
+          "age_s": 117000
+        }
+      },
+      {
+        "published_state": "drafted",
+        "window": [
+          "window",
+          "1812673800",
+          "1812687600",
+          "1812701100"
+        ],
+        "published_at": 1812470400,
+        "now": 1812673800,
+        "expect": {
+          "state": "drafted",
+          "age_s": 203400
+        }
+      },
+      {
+        "published_state": "drafted",
+        "window": [
+          "window",
+          "1812673800",
+          "1812687600",
+          "1812701100"
+        ],
+        "published_at": 1812470400,
+        "now": 1812701100,
+        "expect": {
+          "state": "drafted",
+          "age_s": 230700
+        }
+      },
+      {
+        "published_state": "drafted",
+        "window": [
+          "window",
+          "1812673800",
+          "1812687600",
+          "1812701100"
+        ],
+        "published_at": 1812470400,
+        "now": 1812701101,
+        "expect": {
+          "state": "closed",
+          "age_s": 230701
+        }
+      },
+      {
+        "published_state": "armed",
+        "window": [
+          "window",
+          "1812673800",
+          "1812687600",
+          "1812701100"
+        ],
+        "published_at": 1812470400,
+        "now": 1812470400,
+        "expect": {
+          "state": "armed",
+          "age_s": 0
+        }
+      },
+      {
+        "published_state": "armed",
+        "window": [
+          "window",
+          "1812673800",
+          "1812687600",
+          "1812701100"
+        ],
+        "published_at": 1812470400,
+        "now": 1812673799,
+        "expect": {
+          "state": "armed",
+          "age_s": 203399
+        }
+      },
+      {
+        "published_state": "armed",
+        "window": [
+          "window",
+          "1812673800",
+          "1812687600",
+          "1812701100"
+        ],
+        "published_at": 1812470400,
+        "now": 1812673800,
+        "expect": {
+          "state": "live",
+          "age_s": 203400
+        }
+      },
+      {
+        "published_state": "armed",
+        "window": [
+          "window",
+          "1812673800",
+          "1812687600",
+          "1812701100"
+        ],
+        "published_at": 1812470400,
+        "now": 1812687600,
+        "expect": {
+          "state": "live",
+          "age_s": 217200
+        }
+      },
+      {
+        "published_state": "armed",
+        "window": [
+          "window",
+          "1812673800",
+          "1812687600",
+          "1812701100"
+        ],
+        "published_at": 1812470400,
+        "now": 1812701100,
+        "expect": {
+          "state": "live",
+          "age_s": 230700
+        }
+      },
+      {
+        "published_state": "armed",
+        "window": [
+          "window",
+          "1812673800",
+          "1812687600",
+          "1812701100"
+        ],
+        "published_at": 1812470400,
+        "now": 1812701101,
+        "expect": {
+          "state": "closed",
+          "age_s": 230701
+        }
+      },
+      {
+        "published_state": "live",
+        "window": [
+          "window",
+          "1812673800",
+          "1812687600",
+          "1812701100"
+        ],
+        "published_at": 1812470400,
+        "now": 1812673740,
+        "expect": {
+          "state": "armed",
+          "age_s": 203340
+        }
+      },
+      {
+        "published_state": "live",
+        "window": [
+          "window",
+          "1812673800",
+          "1812687600",
+          "1812701100"
+        ],
+        "published_at": 1812470400,
+        "now": 1812673800,
+        "expect": {
+          "state": "live",
+          "age_s": 203400
+        }
+      },
+      {
+        "published_state": "live",
+        "window": [
+          "window",
+          "1812673800",
+          "1812687600",
+          "1812701100"
+        ],
+        "published_at": 1812470400,
+        "now": 1812701100,
+        "expect": {
+          "state": "live",
+          "age_s": 230700
+        }
+      },
+      {
+        "published_state": "live",
+        "window": [
+          "window",
+          "1812673800",
+          "1812687600",
+          "1812701100"
+        ],
+        "published_at": 1812470400,
+        "now": 1812701101,
+        "expect": {
+          "state": "closed",
+          "age_s": 230701
+        }
+      },
+      {
+        "published_state": "closed",
+        "window": [
+          "window",
+          "1812673800",
+          "1812687600",
+          "1812701100"
+        ],
+        "published_at": 1812470400,
+        "now": 1812470400,
+        "expect": {
+          "state": "closed",
+          "age_s": 0
+        }
+      },
+      {
+        "published_state": "closed",
+        "window": [
+          "window",
+          "1812673800",
+          "1812687600",
+          "1812701100"
+        ],
+        "published_at": 1812470400,
+        "now": 1812673800,
+        "expect": {
+          "state": "closed",
+          "age_s": 203400
+        }
+      },
+      {
+        "published_state": "closed",
+        "window": [
+          "window",
+          "1812673800",
+          "1812687600",
+          "1812701100"
+        ],
+        "published_at": 1812470400,
+        "now": 1812701101,
+        "expect": {
+          "state": "closed",
+          "age_s": 230701
+        }
+      },
+      {
+        "published_state": "pending",
+        "window": [
+          "window",
+          "1812673800",
+          "1812687600",
+          "1812701100"
+        ],
+        "published_at": 1812470400,
+        "now": 1812673800,
+        "expect": {
+          "refused": "unknown-window-state"
+        }
+      }
+    ]
+  },
+  "coalition_count": {
+    "tolerance": "exact",
+    "cases": [
+      {
+        "case": "an open package, the night ahead, no tag",
+        "until": 1812701520,
+        "now": 1812615120,
+        "taking_part": null,
+        "expect": {
+          "shown": false,
+          "operators": null,
+          "agents": null,
+          "why": "before_until"
+        }
+      },
+      {
+        "case": "a tag present before until is still hidden",
+        "until": 1812701520,
+        "now": 1812697920,
+        "taking_part": [
+          "taking_part",
+          "9",
+          "0"
+        ],
+        "expect": {
+          "shown": false,
+          "operators": null,
+          "agents": null,
+          "why": "before_until"
+        }
+      },
+      {
+        "case": "at until exactly the window is still on: hidden",
+        "until": 1812701520,
+        "now": 1812701520,
+        "taking_part": [
+          "taking_part",
+          "9",
+          "0"
+        ],
+        "expect": {
+          "shown": false,
+          "operators": null,
+          "agents": null,
+          "why": "before_until"
+        }
+      },
+      {
+        "case": "one second after until: shown",
+        "until": 1812701520,
+        "now": 1812701521,
+        "taking_part": [
+          "taking_part",
+          "9",
+          "0"
+        ],
+        "expect": {
+          "shown": true,
+          "operators": 9,
+          "agents": 0,
+          "why": ""
+        }
+      },
+      {
+        "case": "after until, no tag yet: hidden, 'not counted yet'",
+        "until": 1812701520,
+        "now": 1812702120,
+        "taking_part": null,
+        "expect": {
+          "shown": false,
+          "operators": null,
+          "agents": null,
+          "why": "not_counted_yet"
+        }
+      },
+      {
+        "case": "after until, zeros are shown as zeros",
+        "until": 1812701520,
+        "now": 1812787920,
+        "taking_part": [
+          "taking_part",
+          "0",
+          "0"
+        ],
+        "expect": {
+          "shown": true,
+          "operators": 0,
+          "agents": 0,
+          "why": ""
+        }
+      }
+    ]
+  },
+  "refusals": [
+    {
+      "case": "a point finer than a city on an RLSH item",
+      "event": {
+        "pubkey": "86f824c3f1e67c60b1dc15ce110648c4de5c3fb879022fbbcc5e8deb720e402c",
+        "created_at": 1812470400,
+        "kind": 30023,
+        "tags": [
+          [
+            "d",
+            "recurrence-window-knicks_clinch_or_title-nyc_midtown-2027-finals-g6"
+          ],
+          [
+            "title",
+            "Clinch night window: Midtown, Thu 10 Jun 2027"
+          ],
+          [
+            "summary",
+            "Armed: Game 6 can clinch the title. The window runs from tip-off, 8:30 pm, to about 4:05 am; the busiest hour is the first after the final buzzer."
+          ],
+          [
+            "published_at",
+            "1812470400"
+          ],
+          [
+            "client",
+            "Mecha Jono"
+          ],
+          [
+            "schema_version",
+            "0"
+          ],
+          [
+            "alt",
+            "Recurrence window, armed: Midtown, Thu 10 Jun 2027, from 8:30 pm to about 4:05 am."
+          ],
+          [
+            "t",
+            "recurrence_window"
+          ],
+          [
+            "t",
+            "role:context"
+          ],
+          [
+            "t",
+            "category:safety"
+          ],
+          [
+            "t",
+            "category:safety.recurrence_window"
+          ],
+          [
+            "t",
+            "window_state:armed"
+          ],
+          [
+            "t",
+            "trigger:knicks_clinch_or_title"
+          ],
+          [
+            "window",
+            "1812673800",
+            "1812687600",
+            "1812701100"
+          ],
+          [
+            "profile",
+            "rise_halflife",
+            "155",
+            "75",
+            "60",
+            "300"
+          ],
+          [
+            "window_state",
+            "armed"
+          ],
+          [
+            "anchor",
+            "1812683100",
+            "estimated",
+            "the final buzzer, estimated as tip-off plus 2 h 35 min"
+          ],
+          [
+            "tzid",
+            "America/New_York"
+          ],
+          [
+            "trigger",
+            "knicks_clinch_or_title",
+            "A New York Knicks series clinch or title, watched in the city"
+          ],
+          [
+            "arms",
+            "possible_closing_game",
+            "Arms when a series reaches a game that can close it, two or three days ahead, checked against a published announcement"
+          ],
+          [
+            "schedule",
+            "can_clinch",
+            "The Knicks lead the Finals 3–2. Game 6, away and watched in the city, can clinch the title.",
+            "1812468600",
+            "thesportsdb"
+          ],
+          [
+            "measure",
+            "fdny_ems_injury",
+            "EMS incidents dispatched with an injury call type, 8 pm to 6 am (our count from FDNY's dispatch records)"
+          ],
+          [
+            "score",
+            "0.257",
+            "0.057",
+            "0.530",
+            "0.90",
+            "8.7"
+          ],
+          [
+            "score_basis",
+            "2",
+            "6",
+            "Knicks series clinches and the title, 2025–2026"
+          ],
+          [
+            "base_rate",
+            "0.0296",
+            "13",
+            "439",
+            "ordinary nights, same place and hours, 2025–2026"
+          ],
+          [
+            "score_line",
+            "On past clinch and title nights, Midtown saw a sharp rise in injury calls 2 of 6 times. On an ordinary night that happens about 3 times in 100."
+          ],
+          [
+            "rule",
+            "rlsh_hit_v1"
+          ],
+          [
+            "intel",
+            "weather",
+            "1812463200",
+            "nws",
+            "NWS forecast for Manhattan on Thursday night: a low near 70°F; no heat or storm alert.",
+            "https://forecast.weather.gov/MapClick.php?lat=40.71&lon=-74.01"
+          ],
+          [
+            "intel",
+            "other_crowds",
+            "1812452400",
+            "nyc_permitted_events",
+            "No permitted parade or street event in precincts 14 or 18 on Thursday night.",
+            "https://data.cityofnewyork.us/d/tvpp-9vvx"
+          ],
+          [
+            "intel",
+            "advisory",
+            "1812459600",
+            "press",
+            "No official outdoor watch party has been announced (local press, read by hand).",
+            ""
+          ],
+          [
+            "place",
+            "Midtown Manhattan, New York City",
+            "city"
+          ],
+          [
+            "area",
+            "Midtown South Precinct (NYPD 14), Manhattan",
+            "nypd_precinct",
+            "14"
+          ],
+          [
+            "area",
+            "Midtown North Precinct (NYPD 18), Manhattan",
+            "nypd_precinct",
+            "18"
+          ],
+          [
+            "jurisdiction",
+            "us-ny"
+          ],
+          [
+            "g",
+            "dr5re"
+          ],
+          [
+            "geo",
+            "lat:40.71,lon:-74.01"
+          ],
+          [
+            "geo_precision",
+            "venue"
+          ],
+          [
+            "geo_kind",
+            "event_location"
+          ],
+          [
+            "geo_source",
+            "reference:geonames (New York City, to 0.01 degree)"
+          ],
+          [
+            "valid_from",
+            "1812470400"
+          ],
+          [
+            "valid_until",
+            "1812701100"
+          ],
+          [
+            "license",
+            "TheSportsDB (schedule data from TheSportsDB.com)"
+          ],
+          [
+            "a",
+            "30079:86f824c3f1e67c60b1dc15ce110648c4de5c3fb879022fbbcc5e8deb720e402c:starcom_mission_package_field-celebration_safety-knicks_clinch_or_title-nyc_midtown-2027-finals-g6"
+          ],
+          [
+            "a",
+            "30023:86f824c3f1e67c60b1dc15ce110648c4de5c3fb879022fbbcc5e8deb720e402c:recurrence-case-nyc-celebration-recurrence"
+          ],
+          [
+            "r",
+            "https://www.thesportsdb.com/"
+          ],
+          [
+            "r",
+            "https://data.cityofnewyork.us/d/76xm-jjuj"
+          ],
+          [
+            "r",
+            "https://forecast.weather.gov/MapClick.php?lat=40.71&lon=-74.01"
+          ],
+          [
+            "r",
+            "https://data.cityofnewyork.us/d/tvpp-9vvx"
+          ]
+        ],
+        "content": "Clinch night window: Midtown, Thu 10 Jun 2027\n\nArmed. The Knicks lead the Finals 3–2, and Game 6, away and watched in the city, can clinch the title. (Schedule: TheSportsDB, checked against a published announcement.)\n\nThe window: from tip-off at 8:30 pm to about 4:05 am, in Midtown (the NYPD's Midtown South and Midtown North precincts). The busiest hour is expected to be the first after the final buzzer, estimated at 11:05 pm.\n\nWhy this night: On past clinch and title nights, Midtown saw a sharp rise in injury calls 2 of 6 times. On an ordinary night that happens about 3 times in 100. (Our count from FDNY's EMS dispatch records, 2025–2026: https://data.cityofnewyork.us/d/76xm-jjuj.)\n\nBefore the night, as of Tuesday morning:\n- Weather (NWS): a low near 70°F on Thursday night; no heat or storm alert.\n- Other crowds (NYC permitted events): no parade or street event in precincts 14 or 18.\n- Official advisories (local press, read by hand): no outdoor watch party announced.\n\nThis is a time to be ready, not a forecast that anything will happen. It is not an emergency service: anyone hurt or in danger, call 911.\n\nThe mission for this night: 30079:86f824c3f1e67c60b1dc15ce110648c4de5c3fb879022fbbcc5e8deb720e402c:starcom_mission_package_field-celebration_safety-knicks_clinch_or_title-nyc_midtown-2027-finals-g6\n\n— Posted by Mecha Jono, an AI agent."
+      },
+      "expect": {
+        "refused": "rlsh-point-finer-than-city"
+      }
+    },
+    {
+      "case": "a window_state outside the four",
+      "event": {
+        "pubkey": "86f824c3f1e67c60b1dc15ce110648c4de5c3fb879022fbbcc5e8deb720e402c",
+        "created_at": 1812470400,
+        "kind": 30023,
+        "tags": [
+          [
+            "d",
+            "recurrence-window-knicks_clinch_or_title-nyc_midtown-2027-finals-g6"
+          ],
+          [
+            "title",
+            "Clinch night window: Midtown, Thu 10 Jun 2027"
+          ],
+          [
+            "summary",
+            "Armed: Game 6 can clinch the title. The window runs from tip-off, 8:30 pm, to about 4:05 am; the busiest hour is the first after the final buzzer."
+          ],
+          [
+            "published_at",
+            "1812470400"
+          ],
+          [
+            "client",
+            "Mecha Jono"
+          ],
+          [
+            "schema_version",
+            "0"
+          ],
+          [
+            "alt",
+            "Recurrence window, armed: Midtown, Thu 10 Jun 2027, from 8:30 pm to about 4:05 am."
+          ],
+          [
+            "t",
+            "recurrence_window"
+          ],
+          [
+            "t",
+            "role:context"
+          ],
+          [
+            "t",
+            "category:safety"
+          ],
+          [
+            "t",
+            "category:safety.recurrence_window"
+          ],
+          [
+            "t",
+            "window_state:armed"
+          ],
+          [
+            "t",
+            "trigger:knicks_clinch_or_title"
+          ],
+          [
+            "window",
+            "1812673800",
+            "1812687600",
+            "1812701100"
+          ],
+          [
+            "profile",
+            "rise_halflife",
+            "155",
+            "75",
+            "60",
+            "300"
+          ],
+          [
+            "window_state",
+            "pending"
+          ],
+          [
+            "anchor",
+            "1812683100",
+            "estimated",
+            "the final buzzer, estimated as tip-off plus 2 h 35 min"
+          ],
+          [
+            "tzid",
+            "America/New_York"
+          ],
+          [
+            "trigger",
+            "knicks_clinch_or_title",
+            "A New York Knicks series clinch or title, watched in the city"
+          ],
+          [
+            "arms",
+            "possible_closing_game",
+            "Arms when a series reaches a game that can close it, two or three days ahead, checked against a published announcement"
+          ],
+          [
+            "schedule",
+            "can_clinch",
+            "The Knicks lead the Finals 3–2. Game 6, away and watched in the city, can clinch the title.",
+            "1812468600",
+            "thesportsdb"
+          ],
+          [
+            "measure",
+            "fdny_ems_injury",
+            "EMS incidents dispatched with an injury call type, 8 pm to 6 am (our count from FDNY's dispatch records)"
+          ],
+          [
+            "score",
+            "0.257",
+            "0.057",
+            "0.530",
+            "0.90",
+            "8.7"
+          ],
+          [
+            "score_basis",
+            "2",
+            "6",
+            "Knicks series clinches and the title, 2025–2026"
+          ],
+          [
+            "base_rate",
+            "0.0296",
+            "13",
+            "439",
+            "ordinary nights, same place and hours, 2025–2026"
+          ],
+          [
+            "score_line",
+            "On past clinch and title nights, Midtown saw a sharp rise in injury calls 2 of 6 times. On an ordinary night that happens about 3 times in 100."
+          ],
+          [
+            "rule",
+            "rlsh_hit_v1"
+          ],
+          [
+            "intel",
+            "weather",
+            "1812463200",
+            "nws",
+            "NWS forecast for Manhattan on Thursday night: a low near 70°F; no heat or storm alert.",
+            "https://forecast.weather.gov/MapClick.php?lat=40.71&lon=-74.01"
+          ],
+          [
+            "intel",
+            "other_crowds",
+            "1812452400",
+            "nyc_permitted_events",
+            "No permitted parade or street event in precincts 14 or 18 on Thursday night.",
+            "https://data.cityofnewyork.us/d/tvpp-9vvx"
+          ],
+          [
+            "intel",
+            "advisory",
+            "1812459600",
+            "press",
+            "No official outdoor watch party has been announced (local press, read by hand).",
+            ""
+          ],
+          [
+            "place",
+            "Midtown Manhattan, New York City",
+            "city"
+          ],
+          [
+            "area",
+            "Midtown South Precinct (NYPD 14), Manhattan",
+            "nypd_precinct",
+            "14"
+          ],
+          [
+            "area",
+            "Midtown North Precinct (NYPD 18), Manhattan",
+            "nypd_precinct",
+            "18"
+          ],
+          [
+            "jurisdiction",
+            "us-ny"
+          ],
+          [
+            "g",
+            "dr5re"
+          ],
+          [
+            "geo",
+            "lat:40.71,lon:-74.01"
+          ],
+          [
+            "geo_precision",
+            "city"
+          ],
+          [
+            "geo_kind",
+            "event_location"
+          ],
+          [
+            "geo_source",
+            "reference:geonames (New York City, to 0.01 degree)"
+          ],
+          [
+            "valid_from",
+            "1812470400"
+          ],
+          [
+            "valid_until",
+            "1812701100"
+          ],
+          [
+            "license",
+            "TheSportsDB (schedule data from TheSportsDB.com)"
+          ],
+          [
+            "a",
+            "30079:86f824c3f1e67c60b1dc15ce110648c4de5c3fb879022fbbcc5e8deb720e402c:starcom_mission_package_field-celebration_safety-knicks_clinch_or_title-nyc_midtown-2027-finals-g6"
+          ],
+          [
+            "a",
+            "30023:86f824c3f1e67c60b1dc15ce110648c4de5c3fb879022fbbcc5e8deb720e402c:recurrence-case-nyc-celebration-recurrence"
+          ],
+          [
+            "r",
+            "https://www.thesportsdb.com/"
+          ],
+          [
+            "r",
+            "https://data.cityofnewyork.us/d/76xm-jjuj"
+          ],
+          [
+            "r",
+            "https://forecast.weather.gov/MapClick.php?lat=40.71&lon=-74.01"
+          ],
+          [
+            "r",
+            "https://data.cityofnewyork.us/d/tvpp-9vvx"
+          ]
+        ],
+        "content": "Clinch night window: Midtown, Thu 10 Jun 2027\n\nArmed. The Knicks lead the Finals 3–2, and Game 6, away and watched in the city, can clinch the title. (Schedule: TheSportsDB, checked against a published announcement.)\n\nThe window: from tip-off at 8:30 pm to about 4:05 am, in Midtown (the NYPD's Midtown South and Midtown North precincts). The busiest hour is expected to be the first after the final buzzer, estimated at 11:05 pm.\n\nWhy this night: On past clinch and title nights, Midtown saw a sharp rise in injury calls 2 of 6 times. On an ordinary night that happens about 3 times in 100. (Our count from FDNY's EMS dispatch records, 2025–2026: https://data.cityofnewyork.us/d/76xm-jjuj.)\n\nBefore the night, as of Tuesday morning:\n- Weather (NWS): a low near 70°F on Thursday night; no heat or storm alert.\n- Other crowds (NYC permitted events): no parade or street event in precincts 14 or 18.\n- Official advisories (local press, read by hand): no outdoor watch party announced.\n\nThis is a time to be ready, not a forecast that anything will happen. It is not an emergency service: anyone hurt or in danger, call 911.\n\nThe mission for this night: 30079:86f824c3f1e67c60b1dc15ce110648c4de5c3fb879022fbbcc5e8deb720e402c:starcom_mission_package_field-celebration_safety-knicks_clinch_or_title-nyc_midtown-2027-finals-g6\n\n— Posted by Mecha Jono, an AI agent."
+      },
+      "expect": {
+        "refused": "unknown-window-state"
+      }
+    },
+    {
+      "case": "a profile with a half-life of zero",
+      "event": {
+        "pubkey": "86f824c3f1e67c60b1dc15ce110648c4de5c3fb879022fbbcc5e8deb720e402c",
+        "created_at": 1812470400,
+        "kind": 30023,
+        "tags": [
+          [
+            "d",
+            "recurrence-window-knicks_clinch_or_title-nyc_midtown-2027-finals-g6"
+          ],
+          [
+            "title",
+            "Clinch night window: Midtown, Thu 10 Jun 2027"
+          ],
+          [
+            "summary",
+            "Armed: Game 6 can clinch the title. The window runs from tip-off, 8:30 pm, to about 4:05 am; the busiest hour is the first after the final buzzer."
+          ],
+          [
+            "published_at",
+            "1812470400"
+          ],
+          [
+            "client",
+            "Mecha Jono"
+          ],
+          [
+            "schema_version",
+            "0"
+          ],
+          [
+            "alt",
+            "Recurrence window, armed: Midtown, Thu 10 Jun 2027, from 8:30 pm to about 4:05 am."
+          ],
+          [
+            "t",
+            "recurrence_window"
+          ],
+          [
+            "t",
+            "role:context"
+          ],
+          [
+            "t",
+            "category:safety"
+          ],
+          [
+            "t",
+            "category:safety.recurrence_window"
+          ],
+          [
+            "t",
+            "window_state:armed"
+          ],
+          [
+            "t",
+            "trigger:knicks_clinch_or_title"
+          ],
+          [
+            "window",
+            "1812673800",
+            "1812687600",
+            "1812701100"
+          ],
+          [
+            "profile",
+            "rise_halflife",
+            "155",
+            "75",
+            "0",
+            "300"
+          ],
+          [
+            "window_state",
+            "armed"
+          ],
+          [
+            "anchor",
+            "1812683100",
+            "estimated",
+            "the final buzzer, estimated as tip-off plus 2 h 35 min"
+          ],
+          [
+            "tzid",
+            "America/New_York"
+          ],
+          [
+            "trigger",
+            "knicks_clinch_or_title",
+            "A New York Knicks series clinch or title, watched in the city"
+          ],
+          [
+            "arms",
+            "possible_closing_game",
+            "Arms when a series reaches a game that can close it, two or three days ahead, checked against a published announcement"
+          ],
+          [
+            "schedule",
+            "can_clinch",
+            "The Knicks lead the Finals 3–2. Game 6, away and watched in the city, can clinch the title.",
+            "1812468600",
+            "thesportsdb"
+          ],
+          [
+            "measure",
+            "fdny_ems_injury",
+            "EMS incidents dispatched with an injury call type, 8 pm to 6 am (our count from FDNY's dispatch records)"
+          ],
+          [
+            "score",
+            "0.257",
+            "0.057",
+            "0.530",
+            "0.90",
+            "8.7"
+          ],
+          [
+            "score_basis",
+            "2",
+            "6",
+            "Knicks series clinches and the title, 2025–2026"
+          ],
+          [
+            "base_rate",
+            "0.0296",
+            "13",
+            "439",
+            "ordinary nights, same place and hours, 2025–2026"
+          ],
+          [
+            "score_line",
+            "On past clinch and title nights, Midtown saw a sharp rise in injury calls 2 of 6 times. On an ordinary night that happens about 3 times in 100."
+          ],
+          [
+            "rule",
+            "rlsh_hit_v1"
+          ],
+          [
+            "intel",
+            "weather",
+            "1812463200",
+            "nws",
+            "NWS forecast for Manhattan on Thursday night: a low near 70°F; no heat or storm alert.",
+            "https://forecast.weather.gov/MapClick.php?lat=40.71&lon=-74.01"
+          ],
+          [
+            "intel",
+            "other_crowds",
+            "1812452400",
+            "nyc_permitted_events",
+            "No permitted parade or street event in precincts 14 or 18 on Thursday night.",
+            "https://data.cityofnewyork.us/d/tvpp-9vvx"
+          ],
+          [
+            "intel",
+            "advisory",
+            "1812459600",
+            "press",
+            "No official outdoor watch party has been announced (local press, read by hand).",
+            ""
+          ],
+          [
+            "place",
+            "Midtown Manhattan, New York City",
+            "city"
+          ],
+          [
+            "area",
+            "Midtown South Precinct (NYPD 14), Manhattan",
+            "nypd_precinct",
+            "14"
+          ],
+          [
+            "area",
+            "Midtown North Precinct (NYPD 18), Manhattan",
+            "nypd_precinct",
+            "18"
+          ],
+          [
+            "jurisdiction",
+            "us-ny"
+          ],
+          [
+            "g",
+            "dr5re"
+          ],
+          [
+            "geo",
+            "lat:40.71,lon:-74.01"
+          ],
+          [
+            "geo_precision",
+            "city"
+          ],
+          [
+            "geo_kind",
+            "event_location"
+          ],
+          [
+            "geo_source",
+            "reference:geonames (New York City, to 0.01 degree)"
+          ],
+          [
+            "valid_from",
+            "1812470400"
+          ],
+          [
+            "valid_until",
+            "1812701100"
+          ],
+          [
+            "license",
+            "TheSportsDB (schedule data from TheSportsDB.com)"
+          ],
+          [
+            "a",
+            "30079:86f824c3f1e67c60b1dc15ce110648c4de5c3fb879022fbbcc5e8deb720e402c:starcom_mission_package_field-celebration_safety-knicks_clinch_or_title-nyc_midtown-2027-finals-g6"
+          ],
+          [
+            "a",
+            "30023:86f824c3f1e67c60b1dc15ce110648c4de5c3fb879022fbbcc5e8deb720e402c:recurrence-case-nyc-celebration-recurrence"
+          ],
+          [
+            "r",
+            "https://www.thesportsdb.com/"
+          ],
+          [
+            "r",
+            "https://data.cityofnewyork.us/d/76xm-jjuj"
+          ],
+          [
+            "r",
+            "https://forecast.weather.gov/MapClick.php?lat=40.71&lon=-74.01"
+          ],
+          [
+            "r",
+            "https://data.cityofnewyork.us/d/tvpp-9vvx"
+          ]
+        ],
+        "content": "Clinch night window: Midtown, Thu 10 Jun 2027\n\nArmed. The Knicks lead the Finals 3–2, and Game 6, away and watched in the city, can clinch the title. (Schedule: TheSportsDB, checked against a published announcement.)\n\nThe window: from tip-off at 8:30 pm to about 4:05 am, in Midtown (the NYPD's Midtown South and Midtown North precincts). The busiest hour is expected to be the first after the final buzzer, estimated at 11:05 pm.\n\nWhy this night: On past clinch and title nights, Midtown saw a sharp rise in injury calls 2 of 6 times. On an ordinary night that happens about 3 times in 100. (Our count from FDNY's EMS dispatch records, 2025–2026: https://data.cityofnewyork.us/d/76xm-jjuj.)\n\nBefore the night, as of Tuesday morning:\n- Weather (NWS): a low near 70°F on Thursday night; no heat or storm alert.\n- Other crowds (NYC permitted events): no parade or street event in precincts 14 or 18.\n- Official advisories (local press, read by hand): no outdoor watch party announced.\n\nThis is a time to be ready, not a forecast that anything will happen. It is not an emergency service: anyone hurt or in danger, call 911.\n\nThe mission for this night: 30079:86f824c3f1e67c60b1dc15ce110648c4de5c3fb879022fbbcc5e8deb720e402c:starcom_mission_package_field-celebration_safety-knicks_clinch_or_title-nyc_midtown-2027-finals-g6\n\n— Posted by Mecha Jono, an AI agent."
+      },
+      "expect": {
+        "refused": "profile-malformed"
+      }
+    },
+    {
+      "case": "a window tag that its profile and anchor do not give",
+      "event": {
+        "pubkey": "86f824c3f1e67c60b1dc15ce110648c4de5c3fb879022fbbcc5e8deb720e402c",
+        "created_at": 1812470400,
+        "kind": 30023,
+        "tags": [
+          [
+            "d",
+            "recurrence-window-knicks_clinch_or_title-nyc_midtown-2027-finals-g6"
+          ],
+          [
+            "title",
+            "Clinch night window: Midtown, Thu 10 Jun 2027"
+          ],
+          [
+            "summary",
+            "Armed: Game 6 can clinch the title. The window runs from tip-off, 8:30 pm, to about 4:05 am; the busiest hour is the first after the final buzzer."
+          ],
+          [
+            "published_at",
+            "1812470400"
+          ],
+          [
+            "client",
+            "Mecha Jono"
+          ],
+          [
+            "schema_version",
+            "0"
+          ],
+          [
+            "alt",
+            "Recurrence window, armed: Midtown, Thu 10 Jun 2027, from 8:30 pm to about 4:05 am."
+          ],
+          [
+            "t",
+            "recurrence_window"
+          ],
+          [
+            "t",
+            "role:context"
+          ],
+          [
+            "t",
+            "category:safety"
+          ],
+          [
+            "t",
+            "category:safety.recurrence_window"
+          ],
+          [
+            "t",
+            "window_state:armed"
+          ],
+          [
+            "t",
+            "trigger:knicks_clinch_or_title"
+          ],
+          [
+            "window",
+            "1812673200",
+            "1812687600",
+            "1812701100"
+          ],
+          [
+            "profile",
+            "rise_halflife",
+            "155",
+            "75",
+            "60",
+            "300"
+          ],
+          [
+            "window_state",
+            "armed"
+          ],
+          [
+            "anchor",
+            "1812683100",
+            "estimated",
+            "the final buzzer, estimated as tip-off plus 2 h 35 min"
+          ],
+          [
+            "tzid",
+            "America/New_York"
+          ],
+          [
+            "trigger",
+            "knicks_clinch_or_title",
+            "A New York Knicks series clinch or title, watched in the city"
+          ],
+          [
+            "arms",
+            "possible_closing_game",
+            "Arms when a series reaches a game that can close it, two or three days ahead, checked against a published announcement"
+          ],
+          [
+            "schedule",
+            "can_clinch",
+            "The Knicks lead the Finals 3–2. Game 6, away and watched in the city, can clinch the title.",
+            "1812468600",
+            "thesportsdb"
+          ],
+          [
+            "measure",
+            "fdny_ems_injury",
+            "EMS incidents dispatched with an injury call type, 8 pm to 6 am (our count from FDNY's dispatch records)"
+          ],
+          [
+            "score",
+            "0.257",
+            "0.057",
+            "0.530",
+            "0.90",
+            "8.7"
+          ],
+          [
+            "score_basis",
+            "2",
+            "6",
+            "Knicks series clinches and the title, 2025–2026"
+          ],
+          [
+            "base_rate",
+            "0.0296",
+            "13",
+            "439",
+            "ordinary nights, same place and hours, 2025–2026"
+          ],
+          [
+            "score_line",
+            "On past clinch and title nights, Midtown saw a sharp rise in injury calls 2 of 6 times. On an ordinary night that happens about 3 times in 100."
+          ],
+          [
+            "rule",
+            "rlsh_hit_v1"
+          ],
+          [
+            "intel",
+            "weather",
+            "1812463200",
+            "nws",
+            "NWS forecast for Manhattan on Thursday night: a low near 70°F; no heat or storm alert.",
+            "https://forecast.weather.gov/MapClick.php?lat=40.71&lon=-74.01"
+          ],
+          [
+            "intel",
+            "other_crowds",
+            "1812452400",
+            "nyc_permitted_events",
+            "No permitted parade or street event in precincts 14 or 18 on Thursday night.",
+            "https://data.cityofnewyork.us/d/tvpp-9vvx"
+          ],
+          [
+            "intel",
+            "advisory",
+            "1812459600",
+            "press",
+            "No official outdoor watch party has been announced (local press, read by hand).",
+            ""
+          ],
+          [
+            "place",
+            "Midtown Manhattan, New York City",
+            "city"
+          ],
+          [
+            "area",
+            "Midtown South Precinct (NYPD 14), Manhattan",
+            "nypd_precinct",
+            "14"
+          ],
+          [
+            "area",
+            "Midtown North Precinct (NYPD 18), Manhattan",
+            "nypd_precinct",
+            "18"
+          ],
+          [
+            "jurisdiction",
+            "us-ny"
+          ],
+          [
+            "g",
+            "dr5re"
+          ],
+          [
+            "geo",
+            "lat:40.71,lon:-74.01"
+          ],
+          [
+            "geo_precision",
+            "city"
+          ],
+          [
+            "geo_kind",
+            "event_location"
+          ],
+          [
+            "geo_source",
+            "reference:geonames (New York City, to 0.01 degree)"
+          ],
+          [
+            "valid_from",
+            "1812470400"
+          ],
+          [
+            "valid_until",
+            "1812701100"
+          ],
+          [
+            "license",
+            "TheSportsDB (schedule data from TheSportsDB.com)"
+          ],
+          [
+            "a",
+            "30079:86f824c3f1e67c60b1dc15ce110648c4de5c3fb879022fbbcc5e8deb720e402c:starcom_mission_package_field-celebration_safety-knicks_clinch_or_title-nyc_midtown-2027-finals-g6"
+          ],
+          [
+            "a",
+            "30023:86f824c3f1e67c60b1dc15ce110648c4de5c3fb879022fbbcc5e8deb720e402c:recurrence-case-nyc-celebration-recurrence"
+          ],
+          [
+            "r",
+            "https://www.thesportsdb.com/"
+          ],
+          [
+            "r",
+            "https://data.cityofnewyork.us/d/76xm-jjuj"
+          ],
+          [
+            "r",
+            "https://forecast.weather.gov/MapClick.php?lat=40.71&lon=-74.01"
+          ],
+          [
+            "r",
+            "https://data.cityofnewyork.us/d/tvpp-9vvx"
+          ]
+        ],
+        "content": "Clinch night window: Midtown, Thu 10 Jun 2027\n\nArmed. The Knicks lead the Finals 3–2, and Game 6, away and watched in the city, can clinch the title. (Schedule: TheSportsDB, checked against a published announcement.)\n\nThe window: from tip-off at 8:30 pm to about 4:05 am, in Midtown (the NYPD's Midtown South and Midtown North precincts). The busiest hour is expected to be the first after the final buzzer, estimated at 11:05 pm.\n\nWhy this night: On past clinch and title nights, Midtown saw a sharp rise in injury calls 2 of 6 times. On an ordinary night that happens about 3 times in 100. (Our count from FDNY's EMS dispatch records, 2025–2026: https://data.cityofnewyork.us/d/76xm-jjuj.)\n\nBefore the night, as of Tuesday morning:\n- Weather (NWS): a low near 70°F on Thursday night; no heat or storm alert.\n- Other crowds (NYC permitted events): no parade or street event in precincts 14 or 18.\n- Official advisories (local press, read by hand): no outdoor watch party announced.\n\nThis is a time to be ready, not a forecast that anything will happen. It is not an emergency service: anyone hurt or in danger, call 911.\n\nThe mission for this night: 30079:86f824c3f1e67c60b1dc15ce110648c4de5c3fb879022fbbcc5e8deb720e402c:starcom_mission_package_field-celebration_safety-knicks_clinch_or_title-nyc_midtown-2027-finals-g6\n\n— Posted by Mecha Jono, an AI agent."
+      },
+      "expect": {
+        "refused": "window-profile-disagree"
+      }
+    },
+    {
+      "case": "an RLSH item under the old key",
+      "event": {
+        "pubkey": "6301c4d09a014909e5a48b7d0c9aa859eec18804c2fc87eab4e414aa5a319692",
+        "created_at": 1812470400,
+        "kind": 30023,
+        "tags": [
+          [
+            "d",
+            "recurrence-window-knicks_clinch_or_title-nyc_midtown-2027-finals-g6"
+          ],
+          [
+            "title",
+            "Clinch night window: Midtown, Thu 10 Jun 2027"
+          ],
+          [
+            "summary",
+            "Armed: Game 6 can clinch the title. The window runs from tip-off, 8:30 pm, to about 4:05 am; the busiest hour is the first after the final buzzer."
+          ],
+          [
+            "published_at",
+            "1812470400"
+          ],
+          [
+            "client",
+            "Mecha Jono"
+          ],
+          [
+            "schema_version",
+            "0"
+          ],
+          [
+            "alt",
+            "Recurrence window, armed: Midtown, Thu 10 Jun 2027, from 8:30 pm to about 4:05 am."
+          ],
+          [
+            "t",
+            "recurrence_window"
+          ],
+          [
+            "t",
+            "role:context"
+          ],
+          [
+            "t",
+            "category:safety"
+          ],
+          [
+            "t",
+            "category:safety.recurrence_window"
+          ],
+          [
+            "t",
+            "window_state:armed"
+          ],
+          [
+            "t",
+            "trigger:knicks_clinch_or_title"
+          ],
+          [
+            "window",
+            "1812673800",
+            "1812687600",
+            "1812701100"
+          ],
+          [
+            "profile",
+            "rise_halflife",
+            "155",
+            "75",
+            "60",
+            "300"
+          ],
+          [
+            "window_state",
+            "armed"
+          ],
+          [
+            "anchor",
+            "1812683100",
+            "estimated",
+            "the final buzzer, estimated as tip-off plus 2 h 35 min"
+          ],
+          [
+            "tzid",
+            "America/New_York"
+          ],
+          [
+            "trigger",
+            "knicks_clinch_or_title",
+            "A New York Knicks series clinch or title, watched in the city"
+          ],
+          [
+            "arms",
+            "possible_closing_game",
+            "Arms when a series reaches a game that can close it, two or three days ahead, checked against a published announcement"
+          ],
+          [
+            "schedule",
+            "can_clinch",
+            "The Knicks lead the Finals 3–2. Game 6, away and watched in the city, can clinch the title.",
+            "1812468600",
+            "thesportsdb"
+          ],
+          [
+            "measure",
+            "fdny_ems_injury",
+            "EMS incidents dispatched with an injury call type, 8 pm to 6 am (our count from FDNY's dispatch records)"
+          ],
+          [
+            "score",
+            "0.257",
+            "0.057",
+            "0.530",
+            "0.90",
+            "8.7"
+          ],
+          [
+            "score_basis",
+            "2",
+            "6",
+            "Knicks series clinches and the title, 2025–2026"
+          ],
+          [
+            "base_rate",
+            "0.0296",
+            "13",
+            "439",
+            "ordinary nights, same place and hours, 2025–2026"
+          ],
+          [
+            "score_line",
+            "On past clinch and title nights, Midtown saw a sharp rise in injury calls 2 of 6 times. On an ordinary night that happens about 3 times in 100."
+          ],
+          [
+            "rule",
+            "rlsh_hit_v1"
+          ],
+          [
+            "intel",
+            "weather",
+            "1812463200",
+            "nws",
+            "NWS forecast for Manhattan on Thursday night: a low near 70°F; no heat or storm alert.",
+            "https://forecast.weather.gov/MapClick.php?lat=40.71&lon=-74.01"
+          ],
+          [
+            "intel",
+            "other_crowds",
+            "1812452400",
+            "nyc_permitted_events",
+            "No permitted parade or street event in precincts 14 or 18 on Thursday night.",
+            "https://data.cityofnewyork.us/d/tvpp-9vvx"
+          ],
+          [
+            "intel",
+            "advisory",
+            "1812459600",
+            "press",
+            "No official outdoor watch party has been announced (local press, read by hand).",
+            ""
+          ],
+          [
+            "place",
+            "Midtown Manhattan, New York City",
+            "city"
+          ],
+          [
+            "area",
+            "Midtown South Precinct (NYPD 14), Manhattan",
+            "nypd_precinct",
+            "14"
+          ],
+          [
+            "area",
+            "Midtown North Precinct (NYPD 18), Manhattan",
+            "nypd_precinct",
+            "18"
+          ],
+          [
+            "jurisdiction",
+            "us-ny"
+          ],
+          [
+            "g",
+            "dr5re"
+          ],
+          [
+            "geo",
+            "lat:40.71,lon:-74.01"
+          ],
+          [
+            "geo_precision",
+            "city"
+          ],
+          [
+            "geo_kind",
+            "event_location"
+          ],
+          [
+            "geo_source",
+            "reference:geonames (New York City, to 0.01 degree)"
+          ],
+          [
+            "valid_from",
+            "1812470400"
+          ],
+          [
+            "valid_until",
+            "1812701100"
+          ],
+          [
+            "license",
+            "TheSportsDB (schedule data from TheSportsDB.com)"
+          ],
+          [
+            "a",
+            "30079:86f824c3f1e67c60b1dc15ce110648c4de5c3fb879022fbbcc5e8deb720e402c:starcom_mission_package_field-celebration_safety-knicks_clinch_or_title-nyc_midtown-2027-finals-g6"
+          ],
+          [
+            "a",
+            "30023:86f824c3f1e67c60b1dc15ce110648c4de5c3fb879022fbbcc5e8deb720e402c:recurrence-case-nyc-celebration-recurrence"
+          ],
+          [
+            "r",
+            "https://www.thesportsdb.com/"
+          ],
+          [
+            "r",
+            "https://data.cityofnewyork.us/d/76xm-jjuj"
+          ],
+          [
+            "r",
+            "https://forecast.weather.gov/MapClick.php?lat=40.71&lon=-74.01"
+          ],
+          [
+            "r",
+            "https://data.cityofnewyork.us/d/tvpp-9vvx"
+          ]
+        ],
+        "content": "Clinch night window: Midtown, Thu 10 Jun 2027\n\nArmed. The Knicks lead the Finals 3–2, and Game 6, away and watched in the city, can clinch the title. (Schedule: TheSportsDB, checked against a published announcement.)\n\nThe window: from tip-off at 8:30 pm to about 4:05 am, in Midtown (the NYPD's Midtown South and Midtown North precincts). The busiest hour is expected to be the first after the final buzzer, estimated at 11:05 pm.\n\nWhy this night: On past clinch and title nights, Midtown saw a sharp rise in injury calls 2 of 6 times. On an ordinary night that happens about 3 times in 100. (Our count from FDNY's EMS dispatch records, 2025–2026: https://data.cityofnewyork.us/d/76xm-jjuj.)\n\nBefore the night, as of Tuesday morning:\n- Weather (NWS): a low near 70°F on Thursday night; no heat or storm alert.\n- Other crowds (NYC permitted events): no parade or street event in precincts 14 or 18.\n- Official advisories (local press, read by hand): no outdoor watch party announced.\n\nThis is a time to be ready, not a forecast that anything will happen. It is not an emergency service: anyone hurt or in danger, call 911.\n\nThe mission for this night: 30079:86f824c3f1e67c60b1dc15ce110648c4de5c3fb879022fbbcc5e8deb720e402c:starcom_mission_package_field-celebration_safety-knicks_clinch_or_title-nyc_midtown-2027-finals-g6\n\n— Posted by Mecha Jono, an AI agent."
+      },
+      "expect": {
+        "refused": "not-our-key"
+      }
+    }
+  ],
+  "fixtures": [
+    {
+      "file": "fixtures/rlsh/recurrence_window.drafted.json",
+      "kind": 30023,
+      "d": "recurrence-window-knicks_clinch_or_title-nyc_midtown-2027-finals-g6",
+      "badge": null,
+      "refused": false,
+      "family": "recurrence_window",
+      "window_state": "drafted",
+      "window": [
+        "window",
+        "1812673800",
+        "1812687600",
+        "1812701100"
+      ],
+      "anchor": [
+        "1812683100",
+        "estimated"
+      ],
+      "profile": [
+        "profile",
+        "rise_halflife",
+        "155",
+        "75",
+        "60",
+        "300"
+      ],
+      "shown_state_at_created": "drafted",
+      "valid_until": "1812701100",
+      "place": {
+        "jurisdiction": "us-ny",
+        "geo": "lat:40.71,lon:-74.01",
+        "precision": "city",
+        "areas": [
+          "Midtown South Precinct (NYPD 14), Manhattan",
+          "Midtown North Precinct (NYPD 18), Manhattan"
+        ]
+      },
+      "surfaces": [
+        "windows_calendar"
+      ],
+      "intel_lines": 0
+    },
+    {
+      "file": "fixtures/rlsh/recurrence_window.armed.json",
+      "kind": 30023,
+      "d": "recurrence-window-knicks_clinch_or_title-nyc_midtown-2027-finals-g6",
+      "badge": null,
+      "refused": false,
+      "family": "recurrence_window",
+      "window_state": "armed",
+      "window": [
+        "window",
+        "1812673800",
+        "1812687600",
+        "1812701100"
+      ],
+      "anchor": [
+        "1812683100",
+        "estimated"
+      ],
+      "profile": [
+        "profile",
+        "rise_halflife",
+        "155",
+        "75",
+        "60",
+        "300"
+      ],
+      "shown_state_at_created": "armed",
+      "valid_until": "1812701100",
+      "place": {
+        "jurisdiction": "us-ny",
+        "geo": "lat:40.71,lon:-74.01",
+        "precision": "city",
+        "areas": [
+          "Midtown South Precinct (NYPD 14), Manhattan",
+          "Midtown North Precinct (NYPD 18), Manhattan"
+        ]
+      },
+      "surfaces": [
+        "windows_calendar",
+        "recurrence_layer",
+        "shared_timeline"
+      ],
+      "intel_lines": 3
+    },
+    {
+      "file": "fixtures/rlsh/recurrence_window.live.json",
+      "kind": 30023,
+      "d": "recurrence-window-knicks_clinch_or_title-nyc_midtown-2027-finals-g6",
+      "badge": null,
+      "refused": false,
+      "family": "recurrence_window",
+      "window_state": "live",
+      "window": [
+        "window",
+        "1812673800",
+        "1812688020",
+        "1812701520"
+      ],
+      "anchor": [
+        "1812683520",
+        "actual"
+      ],
+      "profile": [
+        "profile",
+        "rise_halflife",
+        "162",
+        "75",
+        "60",
+        "300"
+      ],
+      "shown_state_at_created": "live",
+      "valid_until": "1812701520",
+      "place": {
+        "jurisdiction": "us-ny",
+        "geo": "lat:40.71,lon:-74.01",
+        "precision": "city",
+        "areas": [
+          "Midtown South Precinct (NYPD 14), Manhattan",
+          "Midtown North Precinct (NYPD 18), Manhattan"
+        ]
+      },
+      "surfaces": [
+        "windows_calendar",
+        "recurrence_layer",
+        "shared_timeline"
+      ],
+      "intel_lines": 3
+    },
+    {
+      "file": "fixtures/rlsh/recurrence_window.closed.json",
+      "kind": 30023,
+      "d": "recurrence-window-knicks_clinch_or_title-nyc_midtown-2027-finals-g6",
+      "badge": null,
+      "refused": false,
+      "family": "recurrence_window",
+      "window_state": "closed",
+      "window": [
+        "window",
+        "1812673800",
+        "1812688020",
+        "1812701520"
+      ],
+      "anchor": [
+        "1812683520",
+        "actual"
+      ],
+      "profile": [
+        "profile",
+        "rise_halflife",
+        "162",
+        "75",
+        "60",
+        "300"
+      ],
+      "shown_state_at_created": "closed",
+      "valid_until": "1812701520",
+      "place": {
+        "jurisdiction": "us-ny",
+        "geo": "lat:40.71,lon:-74.01",
+        "precision": "city",
+        "areas": [
+          "Midtown South Precinct (NYPD 14), Manhattan",
+          "Midtown North Precinct (NYPD 18), Manhattan"
+        ]
+      },
+      "surfaces": [
+        "windows_calendar",
+        "recurrence_layer",
+        "shared_timeline"
+      ],
+      "intel_lines": 0
+    },
+    {
+      "file": "fixtures/rlsh/recurrence_case.json",
+      "kind": 30023,
+      "d": "recurrence-case-nyc-celebration-recurrence",
+      "badge": null,
+      "refused": false,
+      "family": "recurrence_case",
+      "nights": 10,
+      "counts": 38,
+      "answers": [
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q9"
+      ],
+      "surfaces": [
+        "case_view"
+      ]
+    },
+    {
+      "file": "fixtures/rlsh/celebration_safety.package.json",
+      "kind": 30079,
+      "d": "starcom_mission_package_field-celebration_safety-knicks_clinch_or_title-nyc_midtown-2027-finals-g6",
+      "badge": null,
+      "refused": false,
+      "family": "field_mission_package",
+      "mission_family": "celebration_safety",
+      "mission_state": "open",
+      "valid_until": "1812701100",
+      "jurisdiction": "us-ny",
+      "profile": {
+        "agent": "mecha_jono",
+        "claims": "many",
+        "fieldWork": {
+          "jurisdiction": "us-ny",
+          "validUntil": 1812701100
+        },
+        "missionState": "open"
+      },
+      "window": {
+        "from": "2027-06-11T00:30:00+00:00",
+        "peak": "2027-06-11T04:20:00+00:00",
+        "until": "2027-06-11T08:05:00+00:00",
+        "anchor": "2027-06-11T03:05:00+00:00",
+        "anchorBasis": "estimated",
+        "state": "armed"
+      },
+      "case": "recurrence-case-nyc-celebration-recurrence",
+      "signed": false,
+      "coalition_at_created": {
+        "shown": false,
+        "operators": null,
+        "agents": null,
+        "why": "before_until"
+      },
+      "surfaces": [
+        "mission_screen_field",
+        "coalition_view"
+      ]
+    },
+    {
+      "file": "fixtures/rlsh/celebration_safety.ending.json",
+      "kind": 30079,
+      "d": "starcom_mission_package_field-celebration_safety-knicks_clinch_or_title-nyc_midtown-2027-finals-g6",
+      "badge": null,
+      "refused": false,
+      "family": "field_mission_package",
+      "mission_family": "celebration_safety",
+      "mission_state": "closed",
+      "valid_until": "1812701520",
+      "jurisdiction": "us-ny",
+      "profile": {
+        "agent": "mecha_jono",
+        "fieldWork": {
+          "jurisdiction": "us-ny",
+          "validUntil": 1812701520
+        },
+        "missionState": "closed"
+      },
+      "window": {
+        "from": "2027-06-11T00:30:00+00:00",
+        "peak": "2027-06-11T04:27:00+00:00",
+        "until": "2027-06-11T08:12:00+00:00",
+        "anchor": "2027-06-11T03:12:00+00:00",
+        "anchorBasis": "actual",
+        "state": "closed"
+      },
+      "case": "recurrence-case-nyc-celebration-recurrence",
+      "signed": false,
+      "coalition_at_created": {
+        "shown": true,
+        "operators": 9,
+        "agents": 0,
+        "why": ""
+      },
+      "surfaces": [
+        "mission_screen_field",
+        "coalition_view"
+      ]
+    },
+    {
+      "file": "fixtures/rlsh/mission_totals.json",
+      "kind": 30023,
+      "d": "mission-totals-starcom_mission_package_field-celebration_safety-knicks_clinch_or_title-nyc_midtown-2027-finals-g6",
+      "badge": null,
+      "refused": false,
+      "family": "mission_totals",
+      "reports": "3",
+      "as_of": "2027-06-12",
+      "totals": {
+        "Calls to 911 made": 3,
+        "First-aid supplies used": 17,
+        "Water bottles handed out": 212
+      },
+      "a": "30079:86f824c3f1e67c60b1dc15ce110648c4de5c3fb879022fbbcc5e8deb720e402c:starcom_mission_package_field-celebration_safety-knicks_clinch_or_title-nyc_midtown-2027-finals-g6",
+      "surfaces": [
+        "mission_screen_after"
+      ]
+    }
+  ]
+}

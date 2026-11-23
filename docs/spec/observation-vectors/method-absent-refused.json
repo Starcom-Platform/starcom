@@ -1,0 +1,29 @@
+{
+  "name": "method-absent-refused",
+  "description": "No method. How the observer came to know is not optional; weight derives from it.",
+  "expect": {
+    "observations": 0
+  },
+  "diagnostic": {
+    "note": "NOT normative — our drop wording, for humans and our own gate.",
+    "reasonContains": "is not one of saw, told, inferred"
+  },
+  "event": {
+    "kind": 1911,
+    "created_at": 1756000000,
+    "tags": [
+      [
+        "g",
+        "st-louis"
+      ],
+      [
+        "d",
+        "st-louis/st-patrick-center"
+      ]
+    ],
+    "content": "{\"anchor\":\"st-louis/st-patrick-center\",\"observed_at\":1755996400,\"tags\":[\"locked\"],\"callsign\":\"Raven\",\"precision\":\"area\",\"area\":\"dp3w\"}",
+    "pubkey": "96bafb179762225794c13c78e823b349e8f21d96f8113020032e5cabdbe59889",
+    "id": "d9cfb716b510bec8e0284cc1d616d6cf2cd0c8d316c2f3d3c62a8a7444292008",
+    "sig": "6e685a2b9d1f58d612bee2f26934eb0eec52c8f51e37d9b28a2aa0caa25ca7197ec3caa55f8b7fcc5b3ec20d8f21f56331910db2b8f8715c2974c97dabb18a9a"
+  }
+}
