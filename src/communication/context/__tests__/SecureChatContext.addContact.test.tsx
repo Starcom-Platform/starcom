@@ -12,7 +12,7 @@ import { describe, it, expect, vi, afterEach } from 'vitest';
 import { SecureChatProvider } from '../SecureChatContext';
 import { useSecureChat } from '../useSecureChat';
 import { AdvancedSecurityService } from '../../../security/core/AdvancedSecurityService';
-import type { EarthAllianceContact } from '../../types/SecureChat';
+import type { ChatContact } from '../../types/SecureChat';
 
 // AdvancedSecurityService.validateContact's confidence involves a genuinely
 // randomized/behavioral trust simulation (see calculateTrustFactors) — real
@@ -28,7 +28,7 @@ const wrapper = ({ children }: { children: React.ReactNode }) => (
   <SecureChatProvider>{children}</SecureChatProvider>
 );
 
-function makeContact(overrides: Partial<EarthAllianceContact> = {}): EarthAllianceContact {
+function makeContact(overrides: Partial<ChatContact> = {}): ChatContact {
   const now = new Date();
   return {
     pubkey: 'a'.repeat(64),
@@ -41,7 +41,7 @@ function makeContact(overrides: Partial<EarthAllianceContact> = {}): EarthAllian
       expiresAt: new Date(now.getTime() + 1000)
     },
     verifiedIdentity: {
-      earthAllianceId: 'a'.repeat(64),
+      pubkey: 'a'.repeat(64),
       displayName: 'Test Contact',
       verificationMethod: 'web-of-trust',
       verifiedBy: 'local-operator',
@@ -50,7 +50,7 @@ function makeContact(overrides: Partial<EarthAllianceContact> = {}): EarthAllian
     },
     securityClearance: 'alpha',
     lastVerified: now,
-    isEarthAllianceVerified: false,
+    isVerified: false,
     behaviorSignature: '',
     lastActivity: now,
     isOnline: false,

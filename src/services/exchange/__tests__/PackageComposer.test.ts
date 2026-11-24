@@ -81,14 +81,14 @@ describe('PackageComposer', () => {
     }
 
     it('applies redaction to description, not just report/intel content — description crosses into the manifest verbatim otherwise', () => {
-      const manifest = compose('Contact analyst@earthalliance.example for follow-up.', { maskEmails: true });
-      expect(manifest.description).not.toContain('analyst@earthalliance.example');
+      const manifest = compose('Contact analyst@example.org for follow-up.', { maskEmails: true });
+      expect(manifest.description).not.toContain('analyst@example.org');
       expect(manifest.description).toContain('[redacted@email]');
     });
 
     it('leaves description untouched when no redaction is requested', () => {
-      const manifest = compose('Contact analyst@earthalliance.example for follow-up.', {});
-      expect(manifest.description).toContain('analyst@earthalliance.example');
+      const manifest = compose('Contact analyst@example.org for follow-up.', {});
+      expect(manifest.description).toContain('analyst@example.org');
     });
 
     it('maskNames redacts a Firstname-Lastname-shaped sequence', () => {

@@ -11,11 +11,11 @@ import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import SecureChatContactList from '../SecureChatContactList';
-import type { EarthAllianceContact } from '../../../types/SecureChat';
+import type { ChatContact } from '../../../types/SecureChat';
 import { nip19 } from 'nostr-tools';
 
 const addVerifiedContact = vi.fn();
-let mockVerifiedContacts = new Map<string, EarthAllianceContact>();
+let mockVerifiedContacts = new Map<string, ChatContact>();
 
 vi.mock('../../../communication/context/useSecureChat', () => ({
   useSecureChat: () => ({
@@ -29,15 +29,15 @@ vi.mock('../../../communication/context/useSecureChat', () => ({
   })
 }));
 
-function makeExistingContact(pubkey: string): EarthAllianceContact {
+function makeExistingContact(pubkey: string): ChatContact {
   const now = new Date();
   return {
     pubkey,
     displayName: 'Existing Contact',
     pqcPublicKey: { algorithm: 'CRYSTALS-Kyber-768', keyData: new Uint8Array(0), securityLevel: 'NIST-3', createdAt: now, expiresAt: now },
-    verifiedIdentity: { earthAllianceId: pubkey, displayName: 'Existing Contact', verificationMethod: 'web-of-trust', verifiedBy: 'x', verificationDate: now, verificationSignature: '' },
+    verifiedIdentity: { pubkey, displayName: 'Existing Contact', verificationMethod: 'web-of-trust', verifiedBy: 'x', verificationDate: now, verificationSignature: '' },
     lastVerified: now,
-    isEarthAllianceVerified: true,
+    isVerified: true,
     behaviorSignature: 'real-signature',
     lastActivity: now,
     isOnline: true,

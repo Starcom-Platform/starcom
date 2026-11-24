@@ -82,8 +82,6 @@ export interface DetailedDataSet {
   source: DataSource;
   reliability: 'high' | 'medium' | 'low';
   
-  // Earth Alliance context
-  earthAllianceImpact?: EarthAllianceImpact;
   geopoliticalContext?: GeopoliticalContext;
 }
 
@@ -140,7 +138,6 @@ export interface DataInsight {
   confidence: number; // 0-1
   impact: 'low' | 'medium' | 'high';
   actionable?: boolean;
-  earthAllianceRelevance?: string;
 }
 
 export interface DataSource {
@@ -149,13 +146,6 @@ export interface DataSource {
   lastUpdate: Date;
   frequency: string;
   reliability: 'high' | 'medium' | 'low';
-}
-
-export interface EarthAllianceImpact {
-  relevanceScore: number; // 0-1
-  impactAreas: string[];
-  strategicImportance: 'critical' | 'high' | 'medium' | 'low';
-  recommendations: string[];
 }
 
 export interface GeopoliticalContext {
@@ -235,7 +225,6 @@ export interface CategoryConfig {
   subcategories?: SubcategoryConfig[];
   dataSource: string;
   updateFrequency: string;
-  earthAllianceRelevance?: number; // 0-1
 }
 
 export interface SubcategoryConfig {
@@ -254,7 +243,7 @@ export interface TopBarPreferences {
   showBadges: boolean;
   showTooltips: boolean;
   alertLevels: ('normal' | 'warning' | 'critical')[];
-  colorTheme: 'auto' | 'light' | 'dark' | 'earth-alliance';
+  colorTheme: 'auto' | 'light' | 'dark';
   densityMode: 'compact' | 'normal' | 'comfortable';
   animationLevel: 'none' | 'reduced' | 'normal' | 'enhanced';
 }

@@ -95,7 +95,7 @@ export interface EnhancedSettings {
   // Display settings
   animationSpeed: number;
   showIcons: boolean;
-  colorScheme: 'default' | 'high-contrast' | 'earth-alliance';
+  colorScheme: 'default' | 'high-contrast';
   compactMode: boolean;
   
   // Data settings

@@ -19,7 +19,7 @@ function makeMission(overrides: Partial<MissionUI> = {}): MissionUI {
     id: 'mission-1',
     missionNumber: 'MSN-2026-0001',
     title: 'Recon Mission',
-    briefing: 'Contact analyst@earthalliance.example for follow-up. Case ref 123456789.',
+    briefing: 'Contact analyst@example.org for follow-up. Case ref 123456789.',
     status: MissionStatus.READY_FOR_PACKAGE,
     objectives: [
       { id: 'obj-1', description: 'Recon target', completed: true },
@@ -155,7 +155,7 @@ describe('buildMissionPackageComposeInput', () => {
   it('the single synthetic report entry carries only the briefing/objectives text, not linked report content', () => {
     const input = buildMissionPackageComposeInput(makeMission());
     expect(input.reports).toHaveLength(1);
-    expect(input.reports[0].content).toContain('Contact analyst@earthalliance.example');
+    expect(input.reports[0].content).toContain('Contact analyst@example.org');
     expect(input.reports[0].content).toContain('Recon target');
     expect(input.reports[0].content).toContain('Extract asset');
     expect(input.intel).toEqual([]);
@@ -197,7 +197,7 @@ describe('buildMissionPackageManifest', () => {
   it('never embeds raw content in the manifest — only a checksum', () => {
     const manifest = buildMissionPackageManifest(makeMission());
     const serializedReport = JSON.stringify(manifest.reports);
-    expect(serializedReport).not.toContain('analyst@earthalliance.example');
+    expect(serializedReport).not.toContain('analyst@example.org');
     expect(manifest.reports[0].checksum).toBeTruthy();
   });
 
@@ -226,7 +226,7 @@ describe('buildMissionPackageManifest', () => {
   // hypothetical.
   it('redacts description — not just the reports[] content that only ever affects a checksum', () => {
     const manifest = buildMissionPackageManifest(makeMission());
-    expect(manifest.description).not.toContain('analyst@earthalliance.example');
+    expect(manifest.description).not.toContain('analyst@example.org');
     expect(manifest.description).not.toContain('123456789');
     expect(manifest.description).toContain('[redacted@email]');
   });

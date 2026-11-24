@@ -12,7 +12,7 @@ export * from './types/SecureChat';
 
 // Re-export commonly used types for compatibility
 export type {
-  EarthAllianceContact,
+  ChatContact,
   SecureChatWindow,
   ThreatLevel,
   PQCAlgorithm,

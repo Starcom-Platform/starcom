@@ -18,17 +18,17 @@ import type { ChatProviderInterface } from '../../../lib/chat/interfaces/ChatPro
 import type { ProtocolInfo } from '../../../lib/chat/types/ProtocolTypes';
 import { AdvancedSecurityService } from '../../../security/core/AdvancedSecurityService';
 import nostrService from '../../../services/nostrService';
-import type { EarthAllianceContact } from '../../types/SecureChat';
+import type { ChatContact } from '../../types/SecureChat';
 
-function contactFor(pubkey: string): EarthAllianceContact {
+function contactFor(pubkey: string): ChatContact {
   const now = new Date();
   return {
     pubkey, displayName: 'Test Contact',
     pqcPublicKey: { algorithm: 'CRYSTALS-Kyber-768', keyData: new Uint8Array(0), securityLevel: 'NIST-3', createdAt: now, expiresAt: now },
-    verifiedIdentity: { earthAllianceId: pubkey, displayName: 'Test Contact', verificationMethod: 'web-of-trust', verifiedBy: 'x', verificationDate: now, verificationSignature: '' },
-    securityClearance: 'alpha', lastVerified: now, isEarthAllianceVerified: true, behaviorSignature: 'sig',
+    verifiedIdentity: { pubkey, displayName: 'Test Contact', verificationMethod: 'web-of-trust', verifiedBy: 'x', verificationDate: now, verificationSignature: '' },
+    securityClearance: 'alpha', lastVerified: now, isVerified: true, behaviorSignature: 'sig',
     lastActivity: now, isOnline: true, lastSeen: now, preferredRelays: [],
-  } as EarthAllianceContact;
+  } as ChatContact;
 }
 
 const { createChatProviderByCapabilities } = vi.hoisted(() => ({

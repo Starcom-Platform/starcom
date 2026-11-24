@@ -13,7 +13,7 @@ describe('isPrivateRelay', () => {
     for (const url of [
       'ws://127.0.0.1:7447', 'ws://localhost:7447', 'ws://[::1]:7447',
       'ws://10.0.0.5:7447', 'ws://192.168.1.20:7447', 'ws://172.16.4.4:7447',
-      'wss://relay.earthalliance.local', 'wss://relay.ein.internal',
+      'wss://relay.team.local', 'wss://relay.ein.internal',
     ]) {
       expect(isPrivateRelay(url), url).toBe(true);
     }

@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import { useSecureChat } from '../../communication/context/useSecureChat';
-import { EarthAllianceContact } from '../../types/SecureChat';
+import { ChatContact } from '../../types/SecureChat';
 import SecureChatWindow from './SecureChatWindow';
 import SecureChatContactList from './SecureChatContactList';
 import styles from './SecureChatManager.module.css';
@@ -83,7 +83,7 @@ const SecureChatManager: React.FC = () => {
   }, [draggedWindow, handleMouseMove, handleMouseUp]);
 
   // Handle contact selection
-  const handleContactSelect = useCallback(async (contact: EarthAllianceContact) => {
+  const handleContactSelect = useCallback(async (contact: ChatContact) => {
     setShowContactList(false);
     await openSecureChat(contact);
   }, [openSecureChat]);

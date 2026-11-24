@@ -27,7 +27,7 @@ import {
   SideChannelProtection,
   SecureContact
 } from '../types/SecurityHardening';
-import { EarthAllianceContact } from '../../communication/types/SecureChat';
+import { ChatContact } from '../../communication/types/SecureChat';
 
 // Internal type definitions for this service
 interface MemoryRegion {
@@ -144,12 +144,12 @@ export class AdvancedSecurityService {
       let identityValidation = defaultValidation;
       let quantumSafetyValidation = defaultValidation;
       
-      // If this looks like an EarthAllianceContact, do enhanced validation
-      const extendedContact = contact as unknown as EarthAllianceContact;
+      // If this looks like a ChatContact, do enhanced validation
+      const extendedContact = contact as unknown as ChatContact;
       if (extendedContact.pqcPublicKey && extendedContact.verifiedIdentity) {
         try {
-          identityValidation = await this.validateIdentity(extendedContact as EarthAllianceContact);
-          quantumSafetyValidation = await this.validateQuantumSafety(extendedContact as EarthAllianceContact);
+          identityValidation = await this.validateIdentity(extendedContact as ChatContact);
+          quantumSafetyValidation = await this.validateQuantumSafety(extendedContact as ChatContact);
         } catch (error) {
           // Fall back to basic validation if enhanced validation fails
           console.warn('Enhanced validation failed, using basic validation:', error);
@@ -458,12 +458,12 @@ export class AdvancedSecurityService {
   }
 
   // Private helper methods
-  private async validateIdentity(contact: EarthAllianceContact): Promise<ValidationResult> {
+  private async validateIdentity(contact: ChatContact): Promise<ValidationResult> {
     // Verified or not: no score of a person stands in for it (refusal R-6; D-MX, MX20).
     return {
-      isValid: contact.isEarthAllianceVerified,
-      confidence: contact.isEarthAllianceVerified ? 1 : 0,
-      warnings: contact.isEarthAllianceVerified ? [] : [{
+      isValid: contact.isVerified,
+      confidence: contact.isVerified ? 1 : 0,
+      warnings: contact.isVerified ? [] : [{
         type: 'unverified_identity',
         severity: 'medium',
         message: 'Nobody has verified who holds this key',
@@ -485,7 +485,7 @@ export class AdvancedSecurityService {
     };
   }
 
-  private async validateQuantumSafety(contact: EarthAllianceContact): Promise<ValidationResult> {
+  private async validateQuantumSafety(contact: ChatContact): Promise<ValidationResult> {
     const isQuantumSafe = contact.pqcPublicKey.algorithm.includes('CRYSTALS') ||
                          contact.pqcPublicKey.algorithm.includes('ML-KEM') ||
                          contact.pqcPublicKey.algorithm.includes('ML-DSA');

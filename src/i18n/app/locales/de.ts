@@ -780,7 +780,7 @@ const de: Messages = {
       },
       geoint: {
         hover: 'Geografischer Anker',
-        detail: 'Breiten- und Längengrad setzen diesen Bericht auf den CyberCommand-Globus und in andere räumliche Ansichten.',
+        detail: 'Breiten- und Längengrad setzen diesen Bericht auf den Globus und in andere räumliche Ansichten.',
       },
       latitude: {
         hover: 'Nord-/Süd-Koordinate',

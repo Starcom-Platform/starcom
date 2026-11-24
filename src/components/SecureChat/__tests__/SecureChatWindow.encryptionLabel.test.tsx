@@ -12,7 +12,7 @@ import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import SecureChatWindow from '../SecureChatWindow';
-import type { EarthAllianceContact, SecureChatWindow as ChatWindow, SecureMessage } from '../../../types/SecureChat';
+import type { ChatContact, SecureChatWindow as ChatWindow, SecureMessage } from '../../../types/SecureChat';
 
 window.HTMLElement.prototype.scrollIntoView = vi.fn();
 
@@ -42,15 +42,15 @@ vi.mock('../../../communication/context/useSecureChat', () => ({
   })
 }));
 
-function makeContact(pubkey: string): EarthAllianceContact {
+function makeContact(pubkey: string): ChatContact {
   const now = new Date();
   return {
     pubkey,
     displayName: 'Marcus',
     pqcPublicKey: { algorithm: 'CRYSTALS-Kyber-768', keyData: new Uint8Array(0), securityLevel: 'NIST-3', createdAt: now, expiresAt: now },
-    verifiedIdentity: { earthAllianceId: pubkey, displayName: 'Marcus', verificationMethod: 'web-of-trust', verifiedBy: 'x', verificationDate: now, verificationSignature: '' },
+    verifiedIdentity: { pubkey, displayName: 'Marcus', verificationMethod: 'web-of-trust', verifiedBy: 'x', verificationDate: now, verificationSignature: '' },
     lastVerified: now,
-    isEarthAllianceVerified: false,
+    isVerified: false,
     behaviorSignature: '',
     lastActivity: now,
     isOnline: true,

@@ -1,6 +1,6 @@
 import React, { createContext, useReducer, useEffect, useRef, useState, useCallback, ReactNode } from 'react';
 import { nip19 } from 'nostr-tools';
-import { EarthAllianceContact, SecureChatWindow, SecureMessage, ThreatLevel, PQCAlgorithm, PQCSecurityLevel } from '../types/SecureChat';
+import { ChatContact, SecureChatWindow, SecureMessage, ThreatLevel, PQCAlgorithm, PQCSecurityLevel } from '../types/SecureChat';
 import { SecureContact } from '../../security/types/SecurityHardening';
 import { secureChatIntegration } from '../../services/SecureChatIntegrationService';
 import { AdvancedSecurityService } from '../../security/core/AdvancedSecurityService';
@@ -27,13 +27,13 @@ const log = createLogger({ prefix: 'SecureChat' });
  */
 const SECURE_CHAT_NEEDS = ['messaging', 'pq_encryption'];
 
-// Earth Alliance Secure Chat Context Types
+// Secure chat context types
 interface SecureChatState {
   // Active chat windows
   activeWindows: Map<string, SecureChatWindow>;
   
-  // Verified contacts with Earth Alliance authentication
-  verifiedContacts: Map<string, EarthAllianceContact>;
+  // Contacts, each with how (or whether) their identity was verified
+  verifiedContacts: Map<string, ChatContact>;
   
   // Current security threat level
   globalThreatLevel: ThreatLevel;
@@ -77,7 +77,7 @@ interface SecureChatContextType {
   
   // Window management
   /** `byPerson: false` when a message arriving opened it, not the person (MF15). */
-  openSecureChat: (contact: EarthAllianceContact, opts?: { byPerson?: boolean }) => Promise<void>;
+  openSecureChat: (contact: ChatContact, opts?: { byPerson?: boolean }) => Promise<void>;
   closeSecureChat: (chatId: string) => Promise<void>;
   minimizeChat: (chatId: string) => void;
   maximizeChat: (chatId: string) => void;
@@ -88,7 +88,7 @@ interface SecureChatContextType {
 
   // Contact management
   /** Returns whether verification succeeded and the contact was actually added — silently returning void left the only real caller (the add-contact form) with no way to distinguish success from a failed verification. */
-  addVerifiedContact: (contact: EarthAllianceContact) => Promise<boolean>;
+  addVerifiedContact: (contact: ChatContact) => Promise<boolean>;
   removeContact: (contactId: string) => Promise<void>;
   
   // Security operations
@@ -112,7 +112,7 @@ type SecureChatAction =
   | { type: 'UPDATE_WINDOW_POSITION'; payload: { chatId: string; x: number; y: number } }
   | { type: 'ADD_MESSAGE'; payload: { chatId: string; message: SecureMessage } }
   | { type: 'UPDATE_MESSAGE_STATUS'; payload: { chatId: string; messageId: string; status: SecureMessage['deliveryStatus']; encrypted?: boolean; postQuantum?: boolean } }
-  | { type: 'ADD_CONTACT'; payload: { contact: EarthAllianceContact } }
+  | { type: 'ADD_CONTACT'; payload: { contact: ChatContact } }
   | { type: 'REMOVE_CONTACT'; payload: { contactId: string } }
   | { type: 'UPDATE_THREAT_LEVEL'; payload: { level: ThreatLevel } }
   | { type: 'UPDATE_NETWORK_STATUS'; payload: { status: SecureChatState['networkStatus'] } }
@@ -506,7 +506,7 @@ export const SecureChatProvider: React.FC<SecureChatProviderProps> = ({ children
   // Direct messages said before, by person, kept to show when their window opens (plan item 2.7).
   const directHistory = useRef(new Map<string, SecureMessage[]>());
 
-  const openSecureChat = async (contact: EarthAllianceContact, opts?: { byPerson?: boolean }): Promise<void> => {
+  const openSecureChat = async (contact: ChatContact, opts?: { byPerson?: boolean }): Promise<void> => {
     // A conversation the person opened is using chat: their key's prekeys are announced from now (MF15).
     if (opts?.byPerson !== false) secureChatIntegration.markChatUsed();
     try {
@@ -525,7 +525,7 @@ export const SecureChatProvider: React.FC<SecureChatProviderProps> = ({ children
       }
 
       // Multi-layer security validation
-      const isVerified = await verifyEarthAllianceIdentity(contact);
+      const isVerified = await verifyContactIdentity(contact);
       if (!isVerified) {
         throw new Error(`Contact identity verification failed for ${contact.displayName}`);
       }
@@ -677,8 +677,8 @@ export const SecureChatProvider: React.FC<SecureChatProviderProps> = ({ children
     dispatch({ type: 'UPDATE_MESSAGE_STATUS', payload: { chatId, messageId, status, encrypted, postQuantum } });
   };
 
-  const addVerifiedContact = async (contact: EarthAllianceContact): Promise<boolean> => {
-    const isVerified = await verifyEarthAllianceIdentity(contact);
+  const addVerifiedContact = async (contact: ChatContact): Promise<boolean> => {
+    const isVerified = await verifyContactIdentity(contact);
     if (isVerified) {
       dispatch({ type: 'ADD_CONTACT', payload: { contact } });
     }
@@ -855,9 +855,9 @@ export const SecureChatProvider: React.FC<SecureChatProviderProps> = ({ children
  */
 
 // Enhanced security validation using AdvancedSecurityService
-async function verifyEarthAllianceIdentity(contact: EarthAllianceContact): Promise<boolean> {
+async function verifyContactIdentity(contact: ChatContact): Promise<boolean> {
   try {
-    // Convert EarthAllianceContact to SecureContact for validation
+    // Convert ChatContact to SecureContact for validation
     const secureContact: SecureContact = {
       id: contact.pubkey, // Use pubkey as id
       pubkey: contact.pubkey,

@@ -143,7 +143,7 @@ const CyberCommandHUDLayout: React.FC<CyberCommandHUDLayoutProps> = ({ isEmbedde
                     )}
                   </div>
                   
-                  {/* Earth Alliance Secure Chat System removed (legacy, non-functional) */}
+                  {/* The old secure chat system was removed here (legacy, non-functional) */}
                   
                 </FloatingPanelManager>
                   </GlobeLayerControlProvider>

@@ -16,7 +16,7 @@ describe('contactForKey', () => {
     expect(contact.verifiedIdentity).toMatchObject({ verificationMethod: 'none', verifiedBy: '' });
     expect(contact).not.toHaveProperty('trustScore');
     expect(contact).not.toHaveProperty('reputation');
-    expect(contact.isEarthAllianceVerified).toBe(false);
+    expect(contact.isVerified).toBe(false);
   });
 
   it('a contact a person added by hand says that person vouched for it, and scores it no more', () => {

@@ -35,7 +35,7 @@ describe('SecureChat PQC round trip (Cycle B1 fix)', () => {
     // --- sendMessage()'s new PQC block, exactly ---
     const otkIndex = Math.floor(Math.random() * bobBundle.oneTimePrekeys.length);
     const session = await forwardSecrecy.initiateSession(bobBundle, otkIndex);
-    const plaintext = 'Earth Alliance rendezvous confirmed — 0300Z, checkpoint Delta.';
+    const plaintext = 'Meeting confirmed — 0300Z, at the usual place.';
     const contentBytes = new TextEncoder().encode(plaintext);
     const encrypted = await pqc.encryptData(contentBytes, session.sessionKey);
 

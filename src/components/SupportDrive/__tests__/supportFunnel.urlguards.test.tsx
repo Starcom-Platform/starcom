@@ -25,7 +25,7 @@ describe('SupportFunnelModal URL guards', () => {
   it('disables fund CTA when missing URL', () => {
     render(<SupportFunnelModal {...baseProps} disableFund />);
     // By testid, not by copy. These asserted /fund the mission/i and /join the
-    // nostr ops/i; the buttons are now "Fund The Alliance" and "Join Coms
+    // nostr ops/i; the buttons were then "Fund The Alliance" and "Join Coms
     // Uplink", so both suites were failing on a rename while the behaviour they
     // check — disabled when no URL is configured — still held.
     const fundBtn = screen.getByTestId('support-funnel-fund');

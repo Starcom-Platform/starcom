@@ -1,11 +1,11 @@
-// Earth Alliance Secure Chat Type Definitions
+// Secure chat type definitions
 
 // Core threat levels used throughout the system
 export type ThreatLevel = 'normal' | 'elevated' | 'high' | 'critical';
 
 /*
  * A `SecurityClearance = 'alpha'|'beta'|'gamma'|'omega'|'command'` type stood
- * here, commented "Security clearance levels within Earth Alliance".
+ * here, an invented ladder of security clearances.
  *
  * It was an invented clearance system — not a real-world one — and nothing in
  * the application ever compared two of its values. Checked by grepping every
@@ -31,8 +31,8 @@ export type PQCSecurityLevel = 'NIST-1' | 'NIST-3' | 'NIST-5';
 // Message types for secure communications
 export type MessageType = 'text' | 'file' | 'image' | 'voice' | 'emergency' | 'command';
 
-// Earth Alliance Contact Interface
-export interface EarthAllianceContact {
+// A chat contact
+export interface ChatContact {
   // Core identity
   pubkey: string; // Nostr public key
   pqcPublicKey: PQCPublicKey; // Post-quantum public key
@@ -47,7 +47,7 @@ export interface EarthAllianceContact {
   // Verification status
   lastVerified: Date;
   biometricHash?: string; // Optional hardware verification
-  isEarthAllianceVerified: boolean;
+  isVerified: boolean;
   
   // Behavioral analysis
   behaviorSignature: string; // AI-generated behavior fingerprint
@@ -84,7 +84,7 @@ export interface PQCKeyPair {
 
 // Verified Identity Structure
 export interface VerifiedIdentity {
-  earthAllianceId: string;
+  pubkey: string;
   displayName: string;
   /** `none`: nobody checked who holds the key, as for a stranger's direct message (plan item 9.9). */
   verificationMethod: 'biometric' | 'hardware-key' | 'web-of-trust' | 'command-verified' | 'none';
@@ -97,7 +97,7 @@ export interface VerifiedIdentity {
 export interface SecureChatWindow {
   // Window identification
   id: string;
-  contact: EarthAllianceContact;
+  contact: ChatContact;
   
   // Window positioning and state
   position: WindowPosition;
@@ -219,7 +219,7 @@ export interface SecureRelay {
   region: string;
   lastPing: number;
   reliability: number; // 0-1 uptime score
-  earthAllianceVerified: boolean;
+  verified: boolean;
 }
 
 // Threat detection and security assessment
@@ -234,7 +234,7 @@ export interface SecurityThreat {
   
   // Mitigation
   mitigationRequired: boolean;
-  earthAllianceProtocol?: string;
+  mitigationProtocol?: string;
   recommendedActions: string[];
   
   // Context
@@ -323,10 +323,10 @@ export interface DeepfakeAnalysis {
   modelUsed: AIModel;
 }
 
-// Earth Alliance command structure
+// Command structure
 export interface CommandStructure {
   availableChannels: CommandChannel[];
-  emergencyContacts: EarthAllianceContact[];
+  emergencyContacts: ChatContact[];
   chainOfCommand: string[]; // Pubkeys in order of authority
 }
 
@@ -370,7 +370,7 @@ export interface GovernanceVote {
 // Export all types for use throughout the application
 export type {
   // Re-export the main types for convenience
-  EarthAllianceContact as Contact,
+  ChatContact as Contact,
   SecureChatWindow as ChatWindow,
   SecureMessage as Message,
   SecurityThreat as Threat,

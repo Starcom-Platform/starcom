@@ -1,5 +1,5 @@
 /**
- * Starcom is Earth Alliance media: no card, video frame or preview names the publisher whose notes
+ * Starcom speaks as itself: no card, video frame or preview names the publisher whose notes
  * it draws (the operator, 24 October 2026; record D-L, data-licensing.md). A card's Data line keeps
  * every credit a source's terms ask for; our own notes are our own work and are credited to nobody.
  *

@@ -91,9 +91,9 @@ const SupportFunnelModal: React.FC<SupportFunnelModalProps> = ({
               <h2 className={styles.title}>{headline}</h2>
               <p className={styles.subhead}>{subhead}</p>
               <div className={styles.badgeRow}>
-                <span className={styles.badge}>Earth Alliance</span>
+                <span className={styles.badge}>Open Source</span>
                 <span className={styles.badge}>Decentralized Network</span>
-                <span className={styles.badge}>Mission Ready</span>
+                <span className={styles.badge}>Free to Use</span>
               </div>
             </div>
           </div>
@@ -110,13 +110,13 @@ const SupportFunnelModal: React.FC<SupportFunnelModalProps> = ({
               Join Coms Uplink
             </button>
             <button type="button" data-testid="support-funnel-fund" className={styles.secondaryButton} onClick={onOpenFund} disabled={disableFund}>
-              Fund The Alliance
+              Fund Starcom
             </button>
           </div>
           <ul className={styles.ctaBullets}>
-            <li>Starcom runs secure communications, intel tools, and a global operative network.</li>
+            <li>Starcom puts public data on a live globe, with records anyone can sign and publish.</li>
             <li>Access to the ops channel is invite-only to keep conversations focused and protected.</li>
-            <li>Your support keeps our servers running and the network strong against interference.</li>
+            <li>Your support keeps the servers and relays running.</li>
           </ul>
           <div className={styles.panelDivider} aria-hidden="true" />
 

@@ -59,8 +59,8 @@ Vitest runs them without checking their types.
 
 ## Guards and gates
 
-A guard is a script in `scripts/guard-*.mjs` that fails when the code breaks a rule the project holds. There were 46
-on 23 Nov 2026.
+A guard is a script in `scripts/guard-*.mjs` that fails when the code breaks a rule the project holds. There were 47
+on 24 Nov 2026.
 Each starts with an `@asserts` line saying what it checks, and its header says why it exists.
 
 - `npm run guards` runs the ones listed under `guards` in `package.json`.

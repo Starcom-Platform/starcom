@@ -1,4 +1,4 @@
-import type { EarthAllianceContact } from '../types/SecureChat';
+import type { ChatContact } from '../types/SecureChat';
 
 /**
  * A contact for a key and a name (plan item 2.7): what "Verify & Add" makes,
@@ -16,7 +16,7 @@ export function contactForKey(
   pubkey: string,
   displayName: string,
   { vouched, now = new Date() }: { vouched: boolean; now?: Date },
-): EarthAllianceContact {
+): ChatContact {
   return {
     pubkey,
     displayName,
@@ -28,7 +28,7 @@ export function contactForKey(
       expiresAt: new Date(now.getTime() + 30 * 24 * 60 * 60 * 1000),
     },
     verifiedIdentity: {
-      earthAllianceId: pubkey,
+      pubkey,
       displayName,
       verificationMethod: vouched ? 'web-of-trust' : 'none',
       verifiedBy: vouched ? 'local-operator' : '',
@@ -36,7 +36,7 @@ export function contactForKey(
       verificationSignature: '',
     },
     lastVerified: now,
-    isEarthAllianceVerified: false,
+    isVerified: false,
     behaviorSignature: '',
     lastActivity: now,
     isOnline: false,

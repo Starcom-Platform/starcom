@@ -17,7 +17,7 @@ const MOCK_EMERGENCY_CHANNELS = [
   {
     id: 'emergency-global',
     name: 'Global Emergency',
-    description: 'Earth Alliance-wide emergency coordination',
+    description: 'Network-wide emergency coordination',
     securityLevel: 5,
     participants: ['user1', 'user2', 'emergency-coordinator'],
     isEncrypted: true,

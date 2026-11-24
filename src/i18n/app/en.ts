@@ -783,7 +783,7 @@ export const en = {
       },
       geoint: {
         hover: 'Geospatial anchor',
-        detail: 'Latitude and longitude place this report on the CyberCommand globe and other spatial views.',
+        detail: 'Latitude and longitude place this report on the globe and other spatial views.',
       },
       latitude: {
         hover: 'North / South coordinate',

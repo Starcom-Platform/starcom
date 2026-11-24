@@ -1,6 +1,5 @@
 // SecureChatIntegrationService.ts
 // Integration layer connecting SecureChat UI with Nostr, IPFS, and PQC backend services
-// Earth Alliance secure communication protocol implementation
 
 import { NostrService } from './nostrService';
 import { emergencyChatRelays } from './nostr/publishTargets';
@@ -177,7 +176,7 @@ export interface ContactSyncResult {
  * SecureChatIntegrationService
  * 
  * Bridges the SecureChat UI layer with the underlying Nostr, IPFS, and PQC services.
- * Provides unified API for secure messaging with Earth Alliance protocols.
+ * Provides one API for secure messaging over those services.
  */
 export class SecureChatIntegrationService implements SecureChatIntegrationServiceInterface {
   private static instance: SecureChatIntegrationService;

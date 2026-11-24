@@ -9,9 +9,9 @@ interface GitHubWidgetProps {
 }
 
 const GITHUB_CONFIG = {
-  repoUrl: 'https://github.com/Arch-Angel-Agency-LLC/starcom-app',
-  repoOwner: 'Arch-Angel-Agency-LLC',
-  repoName: 'starcom-app',
+  repoUrl: 'https://github.com/Starcom-Platform/starcom',
+  repoOwner: 'Starcom-Platform',
+  repoName: 'starcom',
   communityGoal: 100 // Target star count
 };
 
@@ -167,7 +167,7 @@ const GitHubWidget: React.FC<GitHubWidgetProps> = ({ isOpen, onClose }) => {
                 <div className={styles.repoIcon}>📂</div>
                 <div className={styles.repoInfo}>
                   <h3>Starcom App</h3>
-                  <p className={styles.repoPath}>Arch-Angel-Agency-LLC/{GITHUB_CONFIG.repoName}</p>
+                  <p className={styles.repoPath}>{GITHUB_CONFIG.repoOwner}/{GITHUB_CONFIG.repoName}</p>
                 </div>
                 {repoStats.language && (
                   <div className={styles.languageBadge}>{repoStats.language}</div>

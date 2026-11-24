@@ -4,9 +4,12 @@ For Starcom's own session to read. Branch `mj/neutral-credit`, from origin/main 
 
 ## What the operator decided
 
-Starcom is Earth Alliance media. No card, video frame or preview names Mecha Jono or Archangel, and the
+Starcom speaks as itself. No card, video frame or preview names Mecha Jono or Archangel, and the
 operator found "Data: Mecha Jono on The Record" unclear. So our credit is dropped. Every credit a source's
 licence asks for stays.
+
+(Reworded on 24 Nov 2026, when the operator retired the project's old framing from Starcom. The decision is
+unchanged.)
 
 ## What changed
 

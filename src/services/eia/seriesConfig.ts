@@ -234,6 +234,5 @@ export const getSeriesByPriority = (priority: string): EIASeriesConfig[] => {
   return Object.values(EIA_SERIES_CONFIG).filter(config => config.priority === priority);
 };
 
-// AI-NOTE: This configuration provides comprehensive mapping of EIA data series to Earth Alliance
-// intelligence categories with optimized batching for efficient API usage and strategic context
-// for planetary reclamation operations.
+// AI-NOTE: This configuration maps EIA data series to the fields they fill, batched for efficient
+// API usage.

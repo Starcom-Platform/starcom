@@ -16,7 +16,7 @@ export const DiscordNotifications = {
       type: 'UI_SHOW_NOTIFICATION',
       source: 'collaboration', // Uses existing source category
       payload: {
-        title: 'Earth Alliance Discord',
+        title: 'Starcom Discord',
         message: `${memberName} joined the command center (${totalOnline} online)`,
         type: 'info',
         duration: 4000,
@@ -49,7 +49,7 @@ export const DiscordNotifications = {
       source: 'collaboration',
       payload: {
         title: 'Server Boost',
-        message: `${boosterName} boosted the Earth Alliance server!`,
+        message: `${boosterName} boosted the Starcom server!`,
         type: 'success',
         duration: 6000,
       },

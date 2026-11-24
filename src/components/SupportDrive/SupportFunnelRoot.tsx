@@ -9,12 +9,12 @@ import { isPipelineGuideOpen, onPipelineGuideChange } from '../HUD/NewUserHint/p
 import SupportFunnelModal from './SupportFunnelModal';
 import styles from './SupportFunnelModal.module.css';
 
-const HEADLINE = 'Intelligence Reborn.\nJoin the Starcom Initiative.';
-const SUBHEAD = 'Become the Spark that Ignites the Earth Intelligence Network. Join the secure ops channel. Help build the Earth Intelligence Network. Strengthen our defenses against control.';
+const HEADLINE = 'Help build Starcom.\nOpen tools for public intelligence.';
+const SUBHEAD = 'Starcom is free and open source, built independently. Join the chat, help with the work, or fund the servers and relays.';
 const DISCLOSURE = 'Contributions to Starcom are personal support for an independent open-source project. They are not tax-deductible and are not processed as charitable donations. No goods, services, or benefits are provided in exchange. Subject to U.S. law; treated as voluntary personal gifts.';
 const DISCORD_URL = 'https://discord.gg/Mea5v8pQmt';
 const TELEGRAM_URL = 'https://t.me/starcomintelgroup';
-const GITHUB_URL = 'https://github.com/Arch-Angel-Agency-LLC/starcom-app';
+const GITHUB_URL = 'https://github.com/Starcom-Platform/starcom';
 const SURVEY_URL = 'https://app.formbricks.com/s/cmlhj2oar01rdti011yl3hu2u';
 /** Long enough to read "Invite copied" once; short enough not to linger. */
 const COPY_TOAST_MS = 2500;
@@ -23,28 +23,23 @@ const TRAINING_PROGRAMS_URL = 'https://archangel.agency/internships/';
 const LEARN_BODY = (
   <>
     <div className={styles.learnTldr}>
-      Your support keeps our communications alive, our operatives resourced, and the mission completely uncaptured.<br />
-      Every contribution directly strengthens the Earth Alliance we are building right now.
+      Your support keeps Starcom free to use, and its servers and relays running.<br />
+      What people publish on it is signed and open, so anyone can check the work.
     </div>
     <div className={styles.learnMedium}>
-      <p>Starcom is not a company or a charity — it is an independent open-source project run by people who refuse to let centralized control win.</p>
-      <p>When you join the ops channel you add real eyes, real minds, and real signal to a network that cannot be shut down.</p>
-      <p>When you support the network you keep the relays online, the servers running, and the intelligence pipelines protected from interference — so the operatives on the ground can keep working.</p>
-      <p>This is how we turn “someone should do something” into “we are the ones doing it.”</p>
+      <p>Starcom is not a company or a charity. It is an independent open-source project.</p>
+      <p>Join the chat to help: find sources, check reports, and publish what you find.</p>
+      <p>Fund the project to keep the servers and relays running, so anyone can read and publish open records.</p>
       <ul className={styles.learnBullets}>
-        <li>Start the chain reaction that ends the long dark.</li>
-        <li>Build the base that lets the whole alliance stand tall.</li>
-        <li>Shine so others can find their way to the alliance.</li>
-        <li>Lay the first stones of a network no one can shut down.</li>
+        <li>Public data on a live globe, free to use.</li>
+        <li>Records signed by the people who publish them.</li>
+        <li>Open code, open data and open standards.</li>
       </ul>
     </div>
     <div className={styles.learnDepth}>
-      <p>We are living in a rare window where the old systems of control are being exposed faster than they can adapt. Files are dropping, alliances are forming across old lines, and millions of people are waking up to the same realization: if we do not build our own uncaptured networks now, we will not get another chance.</p>
-      <p>Starcom is being built right now to become one of the few truly operational, decentralized projects—running real OSINT pipelines and operative communications without asking permission.</p>
-      <p>The Earth Intelligence Network exists to take back intelligence from captured institutions and place it in the hands of the people. For too long we have been at the mercy of corruption; it is time to take responsibility. This is a critical step to establishing the Earth Alliance and freeing humanity from the looming global oppression.</p>
-      <p>Every dollar, every relay kept alive, every new operative who joins is a brick in a wall that the old powers cannot tear down. This is not hope. This is infrastructure for the next phase of human freedom.</p>
-      <p>The Earth Alliance is not coming. It is being built — right now, by us.</p>
-      <p>That is why this matters.</p>
+      <p>Starcom is the reference app of the Earth Intelligence Network: open software, data and standards that anyone can run or build on.</p>
+      <p>It asks you to check its work, not to trust it. Published records are signed and open, and the code is public.</p>
+      <p>Contributions pay for the servers and relays, and for the time to keep building.</p>
     </div>
   </>
 );

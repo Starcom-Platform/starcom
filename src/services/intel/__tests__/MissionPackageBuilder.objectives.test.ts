@@ -107,9 +107,9 @@ describe('what an ask must never carry', () => {
 describe('an ask is redacted like the briefing, not like a title', () => {
   it('masks an email address', () => {
     const manifest = buildMissionPackageManifest(mission([
-      objective({ description: 'Email analyst@earthalliance.example for the log' }),
+      objective({ description: 'Email analyst@example.org for the log' }),
     ]));
-    expect(manifest.objectives?.[0].ask).not.toContain('analyst@earthalliance.example');
+    expect(manifest.objectives?.[0].ask).not.toContain('analyst@example.org');
   });
 
   it('masks a long digit run', () => {
@@ -128,16 +128,16 @@ describe('an ask is redacted like the briefing, not like a title', () => {
 
   it('redacts what a doer must not do, which is prose too', () => {
     const manifest = buildMissionPackageManifest(mission([
-      objective({ limits: ['do not email analyst@earthalliance.example'] }),
+      objective({ limits: ['do not email analyst@example.org'] }),
     ]));
-    expect(manifest.objectives?.[0].limits?.[0]).not.toContain('analyst@earthalliance.example');
+    expect(manifest.objectives?.[0].limits?.[0]).not.toContain('analyst@example.org');
   });
 
   it('redacts the expected artifact', () => {
     const manifest = buildMissionPackageManifest(mission([
-      objective({ expectedArtifact: 'Send to analyst@earthalliance.example' }),
+      objective({ expectedArtifact: 'Send to analyst@example.org' }),
     ]));
-    expect(manifest.objectives?.[0].handsBack).not.toContain('analyst@earthalliance.example');
+    expect(manifest.objectives?.[0].handsBack).not.toContain('analyst@example.org');
   });
 });
 

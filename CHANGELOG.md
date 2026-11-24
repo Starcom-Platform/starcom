@@ -23,6 +23,11 @@ kept.
 
 - **Cancelling a withdrawal that waits to send** now lets its request to delete go first. Before, there was a moment
   when the request could have been sent without the withdrawal it belonged to.
+- **The support appeal says plainly what Starcom is** and what support pays for. The project's old framing is gone
+  from it, from under the wordmark (which now shows the version), from the chat contacts and from the Discord
+  notices. A Globe settings colour scheme that changed nothing is gone too.
+- **The GitHub links** in the support appeal and the Community menu open the public repository. They led to a
+  private one.
 
 The rest is for people building on Starcom or with it:
 
@@ -37,7 +42,11 @@ The rest is for people building on Starcom or with it:
 - **The registry says what is dormant:** kinds 4, 40, 41, 43 and 44 are in code no screen reaches, and kind 42 is
   read, never sent.
 - **Removed:** scripts and tests that ran against code no longer in the repository, and a local relay database's
-  working files, committed by mistake.
+  working files, committed by mistake. Also four methods in `nostrService.ts` that nothing called, and the message
+  and channel fields only they filled in.
+- **A guard keeps the old framing out:** `scripts/guard-old-framing.mjs`, in `npm run guards`, reads the code,
+  scripts, extension and served files.
+- **The chat adapters' metadata** names Starcom as maintainer and AGPL-3.0-only as licence. It said MIT.
 
 ## 0.2.0 (23 Nov 2026): the first public release
 

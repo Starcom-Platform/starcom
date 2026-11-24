@@ -40,16 +40,6 @@ const AppearanceControls: React.FC<AppearanceControlsProps> = ({
         background: 'rgba(0, 0, 0, 0.95)',
       },
     },
-    {
-      id: 'earth-alliance' as const,
-      name: '🌍 Earth Alliance',
-      description: 'Green-gold military theme',
-      colors: {
-        primary: '#22c55e',
-        secondary: '#eab308',
-        background: 'rgba(20, 30, 20, 0.9)',
-      },
-    },
   ];
 
   return (

@@ -12,8 +12,8 @@ interface DiscordWidgetProps {
 const DISCORD_CONFIG = {
   serverUrl: 'https://discord.gg/Mea5v8pQmt',
   serverId: '1145517675389403287', // Real Discord server ID
-  serverName: 'Starcom Earth Alliance', // Will be replaced by real API data
-  description: 'Join the Earth Alliance community for real-time intelligence sharing, mission coordination, and global security collaboration.',
+  serverName: 'Starcom Intel Group', // The server's own name, until the API answers with it
+  description: 'Join the Starcom community to share sources, check reports and plan missions together.',
   embedWidgetUrl: 'https://discord.com/widget?id=1145517675389403287&theme=dark', // Real Discord widget embed
 };
 

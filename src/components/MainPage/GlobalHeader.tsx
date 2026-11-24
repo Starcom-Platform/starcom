@@ -11,6 +11,7 @@ import { useGdeltSpan } from '../../geopolitical/hooks/useGdeltSpan';
 import { useResourceZonePercentiles } from '../../geopolitical/hooks/useResourceZonePercentiles';
 import { useRealDiplomaticEvents } from '../../geopolitical/hooks/useRealDiplomaticEvents';
 import CommunityMenu from './CommunityMenu';
+import { getAppVersion } from '../../utils/version';
 import SecureChatHeaderButton from '../SecureChat/SecureChatHeaderButton';
 import Watchlist from '../Watchlist/Watchlist';
 import YourKey from '../Identity/YourKey';
@@ -230,7 +231,7 @@ const GlobalHeader: React.FC = () => {
         <StarcomMark className={styles.wingCommanderLogo} title="Starcom" />
         <div className={styles.textLogo}>
           <div className={styles.logo}>STARCOM</div>
-          <div className={styles.version}>Earth Alliance</div>
+          <div className={styles.version}>v{getAppVersion()}</div>
         </div>
       </div>
       

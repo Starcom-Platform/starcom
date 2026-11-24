@@ -12,7 +12,7 @@ import CapturesInbox from '../../Extension/CapturesInbox';
 import { captureToItem } from '../../../extension/captureItems';
 import { intelWorkspaceManager } from '../../../services/intel/IntelWorkspaceManager';
 import type { Capture } from '../../../extension/protocol';
-import type { EarthAllianceContact, SecureChatWindow as ChatWindow, SecureMessage } from '../../../types/SecureChat';
+import type { ChatContact, SecureChatWindow as ChatWindow, SecureMessage } from '../../../types/SecureChat';
 
 window.HTMLElement.prototype.scrollIntoView = vi.fn();
 vi.mock('../../../utils/hudNotifications', () => ({ hudError: vi.fn() }));
@@ -33,7 +33,7 @@ beforeEach(() => {
 afterEach(() => { delete (globalThis as { Translator?: unknown }).Translator; });
 
 const now = new Date();
-const contact = { pubkey: 'pk-1', displayName: 'Marcus' } as unknown as EarthAllianceContact;
+const contact = { pubkey: 'pk-1', displayName: 'Marcus' } as unknown as ChatContact;
 const message = (id: string, over: Partial<SecureMessage>): SecureMessage => ({
   id, chatId: 'chat-1', encryptedContent: '', content: GERMAN, messageType: 'text', isOutgoing: false, isEncrypted: true, postQuantum: true,
   deliveryStatus: 'delivered', senderPubkey: 'pk-1', senderSignature: '', encryptionAlgorithm: 'CRYSTALS-Kyber-768', timestampHash: '',

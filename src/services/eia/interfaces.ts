@@ -178,12 +178,11 @@ export interface EIAApiMetrics {
   lastCallTimestamp: number;
 }
 
-// Earth Alliance Intelligence Classification
+// Security metadata for an EIA series
 export type SecurityClassification = 'public' | 'internal' | 'classified';
 
 export interface EIASecurityMetadata {
   classification: SecurityClassification;
-  earthAllianceRelevance: string;
   threatIndicators: string[];
   operationalPriority: number; // 1-10 scale
 }

@@ -17,7 +17,7 @@ import { SecureChatProvider } from '../SecureChatContext';
 import { useSecureChat } from '../useSecureChat';
 import { AdvancedSecurityService } from '../../../security/core/AdvancedSecurityService';
 import nostrService from '../../../services/nostrService';
-import type { EarthAllianceContact } from '../../types/SecureChat';
+import type { ChatContact } from '../../types/SecureChat';
 
 const securityServiceInstance = AdvancedSecurityService.getInstance();
 
@@ -25,16 +25,16 @@ const wrapper = ({ children }: { children: React.ReactNode }) => (
   <SecureChatProvider>{children}</SecureChatProvider>
 );
 
-function makeContact(pubkey: string): EarthAllianceContact {
+function makeContact(pubkey: string): ChatContact {
   const now = new Date();
   return {
     pubkey,
     displayName: 'Test Contact',
     pqcPublicKey: { algorithm: 'CRYSTALS-Kyber-768', keyData: new Uint8Array(0), securityLevel: 'NIST-3', createdAt: now, expiresAt: now },
-    verifiedIdentity: { earthAllianceId: pubkey, displayName: 'Test Contact', verificationMethod: 'web-of-trust', verifiedBy: 'x', verificationDate: now, verificationSignature: '' },
+    verifiedIdentity: { pubkey, displayName: 'Test Contact', verificationMethod: 'web-of-trust', verifiedBy: 'x', verificationDate: now, verificationSignature: '' },
     securityClearance: 'alpha',
     lastVerified: now,
-    isEarthAllianceVerified: true,
+    isVerified: true,
     behaviorSignature: 'sig',
     lastActivity: now,
     isOnline: true,

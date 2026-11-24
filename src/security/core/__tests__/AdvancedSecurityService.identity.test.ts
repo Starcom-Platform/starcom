@@ -9,8 +9,8 @@ import type { SecureContact } from '../../types/SecurityHardening';
 const contact = (verified: boolean) => ({
   id: 'k', pubkey: 'a'.repeat(64), displayName: 'Priya',
   pqcPublicKey: { algorithm: 'ML-KEM-768', keyData: new Uint8Array(0), securityLevel: 'NIST-3', createdAt: new Date(), expiresAt: new Date() },
-  verifiedIdentity: { earthAllianceId: 'k', displayName: 'Priya', verificationMethod: 'none', verifiedBy: '', verificationDate: new Date(), verificationSignature: '' },
-  isEarthAllianceVerified: verified,
+  verifiedIdentity: { pubkey: 'k', displayName: 'Priya', verificationMethod: 'none', verifiedBy: '', verificationDate: new Date(), verificationSignature: '' },
+  isVerified: verified,
 }) as unknown as SecureContact;
 
 describe('validating a contact', () => {

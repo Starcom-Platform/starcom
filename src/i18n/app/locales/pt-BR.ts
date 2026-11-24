@@ -789,7 +789,7 @@ const ptBR: Messages = {
       },
       geoint: {
         hover: 'Âncora geoespacial',
-        detail: 'Latitude e longitude põem este relatório no globo do CyberCommand e em outras vistas espaciais.',
+        detail: 'Latitude e longitude põem este relatório no globo e em outras vistas espaciais.',
       },
       latitude: {
         hover: 'Coordenada norte/sul',

@@ -60,10 +60,6 @@ export class NostrChatAdapter extends BaseChatAdapter {
     
     this.relays = options?.relays || [];
     this.userDID = options?.userDID || null;
-    // Register additional features
-    this.registerFeature('resistance_communications');
-    this.registerFeature('earth_alliance_protocols');
-    this.registerFeature('evidence_collection');
   }
 
   /**
@@ -136,13 +132,10 @@ export class NostrChatAdapter extends BaseChatAdapter {
       isFederated: true,
       isCensorshipResistant: true,
       isAnonymous: true,
-      maintainers: ['Earth Alliance'],
-      license: 'MIT',
+      maintainers: ['Starcom'],
+      license: 'AGPL-3.0-only',
       metadata: {
         features: [
-          'resistance_communications',
-          'earth_alliance_protocols',
-          'evidence_collection',
           'encryption',
           'decentralization'
         ]
@@ -1111,12 +1104,7 @@ export class NostrChatAdapter extends BaseChatAdapter {
         teamId: msg.teamId,
         senderDID: msg.senderDID,
         encrypted: msg.encrypted,
-        pqcEncrypted: msg.pqcEncrypted,
-        evidenceHash: msg.evidenceHash,
-        truthScore: msg.truthScore,
-        verificationStatus: msg.verificationStatus,
-        resistanceCell: msg.resistanceCell,
-        operativeLevel: msg.operativeLevel
+        pqcEncrypted: msg.pqcEncrypted
       }
     };
   }
@@ -1139,10 +1127,7 @@ export class NostrChatAdapter extends BaseChatAdapter {
         encryptionKey: channel.encryptionKey,
         pqcKey: channel.pqcKey,
         isActive: channel.isActive,
-        channelType: channel.channelType,
-        resistanceCell: channel.resistanceCell,
-        geographicRegion: channel.geographicRegion,
-        specializations: channel.specializations
+        channelType: channel.channelType
       }
     };
   }

@@ -780,7 +780,7 @@ const sw: Messages = {
       },
       geoint: {
         hover: 'Nanga ya kijiografia',
-        detail: 'Latitudo na longitudo huweka ripoti hii kwenye globu ya CyberCommand na maonyesho mengine ya kimahali.',
+        detail: 'Latitudo na longitudo huweka ripoti hii kwenye globu na maonyesho mengine ya kimahali.',
       },
       latitude: {
         hover: 'Kiwianishi cha kaskazini / kusini',

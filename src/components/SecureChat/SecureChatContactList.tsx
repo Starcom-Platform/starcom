@@ -2,14 +2,14 @@ import React, { useState, useMemo } from 'react';
 import { contactForKey } from '../../communication/contactForKey';
 import { nip19 } from 'nostr-tools';
 import { useSecureChat } from '../../communication/context/useSecureChat';
-import { EarthAllianceContact, ThreatLevel } from '../../types/SecureChat';
+import { ChatContact, ThreatLevel } from '../../types/SecureChat';
 import styles from './SecureChatContactList.module.css';
 import Modal from '../Shared/Modal';
 
 interface SecureChatContactListProps {
   isVisible: boolean;
   onClose: () => void;
-  onContactSelect: (contact: EarthAllianceContact) => void;
+  onContactSelect: (contact: ChatContact) => void;
 }
 
 const SecureChatContactList: React.FC<SecureChatContactListProps> = ({
@@ -40,7 +40,7 @@ const SecureChatContactList: React.FC<SecureChatContactListProps> = ({
     if (searchTerm) {
       filtered = filtered.filter(contact =>
         contact.displayName.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        contact.verifiedIdentity.earthAllianceId.toLowerCase().includes(searchTerm.toLowerCase())
+        contact.verifiedIdentity.pubkey.toLowerCase().includes(searchTerm.toLowerCase())
       );
     }
 
@@ -50,7 +50,7 @@ const SecureChatContactList: React.FC<SecureChatContactListProps> = ({
         filtered = filtered.filter(contact => contact.isOnline);
         break;
       case 'verified':
-        filtered = filtered.filter(contact => contact.isEarthAllianceVerified);
+        filtered = filtered.filter(contact => contact.isVerified);
         break;
       default:
         break;
@@ -136,7 +136,7 @@ const SecureChatContactList: React.FC<SecureChatContactListProps> = ({
       setNewDisplayName('');
       setShowAddContact(false);
     } catch (err) {
-      // verifyEarthAllianceIdentity (which addVerifiedContact calls) already
+      // verifyContactIdentity (which addVerifiedContact calls) already
       // catches its own errors and resolves false rather than throwing —
       // this is defense in depth, not the expected path, so a future
       // regression there doesn't silently disappear as an unhandled
@@ -161,7 +161,7 @@ const SecureChatContactList: React.FC<SecureChatContactListProps> = ({
         {/* Header */}
         <div className={styles.header}>
           <div className={styles.title}>
-            <h2>Earth Alliance Contacts</h2>
+            <h2>Contacts</h2>
             <div className={styles.networkStatus}>
               <span 
                 className={styles.threatIndicator}
@@ -282,8 +282,8 @@ const SecureChatContactList: React.FC<SecureChatContactListProps> = ({
                   <div className={styles.contactHeader}>
                     <span className={styles.contactName}>{contact.displayName}</span>
                     <div className={styles.badges}>
-                      {contact.isEarthAllianceVerified && (
-                        <span className={styles.verifiedBadge} title="Earth Alliance Verified">
+                      {contact.isVerified && (
+                        <span className={styles.verifiedBadge} title="Verified">
                           ✓
                         </span>
                       )}
@@ -299,8 +299,8 @@ const SecureChatContactList: React.FC<SecureChatContactListProps> = ({
                   </div>
                   
                   <div className={styles.contactDetails}>
-                    <span className={styles.earthAllianceId}>
-                      ID: {contact.verifiedIdentity.earthAllianceId}
+                    <span className={styles.contactKey}>
+                      ID: {contact.verifiedIdentity.pubkey}
                     </span>
                     <span className={styles.lastSeen}>
                       {contact.isOnline ? 'Online' : `Last seen ${getTimeSince(contact.lastSeen)}`}

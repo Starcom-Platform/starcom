@@ -1,18 +1,18 @@
 /**
- * Nostr Service for Earth Alliance Resistance Operations
- * 
- * Enhanced for civilian-led global resistance against transnational crime syndicate.
+ * The Nostr service: relays, team channels and their messages.
+ *
  * Built on published cryptographic standards — ML-KEM-768 (FIPS 203) and
  * ML-DSA-65 (FIPS 204) — with a decentralized architecture on top.
- * 
+ *
  * Features:
  * - Censorship-resistant messaging via HTTP-Nostr bridges
  * - Post-Quantum Cryptography for future-proof security
- * - Evidence preservation and whistleblower protection
- * - Global coordination for resistance cells
- * - Truth market integration for information verification
- * - Operational security for Earth Alliance operatives
- * 
+ *
+ * Four methods that nothing called were removed on 24 Nov 2026, with the fields
+ * only they filled in: channels made per region, and messages sending evidence,
+ * truth claims and emergency calls. They, and this header, carried the
+ * project's old framing.
+ *
  * A note here claimed a US combatant command's standards as this service's
  * security baseline. It named an institution with no relationship to this
  * project; the algorithms above are the checkable claim, and they are named
@@ -127,12 +127,6 @@ export interface NostrMessage {
   pqcEncrypted: boolean;
   signature?: string;
   metadata?: Record<string, unknown>;
-  // Earth Alliance specific fields
-  evidenceHash?: string;
-  truthScore?: number;
-  verificationStatus?: 'unverified' | 'pending' | 'verified' | 'disputed' | 'requires_more_evidence';
-  resistanceCell?: string;
-  operativeLevel?: 'civilian' | 'coordinator' | 'cell_leader' | 'alliance_command';
 }
 
 export interface NostrTeamChannel {
@@ -146,47 +140,11 @@ export interface NostrTeamChannel {
   participants: string[];
   createdAt: number;
   isActive: boolean;
-  // Earth Alliance specific fields
   channelType: 'general' | 'evidence' | 'coordination' | 'emergency' | 'truth_verification';
-  resistanceCell?: string;
-  geographicRegion?: string;
-  specializations?: string[];
-}
-
-// Extended interfaces for future Earth Alliance enhancements
-export interface EarthAllianceMessage extends NostrMessage {
-  // Corruption evidence specific
-  corruptionType?: 'financial' | 'political' | 'media' | 'tech' | 'pharma' | 'energy' | 'military';
-  evidenceType?: 'document' | 'testimony' | 'financial_record' | 'communication' | 'video' | 'audio';
-  targetEntities?: string[];
-  timeframe?: { start: number; end: number };
-  
-  // Truth verification
-  sourcesCount?: number;
-  independentVerifications?: number;
-  conflictingReports?: number;
-  reliabilityScore?: number;
-  
-  // Operative protection
-  anonymityLevel?: 'public' | 'pseudonymous' | 'anonymous' | 'high_security';
-  protectionNeeded?: boolean;
-  riskLevel?: 'low' | 'medium' | 'high' | 'extreme';
-}
-
-export interface ResistanceCellChannel extends NostrTeamChannel {
-  cellCode: string;
-  region: string;
-  specialization: string[];
-  emergencyContacts: string[];
-  operationalStatus: 'active' | 'dormant' | 'compromised' | 'disbanded';
-  lastActivity: number;
-  memberCount: number;
-  securityLevel: 'standard' | 'enhanced' | 'maximum';
 }
 
 /**
- * The NostrService class for Earth Alliance communications.
- * This service provides a singleton instance for working with Nostr protocol.
+ * The NostrService class: one shared instance for working with the Nostr protocol.
  */
 export class NostrService {
   private static instance: NostrService | null = null;
@@ -1297,231 +1255,6 @@ export class NostrService {
     
     this.initialized = false;
     logger.info('NostrService cleanup completed');
-  }
-
-  /**
-   * Creates a new resistance cell channel for Earth Alliance operations.
-   * @param cellCode Identifier code for the resistance cell
-   * @param region Geographic region of operation
-   * @param specialization Areas of focus for this cell
-   * @param securityLevel Security level for communications
-   * @returns {Promise<ResistanceCellChannel>} The created channel
-   */
-  public async createResistanceCellChannel(
-    cellCode: string,
-    region: string,
-    specialization: string[],
-    securityLevel: 'standard' | 'enhanced' | 'maximum'
-  ): Promise<ResistanceCellChannel> {
-    logger.debug('NostrService.createResistanceCellChannel called with:', { cellCode, region, specialization, securityLevel });
-    
-    if (!this.initialized) throw new Error('NostrService not initialized');
-    this.ensureIdentity('creating a channel');
-    
-    const name = `Earth Alliance: ${cellCode} (${region})`;
-    const description = `Resistance cell for region ${region}`;
-    
-    // Publish NIP-28 Kind 40 (Channel Creation) event
-    const channelEvent = await this.signNip28(nip28.channelCreateEvent, {
-      content: { name, about: description, picture: '' },
-      created_at: Math.floor(Date.now() / 1000),
-      tags: [
-        ['cell', cellCode],
-        ['region', region],
-        ['security', securityLevel],
-        ...specialization.map(s => ['spec', s])
-      ]
-    });
-    
-    if (!channelEvent) throw new Error('Failed to create channel event');
-    
-    const publishResults = this.pool.publish(this.relays, channelEvent);
-    await Promise.any(publishResults);
-    
-    const channelId = channelEvent.id;
-    
-    const channel: ResistanceCellChannel = {
-      id: channelId,
-      teamId: 'earth-alliance',
-      name,
-      description,
-      relayUrls: this.relays,
-      participants: this.publicKey ? [this.publicKey] : [],
-      createdAt: Date.now(),
-      isActive: true,
-      channelType: 'general',
-      cellCode,
-      region,
-      specialization,
-      emergencyContacts: [],
-      operationalStatus: 'active',
-      lastActivity: Date.now(),
-      memberCount: 1,
-      securityLevel
-    };
-    
-    // Cache and auto-subscribe
-    this.channelCache.set(channelId, channel);
-    this.messageCache.set(channelId, []);
-    this.subscribeToChannel(channelId);
-    
-    logger.info(`Created Earth Alliance resistance cell channel: ${channelId}`);
-    return channel;
-  }
-
-  /**
-   * Submit evidence to a channel.
-   * @param channelId The channel to submit evidence to
-   * @param evidenceData Evidence details
-   * @returns {Promise<string>} ID of the submitted evidence
-   */
-  public async submitEvidence(
-    channelId: string,
-    evidenceData: {
-      title: string;
-      description: string;
-      corruptionType: string;
-      evidenceType?: string;
-      targetEntities?: string[];
-      sourceProtection: string;
-      riskLevel: string;
-    }
-  ): Promise<string> {
-    logger.debug('NostrService.submitEvidence called for channel:', channelId, evidenceData);
-    
-    if (!this.initialized) throw new Error('NostrService not initialized');
-    this.ensureIdentity('submitting evidence');
-    
-    const content = `EVIDENCE: ${evidenceData.title}\n\n${evidenceData.description}`;
-    
-    // Publish as NIP-28 Kind 42 channel message with evidence tags
-    const msgEvent = await this.signNip28(nip28.channelMessageEvent, {
-      channel_create_event_id: channelId,
-      relay_url: this.relays[0],
-      content,
-      created_at: Math.floor(Date.now() / 1000),
-      tags: [
-        ['type', 'evidence'],
-        ['corruption', evidenceData.corruptionType],
-        ['risk', evidenceData.riskLevel]
-      ]
-    });
-    
-    const publishResults = this.pool.publish(this.relays, msgEvent);
-    await Promise.any(publishResults);
-    
-    // Emit evidence event for UI
-    if (typeof window !== 'undefined') {
-      const event = new CustomEvent('earth-alliance-evidence-submitted', {
-        detail: { id: msgEvent.id, channelId, ...evidenceData }
-      });
-      window.dispatchEvent(event);
-    }
-    
-    logger.info(`Evidence submitted to channel ${channelId}: ${msgEvent.id}`);
-    return msgEvent.id;
-  }
-
-  /**
-   * Submit truth verification for a message.
-   * @param messageId ID of the original message being verified
-   * @param channelId Channel containing the message
-   * @param verificationData Verification details
-   * @returns {Promise<string>} ID of the verification
-   */
-  public async submitTruthVerification(
-    messageId: string,
-    channelId: string,
-    verificationData: {
-      verificationStatus: 'verified' | 'disputed' | 'requires_more_evidence';
-      sourcesProvided: number;
-      expertiseArea: string;
-      confidenceLevel: number;
-      additionalEvidence: string;
-    }
-  ): Promise<string> {
-    logger.debug('NostrService.submitTruthVerification called for message:', messageId, verificationData);
-    
-    if (!this.initialized) throw new Error('NostrService not initialized');
-    this.ensureIdentity('submitting a verification');
-    
-    const content = `VERIFICATION: ${verificationData.verificationStatus.toUpperCase()} (${verificationData.confidenceLevel}% confidence)\n\n${verificationData.additionalEvidence}`;
-    
-    // Publish as NIP-28 Kind 42 channel message with verification tags
-    const msgEvent = await this.signNip28(nip28.channelMessageEvent, {
-      channel_create_event_id: channelId,
-      relay_url: this.relays[0],
-      content,
-      created_at: Math.floor(Date.now() / 1000),
-      tags: [
-        ['type', 'verification'],
-        ['e', messageId, '', 'reply'],
-        ['status', verificationData.verificationStatus],
-        ['confidence', String(verificationData.confidenceLevel)]
-      ]
-    });
-    
-    const publishResults = this.pool.publish(this.relays, msgEvent);
-    await Promise.any(publishResults);
-    
-    logger.info(`Truth verification submitted for message ${messageId}: ${msgEvent.id}`);
-    return msgEvent.id;
-  }
-
-  /**
-   * Send emergency coordination to a channel.
-   * @param channelId The channel ID
-   * @param emergencyType Type of emergency
-   * @param urgencyLevel Level of urgency
-   * @param emergencyData Additional emergency data
-   * @returns {Promise<string>} ID of the emergency message
-   */
-  public async sendEmergencyCoordination(
-    channelId: string,
-    emergencyType: 'operational_security' | 'member_compromise' | 'evidence_critical' | 'timeline_threat',
-    urgencyLevel: 'low' | 'medium' | 'high' | 'critical',
-    emergencyData: {
-      description: string;
-      actionRequired: string;
-      timeframe: string;
-      affectedRegions: string[];
-      resourcesNeeded: string[];
-    }
-  ): Promise<string> {
-    logger.debug('NostrService.sendEmergencyCoordination called:', { channelId, emergencyType, urgencyLevel, emergencyData });
-    
-    if (!this.initialized) throw new Error('NostrService not initialized');
-    this.ensureIdentity('sending an emergency coordination message');
-
-    const content = `EMERGENCY [${urgencyLevel.toUpperCase()}]: ${emergencyType.replace('_', ' ').toUpperCase()}\n\n${emergencyData.description}\n\nACTION REQUIRED: ${emergencyData.actionRequired}\nTIMEFRAME: ${emergencyData.timeframe}`;
-    
-    // Publish as NIP-28 Kind 42 channel message with emergency tags
-    const msgEvent = await this.signNip28(nip28.channelMessageEvent, {
-      channel_create_event_id: channelId,
-      relay_url: this.relays[0],
-      content,
-      created_at: Math.floor(Date.now() / 1000),
-      tags: [
-        ['type', 'coordination'],
-        ['emergency', emergencyType],
-        ['urgency', urgencyLevel],
-        ...emergencyData.affectedRegions.map(r => ['region', r])
-      ]
-    });
-    
-    const publishResults = this.pool.publish(this.relays, msgEvent);
-    await Promise.any(publishResults);
-    
-    // Emit emergency event for UI
-    if (typeof window !== 'undefined') {
-      const event = new CustomEvent('earth-alliance-emergency-coordination', {
-        detail: { id: msgEvent.id, channelId, emergencyType, urgencyLevel, ...emergencyData }
-      });
-      window.dispatchEvent(event);
-    }
-    
-    logger.info(`Emergency coordination sent to channel ${channelId}: ${msgEvent.id}`);
-    return msgEvent.id;
   }
 
   /**
