@@ -132,13 +132,11 @@ the owner's go.
   - `npm run test:live` collects no files and passes (`docs/TESTING.md`).
   - No check catches a translation that drops a `{placeholder}`.
   - The walk exits 0 with BROKEN stories.
-  - The app still showed "Earth Alliance" in two places (`GlobalHeader.tsx`, `SupportFunnelModal.tsx`), though the
-    public-claims guard retired the term from the public pages on 20 Nov. **24 Nov:** the owner took it out of
-    Starcom's narrative. An audit found it on nine screens and in about 240 public lines. It is gone from the screens,
-    the support appeal's copy, type names, comments, fixtures and four stale scripts, and
-    `scripts/guard-old-framing.mjs` keeps it out. Still the owner's to decide: the globe's lens names
-    (`bigThreeLenses.ts`), the quoted brief in `interface-upgrade.md`, and whether Earth Alliance News stays named
-    in two scripts. The aspiration stays in the private `docs/ecosystem.md`, `ein-pillars.md` and `agenda-next.md`.
+  - The app still showed the project's old framing in two places (`GlobalHeader.tsx`, `SupportFunnelModal.tsx`),
+    though the public-claims guard retired it from the public pages on 20 Nov. **24 Nov:** the owner took it out of
+    Starcom's narrative. An audit found it on nine screens and in about 240 public lines. It is gone from all of them,
+    and `scripts/guard-old-framing.mjs` keeps it out. Still the owner's to decide: the globe's lens names
+    (`bigThreeLenses.ts`), a quoted brief in `interface-upgrade.md`, and a peer publication's name in two scripts.
   - The private repository has five open dependency alerts: `sharp` (three, through `@huggingface/transformers`;
     Node-only, never in the browser bundle), `minimatch` (through `typescript-eslint`, development only) and
     `elliptic` (through the Node polyfills; no fixed version).
